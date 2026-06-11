@@ -24,6 +24,7 @@ const centerEls = {
   platformFilter: document.getElementById('centerPlatformFilter'),
   regionFilter: document.getElementById('centerRegionFilter'),
   ownerFilter: document.getElementById('centerOwnerFilter'),
+  filterSummary: document.getElementById('dashboardFilterSummary'),
   btnResetDashboardFilters: document.getElementById('btnResetDashboardFilters'),
   btnResetMapFilter: document.getElementById('btnResetMapFilter'),
   kpiAvgViews: document.getElementById('kpiAvgViews'),
@@ -103,6 +104,8 @@ let weeklyTrendEchart = null;
 let platformCompareChart = null;
 let worldGeoReady = null;
 let usaGeoReady = null;
+let canadaGeoReady = null;
+let europeGeoReady = null;
 let dashboardIndexCache = {
   followerByCreator: null,
   locationByCreator: null,
@@ -168,6 +171,40 @@ function configureStaticMode() {
   });
 }
 
+function syncCompactTopbar() {
+  document.body.classList.toggle('compact-topbar', window.scrollY > 72);
+}
+
+function readStickyPx(name, fallback) {
+  const styles = getComputedStyle(document.body);
+  const value = Number.parseFloat(styles.getPropertyValue(name));
+  return Number.isFinite(value) ? value : fallback;
+}
+
+function getStickyScrollOffset() {
+  const top = readStickyPx('--sticky-header-top', 0);
+  const gap = readStickyPx('--sticky-gap', 8);
+  const header = readStickyPx('--sticky-header-height', 64);
+  const assets = readStickyPx('--sticky-asset-height', 56);
+  const nav = readStickyPx('--sticky-nav-height', 44);
+  const dashboard = readStickyPx('--sticky-dashboard-height', 84);
+  return top + header + gap + assets + gap + nav + gap + dashboard + 40;
+}
+
+function scrollToCenterTarget(target, behavior = 'smooth') {
+  syncCompactTopbar();
+  const top = target.getBoundingClientRect().top + window.scrollY - getStickyScrollOffset();
+  window.scrollTo({ top: Math.max(0, top), behavior });
+}
+
+function alignHashTargetAfterRender() {
+  const hash = decodeURIComponent(location.hash || '').replace(/^#/, '');
+  if (!hash) return;
+  const target = document.getElementById(hash);
+  if (!target) return;
+  window.requestAnimationFrame(() => scrollToCenterTarget(target, 'auto'));
+}
+
 function invalidateDashboardCaches() {
   dashboardIndexCache = {
     followerByCreator: null,
@@ -205,6 +242,7 @@ function scheduleMapDependentRender() {
   if (pendingMapSync) window.cancelAnimationFrame(pendingMapSync);
   pendingMapSync = window.requestAnimationFrame(() => {
     pendingMapSync = null;
+    updateDashboardControlState();
     renderCommandKpis();
     renderRegionPerformance();
     renderOwnerPerformance();
@@ -406,6 +444,14 @@ function platformClass(platform) {
   return String(platform || 'unknown').toLowerCase().replace(/[^a-z0-9]+/g, '-');
 }
 
+function shortPlatformName(platform) {
+  const label = platformLabel(platform);
+  if (label === 'YouTube Shorts') return 'YT Shorts';
+  if (label === 'YouTube Video') return 'YT Video';
+  if (label === 'Instagram Reels') return 'IG Reels';
+  return label;
+}
+
 function safeExternalUrl(value) {
   const raw = readLocalLink(value) || readLocalText(value) || String(value || '');
   const trimmed = raw.trim();
@@ -605,9 +651,58 @@ const COUNTRY_TO_MAP_NAME = {
   IT: 'Italy',
   Italy: 'Italy',
   FR: 'France',
+  France: 'France',
   DE: 'Germany',
+  Germany: 'Germany',
   ES: 'Spain',
+  Spain: 'Spain',
   NL: 'Netherlands',
+  Netherlands: 'Netherlands',
+  AT: 'Austria',
+  Austria: 'Austria',
+  PL: 'Poland',
+  Poland: 'Poland',
+  BE: 'Belgium',
+  Belgium: 'Belgium',
+  SE: 'Sweden',
+  Sweden: 'Sweden',
+  IE: 'Ireland',
+  Ireland: 'Ireland',
+  DK: 'Denmark',
+  Denmark: 'Denmark',
+  FI: 'Finland',
+  Finland: 'Finland',
+  PT: 'Portugal',
+  Portugal: 'Portugal',
+  HR: 'Croatia',
+  Croatia: 'Croatia',
+  EE: 'Estonia',
+  Estonia: 'Estonia',
+  BG: 'Bulgaria',
+  Bulgaria: 'Bulgaria',
+  RO: 'Romania',
+  Romania: 'Romania',
+  GR: 'Greece',
+  Greece: 'Greece',
+  CZ: 'Czech Republic',
+  Czechia: 'Czech Republic',
+  'Czech Republic': 'Czech Republic',
+  HU: 'Hungary',
+  Hungary: 'Hungary',
+  SK: 'Slovakia',
+  Slovakia: 'Slovakia',
+  SI: 'Slovenia',
+  Slovenia: 'Slovenia',
+  LT: 'Lithuania',
+  Lithuania: 'Lithuania',
+  LV: 'Latvia',
+  Latvia: 'Latvia',
+  LU: 'Luxembourg',
+  Luxembourg: 'Luxembourg',
+  MT: 'Malta',
+  Malta: 'Malta',
+  CY: 'Cyprus',
+  Cyprus: 'Cyprus',
   MX: 'Mexico'
 };
 
@@ -625,10 +720,60 @@ const COUNTRY_TO_REGION = {
   AU: 'Other',
   Australia: 'Other',
   IT: 'EU',
+  Italy: 'EU',
   FR: 'EU',
+  France: 'EU',
   DE: 'EU',
+  Germany: 'EU',
   ES: 'EU',
+  Spain: 'EU',
   NL: 'EU',
+  Netherlands: 'EU',
+  AT: 'EU',
+  Austria: 'EU',
+  PL: 'EU',
+  Poland: 'EU',
+  BE: 'EU',
+  Belgium: 'EU',
+  SE: 'EU',
+  Sweden: 'EU',
+  IE: 'EU',
+  Ireland: 'EU',
+  DK: 'EU',
+  Denmark: 'EU',
+  FI: 'EU',
+  Finland: 'EU',
+  PT: 'EU',
+  Portugal: 'EU',
+  HR: 'EU',
+  Croatia: 'EU',
+  EE: 'EU',
+  Estonia: 'EU',
+  BG: 'EU',
+  Bulgaria: 'EU',
+  RO: 'EU',
+  Romania: 'EU',
+  GR: 'EU',
+  Greece: 'EU',
+  CZ: 'EU',
+  Czechia: 'EU',
+  'Czech Republic': 'EU',
+  HU: 'EU',
+  Hungary: 'EU',
+  SK: 'EU',
+  Slovakia: 'EU',
+  SI: 'EU',
+  Slovenia: 'EU',
+  LT: 'EU',
+  Lithuania: 'EU',
+  LV: 'EU',
+  Latvia: 'EU',
+  LU: 'EU',
+  Luxembourg: 'EU',
+  MT: 'EU',
+  Malta: 'EU',
+  CY: 'EU',
+  Cyprus: 'EU',
   MX: 'Other'
 };
 
@@ -684,6 +829,162 @@ const US_STATE_NAMES = {
   WV: 'West Virginia',
   WI: 'Wisconsin',
   WY: 'Wyoming'
+};
+
+const CA_PROVINCE_NAMES = {
+  AB: 'Alberta',
+  BC: 'British Columbia',
+  MB: 'Manitoba',
+  NB: 'New Brunswick',
+  NL: 'Newfoundland and Labrador',
+  NS: 'Nova Scotia',
+  NT: 'Northwest Territories',
+  NU: 'Nunavut',
+  ON: 'Ontario',
+  PE: 'Prince Edward Island',
+  QC: 'Québec',
+  SK: 'Saskatchewan',
+  YT: 'Yukon'
+};
+
+const CA_PROVINCE_ALIASES = {
+  QUEBEC: 'Québec',
+  'PRINCE EDWARD ISLAND': 'Prince Edward Island',
+  PEI: 'Prince Edward Island',
+  NEWFOUNDLAND: 'Newfoundland and Labrador',
+  LABRADOR: 'Newfoundland and Labrador',
+  'NEWFOUNDLAND AND LABRADOR': 'Newfoundland and Labrador',
+  'NORTHWEST TERRITORIES': 'Northwest Territories',
+  'BRITISH COLUMBIA': 'British Columbia'
+};
+
+const MAP_DRILL_CONFIG = {
+  us: {
+    countryName: 'United States',
+    countryCode: 'US',
+    mapName: 'usaYozma',
+    scopeLabel: 'US 州级',
+    unitLabel: 'US 州级',
+    drillLabel: '进入美国州级分布',
+    activeCopy: '美国州级下钻已启用；点击海洋空白区域可返回世界地图。',
+    palette: ['#152033', '#542537', '#E63946'],
+    zoom: 1.18
+  },
+  ca: {
+    countryName: 'Canada',
+    countryCode: 'CA',
+    mapName: 'canadaYozma',
+    scopeLabel: 'Canada 省级',
+    unitLabel: 'CA 省级',
+    drillLabel: '进入加拿大省级分布',
+    activeCopy: '加拿大省级下钻已启用；当前没有省份字段的数据会进入“Canada 未分省”。',
+    palette: ['#102637', '#16606A', '#33D6C5'],
+    zoom: 1.04
+  },
+  eu: {
+    countryName: 'Europe + UK',
+    countryCode: 'EU',
+    mapName: 'europeYozma',
+    scopeLabel: '欧英国家级',
+    unitLabel: '欧英国家级',
+    drillLabel: '进入欧英国家级分布',
+    activeCopy: '欧英国家级下钻已启用；点击海洋空白区域可返回世界地图。',
+    palette: ['#111F34', '#255C8C', '#4DA3FF', '#FFB454'],
+    zoom: 1.05
+  }
+};
+
+const MAP_COUNTRY_TO_DRILL_MODE = {
+  'United States': 'us',
+  Canada: 'ca',
+  Europe: 'eu',
+  'United Kingdom': 'eu',
+  Germany: 'eu',
+  France: 'eu',
+  Italy: 'eu',
+  Spain: 'eu',
+  Netherlands: 'eu',
+  Sweden: 'eu',
+  Belgium: 'eu',
+  Poland: 'eu',
+  Austria: 'eu'
+};
+
+const EU_GROUP_FILTER = 'EU_UK_GROUP';
+const EUROPE_MAP_COUNTRIES = new Set([
+  'Europe',
+  'United Kingdom',
+  'Germany',
+  'France',
+  'Italy',
+  'Spain',
+  'Netherlands',
+  'Sweden',
+  'Belgium',
+  'Poland',
+  'Austria',
+  'Ireland',
+  'Denmark',
+  'Finland',
+  'Portugal',
+  'Croatia',
+  'Estonia',
+  'Bulgaria',
+  'Romania',
+  'Greece',
+  'Czech Republic',
+  'Hungary',
+  'Slovakia',
+  'Slovenia',
+  'Lithuania',
+  'Latvia',
+  'Luxembourg',
+  'Malta',
+  'Cyprus'
+]);
+
+function isEuropeGroupRow(row = {}) {
+  return row.region === 'EU'
+    || row.region === 'UK'
+    || row.country === 'EU'
+    || row.country === 'UK'
+    || EUROPE_MAP_COUNTRIES.has(row.mapCountry)
+    || EUROPE_MAP_COUNTRIES.has(row.placeLabel);
+}
+
+function mapFilterLabel(value) {
+  if (value === EU_GROUP_FILTER) return '欧盟 + 英国';
+  return value;
+}
+
+function countryFilterForDrillMode(mode, fallbackCountry = 'all') {
+  if (mode === 'eu') return EU_GROUP_FILTER;
+  return fallbackCountry || MAP_DRILL_CONFIG[mode]?.countryName || 'all';
+}
+
+function resetMapToWorld() {
+  dashboardFilters.country = 'all';
+  mapDrillMode = 'world';
+  selectedMapPlaceKey = '';
+  renderPeriodSensitiveViews();
+  renderTables();
+}
+
+function enterMapDrill(mode, fallbackCountry = '') {
+  mapDrillMode = mode;
+  dashboardFilters.country = countryFilterForDrillMode(mode, fallbackCountry);
+  selectedMapPlaceKey = '';
+  updateDashboardControlState();
+  renderGlobalMap();
+  scheduleMapDependentRender();
+}
+
+const MAP_REGION_THEMES = {
+  US: { key: 'us', main: '#E63946', mid: '#8D2B3B', rgb: '230, 57, 70', border: 'rgba(230, 57, 70, 0.42)' },
+  CA: { key: 'ca', main: '#33D6C5', mid: '#16606A', rgb: '51, 214, 197', border: 'rgba(51, 214, 197, 0.42)' },
+  UK: { key: 'uk', main: '#FFB454', mid: '#705133', rgb: '255, 180, 84', border: 'rgba(255, 180, 84, 0.42)' },
+  EU: { key: 'eu', main: '#4DA3FF', mid: '#255C8C', rgb: '77, 163, 255', border: 'rgba(77, 163, 255, 0.42)' },
+  OTHER: { key: 'other', main: '#A8B3C7', mid: '#334155', rgb: '168, 179, 199', border: 'rgba(168, 179, 199, 0.28)' }
 };
 
 function geoPoint(lat, lng) {
@@ -958,8 +1259,47 @@ function passesDashboardFilters(fields, helpers = getDashboardHelpers()) {
   if (dashboardFilters.platform !== 'all' && normalized.platform !== dashboardFilters.platform) return false;
   if (dashboardFilters.region !== 'all' && normalized.region !== dashboardFilters.region && normalized.country !== dashboardFilters.region) return false;
   if (dashboardFilters.owner !== 'all' && normalized.owner !== dashboardFilters.owner) return false;
-  if (dashboardFilters.country !== 'all' && normalized.mapCountry !== dashboardFilters.country && normalized.country !== dashboardFilters.country) return false;
+  if (dashboardFilters.country !== 'all') {
+    if (dashboardFilters.country === EU_GROUP_FILTER) {
+      if (!isEuropeGroupRow(normalized)) return false;
+    } else if (normalized.mapCountry !== dashboardFilters.country && normalized.country !== dashboardFilters.country) {
+      return false;
+    }
+  }
   return true;
+}
+
+function hasDashboardFilterScope() {
+  return Object.values(dashboardFilters).some((value) => value && value !== 'all');
+}
+
+function normalizeInfluencerRow(fields, helpers = getDashboardHelpers()) {
+  const creatorName = readLocalText(fields['红人名称']) || '-';
+  const platform = platformLabel(readLocalText(fields['平台']));
+  const region = readRegionField(fields) || getVideoRegion(fields, helpers.regionByCreator);
+  const owner = readLocalText(fields['负责人']) || readLocalText(fields['负责人名称']) || getVideoOwner(fields, helpers.ownerByCreator);
+  return {
+    creatorName,
+    platform,
+    region,
+    owner,
+    fields
+  };
+}
+
+function passesInfluencerFilters(fields, helpers = getDashboardHelpers()) {
+  const normalized = normalizeInfluencerRow(fields, helpers);
+  if (dashboardFilters.platform !== 'all' && normalized.platform !== dashboardFilters.platform) return false;
+  if (dashboardFilters.region !== 'all' && normalized.region !== dashboardFilters.region) return false;
+  if (dashboardFilters.owner !== 'all' && normalized.owner !== dashboardFilters.owner) return false;
+  return true;
+}
+
+function getScopedInfluencerRows() {
+  const helpers = getDashboardHelpers();
+  return (centerStore.influencers || [])
+    .map((row) => row.fields || row)
+    .filter((fields) => passesInfluencerFilters(fields, helpers));
 }
 
 function daysSince(date, now = new Date()) {
@@ -988,6 +1328,38 @@ function getScopedVideoSummary(period = centerPeriod) {
   };
 }
 
+function summarizeVideoRowsForRange(rows, startKey, endKey, template = {}) {
+  const start = new Date(template[startKey] || '');
+  const end = new Date(template[endKey] || '');
+  const scoped = rows.filter((fields) => {
+    const publishedAt = videoPublishedAt(fields);
+    if (!publishedAt || Number.isNaN(start.getTime()) || Number.isNaN(end.getTime())) return false;
+    return publishedAt >= start && publishedAt < end;
+  });
+  return {
+    ...template,
+    videos: scoped.length,
+    creators: new Set(scoped.map((fields) => creatorKey(readLocalText(fields['红人名称']))).filter(Boolean)).size,
+    views: scoped.reduce((sum, fields) => sum + videoViews(fields), 0),
+    mature7dViews: scoped.reduce((sum, fields) => sum + sevenDayVideoViews(fields), 0),
+    mature7dVideos: scoped.filter((fields) => sevenDayVideoViews(fields) > 0).length
+  };
+}
+
+function getWeeklyTrendRows() {
+  const rows = centerDashboard.weekly || [];
+  if (!hasDashboardFilterScope()) return rows;
+  const scopedVideos = getScopedVideoRows('total');
+  return rows.map((row) => summarizeVideoRowsForRange(scopedVideos, 'weekStart', 'weekEnd', row));
+}
+
+function getMonthlyTrendRows() {
+  const rows = centerDashboard.monthly || [];
+  if (!hasDashboardFilterScope()) return rows;
+  const scopedVideos = getScopedVideoRows('total');
+  return rows.map((row) => summarizeVideoRowsForRange(scopedVideos, 'monthStart', 'monthEnd', row));
+}
+
 function selectedPeriodLabel() {
   if (centerPeriod === 'week') return '周维度';
   if (centerPeriod === 'month') return '月维度';
@@ -999,8 +1371,25 @@ function selectedPeriodLabel() {
   return '自定义时间';
 }
 
+function updateDashboardControlState() {
+  document.body.classList.toggle('custom-period-active', centerPeriod === 'custom');
+  const filterLabels = [];
+  if (dashboardFilters.platform !== 'all') filterLabels.push(`平台：${dashboardFilters.platform}`);
+  if (dashboardFilters.region !== 'all') filterLabels.push(`区域：${dashboardFilters.region}`);
+  if (dashboardFilters.owner !== 'all') filterLabels.push(`负责人：${dashboardFilters.owner}`);
+  if (dashboardFilters.country !== 'all') filterLabels.push(`地图：${mapFilterLabel(dashboardFilters.country)}`);
+  const hasFilters = filterLabels.length > 0;
+  if (centerEls.filterSummary) {
+    centerEls.filterSummary.textContent = `${selectedPeriodLabel()} · ${hasFilters ? filterLabels.join(' / ') : '全部数据'}`;
+    centerEls.filterSummary.classList.toggle('is-active', hasFilters);
+  }
+  centerEls.btnResetDashboardFilters?.classList.toggle('is-active', hasFilters);
+}
+
 function getCreatorVideoStats(period = centerPeriod) {
   const followerByCreator = getFollowerByCreator();
+  const ownerByCreator = getOwnerByCreator();
+  const regionByCreator = getRegionByCreator();
   const stats = new Map();
   for (const fields of getScopedVideoRows(period)) {
     const creator = readLocalText(fields['红人名称']) || '-';
@@ -1014,6 +1403,8 @@ function getCreatorVideoStats(period = centerPeriod) {
         followers,
         tier: tier.key,
         tierLabel: tier.label,
+        owner: getVideoOwner(fields, ownerByCreator),
+        region: getVideoRegion(fields, regionByCreator),
         videos: 0,
         views: 0,
         latestAt: null,
@@ -1059,18 +1450,17 @@ function getScopedVideoLeaderboard(period = centerPeriod) {
 }
 
 function getQualityIssues() {
-  const influencers = centerStore.influencers || [];
-  const videos = centerStore.videos || [];
+  const influencers = getScopedInfluencerRows();
+  const videos = getScopedVideoRows('total');
   const missingFollowers = influencers.filter((row) => {
     const fields = row.fields || row;
     return !rawNumber(readLocalText(fields['红人粉丝数据']) || fields.followers);
   }).length;
-  const missingVideoTime = videos.filter((row) => !videoPublishedAt(row.fields || row)).length;
-  const zeroViewVideos = videos.filter((row) => !videoViews(row.fields || row)).length;
+  const missingVideoTime = videos.filter((fields) => !videoPublishedAt(fields)).length;
+  const zeroViewVideos = videos.filter((fields) => !videoViews(fields)).length;
   const urls = new Map();
   for (const row of videos) {
-    const fields = row.fields || row;
-    const url = videoUrl(fields);
+    const url = videoUrl(row);
     if (!url) continue;
     urls.set(url, (urls.get(url) || 0) + 1);
   }
@@ -1087,7 +1477,7 @@ function getQualityIssues() {
 
 function getLifecycleStats() {
   const now = new Date();
-  const rows = (centerStore.videos || []).map((row) => row.fields || row);
+  const rows = getScopedVideoRows('total');
   const stats = {
     firstSevenDays: 0,
     sevenDayDue: 0,
@@ -1125,7 +1515,7 @@ function formatDelta(current, previous) {
 }
 
 function latestWeeklyPair() {
-  const rows = (centerDashboard.weekly || []).filter(Boolean);
+  const rows = getWeeklyTrendRows().filter(Boolean);
   const current = rows[rows.length - 1] || {};
   const previous = rows[rows.length - 2] || {};
   return { current, previous, rows };
@@ -1384,8 +1774,7 @@ function renderOpsMonitor() {
   const creatorStats = getCreatorVideoStats('week');
   const followerByCreator = getFollowerByCreator();
   const currentCreatorKeys = new Set(creatorStats.map((creator) => creatorKey(creator.creator)));
-  const noPostCreators = (centerStore.influencers || [])
-    .map((row) => row.fields || row)
+  const noPostCreators = getScopedInfluencerRows()
     .filter((fields) => {
       const creator = creatorKey(readLocalText(fields['红人名称']));
       if (!creator) return false;
@@ -1397,8 +1786,7 @@ function renderOpsMonitor() {
     .filter((creator) => creator.videos > 0 && creator.avgViews < 5000)
     .sort((a, b) => a.avgViews - b.avgViews)
     .slice(0, 3);
-  const missingFollowerCreators = (centerStore.influencers || [])
-    .map((row) => row.fields || row)
+  const missingFollowerCreators = getScopedInfluencerRows()
     .filter((fields) => {
       const creator = creatorKey(readLocalText(fields['红人名称']));
       return creator && !followerByCreator.get(creator);
@@ -1464,7 +1852,7 @@ function renderOpsMonitor() {
 
 function renderActivityHeatmap() {
   if (!centerEls.activityHeatmap) return;
-  const rows = centerDashboard.weekly || [];
+  const rows = getWeeklyTrendRows();
   if (!rows.length) {
     centerEls.activityHeatmap.innerHTML = '<div class="empty-cell">暂无周活跃数据</div>';
     return;
@@ -1496,13 +1884,13 @@ function renderPlatformOrbit() {
   const best = rows.reduce((winner, row) => (row.avgViews > winner.avgViews ? row : winner), rows[0]);
   const nodes = rows
     .map((row, index) => {
-      const size = 44 + Math.round((row.avgViews / maxAvgViews) * 44);
+      const size = 72 + Math.round((row.avgViews / maxAvgViews) * 34);
       return `<article class="orbit-node platform-${platformClass(row.platform)}" style="--size:${size}px;--delay:${index * 150}ms">
-        <i></i>
+        <i><b>${escapeHtml(shortPlatformName(row.platform))}</b><span>${centerNumber(row.avgViews)}</span></i>
         <div>
-          <strong>${escapeHtml(row.platform.replace('YouTube ', 'YT '))}</strong>
-          <span>${centerNumber(row.avgViews)} 7日均播</span>
-          <em>最高 ${centerNumber(row.topViews || 0)} · ${centerNumber(row.videos || 0)} 条</em>
+          <strong>最高 ${centerNumber(row.topViews || 0)}</strong>
+          <span>${centerNumber(row.videos || 0)} 条视频</span>
+          <em>均播 ${centerNumber(row.avgViews)}</em>
         </div>
       </article>`;
     })
@@ -1510,7 +1898,7 @@ function renderPlatformOrbit() {
   centerEls.platformOrbit.innerHTML = `
     <div class="orbit-core">
       <span>最佳效率平台</span>
-      <strong>${escapeHtml(best.platform.replace('YouTube ', 'YT '))}</strong>
+      <strong>${escapeHtml(shortPlatformName(best.platform))}</strong>
       <em>${centerNumber(best.avgViews)} 7日均播 · 最高 ${centerNumber(best.topViews || 0)}</em>
     </div>
     <div class="orbit-node-grid">${nodes}</div>`;
@@ -1576,6 +1964,94 @@ async function ensureUsaGeo() {
   return usaGeoReady;
 }
 
+async function ensureCanadaGeo() {
+  if (!window.echarts) return null;
+  if (canadaGeoReady) return canadaGeoReady;
+  canadaGeoReady = fetch(assetUrl('data/canada.json'), { cache: 'force-cache' })
+    .then((response) => {
+      if (!response.ok) throw new Error('canada geojson unavailable');
+      return response.json();
+    })
+    .then((geoJson) => {
+      window.echarts.registerMap('canadaYozma', geoJson);
+      return geoJson;
+    })
+    .catch(() => null);
+  return canadaGeoReady;
+}
+
+async function ensureEuropeGeo() {
+  if (!window.echarts) return null;
+  if (europeGeoReady) return europeGeoReady;
+  europeGeoReady = fetch(assetUrl('data/europe.json'), { cache: 'force-cache' })
+    .then((response) => {
+      if (!response.ok) throw new Error('europe geojson unavailable');
+      return response.json();
+    })
+    .then((geoJson) => {
+      window.echarts.registerMap('europeYozma', geoJson);
+      return geoJson;
+    })
+    .catch(() => null);
+  return europeGeoReady;
+}
+
+function ensureDrillGeo(mode) {
+  if (mode === 'us') return ensureUsaGeo();
+  if (mode === 'ca') return ensureCanadaGeo();
+  if (mode === 'eu') return ensureEuropeGeo();
+  return ensureWorldGeo();
+}
+
+function mapThemeForRow(row = {}) {
+  const country = row.mapCountry || row.country || '';
+  const region = row.region || row.country || '';
+  if (country === 'United States' || region === 'US') return MAP_REGION_THEMES.US;
+  if (country === 'Canada' || region === 'CA') return MAP_REGION_THEMES.CA;
+  if (country === 'United Kingdom' || region === 'UK') return MAP_REGION_THEMES.UK;
+  if (country === 'Europe' || region === 'EU' || EUROPE_MAP_COUNTRIES.has(country)) return MAP_REGION_THEMES.EU;
+  return MAP_REGION_THEMES.OTHER;
+}
+
+function mapPaletteForMode(mode) {
+  return MAP_DRILL_CONFIG[mode]?.palette || ['#172235', '#1E5A78', '#33D6C5', '#FFB454', '#E63946'];
+}
+
+function mapVideoHeatColor(videos, maxVideos) {
+  const ratio = maxVideos ? Math.min(1, Math.max(0, videos / maxVideos)) : 0;
+  if (ratio >= 0.78) return '#B4142B';
+  if (ratio >= 0.48) return '#CF2438';
+  if (ratio >= 0.25) return '#E64655';
+  if (ratio >= 0.1) return '#F26F78';
+  return '#F7A1A6';
+}
+
+function mapFeatureName(row, isDrillMode) {
+  return isDrillMode ? row.mapDataName || row.placeLabel : row.mapCountry;
+}
+
+function mapSeriesItem(row, maxVideos, isDrillMode) {
+  const name = mapFeatureName(row, isDrillMode);
+  if (!name || row.isUnassigned || name === 'Europe' || name === 'Unknown') return null;
+  const areaColor = mapVideoHeatColor(row.videos, maxVideos);
+  return {
+    name,
+    value: row.videos,
+    row,
+    itemStyle: {
+      areaColor,
+      borderColor: 'rgba(255, 214, 214, 0.46)',
+      borderWidth: 0.8
+    },
+    emphasis: {
+      itemStyle: {
+        areaColor: '#FF5964',
+        borderColor: '#FFD1D4'
+      }
+    }
+  };
+}
+
 function getCountryStats(period = centerPeriod) {
   const cacheKey = `country|${period}|${currentFilterKey()}`;
   if (geoStatsCache.has(cacheKey)) return geoStatsCache.get(cacheKey);
@@ -1614,7 +2090,7 @@ function getCountryStats(period = centerPeriod) {
       creatorsCount: row.creators.size,
       avgViews: row.videos ? Math.round(row.views / row.videos) : 0
     }))
-    .sort((a, b) => b.views - a.views);
+    .sort((a, b) => b.videos - a.videos || b.views - a.views);
   geoStatsCache.set(cacheKey, result);
   return result;
 }
@@ -1663,21 +2139,167 @@ function getUsStateStats(period = centerPeriod) {
       creatorsCount: row.creators.size,
       avgViews: row.videos ? Math.round(row.views / row.videos) : 0
     }))
-    .sort((a, b) => b.views - a.views);
+    .sort((a, b) => b.videos - a.videos || b.views - a.views);
   geoStatsCache.set(cacheKey, result);
   return result;
 }
 
+function normalizeCanadaProvinceName(state, placeLabel = '') {
+  const raw = String(state || '').trim();
+  const label = String(placeLabel || '').replace(/,\s*(CA|Canada)$/i, '').trim();
+  const value = raw || (label && label !== 'Canada' ? label : '');
+  if (!value) return '';
+  const upper = value.toUpperCase();
+  if (CA_PROVINCE_NAMES[upper]) return CA_PROVINCE_NAMES[upper];
+  if (CA_PROVINCE_ALIASES[upper]) return CA_PROVINCE_ALIASES[upper];
+  const matched = Object.values(CA_PROVINCE_NAMES).find((name) => name.toUpperCase() === upper || name.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toUpperCase() === upper);
+  return matched || value;
+}
+
+function canadaProvinceCode(provinceName) {
+  const normalized = String(provinceName || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toUpperCase();
+  return Object.entries(CA_PROVINCE_NAMES).find(([, name]) => name.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toUpperCase() === normalized)?.[0] || '';
+}
+
+function getCanadaProvinceStats(period = centerPeriod) {
+  const cacheKey = `ca-province|${period}|${currentFilterKey()}`;
+  if (geoStatsCache.has(cacheKey)) return geoStatsCache.get(cacheKey);
+  const regionByCreator = getRegionByCreator();
+  const locationByCreator = getLocationByCreator();
+  const ownerByCreator = getOwnerByCreator();
+  const map = new Map();
+  for (const fields of getScopedVideoRows(period)) {
+    const location = getVideoLocation(fields, locationByCreator, regionByCreator);
+    const normalized = normalizeVideoRow(fields, { regionByCreator, locationByCreator, ownerByCreator });
+    if (normalized.mapCountry !== 'Canada' && location.country !== 'CA') continue;
+    const provinceName = normalizeCanadaProvinceName(location.state, location.placeLabel);
+    const provinceCode = canadaProvinceCode(provinceName);
+    const isUnassigned = !provinceName;
+    const key = isUnassigned ? 'Canada 未分省' : provinceName;
+    if (!map.has(key)) {
+      map.set(key, {
+        placeKey: isUnassigned ? 'CA-UNASSIGNED' : `CA-${provinceCode || provinceName}`,
+        placeLabel: key,
+        country: 'CA',
+        state: provinceCode,
+        region: 'CA',
+        mapCountry: 'Canada',
+        mapDataName: isUnassigned ? '' : provinceName,
+        isUnassigned,
+        videos: 0,
+        views: 0,
+        creators: new Set(),
+        topCreator: '-',
+        topVideo: null
+      });
+    }
+    const stat = map.get(key);
+    stat.videos += 1;
+    stat.views += normalized.views;
+    if (normalized.creatorName) stat.creators.add(normalized.creatorName);
+    if (!stat.topVideo || normalized.views > stat.topVideo.views) {
+      stat.topVideo = normalized;
+      stat.topCreator = normalized.creatorName;
+    }
+  }
+  const result = [...map.values()]
+    .map((row) => ({
+      ...row,
+      creatorsCount: row.creators.size,
+      avgViews: row.videos ? Math.round(row.views / row.videos) : 0
+    }))
+    .sort((a, b) => b.videos - a.videos || b.views - a.views);
+  geoStatsCache.set(cacheKey, result);
+  return result;
+}
+
+function getEuropeCountryStats(period = centerPeriod) {
+  const cacheKey = `eu-country|${period}|${currentFilterKey()}`;
+  if (geoStatsCache.has(cacheKey)) return geoStatsCache.get(cacheKey);
+  const regionByCreator = getRegionByCreator();
+  const locationByCreator = getLocationByCreator();
+  const ownerByCreator = getOwnerByCreator();
+  const map = new Map();
+  for (const fields of getScopedVideoRows(period)) {
+    const location = getVideoLocation(fields, locationByCreator, regionByCreator);
+    const normalized = normalizeVideoRow(fields, { regionByCreator, locationByCreator, ownerByCreator });
+    if (!isEuropeGroupRow(normalized) && !isEuropeGroupRow(location)) continue;
+    const countryName = normalizeMapCountryName(location.country || normalized.country || normalized.mapCountry);
+    const canDrawCountry = countryName !== 'Europe' && EUROPE_MAP_COUNTRIES.has(countryName);
+    const key = canDrawCountry ? countryName : 'Europe 未细分';
+    if (!map.has(key)) {
+      map.set(key, {
+        placeKey: canDrawCountry ? `EU-${countryName}` : 'EU-UNASSIGNED',
+        placeLabel: key,
+        country: canDrawCountry ? (location.country || normalized.country) : 'EU',
+        state: '',
+        region: countryName === 'United Kingdom' ? 'UK' : 'EU',
+        mapCountry: canDrawCountry ? countryName : 'Europe',
+        mapDataName: canDrawCountry ? countryName : '',
+        isUnassigned: !canDrawCountry,
+        videos: 0,
+        views: 0,
+        creators: new Set(),
+        topCreator: '-',
+        topVideo: null
+      });
+    }
+    const stat = map.get(key);
+    stat.videos += 1;
+    stat.views += normalized.views;
+    if (normalized.creatorName) stat.creators.add(normalized.creatorName);
+    if (!stat.topVideo || normalized.views > stat.topVideo.views) {
+      stat.topVideo = normalized;
+      stat.topCreator = normalized.creatorName;
+    }
+  }
+  const result = [...map.values()]
+    .map((row) => ({
+      ...row,
+      creatorsCount: row.creators.size,
+      avgViews: row.videos ? Math.round(row.views / row.videos) : 0
+    }))
+    .sort((a, b) => b.videos - a.videos || b.views - a.views);
+  geoStatsCache.set(cacheKey, result);
+  return result;
+}
+
+function getMapRowsForMode(period = centerPeriod) {
+  if (mapDrillMode === 'us') return getUsStateStats(period);
+  if (mapDrillMode === 'ca') return getCanadaProvinceStats(period);
+  if (mapDrillMode === 'eu') return getEuropeCountryStats(period);
+  return getCountryStats(period);
+}
+
 function renderGlobalMap() {
   if (!centerEls.globalMapCanvas || !centerEls.globalMapDetail || !centerEls.globalRegionBars) return;
-  const isUsMode = mapDrillMode === 'us';
-  const rows = isUsMode ? getUsStateStats(centerPeriod) : getCountryStats(centerPeriod);
-  if (centerEls.globalMapScopeLabel) centerEls.globalMapScopeLabel.textContent = isUsMode ? `${selectedPeriodLabel()} · US 州级` : `${selectedPeriodLabel()} · 世界`;
-  if (centerEls.btnResetMapFilter) centerEls.btnResetMapFilter.textContent = isUsMode ? '返回世界地图' : '重置地图筛选';
+  const drillConfig = MAP_DRILL_CONFIG[mapDrillMode] || null;
+  const isDrillMode = Boolean(drillConfig);
+  let rows = getMapRowsForMode(centerPeriod);
+  if (isDrillMode && !rows.length) {
+    rows = [{
+      placeKey: `${drillConfig.countryCode}-EMPTY`,
+      placeLabel: `${drillConfig.countryName} 暂无${drillConfig.unitLabel}视频数据`,
+      country: drillConfig.countryCode,
+      state: '',
+      region: drillConfig.countryCode,
+      mapCountry: drillConfig.countryName,
+      mapDataName: '',
+      isUnassigned: true,
+      videos: 0,
+      views: 0,
+      creatorsCount: 0,
+      avgViews: 0,
+      topCreator: '-',
+      topVideo: null
+    }];
+  }
+  if (centerEls.globalMapScopeLabel) centerEls.globalMapScopeLabel.textContent = isDrillMode ? `${selectedPeriodLabel()} · ${drillConfig.scopeLabel}` : `${selectedPeriodLabel()} · 世界`;
+  if (centerEls.btnResetMapFilter) centerEls.btnResetMapFilter.textContent = isDrillMode ? '返回世界地图' : '重置地图筛选';
   if (!rows.length) {
     centerEls.globalMapCanvas.innerHTML = '<div class="empty-cell">当前时间范围暂无可定位的视频数据</div>';
     centerEls.globalMapDetail.innerHTML = '<div class="empty-cell">暂无区域详情</div>';
-    centerEls.globalRegionBars.innerHTML = '<div class="empty-cell">暂无地区声量</div>';
+    centerEls.globalRegionBars.innerHTML = '<div class="empty-cell">暂无地区上线数据</div>';
     return;
   }
 
@@ -1685,8 +2307,8 @@ function renderGlobalMap() {
     selectedMapPlaceKey = rows[0].placeKey;
   }
   const active = rows.find((row) => row.placeKey === selectedMapPlaceKey) || rows[0];
-  const maxViews = Math.max(...rows.map((row) => row.views), 1);
-  const geoPromise = isUsMode ? ensureUsaGeo() : ensureWorldGeo();
+  const maxVideos = Math.max(...rows.map((row) => row.videos), 1);
+  const geoPromise = isDrillMode ? ensureDrillGeo(mapDrillMode) : ensureWorldGeo();
   geoPromise.then((geoJson) => {
     if (!geoJson || !window.echarts) {
       centerEls.globalMapCanvas.innerHTML = '<div class="empty-cell">地图资源加载失败，已保留右侧地区排行作为兜底。</div>';
@@ -1694,22 +2316,37 @@ function renderGlobalMap() {
     }
     worldMapChart = getChartInstance(centerEls.globalMapCanvas, worldMapChart);
     if (!worldMapChart) return;
-    const mapName = isUsMode ? 'usaYozma' : 'worldYozma';
-    const chartRows = rows.filter((row) => row.placeLabel !== 'Europe' && row.placeLabel !== 'Unknown');
+    const mapName = isDrillMode ? drillConfig.mapName : 'worldYozma';
+    const chartData = rows.map((row) => mapSeriesItem(row, maxVideos, isDrillMode)).filter(Boolean);
     worldMapChart.off('click');
     worldMapChart.on('click', (params) => {
-      const clicked = chartRows.find((row) => row.mapCountry === params.name || row.placeLabel === params.name);
+      const clicked = rows.find((row) => mapFeatureName(row, isDrillMode) === params.name || row.placeLabel === params.name);
+      if (!clicked && !isDrillMode && MAP_COUNTRY_TO_DRILL_MODE[params.name]) {
+        enterMapDrill(MAP_COUNTRY_TO_DRILL_MODE[params.name], params.name);
+        return;
+      }
       if (!clicked) return;
       selectedMapPlaceKey = clicked.placeKey;
-      if (!isUsMode && clicked.mapCountry === 'United States') {
-        mapDrillMode = 'us';
-        dashboardFilters.country = 'United States';
-      } else if (!isUsMode) {
+      if (!isDrillMode && MAP_COUNTRY_TO_DRILL_MODE[clicked.mapCountry]) {
+        enterMapDrill(MAP_COUNTRY_TO_DRILL_MODE[clicked.mapCountry], clicked.mapCountry);
+        return;
+      } else if (!isDrillMode) {
         dashboardFilters.country = clicked.mapCountry;
       }
       renderGlobalMap();
       scheduleMapDependentRender();
     });
+    const zr = worldMapChart.getZr?.();
+    if (zr) {
+      if (worldMapChart.__yozmaBlankClickHandler) {
+        zr.off('click', worldMapChart.__yozmaBlankClickHandler);
+      }
+      worldMapChart.__yozmaBlankClickHandler = (event) => {
+        if (event.target || !MAP_DRILL_CONFIG[mapDrillMode]) return;
+        resetMapToWorld();
+      };
+      zr.on('click', worldMapChart.__yozmaBlankClickHandler);
+    }
     worldMapChart.setOption({
       backgroundColor: 'transparent',
       animation: false,
@@ -1719,39 +2356,40 @@ function renderGlobalMap() {
         borderColor: 'rgba(255,255,255,.12)',
         textStyle: { color: '#F7F8FA' },
         formatter: (params) => {
-          const row = params.data?.row || rows.find((item) => item.mapCountry === params.name) || {};
+          const row = params.data?.row || rows.find((item) => mapFeatureName(item, isDrillMode) === params.name || item.mapCountry === params.name) || {};
           if (!row.videos) return `${params.name}<br/>暂无视频数据`;
           const top = row.topVideo || {};
-          return `<strong>${row.placeLabel}</strong><br/>Videos: ${centerNumber(row.videos)}<br/>Total Views: ${centerNumber(row.views)}<br/>Active Creators: ${centerNumber(row.creatorsCount)}<br/>Avg Views: ${centerNumber(row.avgViews)}<br/>Top Creator: ${escapeHtml(row.topCreator || '-')}<br/>Top Video: ${escapeHtml(top.videoTitle || top.creatorName || '-')}`;
+          return `<strong>${row.placeLabel}</strong><br/>上线视频：${centerNumber(row.videos)} 条<br/>7日声量：${centerNumber(row.views)}<br/>参与达人：${centerNumber(row.creatorsCount)} 位<br/>7日均播：${centerNumber(row.avgViews)}<br/>爆款达人：${escapeHtml(row.topCreator || '-')}<br/>爆款视频：${escapeHtml(top.videoTitle || top.creatorName || '-')}`;
         }
       },
       visualMap: {
+        show: false,
         min: 0,
-        max: maxViews,
-        left: 10,
-        bottom: 8,
-        text: ['High', 'Low'],
-        calculable: false,
-        itemWidth: 10,
-        itemHeight: 90,
-        textStyle: { color: '#A8B3C7' },
-        inRange: { color: ['#172235', '#1E5A78', '#33D6C5', '#FFB454', '#E63946'] }
-      },
-      geo: {
-        map: mapName,
-        roam: false,
-        zoom: isUsMode ? 1.18 : 1.06,
-        label: { show: false },
-        itemStyle: { areaColor: '#111B2B', borderColor: 'rgba(255,255,255,.12)', borderWidth: 0.5 },
-        emphasis: { itemStyle: { areaColor: '#274467' }, label: { show: false } }
+        max: maxVideos,
+        inRange: {
+          color: ['#F7A1A6', '#F26F78', '#E64655', '#CF2438', '#B4142B']
+        }
       },
       series: [
         {
-          name: '7日声量',
+          name: '视频上线数',
           type: 'map',
           map: mapName,
-          geoIndex: 0,
-          data: chartRows.map((row) => ({ name: isUsMode ? row.placeLabel : row.mapCountry, value: row.views, row }))
+          roam: false,
+          zoom: isDrillMode ? drillConfig.zoom : 1.06,
+          selectedMode: false,
+          label: { show: false },
+          itemStyle: {
+            areaColor: '#0E1725',
+            borderColor: 'rgba(255,255,255,.14)',
+            borderWidth: 0.5
+          },
+          emphasis: {
+            itemStyle: { areaColor: '#FF5964' },
+            label: { show: false }
+          },
+          z: 3,
+          data: chartData
         }
       ]
     }, true);
@@ -1760,16 +2398,22 @@ function renderGlobalMap() {
   const top = active.topVideo || {};
   const totalViews = rows.reduce((sum, row) => sum + row.views, 0);
   const totalVideos = rows.reduce((sum, row) => sum + row.videos, 0);
-  const actionNote = active.avgViews >= Math.round(totalViews / Math.max(totalVideos, 1))
+  const actionNote = !active.videos
+      ? '当前没有可拆到下一级区域的视频数据；后续补充国家或省份字段后，这里会自动上色和排行。'
+      : active.isUnassigned
+      ? '这部分视频只有大区信息，暂时无法落到具体国家或省份；补齐地址字段后会自动进入地图色块。'
+      : active.avgViews >= Math.round(totalViews / Math.max(totalVideos, 1))
       ? '该地区均播高于当前整体均值，适合优先复盘爆款内容和达人类型。'
       : '该地区有上线贡献，但均播一般，建议看具体平台和达人分层后再判断是否加码。';
-  const drillButton = !isUsMode && active.mapCountry === 'United States'
-    ? `<button class="map-drill-button" data-map-place="${escapeHtml(active.placeKey)}">进入美国州级分布</button>`
+  const drillMode = !isDrillMode ? MAP_COUNTRY_TO_DRILL_MODE[active.mapCountry] : '';
+  const drillButton = drillMode
+    ? `<button class="map-drill-button" data-map-place="${escapeHtml(active.placeKey)}">${escapeHtml(MAP_DRILL_CONFIG[drillMode].drillLabel)}</button>`
     : '';
-  centerEls.globalMapDetail.innerHTML = `<article class="map-detail-hero">
+  const detailTheme = mapThemeForRow(active);
+  centerEls.globalMapDetail.innerHTML = `<article class="map-detail-hero region-${escapeHtml(detailTheme.key)}">
     <span>${escapeHtml(active.region || '国家 / 区域')}</span>
     <strong>${escapeHtml(active.placeLabel)}</strong>
-    <p>${isUsMode ? '美国州级下钻已启用，点击“重置地图筛选”返回世界图' : '点击 United States 可进入州级分布，点击其他国家联动筛选'}</p>
+    <p>${isDrillMode ? escapeHtml(drillConfig.activeCopy) : '点击 United States / Canada / Europe / UK 可进入二级地图；颜色按上线视频数量深浅变化，点击海洋空白可返回世界地图。'}</p>
     ${drillButton}
   </article>
   <dl class="map-detail-metrics">
@@ -1788,14 +2432,15 @@ function renderGlobalMap() {
   centerEls.globalRegionBars.innerHTML = rows
     .slice(0, 12)
     .map((row) => {
-      const width = Math.max(6, Math.round((row.views / maxViews) * 100));
+      const width = Math.max(6, Math.round((row.videos / maxVideos) * 100));
       const activeClass = row.placeKey === active.placeKey ? ' active' : '';
-      const precision = isUsMode ? 'US 州级' : row.region || '国家';
-      return `<button class="geo-bar-row${activeClass}" data-map-place="${escapeHtml(row.placeKey)}">
+      const theme = mapThemeForRow(row);
+      const precision = isDrillMode ? drillConfig.unitLabel : row.region || '国家';
+      return `<button class="geo-bar-row region-${escapeHtml(theme.key)}${activeClass}" data-map-place="${escapeHtml(row.placeKey)}">
         <span>${escapeHtml(row.placeLabel)}<small>${escapeHtml(precision)} · ${centerNumber(row.videos)} 条 · ${centerNumber(row.creatorsCount)} 位</small></span>
         <i><b style="width:${width}%"></b></i>
-        <strong>${centerNumber(row.views)}</strong>
-        <em>均播 ${centerNumber(row.avgViews)}</em>
+        <strong>${centerNumber(row.videos)} 条</strong>
+        <em>声量 ${centerNumber(row.views)}</em>
       </button>`;
     })
     .join('');
@@ -2078,9 +2723,11 @@ function renderHotVideoBubbles() {
   centerEls.hotVideoBubbleChart.innerHTML = rows
     .map((row, index) => {
       const views = rawNumber(row.views);
-      const size = 76 + Math.round((views / maxViews) * 78);
-      const content = `<span>#${row.rank || index + 1}</span><strong>${centerNumber(views)}</strong><small>${escapeHtml(row.creator || '-')}</small>`;
-      const attrs = `class="bubble-node platform-${platformClass(row.platform)}" style="--size:${size}px;--delay:${index * 100}ms" title="${escapeHtml(row.platform || '')} · ${escapeHtml(row.creator || '')}"`;
+      const width = Math.max(8, Math.round((views / maxViews) * 100));
+      const content = `<span>#${row.rank || index + 1}</span>
+        <div><strong>${centerNumber(views)}</strong><small>${escapeHtml(row.creator || '-')} · ${escapeHtml(shortPlatformName(row.platform))}</small></div>
+        <i><b style="width:${width}%"></b></i>`;
+      const attrs = `class="bubble-node platform-${platformClass(row.platform)}" style="--delay:${index * 70}ms" title="${escapeHtml(row.platform || '')} · ${escapeHtml(row.creator || '')}"`;
       const safeUrl = safeExternalUrl(row.postUrl);
       return safeUrl
         ? `<a ${attrs} href="${escapeHtml(safeUrl)}" target="_blank" rel="noopener noreferrer">${content}</a>`
@@ -2096,27 +2743,27 @@ function renderDonutChart(target, rows) {
     return;
   }
   const total = data.reduce((sum, row) => sum + row.count, 0);
-  const colors = ['#e50914', '#ff4d4d', '#ff9f1c', '#9d0208', '#f5f3f4'];
-  let cumulative = 0;
-  const gradient = data
-    .map((row, index) => {
-      const start = (cumulative / total) * 100;
-      cumulative += row.count;
-      const end = (cumulative / total) * 100;
-      return `${colors[index % colors.length]} ${start.toFixed(2)}% ${end.toFixed(2)}%`;
+  const top = data[0];
+  const list = data
+    .slice(0, 5)
+    .map((row) => {
+      const percent = Math.round((row.count / total) * 100);
+      return `<article class="platform-brief-row platform-${platformClass(row.platform)}">
+        <div><strong>${escapeHtml(shortPlatformName(row.platform))}</strong><span>${centerNumber(row.count)} 条 · ${percent}%</span></div>
+        <i><b style="width:${Math.max(4, percent)}%"></b></i>
+      </article>`;
     })
-    .join(', ');
-  const legend = data
-    .map(
-      (row, index) =>
-        `<span><i style="background:${colors[index % colors.length]}"></i><b>${escapeHtml(platformLabel(row.platform))}</b><em>${row.count} 条 · ${Math.round((row.count / total) * 100)}%</em></span>`
-    )
     .join('');
-  target.innerHTML = `<div class="donut" style="background:conic-gradient(${gradient})"><b>${centerNumber(total)}</b><small>视频</small></div><div class="donut-legend">${legend}</div>`;
+  target.innerHTML = `<div class="platform-brief-total">
+    <span>当前结构</span>
+    <strong>${centerNumber(total)} 条</strong>
+    <small>主平台：${escapeHtml(shortPlatformName(top.platform))} · ${Math.round((top.count / total) * 100)}%</small>
+  </div>
+  <div class="platform-brief-list">${list}</div>`;
 }
 
 function renderWeeklyPulse() {
-  const rows = centerDashboard.weekly || [];
+  const rows = getWeeklyTrendRows();
   if (!centerEls.weeklyPulseGrid) return;
   if (!rows.length) {
     centerEls.weeklyPulseGrid.innerHTML = '<div class="empty-cell">暂无每周视频数据</div>';
@@ -2180,6 +2827,87 @@ function fillSelect(select, values, defaultLabel) {
   select.value = uniqueValues.includes(current) ? current : 'all';
 }
 
+let activeCustomSelect = null;
+
+function filterSelects() {
+  return [centerEls.platformFilter, centerEls.regionFilter, centerEls.ownerFilter].filter(Boolean);
+}
+
+function customSelectLabel(select) {
+  return select.options[select.selectedIndex]?.textContent || select.options[0]?.textContent || '全部';
+}
+
+function closeCustomSelect() {
+  if (!activeCustomSelect) return;
+  activeCustomSelect.trigger.classList.remove('is-open');
+  activeCustomSelect.menu.remove();
+  activeCustomSelect = null;
+}
+
+function positionCustomSelectMenu(state) {
+  const rect = state.trigger.getBoundingClientRect();
+  const width = Math.max(rect.width, 168);
+  const left = Math.min(Math.max(10, rect.left), window.innerWidth - width - 10);
+  const top = Math.min(rect.bottom + 6, window.innerHeight - 48);
+  state.menu.style.width = `${width}px`;
+  state.menu.style.left = `${left}px`;
+  state.menu.style.top = `${top}px`;
+}
+
+function openCustomSelect(select) {
+  const state = select._customSelect;
+  if (!state) return;
+  if (activeCustomSelect?.select === select) {
+    closeCustomSelect();
+    return;
+  }
+  closeCustomSelect();
+  const menu = document.createElement('div');
+  menu.className = 'custom-select-menu';
+  menu.setAttribute('role', 'listbox');
+  [...select.options].forEach((option) => {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = `custom-select-option${option.value === select.value ? ' is-active' : ''}`;
+    button.textContent = option.textContent;
+    button.setAttribute('role', 'option');
+    button.setAttribute('aria-selected', option.value === select.value ? 'true' : 'false');
+    button.addEventListener('click', () => {
+      select.value = option.value;
+      syncCustomFilterSelects();
+      select.dispatchEvent(new Event('change', { bubbles: true }));
+      closeCustomSelect();
+    });
+    menu.appendChild(button);
+  });
+  document.body.appendChild(menu);
+  activeCustomSelect = { ...state, menu };
+  state.trigger.classList.add('is-open');
+  positionCustomSelectMenu(activeCustomSelect);
+}
+
+function syncCustomFilterSelects() {
+  filterSelects().forEach((select) => {
+    const label = select.closest('label');
+    if (!label) return;
+    label.classList.add('custom-select-ready');
+    if (!select._customSelect) {
+      const trigger = document.createElement('button');
+      trigger.type = 'button';
+      trigger.className = 'custom-select-trigger';
+      trigger.addEventListener('click', (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        openCustomSelect(select);
+      });
+      select.insertAdjacentElement('afterend', trigger);
+      select._customSelect = { select, trigger };
+    }
+    select._customSelect.trigger.textContent = customSelectLabel(select);
+  });
+  if (activeCustomSelect) positionCustomSelectMenu(activeCustomSelect);
+}
+
 function populateDashboardFilters() {
   const helpers = {
     regionByCreator: getRegionByCreator(),
@@ -2190,6 +2918,7 @@ function populateDashboardFilters() {
   fillSelect(centerEls.platformFilter, rows.map((row) => row.platform), '全部平台');
   fillSelect(centerEls.regionFilter, rows.map((row) => row.region), '全部区域');
   fillSelect(centerEls.ownerFilter, rows.map((row) => row.owner), '全部负责人');
+  syncCustomFilterSelects();
 }
 
 function moneyBreakdownText(value) {
@@ -2235,13 +2964,15 @@ function getAffiliateSalesAnalysis(period = centerPeriod) {
         rawNumber(commission) > 0 ||
         hasMoneyBreakdown(revenueByCurrency) ||
         hasMoneyBreakdown(commissionByCurrency);
+      const owner = readLocalText(fields.owner) || videoStats.owner || '-';
+      const region = readLocalText(fields.region) || readLocalText(fields.market) || videoStats.region || '-';
       return {
         affiliateName: readLocalText(fields.affiliateName),
         creator,
         creatorCode: readLocalText(fields.creatorCode),
         email: readLocalText(fields.email),
-        owner: readLocalText(fields.owner) || '-',
-        region: readLocalText(fields.region) || readLocalText(fields.market) || '-',
+        owner,
+        region,
         market: readLocalText(fields.market),
         referralCode: readLocalText(fields.referralCode) || readLocalText(fields.marketingAffiliateCode),
         referralLink: readLocalText(fields.referralLink),
@@ -2261,6 +2992,11 @@ function getAffiliateSalesAnalysis(period = centerPeriod) {
         cooperationProgress: readLocalText(fields.cooperationProgress),
         metricsNotice: readLocalText(fields.metricsNotice)
       };
+    })
+    .filter((row) => {
+      if (dashboardFilters.owner !== 'all' && row.owner !== dashboardFilters.owner) return false;
+      if (dashboardFilters.region !== 'all' && row.region !== dashboardFilters.region) return false;
+      return true;
     })
     .sort((a, b) => rawNumber(b.orders) - rawNumber(a.orders) || b.views - a.views || a.creator.localeCompare(b.creator, 'zh-CN'));
 }
@@ -2323,8 +3059,8 @@ function renderAffiliateSalesDashboard() {
 
 function renderDashboardCharts() {
   renderCommandKpis();
-  renderLineChart(centerEls.weeklyTrendChart, centerDashboard.weekly || [], 'videos', 'mature7dViews');
-  renderBarChart(centerEls.monthlyBarChart, centerDashboard.monthly || []);
+  renderLineChart(centerEls.weeklyTrendChart, getWeeklyTrendRows(), 'videos', 'mature7dViews');
+  renderBarChart(centerEls.monthlyBarChart, getMonthlyTrendRows());
   renderDonutChart(centerEls.platformPieChart, getPlatformDistribution(centerPeriod));
   renderOpsCommandCenter();
   renderActivityHeatmap();
@@ -2361,9 +3097,7 @@ function renderTierCards(tiers) {
 function getTierLeaderboards(period) {
   const followerByCreator = getFollowerByCreator();
   const byTier = new Map(tierOrder().map((tier) => [tier.key, { ...tier, creators: new Map() }]));
-  for (const row of centerStore.videos || []) {
-    const fields = row.fields || row;
-    if (!isVideoInPeriod(fields, period)) continue;
+  for (const fields of getScopedVideoRows(period)) {
     const creatorName = readLocalText(fields['红人名称']) || '-';
     const key = creatorKey(creatorName);
     if (!key) continue;
@@ -2400,6 +3134,25 @@ function getTierLeaderboards(period) {
       }))
       .sort((a, b) => b.views - a.views || b.avgViews - a.avgViews)
   }));
+}
+
+function getTierSummaryRows(period) {
+  return getTierLeaderboards(period).map((tier) => {
+    const creators = tier.creators || [];
+    const videos = creators.reduce((sum, creator) => sum + creator.videos, 0);
+    const views = creators.reduce((sum, creator) => sum + creator.views, 0);
+    const best = creators[0] || {};
+    return {
+      key: tier.key,
+      label: tier.label,
+      range: tier.range,
+      creators: creators.length,
+      videos,
+      views,
+      avgViews: videos ? Math.round(views / videos) : 0,
+      topCreator: best.creator || '-'
+    };
+  });
 }
 
 function renderTierLeaderboards() {
@@ -2458,12 +3211,7 @@ function renderTierBenchmarks() {
 
 function renderCurrentPeriod() {
   centerEls.tierPeriodLabel.textContent = `当前展示：${selectedPeriodLabel()}`;
-  const tierRows =
-    centerDashboard.tierBreakdowns?.[centerPeriod] ||
-    centerDashboard.tierBreakdowns?.total ||
-    centerDashboard.tiers ||
-    [];
-  renderTierCards(tierRows);
+  renderTierCards(getTierSummaryRows(centerPeriod));
   renderTierBenchmarks();
   renderTierLeaderboards();
 }
@@ -2483,12 +3231,13 @@ function renderCustomSummaryCard() {
 }
 
 function renderPeriodSensitiveViews() {
+  updateDashboardControlState();
   renderCommandKpis();
   renderCustomSummaryCard();
   renderCurrentPeriod();
   renderBattleInsights();
-  renderLineChart(centerEls.weeklyTrendChart, centerDashboard.weekly || [], 'videos', 'mature7dViews');
-  renderBarChart(centerEls.monthlyBarChart, centerDashboard.monthly || []);
+  renderLineChart(centerEls.weeklyTrendChart, getWeeklyTrendRows(), 'videos', 'mature7dViews');
+  renderBarChart(centerEls.monthlyBarChart, getMonthlyTrendRows());
   renderDonutChart(centerEls.platformPieChart, getPlatformDistribution(centerPeriod));
   renderPlatformOrbit();
   renderPlatformMatrix();
@@ -2553,13 +3302,14 @@ function exportScopedVideosCsv() {
 
 function renderTables() {
   clearRows(centerEls.influencerRows);
-  (centerStore.influencers || []).slice(0, 300).forEach((row) => {
-    const fields = row.fields || row;
+  const influencerHelpers = getDashboardHelpers();
+  getScopedInfluencerRows().slice(0, 300).forEach((fields) => {
+    const normalized = normalizeInfluencerRow(fields, influencerHelpers);
     const tr = document.createElement('tr');
-    addCell(tr, readLocalText(fields['红人名称']));
-    addCell(tr, readLocalText(fields['负责人']) || '-');
-    addCell(tr, readLocalText(fields['地区']) || '-');
-    addCell(tr, readLocalText(fields['平台']));
+    addCell(tr, normalized.creatorName);
+    addCell(tr, normalized.owner || '-');
+    addCell(tr, normalized.region || '-');
+    addCell(tr, normalized.platform);
     const linkCell = addCell(tr, readLocalLink(fields['红人链接']));
     addCell(tr, readLocalText(fields['是否监控']));
     addCell(tr, readLocalText(fields['是否出视频'] || fields['是否发布视频']));
@@ -2576,33 +3326,33 @@ function renderTables() {
     .sort((a, b) => b.views - a.views || (b.publishDate?.getTime?.() || 0) - (a.publishDate?.getTime?.() || 0))
     .slice(0, 300)
     .forEach((row) => {
-    const tr = document.createElement('tr');
-    addCell(tr, row.creatorName);
-    addCell(tr, row.owner);
-    addCell(tr, row.region);
-    addCell(tr, row.platform);
-    addCell(tr, centerDate(row.publishDate));
-    addCell(tr, centerNumber(row.views));
-    addCell(tr, `${row.engagementRate}%`);
-    const status = videoStatus(row);
-    const statusCell = document.createElement('td');
-    statusCell.innerHTML = `<span class="status-pill ${escapeHtml(status.level)}">${escapeHtml(status.label)}</span>`;
-    tr.appendChild(statusCell);
-    const url = row.videoUrl;
-    const linkCell = document.createElement('td');
-    if (url) {
-      const a = document.createElement('a');
-      a.href = url;
-      a.target = '_blank';
-      a.rel = 'noopener noreferrer';
-      a.textContent = '打开';
-      linkCell.appendChild(a);
-    } else {
-      linkCell.textContent = '-';
-    }
-    tr.appendChild(linkCell);
-    centerEls.videoRows.appendChild(tr);
-  });
+      const tr = document.createElement('tr');
+      addCell(tr, row.creatorName);
+      addCell(tr, row.owner);
+      addCell(tr, row.region);
+      addCell(tr, row.platform);
+      addCell(tr, centerDate(row.publishDate));
+      addCell(tr, centerNumber(row.views));
+      addCell(tr, `${row.engagementRate}%`);
+      const status = videoStatus(row);
+      const statusCell = document.createElement('td');
+      statusCell.innerHTML = `<span class="status-pill ${escapeHtml(status.level)}">${escapeHtml(status.label)}</span>`;
+      tr.appendChild(statusCell);
+      const url = row.videoUrl;
+      const linkCell = document.createElement('td');
+      if (url) {
+        const a = document.createElement('a');
+        a.href = url;
+        a.target = '_blank';
+        a.rel = 'noopener noreferrer';
+        a.textContent = '打开';
+        linkCell.appendChild(a);
+      } else {
+        linkCell.textContent = '-';
+      }
+      tr.appendChild(linkCell);
+      centerEls.videoRows.appendChild(tr);
+    });
 
   clearRows(centerEls.affiliateSalesRows);
   getAffiliateSalesAnalysis(centerPeriod)
@@ -2629,16 +3379,20 @@ function renderTables() {
     });
 
   clearRows(centerEls.snapshotRows);
-  (centerStore.snapshots || []).slice(0, 300).forEach((row) => {
-    const fields = row.fields || row;
-    const tr = document.createElement('tr');
-    addCell(tr, centerDate(fields.capturedAt));
-    addCell(tr, readLocalText(fields['红人名称']));
-    addCell(tr, readLocalText(fields.platform));
-    addCell(tr, centerNumber(Math.max(Number(fields.videoPlayCount) || 0, Number(fields.videoViewCount) || 0)));
-    addCell(tr, readLocalText(fields.snapshotType));
-    centerEls.snapshotRows.appendChild(tr);
-  });
+  const ownerByCreator = getOwnerByCreator();
+  (centerStore.snapshots || [])
+    .map((row) => row.fields || row)
+    .filter((fields) => dashboardFilters.owner === 'all' || getVideoOwner(fields, ownerByCreator) === dashboardFilters.owner)
+    .slice(0, 300)
+    .forEach((fields) => {
+      const tr = document.createElement('tr');
+      addCell(tr, centerDate(fields.capturedAt));
+      addCell(tr, readLocalText(fields['红人名称']));
+      addCell(tr, readLocalText(fields.platform));
+      addCell(tr, centerNumber(Math.max(Number(fields.videoPlayCount) || 0, Number(fields.videoViewCount) || 0)));
+      addCell(tr, readLocalText(fields.snapshotType));
+      centerEls.snapshotRows.appendChild(tr);
+    });
 
   clearRows(centerEls.runRows);
   (centerStore.runs || []).slice(0, 300).forEach((row) => {
@@ -2731,6 +3485,7 @@ async function loadCenter() {
   renderCustomSummaryCard();
   updatePeriodCardState();
   renderTables();
+  alignHashTargetAfterRender();
   centerEls.status.textContent = isStaticCenter ? '团队只读快照已加载。' : '本地中台已加载。';
 }
 
@@ -2738,6 +3493,7 @@ function updatePeriodCardState() {
   document.querySelectorAll('.period-card[data-period-card]').forEach((card) => {
     card.classList.toggle('highlight', card.dataset.periodCard === centerPeriod);
   });
+  updateDashboardControlState();
 }
 
 function activatePeriod(period) {
@@ -2793,6 +3549,7 @@ function applyDashboardFiltersFromControls() {
   dashboardFilters.country = 'all';
   mapDrillMode = 'world';
   selectedMapPlaceKey = '';
+  syncCustomFilterSelects();
   renderPeriodSensitiveViews();
   renderOpsCommandCenter();
   renderOpsMonitor();
@@ -2812,6 +3569,7 @@ if (centerEls.btnResetDashboardFilters) {
     [centerEls.platformFilter, centerEls.regionFilter, centerEls.ownerFilter].forEach((select) => {
       if (select) select.value = 'all';
     });
+    syncCustomFilterSelects();
     renderPeriodSensitiveViews();
     renderOpsCommandCenter();
     renderOpsMonitor();
@@ -2821,11 +3579,7 @@ if (centerEls.btnResetDashboardFilters) {
 
 if (centerEls.btnResetMapFilter) {
   centerEls.btnResetMapFilter.addEventListener('click', () => {
-    dashboardFilters.country = 'all';
-    mapDrillMode = 'world';
-    selectedMapPlaceKey = '';
-    renderPeriodSensitiveViews();
-    renderTables();
+    resetMapToWorld();
   });
 }
 
@@ -2837,12 +3591,13 @@ document.addEventListener('click', (event) => {
   const mapTarget = event.target.closest('[data-map-place]');
   if (!mapTarget) return;
   selectedMapPlaceKey = mapTarget.dataset.mapPlace || '';
-  const rows = mapDrillMode === 'us' ? getUsStateStats(centerPeriod) : getCountryStats(centerPeriod);
+  const rows = getMapRowsForMode(centerPeriod);
   const row = rows.find((item) => item.placeKey === selectedMapPlaceKey);
-  if (row?.mapCountry === 'United States' && mapDrillMode !== 'us') {
-    mapDrillMode = 'us';
-    dashboardFilters.country = 'United States';
-  } else if (mapDrillMode !== 'us') {
+  const drillMode = row?.mapCountry ? MAP_COUNTRY_TO_DRILL_MODE[row.mapCountry] : '';
+  if (drillMode && !MAP_DRILL_CONFIG[mapDrillMode]) {
+    enterMapDrill(drillMode, row.mapCountry);
+    return;
+  } else if (!MAP_DRILL_CONFIG[mapDrillMode]) {
     dashboardFilters.country = row?.mapCountry || 'all';
   }
   renderGlobalMap();
@@ -2862,8 +3617,7 @@ document.querySelectorAll('[data-dashboard-jump]').forEach((button) => {
   button.addEventListener('click', () => {
     const target = document.getElementById(button.dataset.dashboardJump);
     if (target) {
-      const top = target.getBoundingClientRect().top + window.scrollY - 18;
-      window.scrollTo({ top, behavior: 'smooth' });
+      scrollToCenterTarget(target);
     }
   });
 });
@@ -2872,6 +3626,22 @@ window.addEventListener('resize', () => {
   worldMapChart?.resize();
   weeklyTrendEchart?.resize();
   platformCompareChart?.resize();
+  if (activeCustomSelect) positionCustomSelectMenu(activeCustomSelect);
+});
+window.addEventListener('scroll', () => {
+  syncCompactTopbar();
+  if (activeCustomSelect) positionCustomSelectMenu(activeCustomSelect);
+}, { passive: true });
+window.addEventListener('hashchange', alignHashTargetAfterRender);
+
+document.addEventListener('click', (event) => {
+  if (!activeCustomSelect) return;
+  if (activeCustomSelect.trigger.contains(event.target) || activeCustomSelect.menu.contains(event.target)) return;
+  closeCustomSelect();
+});
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') closeCustomSelect();
 });
 
 centerEls.btnRefresh.addEventListener('click', () => loadCenter().catch((error) => (centerEls.status.textContent = error.message)));
@@ -2969,6 +3739,7 @@ centerEls.btnLocalDiscoverRun.addEventListener('click', async () => {
 });
 
 configureStaticMode();
+syncCompactTopbar();
 loadCenter().catch((error) => {
   centerEls.status.textContent = `中台加载失败：${error.message}`;
 });

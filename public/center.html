@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Yozma 红人数据中台</title>
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="style.css?v=20260611-static-pages" />
+    <link rel="stylesheet" href="style.css?v=20260611-map-red-heat-3" />
   </head>
   <body>
     <main class="container data-center">
@@ -74,6 +74,7 @@
                   <label><span>负责人</span><select id="centerOwnerFilter"><option value="all">全部负责人</option></select></label>
                   <button id="btnResetDashboardFilters" class="secondary">重置筛选</button>
                 </div>
+                <span id="dashboardFilterSummary" class="dashboard-filter-summary">周维度 · 全部数据</span>
               </div>
             </div>
 
@@ -94,7 +95,6 @@
                 <ol id="opsActionList" class="ops-action-list"></ol>
                 <nav class="dashboard-mini-nav">
                   <button data-dashboard-jump="dashboardOverview">数据概览</button>
-                  <button data-dashboard-jump="dashboardPriority">优先级</button>
                   <button data-dashboard-jump="dashboardOpsMonitor">监测待办</button>
                   <button data-dashboard-jump="dashboardTrends">趋势</button>
                   <button data-dashboard-jump="dashboardPlatform">平台</button>
@@ -182,8 +182,8 @@
             <div id="dashboardGeo" class="dashboard-section global-command-section">
               <div class="section-heading">
                 <div>
-                  <h3>全球地区 7 日声量表现</h3>
-                  <p>使用 ECharts 世界地图，颜色代表满 7 天视频的成熟声量，气泡代表视频量；点击国家 / 区域会联动筛选。</p>
+                  <h3>全球视频上线分布</h3>
+                  <p>使用 ECharts 世界地图，颜色深浅代表上线视频数量；点击美国、加拿大、欧英区域可进入二级地图，点击海洋空白返回世界地图。</p>
                 </div>
                 <button id="btnResetMapFilter" class="secondary">重置地图筛选</button>
               </div>
@@ -200,7 +200,7 @@
                   <div id="globalMapDetail" class="global-map-detail"></div>
                 </article>
                 <article class="global-bars-card">
-                  <div class="trend-title"><strong>国家 / 州级声量排行</strong><span>按当前维度 7 日声量排序</span></div>
+                  <div class="trend-title"><strong>国家 / 州级上线排行</strong><span>按当前维度视频数量排序</span></div>
                   <div id="globalRegionBars" class="global-region-bars"></div>
                 </article>
               </div>
@@ -209,7 +209,7 @@
             <div class="dashboard-section">
               <div class="section-heading">
                 <div>
-                  <h3>运营态势雷达</h3>
+                  <h3>运营态势面板</h3>
                   <p>把周活跃、平台效率和风险信号压缩成更直观的可视化面板。</p>
                 </div>
               </div>
@@ -219,7 +219,7 @@
                   <div id="activityHeatmap" class="activity-heatmap"></div>
                 </article>
                 <article class="situation-card">
-                  <div class="trend-title"><strong>平台效率雷达</strong><span>看均播和最高爆点</span></div>
+                  <div class="trend-title"><strong>平台效率摘要</strong><span>看均播和最高爆点</span></div>
                   <div id="platformOrbit" class="platform-orbit"></div>
                 </article>
               </div>
@@ -251,8 +251,8 @@
             <div id="dashboardTrends" class="dashboard-section">
               <div class="section-heading">
                 <div>
-                  <h3>趋势变化</h3>
-                  <p>用 ECharts 保留核心趋势：上线视频、7日成熟声量、平台和区域表现。</p>
+                  <h3>核心趋势与平台对比</h3>
+                  <p>第一眼先看上线趋势、7日声量走势和平台表现，详细拆分放在后面的明细模块。</p>
                 </div>
               </div>
               <div class="trend-grid">
@@ -280,8 +280,8 @@
             <div id="dashboardPlatform" class="dashboard-section">
               <div class="section-heading">
                 <div>
-                  <h3>平台表现矩阵</h3>
-                  <p>按当前选择时间拆出视频量、7日声量、7日均播和当前最强达人。</p>
+                  <h3>平台明细</h3>
+                  <p>这里保留平台级拆分：视频量、7日声量、均播和当前最强达人。</p>
                 </div>
               </div>
               <div id="platformMatrix" class="platform-matrix"></div>
@@ -335,13 +335,13 @@
             <div id="dashboardLeaderboards" class="dashboard-section">
               <div class="section-heading">
                 <div>
-                  <h3>结构与榜单</h3>
-                  <p>看平台占比、达人表现和视频爆款。</p>
+                  <h3>达人 / 视频榜单</h3>
+                  <p>这里不再重复平台占比，只保留可直接复盘的达人榜和视频榜。</p>
                 </div>
               </div>
               <div class="insight-grid">
                 <article class="trend-card platform-share-card">
-                  <div class="trend-title"><strong>平台占比</strong><span>当前时间的视频结构</span></div>
+                  <div class="trend-title"><strong>内容结构摘要</strong><span>平台详情看上方表现模块</span></div>
                   <div id="platformPieChart" class="donut-chart"></div>
                 </article>
                 <article class="trend-card">
@@ -353,7 +353,7 @@
                   <ol id="videoLeaderboard" class="rank-list video-rank"></ol>
                 </article>
                 <article class="trend-card wide-card">
-                  <div class="trend-title"><strong>爆款气泡图</strong><span>圆越大 7 日声量越高</span></div>
+                  <div class="trend-title"><strong>爆款视频矩阵</strong><span>统一配色 · 点击打开原视频</span></div>
                   <div id="hotVideoBubbleChart" class="bubble-chart"></div>
                 </article>
               </div>
@@ -515,6 +515,6 @@
       </section>
     </main>
     <script src="vendor/echarts.min.js"></script>
-  <script src="center.js?v=20260611-static-pages"></script>
+  <script src="center.js?v=20260611-map-red-heat-3"></script>
   </body>
 </html>
