@@ -2852,11 +2852,30 @@ label span,
   overflow: hidden;
 }
 
+.dashboard-interaction-surface::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  background:
+    radial-gradient(circle 150px at var(--pointer-x, 50%) var(--pointer-y, 50%), rgba(255, 120, 130, 0.18), rgba(230, 57, 70, 0.08) 34%, transparent 68%);
+  transition: opacity 180ms ease;
+}
+
+.dashboard-interaction-surface.is-pointer-glowing::before {
+  opacity: 1;
+}
+
 .dashboard-click-ripple {
+  display: block;
   position: absolute;
   z-index: 8;
   top: 0;
   left: 0;
+  min-width: 76px;
+  min-height: 76px;
   border-radius: 50%;
   pointer-events: none;
   background:
