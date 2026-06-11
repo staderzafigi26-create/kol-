@@ -47,6 +47,7 @@ const centerEls = {
   globalRegionBars: document.getElementById('globalRegionBars'),
   globalMapScopeLabel: document.getElementById('globalMapScopeLabel'),
   dataHealthGrid: document.getElementById('dataHealthGrid'),
+  anniversarySnapshot: document.getElementById('anniversarySnapshot'),
   weeklyTrendChart: document.getElementById('weeklyTrendChart'),
   monthlyBarChart: document.getElementById('monthlyBarChart'),
   platformMatrix: document.getElementById('platformMatrix'),
@@ -90,6 +91,7 @@ const centerEls = {
 
 let centerStore = {};
 let centerDashboard = {};
+let centerAnniversary = null;
 let centerPeriod = 'week';
 let customRange = { start: null, end: null };
 let selectedMapPlaceKey = '';
@@ -415,6 +417,17 @@ async function loadCreatorLocations() {
     return response.json();
   } catch (_error) {
     return { locations: [] };
+  }
+}
+
+async function loadAnniversaryDashboard() {
+  try {
+    const response = await fetch(assetUrl('data/anniversary-dashboard.json'), { cache: 'no-store' });
+    if (!response.ok) return null;
+    const data = await response.json().catch(() => null);
+    return data?.ok ? data : null;
+  } catch (_error) {
+    return null;
   }
 }
 
@@ -1948,6 +1961,111 @@ function renderDataHealth() {
       </article>`
     )
     .join('');
+}
+
+function renderAnniversaryDashboard() {
+  if (!centerEls.anniversarySnapshot) return;
+  const data = centerAnniversary;
+  if (!data) {
+    centerEls.anniversarySnapshot.innerHTML = '<div class="empty-cell">暂无周年庆活动聚合数据</div>';
+    return;
+  }
+  const summary = data.summary || {};
+  const crawl = data.crawl || {};
+  const platforms = Array.isArray(data.platforms) ? data.platforms : [];
+  const regions = Array.isArray(data.regions) ? data.regions : [];
+  const topVideos = Array.isArray(data.topVideos) ? data.topVideos : [];
+  const owners = Array.isArray(data.owners) ? data.owners : [];
+  const maxPlatformExposure = Math.max(...platforms.map((row) => Number(row.exposure) || 0), 1);
+  const maxRegionOrders = Math.max(...regions.map((row) => Number(row.orders) || 0), 1);
+  const maxVideoViews = Math.max(...topVideos.map((row) => Number(row.views) || 0), 1);
+  const kpis = [
+    { label: '活动上线视频', value: `${centerNumber(summary.videoCount)} 条`, note: summary.periodLabel || '6月周年庆周期' },
+    { label: '累计曝光', value: centerNumber(summary.exposure), note: '公开视频表现聚合' },
+    { label: '归因订单', value: `${centerNumber(summary.orders)} 单`, note: '按活动达人匹配订单' },
+    { label: '抓取成本', value: `$${Number(crawl.usageUsd || 0).toFixed(2)}`, note: `${centerNumber(crawl.targets)} 个达人平台目标` }
+  ];
+  const platformRows = platforms
+    .map((row) => {
+      const exposureWidth = Math.max(8, Math.round(((Number(row.exposure) || 0) / maxPlatformExposure) * 100));
+      return `<article class="anniversary-platform-row platform-${platformClass(row.platform)}">
+        <div>
+          <strong>${escapeHtml(row.platform)}</strong>
+          <span>${centerNumber(row.videoCount)} 条视频 · ${centerNumber(row.exposure)} 曝光</span>
+        </div>
+        <div class="anniversary-meter"><i style="width:${exposureWidth}%"></i></div>
+        <dl>
+          <div><dt>订单</dt><dd>${centerNumber(row.orders)}</dd></div>
+          <div><dt>曝光占比</dt><dd>${centerNumber(row.exposureShare)}%</dd></div>
+          <div><dt>订单占比</dt><dd>${centerNumber(row.orderShare)}%</dd></div>
+        </dl>
+      </article>`;
+    })
+    .join('');
+  const regionRows = regions
+    .map((row) => {
+      const orderWidth = Math.max(8, Math.round(((Number(row.orders) || 0) / maxRegionOrders) * 100));
+      return `<article class="anniversary-region-row">
+        <strong>${escapeHtml(row.region || '-')}</strong>
+        <div class="anniversary-meter"><i style="width:${orderWidth}%"></i></div>
+        <span>${centerNumber(row.orders)} 单 · ${centerNumber(row.orderShare)}%</span>
+      </article>`;
+    })
+    .join('');
+  const topVideoRows = topVideos
+    .map((row, index) => {
+      const width = Math.max(8, Math.round(((Number(row.views) || 0) / maxVideoViews) * 100));
+      return `<li>
+        <em>#${index + 1}</em>
+        <div>
+          <strong>${externalLink(row.url, row.creator || '-')}</strong>
+          <span>${escapeHtml(row.owner || '-')} · ${escapeHtml(platformLabel(row.platform))} · ${shortDate(row.publishedAt)}</span>
+          <i><b style="width:${width}%"></b></i>
+        </div>
+        <small>${centerNumber(row.views)}</small>
+      </li>`;
+    })
+    .join('');
+  const ownerRows = owners
+    .map((row) => `<span>${escapeHtml(row.owner)}：${centerNumber(row.videos)} 条 · ${centerNumber(row.views)} 曝光</span>`)
+    .join('');
+  centerEls.anniversarySnapshot.innerHTML = `
+    <div class="anniversary-kpi-grid">
+      ${kpis
+        .map(
+          (card) => `<article class="anniversary-kpi-card">
+            <span>${escapeHtml(card.label)}</span>
+            <strong>${escapeHtml(card.value)}</strong>
+            <p>${escapeHtml(card.note)}</p>
+          </article>`
+        )
+        .join('')}
+    </div>
+    <div class="anniversary-grid">
+      <article class="anniversary-card">
+        <div class="trend-title"><strong>抓取覆盖</strong><span>截至 ${escapeHtml(summary.sourceDate || '-')}</span></div>
+        <div class="anniversary-crawl-grid">
+          <div><strong>${centerNumber(crawl.success)} / ${centerNumber(crawl.targets)}</strong><span>成功目标</span></div>
+          <div><strong>${centerNumber(crawl.scraped)}</strong><span>抓回内容</span></div>
+          <div><strong>${centerNumber(crawl.matched)}</strong><span>命中内容</span></div>
+          <div><strong>$${Number(crawl.usageUsd || 0).toFixed(2)}</strong><span>Apify 成本</span></div>
+        </div>
+        <p class="anniversary-note">新增写入 ${centerNumber(crawl.videoCreated)} 条，重复跳过 ${centerNumber(crawl.videoSkipped)} 条；仍有 ${centerNumber(crawl.missingHomeUrl)} 个主页链接待补。</p>
+        <div class="anniversary-owner-strip">${ownerRows}</div>
+      </article>
+      <article class="anniversary-card">
+        <div class="trend-title"><strong>平台贡献</strong><span>视频 / 曝光 / 订单</span></div>
+        <div class="anniversary-platform-list">${platformRows || '<div class="empty-cell">暂无平台数据</div>'}</div>
+      </article>
+      <article class="anniversary-card">
+        <div class="trend-title"><strong>地区订单</strong><span>按区域订单量</span></div>
+        <div class="anniversary-region-list">${regionRows || '<div class="empty-cell">暂无地区订单数据</div>'}</div>
+      </article>
+      <article class="anniversary-card wide-anniversary-card">
+        <div class="trend-title"><strong>新增爆款视频</strong><span>6月活动 Top ${topVideos.length}</span></div>
+        <ol class="anniversary-video-list">${topVideoRows || '<li class="empty-rank">暂无新增视频</li>'}</ol>
+      </article>
+    </div>`;
 }
 
 function renderPlatformMatrix() {
@@ -3543,14 +3661,16 @@ function renderApifyEstimate(data) {
 
 async function loadCenter() {
   centerEls.status.textContent = isStaticCenter ? '正在加载团队只读快照...' : '正在加载本地中台数据...';
-  const [collections, dashboard, creatorLocations] = await Promise.all([
+  const [collections, dashboard, creatorLocations, anniversaryDashboard] = await Promise.all([
     centerRequest('/api/local/collections'),
     centerRequest('/api/local/dashboard?weeks=8'),
-    loadCreatorLocations()
+    loadCreatorLocations(),
+    loadAnniversaryDashboard()
   ]);
   centerStore = collections.collections || {};
   centerStore.creatorLocations = creatorLocations || { locations: [] };
   centerDashboard = dashboard.dashboard || {};
+  centerAnniversary = anniversaryDashboard;
   invalidateDashboardCaches();
   const summary = centerDashboard.summary || {};
   centerEls.localInfluencers.textContent = centerNumber(collections.counts?.influencers);
@@ -3576,6 +3696,7 @@ async function loadCenter() {
   centerEls.updatedAt.textContent = `更新于 ${new Date().toLocaleTimeString('zh-CN', { hour12: false })}`;
   populateDashboardFilters();
   renderDashboardCharts();
+  renderAnniversaryDashboard();
   renderCurrentPeriod();
   renderCustomSummaryCard();
   updatePeriodCardState();
@@ -3695,6 +3816,8 @@ const DASHBOARD_INTERACTION_SELECTOR = [
   '.global-detail-card',
   '.global-bars-card',
   '.data-health-card',
+  '.anniversary-card',
+  '.anniversary-kpi-card',
   '.global-map-canvas',
   '.geo-bar-row',
   '.map-detail-hero',

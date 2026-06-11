@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Yozma 红人数据中台</title>
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="style.css?v=20260612-pointer-glow-1" />
+    <link rel="stylesheet" href="style.css?v=20260612-anniversary-snapshot-1" />
   </head>
   <body>
     <main class="container data-center">
@@ -98,6 +98,7 @@
                   <button data-dashboard-jump="dashboardOpsMonitor">监测待办</button>
                   <button data-dashboard-jump="dashboardTrends">趋势</button>
                   <button data-dashboard-jump="dashboardDataHealth">数据健康</button>
+                  <button data-dashboard-jump="dashboardAnniversary">周年庆</button>
                   <button data-dashboard-jump="dashboardPlatform">平台</button>
                   <button data-dashboard-jump="dashboardGeo">全球地图</button>
                   <button data-dashboard-jump="dashboardRegions">地区</button>
@@ -178,6 +179,16 @@
                 </div>
               </div>
               <div id="dataHealthGrid" class="data-health-grid"></div>
+            </div>
+
+            <div id="dashboardAnniversary" class="dashboard-section anniversary-section">
+              <div class="section-heading">
+                <div>
+                  <h3>周年庆战情快照</h3>
+                  <p>接入本机 6 月周年庆抓取和订单汇总，只展示公开安全的聚合数据，方便判断活动上线、曝光和转化。</p>
+                </div>
+              </div>
+              <div id="anniversarySnapshot" class="anniversary-snapshot"></div>
             </div>
 
             <div id="dashboardGeo" class="dashboard-section global-command-section">
@@ -482,6 +493,6 @@
       </section>
     </main>
     <script src="vendor/echarts.min.js"></script>
-  <script src="center.js?v=20260612-pointer-glow-1"></script>
+  <script src="center.js?v=20260612-anniversary-snapshot-1"></script>
   </body>
 </html>
