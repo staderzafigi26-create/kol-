@@ -3721,6 +3721,13 @@ function setupDashboardInteractionEffects() {
   const dashboardRoot = document.querySelector('.data-center');
   const pointerFine = (!window.matchMedia || window.matchMedia('(hover: hover) and (pointer: fine)').matches) && (navigator.maxTouchPoints || 0) < 1;
   let cursorGlow = null;
+  let activePointerTarget = null;
+
+  function clearPointerTarget() {
+    if (!activePointerTarget) return;
+    activePointerTarget.classList.remove('is-pointer-glowing');
+    activePointerTarget = null;
+  }
 
   if (pointerFine) {
     cursorGlow = document.createElement('div');
@@ -3731,7 +3738,18 @@ function setupDashboardInteractionEffects() {
       const target = event.target.closest(DASHBOARD_INTERACTION_SELECTOR);
       if (!target || !dashboardRoot?.contains(target)) {
         cursorGlow.classList.remove('active');
+        clearPointerTarget();
         return;
+      }
+      const rect = target.getBoundingClientRect();
+      if (rect.width && rect.height) {
+        if (activePointerTarget !== target) {
+          clearPointerTarget();
+          activePointerTarget = target;
+          target.classList.add('dashboard-interaction-surface', 'is-pointer-glowing');
+        }
+        target.style.setProperty('--pointer-x', `${event.clientX - rect.left}px`);
+        target.style.setProperty('--pointer-y', `${event.clientY - rect.top}px`);
       }
       cursorGlow.style.transform = `translate3d(${event.clientX - 85}px, ${event.clientY - 85}px, 0)`;
       cursorGlow.classList.add('active');
@@ -3739,6 +3757,7 @@ function setupDashboardInteractionEffects() {
 
     document.addEventListener('pointerleave', () => {
       cursorGlow.classList.remove('active');
+      clearPointerTarget();
     }, { passive: true });
   }
 
