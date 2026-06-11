@@ -1556,9 +1556,16 @@ label span,
 
 .monitor-grid {
   display: grid;
-  grid-template-columns: 1.2fr 1fr 1fr;
+  grid-template-columns: minmax(360px, 1.05fr) minmax(0, 1fr);
+  align-items: start;
   gap: 14px;
   margin-top: 13px;
+}
+
+.monitor-side-stack {
+  display: grid;
+  gap: 14px;
+  min-width: 0;
 }
 
 .monitor-card {
@@ -1618,17 +1625,16 @@ label span,
 
 .lifecycle-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  grid-template-rows: repeat(3, minmax(0, 1fr));
-  flex: 1;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 9px;
-  min-height: 100%;
+  min-height: 0;
 }
 
 .lifecycle-grid article {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  min-height: 82px;
   border-radius: 14px;
   padding: 12px;
   background:
@@ -2976,9 +2982,8 @@ label span,
 }
 
 .tier-leaderboard-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
+  column-count: 2;
+  column-gap: 12px;
   margin-top: 12px;
 }
 
@@ -3046,6 +3051,9 @@ label span,
 }
 
 .tier-board-card {
+  display: inline-block;
+  width: 100%;
+  margin: 0 0 12px;
   border: 1px solid rgba(255, 255, 255, 0.09);
   border-radius: 18px;
   padding: 14px;
@@ -3053,6 +3061,20 @@ label span,
     linear-gradient(135deg, rgba(229, 9, 20, 0.12), rgba(255, 255, 255, 0.03)),
     var(--card-2);
   animation: liftIn 0.45s ease both;
+}
+
+@media (max-width: 760px) {
+  .monitor-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lifecycle-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .tier-leaderboard-grid {
+    column-count: 1;
+  }
 }
 
 .tier-board-title {
