@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Yozma 红人数据中台</title>
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="style.css?v=20260612-interaction-polish-1" />
+    <link rel="stylesheet" href="style.css?v=20260612-data-health-1" />
   </head>
   <body>
     <main class="container data-center">
@@ -97,6 +97,7 @@
                   <button data-dashboard-jump="dashboardOverview">数据概览</button>
                   <button data-dashboard-jump="dashboardOpsMonitor">监测待办</button>
                   <button data-dashboard-jump="dashboardTrends">趋势</button>
+                  <button data-dashboard-jump="dashboardDataHealth">数据健康</button>
                   <button data-dashboard-jump="dashboardPlatform">平台</button>
                   <button data-dashboard-jump="dashboardGeo">全球地图</button>
                   <button data-dashboard-jump="dashboardRegions">地区</button>
@@ -177,6 +178,16 @@
                 </div>
               </div>
               <div id="battleInsightGrid" class="battle-insight-grid priority-grid"></div>
+            </div>
+
+            <div id="dashboardDataHealth" class="dashboard-section data-health-section">
+              <div class="section-heading">
+                <div>
+                  <h3>数据健康快照</h3>
+                  <p>看板可信度、抓取新鲜度、快照覆盖和补抓优先级集中放在这里，避免散落在运行记录里。</p>
+                </div>
+              </div>
+              <div id="dataHealthGrid" class="data-health-grid"></div>
             </div>
 
             <div id="dashboardGeo" class="dashboard-section global-command-section">
@@ -515,6 +526,6 @@
       </section>
     </main>
     <script src="vendor/echarts.min.js"></script>
-  <script src="center.js?v=20260612-interaction-polish-1"></script>
+  <script src="center.js?v=20260612-data-health-1"></script>
   </body>
 </html>

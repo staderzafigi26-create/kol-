@@ -47,6 +47,7 @@ const centerEls = {
   globalMapDetail: document.getElementById('globalMapDetail'),
   globalRegionBars: document.getElementById('globalRegionBars'),
   globalMapScopeLabel: document.getElementById('globalMapScopeLabel'),
+  dataHealthGrid: document.getElementById('dataHealthGrid'),
   activityHeatmap: document.getElementById('activityHeatmap'),
   platformOrbit: document.getElementById('platformOrbit'),
   weeklyTrendChart: document.getElementById('weeklyTrendChart'),
@@ -244,6 +245,7 @@ function scheduleMapDependentRender() {
     pendingMapSync = null;
     updateDashboardControlState();
     renderCommandKpis();
+    renderDataHealth();
     renderRegionPerformance();
     renderOwnerPerformance();
     renderLeaderboards();
@@ -265,23 +267,40 @@ function rawNumber(value) {
   return Number.isFinite(number) ? number : 0;
 }
 
+function parseDateValue(value) {
+  if (!value) return null;
+  if (value instanceof Date) return Number.isNaN(value.getTime()) ? null : value;
+  if (typeof value === 'number') {
+    const timestamp = value < 10000000000 ? value * 1000 : value;
+    const date = new Date(timestamp);
+    return Number.isNaN(date.getTime()) ? null : date;
+  }
+  const text = String(value).trim();
+  if (!text) return null;
+  if (/^\d{10,}$/.test(text)) {
+    const timestamp = Number(text);
+    const date = new Date(timestamp < 10000000000 ? timestamp * 1000 : timestamp);
+    return Number.isNaN(date.getTime()) ? null : date;
+  }
+  const date = new Date(text);
+  return Number.isNaN(date.getTime()) ? null : date;
+}
+
 function centerDate(value) {
-  if (!value) return '-';
-  const date = typeof value === 'number' ? new Date(value) : new Date(value);
-  if (Number.isNaN(date.getTime())) return '-';
+  const date = parseDateValue(value);
+  if (!date) return '-';
   return new Intl.DateTimeFormat('zh-CN', { month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', hour12: false }).format(date);
 }
 
 function fullDate(value) {
-  if (!value) return '-';
-  const date = new Date(value);
-  if (Number.isNaN(date.getTime())) return '-';
+  const date = parseDateValue(value);
+  if (!date) return '-';
   return new Intl.DateTimeFormat('zh-CN', { month: '2-digit', day: '2-digit', hour12: false }).format(date);
 }
 
 function dateInputValue(value) {
-  const date = new Date(value);
-  if (Number.isNaN(date.getTime())) return '';
+  const date = parseDateValue(value);
+  if (!date) return '';
   const year = date.getFullYear();
   const month = String(date.getMonth() + 1).padStart(2, '0');
   const day = String(date.getDate()).padStart(2, '0');
@@ -289,8 +308,8 @@ function dateInputValue(value) {
 }
 
 function dateOnlyLabel(value) {
-  const date = new Date(value);
-  if (Number.isNaN(date.getTime())) return '-';
+  const date = parseDateValue(value);
+  if (!date) return '-';
   return new Intl.DateTimeFormat('zh-CN', { month: '2-digit', day: '2-digit' }).format(date);
 }
 
@@ -1180,18 +1199,17 @@ function periodBounds(period) {
 
 function isVideoInPeriod(fields, period) {
   if (period === 'total') return true;
-  const publishedAt = new Date(fields.timestamp);
-  if (Number.isNaN(publishedAt.getTime())) return false;
+  const publishedAt = videoPublishedAt(fields);
+  if (!publishedAt) return false;
   const bounds = periodBounds(period);
-  const start = new Date(bounds.weekStart || bounds.monthStart || bounds.customStart || '');
-  const end = new Date(bounds.weekEnd || bounds.monthEnd || bounds.customEnd || '');
-  if (Number.isNaN(start.getTime()) || Number.isNaN(end.getTime())) return true;
+  const start = parseDateValue(bounds.weekStart || bounds.monthStart || bounds.customStart);
+  const end = parseDateValue(bounds.weekEnd || bounds.monthEnd || bounds.customEnd);
+  if (!start || !end) return true;
   return publishedAt >= start && publishedAt < end;
 }
 
 function videoPublishedAt(fields) {
-  const date = new Date(fields.timestamp);
-  return Number.isNaN(date.getTime()) ? null : date;
+  return parseDateValue(fields.timestamp);
 }
 
 function normalizeMapCountryName(country) {
@@ -1848,6 +1866,153 @@ function renderOpsMonitor() {
       })
       .join('');
   }
+}
+
+function latestDateFromRows(rows = [], keys = []) {
+  let latest = null;
+  for (const row of rows || []) {
+    const fields = row.fields || row;
+    for (const key of keys) {
+      const date = parseDateValue(fields[key]);
+      if (date && (!latest || date > latest)) latest = date;
+    }
+  }
+  return latest;
+}
+
+function freshnessLabel(date) {
+  if (!date) return '暂无';
+  const age = daysSince(date);
+  if (age === null) return '-';
+  if (age < 0) return dateOnlyLabel(date);
+  if (age === 0) return '今天';
+  if (age === 1) return '1天前';
+  return `${age}天前`;
+}
+
+function percentOf(value, total) {
+  return total ? Math.round((rawNumber(value) / Math.max(1, rawNumber(total))) * 100) : 0;
+}
+
+function getDataHealthStats() {
+  const runs = centerStore.runs || [];
+  const snapshots = centerStore.snapshots || [];
+  const scopedVideos = getScopedVideoRows(centerPeriod);
+  const scopedInfluencers = getScopedInfluencerRows();
+  const quality = getQualityIssues();
+  const latestRun = latestDateFromRows(runs, ['finishedAt', 'createdAt', 'time']);
+  const latestSnapshot = latestDateFromRows(snapshots, ['capturedAt', 'createdAt', 'time']);
+  const generatedAt = parseDateValue(centerDashboard.generatedAt);
+  const runRows = runs.map((row) => row.fields || row);
+  const successfulRuns = runRows.filter((fields) => readLocalText(fields.status) === 'success').length;
+  const failedRuns = runRows.filter((fields) => readLocalText(fields.status) && readLocalText(fields.status) !== 'success').length;
+  const usageUsd = runRows.reduce((sum, fields) => sum + rawNumber(fields.usageUsd), 0);
+  const recentRuns = runRows
+    .map((fields) => ({ fields, date: parseDateValue(fields.finishedAt || fields.createdAt || fields.time) }))
+    .filter((row) => row.date)
+    .sort((a, b) => b.date - a.date)
+    .slice(0, 20)
+    .map((row) => row.fields);
+  const recentScraped = recentRuns.reduce((sum, fields) => sum + rawNumber(fields.scraped), 0);
+  const recentCreated = recentRuns.reduce((sum, fields) => sum + rawNumber(fields.videoCreated), 0);
+  const recentSnapshots = recentRuns.reduce((sum, fields) => sum + rawNumber(fields.snapshotCreated), 0);
+  const milestoneMap = getMilestone7dByPostKey();
+  const coveredVideos = scopedVideos.filter((fields) => milestoneMap.has(videoPostKey(fields))).length;
+  const coverage = percentOf(coveredVideos, scopedVideos.length);
+  const platformBuckets = new Map();
+  for (const fields of scopedVideos) {
+    const platform = platformLabel(readLocalText(fields['平台']));
+    if (!platformBuckets.has(platform)) platformBuckets.set(platform, { platform, videos: 0, covered: 0 });
+    const bucket = platformBuckets.get(platform);
+    bucket.videos += 1;
+    if (milestoneMap.has(videoPostKey(fields))) bucket.covered += 1;
+  }
+  const platformNeeds = [...platformBuckets.values()]
+    .map((row) => ({ ...row, coverage: percentOf(row.covered, row.videos) }))
+    .sort((a, b) => a.coverage - b.coverage || b.videos - a.videos);
+  const lowestPlatform = platformNeeds[0] || null;
+  const totalVideoCreators = new Set(getScopedVideoRows('total').map((fields) => creatorKey(readLocalText(fields['红人名称']))).filter(Boolean));
+  const monitoredInfluencers = scopedInfluencers.filter((fields) => readLocalText(fields['是否监控']) !== '否');
+  const notPosted = monitoredInfluencers.filter((fields) => {
+    const creator = creatorKey(readLocalText(fields['红人名称']));
+    return creator && !totalVideoCreators.has(creator);
+  }).length;
+  const priorityP1 = monitoredInfluencers.filter((fields) => readLocalText(fields['追踪优先级']).includes('P1')).length;
+  return {
+    runs: runRows.length,
+    successfulRuns,
+    failedRuns,
+    successRate: percentOf(successfulRuns, runRows.length),
+    usageUsd,
+    recentScraped,
+    recentCreated,
+    recentSnapshots,
+    latestRun,
+    latestSnapshot,
+    generatedAt,
+    snapshots: snapshots.length,
+    scopedVideos: scopedVideos.length,
+    coveredVideos,
+    coverage,
+    lowestPlatform,
+    notPosted,
+    priorityP1,
+    missingFollowers: quality.missingFollowers,
+    zeroViewVideos: quality.zeroViewVideos
+  };
+}
+
+function renderDataHealth() {
+  if (!centerEls.dataHealthGrid) return;
+  const stats = getDataHealthStats();
+  const latestRunAge = daysSince(stats.latestRun);
+  const freshnessLevel = !stats.latestRun ? 'danger' : latestRunAge > 2 ? 'warn' : 'good';
+  const runLevel = stats.failedRuns > 0 ? 'warn' : 'good';
+  const coverageLevel = stats.coverage >= 70 ? 'good' : stats.coverage >= 45 ? 'warn' : 'danger';
+  const queueLevel = stats.priorityP1 || stats.notPosted ? 'warn' : 'good';
+  const platformNeed = stats.lowestPlatform;
+  const cards = [
+    {
+      level: freshnessLevel,
+      label: '数据新鲜度',
+      value: freshnessLabel(stats.latestRun),
+      note: `最新抓取 ${centerDate(stats.latestRun)} · 看板生成 ${centerDate(stats.generatedAt)}`,
+      chips: [`快照 ${freshnessLabel(stats.latestSnapshot)}`, `${centerNumber(stats.snapshots)} 条快照`]
+    },
+    {
+      level: runLevel,
+      label: '抓取稳定性',
+      value: `${stats.successRate}%`,
+      note: `${centerNumber(stats.successfulRuns)} 成功 / ${centerNumber(stats.failedRuns)} 失败 · Apify 约 $${stats.usageUsd.toFixed(2)}`,
+      chips: [`近20次抓取 ${centerNumber(stats.recentScraped)} 条`, `新增视频 ${centerNumber(stats.recentCreated)}`, `新增快照 ${centerNumber(stats.recentSnapshots)}`]
+    },
+    {
+      level: coverageLevel,
+      label: '7日快照覆盖',
+      value: `${stats.coverage}%`,
+      note: `${centerNumber(stats.coveredVideos)} / ${centerNumber(stats.scopedVideos)} 条当前范围视频有 7 日快照`,
+      chips: [`${selectedPeriodLabel()}`, stats.scopedVideos ? '可用于均播判断' : '当前范围无视频']
+    },
+    {
+      level: queueLevel,
+      label: '补抓优先级',
+      value: platformNeed ? platformNeed.platform : `${centerNumber(stats.notPosted)} 位`,
+      note: platformNeed
+        ? `当前 7 日覆盖 ${platformNeed.coverage}%，${centerNumber(platformNeed.videos - platformNeed.covered)} 条待补快照`
+        : '当前范围暂无明显平台补抓缺口',
+      chips: [`P1 ${centerNumber(stats.priorityP1)} 位`, `未上线 ${centerNumber(stats.notPosted)} 位`, `缺粉 ${centerNumber(stats.missingFollowers)} 位`]
+    }
+  ];
+  centerEls.dataHealthGrid.innerHTML = cards
+    .map(
+      (card) => `<article class="data-health-card ${card.level}">
+        <span>${escapeHtml(card.label)}</span>
+        <strong>${escapeHtml(card.value)}</strong>
+        <p>${escapeHtml(card.note)}</p>
+        <div>${card.chips.map((chip) => `<em>${escapeHtml(chip)}</em>`).join('')}</div>
+      </article>`
+    )
+    .join('');
 }
 
 function renderActivityHeatmap() {
@@ -3063,6 +3228,7 @@ function renderDashboardCharts() {
   renderBarChart(centerEls.monthlyBarChart, getMonthlyTrendRows());
   renderDonutChart(centerEls.platformPieChart, getPlatformDistribution(centerPeriod));
   renderOpsCommandCenter();
+  renderDataHealth();
   renderActivityHeatmap();
   renderGlobalMap();
   renderPlatformOrbit();
@@ -3236,6 +3402,7 @@ function renderPeriodSensitiveViews() {
   renderCustomSummaryCard();
   renderCurrentPeriod();
   renderBattleInsights();
+  renderDataHealth();
   renderLineChart(centerEls.weeklyTrendChart, getWeeklyTrendRows(), 'videos', 'mature7dViews');
   renderBarChart(centerEls.monthlyBarChart, getMonthlyTrendRows());
   renderDonutChart(centerEls.platformPieChart, getPlatformDistribution(centerPeriod));
@@ -3599,6 +3766,7 @@ const DASHBOARD_INTERACTION_SELECTOR = [
   '.global-map-card',
   '.global-detail-card',
   '.global-bars-card',
+  '.data-health-card',
   '.global-map-canvas',
   '.geo-bar-row',
   '.map-detail-hero',
