@@ -3626,6 +3626,8 @@ button:disabled {
   .weekly-pulse-grid,
   .battle-insight-grid,
   .affiliate-sales-kpis,
+  .anniversary-kpi-grid,
+  .anniversary-grid,
   .activity-heatmap,
 	  .platform-matrix,
 	  .tier-leaderboard-grid,
@@ -3716,6 +3718,9 @@ button:disabled {
   .weekly-pulse-grid,
   .battle-insight-grid,
   .affiliate-sales-kpis,
+  .anniversary-kpi-grid,
+  .anniversary-grid,
+  .anniversary-crawl-grid,
   .activity-heatmap,
   .platform-matrix,
   .tier-leaderboard-grid,
@@ -4682,6 +4687,302 @@ body.compact-topbar .filter-select-row label span {
   font-size: 11px;
   font-style: normal;
   font-weight: 800;
+}
+
+.anniversary-snapshot {
+  margin-top: 13px;
+}
+
+.anniversary-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.anniversary-kpi-card,
+.anniversary-card {
+  overflow: hidden;
+  border: 1px solid var(--border-soft);
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at 88% 8%, rgba(230, 57, 70, 0.14), transparent 30%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.048), rgba(255, 255, 255, 0.018)),
+    var(--bg-card);
+}
+
+.anniversary-kpi-card {
+  min-height: 124px;
+  padding: 15px;
+}
+
+.anniversary-kpi-card span,
+.anniversary-kpi-card p,
+.anniversary-card span,
+.anniversary-card p,
+.anniversary-card dt {
+  color: var(--text-secondary);
+}
+
+.anniversary-kpi-card span {
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.anniversary-kpi-card strong {
+  display: block;
+  margin-top: 9px;
+  color: var(--text-primary);
+  font-size: clamp(24px, 2.8vw, 34px);
+  line-height: 1.04;
+  overflow-wrap: anywhere;
+}
+
+.anniversary-kpi-card p,
+.anniversary-note {
+  margin: 10px 0 0;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.anniversary-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.anniversary-card {
+  padding: 15px;
+}
+
+.wide-anniversary-card {
+  grid-column: 1 / -1;
+}
+
+.anniversary-crawl-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 9px;
+  margin-top: 12px;
+}
+
+.anniversary-crawl-grid div {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 13px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.anniversary-crawl-grid strong,
+.anniversary-crawl-grid span,
+.anniversary-owner-strip span {
+  display: block;
+}
+
+.anniversary-crawl-grid strong {
+  color: var(--text-primary);
+  font-size: 17px;
+}
+
+.anniversary-crawl-grid span,
+.anniversary-owner-strip span {
+  margin-top: 4px;
+  font-size: 11px;
+}
+
+.anniversary-owner-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 12px;
+}
+
+.anniversary-owner-strip span {
+  border: 1px solid rgba(230, 57, 70, 0.18);
+  border-radius: 999px;
+  padding: 6px 9px;
+  background: rgba(230, 57, 70, 0.08);
+  font-weight: 800;
+}
+
+.anniversary-platform-list,
+.anniversary-region-list,
+.anniversary-video-list {
+  display: grid;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.anniversary-platform-row {
+  display: grid;
+  grid-template-columns: minmax(120px, 0.95fr) minmax(72px, 0.7fr) minmax(0, 1.15fr);
+  align-items: center;
+  gap: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 11px;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.anniversary-platform-row strong,
+.anniversary-platform-row span,
+.anniversary-platform-row dt,
+.anniversary-platform-row dd,
+.anniversary-region-row strong,
+.anniversary-region-row span {
+  display: block;
+}
+
+.anniversary-platform-row strong,
+.anniversary-region-row strong {
+  color: var(--text-primary);
+}
+
+.anniversary-platform-row span,
+.anniversary-platform-row dt,
+.anniversary-region-row span {
+  margin-top: 3px;
+  font-size: 11px;
+}
+
+.anniversary-platform-row dl {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 7px;
+  margin: 0;
+}
+
+.anniversary-platform-row dt,
+.anniversary-platform-row dd {
+  margin: 0;
+}
+
+.anniversary-platform-row dd {
+  color: var(--text-primary);
+  font-size: 12px;
+  font-weight: 900;
+  overflow-wrap: anywhere;
+}
+
+.anniversary-meter {
+  overflow: hidden;
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.anniversary-meter i {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #542537, #e63946, #ffb454);
+}
+
+.anniversary-region-row {
+  display: grid;
+  grid-template-columns: 52px minmax(110px, 1fr) minmax(160px, 1.1fr);
+  align-items: center;
+  gap: 10px;
+}
+
+.anniversary-video-list {
+  margin-bottom: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.anniversary-video-list li {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr) minmax(58px, auto);
+  align-items: center;
+  gap: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 10px 11px;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.anniversary-video-list em {
+  color: #ffb3b7;
+  font-style: normal;
+  font-weight: 900;
+}
+
+.anniversary-video-list strong,
+.anniversary-video-list span,
+.anniversary-video-list small {
+  display: block;
+}
+
+.anniversary-video-list strong a {
+  color: var(--text-primary);
+}
+
+.anniversary-video-list span {
+  margin-top: 3px;
+  font-size: 11px;
+}
+
+.anniversary-video-list i {
+  display: block;
+  overflow: hidden;
+  height: 6px;
+  margin-top: 7px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.anniversary-video-list i b {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #e63946, #ffb454);
+}
+
+.anniversary-video-list small {
+  color: var(--text-primary);
+  font-size: 13px;
+  font-weight: 900;
+  text-align: right;
+}
+
+@media (max-width: 760px) {
+  .anniversary-kpi-grid,
+  .anniversary-grid,
+  .anniversary-crawl-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .anniversary-platform-row,
+  .anniversary-region-row {
+    grid-template-columns: 1fr;
+  }
+
+  .anniversary-platform-row dl {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .anniversary-video-list li {
+    grid-template-columns: 32px minmax(0, 1fr);
+  }
+
+  .anniversary-video-list small {
+    grid-column: 2;
+    text-align: left;
+  }
+}
+
+@media (min-width: 761px) and (max-width: 1180px) {
+  .anniversary-kpi-grid,
+  .anniversary-crawl-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .anniversary-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .global-war-room {

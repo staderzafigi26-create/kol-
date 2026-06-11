@@ -1,0 +1,170 @@
+{
+  "ok": true,
+  "generatedAt": "2026-06-11T23:09:40.643Z",
+  "publicSafe": true,
+  "note": "公开版仅包含聚合数量指标和公开视频表现，不含销售额、佣金、订单明细、邮箱或未匹配订单记录。",
+  "sourceFiles": [
+    "anniversary_competition_orders_platform_summary_2026-06-11.csv",
+    "anniversary_competition_orders_region_summary_2026-06-11.csv",
+    "anniversary_competition_new_videos_2026-06-11.csv",
+    "anniversary_competition_crawl_target_summary_2026-06-11.csv"
+  ],
+  "summary": {
+    "sourceDate": "2026-06-11",
+    "periodLabel": "2026-06-01 至 2026-06-11",
+    "videoCount": 110,
+    "exposure": 2188477,
+    "orders": 467
+  },
+  "crawl": {
+    "targets": 108,
+    "success": 108,
+    "failed": 0,
+    "scraped": 998,
+    "matched": 80,
+    "videoCreated": 66,
+    "videoSkipped": 14,
+    "usageUsd": 2.1739,
+    "missingHomeUrl": 9
+  },
+  "platforms": [
+    {
+      "platform": "TikTok",
+      "key": "TK",
+      "videoCount": 58,
+      "exposure": 659512,
+      "orders": 266,
+      "exposureShare": 30,
+      "orderShare": 57
+    },
+    {
+      "platform": "YouTube",
+      "key": "YT",
+      "videoCount": 33,
+      "exposure": 931809,
+      "orders": 21,
+      "exposureShare": 43,
+      "orderShare": 4
+    },
+    {
+      "platform": "Instagram",
+      "key": "IG",
+      "videoCount": 19,
+      "exposure": 597156,
+      "orders": 180,
+      "exposureShare": 27,
+      "orderShare": 39
+    }
+  ],
+  "regions": [
+    {
+      "region": "US",
+      "orders": 446,
+      "orderShare": 96
+    },
+    {
+      "region": "EU",
+      "orders": 19,
+      "orderShare": 4
+    },
+    {
+      "region": "UK",
+      "orders": 1,
+      "orderShare": 0
+    },
+    {
+      "region": "CA",
+      "orders": 1,
+      "orderShare": 0
+    }
+  ],
+  "topVideos": [
+    {
+      "creator": "oneway_lilman",
+      "owner": "Stefan",
+      "platform": "instagramreels",
+      "publishedAt": "2026-06-01",
+      "views": 243113,
+      "likes": 8470,
+      "comments": 87,
+      "url": "https://www.instagram.com/p/DZD7bN7JJWi/"
+    },
+    {
+      "creator": "c.fialcovschi",
+      "owner": "Zoe",
+      "platform": "tiktok",
+      "publishedAt": "2026-06-09",
+      "views": 117000,
+      "likes": 2827,
+      "comments": 104,
+      "url": "https://www.tiktok.com/@c.fialcovschi/video/7649440967975537942"
+    },
+    {
+      "creator": "Tuttzsi",
+      "owner": "Lexy",
+      "platform": "youtubeshort",
+      "publishedAt": "2026-06-06",
+      "views": 106426,
+      "likes": 1400,
+      "comments": 132,
+      "url": "https://www.youtube.com/shorts/oUQytb54BSg"
+    },
+    {
+      "creator": "MKR",
+      "owner": "Ryan",
+      "platform": "youtubeshort",
+      "publishedAt": "2026-06-08",
+      "views": 73946,
+      "likes": 1500,
+      "comments": 122,
+      "url": "https://www.youtube.com/shorts/uSESwBRfZf0"
+    },
+    {
+      "creator": "Rtr_Tedd",
+      "owner": "Ryan",
+      "platform": "youtubeshort",
+      "publishedAt": "2026-06-06",
+      "views": 69167,
+      "likes": 754,
+      "comments": 72,
+      "url": "https://www.youtube.com/shorts/ZZjnZR8mj9U"
+    },
+    {
+      "creator": "Radutz_",
+      "owner": "Zoe",
+      "platform": "youtubeshort",
+      "publishedAt": "2026-06-04",
+      "views": 69086,
+      "likes": 588,
+      "comments": 8,
+      "url": "https://www.youtube.com/shorts/Q7oe1LTWhSE"
+    }
+  ],
+  "owners": [
+    {
+      "owner": "Zoe",
+      "videos": 30,
+      "views": 654351
+    },
+    {
+      "owner": "Lexy",
+      "videos": 16,
+      "views": 422871
+    },
+    {
+      "owner": "Stefan",
+      "videos": 11,
+      "views": 328767
+    },
+    {
+      "owner": "Ryan",
+      "videos": 5,
+      "views": 177657
+    },
+    {
+      "owner": "Vivi",
+      "videos": 1,
+      "views": 7073
+    }
+  ]
+}
