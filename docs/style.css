@@ -1337,6 +1337,14 @@ label span,
   background: linear-gradient(90deg, #255c8c, var(--accent-blue));
 }
 
+.geo-bar-row.region-us i b,
+.geo-bar-row.region-ca i b,
+.geo-bar-row.region-uk i b,
+.geo-bar-row.region-eu i b,
+.geo-bar-row.region-other i b {
+  background: linear-gradient(90deg, #542537, #e63946, #ffb454);
+}
+
 .geo-bar-row strong {
   color: #ffd3a3;
   font-size: 13px;

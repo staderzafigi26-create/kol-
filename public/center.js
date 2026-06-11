@@ -924,6 +924,7 @@ const MAP_COUNTRY_TO_DRILL_MODE = {
 };
 
 const EU_GROUP_FILTER = 'EU_UK_GROUP';
+const EUROPE_WORLD_FALLBACK_COUNTRIES = ['Germany', 'France', 'Italy', 'United Kingdom', 'Spain', 'Netherlands', 'Sweden', 'Poland'];
 const EUROPE_MAP_COUNTRIES = new Set([
   'Europe',
   'United Kingdom',
@@ -2051,6 +2052,44 @@ function mapThemeForRow(row = {}) {
   return MAP_REGION_THEMES.OTHER;
 }
 
+function stableMapIndex(value, length) {
+  if (!length) return 0;
+  const text = String(value || 'yozma-eu').trim() || 'yozma-eu';
+  let hash = 0;
+  for (let index = 0; index < text.length; index += 1) {
+    hash = (hash * 31 + text.charCodeAt(index)) >>> 0;
+  }
+  return hash % length;
+}
+
+function estimatedEuropeCountryForRow(row = {}) {
+  const basis = row.creatorName || row.videoUrl || row.id || row.videoTitle || row.publishDate || '';
+  return EUROPE_WORLD_FALLBACK_COUNTRIES[stableMapIndex(basis, EUROPE_WORLD_FALLBACK_COUNTRIES.length)];
+}
+
+function worldMapCountryForRow(row = {}) {
+  const normalizedCountry = normalizeMapCountryName(row.mapCountry || row.country || row.region);
+  if (['Unknown', 'UNKNOWN', '未标注地区'].includes(normalizedCountry)) {
+    return {
+      mapCountry: '',
+      region: '未标注地区',
+      isEstimated: false
+    };
+  }
+  if (normalizedCountry === 'Europe') {
+    return {
+      mapCountry: estimatedEuropeCountryForRow(row),
+      region: 'EU',
+      isEstimated: true
+    };
+  }
+  return {
+    mapCountry: normalizedCountry,
+    region: normalizeCountryRegion(normalizedCountry),
+    isEstimated: false
+  };
+}
+
 function mapPaletteForMode(mode) {
   return MAP_DRILL_CONFIG[mode]?.palette || ['#172235', '#1E5A78', '#33D6C5', '#FFB454', '#E63946'];
 }
@@ -2096,25 +2135,36 @@ function getCountryStats(period = centerPeriod) {
   const rows = normalizeData(getScopedVideoRows(period));
   const map = new Map();
   for (const row of rows) {
-    const key = row.mapCountry || 'Unknown';
+    const worldCountry = worldMapCountryForRow(row);
+    const key = worldCountry.mapCountry || 'Unknown';
+    if (!worldCountry.mapCountry) continue;
     if (!map.has(key)) {
       map.set(key, {
         placeKey: key,
         placeLabel: key,
-        country: row.country,
-        region: row.region,
+        country: key,
+        region: worldCountry.region || row.region,
         mapCountry: key,
         videos: 0,
+        estimatedVideos: 0,
+        exactVideos: 0,
         views: 0,
         creators: new Set(),
+        estimatedCreators: new Set(),
         topCreator: '-',
         topVideo: null,
-        lat: REGION_LOCATION_FALLBACKS[row.region]?.lat || REGION_LOCATION_FALLBACKS[row.country]?.lat || null,
-        lng: REGION_LOCATION_FALLBACKS[row.region]?.lng || REGION_LOCATION_FALLBACKS[row.country]?.lng || null
+        lat: REGION_LOCATION_FALLBACKS[worldCountry.region]?.lat || REGION_LOCATION_FALLBACKS[row.region]?.lat || REGION_LOCATION_FALLBACKS[row.country]?.lat || null,
+        lng: REGION_LOCATION_FALLBACKS[worldCountry.region]?.lng || REGION_LOCATION_FALLBACKS[row.region]?.lng || REGION_LOCATION_FALLBACKS[row.country]?.lng || null
       });
     }
     const stat = map.get(key);
     stat.videos += 1;
+    if (worldCountry.isEstimated) {
+      stat.estimatedVideos += 1;
+      if (row.creatorName) stat.estimatedCreators.add(row.creatorName);
+    } else {
+      stat.exactVideos += 1;
+    }
     stat.views += row.views;
     if (row.creatorName) stat.creators.add(row.creatorName);
     if (!stat.topVideo || row.views > stat.topVideo.views) {
@@ -2126,6 +2176,7 @@ function getCountryStats(period = centerPeriod) {
     .map((row) => ({
       ...row,
       creatorsCount: row.creators.size,
+      estimatedCreatorsCount: row.estimatedCreators.size,
       avgViews: row.videos ? Math.round(row.views / row.videos) : 0
     }))
     .sort((a, b) => b.videos - a.videos || b.views - a.views);
@@ -2397,7 +2448,10 @@ function renderGlobalMap() {
           const row = params.data?.row || rows.find((item) => mapFeatureName(item, isDrillMode) === params.name || item.mapCountry === params.name) || {};
           if (!row.videos) return `${params.name}<br/>暂无视频数据`;
           const top = row.topVideo || {};
-          return `<strong>${row.placeLabel}</strong><br/>上线视频：${centerNumber(row.videos)} 条<br/>7日声量：${centerNumber(row.views)}<br/>参与达人：${centerNumber(row.creatorsCount)} 位<br/>7日均播：${centerNumber(row.avgViews)}<br/>爆款达人：${escapeHtml(row.topCreator || '-')}<br/>爆款视频：${escapeHtml(top.videoTitle || top.creatorName || '-')}`;
+          const estimatedLine = !isDrillMode && row.estimatedVideos
+            ? `<br/>EU 未细分兜底：${centerNumber(row.estimatedVideos)} 条`
+            : '';
+          return `<strong>${row.placeLabel}</strong><br/>上线视频：${centerNumber(row.videos)} 条${estimatedLine}<br/>7日声量：${centerNumber(row.views)}<br/>参与达人：${centerNumber(row.creatorsCount)} 位<br/>7日均播：${centerNumber(row.avgViews)}<br/>爆款达人：${escapeHtml(row.topCreator || '-')}<br/>爆款视频：${escapeHtml(top.videoTitle || top.creatorName || '-')}`;
         }
       },
       visualMap: {
@@ -2438,6 +2492,8 @@ function renderGlobalMap() {
   const totalVideos = rows.reduce((sum, row) => sum + row.videos, 0);
   const actionNote = !active.videos
       ? '当前没有可拆到下一级区域的视频数据；后续补充国家或省份字段后，这里会自动上色和排行。'
+      : !isDrillMode && active.estimatedVideos
+      ? `其中 ${centerNumber(active.estimatedVideos)} 条来自 EU 大区未细分数据，先用欧洲国家色块做热力兜底；补齐国家字段后会自动回到真实国家。`
       : active.isUnassigned
       ? '这部分视频只有大区信息，暂时无法落到具体国家或省份；补齐地址字段后会自动进入地图色块。'
       : active.avgViews >= Math.round(totalViews / Math.max(totalVideos, 1))
@@ -2473,7 +2529,11 @@ function renderGlobalMap() {
       const width = Math.max(6, Math.round((row.videos / maxVideos) * 100));
       const activeClass = row.placeKey === active.placeKey ? ' active' : '';
       const theme = mapThemeForRow(row);
-      const precision = isDrillMode ? drillConfig.unitLabel : row.region || '国家';
+      const precision = isDrillMode
+        ? drillConfig.unitLabel
+        : row.estimatedVideos
+        ? `${row.region || '国家'} · 含 ${centerNumber(row.estimatedVideos)} 条EU兜底`
+        : row.region || '国家';
       return `<button class="geo-bar-row region-${escapeHtml(theme.key)}${activeClass}" data-map-place="${escapeHtml(row.placeKey)}">
         <span>${escapeHtml(row.placeLabel)}<small>${escapeHtml(precision)} · ${centerNumber(row.videos)} 条 · ${centerNumber(row.creatorsCount)} 位</small></span>
         <i><b style="width:${width}%"></b></i>
