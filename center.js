@@ -2104,6 +2104,37 @@ function mapVideoHeatColor(videos, maxVideos) {
   return '#F7A1A6';
 }
 
+const MAP_SHORT_LABELS = {
+  'United States': 'US',
+  Canada: 'CA',
+  'United Kingdom': 'UK',
+  Germany: 'DE',
+  France: 'FR',
+  Italy: 'IT',
+  Spain: 'ES',
+  Netherlands: 'NL',
+  Sweden: 'SE',
+  Poland: 'PL',
+  Belgium: 'BE',
+  Austria: 'AT',
+  Australia: 'AU',
+  Mexico: 'MX'
+};
+
+function mapShortLabel(name) {
+  return MAP_SHORT_LABELS[name] || String(name || '').replace('Czech Republic', 'Czechia');
+}
+
+function shouldShowMapLabel(row, maxVideos, isDrillMode) {
+  if (!row?.videos || row.isUnassigned) return false;
+  if (!isDrillMode && EUROPE_MAP_COUNTRIES.has(row.mapCountry) && row.mapCountry !== 'United Kingdom') {
+    return row.videos >= Math.max(18, Math.ceil(maxVideos * 0.16));
+  }
+  const ratioThreshold = isDrillMode ? 0.08 : 0.045;
+  const absoluteThreshold = isDrillMode ? 1 : 5;
+  return row.videos >= Math.max(absoluteThreshold, Math.ceil(maxVideos * ratioThreshold));
+}
+
 function mapFeatureName(row, isDrillMode) {
   return isDrillMode ? row.mapDataName || row.placeLabel : row.mapCountry;
 }
@@ -2398,8 +2429,10 @@ function renderGlobalMap() {
   }
   const active = rows.find((row) => row.placeKey === selectedMapPlaceKey) || rows[0];
   const maxVideos = Math.max(...rows.map((row) => row.videos), 1);
+  const mapWidth = centerEls.globalMapCanvas.clientWidth || centerEls.globalMapCanvas.offsetWidth || 0;
+  const showMapLabels = mapWidth >= 430;
   const geoPromise = isDrillMode ? ensureDrillGeo(mapDrillMode) : ensureWorldGeo();
-  geoPromise.then((geoJson) => {
+  Promise.resolve(geoPromise).then((geoJson) => {
     if (!geoJson || !window.echarts) {
       centerEls.globalMapCanvas.innerHTML = '<div class="empty-cell">地图资源加载失败，已保留右侧地区排行作为兜底。</div>';
       return;
@@ -2456,9 +2489,27 @@ function renderGlobalMap() {
         }
       },
       visualMap: {
-        show: false,
+        show: true,
         min: 0,
         max: maxVideos,
+        left: 14,
+        bottom: 14,
+        orient: 'horizontal',
+        itemWidth: 128,
+        itemHeight: 8,
+        itemGap: 8,
+        text: ['多', '少'],
+        textStyle: {
+          color: 'rgba(248, 250, 252, 0.78)',
+          fontSize: 10,
+          fontWeight: 800
+        },
+        backgroundColor: 'rgba(8, 14, 24, 0.72)',
+        borderColor: 'rgba(255, 255, 255, 0.12)',
+        borderWidth: 1,
+        padding: [7, 9],
+        borderRadius: 999,
+        formatter: (value) => centerNumber(Math.round(value)),
         inRange: {
           color: ['#F7A1A6', '#F26F78', '#E64655', '#CF2438', '#B4142B']
         }
@@ -2471,9 +2522,22 @@ function renderGlobalMap() {
           roam: false,
           zoom: isDrillMode ? drillConfig.zoom : 1.06,
           selectedMode: false,
-          label: { show: false },
+          label: {
+            show: showMapLabels,
+            color: '#FFF3F4',
+            fontSize: isDrillMode ? 9 : 10,
+            fontWeight: 900,
+            lineHeight: 12,
+            textBorderColor: 'rgba(7, 12, 20, 0.86)',
+            textBorderWidth: 3,
+            formatter: (params) => {
+              const row = params.data?.row;
+              if (!shouldShowMapLabel(row, maxVideos, isDrillMode)) return '';
+              return `${mapShortLabel(params.name)}\n${centerNumber(row.videos)}`;
+            }
+          },
           itemStyle: {
-            areaColor: '#0E1725',
+            areaColor: '#101927',
             borderColor: 'rgba(255,255,255,.14)',
             borderWidth: 0.5
           },
