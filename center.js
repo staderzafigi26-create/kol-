@@ -422,8 +422,14 @@ function clearRows(tbody) {
   while (tbody.firstChild) tbody.removeChild(tbody.firstChild);
 }
 
-function addCell(row, text) {
+function labelCell(cell, label) {
+  if (label) cell.dataset.label = label;
+  return cell;
+}
+
+function addCell(row, text, label = '') {
   const cell = document.createElement('td');
+  labelCell(cell, label);
   cell.textContent = text;
   row.appendChild(cell);
   return cell;
@@ -3392,13 +3398,13 @@ function renderTables() {
   getScopedInfluencerRows().slice(0, 300).forEach((fields) => {
     const normalized = normalizeInfluencerRow(fields, influencerHelpers);
     const tr = document.createElement('tr');
-    addCell(tr, normalized.creatorName);
-    addCell(tr, normalized.owner || '-');
-    addCell(tr, normalized.region || '-');
-    addCell(tr, normalized.platform);
-    const linkCell = addCell(tr, readLocalLink(fields['红人链接']));
-    addCell(tr, readLocalText(fields['是否监控']));
-    addCell(tr, readLocalText(fields['是否出视频'] || fields['是否发布视频']));
+    addCell(tr, normalized.creatorName, '红人');
+    addCell(tr, normalized.owner || '-', '负责人');
+    addCell(tr, normalized.region || '-', '地区');
+    addCell(tr, normalized.platform, '平台');
+    const linkCell = addCell(tr, readLocalLink(fields['红人链接']), '主页链接');
+    addCell(tr, readLocalText(fields['是否监控']), '是否监控');
+    addCell(tr, readLocalText(fields['是否出视频'] || fields['是否发布视频']), '是否出视频');
     centerEls.influencerRows.appendChild(tr);
   });
 
@@ -3413,19 +3419,21 @@ function renderTables() {
     .slice(0, 300)
     .forEach((row) => {
       const tr = document.createElement('tr');
-      addCell(tr, row.creatorName);
-      addCell(tr, row.owner);
-      addCell(tr, row.region);
-      addCell(tr, row.platform);
-      addCell(tr, centerDate(row.publishDate));
-      addCell(tr, centerNumber(row.views));
-      addCell(tr, `${row.engagementRate}%`);
+      addCell(tr, row.creatorName, '红人');
+      addCell(tr, row.owner, '负责人');
+      addCell(tr, row.region, '区域');
+      addCell(tr, row.platform, '平台');
+      addCell(tr, centerDate(row.publishDate), '上线时间');
+      addCell(tr, centerNumber(row.views), '播放');
+      addCell(tr, `${row.engagementRate}%`, '互动率');
       const status = videoStatus(row);
       const statusCell = document.createElement('td');
+      labelCell(statusCell, '状态');
       statusCell.innerHTML = `<span class="status-pill ${escapeHtml(status.level)}">${escapeHtml(status.label)}</span>`;
       tr.appendChild(statusCell);
       const url = row.videoUrl;
       const linkCell = document.createElement('td');
+      labelCell(linkCell, '链接');
       if (url) {
         const a = document.createElement('a');
         a.href = url;
@@ -3445,22 +3453,23 @@ function renderTables() {
     .slice(0, 400)
     .forEach((row) => {
       const tr = document.createElement('tr');
-      addCell(tr, row.creator || row.affiliateName || '-');
-      addCell(tr, row.email || '-');
-      addCell(tr, row.owner || '-');
-      addCell(tr, row.region || '-');
+      addCell(tr, row.creator || row.affiliateName || '-', '达人');
+      addCell(tr, row.email || '-', 'Email');
+      addCell(tr, row.owner || '-', '负责人');
+      addCell(tr, row.region || '-', '地区');
       const codeCell = document.createElement('td');
+      labelCell(codeCell, '联盟 Code');
       const safeLink = safeExternalUrl(row.referralLink);
       codeCell.innerHTML = safeLink
         ? `<a href="${escapeHtml(safeLink)}" target="_blank" rel="noopener noreferrer">${escapeHtml(row.referralCode || '打开')}</a>`
         : escapeHtml(row.referralCode || '-');
       tr.appendChild(codeCell);
-      addCell(tr, row.matchStatus === 'email_matched' ? `已匹配 / ${row.status}` : `未匹配 / ${row.status}`);
-      addCell(tr, `${centerNumber(row.videos)} 条`);
-      addCell(tr, centerNumber(row.views));
-      addCell(tr, row.hasOrderMetrics ? centerNumber(row.orders) : '0');
-      addCell(tr, row.hasOrderMetrics ? moneyBreakdownText(row.revenueByCurrency) : '0');
-      addCell(tr, row.hasOrderMetrics ? moneyBreakdownText(row.commissionByCurrency) : '0');
+      addCell(tr, row.matchStatus === 'email_matched' ? `已匹配 / ${row.status}` : `未匹配 / ${row.status}`, '状态');
+      addCell(tr, `${centerNumber(row.videos)} 条`, '当前周期视频');
+      addCell(tr, centerNumber(row.views), '7日声量');
+      addCell(tr, row.hasOrderMetrics ? centerNumber(row.orders) : '0', '订单');
+      addCell(tr, row.hasOrderMetrics ? moneyBreakdownText(row.revenueByCurrency) : '0', 'GMV');
+      addCell(tr, row.hasOrderMetrics ? moneyBreakdownText(row.commissionByCurrency) : '0', '佣金');
       centerEls.affiliateSalesRows.appendChild(tr);
     });
 
@@ -3472,11 +3481,11 @@ function renderTables() {
     .slice(0, 300)
     .forEach((fields) => {
       const tr = document.createElement('tr');
-      addCell(tr, centerDate(fields.capturedAt));
-      addCell(tr, readLocalText(fields['红人名称']));
-      addCell(tr, readLocalText(fields.platform));
-      addCell(tr, centerNumber(Math.max(Number(fields.videoPlayCount) || 0, Number(fields.videoViewCount) || 0)));
-      addCell(tr, readLocalText(fields.snapshotType));
+      addCell(tr, centerDate(fields.capturedAt), '捕获时间');
+      addCell(tr, readLocalText(fields['红人名称']), '红人');
+      addCell(tr, readLocalText(fields.platform), '平台');
+      addCell(tr, centerNumber(Math.max(Number(fields.videoPlayCount) || 0, Number(fields.videoViewCount) || 0)), '播放');
+      addCell(tr, readLocalText(fields.snapshotType), '快照类型');
       centerEls.snapshotRows.appendChild(tr);
     });
 
@@ -3484,10 +3493,10 @@ function renderTables() {
   (centerStore.runs || []).slice(0, 300).forEach((row) => {
     const fields = row.fields || row;
     const tr = document.createElement('tr');
-    addCell(tr, centerDate(fields.createdAt || fields.time));
-    addCell(tr, readLocalText(fields.task || fields.name));
-    addCell(tr, readLocalText(fields.status));
-    addCell(tr, readLocalText(fields.message || fields.note));
+    addCell(tr, centerDate(fields.createdAt || fields.time), '时间');
+    addCell(tr, readLocalText(fields.task || fields.name), '任务');
+    addCell(tr, readLocalText(fields.status), '状态');
+    addCell(tr, readLocalText(fields.message || fields.note), '说明');
     centerEls.runRows.appendChild(tr);
   });
 }
