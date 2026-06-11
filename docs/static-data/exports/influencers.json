@@ -172,7 +172,7 @@
       "红人编码": "EU-Zoe-036",
       "地区": "EU",
       "负责人": "Zoe",
-      "红人粉丝数据": 31600,
+      "红人粉丝数据": 31800,
       "追踪优先级": "P0 立刻追踪",
       "追踪评分": "135",
       "追踪原因": "2026合作未上线/未登记上线；当前本地未登记视频；普通/小体量达人更需要追踪",
@@ -180,7 +180,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.864Z",
-    "updatedAt": "2026-06-07T08:20:14.798Z"
+    "updatedAt": "2026-06-11T10:16:58.277Z"
   },
   {
     "id": "0YN3sy1mfb",
@@ -417,7 +417,7 @@
         "link": "https://www.instagram.com/oneway.jakee/",
         "text": "https://www.instagram.com/oneway.jakee/"
       },
-      "平台": "instagram",
+      "平台": "instagramreels",
       "是否出视频": "否",
       "红人名称": "oneway.jakee",
       "样品型号": "yozma, yozmasport，in10",
@@ -976,21 +976,25 @@
         "text": "https://www.tiktok.com/@dmvtalalala"
       },
       "平台": "tiktok",
-      "是否出视频": "否",
+      "是否出视频": "是",
       "红人名称": "dmvtalalala",
       "样品型号": "yozma, yozmasport，in10",
       "红人编码": "US-Nancy-002",
       "地区": "US",
       "负责人": "Nancy",
-      "红人粉丝数据": "11800",
+      "红人粉丝数据": 12200,
       "追踪优先级": "P3 暂缓",
       "追踪评分": "20",
       "追踪原因": "普通/小体量达人更需要追踪",
-      "追踪批次更新时间": "2026-06-07"
+      "追踪批次更新时间": "2026-06-07",
+      "url": {
+        "text": "https://www.tiktok.com/@dmvtalalala/video/7649925455008501022",
+        "link": "https://www.tiktok.com/@dmvtalalala/video/7649925455008501022"
+      }
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-11T10:09:12.645Z"
   },
   {
     "id": "2egjghVBcK",
@@ -1574,7 +1578,7 @@
       "红人编码": "US-Stefan-051",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 17400,
+      "红人粉丝数据": 17700,
       "追踪优先级": "P0 立刻追踪",
       "追踪评分": "120",
       "追踪原因": "正在出单；普通/小体量达人更需要追踪",
@@ -1590,7 +1594,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": "2026-06-07T07:48:55.878Z"
+    "updatedAt": "2026-06-11T10:34:51.779Z"
   },
   {
     "id": "3SOD6BbFZQ",
@@ -1704,7 +1708,7 @@
       "红人编码": "US-Stefan-030",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 30500,
+      "红人粉丝数据": 31500,
       "追踪优先级": "P3 暂缓",
       "追踪评分": "20",
       "追踪原因": "普通/小体量达人更需要追踪",
@@ -1712,7 +1716,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-11T09:55:33.682Z"
   },
   {
     "id": "3Vi43tnpkl",
@@ -2169,21 +2173,25 @@
         "text": "https://www.tiktok.com/@etronnix"
       },
       "平台": "tiktok",
-      "是否出视频": "否",
+      "是否出视频": "是",
       "红人名称": "etronnix",
       "样品型号": "yozma, yozmasport，in10",
       "红人编码": "US-Lexy-012",
       "地区": "US",
       "负责人": "Lexy",
-      "红人粉丝数据": 93700,
+      "红人粉丝数据": 96300,
       "追踪优先级": "P0 立刻追踪",
       "追踪评分": "120",
       "追踪原因": "正在出单；普通/小体量达人更需要追踪",
-      "追踪批次更新时间": "2026-06-07"
+      "追踪批次更新时间": "2026-06-07",
+      "url": {
+        "text": "https://www.tiktok.com/@etronnix/video/7649975521987579166",
+        "link": "https://www.tiktok.com/@etronnix/video/7649975521987579166"
+      }
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": "2026-06-07T08:32:24.020Z"
+    "updatedAt": "2026-06-11T10:10:52.203Z"
   },
   {
     "id": "4Pdse3GAHs",
@@ -2323,7 +2331,7 @@
       "红人编码": "US-Stefan-030",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 30500,
+      "红人粉丝数据": 31500,
       "追踪优先级": "P3 暂缓",
       "追踪评分": "20",
       "追踪原因": "普通/小体量达人更需要追踪",
@@ -2343,7 +2351,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-11T09:55:33.682Z"
   },
   {
     "id": "4nCjNGExO7",
@@ -2360,7 +2368,7 @@
       "红人编码": "EU-Zoe-014",
       "地区": "EU",
       "负责人": "Zoe",
-      "红人粉丝数据": 73000,
+      "红人粉丝数据": 73900,
       "追踪优先级": "P3 暂缓",
       "追踪评分": "-50",
       "追踪原因": "头腰部已上线且未出单，低优先",
@@ -2376,7 +2384,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-11T10:13:12.651Z"
   },
   {
     "id": "4rnDy9VAXZ",
@@ -2608,14 +2616,14 @@
         "link": "https://www.youtube.com/@Tuttzsi/shorts",
         "text": "https://www.youtube.com/@Tuttzsi/shorts"
       },
-      "平台": "youtube",
+      "平台": "youtubeshort",
       "是否出视频": "是",
       "红人名称": "tuttzsi",
       "样品型号": "yozma, yozmasport，in10",
       "红人编码": "US-Lexy-022",
       "地区": "US",
       "负责人": "Lexy",
-      "红人粉丝数据": "24100",
+      "红人粉丝数据": 24700,
       "url": {
         "link": "https://www.youtube.com/shorts/4xErAs-S0eQ",
         "text": "https://www.youtube.com/shorts/4xErAs-S0eQ"
@@ -2631,7 +2639,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-11T10:44:38.539Z"
   },
   {
     "id": "558UDvb86z",
@@ -2747,7 +2755,7 @@
         "link": "https://www.youtube.com/@TuttioGNG/shorts",
         "text": "https://www.youtube.com/@TuttioGNG/shorts"
       },
-      "平台": "youtube",
+      "平台": "youtubeshort",
       "是否出视频": "否",
       "红人名称": "TuttioGNG",
       "样品型号": "yozma, yozmasport，in10",
@@ -2851,7 +2859,7 @@
         "link": "https://www.youtube.com/@rex.brazil01/shorts",
         "text": "https://www.youtube.com/@rex.brazil01/shorts"
       },
-      "平台": "youtube",
+      "平台": "youtubeshort",
       "是否出视频": "否",
       "红人名称": "rex.brazil01",
       "样品型号": "yozma, yozmasport，in10",
@@ -3093,15 +3101,23 @@
       "红人编码": "EU-Zoe-009",
       "地区": "EU",
       "负责人": "Zoe",
-      "红人粉丝数据": "48300",
+      "红人粉丝数据": 49200,
       "url": {
         "link": "https://www.tiktok.com/@radutz_/video/7644559234453212439",
         "text": "https://www.tiktok.com/@radutz_/video/7644559234453212439"
+      },
+      "url2": {
+        "text": "https://www.tiktok.com/@radutz_/video/7648575856377335062",
+        "link": "https://www.tiktok.com/@radutz_/video/7648575856377335062"
+      },
+      "url3": {
+        "text": "https://www.tiktok.com/@radutz_/video/7648224374037794070",
+        "link": "https://www.tiktok.com/@radutz_/video/7648224374037794070"
       }
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-11T10:27:00.743Z"
   },
   {
     "id": "5j3D1un1yn",
@@ -3538,7 +3554,7 @@
       "红人编码": "UK-Zoe-004",
       "地区": "UK",
       "负责人": "Zoe",
-      "红人粉丝数据": 99900,
+      "红人粉丝数据": 100500,
       "追踪优先级": "P2 低频追踪",
       "追踪评分": "75",
       "追踪原因": "2026普通达人需继续追上线；普通/小体量达人更需要追踪",
@@ -3550,11 +3566,15 @@
       "url2": {
         "text": "https://www.tiktok.com/@estensei/video/7647188326021188886",
         "link": "https://www.tiktok.com/@estensei/video/7647188326021188886"
+      },
+      "url3": {
+        "text": "https://www.tiktok.com/@estensei/video/7648680831283924226",
+        "link": "https://www.tiktok.com/@estensei/video/7648680831283924226"
       }
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": "2026-06-07T10:29:34.080Z"
+    "updatedAt": "2026-06-11T10:10:24.371Z"
   },
   {
     "id": "6eVGBAZOA9",
@@ -3743,7 +3763,7 @@
       "红人编码": "EU-Zoe-004",
       "地区": "EU",
       "负责人": "Zoe",
-      "红人粉丝数据": 71200,
+      "红人粉丝数据": 71400,
       "追踪优先级": "P2 低频追踪",
       "追踪评分": "75",
       "追踪原因": "2026普通达人需继续追上线；普通/小体量达人更需要追踪",
@@ -3751,7 +3771,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-11T10:06:32.792Z"
   },
   {
     "id": "71rRBUetV6",
@@ -3957,14 +3977,14 @@
         "link": "https://www.youtube.com/@teamtalentless/shorts",
         "text": "https://www.youtube.com/@teamtalentless/shorts"
       },
-      "平台": "youtube",
+      "平台": "youtubeshort",
       "是否出视频": "是",
       "红人名称": "teamtalentless",
       "样品型号": "yozma, yozmasport，in10",
       "红人编码": "US-Ryan-007",
       "地区": "US",
       "负责人": "Ryan",
-      "红人粉丝数据": "27900",
+      "红人粉丝数据": 28100,
       "url": {
         "link": "https://www.youtube.com/shorts/YlVv16ITP1w",
         "text": "https://www.youtube.com/shorts/YlVv16ITP1w"
@@ -3980,7 +4000,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-11T10:37:23.284Z"
   },
   {
     "id": "7KqHTdTJ9c",
@@ -4170,7 +4190,7 @@
       "红人编码": "US-Nancy-025",
       "地区": "US",
       "负责人": "Nancy",
-      "红人粉丝数据": 49800,
+      "红人粉丝数据": 50400,
       "追踪优先级": "P0 立刻追踪",
       "追踪评分": "120",
       "追踪原因": "正在出单；普通/小体量达人更需要追踪",
@@ -4178,7 +4198,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": "2026-06-07T08:34:21.005Z"
+    "updatedAt": "2026-06-11T10:45:38.001Z"
   },
   {
     "id": "7T5hUWkc4X",
@@ -4243,7 +4263,7 @@
       "红人编码": "US-Ryan-007",
       "地区": "US",
       "负责人": "Ryan",
-      "红人粉丝数据": "27900",
+      "红人粉丝数据": 28100,
       "url": {
         "link": "https://www.youtube.com/shorts/2QYYVwpwQgw",
         "text": "https://www.youtube.com/shorts/2QYYVwpwQgw"
@@ -4259,7 +4279,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-11T10:37:23.284Z"
   },
   {
     "id": "7f10yBpo1m",
@@ -4407,11 +4427,11 @@
       "红人编码": "US-Stefan-108",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 518000
+      "红人粉丝数据": 541000
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-11T10:02:46.423Z"
   },
   {
     "id": "7rRPLCEeGX",
@@ -5021,7 +5041,7 @@
       "红人编码": "EU-Zoe-031",
       "地区": "EU",
       "负责人": "Zoe",
-      "红人粉丝数据": 55500,
+      "红人粉丝数据": 57400,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-07",
       "追踪优先级": "P0 立刻追踪",
@@ -5031,7 +5051,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-11T10:26:26.013Z"
   },
   {
     "id": "8wjVsTq7uF",
@@ -5605,7 +5625,7 @@
       "红人编码": "EU-Zoe-001",
       "地区": "EU",
       "负责人": "Zoe",
-      "红人粉丝数据": 17800,
+      "红人粉丝数据": 18200,
       "追踪优先级": "P2 低频追踪",
       "追踪评分": "75",
       "追踪原因": "2026普通达人需继续追上线；普通/小体量达人更需要追踪",
@@ -5617,11 +5637,15 @@
       "url2": {
         "link": "https://www.tiktok.com/@dxride/video/7644648029735177494",
         "text": "https://www.tiktok.com/@dxride/video/7644648029735177494"
+      },
+      "url3": {
+        "text": "https://www.tiktok.com/@dxride/video/7649125383333350658",
+        "link": "https://www.tiktok.com/@dxride/video/7649125383333350658"
       }
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": "2026-06-07T10:30:44.267Z"
+    "updatedAt": "2026-06-11T10:09:30.790Z"
   },
   {
     "id": "A5pPZt4oQ7",
@@ -5935,7 +5959,7 @@
         "link": "https://www.youtube.com/@TuttioGNG/videos",
         "text": "https://www.youtube.com/@TuttioGNG/videos"
       },
-      "平台": "youtube",
+      "平台": "youtubevideo",
       "是否出视频": "否",
       "红人名称": "TuttioGNG",
       "样品型号": "yozma, yozmasport，in10",
@@ -6599,13 +6623,17 @@
         "text": "https://www.tiktok.com/@revnsk8?lang=en"
       },
       "平台": "tiktok",
-      "是否出视频": "否",
+      "是否出视频": "是",
       "红人名称": "revnsk8",
       "样品型号": "yozma, yozmasport，in10",
       "红人编码": "US-Lexy-008",
       "地区": "US",
       "负责人": "Lexy",
-      "红人粉丝数据": "379900"
+      "红人粉丝数据": "379900",
+      "url": {
+        "text": "https://www.tiktok.com/@revnsk8/video/7648058090000043295",
+        "link": "https://www.tiktok.com/@revnsk8/video/7648058090000043295"
+      }
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
@@ -7604,13 +7632,13 @@
       "红人编码": "US-Stefan-108",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 341000,
+      "红人粉丝数据": 541000,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-07"
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-11T10:02:46.423Z"
   },
   {
     "id": "DvbHW7aKsH",
@@ -7796,19 +7824,20 @@
         "link": "https://www.youtube.com/@FearlessRides8/videos",
         "text": "https://www.youtube.com/@FearlessRides8/videos"
       },
-      "平台": "youtube",
+      "平台": "youtubevideo",
+      "是否出视频": "否",
       "红人名称": "Fearless Rides",
       "样品型号": "yozma, yozmasport，in10",
       "红人编码": "US-Stefan-081",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 6700,
+      "红人粉丝数据": 10400,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-07"
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-11T10:11:30.600Z"
   },
   {
     "id": "EGcEldk5Tu",
@@ -8013,7 +8042,7 @@
       "红人编码": "US-Stefan-166",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 347000,
+      "红人粉丝数据": 350000,
       "追踪优先级": "P3 暂缓",
       "追踪评分": "-50",
       "追踪原因": "头腰部已上线且未出单，低优先",
@@ -8033,7 +8062,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-11T09:59:31.733Z"
   },
   {
     "id": "EXfmEQI68G",
@@ -8446,7 +8475,7 @@
       "红人编码": "US-Ryan-021",
       "地区": "US",
       "负责人": "Ryan",
-      "红人粉丝数据": 46300,
+      "红人粉丝数据": 48200,
       "追踪优先级": "P2 低频追踪",
       "追踪评分": "75",
       "追踪原因": "2026普通达人需继续追上线；普通/小体量达人更需要追踪",
@@ -8454,7 +8483,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-11T10:23:08.311Z"
   },
   {
     "id": "FIDm0irKYy",
@@ -8813,7 +8842,8 @@
         "link": "https://www.youtube.com/@Cxltxn_Vxlts/videos",
         "text": "https://www.youtube.com/@Cxltxn_Vxlts/videos"
       },
-      "平台": "youtube",
+      "平台": "youtubevideo",
+      "是否出视频": "否",
       "红人名称": "Cxltxn_Vxlts",
       "样品型号": "yozma, yozmasport，in10",
       "红人编码": "US-Stefan-078",
@@ -10352,7 +10382,7 @@
       "红人编码": "US-Stefan-067",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 90500,
+      "红人粉丝数据": 91400,
       "追踪优先级": "P3 暂缓",
       "追踪评分": "20",
       "追踪原因": "普通/小体量达人更需要追踪",
@@ -10364,7 +10394,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-11T10:39:51.864Z"
   },
   {
     "id": "J7LIaUejD2",
@@ -10501,7 +10531,7 @@
       "红人编码": "US-Stefan-051",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 17400,
+      "红人粉丝数据": 17700,
       "追踪优先级": "P0 立刻追踪",
       "追踪评分": "120",
       "追踪原因": "正在出单；普通/小体量达人更需要追踪",
@@ -10513,7 +10543,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": "2026-06-07T07:48:55.879Z"
+    "updatedAt": "2026-06-11T10:34:51.779Z"
   },
   {
     "id": "JMJu8RKYD7",
@@ -10530,7 +10560,7 @@
       "红人编码": "US-Stefan-051",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 17400,
+      "红人粉丝数据": 17700,
       "追踪优先级": "P0 立刻追踪",
       "追踪评分": "120",
       "追踪原因": "正在出单；普通/小体量达人更需要追踪",
@@ -10542,7 +10572,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": "2026-06-07T07:48:55.879Z"
+    "updatedAt": "2026-06-11T10:34:51.779Z"
   },
   {
     "id": "JNp85rx4en",
@@ -10622,23 +10652,27 @@
         "text": "https://www.youtube.com/@pane19_/shorts"
       },
       "平台": "youtubeshort",
-      "是否出视频": "否",
+      "是否出视频": "是",
       "红人名称": "pane19",
       "样品型号": "yozma, yozmasport，in10",
       "红人编码": "EU-Zoe-031",
       "地区": "EU",
       "负责人": "Zoe",
-      "红人粉丝数据": 55500,
+      "红人粉丝数据": 57400,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-07",
       "追踪优先级": "P0 立刻追踪",
       "追踪评分": "135",
       "追踪原因": "2026合作未上线/未登记上线；当前本地未登记视频；普通/小体量达人更需要追踪",
-      "追踪批次更新时间": "2026-06-07"
+      "追踪批次更新时间": "2026-06-07",
+      "url": {
+        "text": "https://www.youtube.com/shorts/ptvyilsPN_Q",
+        "link": "https://www.youtube.com/shorts/ptvyilsPN_Q"
+      }
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-11T10:26:26.013Z"
   },
   {
     "id": "JVqOYjAqdh",
@@ -10802,7 +10836,7 @@
       "红人编码": "EU-Zoe-004",
       "地区": "EU",
       "负责人": "Zoe",
-      "红人粉丝数据": 71200,
+      "红人粉丝数据": 71400,
       "追踪优先级": "P2 低频追踪",
       "追踪评分": "75",
       "追踪原因": "2026普通达人需继续追上线；普通/小体量达人更需要追踪",
@@ -10822,7 +10856,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-11T10:06:32.792Z"
   },
   {
     "id": "JlhOb8nYsW",
@@ -11058,7 +11092,8 @@
         "link": "https://www.youtube.com/@Cxltxn_Vxlts/shorts",
         "text": "https://www.youtube.com/@Cxltxn_Vxlts/shorts"
       },
-      "平台": "youtube",
+      "平台": "youtubeshort",
+      "是否出视频": "否",
       "红人名称": "Cxltxn_Vxlts",
       "样品型号": "yozma, yozmasport，in10",
       "红人编码": "US-Stefan-078",
@@ -11352,21 +11387,29 @@
         "text": "https://www.youtube.com/@thebikecave/shorts"
       },
       "平台": "youtubeshort",
-      "是否出视频": "否",
+      "是否出视频": "是",
       "红人名称": "The Bike Cave",
       "样品型号": "yozma, yozmasport，in10",
       "红人编码": "US-Stefan-067",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 90500,
+      "红人粉丝数据": 91400,
       "追踪优先级": "P3 暂缓",
       "追踪评分": "20",
       "追踪原因": "普通/小体量达人更需要追踪",
-      "追踪批次更新时间": "2026-06-07"
+      "追踪批次更新时间": "2026-06-07",
+      "url": {
+        "text": "https://www.youtube.com/shorts/a43M1UBfSbE",
+        "link": "https://www.youtube.com/shorts/a43M1UBfSbE"
+      },
+      "url2": {
+        "text": "https://www.youtube.com/shorts/-pmxuEXft28",
+        "link": "https://www.youtube.com/shorts/-pmxuEXft28"
+      }
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-11T10:39:51.864Z"
   },
   {
     "id": "KsxLm5ubNH",
@@ -11534,7 +11577,7 @@
       "红人编码": "US-Lexy-041",
       "地区": "US",
       "负责人": "Lexy",
-      "红人粉丝数据": 6312,
+      "红人粉丝数据": 6375,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-07",
       "追踪优先级": "P0 立刻追踪",
@@ -11548,11 +11591,15 @@
       "url2": {
         "text": "https://www.tiktok.com/@clean_m6/video/7647304463383940382",
         "link": "https://www.tiktok.com/@clean_m6/video/7647304463383940382"
+      },
+      "url3": {
+        "text": "https://www.tiktok.com/@clean_m6/video/7648793422857391391",
+        "link": "https://www.tiktok.com/@clean_m6/video/7648793422857391391"
       }
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": "2026-06-07T08:16:57.883Z"
+    "updatedAt": "2026-06-11T10:03:40.797Z"
   },
   {
     "id": "LDK7RgIZkn",
@@ -11590,7 +11637,7 @@
         "text": "https://www.instagram.com/supamoto_lifestyle/"
       },
       "平台": "instagramreels",
-      "是否出视频": "否",
+      "是否出视频": "是",
       "红人名称": "supamoto_lifestyle",
       "样品型号": "yozma, yozmasport，in10",
       "红人编码": "US-Lexy-016",
@@ -11598,7 +11645,11 @@
       "负责人": "Lexy",
       "红人粉丝数据": 10000,
       "粉丝数据来源": "营销总表",
-      "粉丝数据更新时间": "2026-06-07"
+      "粉丝数据更新时间": "2026-06-07",
+      "url": {
+        "text": "https://www.instagram.com/p/DZTArWMBwcU/",
+        "link": "https://www.instagram.com/p/DZTArWMBwcU/"
+      }
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
@@ -11805,18 +11856,19 @@
         "text": "https://www.tiktok.com/@darzrt"
       },
       "平台": "tiktok",
+      "是否出视频": "否",
       "红人名称": "darzrt",
       "样品型号": "yozma, yozmasport，in10",
       "红人编码": "US-Stefan-060",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 389000,
+      "红人粉丝数据": 401100,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-07"
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-11T10:08:36.267Z"
   },
   {
     "id": "Lpk8pMIwZO",
@@ -11826,7 +11878,8 @@
         "link": "https://www.instagram.com/rex.brazil01/",
         "text": "https://www.instagram.com/rex.brazil01/"
       },
-      "平台": "instagram",
+      "平台": "instagramreels",
+      "是否出视频": "否",
       "红人名称": "rex.brazil01",
       "样品型号": "yozma, yozmasport，in10",
       "红人编码": "US-Stefan-061",
@@ -12139,14 +12192,14 @@
         "link": "https://www.youtube.com/@Rtr_Tedd/shorts",
         "text": "https://www.youtube.com/@Rtr_Tedd/shorts"
       },
-      "平台": "youtube",
+      "平台": "youtubeshort",
       "是否出视频": "是",
       "红人名称": "Rtr_Tedd",
       "样品型号": "yozma, yozmasport，in10",
       "红人编码": "US-Ryan-050",
       "地区": "US",
       "负责人": "Ryan",
-      "红人粉丝数据": "7240",
+      "红人粉丝数据": 7340,
       "url": {
         "link": "https://www.youtube.com/shorts/VUezBRUPfKY",
         "text": "https://www.youtube.com/shorts/VUezBRUPfKY"
@@ -12162,7 +12215,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-11T10:33:07.956Z"
   },
   {
     "id": "ML5yBBRaMw",
@@ -12354,7 +12407,7 @@
       "红人编码": "US-Nancy-002",
       "地区": "US",
       "负责人": "Nancy",
-      "红人粉丝数据": 5000,
+      "红人粉丝数据": 12200,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-07",
       "追踪优先级": "P3 暂缓",
@@ -12364,7 +12417,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-11T10:09:12.645Z"
   },
   {
     "id": "MkOm7UvTZs",
@@ -12636,7 +12689,8 @@
         "link": "https://www.instagram.com/thiccscat/",
         "text": "https://www.instagram.com/thiccscat/"
       },
-      "平台": "instagram",
+      "平台": "instagramreels",
+      "是否出视频": "否",
       "红人名称": "thiccscat",
       "样品型号": "yozma, yozmasport，in10",
       "红人编码": "US-Stefan-105",
@@ -12991,7 +13045,7 @@
       "红人编码": "US-Vivi-007",
       "地区": "US",
       "负责人": "Vivi",
-      "红人粉丝数据": 43300,
+      "红人粉丝数据": 44000,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-07",
       "追踪优先级": "P0 立刻追踪",
@@ -13013,7 +13067,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": "2026-06-07T08:33:54.742Z"
+    "updatedAt": "2026-06-11T10:32:39.864Z"
   },
   {
     "id": "Nq9DoER47i",
@@ -13232,7 +13286,7 @@
       "红人编码": "US-Nancy-025",
       "地区": "US",
       "负责人": "Nancy",
-      "红人粉丝数据": 49800,
+      "红人粉丝数据": 50400,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-07",
       "追踪优先级": "P0 立刻追踪",
@@ -13242,7 +13296,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": "2026-06-07T08:34:21.005Z"
+    "updatedAt": "2026-06-11T10:45:38.001Z"
   },
   {
     "id": "OA7N2VFplm",
@@ -13606,7 +13660,7 @@
       "红人编码": "US-Stefan-030",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 14200,
+      "红人粉丝数据": 31500,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-07",
       "追踪优先级": "P3 暂缓",
@@ -13616,7 +13670,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-11T09:55:33.683Z"
   },
   {
     "id": "PFhI4fkt3I",
@@ -13681,7 +13735,7 @@
       "红人编码": "US-Stefan-047",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 182000,
+      "红人粉丝数据": 186000,
       "追踪优先级": "P0 立刻追踪",
       "追踪评分": "120",
       "追踪原因": "正在出单；普通/小体量达人更需要追踪",
@@ -13701,7 +13755,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": "2026-06-07T07:59:26.856Z"
+    "updatedAt": "2026-06-11T10:49:36.176Z"
   },
   {
     "id": "PPKWwCFbXq",
@@ -14151,7 +14205,7 @@
       "红人编码": "US-Stefan-030",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 14200,
+      "红人粉丝数据": 31500,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-07",
       "追踪优先级": "P3 暂缓",
@@ -14161,7 +14215,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-11T09:55:33.683Z"
   },
   {
     "id": "QMofrcIMs8",
@@ -14267,6 +14321,10 @@
       "url": {
         "text": "https://www.instagram.com/p/DYSA5lTtJfM/",
         "link": "https://www.instagram.com/p/DYSA5lTtJfM/"
+      },
+      "url2": {
+        "text": "https://www.instagram.com/p/DZOLyl6hrhB/",
+        "link": "https://www.instagram.com/p/DZOLyl6hrhB/"
       }
     },
     "source": "dingtalk",
@@ -14376,7 +14434,7 @@
       "红人编码": "US-Lexy-012",
       "地区": "US",
       "负责人": "Lexy",
-      "红人粉丝数据": 93700,
+      "红人粉丝数据": 96300,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-07",
       "追踪优先级": "P0 立刻追踪",
@@ -14386,7 +14444,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": "2026-06-07T08:32:24.021Z"
+    "updatedAt": "2026-06-11T10:10:52.203Z"
   },
   {
     "id": "QW7lMF7ltE",
@@ -14874,7 +14932,7 @@
       "红人编码": "EU-Zoe-050",
       "地区": "EU",
       "负责人": "Zoe",
-      "红人粉丝数据": 2453,
+      "红人粉丝数据": 2638,
       "追踪优先级": "P0 立刻追踪",
       "追踪评分": "135",
       "追踪原因": "2026合作未上线/未登记上线；当前本地未登记视频；普通/小体量达人更需要追踪",
@@ -14894,7 +14952,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": "2026-06-07T08:28:51.163Z"
+    "updatedAt": "2026-06-11T10:42:06.609Z"
   },
   {
     "id": "RWHkaArHSQ",
@@ -15353,11 +15411,11 @@
       "红人编码": "US-Stefan-114",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 232000
+      "红人粉丝数据": 234000
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-11T10:46:51.482Z"
   },
   {
     "id": "SGBUp6ZrDG",
@@ -15610,7 +15668,7 @@
         "link": "https://www.youtube.com/@endoprysmofficial/shorts",
         "text": "https://www.youtube.com/@endoprysmofficial/shorts"
       },
-      "平台": "youtube",
+      "平台": "youtubeshort",
       "是否出视频": "否",
       "红人名称": "ENDOPRYSM",
       "样品型号": "yozma, yozmasport，in10",
@@ -15839,20 +15897,20 @@
         "link": "https://www.youtube.com/@Tuttzsi/videos",
         "text": "https://www.youtube.com/@Tuttzsi/videos"
       },
-      "平台": "youtube",
+      "平台": "youtubevideo",
       "是否出视频": "否",
       "红人名称": "tuttzsi",
       "样品型号": "yozma, yozmasport，in10",
       "红人编码": "US-Lexy-022",
       "地区": "US",
       "负责人": "Lexy",
-      "红人粉丝数据": 10000,
+      "红人粉丝数据": 24700,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-07"
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-11T10:44:38.540Z"
   },
   {
     "id": "TF4M5fZShI",
@@ -16163,7 +16221,8 @@
         "link": "https://www.instagram.com/tuttzsi/",
         "text": "https://www.instagram.com/tuttzsi/"
       },
-      "平台": "instagram",
+      "平台": "instagramreels",
+      "是否出视频": "是",
       "红人名称": "Tuttzsi",
       "样品型号": "yozma, yozmasport，in10",
       "红人编码": "US-Lexy-022",
@@ -16171,7 +16230,15 @@
       "负责人": "Lexy",
       "红人粉丝数据": 10000,
       "粉丝数据来源": "营销总表",
-      "粉丝数据更新时间": "2026-06-07"
+      "粉丝数据更新时间": "2026-06-07",
+      "url": {
+        "text": "https://www.instagram.com/p/DZSeXagI8Eo/",
+        "link": "https://www.instagram.com/p/DZSeXagI8Eo/"
+      },
+      "url2": {
+        "text": "https://www.instagram.com/p/DZKrS3fIaOT/",
+        "link": "https://www.instagram.com/p/DZKrS3fIaOT/"
+      }
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
@@ -16243,7 +16310,7 @@
       "红人编码": "EU-Zoe-017",
       "地区": "EU",
       "负责人": "Zoe",
-      "红人粉丝数据": 225000,
+      "红人粉丝数据": 231000,
       "追踪优先级": "P0 立刻追踪",
       "追踪评分": "150",
       "追踪原因": "正在出单；2026已上线但仍出单",
@@ -16255,7 +16322,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": "2026-06-07T07:13:17.242Z"
+    "updatedAt": "2026-06-11T10:19:23.680Z"
   },
   {
     "id": "UNzyJrfguI",
@@ -16513,7 +16580,7 @@
       "红人编码": "US-Stefan-166",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 278000,
+      "红人粉丝数据": 350000,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-07",
       "追踪优先级": "P3 暂缓",
@@ -16523,7 +16590,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-11T09:59:31.733Z"
   },
   {
     "id": "UuX4TxTyln",
@@ -16567,7 +16634,7 @@
       "红人编码": "US-Ryan-021",
       "地区": "US",
       "负责人": "Ryan",
-      "红人粉丝数据": 46300,
+      "红人粉丝数据": 48200,
       "追踪优先级": "P2 低频追踪",
       "追踪评分": "75",
       "追踪原因": "2026普通达人需继续追上线；普通/小体量达人更需要追踪",
@@ -16587,7 +16654,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-11T10:23:08.311Z"
   },
   {
     "id": "UzGw0NKa22",
@@ -17489,22 +17556,27 @@
         "text": "https://www.tiktok.com/@filippoz_?_r=1&_t=ZN-91CAgL6tdvH"
       },
       "平台": "tiktok",
+      "是否出视频": "是",
       "红人名称": "Filippo22",
       "样品型号": "yozma, yozmasport，in10",
       "红人编码": "EU-Zoe-014",
       "地区": "EU",
       "负责人": "Zoe",
-      "红人粉丝数据": 66600,
+      "红人粉丝数据": 414900,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-07",
       "追踪优先级": "P3 暂缓",
       "追踪评分": "-50",
       "追踪原因": "头腰部已上线且未出单，低优先",
-      "追踪批次更新时间": "2026-06-07"
+      "追踪批次更新时间": "2026-06-07",
+      "url": {
+        "text": "https://www.tiktok.com/@filippoz_/video/7646773045637434657",
+        "link": "https://www.tiktok.com/@filippoz_/video/7646773045637434657"
+      }
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-11T10:12:21.750Z"
   },
   {
     "id": "WJLrnsjZZP",
@@ -18015,7 +18087,7 @@
       "红人编码": "US-Lexy-033",
       "地区": "US",
       "负责人": "Lexy",
-      "红人粉丝数据": 12000,
+      "红人粉丝数据": 12100,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-07",
       "追踪优先级": "P2 低频追踪",
@@ -18025,7 +18097,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": "2026-06-07T10:37:51.497Z"
+    "updatedAt": "2026-06-11T10:48:49.829Z"
   },
   {
     "id": "XoDXIp5JoQ",
@@ -19187,7 +19259,7 @@
       "红人编码": "US-Ryan-053",
       "地区": "US",
       "负责人": "Ryan",
-      "红人粉丝数据": 9650,
+      "红人粉丝数据": 9720,
       "追踪优先级": "P2 低频追踪",
       "追踪评分": "75",
       "追踪原因": "2026普通达人需继续追上线；普通/小体量达人更需要追踪",
@@ -19203,7 +19275,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-11T10:35:40.990Z"
   },
   {
     "id": "aCwvbQmHZs",
@@ -19214,12 +19286,13 @@
         "text": "https://www.tiktok.com/@ridshawty"
       },
       "平台": "tiktok",
+      "是否出视频": "否",
       "红人名称": "ridshawty",
       "样品型号": "yozma, yozmasport，in10",
       "红人编码": "US-Stefan-071",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 7800,
+      "红人粉丝数据": 14400,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-07",
       "追踪优先级": "P3 暂缓",
@@ -19229,7 +19302,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-11T10:32:09.716Z"
   },
   {
     "id": "aILUsr0VWf",
@@ -19290,7 +19363,7 @@
       "红人编码": "EU-Zoe-017",
       "地区": "EU",
       "负责人": "Zoe",
-      "红人粉丝数据": 225000,
+      "红人粉丝数据": 231000,
       "追踪优先级": "P0 立刻追踪",
       "追踪评分": "150",
       "追踪原因": "正在出单；2026已上线但仍出单",
@@ -19306,7 +19379,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": "2026-06-07T07:13:17.242Z"
+    "updatedAt": "2026-06-11T10:19:23.680Z"
   },
   {
     "id": "aMJM5d3yw0",
@@ -19548,6 +19621,7 @@
         "text": "https://www.tiktok.com/@q20dylan"
       },
       "平台": "tiktok",
+      "是否出视频": "否",
       "红人名称": "q20dylan",
       "样品型号": "yozma, yozmasport，in10",
       "红人编码": "US-Nancy-006",
@@ -22064,19 +22138,32 @@
         "link": "https://www.youtube.com/@radutz_/shorts",
         "text": "https://www.youtube.com/@radutz_/shorts"
       },
-      "平台": "youtube",
+      "平台": "youtubeshort",
+      "是否出视频": "是",
       "红人名称": "Radutz_",
       "样品型号": "yozma, yozmasport，in10",
       "红人编码": "EU-Zoe-009",
       "地区": "EU",
       "负责人": "Zoe",
-      "红人粉丝数据": 78200,
+      "红人粉丝数据": 86400,
       "粉丝数据来源": "营销总表",
-      "粉丝数据更新时间": "2026-06-07"
+      "粉丝数据更新时间": "2026-06-07",
+      "url": {
+        "text": "https://www.youtube.com/shorts/h9Cb064LVK8",
+        "link": "https://www.youtube.com/shorts/h9Cb064LVK8"
+      },
+      "url2": {
+        "text": "https://www.youtube.com/shorts/TDA524QEXM0",
+        "link": "https://www.youtube.com/shorts/TDA524QEXM0"
+      },
+      "url3": {
+        "text": "https://www.youtube.com/shorts/Q7oe1LTWhSE",
+        "link": "https://www.youtube.com/shorts/Q7oe1LTWhSE"
+      }
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-11T10:27:34.820Z"
   },
   {
     "id": "fgoCPzBqJM",
@@ -22906,7 +22993,7 @@
       "红人编码": "US-Stefan-051",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 17400,
+      "红人粉丝数据": 17700,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-07",
       "追踪优先级": "P0 立刻追踪",
@@ -22916,7 +23003,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": "2026-06-07T07:48:55.879Z"
+    "updatedAt": "2026-06-11T10:34:51.780Z"
   },
   {
     "id": "gzVPLX0NUG",
@@ -23104,7 +23191,7 @@
       "红人编码": "US-Vivi-007",
       "地区": "US",
       "负责人": "Vivi",
-      "红人粉丝数据": 43300,
+      "红人粉丝数据": 44000,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-07",
       "追踪优先级": "P0 立刻追踪",
@@ -23114,7 +23201,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": "2026-06-07T08:33:54.743Z"
+    "updatedAt": "2026-06-11T10:32:39.865Z"
   },
   {
     "id": "hOI3eiPw5a",
@@ -23674,18 +23761,19 @@
         "text": "https://www.tiktok.com/@ampedbyj"
       },
       "平台": "tiktok",
+      "是否出视频": "否",
       "红人名称": "ampedbyj",
       "样品型号": "yozma, yozmasport，in10",
       "红人编码": "US-Stefan-024",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 13000,
+      "红人粉丝数据": 17000,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-07"
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-11T09:57:23.887Z"
   },
   {
     "id": "iONUnh5X03",
@@ -23748,22 +23836,31 @@
         "text": "https://www.tiktok.com/@68v_ebikes"
       },
       "平台": "tiktok",
+      "是否出视频": "是",
       "红人名称": "68v_ebikes",
       "样品型号": "yozma, yozmasport，in10",
       "红人编码": "US-Stefan-030",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 14200,
+      "红人粉丝数据": 99700,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-07",
       "追踪优先级": "P3 暂缓",
       "追踪评分": "20",
       "追踪原因": "普通/小体量达人更需要追踪",
-      "追踪批次更新时间": "2026-06-07"
+      "追踪批次更新时间": "2026-06-07",
+      "url": {
+        "text": "https://www.tiktok.com/@68v_ebikes/video/7649102594672971022",
+        "link": "https://www.tiktok.com/@68v_ebikes/video/7649102594672971022"
+      },
+      "url2": {
+        "text": "https://www.tiktok.com/@68v_ebikes/video/7646576814604766477",
+        "link": "https://www.tiktok.com/@68v_ebikes/video/7646576814604766477"
+      }
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-11T09:54:04.792Z"
   },
   {
     "id": "iRM3Nt0HXc",
@@ -24366,7 +24463,7 @@
       "红人编码": "EU-Zoe-019",
       "地区": "EU",
       "负责人": "Zoe",
-      "红人粉丝数据": 18100,
+      "红人粉丝数据": 18400,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-07",
       "追踪优先级": "P2 低频追踪",
@@ -24388,7 +24485,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": "2026-06-07T10:40:35.879Z"
+    "updatedAt": "2026-06-11T10:05:17.184Z"
   },
   {
     "id": "jaLdOmJmOS",
@@ -24889,7 +24986,7 @@
       "红人编码": "US-Stefan-067",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 53000,
+      "红人粉丝数据": 91400,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-07",
       "追踪优先级": "P3 暂缓",
@@ -24899,7 +24996,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-11T10:39:51.865Z"
   },
   {
     "id": "kTsmwJgvta",
@@ -25037,19 +25134,24 @@
         "link": "https://www.youtube.com/@radutz_/videos",
         "text": "https://www.youtube.com/@radutz_/videos"
       },
-      "平台": "youtube",
+      "平台": "youtubevideo",
+      "是否出视频": "是",
       "红人名称": "Radutz_",
       "样品型号": "yozma, yozmasport，in10",
       "红人编码": "EU-Zoe-009",
       "地区": "EU",
       "负责人": "Zoe",
-      "红人粉丝数据": 78200,
+      "红人粉丝数据": 86400,
       "粉丝数据来源": "营销总表",
-      "粉丝数据更新时间": "2026-06-07"
+      "粉丝数据更新时间": "2026-06-07",
+      "url": {
+        "text": "https://www.youtube.com/watch?v=uYO63ZDiRFE",
+        "link": "https://www.youtube.com/watch?v=uYO63ZDiRFE"
+      }
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-11T10:27:34.820Z"
   },
   {
     "id": "l4fDW32JCa",
@@ -25231,7 +25333,7 @@
         "link": "https://www.youtube.com/@ENDOPRYSMofficial/videos",
         "text": "https://www.youtube.com/@ENDOPRYSMofficial/videos"
       },
-      "平台": "youtube",
+      "平台": "youtubevideo",
       "是否出视频": "否",
       "红人名称": "ENDOPRYSM",
       "样品型号": "yozma, yozmasport，in10",
@@ -25417,7 +25519,7 @@
       "红人编码": "US-Stefan-067",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 53000,
+      "红人粉丝数据": 91400,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-07",
       "追踪优先级": "P3 暂缓",
@@ -25427,7 +25529,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-11T10:39:51.865Z"
   },
   {
     "id": "lVC6LNJCxC",
@@ -25621,15 +25723,19 @@
       "红人编码": "US-Lexy-008",
       "地区": "US",
       "负责人": "Lexy",
-      "红人粉丝数据": 3250,
+      "红人粉丝数据": 3270,
       "url": {
         "text": "https://www.youtube.com/shorts/94mdpEDqnlI",
         "link": "https://www.youtube.com/shorts/94mdpEDqnlI"
+      },
+      "url2": {
+        "text": "https://www.youtube.com/shorts/nNLtXA4u8d8",
+        "link": "https://www.youtube.com/shorts/nNLtXA4u8d8"
       }
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-11T10:30:24.446Z"
   },
   {
     "id": "m6A1DombxD",
@@ -26103,7 +26209,7 @@
       "红人编码": "US-Stefan-071",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 7800,
+      "红人粉丝数据": 14400,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-07",
       "追踪优先级": "P3 暂缓",
@@ -26113,7 +26219,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-11T10:32:09.716Z"
   },
   {
     "id": "nEo1zRMONP",
@@ -26144,19 +26250,20 @@
         "link": "https://www.youtube.com/@FearlessRides8/shorts",
         "text": "https://www.youtube.com/@FearlessRides8/shorts"
       },
-      "平台": "youtube",
+      "平台": "youtubeshort",
+      "是否出视频": "否",
       "红人名称": "Fearless Rides",
       "样品型号": "yozma, yozmasport，in10",
       "红人编码": "US-Stefan-081",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 6700,
+      "红人粉丝数据": 10400,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-07"
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-11T10:11:30.601Z"
   },
   {
     "id": "nLiIIy8ydL",
@@ -26331,7 +26438,7 @@
       "红人编码": "US-Stefan-047",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 182000,
+      "红人粉丝数据": 186000,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-07",
       "追踪优先级": "P0 立刻追踪",
@@ -26341,7 +26448,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": "2026-06-07T07:59:26.857Z"
+    "updatedAt": "2026-06-11T10:49:36.177Z"
   },
   {
     "id": "nnO36pqmel",
@@ -26374,21 +26481,25 @@
         "text": "https://www.youtube.com/@SwartleyMedia"
       },
       "平台": "youtubevideo",
-      "是否出视频": "否",
+      "是否出视频": "是",
       "红人名称": "SwartleyMedia",
       "样品型号": "yozma, yozmasport，in10",
       "红人编码": "US-Ryan-004",
       "地区": "US",
       "负责人": "Ryan",
-      "红人粉丝数据": 6180,
+      "红人粉丝数据": 6310,
       "追踪优先级": "P2 低频追踪",
       "追踪评分": "75",
       "追踪原因": "2026普通达人需继续追上线；普通/小体量达人更需要追踪",
-      "追踪批次更新时间": "2026-06-07"
+      "追踪批次更新时间": "2026-06-07",
+      "url": {
+        "text": "https://www.youtube.com/watch?v=8-c-pnQIDUs",
+        "link": "https://www.youtube.com/watch?v=8-c-pnQIDUs"
+      }
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-11T10:34:02.362Z"
   },
   {
     "id": "nqm0K83z6F",
@@ -26565,19 +26676,20 @@
         "link": "https://www.youtube.com/@teamtalentless/videos",
         "text": "https://www.youtube.com/@teamtalentless/videos"
       },
-      "平台": "youtube",
+      "平台": "youtubevideo",
+      "是否出视频": "否",
       "红人名称": "teamtalentless",
       "样品型号": "yozma, yozmasport，in10",
       "红人编码": "US-Ryan-007",
       "地区": "US",
       "负责人": "Ryan",
-      "红人粉丝数据": 25300,
+      "红人粉丝数据": 28100,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-07"
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-11T10:37:23.285Z"
   },
   {
     "id": "oCZralrtNQ",
@@ -26610,6 +26722,7 @@
         "text": "https://www.tiktok.com/@rex.brazil01"
       },
       "平台": "tiktok",
+      "是否出视频": "否",
       "红人名称": "rex.brazil01",
       "样品型号": "yozma, yozmasport，in10",
       "红人编码": "US-Stefan-061",
@@ -26744,7 +26857,7 @@
       "红人编码": "EU-Zoe-033",
       "地区": "EU",
       "负责人": "Zoe",
-      "红人粉丝数据": 62100,
+      "红人粉丝数据": 63300,
       "追踪优先级": "P2 低频追踪",
       "追踪评分": "75",
       "追踪原因": "2026普通达人需继续追上线；普通/小体量达人更需要追踪",
@@ -26764,7 +26877,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": "2026-06-07T10:41:43.049Z"
+    "updatedAt": "2026-06-11T09:59:47.161Z"
   },
   {
     "id": "oIytiFIYtE",
@@ -26891,7 +27004,7 @@
       "红人编码": "US-Stefan-047",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 182000,
+      "红人粉丝数据": 186000,
       "追踪优先级": "P0 立刻追踪",
       "追踪评分": "120",
       "追踪原因": "正在出单；普通/小体量达人更需要追踪",
@@ -26903,7 +27016,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": "2026-06-07T07:59:26.857Z"
+    "updatedAt": "2026-06-11T10:49:36.177Z"
   },
   {
     "id": "oUHXOK807q",
@@ -27227,7 +27340,7 @@
       "红人编码": "US-Ryan-053",
       "地区": "US",
       "负责人": "Ryan",
-      "红人粉丝数据": 9650,
+      "红人粉丝数据": 9720,
       "追踪优先级": "P2 低频追踪",
       "追踪评分": "75",
       "追踪原因": "2026普通达人需继续追上线；普通/小体量达人更需要追踪",
@@ -27235,7 +27348,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-11T10:35:40.990Z"
   },
   {
     "id": "p2GiM7zs6q",
@@ -27656,6 +27769,7 @@
         "text": "https://www.tiktok.com/?_r=1&_t=ZT-91KydB0kHmv"
       },
       "平台": "tiktok",
+      "是否出视频": "否",
       "红人名称": "LT-FB",
       "样品型号": "yozma, yozmasport，in10",
       "红人编码": "US-Stefan-087",
@@ -27803,13 +27917,13 @@
       "红人编码": "US-Ryan-007",
       "地区": "US",
       "负责人": "Ryan",
-      "红人粉丝数据": 25300,
+      "红人粉丝数据": 28100,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-07"
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-11T10:37:23.285Z"
   },
   {
     "id": "q3tB30KVch",
@@ -28145,6 +28259,7 @@
         "text": "https://www.tiktok.com/@oscarthenug2"
       },
       "平台": "tiktok",
+      "是否出视频": "否",
       "红人名称": "oscarthenug2",
       "样品型号": "yozma, yozmasport，in10",
       "红人编码": "US-Lexy-051",
@@ -28177,7 +28292,7 @@
       "红人编码": "EU-Zoe-014",
       "地区": "EU",
       "负责人": "Zoe",
-      "红人粉丝数据": 73000,
+      "红人粉丝数据": 73900,
       "追踪优先级": "P3 暂缓",
       "追踪评分": "-50",
       "追踪原因": "头腰部已上线且未出单，低优先",
@@ -28193,7 +28308,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-11T10:13:12.652Z"
   },
   {
     "id": "qiFRNuPQ9J",
@@ -28236,7 +28351,7 @@
       "红人编码": "US-Stefan-047",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 182000,
+      "红人粉丝数据": 186000,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-07",
       "追踪优先级": "P0 立刻追踪",
@@ -28246,7 +28361,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": "2026-06-07T07:59:26.857Z"
+    "updatedAt": "2026-06-11T10:49:36.177Z"
   },
   {
     "id": "qpkDuyNXrT",
@@ -28844,7 +28959,8 @@
         "link": "https://www.youtube.com/@rex.brazil01",
         "text": "https://www.youtube.com/@rex.brazil01"
       },
-      "平台": "youtube",
+      "平台": "youtubevideo",
+      "是否出视频": "否",
       "红人名称": "rex.brazil01",
       "样品型号": "yozma, yozmasport，in10",
       "红人编码": "US-Stefan-061",
@@ -29172,7 +29288,7 @@
       "红人编码": "US-Ryan-004",
       "地区": "US",
       "负责人": "Ryan",
-      "红人粉丝数据": 6180,
+      "红人粉丝数据": 6310,
       "追踪优先级": "P2 低频追踪",
       "追踪评分": "75",
       "追踪原因": "2026普通达人需继续追上线；普通/小体量达人更需要追踪",
@@ -29192,7 +29308,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-11T10:34:02.362Z"
   },
   {
     "id": "rzJlgBBxsr",
@@ -30070,13 +30186,13 @@
       "红人编码": "US-Lexy-022",
       "地区": "US",
       "负责人": "Lexy",
-      "红人粉丝数据": 10000,
+      "红人粉丝数据": 24700,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-07"
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-11T10:44:38.540Z"
   },
   {
     "id": "tLeqhdk3rc",
@@ -31342,7 +31458,7 @@
       "红人编码": "EU-Zoe-018",
       "地区": "EU",
       "负责人": "Zoe",
-      "红人粉丝数据": 121000,
+      "红人粉丝数据": 126000,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-07",
       "追踪优先级": "P3 暂缓",
@@ -31352,7 +31468,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-11T09:58:17.865Z"
   },
   {
     "id": "vzjCbVlurM",
@@ -31363,18 +31479,19 @@
         "text": "https://www.tiktok.com/@carter_metcalfe_mtb"
       },
       "平台": "tiktok",
+      "是否出视频": "否",
       "红人名称": "carter_metcalfe_mtb",
       "样品型号": "yozma, yozmasport，in10",
       "红人编码": "US-Nancy-017",
       "地区": "US",
       "负责人": "Nancy",
-      "红人粉丝数据": 35500,
+      "红人粉丝数据": 66200,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-07"
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-11T10:00:38.103Z"
   },
   {
     "id": "vzwzpC6Uoo",
@@ -31720,7 +31837,8 @@
         "link": "https://www.instagram.com/radutz_/",
         "text": "https://www.instagram.com/radutz_/"
       },
-      "平台": "instagram",
+      "平台": "instagramreels",
+      "是否出视频": "是",
       "红人名称": "Radutz_",
       "样品型号": "yozma, yozmasport，in10",
       "红人编码": "EU-Zoe-009",
@@ -31728,7 +31846,19 @@
       "负责人": "Zoe",
       "红人粉丝数据": 78200,
       "粉丝数据来源": "营销总表",
-      "粉丝数据更新时间": "2026-06-07"
+      "粉丝数据更新时间": "2026-06-07",
+      "url": {
+        "text": "https://www.instagram.com/p/DZKrV5hNikh/",
+        "link": "https://www.instagram.com/p/DZKrV5hNikh/"
+      },
+      "url2": {
+        "text": "https://www.instagram.com/p/DZJ6gx1tgO1/",
+        "link": "https://www.instagram.com/p/DZJ6gx1tgO1/"
+      },
+      "url3": {
+        "text": "https://www.instagram.com/p/DZR2bs0NgcZ/",
+        "link": "https://www.instagram.com/p/DZR2bs0NgcZ/"
+      }
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
@@ -31920,7 +32050,8 @@
         "link": "https://www.instagram.com/fearlessrides8/",
         "text": "https://www.instagram.com/fearlessrides8/"
       },
-      "平台": "instagram",
+      "平台": "instagramreels",
+      "是否出视频": "是",
       "红人名称": "Fearless Rides",
       "样品型号": "yozma, yozmasport，in10",
       "红人编码": "US-Stefan-081",
@@ -31928,7 +32059,11 @@
       "负责人": "Stefan",
       "红人粉丝数据": 6700,
       "粉丝数据来源": "营销总表",
-      "粉丝数据更新时间": "2026-06-07"
+      "粉丝数据更新时间": "2026-06-07",
+      "url": {
+        "text": "https://www.instagram.com/p/DZDyu8iPquB/",
+        "link": "https://www.instagram.com/p/DZDyu8iPquB/"
+      }
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
@@ -32063,7 +32198,8 @@
         "link": "https://www.instagram.com/oneway__syhir/",
         "text": "https://www.instagram.com/oneway__syhir/"
       },
-      "平台": "instagram",
+      "平台": "instagramreels",
+      "是否出视频": "否",
       "红人名称": "oneway__syhir",
       "样品型号": "yozma, yozmasport，in10",
       "红人编码": "US-Vivi-012",
@@ -32685,6 +32821,7 @@
         "text": "https://www.tiktok.com/@dereksdailydeals"
       },
       "平台": "tiktok",
+      "是否出视频": "否",
       "红人名称": "dereksdailydeals",
       "样品型号": "yozma, yozmasport，in10",
       "红人编码": "US-Nancy-019",
@@ -32740,11 +32877,11 @@
       "红人编码": "US-Stefan-114",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 232000
+      "红人粉丝数据": 234000
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-11T10:46:51.482Z"
   },
   {
     "id": "yfxSx5ozj0",
@@ -32813,13 +32950,13 @@
       "红人编码": "US-Lexy-022",
       "地区": "US",
       "负责人": "Lexy",
-      "红人粉丝数据": 10000,
+      "红人粉丝数据": 24700,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-07"
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-11T10:44:38.540Z"
   },
   {
     "id": "yjbDMaOIjP",
@@ -33213,7 +33350,8 @@
         "link": "https://www.instagram.com/vibewdavid/",
         "text": "https://www.instagram.com/vibewdavid/"
       },
-      "平台": "instagram",
+      "平台": "instagramreels",
+      "是否出视频": "否",
       "红人名称": "vibewdavid",
       "样品型号": "yozma, yozmasport，in10",
       "红人编码": "US-Stefan-093",
@@ -33420,7 +33558,7 @@
       "红人编码": "US-Stefan-030",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 14200,
+      "红人粉丝数据": 99700,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-07",
       "追踪优先级": "P3 暂缓",
@@ -33430,7 +33568,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-11T09:54:04.793Z"
   },
   {
     "id": "zy51qlIxwp",
