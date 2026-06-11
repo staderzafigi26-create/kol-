@@ -113,7 +113,8 @@ let dashboardIndexCache = {
 let scopedVideoRowsCache = new Map();
 let geoStatsCache = new Map();
 let pendingMapSync = null;
-const isStaticCenter = location.hostname.endsWith('github.io') || new URLSearchParams(location.search).has('static');
+const localHostnames = new Set(['localhost', '127.0.0.1', '0.0.0.0', '::1']);
+const isStaticCenter = !localHostnames.has(location.hostname) || new URLSearchParams(location.search).has('static');
 
 function assetUrl(path) {
   return String(path || '').replace(/^\/+/, '');

@@ -6,10 +6,43 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const PUBLIC_DIR = path.join(ROOT, 'public');
 const DOCS_DIR = path.join(ROOT, 'docs');
 
+function teamIndexHtml() {
+  return `<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="refresh" content="0; url=center.html?static=1" />
+    <title>Yozma 红人数据线上看板</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="style.css?v=20260611-team-pages" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="hero command-header">
+        <div>
+          <p class="eyebrow">YOZMA TEAM READ-ONLY DASHBOARD</p>
+          <h1>Yozma 红人数据线上看板</h1>
+          <p class="hero-copy">正在打开团队只读仪表盘。数据抓取和 Apify 仍保留在 Ryan 本地执行，线上页面只展示已生成的脱敏快照。</p>
+        </div>
+        <div class="hero-actions">
+          <a class="link-button" href="center.html?static=1">进入看板</a>
+        </div>
+      </header>
+    </main>
+    <script>
+      window.location.replace('center.html?static=1');
+    </script>
+  </body>
+</html>
+`;
+}
+
 async function main() {
   await fs.rm(DOCS_DIR, { recursive: true, force: true });
   await fs.mkdir(DOCS_DIR, { recursive: true });
   await fs.cp(PUBLIC_DIR, DOCS_DIR, { recursive: true });
+  await fs.writeFile(path.join(DOCS_DIR, 'index.html'), teamIndexHtml(), 'utf8');
   await fs.writeFile(path.join(DOCS_DIR, '.nojekyll'), '', 'utf8');
   console.log(`GitHub Pages bundle generated in ${path.relative(ROOT, DOCS_DIR)}`);
 }

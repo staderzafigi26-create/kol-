@@ -2,6 +2,48 @@
 
 这份说明用于把当前 Node/Express 中台部署到 GitHub 和阿里云服务器，方便后续持续修改并同步线上。
 
+## 0. 两种上线形态
+
+当前项目分成两层，避免把 Apify Token、钉钉密钥和写入能力暴露给团队成员：
+
+- **Ryan 本地/服务器运行版**：运行 `server.js`，可以导入、抓取、调用 Apify、同步钉钉和写入本地数据。
+- **团队线上只读版**：部署 `docs/` 到 GitHub Pages，只展示 `public/static-data/` 生成的脱敏快照；不包含 `.env`、Token、钉钉密钥、原始抓取日志和 `data/local/`。
+
+推荐先上线团队只读版，日常由 Ryan 在本地完成抓取和快照更新，再推送到 GitHub Pages 给伙伴查看。
+
+## 0.1 GitHub Pages 只读看板上线流程
+
+本地服务启动后执行：
+
+```bash
+cd /Users/ryan/Desktop/红人数据检测追踪工具
+npm run build:pages
+git add docs public/center.js scripts/build-github-pages.mjs DEPLOY_GITHUB_ALIYUN.md
+git commit -m "Prepare team read-only Pages dashboard"
+git push origin main
+```
+
+首次上线还需要在 GitHub 仓库设置里开启 Pages：
+
+1. 打开 `https://github.com/staderzafigi26-create/kol-/settings/pages`
+2. 在 **Build and deployment** 里把 **Source** 选为 **GitHub Actions**
+3. 保存后到 **Actions** 里重新运行 `Deploy GitHub Pages`
+4. 伙伴访问地址通常是：`https://staderzafigi26-create.github.io/kol-/`
+
+如果 Actions 页面提示 `Setup Pages` 失败，通常就是 Pages 还没有启用，按上面 1-3 步处理即可。
+
+后续更新数据时，只需要：
+
+```bash
+cd /Users/ryan/Desktop/红人数据检测追踪工具
+npm run build:pages
+git add docs public/static-data
+git commit -m "Refresh team dashboard snapshot"
+git push origin main
+```
+
+说明：`public/static-data` 被 `.gitignore` 忽略，本地只作为中间产物；真正发布给 GitHub Pages 的文件在 `docs/static-data`。
+
 ## 1. 推荐上线顺序
 
 1. 先把代码推到 GitHub 私有仓库。

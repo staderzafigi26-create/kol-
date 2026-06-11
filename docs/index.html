@@ -3,252 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Yozma 红人数据追踪控制台</title>
-    <link rel="stylesheet" href="/style.css" />
+    <meta http-equiv="refresh" content="0; url=center.html?static=1" />
+    <title>Yozma 红人数据线上看板</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="style.css?v=20260611-team-pages" />
   </head>
   <body>
     <main class="container">
-      <header class="hero">
+      <header class="hero command-header">
         <div>
-          <p class="eyebrow">YOZMA KOL TRACKER</p>
-          <h1>红人数据追踪控制台</h1>
-          <p class="hero-copy">配置每周新视频发现，并按上线 7 天和 30 天节点刷新已登记视频表现。</p>
+          <p class="eyebrow">YOZMA TEAM READ-ONLY DASHBOARD</p>
+          <h1>Yozma 红人数据线上看板</h1>
+          <p class="hero-copy">正在打开团队只读仪表盘。数据抓取和 Apify 仍保留在 Ryan 本地执行，线上页面只展示已生成的脱敏快照。</p>
         </div>
         <div class="hero-actions">
-          <a class="link-button" href="/center.html">打开本地中台</a>
-          <a id="dingtalkLink" class="link-button" href="#" target="_blank" rel="noreferrer">打开钉钉数据表</a>
+          <a class="link-button" href="center.html?static=1">进入看板</a>
         </div>
       </header>
-
-      <section class="status-grid">
-        <article class="status-card">
-          <span class="status-label">本地服务</span>
-          <strong id="serviceStatus" class="chip neutral">检查中</strong>
-        </article>
-        <article class="status-card">
-          <span class="status-label">钉钉配置</span>
-          <strong id="dingtalkStatus" class="chip neutral">检查中</strong>
-        </article>
-        <article class="status-card">
-          <span class="status-label">Apify 配置</span>
-          <strong id="apifyStatus" class="chip neutral">检查中</strong>
-        </article>
-        <article class="status-card">
-          <span class="status-label">自动任务</span>
-          <strong class="chip success">已启用</strong>
-        </article>
-      </section>
-
-      <section class="panel dashboard-panel">
-        <div class="panel-heading">
-          <div>
-            <p class="eyebrow">PERFORMANCE DASHBOARD</p>
-            <h2>红人上线与表现仪表盘</h2>
-          </div>
-          <div class="dashboard-actions">
-            <span id="dashboardUpdatedAt" class="schedule">数据加载中</span>
-            <button id="btnRefreshDashboard" class="secondary">刷新仪表盘</button>
-          </div>
-        </div>
-        <p class="description">
-          数据来自钉钉达人表、视频表和快照表。播放量取每条视频已记录的最新表现，空白行会自动忽略。
-        </p>
-
-        <div class="period-grid">
-          <article class="period-card highlight">
-            <span class="period-label">周维度</span>
-            <strong id="metricWeekVideos">-</strong>
-            <p>本周上线视频</p>
-            <dl>
-              <div><dt>上线达人</dt><dd id="metricWeekCreators">-</dd></div>
-              <div><dt>视频播放</dt><dd id="metricWeekViews">-</dd></div>
-            </dl>
-          </article>
-          <article class="period-card">
-            <span class="period-label">月维度</span>
-            <strong id="metricMonthVideos">-</strong>
-            <p>本月上线视频</p>
-            <dl>
-              <div><dt>上线达人</dt><dd id="metricMonthCreators">-</dd></div>
-              <div><dt>视频播放</dt><dd id="metricMonthViews">-</dd></div>
-            </dl>
-          </article>
-          <article class="period-card">
-            <span class="period-label">总维度</span>
-            <strong id="metricTotalVideos">-</strong>
-            <p>累计有效视频</p>
-            <dl>
-              <div><dt>已统计达人</dt><dd id="metricTotalCreators">-</dd></div>
-              <div><dt>累计播放</dt><dd id="metricTotalViews">-</dd></div>
-            </dl>
-          </article>
-        </div>
-
-        <div class="dashboard-section">
-          <div class="section-heading">
-            <div>
-              <h3>趋势折线图</h3>
-              <p id="dashboardWeekRange">按北京时间自然周 / 自然月统计</p>
-            </div>
-          </div>
-          <div class="trend-grid">
-            <article class="trend-card">
-              <div class="trend-title">
-                <strong>最近 8 周</strong>
-                <span>视频数 / 播放量趋势</span>
-              </div>
-              <div id="weeklyChart" class="line-chart"></div>
-            </article>
-            <article class="trend-card">
-              <div class="trend-title">
-                <strong>最近 6 个月</strong>
-                <span>月度上线趋势</span>
-              </div>
-              <div id="monthlyChart" class="line-chart"></div>
-            </article>
-          </div>
-        </div>
-
-        <div class="dashboard-section">
-          <div class="section-heading">
-            <div>
-              <h3>达人分层表现</h3>
-              <p id="tierPeriodHint">累计维度：头部 ≥50 万；腰部 10 万-49.9 万；尾部 1 万-9.9 万；微型 &lt;1 万粉丝。</p>
-            </div>
-            <div id="tierPeriodTabs" class="segmented-control" aria-label="达人分层维度">
-              <button type="button" data-tier-period="week">周维度</button>
-              <button type="button" data-tier-period="month">月维度</button>
-              <button type="button" data-tier-period="total" class="active">总维度</button>
-            </div>
-          </div>
-          <div id="tierGrid" class="tier-grid"></div>
-          <p id="missingFollowers" class="hint"></p>
-        </div>
-
-        <div class="leaderboard-grid">
-          <div class="dashboard-section">
-            <div class="section-heading">
-              <div>
-                <h3>达人上线榜单</h3>
-                <p>按当前已登记视频累计播放量排序。</p>
-              </div>
-            </div>
-            <div class="table-wrap">
-              <table>
-                <thead>
-                  <tr><th>#</th><th>达人</th><th>分层</th><th>视频</th><th>播放</th><th>均播</th></tr>
-                </thead>
-                <tbody id="creatorLeaderboard"></tbody>
-              </table>
-            </div>
-          </div>
-
-          <div class="dashboard-section">
-            <div class="section-heading">
-              <div>
-                <h3>视频表现榜单</h3>
-                <p>按最新播放量排序，点击标题可打开原视频。</p>
-              </div>
-            </div>
-            <div class="table-wrap">
-              <table>
-                <thead>
-                  <tr><th>#</th><th>达人 / 平台</th><th>上线时间</th><th>播放</th><th>互动率</th></tr>
-                </thead>
-                <tbody id="videoLeaderboard"></tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="panel">
-        <div class="panel-heading">
-          <div>
-            <p class="eyebrow">DISCOVERY SETTINGS</p>
-            <h2>每周新视频发现</h2>
-          </div>
-          <span class="schedule">自动执行：每周一 10:00</span>
-        </div>
-        <p class="description">
-          系统扫描达人主页，只登记上一个自然周发布且命中关键词的新视频。已登记视频不会在这里重复刷新。
-        </p>
-
-        <div class="form-grid">
-          <label>
-            <span>关键词（英文逗号分隔）</span>
-            <input id="workflowKeywords" type="text" placeholder="yozma,yozmasport" />
-          </label>
-          <label>
-            <span>平台筛选</span>
-            <select id="workflowPlatformFilter">
-              <option value="all">全部平台</option>
-              <option value="instagramreels">Instagram Reels</option>
-              <option value="youtubevideo">YouTube 长视频</option>
-              <option value="youtubeshort">YouTube Shorts</option>
-              <option value="tiktok">TikTok</option>
-            </select>
-          </label>
-          <label>
-            <span>扫描时间范围（天）</span>
-            <input id="workflowDays" type="number" min="1" value="7" />
-          </label>
-          <label>
-            <span>每位达人最多抓取条数</span>
-            <input id="workflowMaxItems" type="number" min="1" value="50" />
-          </label>
-          <label>
-            <span>单轮最多处理达人数</span>
-            <input id="workflowLimitInfluencers" type="number" min="1" value="200" />
-          </label>
-          <div class="window-card">
-            <span>本次发现窗口</span>
-            <strong id="discoveryWindow">加载中</strong>
-          </div>
-        </div>
-
-        <div class="actions">
-          <button id="btnSaveSettings" class="secondary">保存配置</button>
-          <button id="btnCheckConnection" class="secondary">检查钉钉连接</button>
-          <button id="btnRunDiscovery">立即发现新视频</button>
-        </div>
-      </section>
-
-      <section class="panel">
-        <div class="panel-heading">
-          <div>
-            <p class="eyebrow">MILESTONE REFRESH</p>
-            <h2>已登记视频表现更新</h2>
-          </div>
-          <span class="schedule">自动检查：每天 10:30</span>
-        </div>
-        <p class="description">
-          每天先免费读取钉钉表。只有视频上线满 7 天或满 30 天时，才按已登记链接调用 Apify；满 30 天后停止追踪。
-        </p>
-        <div class="milestone-grid">
-          <article><strong>7 天</strong><span>刷新一次表现数据</span></article>
-          <article><strong>30 天</strong><span>最后刷新一次并停止</span></article>
-          <article><strong>无到期视频</strong><span>不会调用 Apify</span></article>
-        </div>
-        <div class="actions">
-          <button id="btnCheckMilestones" class="secondary">免费检查到期视频</button>
-          <button id="btnRefreshMilestones">刷新到期视频</button>
-        </div>
-      </section>
-
-      <section class="panel log-panel">
-        <div class="panel-heading">
-          <div>
-            <p class="eyebrow">RUN LOG</p>
-            <h2>执行结果</h2>
-          </div>
-          <button id="btnClearLog" class="text-button">清空日志</button>
-        </div>
-        <div id="workflowStatus" class="status-message">控制台准备中。</div>
-        <pre id="workflowLog" class="log-box"></pre>
-      </section>
     </main>
-
-    <script src="/app.js"></script>
+    <script>
+      window.location.replace('center.html?static=1');
+    </script>
   </body>
 </html>
