@@ -53,6 +53,7 @@ const centerEls = {
   regionMissingNotice: document.getElementById('regionMissingNotice'),
   regionSummaryGrid: document.getElementById('regionSummaryGrid'),
   regionLeaderboardGrid: document.getElementById('regionLeaderboardGrid'),
+  ownerMissingNotice: document.getElementById('ownerMissingNotice'),
   ownerSummaryGrid: document.getElementById('ownerSummaryGrid'),
   ownerVideoGrid: document.getElementById('ownerVideoGrid'),
   btnExportScopedVideos: document.getElementById('btnExportScopedVideos'),
@@ -2698,6 +2699,7 @@ function renderRegionPerformance() {
   if (!centerEls.regionSummaryGrid || !centerEls.regionLeaderboardGrid) return;
   const rows = getRegionStats(centerPeriod);
   const missing = rows.find((row) => row.region === '未标注地区');
+  const visibleRows = rows.filter((row) => row.region !== '未标注地区');
   if (centerEls.regionMissingNotice) {
     if (missing && missing.videos) {
       centerEls.regionMissingNotice.innerHTML = `当前时间范围有 <strong>${centerNumber(missing.videos)}</strong> 条视频缺少地区归因。请在红人库补充“地区/国家/市场”字段，地区看板会自动变准。`;
@@ -2705,13 +2707,13 @@ function renderRegionPerformance() {
       centerEls.regionMissingNotice.textContent = '地区字段已可用于当前时间范围的归因统计。';
     }
   }
-  if (!rows.length) {
+  if (!visibleRows.length) {
     centerEls.regionSummaryGrid.innerHTML = '<div class="empty-cell">当前时间暂无地区播放数据</div>';
     centerEls.regionLeaderboardGrid.innerHTML = '<div class="empty-cell">当前时间暂无地区榜单</div>';
     return;
   }
-  const maxViews = Math.max(...rows.map((row) => row.views), 1);
-  centerEls.regionSummaryGrid.innerHTML = rows
+  const maxViews = Math.max(...visibleRows.map((row) => row.views), 1);
+  centerEls.regionSummaryGrid.innerHTML = visibleRows
     .map((row, index) => {
       const width = Math.max(6, Math.round((row.views / maxViews) * 100));
       const top = row.topVideo;
@@ -2730,7 +2732,7 @@ function renderRegionPerformance() {
     })
     .join('');
 
-  centerEls.regionLeaderboardGrid.innerHTML = rows
+  centerEls.regionLeaderboardGrid.innerHTML = visibleRows
     .map((region) => {
       const list = region.videosList.slice(0, 5);
       const items = list.length
@@ -2759,13 +2761,24 @@ function renderRegionPerformance() {
 function renderOwnerPerformance() {
   if (!centerEls.ownerSummaryGrid || !centerEls.ownerVideoGrid) return;
   const rows = getOwnerStats(centerPeriod);
-  if (!rows.length) {
+  const missing = rows.find((row) => row.owner === '未标注负责人');
+  const visibleRows = rows.filter((row) => row.owner !== '未标注负责人');
+  if (centerEls.ownerMissingNotice) {
+    if (missing && missing.videos) {
+      centerEls.ownerMissingNotice.innerHTML = `当前时间范围有 <strong>${centerNumber(missing.videos)}</strong> 条视频缺少负责人归因，已从负责人排行中单独剔除。补充负责人字段后会自动归入对应负责人。`;
+      centerEls.ownerMissingNotice.style.display = '';
+    } else {
+      centerEls.ownerMissingNotice.textContent = '负责人字段已可用于当前时间范围的归因统计。';
+      centerEls.ownerMissingNotice.style.display = '';
+    }
+  }
+  if (!visibleRows.length) {
     centerEls.ownerSummaryGrid.innerHTML = '<div class="empty-cell">当前时间暂无负责人上线数据</div>';
     centerEls.ownerVideoGrid.innerHTML = '<div class="empty-cell">当前时间暂无视频明细</div>';
     return;
   }
-  const maxViews = Math.max(...rows.map((row) => row.views), 1);
-  centerEls.ownerSummaryGrid.innerHTML = rows
+  const maxViews = Math.max(...visibleRows.map((row) => row.views), 1);
+  centerEls.ownerSummaryGrid.innerHTML = visibleRows
     .map((row, index) => {
       const width = Math.max(6, Math.round((row.views / maxViews) * 100));
       const top = row.topVideo;
@@ -2784,9 +2797,9 @@ function renderOwnerPerformance() {
     })
     .join('');
 
-  centerEls.ownerVideoGrid.innerHTML = rows
+  centerEls.ownerVideoGrid.innerHTML = visibleRows
     .map((owner) => {
-      const list = owner.videosList.slice(0, 8);
+      const list = owner.videosList.slice(0, 5);
       const items = list.length
         ? list
             .map((row, index) => {
@@ -2802,7 +2815,7 @@ function renderOwnerPerformance() {
       return `<article class="owner-board-card">
         <div class="tier-board-title">
           <div><strong>${escapeHtml(owner.owner)}</strong><span>${centerNumber(owner.creatorsCount)} 位达人 · ${centerNumber(owner.videos)} 条视频 · ${centerNumber(owner.views)} 7日声量</span></div>
-          <em>Top ${Math.min(8, list.length)}</em>
+          <em>Top ${Math.min(5, list.length)}</em>
         </div>
         <ol class="rank-list">${items}</ol>
       </article>`;
