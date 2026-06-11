@@ -5,7 +5,9 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "node server.js"
+    "dev": "node server.js",
+    "build:static": "node scripts/build-static-pages-data.mjs",
+    "build:pages": "npm run build:static && node scripts/build-github-pages.mjs"
   },
   "keywords": [
     "apify",
