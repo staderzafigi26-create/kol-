@@ -1,0 +1,41 @@
+[
+  {
+    "id": "mock_1",
+    "ownerUsername": "hectorbuendiaa",
+    "caption": "new bike setup, discount code YOZMA20 in bio link",
+    "hashtags": ["#surron", "#bike"],
+    "url": "https://www.instagram.com/p/mock1/",
+    "timestamp": "2026-05-05T10:00:00.000Z",
+    "likesCount": 5200,
+    "commentsCount": 88,
+    "sharesCount": 140,
+    "videoPlayCount": 68000,
+    "latestComments": ["where to buy?", "price?", "link please"]
+  },
+  {
+    "id": "mock_2",
+    "ownerUsername": "hectorbuendiaa",
+    "caption": "wheelie practice day",
+    "hashtags": ["#stunt", "#moto"],
+    "url": "https://www.instagram.com/p/mock2/",
+    "timestamp": "2026-04-20T10:00:00.000Z",
+    "likesCount": 900,
+    "commentsCount": 12,
+    "sharesCount": 4,
+    "videoPlayCount": 12000,
+    "latestComments": ["cool"]
+  },
+  {
+    "id": "mock_3",
+    "ownerUsername": "natgeo",
+    "caption": "new lens review and product link in profile",
+    "hashtags": ["#camera", "#review"],
+    "url": "https://www.instagram.com/p/mock3/",
+    "timestamp": "2026-05-08T10:00:00.000Z",
+    "likesCount": 21000,
+    "commentsCount": 300,
+    "sharesCount": 20,
+    "videoPlayCount": 49000,
+    "latestComments": ["how much", "code?"]
+  }
+]

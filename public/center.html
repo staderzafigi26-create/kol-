@@ -1,0 +1,519 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yozma 红人数据中台</title>
+    <link rel="stylesheet" href="/style.css?v=20260608-owner-board-fill" />
+  </head>
+  <body>
+    <main class="container data-center">
+      <header class="hero command-header">
+        <div>
+          <p class="eyebrow">YOZMA LOCAL-FIRST COMMAND CENTER</p>
+          <h1>Yozma Influencer Video Command Center</h1>
+          <p class="hero-copy">Track creator launches, views, regions and follow-up priorities.</p>
+        </div>
+        <div class="hero-actions">
+          <span id="centerUpdatedAt" class="mode-badge">等待加载</span>
+          <button id="btnPrintCenter" class="secondary">导出数据</button>
+          <button id="btnRefreshCenter">刷新中台</button>
+          <a class="link-button secondary-link" href="/">返回控制台</a>
+        </div>
+      </header>
+
+      <section class="panel asset-strip">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">LOCAL DATABASE</p>
+            <h2>本地数据资产</h2>
+          </div>
+        </div>
+        <div class="metric-grid compact">
+          <article><span>红人链接</span><strong id="localInfluencers">-</strong></article>
+          <article><span>视频记录</span><strong id="localVideos">-</strong></article>
+          <article><span>快照记录</span><strong id="localSnapshots">-</strong></article>
+          <article><span>累计播放</span><strong id="localViews">-</strong></article>
+        </div>
+      </section>
+
+      <section class="center-layout">
+        <aside class="center-sidebar panel">
+          <button class="center-nav active" data-section="dashboard">仪表盘</button>
+          <button class="center-nav" data-section="influencers">红人库</button>
+          <button class="center-nav" data-section="videos">视频上线</button>
+          <button class="center-nav" data-section="affiliateSales">出单分析</button>
+          <button class="center-nav" data-section="snapshots">数据快照</button>
+          <button class="center-nav" data-section="runs">运行记录</button>
+          <button class="center-nav" data-section="importExport">导入导出</button>
+        </aside>
+
+        <div class="center-content">
+          <section id="sectionDashboard" class="panel center-section active">
+            <div class="panel-heading">
+              <div>
+                <p class="eyebrow">DASHBOARD</p>
+                <h2>经营仪表盘</h2>
+              </div>
+              <div class="dashboard-filter-bar">
+                <div class="segmented-control" id="centerPeriodControl">
+                  <button class="active" data-period="week">周维度</button>
+                  <button data-period="month">月维度</button>
+                  <button data-period="total">总维度</button>
+                  <button data-period="custom">自定义</button>
+                </div>
+                <div class="date-range-control">
+                  <label><span>开始</span><input id="centerDateStart" type="date" /></label>
+                  <label><span>结束</span><input id="centerDateEnd" type="date" /></label>
+                  <button id="btnApplyCustomRange" class="secondary">应用时间</button>
+                </div>
+                <div class="filter-select-row">
+                  <label><span>平台</span><select id="centerPlatformFilter"><option value="all">全部平台</option></select></label>
+                  <label><span>区域</span><select id="centerRegionFilter"><option value="all">全部区域</option></select></label>
+                  <label><span>负责人</span><select id="centerOwnerFilter"><option value="all">全部负责人</option></select></label>
+                  <button id="btnResetDashboardFilters" class="secondary">重置筛选</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="dashboard-workbench">
+              <aside class="dashboard-command-rail">
+                <p class="eyebrow">OPERATIONS PRIORITY</p>
+                <h3>今天优先处理什么</h3>
+                <div class="ops-score-ring">
+                  <strong id="opsHealthScore">-</strong>
+                  <span>运营健康分</span>
+                </div>
+                <div id="opsTicker" class="ops-ticker"></div>
+                <div id="opsSummaryChips" class="ops-summary-chips"></div>
+                <div class="ops-action-title">
+                  <strong>优先动作</strong>
+                  <span>按运营紧急程度排序</span>
+                </div>
+                <ol id="opsActionList" class="ops-action-list"></ol>
+                <nav class="dashboard-mini-nav">
+                  <button data-dashboard-jump="dashboardOverview">数据概览</button>
+                  <button data-dashboard-jump="dashboardPriority">优先级</button>
+                  <button data-dashboard-jump="dashboardOpsMonitor">监测待办</button>
+                  <button data-dashboard-jump="dashboardTrends">趋势</button>
+                  <button data-dashboard-jump="dashboardPlatform">平台</button>
+                  <button data-dashboard-jump="dashboardGeo">全球地图</button>
+                  <button data-dashboard-jump="dashboardRegions">地区</button>
+                  <button data-dashboard-jump="dashboardOwners">负责人</button>
+                  <button data-dashboard-jump="dashboardAffiliateSales">出单</button>
+                  <button data-dashboard-jump="dashboardLeaderboards">榜单</button>
+                  <button data-dashboard-jump="dashboardTiers">分层</button>
+                </nav>
+              </aside>
+
+              <div class="dashboard-analysis-stack">
+                <div id="dashboardOverview" class="dashboard-section dashboard-overview-block">
+                  <div class="period-grid command-kpi-grid">
+                    <article class="period-card highlight" data-period-card="week" data-jump-section="videos">
+                      <span class="period-label">New Videos This Week</span>
+                      <strong id="centerWeekVideos">-</strong>
+                      <p>周报周期上线视频</p>
+                      <dl>
+                        <div><dt>达人</dt><dd id="centerWeekCreators">-</dd></div>
+                        <div><dt>7日声量</dt><dd id="centerWeekViews">-</dd></div>
+                      </dl>
+                    </article>
+                    <article class="period-card" data-period-card="month" data-jump-section="videos">
+                      <span class="period-label">This Month</span>
+                      <strong id="centerMonthVideos">-</strong>
+                      <p>本月上线视频</p>
+                      <dl>
+                        <div><dt>达人</dt><dd id="centerMonthCreators">-</dd></div>
+                        <div><dt>7日声量</dt><dd id="centerMonthViews">-</dd></div>
+                      </dl>
+                    </article>
+                    <article class="period-card" data-period-card="total" data-jump-section="videos">
+                      <span class="period-label">Total Videos</span>
+                      <strong id="centerTotalVideos">-</strong>
+                      <p>累计有效视频</p>
+                      <dl>
+                        <div><dt>达人</dt><dd id="centerTotalCreators">-</dd></div>
+                        <div><dt>7日声量</dt><dd id="centerTotalViews">-</dd></div>
+                      </dl>
+                    </article>
+                    <article class="period-card custom-period-card" data-period-card="custom" data-jump-section="videos">
+                      <span class="period-label">Custom Range</span>
+                      <strong id="centerCustomVideos">-</strong>
+                      <p id="centerCustomRangeLabel">选择日期后查看</p>
+                      <dl>
+                        <div><dt>达人</dt><dd id="centerCustomCreators">-</dd></div>
+                        <div><dt>7日声量</dt><dd id="centerCustomViews">-</dd></div>
+                      </dl>
+                    </article>
+                    <article class="period-card compact-kpi">
+                      <span class="period-label">Avg Views / Video</span>
+                      <strong id="kpiAvgViews">-</strong>
+                      <p>当前范围均播</p>
+                    </article>
+                    <article class="period-card compact-kpi">
+                      <span class="period-label">Top Region</span>
+                      <strong id="kpiTopRegion">-</strong>
+                      <p>7日成熟声量贡献最高区域</p>
+                    </article>
+                    <article class="period-card compact-kpi">
+                      <span class="period-label">Top Platform</span>
+                      <strong id="kpiTopPlatform">-</strong>
+                      <p>当前最强平台</p>
+                    </article>
+                    <article class="period-card compact-kpi danger-kpi">
+                      <span class="period-label">Need Follow-up</span>
+                      <strong id="kpiNeedFollowup">-</strong>
+                      <p>待处理数据 / 跟进项</p>
+                    </article>
+                  </div>
+                </div>
+
+            <div id="dashboardPriority" class="dashboard-section priority-section">
+              <div class="section-heading">
+                <div>
+                  <h3>运营优先级模块</h3>
+                  <p>优先暴露缺失数据、跟进提醒、高价值机会和本周最强信号。</p>
+                </div>
+              </div>
+              <div id="battleInsightGrid" class="battle-insight-grid priority-grid"></div>
+            </div>
+
+            <div id="dashboardGeo" class="dashboard-section global-command-section">
+              <div class="section-heading">
+                <div>
+                  <h3>全球地区 7 日声量表现</h3>
+                  <p>使用 ECharts 世界地图，颜色代表满 7 天视频的成熟声量，气泡代表视频量；点击国家 / 区域会联动筛选。</p>
+                </div>
+                <button id="btnResetMapFilter" class="secondary">重置地图筛选</button>
+              </div>
+              <div class="global-war-room">
+                <article class="global-map-card">
+                  <div class="trend-title">
+                    <strong>World Map</strong>
+                    <span id="globalMapScopeLabel">当前时间范围</span>
+                  </div>
+                  <div id="globalMapCanvas" class="global-map-canvas"></div>
+                </article>
+                <article class="global-detail-card">
+                  <div class="trend-title"><strong>选中地区详情</strong><span>点击地图或排行切换</span></div>
+                  <div id="globalMapDetail" class="global-map-detail"></div>
+                </article>
+                <article class="global-bars-card">
+                  <div class="trend-title"><strong>国家 / 州级声量排行</strong><span>按当前维度 7 日声量排序</span></div>
+                  <div id="globalRegionBars" class="global-region-bars"></div>
+                </article>
+              </div>
+            </div>
+
+            <div class="dashboard-section">
+              <div class="section-heading">
+                <div>
+                  <h3>运营态势雷达</h3>
+                  <p>把周活跃、平台效率和风险信号压缩成更直观的可视化面板。</p>
+                </div>
+              </div>
+              <div class="situation-grid">
+                <article class="situation-card wide-situation-card">
+                  <div class="trend-title"><strong>周活跃热力带</strong><span>颜色越亮代表 7 日声量越集中</span></div>
+                  <div id="activityHeatmap" class="activity-heatmap"></div>
+                </article>
+                <article class="situation-card">
+                  <div class="trend-title"><strong>平台效率雷达</strong><span>看均播和最高爆点</span></div>
+                  <div id="platformOrbit" class="platform-orbit"></div>
+                </article>
+              </div>
+            </div>
+
+            <div id="dashboardOpsMonitor" class="dashboard-section">
+              <div class="section-heading">
+                <div>
+                  <h3>运营监测待办</h3>
+                  <p>自动识别待跟进达人、7/30 天生命周期节点和数据质量问题。</p>
+                </div>
+              </div>
+              <div class="monitor-grid">
+                <article class="monitor-card">
+                  <div class="trend-title"><strong>待跟进达人池</strong><span>优先处理</span></div>
+                  <div id="followupPoolGrid" class="monitor-list"></div>
+                </article>
+                <article class="monitor-card">
+                  <div class="trend-title"><strong>视频生命周期</strong><span>7 天 / 30 天</span></div>
+                  <div id="lifecycleGrid" class="lifecycle-grid"></div>
+                </article>
+                <article class="monitor-card">
+                  <div class="trend-title"><strong>数据质量雷达</strong><span>先补脏数据</span></div>
+                  <div id="qualityGrid" class="quality-grid"></div>
+                </article>
+              </div>
+            </div>
+
+            <div id="dashboardTrends" class="dashboard-section">
+              <div class="section-heading">
+                <div>
+                  <h3>趋势变化</h3>
+                  <p>用 ECharts 保留核心趋势：上线视频、7日成熟声量、平台和区域表现。</p>
+                </div>
+              </div>
+              <div class="trend-grid">
+                <article class="trend-card">
+                  <div class="trend-title"><strong>视频上线 / 7日声量趋势</strong><span>上线按周，声量按满 7 天快照</span></div>
+                  <div id="weeklyTrendChart" class="line-chart"></div>
+                </article>
+                <article class="trend-card">
+                  <div class="trend-title"><strong>平台表现对比</strong><span>YouTube / TikTok / Instagram</span></div>
+                  <div id="monthlyBarChart" class="bar-chart"></div>
+                </article>
+              </div>
+            </div>
+
+            <div class="dashboard-section">
+              <div class="section-heading">
+                <div>
+                  <h3>每周视频脉冲</h3>
+                  <p>用卡片快速看每周上线视频、参与达人、7日成熟声量和环比变化。</p>
+                </div>
+              </div>
+              <div id="weeklyPulseGrid" class="weekly-pulse-grid"></div>
+            </div>
+
+            <div id="dashboardPlatform" class="dashboard-section">
+              <div class="section-heading">
+                <div>
+                  <h3>平台表现矩阵</h3>
+                  <p>按当前选择时间拆出视频量、7日声量、7日均播和当前最强达人。</p>
+                </div>
+              </div>
+              <div id="platformMatrix" class="platform-matrix"></div>
+            </div>
+
+            <div id="dashboardRegions" class="dashboard-section">
+              <div class="section-heading">
+                <div>
+                  <h3>地区 7 日声量表现</h3>
+                  <p>按当前选择时间查看各地区 7 日声量、视频数、达人量，以及每个地区最爆的视频。</p>
+                </div>
+              </div>
+              <div id="regionMissingNotice" class="region-notice"></div>
+              <div id="regionSummaryGrid" class="region-summary-grid"></div>
+              <div class="tier-board-heading">
+                <strong>各地区爆款榜单</strong>
+                <span>每个地区单独排序，避免只看总榜导致地区差异被掩盖。</span>
+              </div>
+              <div id="regionLeaderboardGrid" class="region-leaderboard-grid"></div>
+            </div>
+
+            <div id="dashboardOwners" class="dashboard-section">
+              <div class="section-heading">
+                <div>
+                  <h3>负责人上线产出</h3>
+                  <p>按当前选择时间统计每位负责人对应的上线达人、上线视频、7日声量和爆款视频。</p>
+                </div>
+                <button id="btnExportScopedVideos" class="secondary">导出当前上线数据</button>
+              </div>
+              <div id="ownerSummaryGrid" class="owner-summary-grid"></div>
+              <div class="tier-board-heading">
+                <strong>负责人视频明细</strong>
+                <span>用于周会复盘：谁负责的达人上线了哪些视频，哪条满 7 天后的声量更高。</span>
+              </div>
+              <div id="ownerVideoGrid" class="owner-video-grid"></div>
+            </div>
+
+            <div id="dashboardAffiliateSales" class="dashboard-section">
+              <div class="section-heading">
+                <div>
+                  <h3>出单分析</h3>
+                  <p>按 Affiliate ID / Email 合并订单，联动当前周期视频 7 日声量；跨区域出单按原币种拆分 GMV 和佣金，避免重复计单。</p>
+                </div>
+                <a class="text-button" href="/api/local/export/affiliateSales?format=csv">导出匹配表</a>
+              </div>
+              <div id="affiliateSalesNotice" class="affiliate-sales-notice"></div>
+              <div id="affiliateSalesKpis" class="affiliate-sales-kpis"></div>
+              <div id="affiliateSalesCorrelation" class="affiliate-sales-correlation"></div>
+            </div>
+
+            <div id="dashboardLeaderboards" class="dashboard-section">
+              <div class="section-heading">
+                <div>
+                  <h3>结构与榜单</h3>
+                  <p>看平台占比、达人表现和视频爆款。</p>
+                </div>
+              </div>
+              <div class="insight-grid">
+                <article class="trend-card platform-share-card">
+                  <div class="trend-title"><strong>平台占比</strong><span>当前时间的视频结构</span></div>
+                  <div id="platformPieChart" class="donut-chart"></div>
+                </article>
+                <article class="trend-card">
+                  <div class="trend-title"><strong>达人 7 日声量榜</strong><span>Top 8</span></div>
+                  <ol id="creatorLeaderboard" class="rank-list"></ol>
+                </article>
+                <article class="trend-card wide-card">
+                  <div class="trend-title"><strong>视频表现榜</strong><span>点击标题打开原视频</span></div>
+                  <ol id="videoLeaderboard" class="rank-list video-rank"></ol>
+                </article>
+                <article class="trend-card wide-card">
+                  <div class="trend-title"><strong>爆款气泡图</strong><span>圆越大 7 日声量越高</span></div>
+                  <div id="hotVideoBubbleChart" class="bubble-chart"></div>
+                </article>
+              </div>
+            </div>
+
+            <div id="dashboardTiers" class="dashboard-section">
+              <div class="section-heading">
+                <div>
+                  <h3>达人分层表现</h3>
+                  <p id="tierPeriodLabel">当前展示：周维度</p>
+                </div>
+              </div>
+              <div id="centerTierGrid" class="tier-grid"></div>
+              <div class="tier-board-heading">
+                <strong>分层基准线</strong>
+                <span>同量级达人先看本层均播，再看谁明显高于基准。</span>
+              </div>
+              <div id="tierBenchmarkGrid" class="tier-benchmark-grid"></div>
+              <div class="tier-board-heading">
+                <strong>分层声量榜</strong>
+                <span>按当前周 / 月 / 总维度切换，同量级达人内部排序。</span>
+              </div>
+              <div id="tierLeaderboardGrid" class="tier-leaderboard-grid"></div>
+            </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="sectionInfluencers" class="panel center-section">
+            <div class="panel-heading"><div><p class="eyebrow">INFLUENCERS</p><h2>红人库</h2></div><a class="text-button" href="/api/local/export/influencers?format=csv">导出 CSV</a></div>
+            <div class="table-wrap"><table><thead><tr><th>红人</th><th>负责人</th><th>地区</th><th>平台</th><th>主页链接</th><th>是否监控</th><th>是否出视频</th></tr></thead><tbody id="localInfluencerRows"></tbody></table></div>
+          </section>
+
+          <section id="sectionVideos" class="panel center-section">
+            <div class="panel-heading"><div><p class="eyebrow">VIDEOS</p><h2>视频上线明细</h2></div><a class="text-button" href="/api/local/export/videos?format=csv">导出 CSV</a></div>
+            <div class="table-toolbar">
+              <label><span>搜索</span><input id="videoTableSearch" type="search" placeholder="达人 / 平台 / 负责人 / 地区" /></label>
+              <span class="hint">表格会跟随顶部筛选和地图点击自动更新。</span>
+            </div>
+            <div class="table-wrap"><table><thead><tr><th>红人</th><th>负责人</th><th>区域</th><th>平台</th><th>上线时间</th><th>播放</th><th>互动率</th><th>状态</th><th>链接</th></tr></thead><tbody id="localVideoRows"></tbody></table></div>
+          </section>
+
+          <section id="sectionAffiliateSales" class="panel center-section">
+            <div class="panel-heading"><div><p class="eyebrow">AFFILIATE</p><h2>出单分析表</h2></div><a class="text-button" href="/api/local/export/affiliateSales?format=csv">导出 CSV</a></div>
+            <div class="table-toolbar">
+              <span class="hint">订单按 Order ID 去重；同一个 Affiliate ID 跨区域出单只计入一次，GMV 和佣金按 USD / CAD / EUR / GBP 原币种展示。</span>
+            </div>
+            <div class="table-wrap"><table><thead><tr><th>达人</th><th>Email</th><th>负责人</th><th>地区</th><th>联盟 Code</th><th>状态</th><th>当前周期视频</th><th>7日声量</th><th>订单</th><th>GMV</th><th>佣金</th></tr></thead><tbody id="affiliateSalesRows"></tbody></table></div>
+          </section>
+
+          <section id="sectionSnapshots" class="panel center-section">
+            <div class="panel-heading"><div><p class="eyebrow">SNAPSHOTS</p><h2>快照表</h2></div><a class="text-button" href="/api/local/export/snapshots?format=csv">导出 CSV</a></div>
+            <div class="table-wrap"><table><thead><tr><th>捕获时间</th><th>红人</th><th>平台</th><th>播放</th><th>快照类型</th></tr></thead><tbody id="localSnapshotRows"></tbody></table></div>
+          </section>
+
+          <section id="sectionRuns" class="panel center-section">
+            <div class="panel-heading"><div><p class="eyebrow">RUNS</p><h2>运行记录</h2></div><a class="text-button" href="/api/local/export/runs?format=csv">导出 CSV</a></div>
+            <div class="table-wrap"><table><thead><tr><th>时间</th><th>任务</th><th>状态</th><th>说明</th></tr></thead><tbody id="localRunRows"></tbody></table></div>
+          </section>
+
+          <section id="sectionImportExport" class="panel center-section">
+            <div class="panel-heading"><div><p class="eyebrow">IMPORT / EXPORT</p><h2>导入与导出</h2></div></div>
+            <div class="local-discovery-box">
+              <h3>本地抓取新视频</h3>
+              <p class="description">这里会调用 Apify 抓取达人主页，但只写入本地中台，不会调用钉钉 API。重复视频会自动跳过。</p>
+              <div class="apify-safety-grid">
+                <article>
+                  <strong>不会花 Apify 的操作</strong>
+                  <span>刷新看板、导入视频链接、导入红人链接、导出 CSV/JSON/PDF、免费检查候选。</span>
+                </article>
+                <article class="danger">
+                  <strong>会花 Apify 的操作</strong>
+                  <span>只有点击“本地抓取新视频”才会调用 Apify。建议先点“免费检查候选”看人数和预估费用。</span>
+                </article>
+              </div>
+              <div class="form-grid">
+                <label>
+                  <span>时间窗口（天）</span>
+                  <input id="localDiscoverDays" type="number" min="1" value="7" />
+                </label>
+                <label>
+                  <span>单达人最多抓取视频数</span>
+                  <input id="localDiscoverMaxItems" type="number" min="1" value="30" />
+                </label>
+                <label>
+                  <span>本次处理达人数量</span>
+                  <input id="localDiscoverLimit" type="number" min="1" value="10" />
+                </label>
+                <label>
+                  <span>跳过前 N 位</span>
+                  <input id="localDiscoverSkip" type="number" min="0" value="0" />
+                </label>
+                <label>
+                  <span>平台筛选</span>
+                  <select id="localDiscoverPlatform">
+                    <option value="all">全部平台</option>
+                    <option value="instagramreels">Instagram Reels</option>
+                    <option value="tiktok">TikTok</option>
+                    <option value="youtubevideo">YouTube Video</option>
+                    <option value="youtubeshort">YouTube Shorts</option>
+                  </select>
+                </label>
+                <label>
+                  <span>关键词</span>
+                  <input id="localDiscoverKeywords" value="yozma,yozmasport,in10" />
+                </label>
+              </div>
+              <div class="actions">
+                <button id="btnLocalDiscoverDryRun" class="secondary">免费检查候选</button>
+                <label class="inline-confirm">
+                  <input id="confirmApifyRun" type="checkbox" />
+                  <span>我已检查候选，确认这次调用 Apify</span>
+                </label>
+                <button id="btnLocalDiscoverRun">本地抓取新视频</button>
+              </div>
+              <div id="apifyEstimateBox" class="apify-estimate-box">建议先点击“免费检查候选”，这里会显示本次候选数量和 Apify 预估费用。</div>
+            </div>
+            <div class="local-discovery-box">
+              <div class="panel-heading compact-heading">
+                <div>
+                  <h3>批量导入视频链接</h3>
+                  <p class="description">只需要填写视频链接。平台、视频 ID 会自动识别；红人名称可选。</p>
+                </div>
+                <div class="template-links">
+                  <a class="link-button secondary-link" href="/api/local/templates/video-import.xlsx">下载 Excel 模板</a>
+                  <a class="link-button secondary-link" href="/api/local/templates/video-import.csv">下载 CSV 模板</a>
+                </div>
+              </div>
+              <div class="form-grid">
+                <label class="wide-field">
+                  <span>粘贴视频链接或 CSV 内容（每行一个视频链接也可以）</span>
+                  <textarea id="importVideoText" rows="7" placeholder="https://www.tiktok.com/@example/video/1234567890&#10;https://www.youtube.com/shorts/abcdefghijk&#10;https://www.instagram.com/reel/ABC123/"></textarea>
+                </label>
+                <label class="wide-field">
+                  <span>上传 CSV 模板文件（可选）</span>
+                  <input id="importVideoFile" type="file" accept=".csv,text/csv" />
+                </label>
+              </div>
+              <div class="actions">
+                <button id="btnImportVideos">导入视频链接</button>
+                <span class="hint">Excel 模板用于填写；导入时可以复制第一列到上方，或另存为 CSV 后上传。</span>
+              </div>
+            </div>
+            <div class="form-grid">
+              <label class="wide-field">
+                <span>批量导入红人主页链接（每行一个）</span>
+                <textarea id="importInfluencerText" rows="8" placeholder="https://www.tiktok.com/@example&#10;https://www.youtube.com/@example/shorts"></textarea>
+              </label>
+            </div>
+            <div class="actions">
+              <button id="btnImportInfluencers">导入红人链接</button>
+              <button id="btnImportDingTalk" class="secondary">从钉钉同步到本地</button>
+              <a class="link-button secondary-link" href="/api/local/export/influencers?format=json">导出红人 JSON</a>
+              <a class="link-button secondary-link" href="/api/local/export/videos?format=json">导出视频 JSON</a>
+            </div>
+            <div id="centerStatus" class="status-message">中台准备中。</div>
+          </section>
+        </div>
+      </section>
+    </main>
+    <script src="/vendor/echarts.min.js"></script>
+  <script src="/center.js?v=20260608-owner-board-fill"></script>
+  </body>
+</html>
