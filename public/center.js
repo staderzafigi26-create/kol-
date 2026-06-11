@@ -976,6 +976,18 @@ const EUROPE_MAP_COUNTRIES = new Set([
   'Malta',
   'Cyprus'
 ]);
+const WORLD_MAP_FEATURE_ALIASES = {
+  'Czech Republic': 'Czech Rep.'
+};
+
+const MAP_VIDEO_HEAT_STOPS = [
+  { threshold: 0.82, color: '#8F0F22' },
+  { threshold: 0.66, color: '#B4142B' },
+  { threshold: 0.48, color: '#CF2438' },
+  { threshold: 0.28, color: '#E64655' },
+  { threshold: 0.12, color: '#F56F78' },
+  { threshold: 0, color: '#FF9BA2' }
+];
 
 function isEuropeGroupRow(row = {}) {
   return row.region === 'EU'
@@ -2220,12 +2232,9 @@ function mapPaletteForMode(mode) {
 }
 
 function mapVideoHeatColor(videos, maxVideos) {
-  const ratio = maxVideos ? Math.min(1, Math.max(0, videos / maxVideos)) : 0;
-  if (ratio >= 0.78) return '#B4142B';
-  if (ratio >= 0.48) return '#CF2438';
-  if (ratio >= 0.25) return '#E64655';
-  if (ratio >= 0.1) return '#F26F78';
-  return '#F7A1A6';
+  const rawRatio = maxVideos ? Math.min(1, Math.max(0, videos / maxVideos)) : 0;
+  const ratio = Math.sqrt(rawRatio);
+  return MAP_VIDEO_HEAT_STOPS.find((stop) => ratio >= stop.threshold)?.color || MAP_VIDEO_HEAT_STOPS.at(-1).color;
 }
 
 const MAP_SHORT_LABELS = {
@@ -2252,15 +2261,16 @@ function mapShortLabel(name) {
 function shouldShowMapLabel(row, maxVideos, isDrillMode) {
   if (!row?.videos || row.isUnassigned) return false;
   if (!isDrillMode && EUROPE_MAP_COUNTRIES.has(row.mapCountry) && row.mapCountry !== 'United Kingdom') {
-    return row.videos >= Math.max(18, Math.ceil(maxVideos * 0.16));
+    return row.videos >= Math.max(6, Math.ceil(maxVideos * 0.018));
   }
-  const ratioThreshold = isDrillMode ? 0.08 : 0.045;
-  const absoluteThreshold = isDrillMode ? 1 : 5;
+  const ratioThreshold = isDrillMode ? 0.08 : 0.03;
+  const absoluteThreshold = isDrillMode ? 1 : 4;
   return row.videos >= Math.max(absoluteThreshold, Math.ceil(maxVideos * ratioThreshold));
 }
 
 function mapFeatureName(row, isDrillMode) {
-  return isDrillMode ? row.mapDataName || row.placeLabel : row.mapCountry;
+  const name = isDrillMode ? row.mapDataName || row.placeLabel : row.mapCountry;
+  return isDrillMode ? name : WORLD_MAP_FEATURE_ALIASES[name] || name;
 }
 
 function mapSeriesItem(row, maxVideos, isDrillMode) {
@@ -2635,7 +2645,10 @@ function renderGlobalMap() {
         borderRadius: 999,
         formatter: (value) => centerNumber(Math.round(value)),
         inRange: {
-          color: ['#F7A1A6', '#F26F78', '#E64655', '#CF2438', '#B4142B']
+          color: ['#FF9BA2', '#F56F78', '#E64655', '#CF2438', '#B4142B', '#8F0F22']
+        },
+        outOfRange: {
+          color: '#182235'
         }
       },
       series: [
@@ -2660,9 +2673,12 @@ function renderGlobalMap() {
               return `${mapShortLabel(params.name)}\n${centerNumber(row.videos)}`;
             }
           },
+          labelLayout: {
+            hideOverlap: true
+          },
           itemStyle: {
-            areaColor: '#101927',
-            borderColor: 'rgba(255,255,255,.14)',
+            areaColor: '#182235',
+            borderColor: 'rgba(255,255,255,.12)',
             borderWidth: 0.5
           },
           emphasis: {
