@@ -39,7 +39,6 @@ const centerEls = {
   tierPeriodLabel: document.getElementById('tierPeriodLabel'),
   tierBenchmarkGrid: document.getElementById('tierBenchmarkGrid'),
   tierLeaderboardGrid: document.getElementById('tierLeaderboardGrid'),
-  battleInsightGrid: document.getElementById('battleInsightGrid'),
   followupPoolGrid: document.getElementById('followupPoolGrid'),
   lifecycleGrid: document.getElementById('lifecycleGrid'),
   qualityGrid: document.getElementById('qualityGrid'),
@@ -48,14 +47,9 @@ const centerEls = {
   globalRegionBars: document.getElementById('globalRegionBars'),
   globalMapScopeLabel: document.getElementById('globalMapScopeLabel'),
   dataHealthGrid: document.getElementById('dataHealthGrid'),
-  activityHeatmap: document.getElementById('activityHeatmap'),
-  platformOrbit: document.getElementById('platformOrbit'),
   weeklyTrendChart: document.getElementById('weeklyTrendChart'),
-  weeklyPulseGrid: document.getElementById('weeklyPulseGrid'),
   monthlyBarChart: document.getElementById('monthlyBarChart'),
-  platformPieChart: document.getElementById('platformPieChart'),
   platformMatrix: document.getElementById('platformMatrix'),
-  hotVideoBubbleChart: document.getElementById('hotVideoBubbleChart'),
   regionMissingNotice: document.getElementById('regionMissingNotice'),
   regionSummaryGrid: document.getElementById('regionSummaryGrid'),
   regionLeaderboardGrid: document.getElementById('regionLeaderboardGrid'),
@@ -1609,17 +1603,6 @@ function renderBarChart(target, rows) {
   resizeChartAfterLayout(platformCompareChart);
 }
 
-function getPlatformDistribution(period = centerPeriod) {
-  const map = new Map();
-  for (const fields of getScopedVideoRows(period)) {
-    const platform = readLocalText(fields['平台']) || 'unknown';
-    map.set(platform, (map.get(platform) || 0) + 1);
-  }
-  return [...map.entries()]
-    .map(([platform, count]) => ({ platform, count }))
-    .sort((a, b) => b.count - a.count);
-}
-
 function getPlatformStats(period = centerPeriod) {
   const map = new Map();
   for (const fields of getScopedVideoRows(period)) {
@@ -1651,62 +1634,6 @@ function getPlatformStats(period = centerPeriod) {
   return [...map.values()]
     .map((row) => ({ ...row, avgViews: row.videos ? Math.round(row.views / row.videos) : 0 }))
     .sort((a, b) => b.views - a.views);
-}
-
-function renderBattleInsights() {
-  if (!centerEls.battleInsightGrid) return;
-  const quality = getQualityIssues();
-  const lifecycle = getLifecycleStats();
-  const rows = getScopedVideoRows(centerPeriod);
-  const normalized = normalizeData(rows);
-  const topRegion = getRegionStats(centerPeriod)[0] || {};
-  const topPlatform = getPlatformStats(centerPeriod)[0] || {};
-  const topCreator = getCreatorVideoStats(centerPeriod)[0] || {};
-  const missingRegion = normalized.filter((row) => row.region === '未标注地区' || row.country === 'UNKNOWN').length;
-  const missingOwner = normalized.filter((row) => row.owner === '未标注负责人').length;
-  const lowPerformance = normalized.filter((row) => row.views > 0 && row.views < 1000).length;
-  const highValue = normalized.filter((row) => row.views >= 50000 || row.engagementRate >= 5).length;
-  const cards = [
-    {
-      label: '数据缺失',
-      value: `${centerNumber(quality.missingFollowers + missingRegion + missingOwner)} 项`,
-      delta: { text: `缺粉丝 ${centerNumber(quality.missingFollowers)} · 缺地区 ${centerNumber(missingRegion)} · 缺负责人 ${centerNumber(missingOwner)}`, className: 'down' },
-      progress: Math.min(100, quality.missingFollowers + missingRegion + missingOwner),
-      note: '先补字段，否则分层、地区和负责人周报会失真'
-    },
-    {
-      label: '跟进提醒',
-      value: `${centerNumber(lifecycle.sevenDayDue + lifecycle.thirtyDayDue)} 条`,
-      delta: { text: `7天 ${centerNumber(lifecycle.sevenDayDue)} · 30天 ${centerNumber(lifecycle.thirtyDayDue)}`, className: 'flat' },
-      progress: Math.min(100, lifecycle.sevenDayDue + lifecycle.thirtyDayDue),
-      note: '到了 7 天和 30 天节点的视频需要更新表现'
-    },
-    {
-      label: '高价值机会',
-      value: `${centerNumber(highValue)} 条`,
-      delta: { text: `最佳达人：${topCreator.creator || '-'}`, className: 'up' },
-      progress: Math.min(100, highValue * 8),
-      note: '高播放或高互动内容适合复盘脚本、平台和地区'
-    },
-    {
-      label: '本周最强信号',
-      value: topRegion.region || '-',
-      delta: { text: `${topPlatform.platform || '-'} · ${centerNumber(topPlatform.views || 0)} 7日声量`, className: 'up' },
-      progress: Math.min(100, Math.round(((topRegion.views || 0) / Math.max(1, normalized.reduce((sum, row) => sum + row.views, 0))) * 100)),
-      note: `低表现视频 ${centerNumber(lowPerformance)} 条，可进入视频表筛选处理`
-    }
-  ];
-  centerEls.battleInsightGrid.innerHTML = cards
-    .map(
-      (card) => `<article class="battle-card">
-        <span>${escapeHtml(card.label)}</span>
-        <strong>${escapeHtml(card.value)}</strong>
-        <p class="${card.delta.className}">${escapeHtml(card.delta.text)}</p>
-        <div class="battle-meter"><i style="width:${Math.max(6, card.progress)}%"></i></div>
-        <small>${escapeHtml(card.note)}</small>
-      </article>`
-    )
-    .join('');
 }
 
 function renderCommandKpis() {
@@ -2013,60 +1940,6 @@ function renderDataHealth() {
       </article>`
     )
     .join('');
-}
-
-function renderActivityHeatmap() {
-  if (!centerEls.activityHeatmap) return;
-  const rows = getWeeklyTrendRows();
-  if (!rows.length) {
-    centerEls.activityHeatmap.innerHTML = '<div class="empty-cell">暂无周活跃数据</div>';
-    return;
-  }
-  const maxViews = Math.max(...rows.map((row) => rawNumber(row.mature7dViews ?? row.views)), 1);
-  centerEls.activityHeatmap.innerHTML = rows
-    .map((row) => {
-      const views = rawNumber(row.mature7dViews ?? row.views);
-      const videos = rawNumber(row.videos);
-      const creators = rawNumber(row.creators);
-      const heat = Math.round((views / maxViews) * 100);
-      return `<article class="heat-cell" style="--heat:${Math.max(8, heat)}%">
-        <span>${shortDate(row.weekStart)}-${shortDate(row.weekEnd)}</span>
-        <strong>${centerNumber(videos)} 条</strong>
-        <small>${centerNumber(creators)} 位 · ${centerNumber(views)}</small>
-      </article>`;
-    })
-    .join('');
-}
-
-function renderPlatformOrbit() {
-  if (!centerEls.platformOrbit) return;
-  const rows = getPlatformStats(centerPeriod).slice(0, 4);
-  if (!rows.length) {
-    centerEls.platformOrbit.innerHTML = '<div class="empty-cell">暂无平台效率数据</div>';
-    return;
-  }
-  const maxAvgViews = Math.max(...rows.map((row) => row.avgViews), 1);
-  const best = rows.reduce((winner, row) => (row.avgViews > winner.avgViews ? row : winner), rows[0]);
-  const nodes = rows
-    .map((row, index) => {
-      const size = 72 + Math.round((row.avgViews / maxAvgViews) * 34);
-      return `<article class="orbit-node platform-${platformClass(row.platform)}" style="--size:${size}px;--delay:${index * 150}ms">
-        <i><b>${escapeHtml(shortPlatformName(row.platform))}</b><span>${centerNumber(row.avgViews)}</span></i>
-        <div>
-          <strong>最高 ${centerNumber(row.topViews || 0)}</strong>
-          <span>${centerNumber(row.videos || 0)} 条视频</span>
-          <em>均播 ${centerNumber(row.avgViews)}</em>
-        </div>
-      </article>`;
-    })
-    .join('');
-  centerEls.platformOrbit.innerHTML = `
-    <div class="orbit-core">
-      <span>最佳效率平台</span>
-      <strong>${escapeHtml(shortPlatformName(best.platform))}</strong>
-      <em>${centerNumber(best.avgViews)} 7日均播 · 最高 ${centerNumber(best.topViews || 0)}</em>
-    </div>
-    <div class="orbit-node-grid">${nodes}</div>`;
 }
 
 function renderPlatformMatrix() {
@@ -2877,87 +2750,6 @@ function renderOwnerPerformance() {
     .join('');
 }
 
-function renderHotVideoBubbles() {
-  if (!centerEls.hotVideoBubbleChart) return;
-  const rows = getScopedVideoLeaderboard(centerPeriod).slice(0, 10);
-  if (!rows.length) {
-    centerEls.hotVideoBubbleChart.innerHTML = '<div class="empty-cell">暂无爆款视频数据</div>';
-    return;
-  }
-  const maxViews = Math.max(...rows.map((row) => rawNumber(row.views)), 1);
-  centerEls.hotVideoBubbleChart.innerHTML = rows
-    .map((row, index) => {
-      const views = rawNumber(row.views);
-      const width = Math.max(8, Math.round((views / maxViews) * 100));
-      const content = `<span>#${row.rank || index + 1}</span>
-        <div><strong>${centerNumber(views)}</strong><small>${escapeHtml(row.creator || '-')} · ${escapeHtml(shortPlatformName(row.platform))}</small></div>
-        <i><b style="width:${width}%"></b></i>`;
-      const attrs = `class="bubble-node platform-${platformClass(row.platform)}" style="--delay:${index * 70}ms" title="${escapeHtml(row.platform || '')} · ${escapeHtml(row.creator || '')}"`;
-      const safeUrl = safeExternalUrl(row.postUrl);
-      return safeUrl
-        ? `<a ${attrs} href="${escapeHtml(safeUrl)}" target="_blank" rel="noopener noreferrer">${content}</a>`
-        : `<div ${attrs}>${content}</div>`;
-    })
-    .join('');
-}
-
-function renderDonutChart(target, rows) {
-  const data = Array.isArray(rows) ? rows.filter((row) => row.count > 0) : [];
-  if (!target || !data.length) {
-    if (target) target.innerHTML = '<div class="empty-cell">暂无平台数据</div>';
-    return;
-  }
-  const total = data.reduce((sum, row) => sum + row.count, 0);
-  const top = data[0];
-  const list = data
-    .slice(0, 5)
-    .map((row) => {
-      const percent = Math.round((row.count / total) * 100);
-      return `<article class="platform-brief-row platform-${platformClass(row.platform)}">
-        <div><strong>${escapeHtml(shortPlatformName(row.platform))}</strong><span>${centerNumber(row.count)} 条 · ${percent}%</span></div>
-        <i><b style="width:${Math.max(4, percent)}%"></b></i>
-      </article>`;
-    })
-    .join('');
-  target.innerHTML = `<div class="platform-brief-total">
-    <span>当前结构</span>
-    <strong>${centerNumber(total)} 条</strong>
-    <small>主平台：${escapeHtml(shortPlatformName(top.platform))} · ${Math.round((top.count / total) * 100)}%</small>
-  </div>
-  <div class="platform-brief-list">${list}</div>`;
-}
-
-function renderWeeklyPulse() {
-  const rows = getWeeklyTrendRows();
-  if (!centerEls.weeklyPulseGrid) return;
-  if (!rows.length) {
-    centerEls.weeklyPulseGrid.innerHTML = '<div class="empty-cell">暂无每周视频数据</div>';
-    return;
-  }
-  const maxViews = Math.max(...rows.map((row) => Number(row.mature7dViews ?? row.views) || 0), 1);
-  centerEls.weeklyPulseGrid.innerHTML = rows
-    .map((row, index) => {
-      const previous = rows[index - 1] || {};
-      const views = Number(row.mature7dViews ?? row.views) || 0;
-      const videos = Number(row.videos) || 0;
-      const creators = Number(row.creators) || 0;
-      const prevViews = Number(previous.mature7dViews ?? previous.views) || 0;
-      const delta = index === 0 ? 0 : views - prevViews;
-      const deltaText = index === 0 ? '基准周' : `${delta >= 0 ? '+' : ''}${centerNumber(delta)}`;
-      const intensity = Math.max(10, Math.round((views / maxViews) * 100));
-      return `<article class="weekly-pulse-card" style="--pulse:${intensity}%">
-        <span>${shortDate(row.weekStart)} - ${shortDate(row.weekEnd)}</span>
-        <strong>${centerNumber(videos)} 条</strong>
-        <dl>
-          <div><dt>达人</dt><dd>${centerNumber(creators)}</dd></div>
-          <div><dt>7日声量</dt><dd>${centerNumber(views)}</dd></div>
-          <div><dt>环比</dt><dd class="${delta >= 0 ? 'up' : 'down'}">${deltaText}</dd></div>
-        </dl>
-      </article>`;
-    })
-    .join('');
-}
-
 function renderLeaderboards() {
   const creators = getCreatorVideoStats(centerPeriod).sort((a, b) => b.views - a.views || b.videos - a.videos);
   centerEls.creatorLeaderboard.innerHTML = creators.length
@@ -3226,21 +3018,15 @@ function renderDashboardCharts() {
   renderCommandKpis();
   renderLineChart(centerEls.weeklyTrendChart, getWeeklyTrendRows(), 'videos', 'mature7dViews');
   renderBarChart(centerEls.monthlyBarChart, getMonthlyTrendRows());
-  renderDonutChart(centerEls.platformPieChart, getPlatformDistribution(centerPeriod));
   renderOpsCommandCenter();
   renderDataHealth();
-  renderActivityHeatmap();
   renderGlobalMap();
-  renderPlatformOrbit();
   renderOpsMonitor();
-  renderBattleInsights();
-  renderWeeklyPulse();
   renderPlatformMatrix();
   renderRegionPerformance();
   renderOwnerPerformance();
   renderAffiliateSalesDashboard();
   renderLeaderboards();
-  renderHotVideoBubbles();
 }
 
 function renderTierCards(tiers) {
@@ -3401,19 +3187,15 @@ function renderPeriodSensitiveViews() {
   renderCommandKpis();
   renderCustomSummaryCard();
   renderCurrentPeriod();
-  renderBattleInsights();
   renderDataHealth();
   renderLineChart(centerEls.weeklyTrendChart, getWeeklyTrendRows(), 'videos', 'mature7dViews');
   renderBarChart(centerEls.monthlyBarChart, getMonthlyTrendRows());
-  renderDonutChart(centerEls.platformPieChart, getPlatformDistribution(centerPeriod));
-  renderPlatformOrbit();
   renderPlatformMatrix();
   renderGlobalMap();
   renderRegionPerformance();
   renderOwnerPerformance();
   renderAffiliateSalesDashboard();
   renderLeaderboards();
-  renderHotVideoBubbles();
 }
 
 function csvEscape(value) {

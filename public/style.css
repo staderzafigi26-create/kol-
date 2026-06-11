@@ -4907,15 +4907,6 @@ body.compact-topbar .filter-select-row label span {
   order: 12;
 }
 
-#dashboardPriority,
-.dashboard-section:has(#activityHeatmap),
-.dashboard-section:has(#weeklyPulseGrid),
-#dashboardLeaderboards .platform-share-card,
-#dashboardLeaderboards article:has(#hotVideoBubbleChart),
-.dashboard-mini-nav [data-dashboard-jump="dashboardPriority"] {
-  display: none !important;
-}
-
 #dashboardTrends .trend-grid {
   margin-top: 0;
 }

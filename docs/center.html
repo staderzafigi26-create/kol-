@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Yozma 红人数据中台</title>
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="style.css?v=20260612-data-health-1" />
+    <link rel="stylesheet" href="style.css?v=20260612-streamline-1" />
   </head>
   <body>
     <main class="container data-center">
@@ -170,16 +170,6 @@
                   </div>
                 </div>
 
-            <div id="dashboardPriority" class="dashboard-section priority-section">
-              <div class="section-heading">
-                <div>
-                  <h3>运营优先级模块</h3>
-                  <p>优先暴露缺失数据、跟进提醒、高价值机会和本周最强信号。</p>
-                </div>
-              </div>
-              <div id="battleInsightGrid" class="battle-insight-grid priority-grid"></div>
-            </div>
-
             <div id="dashboardDataHealth" class="dashboard-section data-health-section">
               <div class="section-heading">
                 <div>
@@ -213,25 +203,6 @@
                 <article class="global-bars-card">
                   <div class="trend-title"><strong>国家 / 州级上线排行</strong><span>按当前维度视频数量排序</span></div>
                   <div id="globalRegionBars" class="global-region-bars"></div>
-                </article>
-              </div>
-            </div>
-
-            <div class="dashboard-section">
-              <div class="section-heading">
-                <div>
-                  <h3>运营态势面板</h3>
-                  <p>把周活跃、平台效率和风险信号压缩成更直观的可视化面板。</p>
-                </div>
-              </div>
-              <div class="situation-grid">
-                <article class="situation-card wide-situation-card">
-                  <div class="trend-title"><strong>周活跃热力带</strong><span>颜色越亮代表 7 日声量越集中</span></div>
-                  <div id="activityHeatmap" class="activity-heatmap"></div>
-                </article>
-                <article class="situation-card">
-                  <div class="trend-title"><strong>平台效率摘要</strong><span>看均播和最高爆点</span></div>
-                  <div id="platformOrbit" class="platform-orbit"></div>
                 </article>
               </div>
             </div>
@@ -276,16 +247,6 @@
                   <div id="monthlyBarChart" class="bar-chart"></div>
                 </article>
               </div>
-            </div>
-
-            <div class="dashboard-section">
-              <div class="section-heading">
-                <div>
-                  <h3>每周视频脉冲</h3>
-                  <p>用卡片快速看每周上线视频、参与达人、7日成熟声量和环比变化。</p>
-                </div>
-              </div>
-              <div id="weeklyPulseGrid" class="weekly-pulse-grid"></div>
             </div>
 
             <div id="dashboardPlatform" class="dashboard-section">
@@ -351,10 +312,6 @@
                 </div>
               </div>
               <div class="insight-grid">
-                <article class="trend-card platform-share-card">
-                  <div class="trend-title"><strong>内容结构摘要</strong><span>平台详情看上方表现模块</span></div>
-                  <div id="platformPieChart" class="donut-chart"></div>
-                </article>
                 <article class="trend-card">
                   <div class="trend-title"><strong>达人 7 日声量榜</strong><span>Top 8</span></div>
                   <ol id="creatorLeaderboard" class="rank-list"></ol>
@@ -362,10 +319,6 @@
                 <article class="trend-card wide-card">
                   <div class="trend-title"><strong>视频表现榜</strong><span>点击标题打开原视频</span></div>
                   <ol id="videoLeaderboard" class="rank-list video-rank"></ol>
-                </article>
-                <article class="trend-card wide-card">
-                  <div class="trend-title"><strong>爆款视频矩阵</strong><span>统一配色 · 点击打开原视频</span></div>
-                  <div id="hotVideoBubbleChart" class="bubble-chart"></div>
                 </article>
               </div>
             </div>
@@ -526,6 +479,6 @@
       </section>
     </main>
     <script src="vendor/echarts.min.js"></script>
-  <script src="center.js?v=20260612-data-health-1"></script>
+  <script src="center.js?v=20260612-streamline-1"></script>
   </body>
 </html>
