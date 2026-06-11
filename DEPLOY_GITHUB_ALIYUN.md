@@ -18,26 +18,33 @@
 ```bash
 cd /Users/ryan/Desktop/红人数据检测追踪工具
 npm run build:pages
-git add docs public/center.js scripts/build-github-pages.mjs DEPLOY_GITHUB_ALIYUN.md
-git commit -m "Prepare team read-only Pages dashboard"
+git add docs public/center.html public/center.js public/index.html scripts/build-github-pages.mjs DEPLOY_GITHUB_ALIYUN.md
+git commit -m "Refresh team dashboard snapshot"
 git push origin main
 ```
 
-首次上线还需要在 GitHub 仓库设置里开启 Pages：
+当前仓库已使用 `gh-pages` 分支发布，伙伴访问地址：
 
-1. 打开 `https://github.com/staderzafigi26-create/kol-/settings/pages`
-2. 在 **Build and deployment** 里把 **Source** 选为 **GitHub Actions**
-3. 保存后到 **Actions** 里重新运行 `Deploy GitHub Pages`
-4. 伙伴访问地址通常是：`https://staderzafigi26-create.github.io/kol-/`
+```text
+https://staderzafigi26-create.github.io/kol-/
+```
 
-如果 Actions 页面提示 `Setup Pages` 失败，通常就是 Pages 还没有启用，按上面 1-3 步处理即可。
+首次换仓库上线时，如果 Pages 没有自动启用：
+
+1. 先把 `docs/` 推到 `gh-pages` 分支，或等待本项目 workflow 自动发布。
+2. 打开 `https://github.com/<owner>/<repo>/settings/pages`
+3. 在 **Build and deployment** 里选择 **Deploy from a branch**
+4. Branch 选择 `gh-pages`，目录选择 `/root`
+5. 保存后等待 Pages 生成公开地址
+
+本项目的 `.github/workflows/pages.yml` 会在 `main` 更新后，把已提交的 `docs/` 同步发布到 `gh-pages`，不需要在 GitHub Actions 里运行 Apify 或读取本地密钥。
 
 后续更新数据时，只需要：
 
 ```bash
 cd /Users/ryan/Desktop/红人数据检测追踪工具
 npm run build:pages
-git add docs public/static-data
+git add docs
 git commit -m "Refresh team dashboard snapshot"
 git push origin main
 ```

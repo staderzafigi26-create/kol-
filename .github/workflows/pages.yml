@@ -1,4 +1,4 @@
-name: Deploy GitHub Pages
+name: Publish GitHub Pages
 
 on:
   push:
@@ -7,29 +7,44 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 concurrency:
   group: pages
   cancel-in-progress: false
 
 jobs:
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  publish:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: docs
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+
+      - name: Publish committed docs to gh-pages
+        run: |
+          set -euo pipefail
+          rm -rf /tmp/yozma-pages
+          mkdir -p /tmp/yozma-pages
+          cp -R docs/. /tmp/yozma-pages/
+          touch /tmp/yozma-pages/.nojekyll
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin gh-pages || true
+
+          if git show-ref --verify --quiet refs/remotes/origin/gh-pages; then
+            git switch --detach origin/gh-pages
+            git rm -r --ignore-unmatch .
+          else
+            git switch --orphan gh-pages
+            git rm -r --ignore-unmatch .
+          fi
+
+          cp -R /tmp/yozma-pages/. .
+          git add .
+          if git diff --cached --quiet; then
+            echo "No Pages changes to publish."
+            exit 0
+          fi
+          git commit -m "Publish team dashboard snapshot"
+          git push origin HEAD:gh-pages
