@@ -3587,6 +3587,87 @@ if (centerEls.videoTableSearch) {
   centerEls.videoTableSearch.addEventListener('input', renderTables);
 }
 
+const DASHBOARD_INTERACTION_SELECTOR = [
+  'button:not(:disabled)',
+  'a[href]',
+  '.center-nav',
+  '.period-card',
+  '.battle-card',
+  '.trend-card',
+  '.monitor-card',
+  '.situation-card',
+  '.global-map-card',
+  '.global-detail-card',
+  '.global-bars-card',
+  '.global-map-canvas',
+  '.geo-bar-row',
+  '.map-detail-hero',
+  '.region-card',
+  '.region-board-card',
+  '.owner-card',
+  '.owner-board-card',
+  '.affiliate-kpi-card',
+  '.affiliate-correlation-row',
+  '.tier-card',
+  '.tier-board-card',
+  '.tier-benchmark-card',
+  '.platform-row',
+  '.platform-brief-row',
+  '.weekly-pulse-card',
+  '.rank-list li',
+  '.metric-grid.compact article',
+  '.dashboard-command-rail'
+].join(',');
+
+function setupDashboardInteractionEffects() {
+  const motionSafe = !window.matchMedia || window.matchMedia('(prefers-reduced-motion: no-preference)').matches;
+  if (!motionSafe) return;
+  const dashboardRoot = document.querySelector('.data-center');
+  const pointerFine = (!window.matchMedia || window.matchMedia('(hover: hover) and (pointer: fine)').matches) && (navigator.maxTouchPoints || 0) < 1;
+  let cursorGlow = null;
+
+  if (pointerFine) {
+    cursorGlow = document.createElement('div');
+    cursorGlow.className = 'dashboard-cursor-glow';
+    document.body.appendChild(cursorGlow);
+
+    document.addEventListener('pointermove', (event) => {
+      const target = event.target.closest(DASHBOARD_INTERACTION_SELECTOR);
+      if (!target || !dashboardRoot?.contains(target)) {
+        cursorGlow.classList.remove('active');
+        return;
+      }
+      cursorGlow.style.transform = `translate3d(${event.clientX - 85}px, ${event.clientY - 85}px, 0)`;
+      cursorGlow.classList.add('active');
+    }, { passive: true });
+
+    document.addEventListener('pointerleave', () => {
+      cursorGlow.classList.remove('active');
+    }, { passive: true });
+  }
+
+  document.addEventListener('click', (event) => {
+    if (event.target.closest('input, select, textarea, .custom-select-menu')) return;
+    const target = event.target.closest(DASHBOARD_INTERACTION_SELECTOR);
+    if (!target || !dashboardRoot?.contains(target)) return;
+    const rect = target.getBoundingClientRect();
+    if (!rect.width || !rect.height) return;
+    const size = Math.max(76, Math.min(260, Math.max(rect.width, rect.height) * 0.52));
+    const ripple = document.createElement('span');
+    ripple.className = 'dashboard-click-ripple';
+    ripple.style.width = `${size}px`;
+    ripple.style.height = `${size}px`;
+    ripple.style.left = `${event.clientX - rect.left}px`;
+    ripple.style.top = `${event.clientY - rect.top}px`;
+    target.classList.add('dashboard-interaction-surface', 'is-click-glowing');
+    target.appendChild(ripple);
+    window.setTimeout(() => ripple.remove(), 760);
+    window.setTimeout(() => target.classList.remove('is-click-glowing'), 360);
+  }, { capture: true });
+}
+
+setupDashboardInteractionEffects();
+
 document.addEventListener('click', (event) => {
   const mapTarget = event.target.closest('[data-map-place]');
   if (!mapTarget) return;

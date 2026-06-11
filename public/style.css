@@ -2828,6 +2828,121 @@ label span,
   }
 }
 
+@keyframes dashboardClickRipple {
+  0% {
+    opacity: 0.78;
+    transform: translate(-50%, -50%) scale(0.16);
+  }
+  72% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.dashboard-cursor-glow {
+  position: fixed;
+  z-index: 59;
+  top: 0;
+  left: 0;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0;
+  background:
+    radial-gradient(circle, rgba(255, 225, 226, 0.3) 0 4%, rgba(230, 70, 85, 0.22) 5% 24%, rgba(51, 214, 197, 0.12) 25% 42%, transparent 64%);
+  mix-blend-mode: screen;
+  transform: translate3d(-240px, -240px, 0);
+  transition: opacity 180ms ease;
+  will-change: transform, opacity;
+}
+
+.dashboard-cursor-glow.active {
+  opacity: 0.74;
+}
+
+.dashboard-interaction-surface {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.dashboard-click-ripple {
+  position: absolute;
+  z-index: 8;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at center, rgba(255, 255, 255, 0.84) 0 4%, rgba(255, 196, 200, 0.5) 5% 18%, rgba(230, 70, 85, 0.24) 19% 42%, rgba(51, 214, 197, 0.12) 43% 58%, transparent 68%);
+  box-shadow:
+    0 0 24px rgba(230, 70, 85, 0.26),
+    0 0 34px rgba(51, 214, 197, 0.14);
+  animation: dashboardClickRipple 720ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.dashboard-interaction-surface.is-click-glowing {
+  border-color: rgba(255, 155, 162, 0.36) !important;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.025),
+    0 14px 34px rgba(0, 0, 0, 0.18),
+    0 0 26px rgba(230, 70, 85, 0.14) !important;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .period-card,
+  .trend-card,
+  .monitor-card,
+  .global-map-card,
+  .global-detail-card,
+  .global-bars-card,
+  .region-card,
+  .region-board-card,
+  .owner-card,
+  .owner-board-card,
+  .affiliate-kpi-card,
+  .affiliate-correlation-row,
+  .tier-card,
+  .tier-board-card,
+  .tier-benchmark-card,
+  .geo-bar-row,
+  .platform-row,
+  .rank-list li {
+    transition:
+      border-color 180ms ease,
+      box-shadow 180ms ease,
+      transform 180ms ease,
+      background-color 180ms ease;
+  }
+
+  .period-card:hover,
+  .trend-card:hover,
+  .monitor-card:hover,
+  .global-map-card:hover,
+  .global-detail-card:hover,
+  .global-bars-card:hover,
+  .region-card:hover,
+  .region-board-card:hover,
+  .owner-card:hover,
+  .owner-board-card:hover,
+  .affiliate-kpi-card:hover,
+  .affiliate-correlation-row:hover,
+  .tier-card:hover,
+  .tier-board-card:hover,
+  .tier-benchmark-card:hover,
+  .geo-bar-row:hover,
+  .platform-row:hover,
+  .rank-list li:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 155, 162, 0.28);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.2), 0 0 22px rgba(230, 70, 85, 0.1);
+  }
+}
+
 .tier-grid {
   grid-template-columns: repeat(4, 1fr);
   margin-top: 12px;
@@ -4779,6 +4894,35 @@ body.compact-topbar .filter-select-row label span {
 @media (max-width: 560px) {
   .owner-summary-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dashboard-cursor-glow,
+  .dashboard-click-ripple {
+    display: none !important;
+  }
+
+  .period-card,
+  .trend-card,
+  .monitor-card,
+  .global-map-card,
+  .global-detail-card,
+  .global-bars-card,
+  .region-card,
+  .region-board-card,
+  .owner-card,
+  .owner-board-card,
+  .affiliate-kpi-card,
+  .affiliate-correlation-row,
+  .tier-card,
+  .tier-board-card,
+  .tier-benchmark-card,
+  .geo-bar-row,
+  .platform-row,
+  .rank-list li {
+    transition: none !important;
+    transform: none !important;
   }
 }
 
