@@ -2390,24 +2390,6 @@ label span,
     var(--card-2);
 }
 
-.region-board-card:last-child:nth-child(odd) {
-  grid-column: 1 / -1;
-  background:
-    radial-gradient(circle at 88% 18%, rgba(72, 209, 204, 0.12), transparent 30%),
-    linear-gradient(135deg, rgba(255, 255, 255, 0.048), rgba(255, 255, 255, 0.018)),
-    var(--card-2);
-}
-
-.region-board-card:last-child:nth-child(odd) .rank-list {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 10px;
-}
-
-.region-board-card:last-child:nth-child(odd) .rank-list li {
-  margin: 0;
-}
-
 .owner-summary-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -2529,20 +2511,6 @@ label span,
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.042), rgba(255, 255, 255, 0.018)),
     var(--card-2);
-}
-
-.owner-board-card:last-child:nth-child(odd) {
-  grid-column: 1 / -1;
-}
-
-.owner-board-card:last-child:nth-child(odd) .rank-list {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px;
-}
-
-.owner-board-card:last-child:nth-child(odd) .rank-list li {
-  margin: 0;
 }
 
 .platform-head {
@@ -4932,7 +4900,7 @@ body.compact-topbar .filter-select-row label span {
 }
 
 .region-summary-grid {
-  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .owner-summary-grid {
@@ -4941,10 +4909,6 @@ body.compact-topbar .filter-select-row label span {
 
 .owner-summary-grid > .owner-card {
   grid-column: span 3;
-}
-
-.owner-summary-grid > .owner-card:nth-last-child(1):nth-child(4n + 1) {
-  grid-column: 1 / -1;
 }
 
 .owner-summary-grid > .owner-card:nth-last-child(2):nth-child(4n + 1),
@@ -4966,7 +4930,6 @@ body.compact-topbar .filter-select-row label span {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.region-card:last-child:nth-child(odd),
 .tier-board-card:last-child:nth-child(odd) {
   grid-column: 1 / -1;
 }
