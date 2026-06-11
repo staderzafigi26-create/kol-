@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Yozma 红人数据中台</title>
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="style.css?v=20260612-layout-compact-1" />
+    <link rel="stylesheet" href="style.css?v=20260612-ops-tier-compact-1" />
   </head>
   <body>
     <main class="container data-center">
@@ -219,14 +219,16 @@
                   <div class="trend-title"><strong>待跟进达人池</strong><span>优先处理</span></div>
                   <div id="followupPoolGrid" class="monitor-list"></div>
                 </article>
-                <article class="monitor-card">
-                  <div class="trend-title"><strong>视频生命周期</strong><span>7 天 / 30 天</span></div>
-                  <div id="lifecycleGrid" class="lifecycle-grid"></div>
-                </article>
-                <article class="monitor-card">
-                  <div class="trend-title"><strong>数据质量雷达</strong><span>先补脏数据</span></div>
-                  <div id="qualityGrid" class="quality-grid"></div>
-                </article>
+                <div class="monitor-side-stack">
+                  <article class="monitor-card">
+                    <div class="trend-title"><strong>视频生命周期</strong><span>7 天 / 30 天</span></div>
+                    <div id="lifecycleGrid" class="lifecycle-grid"></div>
+                  </article>
+                  <article class="monitor-card">
+                    <div class="trend-title"><strong>数据质量雷达</strong><span>先补脏数据</span></div>
+                    <div id="qualityGrid" class="quality-grid"></div>
+                  </article>
+                </div>
               </div>
             </div>
 
@@ -480,6 +482,6 @@
       </section>
     </main>
     <script src="vendor/echarts.min.js"></script>
-  <script src="center.js?v=20260612-layout-compact-1"></script>
+  <script src="center.js?v=20260612-ops-tier-compact-1"></script>
   </body>
 </html>
