@@ -2367,11 +2367,10 @@ label span,
 
 .region-card p {
   margin: 12px 0 0;
-  overflow: hidden;
   color: var(--muted);
   font-size: 12px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
 }
 
 .region-card a {
@@ -2560,14 +2559,12 @@ label span,
 .platform-row dd,
 .platform-row a {
   display: block;
-  overflow: hidden;
   margin-top: 4px;
   color: #fff;
   font-size: 13px;
   font-weight: 800;
   text-decoration: none;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  overflow-wrap: anywhere;
 }
 
 .bubble-chart {
@@ -3383,7 +3380,7 @@ td[data-label] {
   text-align: center;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 900px) {
   .table-wrap {
     max-height: none;
     overflow: visible;
@@ -3460,6 +3457,17 @@ td[data-label] {
 
   .table-wrap td a {
     overflow-wrap: anywhere;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 900px) {
+  .table-wrap {
+    max-height: min(760px, 74vh);
+    overflow-y: auto;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.02);
   }
 }
 
@@ -5458,13 +5466,13 @@ body.compact-topbar .filter-select-row label span {
   }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 980px) {
   .global-region-bars {
     grid-template-columns: 1fr !important;
   }
 
   .geo-bar-row {
-    grid-template-columns: minmax(0, 1fr) auto !important;
+    grid-template-columns: minmax(0, 1fr) max-content !important;
     align-items: start;
     gap: 8px;
   }
@@ -5479,6 +5487,7 @@ body.compact-topbar .filter-select-row label span {
   }
 
   .geo-bar-row strong {
+    min-width: 54px;
     justify-self: end;
     text-align: right;
   }
@@ -5491,7 +5500,9 @@ body.compact-topbar .filter-select-row label span {
   .geo-bar-row em {
     display: block;
   }
+}
 
+@media (max-width: 760px) {
   .map-detail-top strong,
   .map-detail-top a,
   .map-detail-top small,
