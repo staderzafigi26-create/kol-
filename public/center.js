@@ -1881,7 +1881,7 @@ function renderOpsMonitor() {
       const monitored = readLocalText(fields['是否监控']);
       return monitored !== '否' && !currentCreatorKeys.has(creator);
     })
-    .slice(0, 5);
+    .slice(0, 4);
   const lowPerformers = creatorStats
     .filter((creator) => creator.videos > 0 && creator.avgViews < 5000)
     .sort((a, b) => a.avgViews - b.avgViews)
@@ -1910,7 +1910,7 @@ function renderOpsMonitor() {
         title: readLocalText(fields['红人名称']) || '-',
         note: '缺少粉丝数，影响分层判断'
       }))
-    ].slice(0, 8);
+    ].slice(0, 6);
     centerEls.followupPoolGrid.innerHTML = rows.length
       ? rows.map((row) => `<div class="monitor-item"><span>${escapeHtml(row.tag)}</span><strong>${escapeHtml(row.title)}</strong><small>${escapeHtml(row.note)}</small></div>`).join('')
       : '<div class="empty-cell">暂无紧急跟进对象</div>';
@@ -2224,7 +2224,7 @@ function renderTargetingOpportunities() {
     .map((row) => `<span><b>${escapeHtml(row.key)}</b><em>${centerNumber(row.count)} 个</em></span>`)
     .join('');
   const opportunityRows = opportunities
-    .slice(0, 6)
+    .slice(0, 4)
     .map((row) => {
       const width = Math.max(8, Math.round(((Number(row.score) || 0) / maxScore) * 100));
       const priority = String(row.priorityKey || '待').toLowerCase();
@@ -2243,11 +2243,11 @@ function renderTargetingOpportunities() {
     })
     .join('');
   const strategyRows = strategy
-    .slice(0, 3)
+    .slice(0, 2)
     .map((row) => `<article class="targeting-strategy-card">
       <span>${escapeHtml(row.module || '策略')}</span>
-      <strong title="${escapeHtml(row.suggestion || '')}">${escapeHtml(shortText(row.suggestion || '-', 76))}</strong>
-      <p title="${escapeHtml(row.execution || '')}">${escapeHtml(shortText(row.execution || '', 82))}</p>
+      <strong title="${escapeHtml(row.suggestion || '')}">${escapeHtml(shortText(row.suggestion || '-', 64))}</strong>
+      <p title="${escapeHtml(row.execution || '')}">${escapeHtml(shortText(row.execution || '', 66))}</p>
     </article>`)
     .join('');
   const topReference = opportunities[0];
@@ -2265,7 +2265,7 @@ function renderTargetingOpportunities() {
     </div>
     <div class="targeting-layout">
       <article class="targeting-card targeting-main-card">
-        <div class="trend-title"><strong>优先频道候选</strong><span>按优先级和评分排序</span></div>
+        <div class="trend-title"><strong>优先频道候选</strong><span>Top 4 · 按优先级和评分排序</span></div>
         <div class="targeting-opportunity-list">${opportunityRows || '<div class="empty-cell">暂无频道候选</div>'}</div>
       </article>
       <article class="targeting-card">
