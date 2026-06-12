@@ -695,6 +695,20 @@ const COUNTRY_TO_MAP_NAME = {
   Europe: 'Europe',
   AU: 'Australia',
   Australia: 'Australia',
+  BR: 'Brazil',
+  Brazil: 'Brazil',
+  CH: 'Switzerland',
+  Switzerland: 'Switzerland',
+  NO: 'Norway',
+  Norway: 'Norway',
+  TR: 'Turkey',
+  Turkey: 'Turkey',
+  JP: 'Japan',
+  Japan: 'Japan',
+  KR: 'South Korea',
+  'South Korea': 'South Korea',
+  NZ: 'New Zealand',
+  'New Zealand': 'New Zealand',
   IT: 'Italy',
   Italy: 'Italy',
   FR: 'France',
@@ -766,6 +780,20 @@ const COUNTRY_TO_REGION = {
   Europe: 'EU',
   AU: 'Other',
   Australia: 'Other',
+  BR: 'Other',
+  Brazil: 'Other',
+  CH: 'EU',
+  Switzerland: 'EU',
+  NO: 'EU',
+  Norway: 'EU',
+  TR: 'EU',
+  Turkey: 'EU',
+  JP: 'Other',
+  Japan: 'Other',
+  KR: 'Other',
+  'South Korea': 'Other',
+  NZ: 'Other',
+  'New Zealand': 'Other',
   IT: 'EU',
   Italy: 'EU',
   FR: 'EU',
@@ -971,6 +999,9 @@ const EUROPE_MAP_COUNTRIES = new Set([
   'Belgium',
   'Poland',
   'Austria',
+  'Switzerland',
+  'Norway',
+  'Turkey',
   'Ireland',
   'Denmark',
   'Finland',
@@ -991,7 +1022,9 @@ const EUROPE_MAP_COUNTRIES = new Set([
   'Cyprus'
 ]);
 const WORLD_MAP_FEATURE_ALIASES = {
-  'Czech Republic': 'Czech Rep.'
+  'Czech Republic': 'Czech Rep.',
+  'South Korea': 'Korea',
+  'Bosnia and Herzegovina': 'Bosnia and Herz.'
 };
 
 const MAP_VIDEO_HEAT_STOPS = [
@@ -2367,12 +2400,13 @@ function stableMapIndex(value, length) {
   return hash % length;
 }
 
-function estimatedEuropeCountryForRow(row = {}) {
+function estimatedEuropeCountryForRow(row = {}, fallbackCountries = EUROPE_WORLD_FALLBACK_COUNTRIES) {
   const basis = row.creatorName || row.videoUrl || row.id || row.videoTitle || row.publishDate || '';
-  return EUROPE_WORLD_FALLBACK_COUNTRIES[stableMapIndex(basis, EUROPE_WORLD_FALLBACK_COUNTRIES.length)];
+  const candidates = fallbackCountries.length ? fallbackCountries : EUROPE_WORLD_FALLBACK_COUNTRIES;
+  return candidates[stableMapIndex(basis, candidates.length)];
 }
 
-function worldMapCountryForRow(row = {}) {
+function worldMapCountryForRow(row = {}, europeFallbackCountries = EUROPE_WORLD_FALLBACK_COUNTRIES) {
   const normalizedCountry = normalizeMapCountryName(row.mapCountry || row.country || row.region);
   if (['Unknown', 'UNKNOWN', '未标注地区'].includes(normalizedCountry)) {
     return {
@@ -2383,7 +2417,7 @@ function worldMapCountryForRow(row = {}) {
   }
   if (normalizedCountry === 'Europe') {
     return {
-      mapCountry: estimatedEuropeCountryForRow(row),
+      mapCountry: estimatedEuropeCountryForRow(row, europeFallbackCountries),
       region: 'EU',
       isEstimated: true
     };
@@ -2429,10 +2463,10 @@ function mapShortLabel(name) {
 function shouldShowMapLabel(row, maxVideos, isDrillMode) {
   if (!row?.videos || row.isUnassigned) return false;
   if (!isDrillMode && EUROPE_MAP_COUNTRIES.has(row.mapCountry) && row.mapCountry !== 'United Kingdom') {
-    return row.videos >= Math.max(6, Math.ceil(maxVideos * 0.018));
+    return row.videos >= Math.max(2, Math.ceil(maxVideos * 0.01));
   }
   const ratioThreshold = isDrillMode ? 0.08 : 0.03;
-  const absoluteThreshold = isDrillMode ? 1 : 4;
+  const absoluteThreshold = isDrillMode ? 1 : 2;
   return row.videos >= Math.max(absoluteThreshold, Math.ceil(maxVideos * ratioThreshold));
 }
 
@@ -2451,25 +2485,45 @@ function mapSeriesItem(row, maxVideos, isDrillMode) {
     row,
     itemStyle: {
       areaColor,
-      borderColor: 'rgba(255, 214, 214, 0.46)',
-      borderWidth: 0.8
+      borderColor: 'rgba(255, 235, 235, 0.68)',
+      borderWidth: row.videos === maxVideos ? 1.25 : 0.9,
+      shadowBlur: row.videos === maxVideos ? 16 : 7,
+      shadowColor: row.videos === maxVideos ? 'rgba(230, 57, 70, 0.42)' : 'rgba(230, 57, 70, 0.2)'
     },
     emphasis: {
       itemStyle: {
         areaColor: '#FF5964',
-        borderColor: '#FFD1D4'
+        borderColor: '#FFD1D4',
+        borderWidth: 1.4,
+        shadowBlur: 18,
+        shadowColor: 'rgba(255, 89, 100, 0.48)'
       }
     }
   };
+}
+
+function exactEuropeCountriesForRows(rows = []) {
+  const exactCountries = [];
+  const seen = new Set();
+  for (const row of rows) {
+    const normalizedCountry = normalizeMapCountryName(row.mapCountry || row.country || row.region);
+    if (normalizedCountry === 'Europe' || normalizedCountry === 'Unknown') continue;
+    if (!EUROPE_MAP_COUNTRIES.has(normalizedCountry)) continue;
+    if (seen.has(normalizedCountry)) continue;
+    seen.add(normalizedCountry);
+    exactCountries.push(normalizedCountry);
+  }
+  return exactCountries;
 }
 
 function getCountryStats(period = centerPeriod) {
   const cacheKey = `country|${period}|${currentFilterKey()}`;
   if (geoStatsCache.has(cacheKey)) return geoStatsCache.get(cacheKey);
   const rows = normalizeData(getScopedVideoRows(period));
+  const europeFallbackCountries = exactEuropeCountriesForRows(rows);
   const map = new Map();
   for (const row of rows) {
-    const worldCountry = worldMapCountryForRow(row);
+    const worldCountry = worldMapCountryForRow(row, europeFallbackCountries);
     const key = worldCountry.mapCountry || 'Unknown';
     if (!worldCountry.mapCountry) continue;
     if (!map.has(key)) {
@@ -2800,7 +2854,7 @@ function renderGlobalMap() {
         itemWidth: 128,
         itemHeight: 8,
         itemGap: 8,
-        text: ['多', '少'],
+        text: ['上线多', '上线少'],
         textStyle: {
           color: 'rgba(248, 250, 252, 0.78)',
           fontSize: 10,
@@ -2816,7 +2870,7 @@ function renderGlobalMap() {
           color: ['#FF9BA2', '#F56F78', '#E64655', '#CF2438', '#B4142B', '#8F0F22']
         },
         outOfRange: {
-          color: '#182235'
+          color: '#121B2B'
         }
       },
       series: [
@@ -2845,8 +2899,8 @@ function renderGlobalMap() {
             hideOverlap: true
           },
           itemStyle: {
-            areaColor: '#182235',
-            borderColor: 'rgba(255,255,255,.12)',
+            areaColor: '#121B2B',
+            borderColor: 'rgba(255,255,255,.1)',
             borderWidth: 0.5
           },
           emphasis: {

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Yozma 红人数据中台</title>
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="style.css?v=20260612-targeting-1" />
+    <link rel="stylesheet" href="style.css?v=20260612-mapheat-1" />
   </head>
   <body>
     <main class="container data-center">
@@ -197,14 +197,14 @@
               <div class="section-heading">
                 <div>
                   <h3>全球视频上线分布</h3>
-                  <p>使用 ECharts 世界地图，颜色深浅代表上线视频数量；点击美国、加拿大、欧英区域可进入二级地图，点击海洋空白返回世界地图。</p>
+                  <p>使用 ECharts 世界地图标注有上线视频的国家/地区，红色越深代表上线视频越多；点击美国、加拿大、欧英区域可进入二级地图，点击海洋空白返回世界地图。</p>
                 </div>
                 <button id="btnResetMapFilter" class="secondary">重置地图筛选</button>
               </div>
               <div class="global-war-room">
                 <article class="global-map-card">
                   <div class="trend-title">
-                    <strong>World Map</strong>
+                    <strong>红色热力世界地图</strong>
                     <span id="globalMapScopeLabel">当前时间范围</span>
                   </div>
                   <div id="globalMapCanvas" class="global-map-canvas"></div>
@@ -505,6 +505,6 @@
       </section>
     </main>
     <script src="vendor/echarts.min.js"></script>
-  <script src="center.js?v=20260612-targeting-1"></script>
+  <script src="center.js?v=20260612-mapheat-1"></script>
   </body>
 </html>
