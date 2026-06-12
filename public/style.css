@@ -5664,6 +5664,12 @@ body.compact-topbar .filter-select-row label span {
 }
 
 @media (max-width: 760px) {
+  #dashboardLeaderboards .insight-grid,
+  .region-leaderboard-grid,
+  .owner-video-grid {
+    grid-template-columns: 1fr;
+  }
+
   .map-detail-top strong,
   .map-detail-top a,
   .map-detail-top small,
