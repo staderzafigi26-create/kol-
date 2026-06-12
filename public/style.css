@@ -3027,6 +3027,10 @@ label span,
   .global-detail-card,
   .global-bars-card,
   .data-health-card,
+  .targeting-kpi-card,
+  .targeting-card,
+  .targeting-opportunity,
+  .targeting-strategy-card,
   .region-card,
   .region-board-card,
   .owner-card,
@@ -3053,6 +3057,10 @@ label span,
   .global-detail-card:hover,
   .global-bars-card:hover,
   .data-health-card:hover,
+  .targeting-kpi-card:hover,
+  .targeting-card:hover,
+  .targeting-opportunity:hover,
+  .targeting-strategy-card:hover,
   .region-card:hover,
   .region-board-card:hover,
   .owner-card:hover,
@@ -4721,6 +4729,10 @@ body.compact-topbar .filter-select-row label span {
 .global-detail-card,
 .global-bars-card,
 .data-health-card,
+.targeting-kpi-card,
+.targeting-card,
+.targeting-opportunity,
+.targeting-strategy-card,
 .trend-card,
 .monitor-card,
 .situation-card {
@@ -4830,6 +4842,237 @@ body.compact-topbar .filter-select-row label span {
   font-size: 11px;
   font-style: normal;
   font-weight: 800;
+}
+
+.targeting-snapshot {
+  margin-top: 13px;
+}
+
+.targeting-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.targeting-kpi-card,
+.targeting-card,
+.targeting-opportunity,
+.targeting-strategy-card {
+  min-width: 0;
+  border: 1px solid var(--border-soft);
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at 86% 12%, rgba(51, 214, 197, 0.1), transparent 28%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.018)),
+    var(--bg-card);
+}
+
+.targeting-kpi-card {
+  min-height: 126px;
+  padding: 15px;
+}
+
+.targeting-kpi-card span,
+.targeting-kpi-card p,
+.targeting-opportunity span,
+.targeting-opportunity p,
+.targeting-opportunity small,
+.targeting-strategy-card span,
+.targeting-strategy-card p,
+.targeting-reference span,
+.targeting-reference p,
+.targeting-priority-strip em {
+  color: var(--text-secondary);
+}
+
+.targeting-kpi-card span,
+.targeting-strategy-card span,
+.targeting-reference span {
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.targeting-kpi-card strong {
+  display: block;
+  margin-top: 9px;
+  color: var(--text-primary);
+  font-size: clamp(24px, 2.8vw, 34px);
+  line-height: 1.04;
+}
+
+.targeting-kpi-card p,
+.targeting-strategy-card p,
+.targeting-reference p {
+  margin: 10px 0 0;
+  font-size: 12px;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.targeting-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.28fr) minmax(320px, 0.72fr);
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.targeting-card {
+  padding: 15px;
+}
+
+.targeting-opportunity-list,
+.targeting-strategy-list {
+  display: grid;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.targeting-opportunity-list {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.targeting-opportunity {
+  padding: 12px;
+}
+
+.targeting-opportunity-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.targeting-opportunity-head div {
+  min-width: 0;
+}
+
+.targeting-opportunity-head strong,
+.targeting-opportunity-head a,
+.targeting-reference strong,
+.targeting-reference a,
+.targeting-strategy-card strong {
+  color: var(--text-primary);
+  overflow-wrap: anywhere;
+}
+
+.targeting-opportunity-head span {
+  display: block;
+  margin-top: 4px;
+  font-size: 11px;
+  line-height: 1.35;
+}
+
+.targeting-opportunity-head em {
+  flex: 0 0 auto;
+  border-radius: 999px;
+  padding: 5px 8px;
+  color: #ffd3a3;
+  background: rgba(255, 180, 84, 0.1);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 900;
+}
+
+.targeting-score {
+  overflow: hidden;
+  height: 8px;
+  margin: 11px 0;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.targeting-score i {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #e63946, #ffb454, #33d6c5);
+}
+
+.targeting-opportunity p {
+  min-height: 36px;
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.targeting-opportunity small {
+  display: block;
+  margin-top: 9px;
+  font-size: 11px;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.targeting-opportunity.priority-a {
+  border-color: rgba(51, 214, 197, 0.26);
+}
+
+.targeting-opportunity.priority-b,
+.targeting-opportunity.priority-c {
+  border-color: rgba(255, 180, 84, 0.24);
+}
+
+.targeting-opportunity.priority-d {
+  border-color: rgba(255, 77, 94, 0.28);
+}
+
+.targeting-priority-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.targeting-priority-strip span {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 9px;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.targeting-priority-strip b,
+.targeting-priority-strip em {
+  display: block;
+}
+
+.targeting-priority-strip b {
+  color: var(--accent-cyan);
+  font-size: 15px;
+}
+
+.targeting-priority-strip em {
+  margin-top: 3px;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 800;
+}
+
+.targeting-reference {
+  margin-top: 12px;
+  border: 1px solid rgba(255, 180, 84, 0.16);
+  border-radius: 16px;
+  padding: 12px;
+  background: rgba(255, 180, 84, 0.06);
+}
+
+.targeting-reference strong {
+  display: block;
+  margin-top: 6px;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.targeting-strategy-card {
+  padding: 12px;
+}
+
+.targeting-strategy-card strong {
+  display: block;
+  margin-top: 7px;
+  font-size: 13px;
+  line-height: 1.45;
 }
 
 .anniversary-snapshot {
@@ -5092,6 +5335,20 @@ body.compact-topbar .filter-select-row label span {
 }
 
 @media (max-width: 760px) {
+  .targeting-kpi-grid,
+  .targeting-layout,
+  .targeting-opportunity-list {
+    grid-template-columns: 1fr;
+  }
+
+  .targeting-priority-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .targeting-opportunity:nth-child(n + 5) {
+    display: none;
+  }
+
   .anniversary-kpi-grid,
   .anniversary-grid,
   .anniversary-crawl-grid {
@@ -5118,11 +5375,13 @@ body.compact-topbar .filter-select-row label span {
 }
 
 @media (min-width: 761px) and (max-width: 1180px) {
+  .targeting-kpi-grid,
   .anniversary-kpi-grid,
   .anniversary-crawl-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .targeting-layout,
   .anniversary-grid {
     grid-template-columns: 1fr;
   }
@@ -5420,36 +5679,40 @@ body.compact-topbar .filter-select-row label span {
   order: 4;
 }
 
-#dashboardGeo {
+#dashboardTargeting {
   order: 5;
 }
 
-#dashboardOpsMonitor {
+#dashboardGeo {
   order: 6;
 }
 
-#dashboardPlatform {
+#dashboardOpsMonitor {
   order: 7;
 }
 
-#dashboardRegions {
+#dashboardPlatform {
   order: 8;
 }
 
-#dashboardOwners {
+#dashboardRegions {
   order: 9;
 }
 
-#dashboardAffiliateSales {
+#dashboardOwners {
   order: 10;
 }
 
-#dashboardLeaderboards {
+#dashboardAffiliateSales {
   order: 11;
 }
 
-#dashboardTiers {
+#dashboardLeaderboards {
   order: 12;
+}
+
+#dashboardTiers {
+  order: 13;
 }
 
 #dashboardTrends .trend-grid {
@@ -5724,6 +5987,10 @@ body.compact-topbar .filter-select-row label span {
   .global-detail-card,
   .global-bars-card,
   .data-health-card,
+  .targeting-kpi-card,
+  .targeting-card,
+  .targeting-opportunity,
+  .targeting-strategy-card,
   .region-card,
   .region-board-card,
   .owner-card,

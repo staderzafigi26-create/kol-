@@ -1,0 +1,317 @@
+{
+  "ok": true,
+  "publicSafe": true,
+  "generatedAt": "2026-06-11",
+  "note": "Sanitized aggregate from local YouTube / CTV placement research. Private source fields are excluded.",
+  "summary": {
+    "totalCandidates": 103,
+    "coreCandidates": 95,
+    "cautionCandidates": 8,
+    "newDiscovery": 37,
+    "needChannelUrl": 6,
+    "existingCoop": 66,
+    "topScore": 153
+  },
+  "priorityBreakdown": [
+    {
+      "key": "A",
+      "count": 60
+    },
+    {
+      "key": "B",
+      "count": 4
+    },
+    {
+      "key": "C",
+      "count": 31
+    },
+    {
+      "key": "D",
+      "count": 8
+    }
+  ],
+  "scaleBreakdown": [
+    {
+      "scale": "待复核",
+      "count": 37
+    },
+    {
+      "scale": "腰部红人(100k-1M)",
+      "count": 30
+    },
+    {
+      "scale": "尾部红人(10k-100k)",
+      "count": 24
+    },
+    {
+      "scale": "微型红人/KOC(1k-10k)",
+      "count": 9
+    },
+    {
+      "scale": "头部红人(>1M)",
+      "count": 3
+    }
+  ],
+  "strategy": [
+    {
+      "module": "核心结论",
+      "suggestion": "频道定向先用“已合作优质频道 + 当前搜索强相关频道”两层，不建议只投泛体育/世界杯频道。",
+      "execution": "A 组放已合作优秀/良好频道；B 组放 Sur Ron/Talaria/E-Ride/Rawrr/Tuttio 等强相关评测频道；C 组做户外/车库/mini bike 扩量。"
+    },
+    {
+      "module": "预算结构",
+      "suggestion": "如果预算有限，70% 核心强相关、20% 竞品评测/经销商、10% 邻近兴趣扩量；预算充足可把 C 组提高到 20%。",
+      "execution": "每组独立命名，避免优质强相关频道被泛流量稀释。"
+    },
+    {
+      "module": "CTV 素材方向",
+      "suggestion": "世界杯 CTV 场景里，前 5 秒直接展示实骑、加速、越野/草地/泥地、父子户外或车库改装，不要先讲参数。",
+      "execution": "IN10 Pro 用性能+越野；M2/mini bike 用好玩、可控、家庭户外；所有素材避免街头危险骑行暗示。"
+    },
+    {
+      "module": "已合作复投",
+      "suggestion": "优先 RunPlayBack、Pat Outdoors、Talaria Boys、Rawstuntz、Zay Solis、Ben’s Outdoor Boys、PhethanFix、The Bike Cave、zeekster 等。",
+      "execution": "这些频道已有合作或表内记录，适合单独建 placement list 并看完播/到站/加购。"
+    },
+    {
+      "module": "新增测试",
+      "suggestion": "Electric Cycle Rider、Logan Taylor、Freshly Charged、E-Bike Dad、Go Power Sports、Hunted Mini Bikes、MotoBroo、Mayhemjach 可测试。",
+      "execution": "先小预算测试，2-3 天看 CTV VTR、站内 session 质量和商品页停留。"
+    },
+    {
+      "module": "排除原则",
+      "suggestion": "排除合作态度恶劣/较差、未出片且无新价值、纯 Shorts-only、纯儿童玩具榜单、纯游戏/VR/滑板、街头违法骑行过强频道。",
+      "execution": "排除项放单独 sheet，投放前由投手二次核对频道 URL。"
+    }
+  ],
+  "opportunities": [
+    {
+      "channel": "Sur Ronster",
+      "channelUrl": "https://www.youtube.com/c/SurRonster/videos",
+      "priority": "A 已合作优先复投",
+      "priorityKey": "A",
+      "score": 153,
+      "scale": "头部红人(>1M)",
+      "followers": "3.56M",
+      "existingCoop": "是",
+      "coopStatus": "已出视频",
+      "attitude": "良好",
+      "product": "IN 10+IN 10 Pro",
+      "topic": "强相关电摩/竞品评测",
+      "recommendedUse": "优先单独建 placement 广告组；可作为再营销/相似拓展种子",
+      "risk": "无明显风险，仍需投放前复核近30天内容",
+      "refTitle": "Illegal Rideout on a $5,000 E-Bike",
+      "refViews": "搜索最高播放 8,361,701",
+      "refVideoUrl": "https://www.youtube.com/watch?v=qk6Y02y_Uf4"
+    },
+    {
+      "channel": "Phethanfix",
+      "channelUrl": "https://www.youtube.com/@phethanfix/videos",
+      "priority": "A 已合作优先复投",
+      "priorityKey": "A",
+      "score": 148,
+      "scale": "腰部红人(100k-1M)",
+      "followers": "302k",
+      "existingCoop": "是",
+      "coopStatus": "已出视频",
+      "attitude": "优秀",
+      "product": "IN 10 Pro",
+      "topic": "强相关电摩/竞品评测",
+      "recommendedUse": "优先单独建 placement 广告组；可作为再营销/相似拓展种子",
+      "risk": "无明显风险，仍需投放前复核近30天内容",
+      "refTitle": "I Took My $10,000 E-Bike to the BIGGEST Surron Takeover! (COPS CALLED) ",
+      "refViews": "搜索最高播放 1,046,829",
+      "refVideoUrl": "https://www.youtube.com/watch?v=NhkSaUkPtRY"
+    },
+    {
+      "channel": "Dns",
+      "channelUrl": "https://www.youtube.com/@dns59/videos",
+      "priority": "A 已合作优先复投",
+      "priorityKey": "A",
+      "score": 140,
+      "scale": "尾部红人(10k-100k)",
+      "followers": "27.4k",
+      "existingCoop": "是",
+      "coopStatus": "已出视频",
+      "attitude": "优秀",
+      "product": "IN 10",
+      "topic": "强相关电摩/竞品评测",
+      "recommendedUse": "优先单独建 placement 广告组；可作为再营销/相似拓展种子",
+      "risk": "无明显风险，仍需投放前复核近30天内容",
+      "refTitle": "The BEST BUDGET E-Bike - TUTTIO Soleil 01 Review",
+      "refViews": "搜索最高播放 293,475",
+      "refVideoUrl": "https://www.youtube.com/watch?v=M5o7SZe8ZPc"
+    },
+    {
+      "channel": "RunPlayBack",
+      "channelUrl": "https://www.youtube.com/runplayback/videos",
+      "priority": "A 已合作优先复投",
+      "priorityKey": "A",
+      "score": 140,
+      "scale": "尾部红人(10k-100k)",
+      "followers": "58.6k",
+      "existingCoop": "是",
+      "coopStatus": "已出视频",
+      "attitude": "优秀",
+      "product": "IN 10 Pro",
+      "topic": "强相关电摩/竞品评测",
+      "recommendedUse": "优先单独建 placement 广告组；可作为再营销/相似拓展种子",
+      "risk": "无明显风险，仍需投放前复核近30天内容",
+      "refTitle": "Unlock Your Wheelie Skills: EBOX Dragster Mini Bike and Wheelie Bar Review!",
+      "refViews": "搜索最高播放 100,287",
+      "refVideoUrl": "https://www.youtube.com/watch?v=PhaNNOvXcd4"
+    },
+    {
+      "channel": "Talaria Boys",
+      "channelUrl": "https://www.youtube.com/@Talariaboys/videos",
+      "priority": "A 已合作优先复投",
+      "priorityKey": "A",
+      "score": 140,
+      "scale": "尾部红人(10k-100k)",
+      "followers": "55.6k",
+      "existingCoop": "是",
+      "coopStatus": "已出视频",
+      "attitude": "优秀",
+      "product": "IN 10 Pro",
+      "topic": "强相关电摩/竞品评测",
+      "recommendedUse": "优先单独建 placement 广告组；可作为再营销/相似拓展种子",
+      "risk": "无明显风险，仍需投放前复核近30天内容",
+      "refTitle": "What E-Moto To Buy In 2024! E-Ride Pro SS vs Talaria Sting R vs 79 Bike",
+      "refViews": "搜索最高播放 119,508",
+      "refVideoUrl": "https://www.youtube.com/watch?v=rbWx8kK7ELU"
+    },
+    {
+      "channel": "Rawstuntz",
+      "channelUrl": "https://www.youtube.com/@Rawstuntz/videos",
+      "priority": "A 已合作优先复投",
+      "priorityKey": "A",
+      "score": 138,
+      "scale": "腰部红人(100k-1M)",
+      "followers": "165k",
+      "existingCoop": "是",
+      "coopStatus": "已出视频",
+      "attitude": "良好",
+      "product": "IN 10 Pro",
+      "topic": "强相关电摩/竞品评测",
+      "recommendedUse": "优先单独建 placement 广告组；可作为再营销/相似拓展种子",
+      "risk": "部分内容偏街头/翘头，素材需强调封闭场地、护具与合规",
+      "refTitle": "Is The Tuttio Soleil Actually Worth It? (First Ride)",
+      "refViews": "搜索最高播放 127,697",
+      "refVideoUrl": "https://www.youtube.com/watch?v=07oLJkQTpAk"
+    },
+    {
+      "channel": "Starmoto",
+      "channelUrl": "https://www.youtube.com/@star_moto",
+      "priority": "A 已合作优先复投",
+      "priorityKey": "A",
+      "score": 138,
+      "scale": "微型红人/KOC(1k-10k)",
+      "followers": "2K",
+      "existingCoop": "是",
+      "coopStatus": "已出视频",
+      "attitude": "优秀",
+      "product": "IN 10",
+      "topic": "强相关电摩/竞品评测",
+      "recommendedUse": "优先单独建 placement 广告组；可作为再营销/相似拓展种子",
+      "risk": "无明显风险，仍需投放前复核近30天内容",
+      "refTitle": "Evening Group Ride On My TALARIA",
+      "refViews": "搜索最高播放 65,502",
+      "refVideoUrl": "https://www.youtube.com/watch?v=OvtuuDGtnTg"
+    },
+    {
+      "channel": "Zay Solis",
+      "channelUrl": "https://www.youtube.com/@ZaySolis119/videos",
+      "priority": "A 已合作优先复投",
+      "priorityKey": "A",
+      "score": 138,
+      "scale": "腰部红人(100k-1M)",
+      "followers": "587k",
+      "existingCoop": "是",
+      "coopStatus": "已出视频",
+      "attitude": "良好",
+      "product": "IN 10 Pro",
+      "topic": "强相关电摩/竞品评测",
+      "recommendedUse": "优先单独建 placement 广告组；可作为再营销/相似拓展种子",
+      "risk": "无明显风险，仍需投放前复核近30天内容",
+      "refTitle": "The Best Budget Electric Dirt Bike Yet? Tuttio Soleil 01 Review",
+      "refViews": "搜索最高播放 516,368",
+      "refVideoUrl": "https://www.youtube.com/watch?v=uVGu2sXe47s"
+    },
+    {
+      "channel": "Pat Outdoors",
+      "channelUrl": "https://www.youtube.com/@PatOutdoors/videos",
+      "priority": "A 已合作优先复投",
+      "priorityKey": "A",
+      "score": 136,
+      "scale": "尾部红人(10k-100k)",
+      "followers": "41.9k",
+      "existingCoop": "是",
+      "coopStatus": "已出视频",
+      "attitude": "优秀",
+      "product": "IN 10 Pro",
+      "topic": "强相关电摩/竞品评测",
+      "recommendedUse": "优先单独建 placement 广告组；可作为再营销/相似拓展种子",
+      "risk": "无明显风险，仍需投放前复核近30天内容",
+      "refTitle": "Rawrr Mantis X Review - All The PROS and CONS",
+      "refViews": "搜索最高播放 29,407",
+      "refVideoUrl": "https://www.youtube.com/watch?v=dt3heqhv5jk"
+    },
+    {
+      "channel": "Barry Nobles",
+      "channelUrl": "https://www.youtube.com/@barrynobles95/videos",
+      "priority": "A 已合作优先复投",
+      "priorityKey": "A",
+      "score": 135,
+      "scale": "腰部红人(100k-1M)",
+      "followers": "184k",
+      "existingCoop": "是",
+      "coopStatus": "已出视频",
+      "attitude": "良好",
+      "product": "IN 10",
+      "topic": "强相关电摩/竞品评测",
+      "recommendedUse": "优先单独建 placement 广告组；可作为再营销/相似拓展种子",
+      "risk": "无明显风险，仍需投放前复核近30天内容",
+      "refTitle": "Testing the Limits of the G300 PRO",
+      "refViews": "搜索最高播放 33,931",
+      "refVideoUrl": "https://www.youtube.com/watch?v=Ynt0UtVUQos"
+    },
+    {
+      "channel": "zeekster",
+      "channelUrl": "https://www.youtube.com/@zeeksteryt/videos",
+      "priority": "A 已合作优先复投",
+      "priorityKey": "A",
+      "score": 130,
+      "scale": "腰部红人(100k-1M)",
+      "followers": "86.3k",
+      "existingCoop": "是",
+      "coopStatus": "已出视频",
+      "attitude": "良好",
+      "product": "IN 10 Pro",
+      "topic": "强相关电摩/竞品评测",
+      "recommendedUse": "优先单独建 placement 广告组；可作为再营销/相似拓展种子",
+      "risk": "无明显风险，仍需投放前复核近30天内容",
+      "refTitle": "I Took My $5000 Surron To School!",
+      "refViews": "搜索最高播放 1,458,989",
+      "refVideoUrl": "https://www.youtube.com/watch?v=kSVC7G1AtMs"
+    },
+    {
+      "channel": "Baum Outdoors",
+      "channelUrl": "https://www.youtube.com/@BaumOutdoors",
+      "priority": "A 已合作优先复投",
+      "priorityKey": "A",
+      "score": 128,
+      "scale": "腰部红人(100k-1M)",
+      "followers": "270K",
+      "existingCoop": "是",
+      "coopStatus": "跟进视频",
+      "attitude": "优秀",
+      "product": "IN 10 Pro",
+      "topic": "强相关电摩/竞品评测",
+      "recommendedUse": "优先单独建 placement 广告组；可作为再营销/相似拓展种子",
+      "risk": "无明显风险，仍需投放前复核近30天内容",
+      "refTitle": "Yozma 合作表记录",
+      "refViews": "表内粉丝 270K",
+      "refVideoUrl": ""
+    }
+  ]
+}
