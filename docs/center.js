@@ -35,6 +35,7 @@ const centerEls = {
   opsTicker: document.getElementById('opsTicker'),
   opsSummaryChips: document.getElementById('opsSummaryChips'),
   opsActionList: document.getElementById('opsActionList'),
+  focusBrief: document.getElementById('dashboardFocusBrief'),
   tierGrid: document.getElementById('centerTierGrid'),
   tierPeriodLabel: document.getElementById('tierPeriodLabel'),
   tierBenchmarkGrid: document.getElementById('tierBenchmarkGrid'),
@@ -1694,6 +1695,81 @@ function renderCommandKpis() {
   if (centerEls.kpiNeedFollowup) centerEls.kpiNeedFollowup.textContent = centerNumber(needFollowup);
 }
 
+function renderFocusBrief() {
+  if (!centerEls.focusBrief) return;
+  const summary = getScopedVideoSummary(centerPeriod);
+  const { current, previous } = latestWeeklyPair();
+  const platform = getPlatformStats(centerPeriod)[0] || null;
+  const regions = getRegionStats(centerPeriod).filter((row) => row.region !== '未标注地区');
+  const region = regions[0] || null;
+  const video = getScopedVideoLeaderboard(centerPeriod)[0] || null;
+  const quality = getQualityIssues();
+  const lifecycle = getLifecycleStats();
+  const needFollowup = quality.missingFollowers + quality.missingVideoTime + quality.zeroViewVideos + lifecycle.sevenDayDue + lifecycle.thirtyDayDue;
+  const delta = formatDelta(current.videos, previous.videos);
+  const momentumWidth = previous.videos ? Math.min(100, Math.max(8, Math.round((rawNumber(current.videos) / Math.max(1, rawNumber(previous.videos))) * 50))) : summary.videos ? 72 : 8;
+  const platformShare = summary.views && platform ? Math.round((platform.views / Math.max(1, summary.views)) * 100) : 0;
+  const riskTotal = quality.totalVideos + quality.totalInfluencers;
+  const riskWidth = riskTotal ? Math.min(100, Math.max(8, Math.round((needFollowup / Math.max(1, riskTotal)) * 100))) : needFollowup ? 50 : 8;
+  const cards = [
+    {
+      tone: delta.className,
+      label: '周期动量',
+      value: summary.videos ? `${centerNumber(summary.videos)} 条` : '暂无上线',
+      title: delta.text,
+      note: `${selectedPeriodLabel()} ${centerNumber(summary.creators)} 位达人 · ${centerNumber(summary.views)} 7日声量`,
+      meta: ['看趋势', `${centerNumber(current.videos)} / ${centerNumber(previous.videos)} 周对比`],
+      jump: 'dashboardTrends',
+      width: momentumWidth
+    },
+    {
+      tone: platform?.views ? 'good' : 'flat',
+      label: '主攻平台',
+      value: platform?.platform || '-',
+      title: platform?.topCreator ? `${platform.topCreator} 带动当前爆点` : '当前范围暂无平台爆点',
+      note: platform ? `${centerNumber(platform.views)} 7日声量 · ${centerNumber(platform.videos)} 条视频 · 均播 ${centerNumber(platform.avgViews)}` : '切换时间或平台后这里会自动更新',
+      meta: ['看平台', `${platformShare}% 声量占比`],
+      jump: 'dashboardPlatform',
+      width: platformShare || 8
+    },
+    {
+      tone: region?.share >= 70 ? 'warn' : region?.share ? 'good' : 'flat',
+      label: '地区集中度',
+      value: region?.region || '-',
+      title: region?.share >= 70 ? '声量集中，注意区域依赖' : region ? '地区贡献相对可控' : '暂无地区判断',
+      note: region ? `${region.share}% 7日声量来自 ${region.region} · ${centerNumber(region.videos)} 条视频` : '补齐地区字段后会自动形成判断',
+      meta: ['看地区', region ? `${centerNumber(region.creatorsCount)} 位达人` : '待补字段'],
+      jump: 'dashboardRegions',
+      width: region?.share || 8
+    },
+    {
+      tone: needFollowup ? 'danger' : 'good',
+      label: '跟进风险',
+      value: needFollowup ? centerNumber(needFollowup) : '稳定',
+      title: needFollowup ? '需要处理数据和节点积压' : '当前没有明显积压',
+      note: needFollowup
+        ? `7天节点 ${centerNumber(lifecycle.sevenDayDue)} 条 · 30天复核 ${centerNumber(lifecycle.thirtyDayDue)} 条 · 缺粉 ${centerNumber(quality.missingFollowers)} 位`
+        : video
+        ? `优先复盘 ${video.creator} · ${centerNumber(video.views)} 7日声量`
+        : '可以继续看榜单寻找复投候选',
+      meta: [needFollowup ? '看待办' : '看榜单', video ? `${video.platform} · ${shortDate(video.publishedAt)}` : selectedPeriodLabel()],
+      jump: needFollowup ? 'dashboardOpsMonitor' : 'dashboardLeaderboards',
+      width: riskWidth
+    }
+  ];
+
+  centerEls.focusBrief.innerHTML = cards
+    .map((card) => `<button type="button" class="dashboard-focus-card ${escapeHtml(card.tone)}" data-dashboard-jump="${escapeHtml(card.jump)}">
+      <span>${escapeHtml(card.label)}</span>
+      <strong>${escapeHtml(card.value)}</strong>
+      <b>${escapeHtml(card.title)}</b>
+      <p>${escapeHtml(card.note)}</p>
+      <i><em style="width:${Math.min(100, Math.max(8, card.width))}%"></em></i>
+      <small>${card.meta.map((item) => `<em>${escapeHtml(item)}</em>`).join('')}</small>
+    </button>`)
+    .join('');
+}
+
 function renderOpsCommandCenter() {
   const quality = getQualityIssues();
   const lifecycle = getLifecycleStats();
@@ -3293,6 +3369,7 @@ function renderAffiliateSalesDashboard() {
 
 function renderDashboardCharts() {
   renderCommandKpis();
+  renderFocusBrief();
   renderLineChart(centerEls.weeklyTrendChart, getWeeklyTrendRows(), 'videos', 'mature7dViews');
   renderBarChart(centerEls.monthlyBarChart, getMonthlyTrendRows());
   renderOpsCommandCenter();
@@ -3462,6 +3539,7 @@ function renderCustomSummaryCard() {
 function renderPeriodSensitiveViews() {
   updateDashboardControlState();
   renderCommandKpis();
+  renderFocusBrief();
   renderCustomSummaryCard();
   renderCurrentPeriod();
   renderDataHealth();
@@ -3824,6 +3902,7 @@ const DASHBOARD_INTERACTION_SELECTOR = [
   'a[href]',
   '.center-nav',
   '.period-card',
+  '.dashboard-focus-card',
   '.battle-card',
   '.trend-card',
   '.monitor-card',
@@ -3948,13 +4027,13 @@ document.querySelectorAll('[data-jump-section]').forEach((card) => {
   });
 });
 
-document.querySelectorAll('[data-dashboard-jump]').forEach((button) => {
-  button.addEventListener('click', () => {
-    const target = document.getElementById(button.dataset.dashboardJump);
-    if (target) {
-      scrollToCenterTarget(target);
-    }
-  });
+document.addEventListener('click', (event) => {
+  const jumpTarget = event.target.closest('[data-dashboard-jump]');
+  if (!jumpTarget) return;
+  const target = document.getElementById(jumpTarget.dataset.dashboardJump);
+  if (target) {
+    scrollToCenterTarget(target);
+  }
 });
 
 window.addEventListener('resize', () => {
