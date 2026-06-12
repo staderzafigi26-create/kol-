@@ -5141,6 +5141,7 @@ body.compact-topbar .filter-select-row label span {
 .anniversary-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  align-items: start;
   gap: 12px;
   margin-top: 12px;
 }
@@ -5150,7 +5151,7 @@ body.compact-topbar .filter-select-row label span {
 }
 
 .wide-anniversary-card {
-  grid-column: 1 / -1;
+  grid-column: auto;
 }
 
 .anniversary-crawl-grid {

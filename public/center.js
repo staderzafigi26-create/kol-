@@ -2113,6 +2113,7 @@ function renderAnniversaryDashboard() {
   const maxPlatformExposure = Math.max(...platforms.map((row) => Number(row.exposure) || 0), 1);
   const maxRegionOrders = Math.max(...regions.map((row) => Number(row.orders) || 0), 1);
   const maxVideoViews = Math.max(...topVideos.map((row) => Number(row.views) || 0), 1);
+  const visibleTopVideos = topVideos.slice(0, 4);
   const kpis = [
     { label: '活动上线视频', value: `${centerNumber(summary.videoCount)} 条`, note: summary.periodLabel || '6月周年庆周期' },
     { label: '累计曝光', value: centerNumber(summary.exposure), note: '公开视频表现聚合' },
@@ -2146,7 +2147,7 @@ function renderAnniversaryDashboard() {
       </article>`;
     })
     .join('');
-  const topVideoRows = topVideos
+  const topVideoRows = visibleTopVideos
     .map((row, index) => {
       const width = Math.max(8, Math.round(((Number(row.views) || 0) / maxVideoViews) * 100));
       return `<li>
@@ -2196,7 +2197,7 @@ function renderAnniversaryDashboard() {
         <div class="anniversary-region-list">${regionRows || '<div class="empty-cell">暂无地区订单数据</div>'}</div>
       </article>
       <article class="anniversary-card wide-anniversary-card">
-        <div class="trend-title"><strong>新增爆款视频</strong><span>6月活动 Top ${topVideos.length}</span></div>
+        <div class="trend-title"><strong>新增爆款视频</strong><span>6月活动 Top ${visibleTopVideos.length}</span></div>
         <ol class="anniversary-video-list">${topVideoRows || '<li class="empty-rank">暂无新增视频</li>'}</ol>
       </article>
     </div>`;
