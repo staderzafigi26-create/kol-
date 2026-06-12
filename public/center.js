@@ -119,6 +119,7 @@ let geoStatsCache = new Map();
 let pendingMapSync = null;
 const localHostnames = new Set(['localhost', '127.0.0.1', '0.0.0.0', '::1']);
 const isStaticCenter = !localHostnames.has(location.hostname) || new URLSearchParams(location.search).has('static');
+const staticAssetFetchOptions = { cache: isStaticCenter ? 'force-cache' : 'no-store' };
 
 function assetUrl(path) {
   return String(path || '').replace(/^\/+/, '');
@@ -394,13 +395,13 @@ function readFileAsText(file) {
 async function centerRequest(url, options = {}) {
   if (isStaticCenter) {
     if (String(url).startsWith('/api/local/collections')) {
-      const response = await fetch(assetUrl('static-data/collections.json'), { cache: 'no-store' });
+      const response = await fetch(assetUrl('static-data/collections.json'), staticAssetFetchOptions);
       const data = await response.json().catch(() => ({}));
       if (!response.ok || !data.ok) throw new Error(data.error || `静态数据加载失败：HTTP ${response.status}`);
       return data;
     }
     if (String(url).startsWith('/api/local/dashboard')) {
-      const response = await fetch(assetUrl('static-data/dashboard.json'), { cache: 'no-store' });
+      const response = await fetch(assetUrl('static-data/dashboard.json'), staticAssetFetchOptions);
       const data = await response.json().catch(() => ({}));
       if (!response.ok || !data.ok) throw new Error(data.error || `静态仪表盘加载失败：HTTP ${response.status}`);
       return data;
@@ -415,7 +416,7 @@ async function centerRequest(url, options = {}) {
 
 async function loadCreatorLocations() {
   try {
-    const response = await fetch(assetUrl('data/creator-locations.json'), { cache: 'no-store' });
+    const response = await fetch(assetUrl('data/creator-locations.json'), staticAssetFetchOptions);
     if (!response.ok) return { locations: [] };
     return response.json();
   } catch (_error) {
@@ -425,7 +426,7 @@ async function loadCreatorLocations() {
 
 async function loadAnniversaryDashboard() {
   try {
-    const response = await fetch(assetUrl('data/anniversary-dashboard.json'), { cache: 'no-store' });
+    const response = await fetch(assetUrl('data/anniversary-dashboard.json'), staticAssetFetchOptions);
     if (!response.ok) return null;
     const data = await response.json().catch(() => null);
     return data?.ok ? data : null;
@@ -436,7 +437,7 @@ async function loadAnniversaryDashboard() {
 
 async function loadTargetingOpportunities() {
   try {
-    const response = await fetch(assetUrl('data/targeting-opportunities.json'), { cache: 'no-store' });
+    const response = await fetch(assetUrl('data/targeting-opportunities.json'), staticAssetFetchOptions);
     if (!response.ok) return null;
     const data = await response.json().catch(() => null);
     return data?.ok && data.publicSafe ? data : null;
