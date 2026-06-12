@@ -49,6 +49,7 @@ const centerEls = {
   globalMapScopeLabel: document.getElementById('globalMapScopeLabel'),
   dataHealthGrid: document.getElementById('dataHealthGrid'),
   anniversarySnapshot: document.getElementById('anniversarySnapshot'),
+  targetingSnapshot: document.getElementById('targetingSnapshot'),
   weeklyTrendChart: document.getElementById('weeklyTrendChart'),
   monthlyBarChart: document.getElementById('monthlyBarChart'),
   platformMatrix: document.getElementById('platformMatrix'),
@@ -93,6 +94,7 @@ const centerEls = {
 let centerStore = {};
 let centerDashboard = {};
 let centerAnniversary = null;
+let centerTargeting = null;
 let centerPeriod = 'week';
 let customRange = { start: null, end: null };
 let selectedMapPlaceKey = '';
@@ -427,6 +429,17 @@ async function loadAnniversaryDashboard() {
     if (!response.ok) return null;
     const data = await response.json().catch(() => null);
     return data?.ok ? data : null;
+  } catch (_error) {
+    return null;
+  }
+}
+
+async function loadTargetingOpportunities() {
+  try {
+    const response = await fetch(assetUrl('data/targeting-opportunities.json'), { cache: 'no-store' });
+    if (!response.ok) return null;
+    const data = await response.json().catch(() => null);
+    return data?.ok && data.publicSafe ? data : null;
   } catch (_error) {
     return null;
   }
@@ -2156,6 +2169,85 @@ function renderAnniversaryDashboard() {
     </div>`;
 }
 
+function renderTargetingOpportunities() {
+  if (!centerEls.targetingSnapshot) return;
+  const data = centerTargeting;
+  if (!data) {
+    centerEls.targetingSnapshot.innerHTML = '<div class="empty-cell">暂无公开安全的投放机会池数据</div>';
+    return;
+  }
+  const summary = data.summary || {};
+  const opportunities = Array.isArray(data.opportunities) ? data.opportunities : [];
+  const strategy = Array.isArray(data.strategy) ? data.strategy : [];
+  const priorityBreakdown = Array.isArray(data.priorityBreakdown) ? data.priorityBreakdown : [];
+  const maxScore = Math.max(...opportunities.map((row) => Number(row.score) || 0), 1);
+  const kpis = [
+    { label: '候选频道', value: centerNumber(summary.totalCandidates), note: `${centerNumber(summary.coreCandidates)} 个核心强相关` },
+    { label: '已合作复投', value: centerNumber(summary.existingCoop), note: '优先单独建 placement list' },
+    { label: '新增发现', value: centerNumber(summary.newDiscovery), note: '适合小预算测试' },
+    { label: '待补 URL', value: centerNumber(summary.needChannelUrl), note: '投放前需要补齐频道链接' }
+  ];
+  const priorityRows = priorityBreakdown
+    .map((row) => `<span><b>${escapeHtml(row.key)}</b><em>${centerNumber(row.count)} 个</em></span>`)
+    .join('');
+  const opportunityRows = opportunities
+    .slice(0, 6)
+    .map((row) => {
+      const width = Math.max(8, Math.round(((Number(row.score) || 0) / maxScore) * 100));
+      const priority = String(row.priorityKey || '待').toLowerCase();
+      return `<article class="targeting-opportunity priority-${escapeHtml(priority)}">
+        <div class="targeting-opportunity-head">
+          <div>
+            <strong>${externalLink(row.channelUrl, row.channel || '-')}</strong>
+            <span>${escapeHtml(row.priority || '待分组')} · ${escapeHtml(row.scale || '待复核')} · ${escapeHtml(row.followers || '待补充')}</span>
+          </div>
+          <em>${centerNumber(row.score)}</em>
+        </div>
+        <div class="targeting-score"><i style="width:${width}%"></i></div>
+        <p title="${escapeHtml(row.recommendedUse || '')}">${escapeHtml(shortText(row.recommendedUse || '先复核近30天内容，再决定是否加入投放名单。', 58))}</p>
+        <small title="${escapeHtml(row.risk || '')}">${escapeHtml(shortText(row.risk || '投放前复核内容风险', 52))} · ${escapeHtml(row.product || '待匹配产品')}</small>
+      </article>`;
+    })
+    .join('');
+  const strategyRows = strategy
+    .slice(0, 3)
+    .map((row) => `<article class="targeting-strategy-card">
+      <span>${escapeHtml(row.module || '策略')}</span>
+      <strong title="${escapeHtml(row.suggestion || '')}">${escapeHtml(shortText(row.suggestion || '-', 76))}</strong>
+      <p title="${escapeHtml(row.execution || '')}">${escapeHtml(shortText(row.execution || '', 82))}</p>
+    </article>`)
+    .join('');
+  const topReference = opportunities[0];
+  centerEls.targetingSnapshot.innerHTML = `
+    <div class="targeting-kpi-grid">
+      ${kpis
+        .map(
+          (card) => `<article class="targeting-kpi-card">
+            <span>${escapeHtml(card.label)}</span>
+            <strong>${escapeHtml(card.value)}</strong>
+            <p>${escapeHtml(card.note)}</p>
+          </article>`
+        )
+        .join('')}
+    </div>
+    <div class="targeting-layout">
+      <article class="targeting-card targeting-main-card">
+        <div class="trend-title"><strong>优先频道候选</strong><span>按优先级和评分排序</span></div>
+        <div class="targeting-opportunity-list">${opportunityRows || '<div class="empty-cell">暂无频道候选</div>'}</div>
+      </article>
+      <article class="targeting-card">
+        <div class="trend-title"><strong>投放策略</strong><span>来自本机研究聚合</span></div>
+        <div class="targeting-priority-strip">${priorityRows}</div>
+        ${topReference ? `<div class="targeting-reference">
+          <span>参考爆点</span>
+          <strong>${externalLink(topReference.refVideoUrl, topReference.refTitle || topReference.channel || '-')}</strong>
+          <p>${escapeHtml(topReference.channel || '-')} · ${escapeHtml(topReference.refViews || '-')}</p>
+        </div>` : ''}
+        <div class="targeting-strategy-list">${strategyRows || '<div class="empty-cell">暂无策略摘要</div>'}</div>
+      </article>
+    </div>`;
+}
+
 function renderPlatformMatrix() {
   if (!centerEls.platformMatrix) return;
   const rows = getPlatformStats(centerPeriod);
@@ -3374,6 +3466,7 @@ function renderDashboardCharts() {
   renderBarChart(centerEls.monthlyBarChart, getMonthlyTrendRows());
   renderOpsCommandCenter();
   renderDataHealth();
+  renderTargetingOpportunities();
   renderGlobalMap();
   renderOpsMonitor();
   renderPlatformMatrix();
@@ -3755,16 +3848,18 @@ function renderApifyEstimate(data) {
 
 async function loadCenter() {
   centerEls.status.textContent = isStaticCenter ? '正在加载团队只读快照...' : '正在加载本地中台数据...';
-  const [collections, dashboard, creatorLocations, anniversaryDashboard] = await Promise.all([
+  const [collections, dashboard, creatorLocations, anniversaryDashboard, targetingOpportunities] = await Promise.all([
     centerRequest('/api/local/collections'),
     centerRequest('/api/local/dashboard?weeks=8'),
     loadCreatorLocations(),
-    loadAnniversaryDashboard()
+    loadAnniversaryDashboard(),
+    loadTargetingOpportunities()
   ]);
   centerStore = collections.collections || {};
   centerStore.creatorLocations = creatorLocations || { locations: [] };
   centerDashboard = dashboard.dashboard || {};
   centerAnniversary = anniversaryDashboard;
+  centerTargeting = targetingOpportunities;
   invalidateDashboardCaches();
   const summary = centerDashboard.summary || {};
   centerEls.localInfluencers.textContent = centerNumber(collections.counts?.influencers);
@@ -3911,6 +4006,10 @@ const DASHBOARD_INTERACTION_SELECTOR = [
   '.global-detail-card',
   '.global-bars-card',
   '.data-health-card',
+  '.targeting-kpi-card',
+  '.targeting-card',
+  '.targeting-opportunity',
+  '.targeting-strategy-card',
   '.anniversary-card',
   '.anniversary-kpi-card',
   '.global-map-canvas',

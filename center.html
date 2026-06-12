@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Yozma 红人数据中台</title>
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="style.css?v=20260612-layout-audit-1" />
+    <link rel="stylesheet" href="style.css?v=20260612-targeting-1" />
   </head>
   <body>
     <main class="container data-center">
@@ -97,6 +97,7 @@
                   <button data-dashboard-jump="dashboardOverview">数据概览</button>
                   <button data-dashboard-jump="dashboardOpsMonitor">监测待办</button>
                   <button data-dashboard-jump="dashboardTrends">趋势</button>
+                  <button data-dashboard-jump="dashboardTargeting">投放机会</button>
                   <button data-dashboard-jump="dashboardDataHealth">数据健康</button>
                   <button data-dashboard-jump="dashboardAnniversary">周年庆</button>
                   <button data-dashboard-jump="dashboardPlatform">平台</button>
@@ -261,6 +262,16 @@
                   <div id="monthlyBarChart" class="bar-chart"></div>
                 </article>
               </div>
+            </div>
+
+            <div id="dashboardTargeting" class="dashboard-section targeting-section">
+              <div class="section-heading">
+                <div>
+                  <h3>投放 / 复投机会池</h3>
+                  <p>接入本机 YouTube / CTV 频道定向研究，只展示公开安全的聚合候选，辅助判断哪些频道适合复投或小预算测试。</p>
+                </div>
+              </div>
+              <div id="targetingSnapshot" class="targeting-snapshot"></div>
             </div>
 
             <div id="dashboardPlatform" class="dashboard-section">
@@ -494,6 +505,6 @@
       </section>
     </main>
     <script src="vendor/echarts.min.js"></script>
-  <script src="center.js?v=20260612-layout-audit-1"></script>
+  <script src="center.js?v=20260612-targeting-1"></script>
   </body>
 </html>
