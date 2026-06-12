@@ -2508,6 +2508,7 @@ label span,
 .region-leaderboard-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
   gap: 12px;
   margin-top: 12px;
 }
@@ -2631,6 +2632,7 @@ label span,
 .owner-video-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
   gap: 12px;
   margin-top: 12px;
 }
@@ -3265,6 +3267,11 @@ label span,
 }
 
 .tier-rank-list {
+  min-height: 0;
+}
+
+.region-board-card .rank-list,
+.owner-board-card .rank-list {
   min-height: 0;
 }
 
@@ -5740,17 +5747,6 @@ body.compact-topbar .filter-select-row label span {
 }
 
 .owner-summary-grid > .owner-card {
-  grid-column: span 3;
-}
-
-.owner-summary-grid > .owner-card:nth-last-child(2):nth-child(4n + 1),
-.owner-summary-grid > .owner-card:last-child:nth-child(4n + 2) {
-  grid-column: span 6;
-}
-
-.owner-summary-grid > .owner-card:nth-last-child(3):nth-child(4n + 1),
-.owner-summary-grid > .owner-card:nth-last-child(2):nth-child(4n + 2),
-.owner-summary-grid > .owner-card:last-child:nth-child(4n + 3) {
   grid-column: span 4;
 }
 

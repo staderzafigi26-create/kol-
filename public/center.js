@@ -3160,7 +3160,7 @@ function renderRegionPerformance() {
 
   centerEls.regionLeaderboardGrid.innerHTML = visibleRows
     .map((region) => {
-      const list = region.videosList.slice(0, 5);
+      const list = region.videosList.slice(0, 3);
       const items = list.length
         ? list
             .map((row, index) => {
@@ -3176,7 +3176,7 @@ function renderRegionPerformance() {
       return `<article class="region-board-card">
         <div class="tier-board-title">
           <div><strong>${escapeHtml(region.region)}</strong><span>${centerNumber(region.views)} 7日声量 · ${centerNumber(region.videos)} 条视频</span></div>
-          <em>Top ${Math.min(5, list.length)}</em>
+          <em>Top ${Math.min(3, list.length)}</em>
         </div>
         <ol class="rank-list">${items}</ol>
       </article>`;
@@ -3225,7 +3225,7 @@ function renderOwnerPerformance() {
 
   centerEls.ownerVideoGrid.innerHTML = visibleRows
     .map((owner) => {
-      const list = owner.videosList.slice(0, 5);
+      const list = owner.videosList.slice(0, 3);
       const items = list.length
         ? list
             .map((row, index) => {
@@ -3241,7 +3241,7 @@ function renderOwnerPerformance() {
       return `<article class="owner-board-card">
         <div class="tier-board-title">
           <div><strong>${escapeHtml(owner.owner)}</strong><span>${centerNumber(owner.creatorsCount)} 位达人 · ${centerNumber(owner.videos)} 条视频 · ${centerNumber(owner.views)} 7日声量</span></div>
-          <em>Top ${Math.min(5, list.length)}</em>
+          <em>Top ${Math.min(3, list.length)}</em>
         </div>
         <ol class="rank-list">${items}</ol>
       </article>`;
@@ -3613,7 +3613,7 @@ function renderTierLeaderboards() {
   const tiers = getTierLeaderboards(centerPeriod);
   centerEls.tierLeaderboardGrid.innerHTML = tiers
     .map((tier) => {
-      const rows = tier.creators.slice(0, 5);
+      const rows = tier.creators.slice(0, 3);
       const list = rows.length
         ? rows
             .map((row, index) => {
