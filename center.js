@@ -8,15 +8,19 @@ const centerEls = {
   weekVideos: document.getElementById('centerWeekVideos'),
   weekCreators: document.getElementById('centerWeekCreators'),
   weekViews: document.getElementById('centerWeekViews'),
+  weekDelta: document.getElementById('centerWeekDelta'),
   monthVideos: document.getElementById('centerMonthVideos'),
   monthCreators: document.getElementById('centerMonthCreators'),
   monthViews: document.getElementById('centerMonthViews'),
+  monthDelta: document.getElementById('centerMonthDelta'),
   totalVideos: document.getElementById('centerTotalVideos'),
   totalCreators: document.getElementById('centerTotalCreators'),
   totalViews: document.getElementById('centerTotalViews'),
+  totalDelta: document.getElementById('centerTotalDelta'),
   customVideos: document.getElementById('centerCustomVideos'),
   customCreators: document.getElementById('centerCustomCreators'),
   customViews: document.getElementById('centerCustomViews'),
+  customDelta: document.getElementById('centerCustomDelta'),
   customRangeLabel: document.getElementById('centerCustomRangeLabel'),
   dateStart: document.getElementById('centerDateStart'),
   dateEnd: document.getElementById('centerDateEnd'),
@@ -25,6 +29,7 @@ const centerEls = {
   regionFilter: document.getElementById('centerRegionFilter'),
   ownerFilter: document.getElementById('centerOwnerFilter'),
   filterSummary: document.getElementById('dashboardFilterSummary'),
+  periodInsightStrip: document.getElementById('periodInsightStrip'),
   btnResetDashboardFilters: document.getElementById('btnResetDashboardFilters'),
   btnResetMapFilter: document.getElementById('btnResetMapFilter'),
   kpiAvgViews: document.getElementById('kpiAvgViews'),
@@ -69,6 +74,25 @@ const centerEls = {
   influencerRows: document.getElementById('localInfluencerRows'),
   videoRows: document.getElementById('localVideoRows'),
   videoTableSearch: document.getElementById('videoTableSearch'),
+  videoFilterStart: document.getElementById('videoFilterStart'),
+  videoFilterEnd: document.getElementById('videoFilterEnd'),
+  videoFilterPlatform: document.getElementById('videoFilterPlatform'),
+  videoFilterOwner: document.getElementById('videoFilterOwner'),
+  btnResetVideoFilters: document.getElementById('btnResetVideoFilters'),
+  videoEditModal: document.getElementById('videoEditModal'),
+  videoEditCreator: document.getElementById('videoEditCreator'),
+  videoEditOwner: document.getElementById('videoEditOwner'),
+  videoEditRegion: document.getElementById('videoEditRegion'),
+  videoEditPlatform: document.getElementById('videoEditPlatform'),
+  videoEditTimestamp: document.getElementById('videoEditTimestamp'),
+  videoEditViews: document.getElementById('videoEditViews'),
+  videoEditLikes: document.getElementById('videoEditLikes'),
+  videoEditComments: document.getElementById('videoEditComments'),
+  videoEditUrl: document.getElementById('videoEditUrl'),
+  videoEditCaption: document.getElementById('videoEditCaption'),
+  videoEditHint: document.getElementById('videoEditHint'),
+  btnCloseVideoEditor: document.getElementById('btnCloseVideoEditor'),
+  btnSaveVideoEditor: document.getElementById('btnSaveVideoEditor'),
   snapshotRows: document.getElementById('localSnapshotRows'),
   runRows: document.getElementById('localRunRows'),
   importText: document.getElementById('importInfluencerText'),
@@ -107,12 +131,15 @@ let worldGeoReady = null;
 let usaGeoReady = null;
 let canadaGeoReady = null;
 let europeGeoReady = null;
+let activeVideoEditId = '';
 let dashboardIndexCache = {
   followerByCreator: null,
   locationByCreator: null,
   regionByCreator: null,
   ownerByCreator: null,
-  milestone7dByPostKey: null
+  milestone7dByPostKey: null,
+  milestoneTypesByPostKey: null,
+  snapshotsByPostKey: null
 };
 let scopedVideoRowsCache = new Map();
 let geoStatsCache = new Map();
@@ -173,8 +200,13 @@ function configureStaticMode() {
   });
 }
 
+let compactTopbarActive = false;
+
 function syncCompactTopbar() {
-  document.body.classList.toggle('compact-topbar', window.scrollY > 72);
+  const nextActive = compactTopbarActive ? window.scrollY > 44 : window.scrollY > 104;
+  if (nextActive === compactTopbarActive) return;
+  compactTopbarActive = nextActive;
+  document.body.classList.toggle('compact-topbar', compactTopbarActive);
 }
 
 function readStickyPx(name, fallback) {
@@ -213,7 +245,9 @@ function invalidateDashboardCaches() {
     locationByCreator: null,
     regionByCreator: null,
     ownerByCreator: null,
-    milestone7dByPostKey: null
+    milestone7dByPostKey: null,
+    milestoneTypesByPostKey: null,
+    snapshotsByPostKey: null
   };
   scopedVideoRowsCache = new Map();
   geoStatsCache = new Map();
@@ -306,6 +340,17 @@ function dateInputValue(value) {
   const month = String(date.getMonth() + 1).padStart(2, '0');
   const day = String(date.getDate()).padStart(2, '0');
   return `${year}-${month}-${day}`;
+}
+
+function dateTimeInputValue(value) {
+  const date = parseDateValue(value);
+  if (!date) return '';
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, '0');
+  const day = String(date.getDate()).padStart(2, '0');
+  const hours = String(date.getHours()).padStart(2, '0');
+  const minutes = String(date.getMinutes()).padStart(2, '0');
+  return `${year}-${month}-${day}T${hours}:${minutes}`;
 }
 
 function dateOnlyLabel(value) {
@@ -525,7 +570,7 @@ function videoViews(fields) {
 }
 
 function videoUrl(fields) {
-  return safeExternalUrl(readLocalLink(fields.url) || readLocalLink(fields['视频链接']) || fields.url || '');
+  return safeExternalUrl(readLocalLink(fields.url) || readLocalLink(fields['视频链接']) || fields.videoUrl || fields.url || '');
 }
 
 function normalizePlatformKey(value) {
@@ -580,7 +625,49 @@ function getMilestone7dByPostKey() {
   return map;
 }
 
+function getMilestoneTypesByPostKey() {
+  if (dashboardIndexCache.milestoneTypesByPostKey) return dashboardIndexCache.milestoneTypesByPostKey;
+  const map = new Map();
+  for (const row of centerStore.snapshots || []) {
+    const fields = row.fields || row;
+    const type = readLocalText(fields.snapshotType).trim();
+    const postKey = readLocalText(fields.postKey).trim();
+    if (!type || !postKey) continue;
+    if (!map.has(postKey)) map.set(postKey, new Set());
+    map.get(postKey).add(type);
+  }
+  dashboardIndexCache.milestoneTypesByPostKey = map;
+  return map;
+}
+
+function getSnapshotsByPostKey() {
+  if (dashboardIndexCache.snapshotsByPostKey) return dashboardIndexCache.snapshotsByPostKey;
+  const map = new Map();
+  for (const row of centerStore.snapshots || []) {
+    const fields = row.fields || row;
+    const postKey = readLocalText(fields.postKey).trim();
+    if (!postKey) continue;
+    if (!map.has(postKey)) map.set(postKey, []);
+    map.get(postKey).push(fields);
+  }
+  dashboardIndexCache.snapshotsByPostKey = map;
+  return map;
+}
+
+function hasValidSnapshotAfterDays(postKey, publishedAt, minDays, maxDays = Infinity) {
+  if (!postKey || !publishedAt) return false;
+  const minTime = publishedAt.getTime() + minDays * 24 * 60 * 60 * 1000;
+  const maxTime = Number.isFinite(maxDays) ? publishedAt.getTime() + maxDays * 24 * 60 * 60 * 1000 : Infinity;
+  return (getSnapshotsByPostKey().get(postKey) || []).some((fields) => {
+    const capturedAt = rawNumber(fields.capturedAt);
+    const views = Math.max(rawNumber(fields.videoPlayCount), rawNumber(fields.videoViewCount));
+    return views > 0 && capturedAt >= minTime && capturedAt < maxTime;
+  });
+}
+
 function sevenDayVideoViews(fields) {
+  const manualValue = rawNumber(fields.mature7dViews || fields['7日声量'] || fields['七日声量'] || fields['7日播放']);
+  if (manualValue) return manualValue;
   const snapshot = getMilestone7dByPostKey().get(videoPostKey(fields))?.fields;
   if (!snapshot) return 0;
   return Math.max(rawNumber(snapshot.videoPlayCount), rawNumber(snapshot.videoViewCount));
@@ -1311,8 +1398,10 @@ function normalizeVideoRow(fields, helpers = {}) {
   const platform = platformLabel(readLocalText(fields['平台']));
   const region = getVideoRegion(fields, regionByCreator);
   const owner = getVideoOwner(fields, ownerByCreator);
+  const recordId = readLocalText(fields.__recordId || fields.recordId);
   return {
-    id: readLocalText(fields.postId) || videoUrl(fields) || `${creatorName}_${fields.timestamp || ''}`,
+    id: recordId || readLocalText(fields.postId || fields.id) || videoUrl(fields) || `${creatorName}_${fields.timestamp || ''}`,
+    recordId,
     creatorName,
     platform,
     videoUrl: videoUrl(fields),
@@ -1388,6 +1477,16 @@ function passesInfluencerFilters(fields, helpers = getDashboardHelpers()) {
   return true;
 }
 
+function fieldsWithRecordId(row, index = 0, prefix = 'local') {
+  const fields = { ...(row.fields || row) };
+  Object.defineProperty(fields, '__recordId', {
+    value: row.id || row.recordId || `${prefix}_${index + 1}`,
+    enumerable: false,
+    configurable: true
+  });
+  return fields;
+}
+
 function getScopedInfluencerRows() {
   const helpers = getDashboardHelpers();
   return (centerStore.influencers || [])
@@ -1405,7 +1504,7 @@ function getScopedVideoRows(period = centerPeriod) {
   if (scopedVideoRowsCache.has(cacheKey)) return scopedVideoRowsCache.get(cacheKey);
   const helpers = getDashboardHelpers();
   const rows = (centerStore.videos || [])
-    .map((row) => row.fields || row)
+    .map((row, index) => fieldsWithRecordId(row, index, 'local_video'))
     .filter((fields) => isVideoInPeriod(fields, period))
     .filter((fields) => passesDashboardFilters(fields, helpers));
   scopedVideoRowsCache.set(cacheKey, rows);
@@ -1462,6 +1561,144 @@ function selectedPeriodLabel() {
     return `${dateOnlyLabel(customRange.start)} - ${dateOnlyLabel(inclusiveEnd)}`;
   }
   return '自定义时间';
+}
+
+function rangeLabel(start, endExclusive) {
+  const startDate = parseDateValue(start);
+  let endDate = parseDateValue(endExclusive);
+  if (!startDate || !endDate) return '';
+  const tomorrow = new Date();
+  tomorrow.setHours(0, 0, 0, 0);
+  tomorrow.setDate(tomorrow.getDate() + 1);
+  if (endDate > tomorrow) endDate = tomorrow;
+  const inclusiveEnd = new Date(endDate.getTime() - 24 * 60 * 60 * 1000);
+  return `${dateOnlyLabel(startDate)} - ${dateOnlyLabel(inclusiveEnd)}`;
+}
+
+function summarizeRowsBetween(rows, start, end) {
+  const startDate = parseDateValue(start);
+  const endDate = parseDateValue(end);
+  const scoped = rows.filter((fields) => {
+    const publishedAt = videoPublishedAt(fields);
+    return publishedAt && startDate && endDate && publishedAt >= startDate && publishedAt < endDate;
+  });
+  return {
+    videos: scoped.length,
+    creators: new Set(scoped.map((fields) => creatorKey(readLocalText(fields['红人名称']))).filter(Boolean)).size,
+    views: scoped.reduce((sum, fields) => sum + sevenDayVideoViews(fields), 0)
+  };
+}
+
+function numberDelta(current, previous, suffix = '') {
+  const now = rawNumber(current);
+  const before = rawNumber(previous);
+  const diff = now - before;
+  const sign = diff > 0 ? '+' : '';
+  const className = diff > 0 ? 'up' : diff < 0 ? 'down' : 'flat';
+  return {
+    className,
+    text: `${sign}${centerNumber(diff)}${suffix}`
+  };
+}
+
+function periodCompareData(period) {
+  if (period === 'week') {
+    const rows = getWeeklyTrendRows();
+    const current = rows.at(-1) || {};
+    const previous = rows.at(-2) || {};
+    return {
+      label: rangeLabel(current.weekStart, current.weekEnd) || '当前周报周期',
+      compareLabel: rangeLabel(previous.weekStart, previous.weekEnd) || '上一周',
+      current: {
+        videos: rawNumber(current.videos),
+        creators: rawNumber(current.creators),
+        views: rawNumber(current.mature7dViews ?? current.views)
+      },
+      previous: {
+        videos: rawNumber(previous.videos),
+        creators: rawNumber(previous.creators),
+        views: rawNumber(previous.mature7dViews ?? previous.views)
+      },
+      description: '按周报周期统计上线视频，声量优先使用 7 天成熟表现。'
+    };
+  }
+  if (period === 'month') {
+    const rows = getMonthlyTrendRows();
+    const current = rows.at(-1) || {};
+    const previous = rows.at(-2) || {};
+    return {
+      label: rangeLabel(current.monthStart, current.monthEnd) || '当前月',
+      compareLabel: rangeLabel(previous.monthStart, previous.monthEnd) || '上月',
+      current: {
+        videos: rawNumber(current.videos),
+        creators: rawNumber(current.creators),
+        views: rawNumber(current.mature7dViews ?? current.views)
+      },
+      previous: {
+        videos: rawNumber(previous.videos),
+        creators: rawNumber(previous.creators),
+        views: rawNumber(previous.mature7dViews ?? previous.views)
+      },
+      description: '按自然月统计上线视频，用于看月度节奏和平台结构。'
+    };
+  }
+  if (period === 'custom' && customRange.start && customRange.end) {
+    const rows = getScopedVideoRows('total');
+    const start = parseDateValue(customRange.start);
+    const end = parseDateValue(customRange.end);
+    const span = start && end ? end.getTime() - start.getTime() : 0;
+    const prevStart = span ? new Date(start.getTime() - span).toISOString() : '';
+    const prevEnd = start ? start.toISOString() : '';
+    return {
+      label: rangeLabel(customRange.start, customRange.end),
+      compareLabel: rangeLabel(prevStart, prevEnd) || '上一等长周期',
+      current: summarizeRowsBetween(rows, customRange.start, customRange.end),
+      previous: summarizeRowsBetween(rows, prevStart, prevEnd),
+      description: '按你选择的日期区间统计，环比为前一个等长周期。'
+    };
+  }
+  const total = getScopedVideoSummary('total');
+  const month = getScopedVideoSummary('month');
+  return {
+    label: '全部已登记视频',
+    compareLabel: '本月贡献',
+    current: total,
+    previous: month,
+    description: '总维度展示当前库内累计视频，右侧对比显示本月在累计中的贡献。'
+  };
+}
+
+function setDeltaText(target, delta, prefix = '') {
+  if (!target) return;
+  target.textContent = `${prefix}${delta.text}`;
+  target.classList.remove('up', 'down', 'flat');
+  target.classList.add(delta.className);
+}
+
+function renderPeriodInsight() {
+  const data = periodCompareData(centerPeriod);
+  const videoDelta = numberDelta(data.current.videos, data.previous.videos, ' 条视频');
+  const creatorDelta = numberDelta(data.current.creators, data.previous.creators, ' 位达人');
+  const viewsDelta = numberDelta(data.current.views, data.previous.views, ' 7日声量');
+  if (centerEls.periodInsightStrip) {
+    centerEls.periodInsightStrip.innerHTML = `
+      <div>
+        <span>${escapeHtml(selectedPeriodLabel())}</span>
+        <strong>${escapeHtml(data.label || '当前周期')}</strong>
+        <p>${escapeHtml(data.description)}</p>
+      </div>
+      <dl>
+        <div><dt>对比周期</dt><dd>${escapeHtml(data.compareLabel || '-')}</dd></div>
+        <div><dt>上线视频</dt><dd class="${videoDelta.className}">${escapeHtml(videoDelta.text)}</dd></div>
+        <div><dt>上线达人</dt><dd class="${creatorDelta.className}">${escapeHtml(creatorDelta.text)}</dd></div>
+        <div><dt>7日声量</dt><dd class="${viewsDelta.className}">${escapeHtml(viewsDelta.text)}</dd></div>
+      </dl>`;
+  }
+  setDeltaText(centerEls.weekDelta, numberDelta(getScopedVideoSummary('week').videos, (getWeeklyTrendRows().at(-2) || {}).videos, ' 条'), '较上周 ');
+  setDeltaText(centerEls.monthDelta, numberDelta(getScopedVideoSummary('month').videos, (getMonthlyTrendRows().at(-2) || {}).videos, ' 条'), '较上月 ');
+  if (centerEls.totalDelta) centerEls.totalDelta.textContent = `本月贡献 ${centerNumber(getScopedVideoSummary('month').videos)} 条`;
+  const customData = periodCompareData('custom');
+  if (centerEls.customDelta) centerEls.customDelta.textContent = customRange.start && customRange.end ? `较上一等长周期 ${numberDelta(customData.current.videos, customData.previous.videos, ' 条').text}` : '选择日期后显示环比';
 }
 
 function updateDashboardControlState() {
@@ -1571,6 +1808,7 @@ function getQualityIssues() {
 function getLifecycleStats() {
   const now = new Date();
   const rows = getScopedVideoRows('total');
+  const milestoneTypes = getMilestoneTypesByPostKey();
   const stats = {
     firstSevenDays: 0,
     sevenDayDue: 0,
@@ -1580,17 +1818,22 @@ function getLifecycleStats() {
     missingTime: 0
   };
   for (const fields of rows) {
+    if (readLocalText(fields['是否监控']) === '否') continue;
     const publishedAt = videoPublishedAt(fields);
     const age = daysSince(publishedAt, now);
     if (age === null) {
       stats.missingTime += 1;
       continue;
     }
+    const types = milestoneTypes.get(videoPostKey(fields)) || new Set();
+    const key = videoPostKey(fields);
+    const has7d = types.has('milestone_7d') || hasValidSnapshotAfterDays(key, publishedAt, 7, 30);
+    const has30d = types.has('milestone_30d');
     if (age <= 7) stats.firstSevenDays += 1;
-    if (age >= 6 && age <= 8) stats.sevenDayDue += 1;
+    if (age >= 7 && age < 30 && !has7d) stats.sevenDayDue += 1;
     if (age > 7 && age <= 30) stats.thirtyDayTracking += 1;
-    if (age >= 28 && age <= 31) stats.thirtyDayDue += 1;
-    if (age > 30) stats.stopTracking += 1;
+    if (age >= 30 && !has30d) stats.thirtyDayDue += 1;
+    if (age > 30 && has30d) stats.stopTracking += 1;
   }
   return stats;
 }
@@ -1718,6 +1961,7 @@ function getPlatformStats(period = centerPeriod) {
 }
 
 function renderCommandKpis() {
+  renderPeriodInsight();
   const weekSummary = getScopedVideoSummary('week');
   const monthSummary = getScopedVideoSummary('month');
   const totalSummary = getScopedVideoSummary('total');
@@ -3379,6 +3623,13 @@ function populateDashboardFilters() {
   syncCustomFilterSelects();
 }
 
+function populateVideoFilters() {
+  const helpers = getDashboardHelpers();
+  const rows = (centerStore.videos || []).map((row, index) => normalizeVideoRow(fieldsWithRecordId(row, index, 'local_video'), helpers));
+  fillSelect(centerEls.videoFilterPlatform, rows.map((row) => row.platform), '全部平台');
+  fillSelect(centerEls.videoFilterOwner, rows.map((row) => row.owner), '全部负责人');
+}
+
 function moneyBreakdownText(value) {
   const data = value && typeof value === 'object' ? value : {};
   const order = ['USD', 'CAD', 'EUR', 'GBP', 'UNKNOWN'];
@@ -3753,6 +4004,133 @@ function exportScopedVideosCsv() {
   centerEls.status.textContent = `已导出 ${rows.length} 条当前时间范围上线视频数据。`;
 }
 
+function platformCodeFromLabel(value) {
+  const label = platformLabel(value);
+  if (label === 'Instagram Reels') return 'instagramreels';
+  if (label === 'TikTok') return 'tiktok';
+  if (label === 'YouTube Shorts') return 'youtubeshort';
+  if (label === 'YouTube Video') return 'youtubevideo';
+  return String(value || '').trim();
+}
+
+function getVideoTableFilters() {
+  return {
+    search: String(centerEls.videoTableSearch?.value || '').trim().toLowerCase(),
+    start: startOfInputDay(centerEls.videoFilterStart?.value || ''),
+    end: exclusiveEndOfInputDay(centerEls.videoFilterEnd?.value || ''),
+    platform: centerEls.videoFilterPlatform?.value || 'all',
+    owner: centerEls.videoFilterOwner?.value || 'all'
+  };
+}
+
+function videoRowPassesTableFilters(row, filters) {
+  if (filters.search) {
+    const matched = [row.creatorName, row.platform, row.owner, row.region, row.country, row.videoTitle]
+      .some((value) => String(value || '').toLowerCase().includes(filters.search));
+    if (!matched) return false;
+  }
+  if (filters.start && (!row.publishDate || row.publishDate < filters.start)) return false;
+  if (filters.end && (!row.publishDate || row.publishDate >= filters.end)) return false;
+  if (filters.platform !== 'all' && row.platform !== filters.platform) return false;
+  if (filters.owner !== 'all' && row.owner !== filters.owner) return false;
+  return true;
+}
+
+function findVideoRecord(recordId) {
+  const target = String(recordId || '');
+  return (centerStore.videos || []).find((row, index) => String(row.id || row.recordId || `local_video_${index + 1}`) === target);
+}
+
+function openVideoEditor(recordId) {
+  if (isStaticCenter) {
+    centerEls.status.textContent = '团队只读版不能直接修改数据；请回到本地中台操作。';
+    return;
+  }
+  const record = findVideoRecord(recordId);
+  if (!record) {
+    centerEls.status.textContent = '没有找到这条视频记录，刷新中台后再试一次。';
+    return;
+  }
+  const fields = fieldsWithRecordId(record, 0, 'local_video');
+  const row = normalizeVideoRow(fields);
+  activeVideoEditId = String(recordId || '');
+  centerEls.videoEditCreator.value = row.creatorName === '-' ? '' : row.creatorName;
+  centerEls.videoEditOwner.value = row.owner === '未标注负责人' ? '' : row.owner;
+  centerEls.videoEditRegion.value = row.region === '未标注地区' ? '' : row.region;
+  centerEls.videoEditPlatform.value = platformCodeFromLabel(readLocalText(fields['平台']) || row.platform);
+  centerEls.videoEditTimestamp.value = dateTimeInputValue(row.publishDate || fields.timestamp);
+  centerEls.videoEditViews.value = row.views || videoViews(fields) || '';
+  centerEls.videoEditLikes.value = rawNumber(fields.likesCount) || '';
+  centerEls.videoEditComments.value = rawNumber(fields.commentsCount) || '';
+  centerEls.videoEditUrl.value = row.videoUrl || videoUrl(fields) || '';
+  centerEls.videoEditCaption.value = row.videoTitle || '';
+  if (centerEls.videoEditHint) centerEls.videoEditHint.textContent = '保存后会写回本地视频上线表。';
+  centerEls.videoEditModal.hidden = false;
+}
+
+function closeVideoEditor() {
+  activeVideoEditId = '';
+  if (centerEls.videoEditModal) centerEls.videoEditModal.hidden = true;
+}
+
+async function saveVideoEditor() {
+  if (!activeVideoEditId) return;
+  const timestampInput = centerEls.videoEditTimestamp?.value || '';
+  const timestamp = timestampInput ? new Date(timestampInput).toISOString() : '';
+  const views = rawNumber(centerEls.videoEditViews?.value);
+  const url = String(centerEls.videoEditUrl?.value || '').trim();
+  const fields = {
+    红人名称: String(centerEls.videoEditCreator?.value || '').trim(),
+    负责人: String(centerEls.videoEditOwner?.value || '').trim(),
+    地区: String(centerEls.videoEditRegion?.value || '').trim(),
+    平台: platformCodeFromLabel(centerEls.videoEditPlatform?.value || ''),
+    timestamp,
+    mature7dViews: views,
+    videoPlayCount: views,
+    videoViewCount: views,
+    likesCount: rawNumber(centerEls.videoEditLikes?.value),
+    commentsCount: rawNumber(centerEls.videoEditComments?.value),
+    url,
+    videoUrl: url,
+    caption: String(centerEls.videoEditCaption?.value || '').trim()
+  };
+  centerEls.btnSaveVideoEditor.disabled = true;
+  if (centerEls.videoEditHint) centerEls.videoEditHint.textContent = '正在保存...';
+  try {
+    await centerRequest(`/api/local/videos/${encodeURIComponent(activeVideoEditId)}`, {
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ fields })
+    });
+    closeVideoEditor();
+    await loadCenter();
+    centerEls.status.textContent = '视频记录已更新。';
+  } catch (error) {
+    if (centerEls.videoEditHint) centerEls.videoEditHint.textContent = error.message;
+    centerEls.status.textContent = error.message;
+  } finally {
+    centerEls.btnSaveVideoEditor.disabled = false;
+  }
+}
+
+async function deleteVideoRecord(recordId) {
+  if (isStaticCenter) {
+    centerEls.status.textContent = '团队只读版不能删除数据；请回到本地中台操作。';
+    return;
+  }
+  const record = findVideoRecord(recordId);
+  const fields = record?.fields || record || {};
+  const creator = readLocalText(fields['红人名称']) || '这条视频';
+  if (!window.confirm(`确定删除「${creator}」这条视频记录吗？删除后不会出现在中台明细里。`)) return;
+  try {
+    await centerRequest(`/api/local/videos/${encodeURIComponent(recordId)}`, { method: 'DELETE' });
+    await loadCenter();
+    centerEls.status.textContent = '视频记录已删除。';
+  } catch (error) {
+    centerEls.status.textContent = error.message;
+  }
+}
+
 function renderTables() {
   clearRows(centerEls.influencerRows);
   const influencerHelpers = getDashboardHelpers();
@@ -3770,12 +4148,9 @@ function renderTables() {
   });
 
   clearRows(centerEls.videoRows);
-  const search = String(centerEls.videoTableSearch?.value || '').trim().toLowerCase();
+  const videoFilters = getVideoTableFilters();
   normalizeData(getScopedVideoRows(centerPeriod))
-    .filter((row) => {
-      if (!search) return true;
-      return [row.creatorName, row.platform, row.owner, row.region, row.videoTitle].some((value) => String(value || '').toLowerCase().includes(search));
-    })
+    .filter((row) => videoRowPassesTableFilters(row, videoFilters))
     .sort((a, b) => b.views - a.views || (b.publishDate?.getTime?.() || 0) - (a.publishDate?.getTime?.() || 0))
     .slice(0, 300)
     .forEach((row) => {
@@ -3785,7 +4160,7 @@ function renderTables() {
       addCell(tr, row.region, '区域');
       addCell(tr, row.platform, '平台');
       addCell(tr, centerDate(row.publishDate), '上线时间');
-      addCell(tr, centerNumber(row.views), '播放');
+      addCell(tr, centerNumber(row.views), '7日声量');
       addCell(tr, `${row.engagementRate}%`, '互动率');
       const status = videoStatus(row);
       const statusCell = document.createElement('td');
@@ -3806,6 +4181,27 @@ function renderTables() {
         linkCell.textContent = '-';
       }
       tr.appendChild(linkCell);
+      const actionCell = document.createElement('td');
+      labelCell(actionCell, '操作');
+      if (!isStaticCenter && row.recordId) {
+        const actions = document.createElement('div');
+        actions.className = 'row-actions';
+        const editButton = document.createElement('button');
+        editButton.type = 'button';
+        editButton.className = 'row-action-button';
+        editButton.textContent = '编辑';
+        editButton.addEventListener('click', () => openVideoEditor(row.recordId));
+        const deleteButton = document.createElement('button');
+        deleteButton.type = 'button';
+        deleteButton.className = 'row-action-button danger';
+        deleteButton.textContent = '删除';
+        deleteButton.addEventListener('click', () => deleteVideoRecord(row.recordId));
+        actions.append(editButton, deleteButton);
+        actionCell.appendChild(actions);
+      } else {
+        actionCell.textContent = isStaticCenter ? '只读' : '-';
+      }
+      tr.appendChild(actionCell);
       centerEls.videoRows.appendChild(tr);
     });
 
@@ -3940,6 +4336,7 @@ async function loadCenter() {
   }
   centerEls.updatedAt.textContent = `更新于 ${new Date().toLocaleTimeString('zh-CN', { hour12: false })}`;
   populateDashboardFilters();
+  populateVideoFilters();
   renderDashboardCharts();
   renderAnniversaryDashboard();
   renderCurrentPeriod();
@@ -4048,6 +4445,25 @@ if (centerEls.videoTableSearch) {
   centerEls.videoTableSearch.addEventListener('input', renderTables);
 }
 
+[centerEls.videoFilterStart, centerEls.videoFilterEnd, centerEls.videoFilterPlatform, centerEls.videoFilterOwner].forEach((control) => {
+  if (control) control.addEventListener('change', renderTables);
+});
+
+if (centerEls.btnResetVideoFilters) {
+  centerEls.btnResetVideoFilters.addEventListener('click', () => {
+    if (centerEls.videoTableSearch) centerEls.videoTableSearch.value = '';
+    if (centerEls.videoFilterStart) centerEls.videoFilterStart.value = '';
+    if (centerEls.videoFilterEnd) centerEls.videoFilterEnd.value = '';
+    if (centerEls.videoFilterPlatform) centerEls.videoFilterPlatform.value = 'all';
+    if (centerEls.videoFilterOwner) centerEls.videoFilterOwner.value = 'all';
+    renderTables();
+  });
+}
+
+if (centerEls.btnCloseVideoEditor) centerEls.btnCloseVideoEditor.addEventListener('click', closeVideoEditor);
+if (centerEls.btnSaveVideoEditor) centerEls.btnSaveVideoEditor.addEventListener('click', saveVideoEditor);
+document.querySelectorAll('[data-close-video-editor]').forEach((button) => button.addEventListener('click', closeVideoEditor));
+
 const DASHBOARD_INTERACTION_SELECTOR = [
   'button:not(:disabled)',
   'a[href]',
@@ -4093,7 +4509,6 @@ function setupDashboardInteractionEffects() {
   if (!motionSafe) return;
   const dashboardRoot = document.querySelector('.data-center');
   const pointerFine = (!window.matchMedia || window.matchMedia('(hover: hover) and (pointer: fine)').matches) && (navigator.maxTouchPoints || 0) < 1;
-  let cursorGlow = null;
   let activePointerTarget = null;
 
   function clearPointerTarget() {
@@ -4103,14 +4518,9 @@ function setupDashboardInteractionEffects() {
   }
 
   if (pointerFine) {
-    cursorGlow = document.createElement('div');
-    cursorGlow.className = 'dashboard-cursor-glow';
-    document.body.appendChild(cursorGlow);
-
     document.addEventListener('pointermove', (event) => {
       const target = event.target.closest(DASHBOARD_INTERACTION_SELECTOR);
       if (!target || !dashboardRoot?.contains(target)) {
-        cursorGlow.classList.remove('active');
         clearPointerTarget();
         return;
       }
@@ -4124,12 +4534,9 @@ function setupDashboardInteractionEffects() {
         target.style.setProperty('--pointer-x', `${event.clientX - rect.left}px`);
         target.style.setProperty('--pointer-y', `${event.clientY - rect.top}px`);
       }
-      cursorGlow.style.transform = `translate3d(${event.clientX - 85}px, ${event.clientY - 85}px, 0)`;
-      cursorGlow.classList.add('active');
     }, { passive: true });
 
     document.addEventListener('pointerleave', () => {
-      cursorGlow.classList.remove('active');
       clearPointerTarget();
     }, { passive: true });
   }
