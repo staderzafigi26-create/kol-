@@ -6,8 +6,9 @@ const VIDEOS_PATH = path.join(ROOT, 'data/local/videos.json');
 const SNAPSHOTS_PATH = path.join(ROOT, 'data/local/snapshots.json');
 const RAW_DIR = path.join(ROOT, 'data/raw');
 const REPORT_DIR = path.join(ROOT, 'data/reports');
-const RUN_TAG = `local-7d-milestone-${new Date().toISOString().replace(/[:.]/g, '-')}`;
-const RUN_ID = `local_7d_${Date.now()}`;
+const MILESTONE_MODES = new Set(String(process.env.MILESTONE_MODES || '7').split(',').map((item) => item.trim()).filter(Boolean));
+const RUN_TAG = `local-${[...MILESTONE_MODES].join('-') || '7'}d-milestone-${new Date().toISOString().replace(/[:.]/g, '-')}`;
+const RUN_ID = `local_${[...MILESTONE_MODES].join('_') || '7'}d_${Date.now()}`;
 const REPORT_PATH = path.join(REPORT_DIR, `${RUN_TAG}.json`);
 
 const PLATFORMS = new Set(['instagramreels', 'youtubevideo', 'youtubeshort', 'tiktok']);
@@ -263,12 +264,13 @@ async function readJsonIfExists(filePath) {
 }
 
 async function findReusableRaw(platform, expectedCount, currentRawPath) {
+  if (process.env.REUSE_RAW !== '1') return null;
   const current = await readJsonIfExists(currentRawPath);
   if (current) return { raw: current, rawPath: currentRawPath };
   try {
     const names = await fs.readdir(RAW_DIR);
     const candidates = names
-      .filter((name) => name.startsWith('local-7d-milestone-') && name.endsWith(`_${platform}_raw.json`))
+      .filter((name) => name.includes('d-milestone-') && name.endsWith(`_${platform}_raw.json`))
       .sort()
       .reverse();
     for (const name of candidates) {
@@ -300,18 +302,23 @@ function postKeyOf(platform, fields) {
 function latestSnapshotsByPostKey(snapshots) {
   const latest = new Map();
   const types = new Map();
+  const snapshotsByKey = new Map();
   for (const snapshot of snapshots) {
     const fields = snapshot.fields || snapshot;
     const key = String(fields.postKey || '').trim();
     if (!key) continue;
+    if (!snapshotsByKey.has(key)) snapshotsByKey.set(key, []);
     const type = String(fields.snapshotType || '').trim();
     if (!types.has(key)) types.set(key, new Set());
     if (type) types.get(key).add(type);
     const capturedAt = toNumber(fields.capturedAt, 0);
+    const views = Math.max(toNumber(fields.videoPlayCount, 0), toNumber(fields.videoViewCount, 0));
+    snapshotsByKey.get(key).push({ capturedAt, views, fields });
     const previous = latest.get(key);
     if (!previous || capturedAt >= previous.capturedAt) latest.set(key, { capturedAt, fields });
   }
-  return { latest, types };
+  for (const rows of snapshotsByKey.values()) rows.sort((a, b) => b.capturedAt - a.capturedAt);
+  return { latest, types, snapshotsByKey };
 }
 
 const apiToken = await getApifyToken();
@@ -324,10 +331,11 @@ await fs.mkdir(RAW_DIR, { recursive: true });
 
 const videos = JSON.parse(await fs.readFile(VIDEOS_PATH, 'utf8'));
 const snapshots = JSON.parse(await fs.readFile(SNAPSHOTS_PATH, 'utf8'));
-const { latest, types } = latestSnapshotsByPostKey(snapshots);
+const { latest, types, snapshotsByKey } = latestSnapshotsByPostKey(snapshots);
 const now = new Date();
 
 const due = [];
+let skippedAlreadyCapturedAfter7d = 0;
 for (const video of videos) {
   const fields = video.fields || video;
   const platform = normalizePlatform(fields['平台'] || fields.platform);
@@ -336,8 +344,22 @@ for (const video of videos) {
   if (!PLATFORMS.has(platform) || !url || !publishedAt || !isMonitorEnabled(fields['是否监控'])) continue;
   const key = postKeyOf(platform, fields);
   const ageDays = (now.getTime() - publishedAt.getTime()) / 86400000;
-  if (ageDays >= 7 && ageDays < 30 && !(types.get(key) || new Set()).has('milestone_7d')) {
-    due.push({ video, fields, platform, url, key, publishedAt, ageDays });
+  const snapshotTypes = types.get(key) || new Set();
+  const alreadyCapturedAfter7d = (snapshotsByKey.get(key) || []).some((snapshot) => (
+    snapshot.views > 0
+    && snapshot.capturedAt >= publishedAt.getTime() + 7 * 86400000
+    && snapshot.capturedAt < publishedAt.getTime() + 30 * 86400000
+  ));
+  let milestone = '';
+  if (MILESTONE_MODES.has('30') && ageDays >= 30 && !snapshotTypes.has('milestone_30d')) {
+    milestone = 'milestone_30d';
+  } else if (MILESTONE_MODES.has('7') && ageDays >= 7 && ageDays < 30 && !snapshotTypes.has('milestone_7d') && !alreadyCapturedAfter7d) {
+    milestone = 'milestone_7d';
+  }
+  if (milestone) {
+    due.push({ video, fields, platform, url, key, publishedAt, ageDays, milestone });
+  } else if (ageDays >= 7 && ageDays < 30 && !snapshotTypes.has('milestone_7d') && alreadyCapturedAfter7d) {
+    skippedAlreadyCapturedAfter7d += 1;
   }
 }
 
@@ -350,9 +372,11 @@ for (const item of due) {
 const report = {
   ok: false,
   runId: RUN_ID,
+  modes: [...MILESTONE_MODES],
   startedAt: new Date().toISOString(),
   finishedAt: '',
   dueCount: due.length,
+  skippedAlreadyCapturedAfter7d,
   dueByPlatform: Object.fromEntries([...grouped].map(([platform, rows]) => [platform, rows.length])),
   usageUsd: 0,
   updated: 0,
@@ -362,11 +386,11 @@ const report = {
   outputFiles: { report: REPORT_PATH }
 };
 
-console.log(JSON.stringify({ event: 'local-7d-start', dueCount: due.length, dueByPlatform: report.dueByPlatform, reportPath: REPORT_PATH }));
+console.log(JSON.stringify({ event: 'local-milestone-start', modes: [...MILESTONE_MODES], dueCount: due.length, dueByPlatform: report.dueByPlatform, reportPath: REPORT_PATH }));
 
 if (due.length) {
-  const videoBackup = path.join(ROOT, `data/local/videos.backup-before-7d-refresh-${RUN_TAG}.json`);
-  const snapshotBackup = path.join(ROOT, `data/local/snapshots.backup-before-7d-refresh-${RUN_TAG}.json`);
+  const videoBackup = path.join(ROOT, `data/local/videos.backup-before-milestone-refresh-${RUN_TAG}.json`);
+  const snapshotBackup = path.join(ROOT, `data/local/snapshots.backup-before-milestone-refresh-${RUN_TAG}.json`);
   await fs.copyFile(VIDEOS_PATH, videoBackup);
   await fs.copyFile(SNAPSHOTS_PATH, snapshotBackup);
   report.outputFiles.videoBackup = videoBackup;
@@ -447,7 +471,7 @@ for (const [platform, rows] of grouped) {
         isProductPost: '是',
         是否监控: fields['是否监控'] || '是',
         isFirstSeen: '否',
-        snapshotType: 'milestone_7d',
+        snapshotType: item.milestone,
         firstSeenAt: String(toNumber(previous.firstSeenAt, item.publishedAt.getTime())),
         videoPlayCount: String(play),
         videoViewCount: String(view),
@@ -468,7 +492,7 @@ for (const [platform, rows] of grouped) {
       });
       latest.set(key, { capturedAt, fields: snapshotFields });
       if (!types.has(key)) types.set(key, new Set());
-      types.get(key).add('milestone_7d');
+      types.get(key).add(item.milestone);
       platformResult.updated += 1;
       report.updated += 1;
     }
@@ -492,4 +516,4 @@ report.ok = report.errors.length === 0;
 report.finishedAt = new Date().toISOString();
 report.usageUsd = Number(report.usageUsd.toFixed(6));
 await fs.writeFile(REPORT_PATH, JSON.stringify(report, null, 2));
-console.log(JSON.stringify({ event: 'local-7d-done', reportPath: REPORT_PATH, summary: report }));
+console.log(JSON.stringify({ event: 'local-milestone-done', reportPath: REPORT_PATH, summary: report }));

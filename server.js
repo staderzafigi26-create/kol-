@@ -2262,6 +2262,74 @@ app.post('/api/local/videos/import', async (req, res) => {
   }
 });
 
+function normalizeEditableVideoFields(input = {}) {
+  const fields = {};
+  const setText = (targetKey, sourceKey = targetKey, max = 1000) => {
+    if (Object.prototype.hasOwnProperty.call(input, sourceKey)) fields[targetKey] = normalizeText(input[sourceKey], max);
+  };
+  setText('红人名称', '红人名称', 200);
+  setText('负责人', '负责人', 100);
+  setText('地区', '地区', 80);
+  setText('caption', 'caption', 2000);
+  if (Object.prototype.hasOwnProperty.call(input, '平台')) fields['平台'] = normalizePlatform(input['平台']) || normalizeText(input['平台'], 80);
+  if (Object.prototype.hasOwnProperty.call(input, 'timestamp')) {
+    const parsed = parseDateSafe(input.timestamp);
+    fields.timestamp = parsed ? parsed.toISOString() : normalizeText(input.timestamp, 80);
+  }
+  ['mature7dViews', 'videoPlayCount', 'videoViewCount', 'likesCount', 'commentsCount'].forEach((key) => {
+    if (Object.prototype.hasOwnProperty.call(input, key)) fields[key] = toNumber(input[key], 0);
+  });
+  if (Object.prototype.hasOwnProperty.call(input, 'url')) {
+    const url = normalizeText(input.url, 1000);
+    fields.url = makeLinkCell(url);
+  }
+  if (Object.prototype.hasOwnProperty.call(input, 'videoUrl')) fields.videoUrl = normalizeText(input.videoUrl, 1000);
+  return fields;
+}
+
+app.patch('/api/local/videos/:id', async (req, res) => {
+  try {
+    const recordId = String(req.params.id || '').trim();
+    if (!recordId) return res.status(400).json({ ok: false, error: '缺少视频记录 ID。' });
+    const { fields: inputFields = {} } = req.body || {};
+    const store = await readLocalDataStore();
+    const index = store.videos.findIndex((row, rowIndex) => String(row.id || row.recordId || `local_video_${rowIndex + 1}`) === recordId);
+    if (index < 0) return res.status(404).json({ ok: false, error: '没有找到这条视频记录。' });
+    const current = store.videos[index] || {};
+    const currentFields = current.fields || current;
+    const nextFields = {
+      ...currentFields,
+      ...normalizeEditableVideoFields(inputFields)
+    };
+    store.videos[index] = {
+      ...current,
+      id: current.id || recordId,
+      fields: nextFields,
+      updatedAt: new Date().toISOString(),
+      source: current.source || 'local-edit'
+    };
+    await writeJsonArray(LOCAL_DATA_FILES.videos, store.videos);
+    return res.json({ ok: true, record: store.videos[index], total: store.videos.length });
+  } catch (error) {
+    return res.status(500).json({ ok: false, error: error.message || '视频记录更新失败。' });
+  }
+});
+
+app.delete('/api/local/videos/:id', async (req, res) => {
+  try {
+    const recordId = String(req.params.id || '').trim();
+    if (!recordId) return res.status(400).json({ ok: false, error: '缺少视频记录 ID。' });
+    const store = await readLocalDataStore();
+    const before = store.videos.length;
+    const videos = store.videos.filter((row, rowIndex) => String(row.id || row.recordId || `local_video_${rowIndex + 1}`) !== recordId);
+    if (videos.length === before) return res.status(404).json({ ok: false, error: '没有找到这条视频记录。' });
+    await writeJsonArray(LOCAL_DATA_FILES.videos, videos);
+    return res.json({ ok: true, deleted: before - videos.length, total: videos.length });
+  } catch (error) {
+    return res.status(500).json({ ok: false, error: error.message || '视频记录删除失败。' });
+  }
+});
+
 app.get('/api/local/export/:collection', async (req, res) => {
   try {
     const collection = req.params.collection;
@@ -2295,6 +2363,7 @@ app.post('/api/local/discover', async (req, res) => {
       platformFilter = 'all',
       publishedBefore = '',
       actorLookbackDays = null,
+      includeUnmonitoredTargets = false,
       dryRun = false
     } = req.body || {};
     const finalApifyToken = apiToken || process.env.APIFY_API_TOKEN;
@@ -2322,17 +2391,22 @@ app.post('/api/local/discover', async (req, res) => {
       return { ...row, fields, localIndex: index, platform };
     });
     const candidateAudit = buildLocalCandidateAudit(influencers);
-    const selectedRows = influencers
-      .filter((row) => parseMonitorEnabled((row.fields || {})['是否监控']))
-      .filter((row) => row.fields['红人名称'] || readLinkCell(row.fields['红人链接']))
-      .filter((row) => supportedPlatforms.has(row.platform))
-      .filter((row) => (normalizedPlatformFilter === 'all' ? true : row.platform === normalizedPlatformFilter));
     const onlyInputSet = new Set(
       (Array.isArray(onlyInfluencerInputs) ? onlyInfluencerInputs : [])
         .map((value) => String(value || '').trim())
         .filter(Boolean)
         .flatMap((value) => [value, normalizePostUrl(value)])
     );
+    const selectedRows = influencers
+      .filter((row) => {
+        if (parseMonitorEnabled((row.fields || {})['是否监控'])) return true;
+        if (!includeUnmonitoredTargets || !onlyInputSet.size) return false;
+        const input = readLinkCell(row.fields['红人链接']) || String(row.fields['红人名称'] || '').trim();
+        return onlyInputSet.has(input) || onlyInputSet.has(normalizePostUrl(input));
+      })
+      .filter((row) => row.fields['红人名称'] || readLinkCell(row.fields['红人链接']))
+      .filter((row) => supportedPlatforms.has(row.platform))
+      .filter((row) => (normalizedPlatformFilter === 'all' ? true : row.platform === normalizedPlatformFilter));
     const targetedRows = onlyInputSet.size
       ? selectedRows.filter((row) => {
           const input = readLinkCell(row.fields['红人链接']) || String(row.fields['红人名称'] || '').trim();
@@ -2606,6 +2680,7 @@ app.post('/api/local/discover', async (req, res) => {
       limitInfluencers: limit,
       skipInfluencers: offset,
       platformFilter: normalizedPlatformFilter,
+      includeUnmonitoredTargets: Boolean(includeUnmonitoredTargets),
       usageUsd: Number(totalUsageUsd.toFixed(6)),
       scraped: totalScraped,
       matched: totalMatched,

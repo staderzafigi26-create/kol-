@@ -172,7 +172,7 @@
       "红人编码": "EU-Zoe-036",
       "地区": "EU",
       "负责人": "Zoe",
-      "红人粉丝数据": 31800,
+      "红人粉丝数据": 32000,
       "追踪优先级": "P0 立刻追踪",
       "追踪评分": "135",
       "追踪原因": "2026合作未上线/未登记上线；当前本地未登记视频；普通/小体量达人更需要追踪",
@@ -180,7 +180,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.864Z",
-    "updatedAt": "2026-06-11T10:16:58.277Z"
+    "updatedAt": "2026-06-14T07:33:38.954Z"
   },
   {
     "id": "0YN3sy1mfb",
@@ -295,7 +295,7 @@
       "红人编码": "US-Ryan-048",
       "地区": "US",
       "负责人": "Ryan",
-      "红人粉丝数据": 112000,
+      "红人粉丝数据": 114000,
       "追踪优先级": "P2 低频追踪",
       "追踪评分": "75",
       "追踪原因": "2026普通达人需继续追上线；普通/小体量达人更需要追踪",
@@ -315,7 +315,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T09:28:16.068Z"
   },
   {
     "id": "0svhCzhPi6",
@@ -374,7 +374,7 @@
       "红人编码": "US-Ryan-030",
       "地区": "US",
       "负责人": "Ryan",
-      "红人粉丝数据": 273000,
+      "红人粉丝数据": 274000,
       "追踪优先级": "P3 暂缓",
       "追踪评分": "-50",
       "追踪原因": "头腰部已上线且未出单，低优先",
@@ -386,7 +386,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T09:45:31.557Z"
   },
   {
     "id": "18PmBKgjhL",
@@ -526,7 +526,7 @@
       "红人编码": "US-Stefan-158",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 763000,
+      "红人粉丝数据": 919000,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-07",
       "追踪优先级": "P3 暂缓",
@@ -536,7 +536,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T08:54:26.541Z"
   },
   {
     "id": "1UDfo0Z55t",
@@ -553,7 +553,7 @@
       "红人编码": "US-Ryan-016",
       "地区": "US",
       "负责人": "Ryan",
-      "红人粉丝数据": 2220,
+      "红人粉丝数据": 2290,
       "追踪优先级": "P2 低频追踪",
       "追踪评分": "75",
       "追踪原因": "2026普通达人需继续追上线；普通/小体量达人更需要追踪",
@@ -561,11 +561,15 @@
       "url": {
         "text": "https://www.youtube.com/watch?v=OGz0VAicutQ",
         "link": "https://www.youtube.com/watch?v=OGz0VAicutQ"
+      },
+      "url2": {
+        "text": "https://www.youtube.com/watch?v=gUjGD9ix_3Y",
+        "link": "https://www.youtube.com/watch?v=gUjGD9ix_3Y"
       }
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T09:26:55.984Z"
   },
   {
     "id": "1Y8wjx9OBK",
@@ -582,7 +586,7 @@
       "红人编码": "US-Stefan-059",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 90200,
+      "红人粉丝数据": 91100,
       "追踪优先级": "P3 暂缓",
       "追踪评分": "20",
       "追踪原因": "普通/小体量达人更需要追踪",
@@ -602,7 +606,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T08:49:24.337Z"
   },
   {
     "id": "1Yx28yO50P",
@@ -758,7 +762,7 @@
       "红人编码": "US-Lexy-079",
       "地区": "US",
       "负责人": "Lexy",
-      "红人粉丝数据": 81,
+      "红人粉丝数据": 82,
       "追踪优先级": "P0 立刻追踪",
       "追踪评分": "135",
       "追踪原因": "2026合作未上线/未登记上线；当前本地未登记视频；普通/小体量达人更需要追踪",
@@ -766,7 +770,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": "2026-06-07T07:19:08.547Z"
+    "updatedAt": "2026-06-14T08:55:23.005Z"
   },
   {
     "id": "1wzNPorXem",
@@ -922,7 +926,7 @@
   {
     "id": "2KekZjJHpT",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.youtube.com/@Levi_farias",
         "text": "https://www.youtube.com/@Levi_farias"
@@ -942,7 +946,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T07:05:35.315Z"
   },
   {
     "id": "2bZkqMn3D2",
@@ -1177,7 +1181,7 @@
       "红人编码": "EU-Zoe-021",
       "地区": "EU",
       "负责人": "Zoe",
-      "红人粉丝数据": 13000,
+      "红人粉丝数据": 13100,
       "追踪优先级": "P2 低频追踪",
       "追踪评分": "75",
       "追踪原因": "2026普通达人需继续追上线；普通/小体量达人更需要追踪",
@@ -1185,7 +1189,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T10:03:58.395Z"
   },
   {
     "id": "2tQm24vGVK",
@@ -1388,7 +1392,7 @@
       "红人编码": "EU-Zoe-036",
       "地区": "EU",
       "负责人": "Zoe",
-      "红人粉丝数据": 10200,
+      "红人粉丝数据": 10800,
       "追踪优先级": "P0 立刻追踪",
       "追踪评分": "135",
       "追踪原因": "2026合作未上线/未登记上线；当前本地未登记视频；普通/小体量达人更需要追踪",
@@ -1396,7 +1400,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": "2026-06-07T07:21:41.630Z"
+    "updatedAt": "2026-06-14T09:59:38.254Z"
   },
   {
     "id": "3HK6ANRPuU",
@@ -1468,7 +1472,7 @@
   {
     "id": "3JxPVzecU1",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.youtube.com/@bikelifejelly6620/shorts",
         "text": "https://www.youtube.com/@bikelifejelly6620/shorts"
@@ -1490,7 +1494,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T06:58:21.022Z"
   },
   {
     "id": "3Mw1aCTqDU",
@@ -1507,7 +1511,7 @@
       "红人编码": "US-Stefan-079",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 24200,
+      "红人粉丝数据": 25700,
       "追踪优先级": "P3 暂缓",
       "追踪评分": "20",
       "追踪原因": "普通/小体量达人更需要追踪",
@@ -1515,7 +1519,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T09:33:24.007Z"
   },
   {
     "id": "3PfXHImu6L",
@@ -1578,7 +1582,7 @@
       "红人编码": "US-Stefan-051",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 17700,
+      "红人粉丝数据": 18000,
       "追踪优先级": "P0 立刻追踪",
       "追踪评分": "120",
       "追踪原因": "正在出单；普通/小体量达人更需要追踪",
@@ -1594,7 +1598,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": "2026-06-11T10:34:51.779Z"
+    "updatedAt": "2026-06-14T07:43:17.119Z"
   },
   {
     "id": "3SOD6BbFZQ",
@@ -1651,7 +1655,7 @@
   {
     "id": "3Sob6QBZve",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.youtube.com/@Leecampaign",
         "text": "https://www.youtube.com/@Leecampaign"
@@ -1670,7 +1674,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T07:05:35.315Z"
   },
   {
     "id": "3UEcrsrLQr",
@@ -1708,7 +1712,7 @@
       "红人编码": "US-Stefan-030",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 31500,
+      "红人粉丝数据": 32000,
       "追踪优先级": "P3 暂缓",
       "追踪评分": "20",
       "追踪原因": "普通/小体量达人更需要追踪",
@@ -1716,7 +1720,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": "2026-06-11T09:55:33.682Z"
+    "updatedAt": "2026-06-14T07:37:44.776Z"
   },
   {
     "id": "3Vi43tnpkl",
@@ -1852,7 +1856,7 @@
       "红人编码": "US-Lexy-070",
       "地区": "US",
       "负责人": "Lexy",
-      "红人粉丝数据": 7250000,
+      "红人粉丝数据": 7260000,
       "追踪优先级": "P3 暂缓",
       "追踪评分": "-50",
       "追踪原因": "头腰部已上线且未出单，低优先",
@@ -1860,12 +1864,12 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T09:39:05.601Z"
   },
   {
     "id": "3hdfQ53tWJ",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.youtube.com/@Bbybippinnn",
         "text": "https://www.youtube.com/@Bbybippinnn"
@@ -1887,7 +1891,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T06:58:21.022Z"
   },
   {
     "id": "3pEsLRvlo5",
@@ -2115,7 +2119,7 @@
   {
     "id": "4DsiBzS2cR",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.tiktok.com/@leecampaign",
         "text": "https://www.tiktok.com/@leecampaign"
@@ -2135,7 +2139,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T07:05:35.315Z"
   },
   {
     "id": "4IiB3sUWN8",
@@ -2179,7 +2183,7 @@
       "红人编码": "US-Lexy-012",
       "地区": "US",
       "负责人": "Lexy",
-      "红人粉丝数据": 96300,
+      "红人粉丝数据": 98200,
       "追踪优先级": "P0 立刻追踪",
       "追踪评分": "120",
       "追踪原因": "正在出单；普通/小体量达人更需要追踪",
@@ -2191,12 +2195,12 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": "2026-06-11T10:10:52.203Z"
+    "updatedAt": "2026-06-14T07:31:34.312Z"
   },
   {
     "id": "4Pdse3GAHs",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.youtube.com/@Izabela_Rose19",
         "text": "https://www.youtube.com/@Izabela_Rose19"
@@ -2218,7 +2222,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T07:05:35.315Z"
   },
   {
     "id": "4S1ktGMoiD",
@@ -2331,7 +2335,7 @@
       "红人编码": "US-Stefan-030",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 31500,
+      "红人粉丝数据": 32000,
       "追踪优先级": "P3 暂缓",
       "追踪评分": "20",
       "追踪原因": "普通/小体量达人更需要追踪",
@@ -2351,7 +2355,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": "2026-06-11T09:55:33.682Z"
+    "updatedAt": "2026-06-14T07:37:44.776Z"
   },
   {
     "id": "4nCjNGExO7",
@@ -2368,7 +2372,7 @@
       "红人编码": "EU-Zoe-014",
       "地区": "EU",
       "负责人": "Zoe",
-      "红人粉丝数据": 73900,
+      "红人粉丝数据": 79400,
       "追踪优先级": "P3 暂缓",
       "追踪评分": "-50",
       "追踪原因": "头腰部已上线且未出单，低优先",
@@ -2384,7 +2388,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": "2026-06-11T10:13:12.651Z"
+    "updatedAt": "2026-06-14T07:39:26.235Z"
   },
   {
     "id": "4rnDy9VAXZ",
@@ -2528,7 +2532,7 @@
   {
     "id": "4zOlvo1lcm",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.tiktok.com/@austinperryofficial",
         "text": "https://www.tiktok.com/@austinperryofficial"
@@ -2550,7 +2554,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T07:05:35.315Z"
   },
   {
     "id": "52UXylRzgX",
@@ -2644,7 +2648,7 @@
   {
     "id": "558UDvb86z",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.youtube.com/@chrisrasizzi/shorts",
         "text": "https://www.youtube.com/@chrisrasizzi/shorts"
@@ -2666,7 +2670,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T07:05:35.315Z"
   },
   {
     "id": "56wFNI8WVy",
@@ -2806,7 +2810,7 @@
       "红人编码": "US-Ryan-027",
       "地区": "US",
       "负责人": "Ryan",
-      "红人粉丝数据": 20100,
+      "红人粉丝数据": 20200,
       "追踪优先级": "P2 低频追踪",
       "追踪评分": "75",
       "追踪原因": "2026普通达人需继续追上线；普通/小体量达人更需要追踪",
@@ -2822,12 +2826,12 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T08:47:48.483Z"
   },
   {
     "id": "5Ee0glVRjY",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.instagram.com/bbybippinnn/",
         "text": "https://www.instagram.com/bbybippinnn/"
@@ -2849,7 +2853,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T06:58:21.022Z"
   },
   {
     "id": "5Lrce5oZNJ",
@@ -2960,7 +2964,7 @@
   {
     "id": "5a5X82zCBB",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.youtube.com/@dns59/shorts",
         "text": "https://www.youtube.com/@dns59/shorts"
@@ -2982,7 +2986,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T06:58:21.022Z"
   },
   {
     "id": "5f8yeWZgIS",
@@ -3039,7 +3043,7 @@
   {
     "id": "5grQ3PjzHI",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.instagram.com/malaysiainthecity/",
         "text": "https://www.instagram.com/malaysiainthecity/"
@@ -3061,7 +3065,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T07:05:35.315Z"
   },
   {
     "id": "5hCS5FhTot",
@@ -3386,7 +3390,7 @@
   {
     "id": "6Et6lkToP1",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.instagram.com/thehockingadventurebus/",
         "text": "https://www.instagram.com/thehockingadventurebus/"
@@ -3408,7 +3412,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T07:05:35.315Z"
   },
   {
     "id": "6Ffccp6lyf",
@@ -3465,7 +3469,7 @@
   {
     "id": "6TRYIJRwlK",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.tiktok.com/@clapped.q20",
         "text": "https://www.tiktok.com/@clapped.q20"
@@ -3487,7 +3491,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T06:58:21.022Z"
   },
   {
     "id": "6YJ0fTvxN2",
@@ -3554,7 +3558,7 @@
       "红人编码": "UK-Zoe-004",
       "地区": "UK",
       "负责人": "Zoe",
-      "红人粉丝数据": 100500,
+      "红人粉丝数据": 100900,
       "追踪优先级": "P2 低频追踪",
       "追踪评分": "75",
       "追踪原因": "2026普通达人需继续追上线；普通/小体量达人更需要追踪",
@@ -3574,7 +3578,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": "2026-06-11T10:10:24.371Z"
+    "updatedAt": "2026-06-14T07:31:06.041Z"
   },
   {
     "id": "6eVGBAZOA9",
@@ -3699,7 +3703,7 @@
   {
     "id": "6w7FljAAJK",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.tiktok.com/@starlineworld.co",
         "text": "https://www.tiktok.com/@starlineworld.co"
@@ -3719,7 +3723,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T06:58:21.022Z"
   },
   {
     "id": "6ybWhwyR7x",
@@ -3915,7 +3919,7 @@
       "红人编码": "CA-Ryan-005",
       "地区": "CA",
       "负责人": "Ryan",
-      "红人粉丝数据": 985,
+      "红人粉丝数据": 986,
       "追踪优先级": "P0 立刻追踪",
       "追踪评分": "135",
       "追踪原因": "2026合作未上线/未登记上线；当前本地未登记视频；普通/小体量达人更需要追踪",
@@ -3923,7 +3927,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": "2026-06-07T07:36:18.880Z"
+    "updatedAt": "2026-06-14T10:08:45.284Z"
   },
   {
     "id": "7DA7i1knWz",
@@ -4284,7 +4288,7 @@
   {
     "id": "7f10yBpo1m",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.instagram.com/mar.f1icks/",
         "text": "https://www.instagram.com/mar.f1icks/"
@@ -4306,7 +4310,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T07:05:35.315Z"
   },
   {
     "id": "7hQjfx42ZB",
@@ -4436,7 +4440,7 @@
   {
     "id": "7rRPLCEeGX",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.tiktok.com/@kalanikai42",
         "text": "https://www.tiktok.com/@kalanikai42"
@@ -4456,7 +4460,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T07:05:35.315Z"
   },
   {
     "id": "7tQWuxfipY",
@@ -4631,7 +4635,7 @@
       "红人编码": "US-Ryan-016",
       "地区": "US",
       "负责人": "Ryan",
-      "红人粉丝数据": 2230,
+      "红人粉丝数据": 2290,
       "追踪优先级": "P2 低频追踪",
       "追踪评分": "75",
       "追踪原因": "2026普通达人需继续追上线；普通/小体量达人更需要追踪",
@@ -4651,7 +4655,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T09:26:55.985Z"
   },
   {
     "id": "8EGUWywbQp",
@@ -4698,7 +4702,7 @@
   {
     "id": "8JmWE0GPg3",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.tiktok.com/@ozbikedad",
         "text": "https://www.tiktok.com/@ozbikedad"
@@ -4718,7 +4722,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T06:58:21.022Z"
   },
   {
     "id": "8O8BBdi75i",
@@ -4735,7 +4739,7 @@
       "红人编码": "US-Ryan-047",
       "地区": "US",
       "负责人": "Ryan",
-      "红人粉丝数据": 71100,
+      "红人粉丝数据": 71900,
       "追踪优先级": "P0 立刻追踪",
       "追踪评分": "135",
       "追踪原因": "2026合作未上线/未登记上线；当前本地未登记视频；普通/小体量达人更需要追踪",
@@ -4743,7 +4747,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T09:36:05.961Z"
   },
   {
     "id": "8OaMSBMgcX",
@@ -4848,7 +4852,7 @@
   {
     "id": "8WJow8lxJr",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.instagram.com/austinperryofficial/",
         "text": "https://www.instagram.com/austinperryofficial/"
@@ -4870,7 +4874,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T07:05:35.315Z"
   },
   {
     "id": "8X1l0OKwhN",
@@ -5095,7 +5099,7 @@
       "红人编码": "US-Vivi-003",
       "地区": "US",
       "负责人": "Vivi",
-      "红人粉丝数据": "51",
+      "红人粉丝数据": 56,
       "追踪优先级": "P3 暂缓",
       "追踪评分": "20",
       "追踪原因": "普通/小体量达人更需要追踪",
@@ -5103,7 +5107,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T10:18:22.063Z"
   },
   {
     "id": "94SPDnz9VE",
@@ -5220,7 +5224,7 @@
       "红人编码": "US-Ryan-002",
       "地区": "US",
       "负责人": "Ryan",
-      "红人粉丝数据": 5880,
+      "红人粉丝数据": 5930,
       "追踪优先级": "P2 低频追踪",
       "追踪评分": "75",
       "追踪原因": "2026普通达人需继续追上线；普通/小体量达人更需要追踪",
@@ -5228,7 +5232,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T10:12:14.677Z"
   },
   {
     "id": "9AiIFVPjlV",
@@ -5326,7 +5330,7 @@
   {
     "id": "9SqrYJFHD7",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.youtube.com/@jahjah_4x/shorts",
         "text": "https://www.youtube.com/@jahjah_4x/shorts"
@@ -5346,7 +5350,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T06:58:21.022Z"
   },
   {
     "id": "9VbXBd4jnf",
@@ -5499,7 +5503,7 @@
       "红人编码": "US-Lexy-012",
       "地区": "US",
       "负责人": "Lexy",
-      "红人粉丝数据": 24100,
+      "红人粉丝数据": 26500,
       "追踪优先级": "P0 立刻追踪",
       "追踪评分": "120",
       "追踪原因": "正在出单；普通/小体量达人更需要追踪",
@@ -5519,7 +5523,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T09:04:29.429Z"
   },
   {
     "id": "9oQQHdUZKD",
@@ -5625,7 +5629,7 @@
       "红人编码": "EU-Zoe-001",
       "地区": "EU",
       "负责人": "Zoe",
-      "红人粉丝数据": 18200,
+      "红人粉丝数据": 18400,
       "追踪优先级": "P2 低频追踪",
       "追踪评分": "75",
       "追踪原因": "2026普通达人需继续追上线；普通/小体量达人更需要追踪",
@@ -5645,7 +5649,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": "2026-06-11T10:09:30.790Z"
+    "updatedAt": "2026-06-14T07:30:33.342Z"
   },
   {
     "id": "A5pPZt4oQ7",
@@ -5673,7 +5677,7 @@
   {
     "id": "A6ESF2k5O9",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.youtube.com/@x3tyler",
         "text": "https://www.youtube.com/@x3tyler"
@@ -5695,7 +5699,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T07:05:35.315Z"
   },
   {
     "id": "A8PCGiOri6",
@@ -5727,7 +5731,7 @@
   {
     "id": "AAFdoul91W",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.tiktok.com/search?q=RunPlayBack&t=1780468786789",
         "text": "https://www.tiktok.com/search?q=RunPlayBack&t=1780468786789"
@@ -5749,7 +5753,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T06:58:21.022Z"
   },
   {
     "id": "AD03FDJzBN",
@@ -5785,7 +5789,7 @@
         "text": "https://www.instagram.com/tgracing_org/"
       },
       "平台": "instagramreels",
-      "是否出视频": "否",
+      "是否出视频": "是",
       "红人名称": "Tgracing.org / tx3tyler1",
       "样品型号": "yozma, yozmasport，in10",
       "红人编码": "US-Lexy-058",
@@ -5797,7 +5801,11 @@
       "追踪优先级": "P2 低频追踪",
       "追踪评分": "75",
       "追踪原因": "2026普通达人需继续追上线；普通/小体量达人更需要追踪",
-      "追踪批次更新时间": "2026-06-07"
+      "追踪批次更新时间": "2026-06-07",
+      "url": {
+        "text": "https://www.instagram.com/p/DZYy7oXKrx4/",
+        "link": "https://www.instagram.com/p/DZYy7oXKrx4/"
+      }
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
@@ -5941,7 +5949,7 @@
       "红人编码": "US-Stefan-141",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 274000,
+      "红人粉丝数据": 277000,
       "追踪优先级": "P0 立刻追踪",
       "追踪评分": "150",
       "追踪原因": "正在出单；2026已上线但仍出单",
@@ -5949,7 +5957,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": "2026-06-07T07:15:04.902Z"
+    "updatedAt": "2026-06-14T09:12:45.582Z"
   },
   {
     "id": "AiuhjAvVrg",
@@ -6010,7 +6018,7 @@
       "红人编码": "US-Lexy-012",
       "地区": "US",
       "负责人": "Lexy",
-      "红人粉丝数据": 24100,
+      "红人粉丝数据": 26500,
       "追踪优先级": "P0 立刻追踪",
       "追踪评分": "120",
       "追踪原因": "正在出单；普通/小体量达人更需要追踪",
@@ -6022,7 +6030,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T09:04:29.429Z"
   },
   {
     "id": "AvuDYFn4m5",
@@ -6062,7 +6070,7 @@
       "红人编码": "US-Stefan-157",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 12100,
+      "红人粉丝数据": 14100,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-07",
       "追踪优先级": "P0 立刻追踪",
@@ -6072,7 +6080,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": "2026-06-07T07:16:58.942Z"
+    "updatedAt": "2026-06-14T08:44:24.250Z"
   },
   {
     "id": "B5IsN4VyNH",
@@ -6241,7 +6249,7 @@
   {
     "id": "BJojlJxhdr",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.instagram.com/ozbikedad/",
         "text": "https://www.instagram.com/ozbikedad/"
@@ -6263,7 +6271,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T06:58:21.022Z"
   },
   {
     "id": "BLWbDB4IDz",
@@ -6442,7 +6450,7 @@
       "红人编码": "US-Nancy-005",
       "地区": "US",
       "负责人": "Nancy",
-      "红人粉丝数据": 9610,
+      "红人粉丝数据": 9730,
       "追踪优先级": "P0 立刻追踪",
       "追踪评分": "120",
       "追踪原因": "正在出单；普通/小体量达人更需要追踪",
@@ -6450,12 +6458,12 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": "2026-06-07T07:54:09.959Z"
+    "updatedAt": "2026-06-14T09:11:57.663Z"
   },
   {
     "id": "Bjagsv0SMi",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.tiktok.com/@bikelifejelly",
         "text": "https://www.tiktok.com/@bikelifejelly"
@@ -6477,7 +6485,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T06:58:21.022Z"
   },
   {
     "id": "BjsMnSe7SL",
@@ -6521,7 +6529,7 @@
       "红人编码": "US-Vivi-007",
       "地区": "US",
       "负责人": "Vivi",
-      "红人粉丝数据": 20700,
+      "红人粉丝数据": 21600,
       "追踪优先级": "P0 立刻追踪",
       "追踪评分": "120",
       "追踪原因": "正在出单；普通/小体量达人更需要追踪",
@@ -6541,7 +6549,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": "2026-06-07T07:55:41.211Z"
+    "updatedAt": "2026-06-14T09:29:19.071Z"
   },
   {
     "id": "Bl3NQFjWol",
@@ -6558,7 +6566,7 @@
       "红人编码": "US-Stefan-079",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 24100,
+      "红人粉丝数据": 25700,
       "追踪优先级": "P3 暂缓",
       "追踪评分": "20",
       "追踪原因": "普通/小体量达人更需要追踪",
@@ -6566,7 +6574,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T09:33:24.008Z"
   },
   {
     "id": "BnkqNLIvG3",
@@ -6669,7 +6677,7 @@
   {
     "id": "BvEkniotdM",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.youtube.com/@chrisrasizzi/videos",
         "text": "https://www.youtube.com/@chrisrasizzi/videos"
@@ -6691,7 +6699,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T07:05:35.315Z"
   },
   {
     "id": "C3zmLAwDos",
@@ -7152,7 +7160,7 @@
   {
     "id": "CzYxkYl1z5",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.instagram.com/_mruncuttoutdoors/",
         "text": "https://www.instagram.com/_mruncuttoutdoors/"
@@ -7174,7 +7182,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T07:05:35.315Z"
   },
   {
     "id": "Czg98Oxj2Z",
@@ -7347,7 +7355,7 @@
       "红人编码": "US-Ryan-043",
       "地区": "US",
       "负责人": "Ryan",
-      "红人粉丝数据": 1410,
+      "红人粉丝数据": 1430,
       "追踪优先级": "P0 立刻追踪",
       "追踪评分": "135",
       "追踪原因": "2026合作未上线/未登记上线；当前本地未登记视频；普通/小体量达人更需要追踪",
@@ -7355,7 +7363,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T09:44:24.272Z"
   },
   {
     "id": "DV75lOx2sD",
@@ -7666,7 +7674,7 @@
   {
     "id": "DyirxypwVO",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.youtube.com/@jahjah_4x/videos",
         "text": "https://www.youtube.com/@jahjah_4x/videos"
@@ -7688,12 +7696,12 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T06:58:21.022Z"
   },
   {
     "id": "E0wmD7ooi3",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.instagram.com/bikelifemikey97/",
         "text": "https://www.instagram.com/bikelifemikey97/"
@@ -7715,7 +7723,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T07:05:35.315Z"
   },
   {
     "id": "E3fLyiSMvl",
@@ -8042,7 +8050,7 @@
       "红人编码": "US-Stefan-166",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 350000,
+      "红人粉丝数据": 356000,
       "追踪优先级": "P3 暂缓",
       "追踪评分": "-50",
       "追踪原因": "头腰部已上线且未出单，低优先",
@@ -8062,12 +8070,12 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": "2026-06-11T09:59:31.733Z"
+    "updatedAt": "2026-06-14T07:39:01.023Z"
   },
   {
     "id": "EXfmEQI68G",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.instagram.com/izabelarose19/",
         "text": "https://www.instagram.com/izabelarose19/"
@@ -8089,7 +8097,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T07:05:35.315Z"
   },
   {
     "id": "EcItKW3TF7",
@@ -8186,7 +8194,7 @@
   {
     "id": "El8bSmoE01",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.youtube.com/@KellyChameleons/videos",
         "text": "https://www.youtube.com/@KellyChameleons/videos"
@@ -8208,7 +8216,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T07:05:35.315Z"
   },
   {
     "id": "ElT8PCyVeN",
@@ -8240,7 +8248,7 @@
   {
     "id": "EsM0Js338t",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.tiktok.com/@javabikez",
         "text": "https://www.tiktok.com/@javabikez"
@@ -8261,7 +8269,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T07:05:35.315Z"
   },
   {
     "id": "EyJ5PJmYCV",
@@ -8323,7 +8331,7 @@
   {
     "id": "F2lsCiyot2",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.tiktok.com/@562.ultra",
         "text": "https://www.tiktok.com/@562.ultra"
@@ -8345,7 +8353,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": "2026-06-07T10:33:44.491Z"
+    "updatedAt": "2026-06-14T07:05:35.315Z"
   },
   {
     "id": "F4761MDRph",
@@ -8475,7 +8483,7 @@
       "红人编码": "US-Ryan-021",
       "地区": "US",
       "负责人": "Ryan",
-      "红人粉丝数据": 48200,
+      "红人粉丝数据": 49100,
       "追踪优先级": "P2 低频追踪",
       "追踪评分": "75",
       "追踪原因": "2026普通达人需继续追上线；普通/小体量达人更需要追踪",
@@ -8483,7 +8491,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": "2026-06-11T10:23:08.311Z"
+    "updatedAt": "2026-06-14T07:41:41.315Z"
   },
   {
     "id": "FIDm0irKYy",
@@ -8597,7 +8605,7 @@
   {
     "id": "FmL4h70r9j",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.youtube.com/@Mruncuttt/shorts",
         "text": "https://www.youtube.com/@Mruncuttt/shorts"
@@ -8619,7 +8627,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T07:05:35.315Z"
   },
   {
     "id": "FmTBbJ3a9L",
@@ -8875,7 +8883,7 @@
       "红人编码": "US-Stefan-059",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 67900,
+      "红人粉丝数据": 91100,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-07",
       "追踪优先级": "P3 暂缓",
@@ -8885,7 +8893,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T08:49:24.337Z"
   },
   {
     "id": "GMpm6gLPxC",
@@ -8902,7 +8910,7 @@
       "红人编码": "US-Stefan-079",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 24300,
+      "红人粉丝数据": 25700,
       "追踪优先级": "P3 暂缓",
       "追踪评分": "20",
       "追踪原因": "普通/小体量达人更需要追踪",
@@ -8910,7 +8918,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T09:33:24.008Z"
   },
   {
     "id": "GNoca6MhBi",
@@ -8949,7 +8957,7 @@
       "红人编码": "EU-Zoe-022",
       "地区": "EU",
       "负责人": "Zoe",
-      "红人粉丝数据": 66000,
+      "红人粉丝数据": 66100,
       "追踪优先级": "P2 低频追踪",
       "追踪评分": "75",
       "追踪原因": "2026普通达人需继续追上线；普通/小体量达人更需要追踪",
@@ -8957,7 +8965,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T09:15:47.020Z"
   },
   {
     "id": "GVyLlYbn73",
@@ -9146,7 +9154,7 @@
       "红人编码": "US-Ryan-010",
       "地区": "US",
       "负责人": "Ryan",
-      "红人粉丝数据": 14800,
+      "红人粉丝数据": 16200,
       "追踪优先级": "P2 低频追踪",
       "追踪评分": "75",
       "追踪原因": "2026普通达人需继续追上线；普通/小体量达人更需要追踪",
@@ -9158,7 +9166,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T08:46:09.399Z"
   },
   {
     "id": "GvPYyfNzIu",
@@ -9273,7 +9281,7 @@
   {
     "id": "H1ekrVOEMN",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.tiktok.com/@gtaboyyys",
         "text": "https://www.tiktok.com/@gtaboyyys"
@@ -9295,7 +9303,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T07:05:35.315Z"
   },
   {
     "id": "H8qOINRrTS",
@@ -9373,7 +9381,7 @@
       "红人编码": "US-Ryan-023",
       "地区": "US",
       "负责人": "Ryan",
-      "红人粉丝数据": 9980000,
+      "红人粉丝数据": 10000000,
       "追踪优先级": "P0 立刻追踪",
       "追踪评分": "150",
       "追踪原因": "正在出单；2026已上线但仍出单",
@@ -9381,7 +9389,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T08:52:31.051Z"
   },
   {
     "id": "HEvreyRc7c",
@@ -9503,7 +9511,7 @@
       "红人编码": "US-Stefan-172",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 11800,
+      "红人粉丝数据": 11900,
       "追踪优先级": "P0 立刻追踪",
       "追踪评分": "135",
       "追踪原因": "2026合作未上线/未登记上线；当前本地未登记视频；普通/小体量达人更需要追踪",
@@ -9511,7 +9519,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T09:24:41.791Z"
   },
   {
     "id": "HVbr7IX90T",
@@ -9549,7 +9557,7 @@
       "红人编码": "US-Lexy-073",
       "地区": "US",
       "负责人": "Lexy",
-      "红人粉丝数据": 727,
+      "红人粉丝数据": 739,
       "追踪优先级": "P1 本周追踪",
       "追踪评分": "115",
       "追踪原因": "2026合作未上线/未登记上线；当前本地未登记视频",
@@ -9557,7 +9565,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": "2026-06-07T08:00:19.849Z"
+    "updatedAt": "2026-06-14T08:44:57.673Z"
   },
   {
     "id": "HgDmrnMPK7",
@@ -9637,7 +9645,7 @@
   {
     "id": "Hl17nbZ1ba",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.youtube.com/@RunPlayBack/shorts",
         "text": "https://www.youtube.com/@RunPlayBack/shorts"
@@ -9657,7 +9665,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T06:58:21.022Z"
   },
   {
     "id": "HnyziQ2Td1",
@@ -9698,7 +9706,7 @@
       "红人编码": "US-Stefan-059",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 90200,
+      "红人粉丝数据": 91100,
       "追踪优先级": "P3 暂缓",
       "追踪评分": "20",
       "追踪原因": "普通/小体量达人更需要追踪",
@@ -9718,7 +9726,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T08:49:24.337Z"
   },
   {
     "id": "HsBdUS0SE7",
@@ -9862,7 +9870,7 @@
   {
     "id": "I9jDaiUBNL",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.tiktok.com/@wafflekozik",
         "text": "https://www.tiktok.com/@wafflekozik"
@@ -9884,7 +9892,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T07:05:35.315Z"
   },
   {
     "id": "IECKjO2A6e",
@@ -9976,7 +9984,7 @@
       "红人编码": "US-Nancy-005",
       "地区": "US",
       "负责人": "Nancy",
-      "红人粉丝数据": 9610,
+      "红人粉丝数据": 9730,
       "追踪优先级": "P0 立刻追踪",
       "追踪评分": "120",
       "追踪原因": "正在出单；普通/小体量达人更需要追踪",
@@ -9984,7 +9992,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": "2026-06-07T07:54:09.959Z"
+    "updatedAt": "2026-06-14T09:11:57.663Z"
   },
   {
     "id": "IMNKugbKPX",
@@ -10037,7 +10045,7 @@
   {
     "id": "IP5vgBCr1l",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.tiktok.com/@javabikez",
         "text": "https://www.tiktok.com/@javabikez"
@@ -10058,7 +10066,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T07:05:35.315Z"
   },
   {
     "id": "IU3Zi71OQc",
@@ -10146,7 +10154,7 @@
       "红人编码": "US-Nancy-005",
       "地区": "US",
       "负责人": "Nancy",
-      "红人粉丝数据": 35200,
+      "红人粉丝数据": 37200,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-07",
       "追踪优先级": "P0 立刻追踪",
@@ -10168,7 +10176,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": "2026-06-07T08:33:16.365Z"
+    "updatedAt": "2026-06-14T07:33:09.536Z"
   },
   {
     "id": "IcVj17JWVQ",
@@ -10201,21 +10209,25 @@
         "text": "https://www.youtube.com/@Flow_Garage/videos"
       },
       "平台": "youtubevideo",
-      "是否出视频": "否",
+      "是否出视频": "是",
       "红人名称": "Florinaș",
       "样品型号": "yozma, yozmasport，in10",
       "红人编码": "EU-Zoe-038",
       "地区": "EU",
       "负责人": "Zoe",
-      "红人粉丝数据": 36400,
+      "红人粉丝数据": 36900,
       "追踪优先级": "P0 立刻追踪",
       "追踪评分": "135",
       "追踪原因": "2026合作未上线/未登记上线；当前本地未登记视频；普通/小体量达人更需要追踪",
-      "追踪批次更新时间": "2026-06-07"
+      "追踪批次更新时间": "2026-06-07",
+      "url": {
+        "text": "https://www.youtube.com/watch?v=1msqPqilhA0",
+        "link": "https://www.youtube.com/watch?v=1msqPqilhA0"
+      }
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T09:57:49.689Z"
   },
   {
     "id": "IjFWVkOTBR",
@@ -10291,7 +10303,7 @@
   {
     "id": "IyPAoH3zSx",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.youtube.com/runplayback/videos",
         "text": "https://www.youtube.com/runplayback/videos"
@@ -10313,7 +10325,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T06:58:21.022Z"
   },
   {
     "id": "J0irRwXLyO",
@@ -10382,7 +10394,7 @@
       "红人编码": "US-Stefan-067",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 91400,
+      "红人粉丝数据": 91800,
       "追踪优先级": "P3 暂缓",
       "追踪评分": "20",
       "追踪原因": "普通/小体量达人更需要追踪",
@@ -10394,7 +10406,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": "2026-06-11T10:39:51.864Z"
+    "updatedAt": "2026-06-14T07:49:19.864Z"
   },
   {
     "id": "J7LIaUejD2",
@@ -10531,7 +10543,7 @@
       "红人编码": "US-Stefan-051",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 17700,
+      "红人粉丝数据": 18000,
       "追踪优先级": "P0 立刻追踪",
       "追踪评分": "120",
       "追踪原因": "正在出单；普通/小体量达人更需要追踪",
@@ -10543,7 +10555,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": "2026-06-11T10:34:51.779Z"
+    "updatedAt": "2026-06-14T07:43:17.120Z"
   },
   {
     "id": "JMJu8RKYD7",
@@ -10560,7 +10572,7 @@
       "红人编码": "US-Stefan-051",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 17700,
+      "红人粉丝数据": 18000,
       "追踪优先级": "P0 立刻追踪",
       "追踪评分": "120",
       "追踪原因": "正在出单；普通/小体量达人更需要追踪",
@@ -10572,7 +10584,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": "2026-06-11T10:34:51.779Z"
+    "updatedAt": "2026-06-14T07:43:17.120Z"
   },
   {
     "id": "JNp85rx4en",
@@ -10763,7 +10775,7 @@
       "红人编码": "UK-Zoe-003",
       "地区": "UK",
       "负责人": "Zoe",
-      "红人粉丝数据": 84900,
+      "红人粉丝数据": 85400,
       "追踪优先级": "P2 低频追踪",
       "追踪评分": "75",
       "追踪原因": "2026普通达人需继续追上线；普通/小体量达人更需要追踪",
@@ -10775,7 +10787,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T08:56:50.441Z"
   },
   {
     "id": "JbLeaPAIzR",
@@ -10895,7 +10907,7 @@
       "红人编码": "US-Ryan-005",
       "地区": "US",
       "负责人": "Ryan",
-      "红人粉丝数据": 71500,
+      "红人粉丝数据": 71600,
       "追踪优先级": "P2 低频追踪",
       "追踪评分": "75",
       "追踪原因": "2026普通达人需继续追上线；普通/小体量达人更需要追踪",
@@ -10907,7 +10919,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T09:36:38.826Z"
   },
   {
     "id": "JtnnOccNT5",
@@ -11354,7 +11366,7 @@
   {
     "id": "Ko57Xfjdek",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.youtube.com/runplayback/videos",
         "text": "https://www.youtube.com/runplayback/videos"
@@ -11376,7 +11388,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T06:58:21.022Z"
   },
   {
     "id": "Ksn1hjhFbM",
@@ -11393,7 +11405,7 @@
       "红人编码": "US-Stefan-067",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 91400,
+      "红人粉丝数据": 91800,
       "追踪优先级": "P3 暂缓",
       "追踪评分": "20",
       "追踪原因": "普通/小体量达人更需要追踪",
@@ -11409,7 +11421,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": "2026-06-11T10:39:51.864Z"
+    "updatedAt": "2026-06-14T07:49:19.864Z"
   },
   {
     "id": "KsxLm5ubNH",
@@ -11441,7 +11453,7 @@
   {
     "id": "KvegM1zDaG",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.instagram.com/levi_farias/",
         "text": "https://www.instagram.com/levi_farias/"
@@ -11463,7 +11475,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T07:05:35.315Z"
   },
   {
     "id": "L1m1zfHImx",
@@ -11480,7 +11492,7 @@
       "红人编码": "US-Lexy-073",
       "地区": "US",
       "负责人": "Lexy",
-      "红人粉丝数据": 727,
+      "红人粉丝数据": 739,
       "追踪优先级": "P1 本周追踪",
       "追踪评分": "115",
       "追踪原因": "2026合作未上线/未登记上线；当前本地未登记视频",
@@ -11488,7 +11500,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": "2026-06-07T08:00:19.849Z"
+    "updatedAt": "2026-06-14T08:44:57.673Z"
   },
   {
     "id": "L2Su0Q98cb",
@@ -11577,7 +11589,7 @@
       "红人编码": "US-Lexy-041",
       "地区": "US",
       "负责人": "Lexy",
-      "红人粉丝数据": 6375,
+      "红人粉丝数据": 6397,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-07",
       "追踪优先级": "P0 立刻追踪",
@@ -11599,7 +11611,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": "2026-06-11T10:03:40.797Z"
+    "updatedAt": "2026-06-14T07:28:37.340Z"
   },
   {
     "id": "LDK7RgIZkn",
@@ -11759,7 +11771,7 @@
   {
     "id": "La3wen1nz7",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.tiktok.com/@runplayback",
         "text": "https://www.tiktok.com/@runplayback"
@@ -11781,7 +11793,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T06:58:21.022Z"
   },
   {
     "id": "LiBqaHDC7C",
@@ -12035,7 +12047,7 @@
       "红人编码": "EU-Zoe-043",
       "地区": "EU",
       "负责人": "Zoe",
-      "红人粉丝数据": 27900,
+      "红人粉丝数据": 29000,
       "追踪优先级": "P0 立刻追踪",
       "追踪评分": "135",
       "追踪原因": "2026合作未上线/未登记上线；当前本地未登记视频；普通/小体量达人更需要追踪",
@@ -12043,7 +12055,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T09:40:53.583Z"
   },
   {
     "id": "M6IB6zXYWP",
@@ -12465,7 +12477,7 @@
       "红人编码": "US-Lexy-068",
       "地区": "US",
       "负责人": "Lexy",
-      "红人粉丝数据": 1740,
+      "红人粉丝数据": 1770,
       "追踪优先级": "P0 立刻追踪",
       "追踪评分": "135",
       "追踪原因": "2026合作未上线/未登记上线；当前本地未登记视频；普通/小体量达人更需要追踪",
@@ -12473,7 +12485,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T09:22:10.364Z"
   },
   {
     "id": "MumB7btiZj",
@@ -12808,7 +12820,7 @@
   {
     "id": "NU8o3o8AsE",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.instagram.com/ridingwithjr/",
         "text": "https://www.instagram.com/ridingwithjr/"
@@ -12830,7 +12842,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T06:58:21.022Z"
   },
   {
     "id": "NV41hYE0KI",
@@ -13045,7 +13057,7 @@
       "红人编码": "US-Vivi-007",
       "地区": "US",
       "负责人": "Vivi",
-      "红人粉丝数据": 44000,
+      "红人粉丝数据": 44600,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-07",
       "追踪优先级": "P0 立刻追踪",
@@ -13067,12 +13079,12 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": "2026-06-11T10:32:39.864Z"
+    "updatedAt": "2026-06-14T07:35:42.955Z"
   },
   {
     "id": "Nq9DoER47i",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.youtube.com/@MidModifications/shorts",
         "text": "https://www.youtube.com/@MidModifications/shorts"
@@ -13092,7 +13104,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T06:58:21.022Z"
   },
   {
     "id": "Nr56wFFhQK",
@@ -13354,7 +13366,7 @@
         "text": "https://www.instagram.com/ffeerdiii/"
       },
       "平台": "instagramreels",
-      "是否出视频": "否",
+      "是否出视频": "是",
       "红人名称": "ffeerdiii",
       "样品型号": "yozma, yozmasport，in10",
       "红人编码": "EU-Zoe-034",
@@ -13366,7 +13378,11 @@
       "追踪优先级": "P0 立刻追踪",
       "追踪评分": "135",
       "追踪原因": "2026合作未上线/未登记上线；当前本地未登记视频；普通/小体量达人更需要追踪",
-      "追踪批次更新时间": "2026-06-07"
+      "追踪批次更新时间": "2026-06-07",
+      "url": {
+        "text": "https://www.instagram.com/p/DZZ3KSlMSQa/",
+        "link": "https://www.instagram.com/p/DZZ3KSlMSQa/"
+      }
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
@@ -13375,7 +13391,7 @@
   {
     "id": "OT46wLGL0D",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.youtube.com/@RidingwithJr/videos",
         "text": "https://www.youtube.com/@RidingwithJr/videos"
@@ -13395,7 +13411,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T06:58:21.022Z"
   },
   {
     "id": "OacvO6FM2k",
@@ -13422,7 +13438,7 @@
   {
     "id": "OrhT8pIpYk",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.tiktok.com/@bbybippinnn",
         "text": "https://www.tiktok.com/@bbybippinnn"
@@ -13444,12 +13460,12 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T06:58:21.022Z"
   },
   {
     "id": "Orttrr4vTz",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.youtube.com/@dns59/videos",
         "text": "https://www.youtube.com/@dns59/videos"
@@ -13469,7 +13485,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T06:58:21.022Z"
   },
   {
     "id": "OsgaxAyepC",
@@ -13660,7 +13676,7 @@
       "红人编码": "US-Stefan-030",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 31500,
+      "红人粉丝数据": 32000,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-07",
       "追踪优先级": "P3 暂缓",
@@ -13670,7 +13686,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": "2026-06-11T09:55:33.683Z"
+    "updatedAt": "2026-06-14T07:37:44.776Z"
   },
   {
     "id": "PFhI4fkt3I",
@@ -13735,7 +13751,7 @@
       "红人编码": "US-Stefan-047",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 186000,
+      "红人粉丝数据": 188000,
       "追踪优先级": "P0 立刻追踪",
       "追踪评分": "120",
       "追踪原因": "正在出单；普通/小体量达人更需要追踪",
@@ -13755,7 +13771,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": "2026-06-11T10:49:36.176Z"
+    "updatedAt": "2026-06-14T07:45:38.130Z"
   },
   {
     "id": "PPKWwCFbXq",
@@ -13772,7 +13788,7 @@
       "红人编码": "US-Ryan-047",
       "地区": "US",
       "负责人": "Ryan",
-      "红人粉丝数据": 71100,
+      "红人粉丝数据": 71900,
       "追踪优先级": "P0 立刻追踪",
       "追踪评分": "135",
       "追踪原因": "2026合作未上线/未登记上线；当前本地未登记视频；普通/小体量达人更需要追踪",
@@ -13780,7 +13796,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T09:36:05.961Z"
   },
   {
     "id": "PQzZQI3vl9",
@@ -13808,7 +13824,7 @@
   {
     "id": "PRNqvUHKJ2",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.instagram.com/kalanikai/",
         "text": "https://www.instagram.com/kalanikai/"
@@ -13830,7 +13846,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T07:05:35.315Z"
   },
   {
     "id": "PSWllL67pw",
@@ -13847,7 +13863,7 @@
       "红人编码": "US-Lexy-070",
       "地区": "US",
       "负责人": "Lexy",
-      "红人粉丝数据": 7250000,
+      "红人粉丝数据": 7260000,
       "追踪优先级": "P3 暂缓",
       "追踪评分": "-50",
       "追踪原因": "头腰部已上线且未出单，低优先",
@@ -13855,7 +13871,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T09:39:05.602Z"
   },
   {
     "id": "PX386O2k4h",
@@ -13901,7 +13917,7 @@
       "红人编码": "US-Stefan-172",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 11800,
+      "红人粉丝数据": 11900,
       "追踪优先级": "P0 立刻追踪",
       "追踪评分": "135",
       "追踪原因": "2026合作未上线/未登记上线；当前本地未登记视频；普通/小体量达人更需要追踪",
@@ -13909,7 +13925,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T09:24:41.791Z"
   },
   {
     "id": "PdUXuYaGKP",
@@ -13947,7 +13963,7 @@
       "红人编码": "US-Ryan-049",
       "地区": "US",
       "负责人": "Ryan",
-      "红人粉丝数据": 16200,
+      "红人粉丝数据": 16700,
       "追踪优先级": "P2 低频追踪",
       "追踪评分": "75",
       "追踪原因": "2026普通达人需继续追上线；普通/小体量达人更需要追踪",
@@ -13955,7 +13971,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T09:49:52.985Z"
   },
   {
     "id": "PgQLPgofbG",
@@ -14167,7 +14183,7 @@
   {
     "id": "QBXZXZExe6",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.tiktok.com/@bikelifemikey90",
         "text": "https://www.tiktok.com/@bikelifemikey90"
@@ -14189,7 +14205,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T07:05:35.315Z"
   },
   {
     "id": "QHtAl0ERjl",
@@ -14205,7 +14221,7 @@
       "红人编码": "US-Stefan-030",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 31500,
+      "红人粉丝数据": 32000,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-07",
       "追踪优先级": "P3 暂缓",
@@ -14215,7 +14231,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": "2026-06-11T09:55:33.683Z"
+    "updatedAt": "2026-06-14T07:37:44.776Z"
   },
   {
     "id": "QMofrcIMs8",
@@ -14232,7 +14248,7 @@
       "红人编码": "US-Stefan-158",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 911000,
+      "红人粉丝数据": 919000,
       "追踪优先级": "P3 暂缓",
       "追踪评分": "-50",
       "追踪原因": "头腰部已上线且未出单，低优先",
@@ -14240,7 +14256,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T08:54:26.542Z"
   },
   {
     "id": "QNEQaaaEs6",
@@ -14276,7 +14292,7 @@
   {
     "id": "QO0vTuJNDw",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.youtube.com/@wiley_rides",
         "text": "https://www.youtube.com/@wiley_rides"
@@ -14298,7 +14314,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T07:05:35.315Z"
   },
   {
     "id": "QPUmbybAFM",
@@ -14346,7 +14362,7 @@
       "红人编码": "UK-Zoe-005",
       "地区": "UK",
       "负责人": "Zoe",
-      "红人粉丝数据": 1130,
+      "红人粉丝数据": 1280,
       "追踪优先级": "P2 低频追踪",
       "追踪评分": "75",
       "追踪原因": "2026普通达人需继续追上线；普通/小体量达人更需要追踪",
@@ -14366,7 +14382,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T08:51:30.421Z"
   },
   {
     "id": "QS8eEGHp3h",
@@ -14410,7 +14426,7 @@
       "红人编码": "US-Ryan-014",
       "地区": "US",
       "负责人": "Ryan",
-      "红人粉丝数据": 711000,
+      "红人粉丝数据": 735000,
       "追踪优先级": "P1 本周追踪",
       "追踪评分": "115",
       "追踪原因": "2026合作未上线/未登记上线；当前本地未登记视频",
@@ -14418,7 +14434,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": "2026-06-07T08:01:27.343Z"
+    "updatedAt": "2026-06-14T09:19:07.305Z"
   },
   {
     "id": "QVWxPVl4hq",
@@ -14434,7 +14450,7 @@
       "红人编码": "US-Lexy-012",
       "地区": "US",
       "负责人": "Lexy",
-      "红人粉丝数据": 96300,
+      "红人粉丝数据": 98200,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-07",
       "追踪优先级": "P0 立刻追踪",
@@ -14444,7 +14460,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": "2026-06-11T10:10:52.203Z"
+    "updatedAt": "2026-06-14T07:31:34.313Z"
   },
   {
     "id": "QW7lMF7ltE",
@@ -14523,7 +14539,7 @@
   {
     "id": "QdntblSCy0",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.instagram.com/jahjah_4x/",
         "text": "https://www.instagram.com/jahjah_4x/"
@@ -14545,7 +14561,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T06:58:21.022Z"
   },
   {
     "id": "Qex4z9WS0w",
@@ -14656,7 +14672,7 @@
   {
     "id": "R3JkUK5WUS",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.instagram.com/runplayback/",
         "text": "https://www.instagram.com/runplayback/"
@@ -14678,7 +14694,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T06:58:21.022Z"
   },
   {
     "id": "RFoI89emtJ",
@@ -14743,7 +14759,7 @@
       "红人编码": "US-Stefan-096",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 2500,
+      "红人粉丝数据": 17600,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-07",
       "追踪优先级": "P3 暂缓",
@@ -14753,7 +14769,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T09:20:37.838Z"
   },
   {
     "id": "RKYtASqBDA",
@@ -14839,7 +14855,7 @@
   {
     "id": "RPKLz18V7I",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.instagram.com/chrisrasizzi/",
         "text": "https://www.instagram.com/chrisrasizzi/"
@@ -14861,7 +14877,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T07:05:35.315Z"
   },
   {
     "id": "RV3K3oNhFS",
@@ -14932,7 +14948,7 @@
       "红人编码": "EU-Zoe-050",
       "地区": "EU",
       "负责人": "Zoe",
-      "红人粉丝数据": 2638,
+      "红人粉丝数据": 2727,
       "追踪优先级": "P0 立刻追踪",
       "追踪评分": "135",
       "追踪原因": "2026合作未上线/未登记上线；当前本地未登记视频；普通/小体量达人更需要追踪",
@@ -14952,7 +14968,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": "2026-06-11T10:42:06.609Z"
+    "updatedAt": "2026-06-14T07:36:05.513Z"
   },
   {
     "id": "RWHkaArHSQ",
@@ -14969,7 +14985,7 @@
       "红人编码": "US-Stefan-157",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 12100,
+      "红人粉丝数据": 14100,
       "追踪优先级": "P0 立刻追踪",
       "追踪评分": "135",
       "追踪原因": "2026合作未上线/未登记上线；当前本地未登记视频；普通/小体量达人更需要追踪",
@@ -14977,7 +14993,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": "2026-06-07T07:16:58.943Z"
+    "updatedAt": "2026-06-14T08:44:24.251Z"
   },
   {
     "id": "RZMkcmEx6g",
@@ -15018,7 +15034,7 @@
       "红人编码": "US-Ryan-043",
       "地区": "US",
       "负责人": "Ryan",
-      "红人粉丝数据": 1410,
+      "红人粉丝数据": 1430,
       "追踪优先级": "P0 立刻追踪",
       "追踪评分": "135",
       "追踪原因": "2026合作未上线/未登记上线；当前本地未登记视频；普通/小体量达人更需要追踪",
@@ -15026,7 +15042,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T09:44:24.272Z"
   },
   {
     "id": "Rg7J3xkqNv",
@@ -15043,7 +15059,7 @@
       "红人编码": "EU-Zoe-043",
       "地区": "EU",
       "负责人": "Zoe",
-      "红人粉丝数据": 27900,
+      "红人粉丝数据": 29000,
       "追踪优先级": "P0 立刻追踪",
       "追踪评分": "135",
       "追踪原因": "2026合作未上线/未登记上线；当前本地未登记视频；普通/小体量达人更需要追踪",
@@ -15051,7 +15067,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T09:40:53.583Z"
   },
   {
     "id": "RshqPwNVnX",
@@ -15267,7 +15283,7 @@
       "红人编码": "US-Ryan-010",
       "地区": "US",
       "负责人": "Ryan",
-      "红人粉丝数据": 14900,
+      "红人粉丝数据": 16200,
       "追踪优先级": "P2 低频追踪",
       "追踪评分": "75",
       "追踪原因": "2026普通达人需继续追上线；普通/小体量达人更需要追踪",
@@ -15287,12 +15303,12 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T08:46:09.399Z"
   },
   {
     "id": "S5ug0y8Tve",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.instagram.com/wileyrides/",
         "text": "https://www.instagram.com/wileyrides/"
@@ -15314,7 +15330,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T07:05:35.315Z"
   },
   {
     "id": "S6XVWKQXyz",
@@ -15341,7 +15357,7 @@
   {
     "id": "S7KnRIipuS",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.tiktok.com/@midnight_modifications",
         "text": "https://www.tiktok.com/@midnight_modifications"
@@ -15363,7 +15379,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T06:58:21.022Z"
   },
   {
     "id": "S8bIUdqhI5",
@@ -15646,7 +15662,7 @@
       "红人编码": "US-Stefan-155",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 182000,
+      "红人粉丝数据": 184000,
       "追踪优先级": "P3 暂缓",
       "追踪评分": "-50",
       "追踪原因": "头腰部已上线且未出单，低优先",
@@ -15658,7 +15674,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T09:18:44.402Z"
   },
   {
     "id": "SaJY5yknbl",
@@ -15879,7 +15895,7 @@
       "红人编码": "US-Stefan-025",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 48200,
+      "红人粉丝数据": 48500,
       "追踪优先级": "P0 立刻追踪",
       "追踪评分": "120",
       "追踪原因": "正在出单；普通/小体量达人更需要追踪",
@@ -15887,7 +15903,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": "2026-06-07T07:50:37.210Z"
+    "updatedAt": "2026-06-14T08:57:17.300Z"
   },
   {
     "id": "TCo7qB4OTE",
@@ -16281,7 +16297,7 @@
       "红人编码": "US-Stefan-012",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 56700,
+      "红人粉丝数据": 57200,
       "追踪优先级": "P3 暂缓",
       "追踪评分": "20",
       "追踪原因": "普通/小体量达人更需要追踪",
@@ -16293,7 +16309,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T10:07:17.186Z"
   },
   {
     "id": "UNU3lQppKC",
@@ -16310,7 +16326,7 @@
       "红人编码": "EU-Zoe-017",
       "地区": "EU",
       "负责人": "Zoe",
-      "红人粉丝数据": 231000,
+      "红人粉丝数据": 236000,
       "追踪优先级": "P0 立刻追踪",
       "追踪评分": "150",
       "追踪原因": "正在出单；2026已上线但仍出单",
@@ -16322,12 +16338,12 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": "2026-06-11T10:19:23.680Z"
+    "updatedAt": "2026-06-14T07:39:54.007Z"
   },
   {
     "id": "UNzyJrfguI",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.instagram.com/kellychameleons/",
         "text": "https://www.instagram.com/kellychameleons/"
@@ -16349,7 +16365,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T07:05:35.315Z"
   },
   {
     "id": "USQE7obLQT",
@@ -16387,7 +16403,7 @@
       "红人编码": "US-Nancy-005",
       "地区": "US",
       "负责人": "Nancy",
-      "红人粉丝数据": 35200,
+      "红人粉丝数据": 37200,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-07",
       "追踪优先级": "P0 立刻追踪",
@@ -16397,7 +16413,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": "2026-06-07T08:33:16.366Z"
+    "updatedAt": "2026-06-14T07:33:09.536Z"
   },
   {
     "id": "UdxZK8y77R",
@@ -16408,21 +16424,25 @@
         "text": "https://www.youtube.com/@HKTROTT/videos"
       },
       "平台": "youtubevideo",
-      "是否出视频": "否",
+      "是否出视频": "是",
       "红人名称": "HKTROTT",
       "样品型号": "yozma, yozmasport，in10",
       "红人编码": "EU-Zoe-036",
       "地区": "EU",
       "负责人": "Zoe",
-      "红人粉丝数据": 10200,
+      "红人粉丝数据": 10800,
       "追踪优先级": "P0 立刻追踪",
       "追踪评分": "135",
       "追踪原因": "2026合作未上线/未登记上线；当前本地未登记视频；普通/小体量达人更需要追踪",
-      "追踪批次更新时间": "2026-06-07"
+      "追踪批次更新时间": "2026-06-07",
+      "url": {
+        "text": "https://www.youtube.com/watch?v=PfBq1I8n8WI",
+        "link": "https://www.youtube.com/watch?v=PfBq1I8n8WI"
+      }
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": "2026-06-07T07:21:41.630Z"
+    "updatedAt": "2026-06-14T09:59:38.255Z"
   },
   {
     "id": "UgzXDnAGkM",
@@ -16580,7 +16600,7 @@
       "红人编码": "US-Stefan-166",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 350000,
+      "红人粉丝数据": 356000,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-07",
       "追踪优先级": "P3 暂缓",
@@ -16590,7 +16610,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": "2026-06-11T09:59:31.733Z"
+    "updatedAt": "2026-06-14T07:39:01.023Z"
   },
   {
     "id": "UuX4TxTyln",
@@ -16634,7 +16654,7 @@
       "红人编码": "US-Ryan-021",
       "地区": "US",
       "负责人": "Ryan",
-      "红人粉丝数据": 48200,
+      "红人粉丝数据": 49100,
       "追踪优先级": "P2 低频追踪",
       "追踪评分": "75",
       "追踪原因": "2026普通达人需继续追上线；普通/小体量达人更需要追踪",
@@ -16654,7 +16674,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": "2026-06-11T10:23:08.311Z"
+    "updatedAt": "2026-06-14T07:41:41.315Z"
   },
   {
     "id": "UzGw0NKa22",
@@ -16729,7 +16749,7 @@
       "红人编码": "US-Nancy-005",
       "地区": "US",
       "负责人": "Nancy",
-      "红人粉丝数据": 9610,
+      "红人粉丝数据": 9730,
       "追踪优先级": "P0 立刻追踪",
       "追踪评分": "120",
       "追踪原因": "正在出单；普通/小体量达人更需要追踪",
@@ -16737,7 +16757,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": "2026-06-07T07:54:09.959Z"
+    "updatedAt": "2026-06-14T09:11:57.663Z"
   },
   {
     "id": "V3a6NCo1Od",
@@ -16833,6 +16853,10 @@
       "url": {
         "text": "https://www.instagram.com/p/DYaS8X-pgFj/",
         "link": "https://www.instagram.com/p/DYaS8X-pgFj/"
+      },
+      "url2": {
+        "text": "https://www.instagram.com/p/DZZGJtBNRla/",
+        "link": "https://www.instagram.com/p/DZZGJtBNRla/"
       }
     },
     "source": "dingtalk",
@@ -16894,7 +16918,7 @@
   {
     "id": "VFkSV3YDmT",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.youtube.com/@Mia.em1/shorts",
         "text": "https://www.youtube.com/@Mia.em1/shorts"
@@ -16914,7 +16938,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T06:58:21.022Z"
   },
   {
     "id": "VL47RV6XHR",
@@ -17008,7 +17032,7 @@
       "红人编码": "EU-Zoe-021",
       "地区": "EU",
       "负责人": "Zoe",
-      "红人粉丝数据": 13000,
+      "红人粉丝数据": 13100,
       "追踪优先级": "P2 低频追踪",
       "追踪评分": "75",
       "追踪原因": "2026普通达人需继续追上线；普通/小体量达人更需要追踪",
@@ -17020,7 +17044,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T10:03:58.395Z"
   },
   {
     "id": "VTRClOnBli",
@@ -17185,7 +17209,7 @@
   {
     "id": "VhGr7fXcqQ",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.tiktok.com/@wileyrides",
         "text": "https://www.tiktok.com/@wileyrides"
@@ -17207,7 +17231,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T07:05:35.315Z"
   },
   {
     "id": "VlOV8s3SnB",
@@ -17224,7 +17248,7 @@
       "红人编码": "US-Vivi-015",
       "地区": "US",
       "负责人": "Vivi",
-      "红人粉丝数据": 5950,
+      "红人粉丝数据": 6060,
       "追踪优先级": "P0 立刻追踪",
       "追踪评分": "120",
       "追踪原因": "正在出单；普通/小体量达人更需要追踪",
@@ -17236,7 +17260,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T09:20:13.394Z"
   },
   {
     "id": "VoTmZYbWsy",
@@ -17525,7 +17549,7 @@
   {
     "id": "WDAt9fXbul",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.youtube.com/@RidingwithJr/shorts",
         "text": "https://www.youtube.com/@RidingwithJr/shorts"
@@ -17545,7 +17569,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T06:58:21.022Z"
   },
   {
     "id": "WH3afc3A0R",
@@ -17608,7 +17632,7 @@
   {
     "id": "WJV96XmQQA",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.tiktok.com/@kalanikai42",
         "text": "https://www.tiktok.com/@kalanikai42"
@@ -17629,7 +17653,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T07:05:35.315Z"
   },
   {
     "id": "WMTM2LaaAK",
@@ -17858,7 +17882,7 @@
       "红人编码": "EU-Zoe-025",
       "地区": "EU",
       "负责人": "Zoe",
-      "红人粉丝数据": 270000,
+      "红人粉丝数据": 271000,
       "追踪优先级": "P0 立刻追踪",
       "追踪评分": "135",
       "追踪原因": "2026合作未上线/未登记上线；当前本地未登记视频；普通/小体量达人更需要追踪",
@@ -17866,7 +17890,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T09:25:14.793Z"
   },
   {
     "id": "WvHBOrmGWf",
@@ -18075,7 +18099,7 @@
   {
     "id": "XnnaaGk12x",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.tiktok.com/@x3tyler28",
         "text": "https://www.tiktok.com/@x3tyler28"
@@ -18097,7 +18121,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": "2026-06-11T10:48:49.829Z"
+    "updatedAt": "2026-06-14T07:05:35.315Z"
   },
   {
     "id": "XoDXIp5JoQ",
@@ -18222,7 +18246,7 @@
       "红人编码": "EU-Zoe-015",
       "地区": "EU",
       "负责人": "Zoe",
-      "红人粉丝数据": 125000,
+      "红人粉丝数据": 127000,
       "追踪优先级": "P1 本周追踪",
       "追踪评分": "115",
       "追踪原因": "2026合作未上线/未登记上线；当前本地未登记视频",
@@ -18230,7 +18254,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T08:46:39.850Z"
   },
   {
     "id": "Xuf0LFXNpx",
@@ -18775,7 +18799,7 @@
   {
     "id": "ZCL0eu1Jde",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.instagram.com/leecampaign/",
         "text": "https://www.instagram.com/leecampaign/"
@@ -18794,7 +18818,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T07:05:35.315Z"
   },
   {
     "id": "ZIJGhDjXco",
@@ -18811,7 +18835,7 @@
       "红人编码": "US-Stefan-012",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 56700,
+      "红人粉丝数据": 57200,
       "追踪优先级": "P3 暂缓",
       "追踪评分": "20",
       "追踪原因": "普通/小体量达人更需要追踪",
@@ -18823,7 +18847,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T10:07:17.187Z"
   },
   {
     "id": "ZMqdEirID1",
@@ -18951,7 +18975,7 @@
   {
     "id": "ZTIrNZgETy",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.youtube.com/@KellyChameleons/shorts",
         "text": "https://www.youtube.com/@KellyChameleons/shorts"
@@ -18971,7 +18995,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T07:05:35.315Z"
   },
   {
     "id": "ZZg50apKe3",
@@ -19025,7 +19049,7 @@
   {
     "id": "ZqDum77qfW",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.instagram.com/x3tyler/",
         "text": "https://www.instagram.com/x3tyler/"
@@ -19047,7 +19071,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T07:05:35.315Z"
   },
   {
     "id": "Zs2PrXiTb2",
@@ -19149,7 +19173,7 @@
   {
     "id": "ZuiIWQ1gfA",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.tiktok.com/@filipmain",
         "text": "https://www.tiktok.com/@filipmain"
@@ -19170,7 +19194,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T06:58:21.022Z"
   },
   {
     "id": "ZyYbXxPThu",
@@ -19363,7 +19387,7 @@
       "红人编码": "EU-Zoe-017",
       "地区": "EU",
       "负责人": "Zoe",
-      "红人粉丝数据": 231000,
+      "红人粉丝数据": 236000,
       "追踪优先级": "P0 立刻追踪",
       "追踪评分": "150",
       "追踪原因": "正在出单；2026已上线但仍出单",
@@ -19379,7 +19403,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": "2026-06-11T10:19:23.680Z"
+    "updatedAt": "2026-06-14T07:39:54.007Z"
   },
   {
     "id": "aMJM5d3yw0",
@@ -19615,7 +19639,7 @@
   {
     "id": "amjRxhEfWg",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.tiktok.com/@q20dylan",
         "text": "https://www.tiktok.com/@q20dylan"
@@ -19637,7 +19661,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T06:58:21.022Z"
   },
   {
     "id": "as7A15ZyZ8",
@@ -19751,7 +19775,7 @@
       "红人编码": "US-Ryan-027",
       "地区": "US",
       "负责人": "Ryan",
-      "红人粉丝数据": 20100,
+      "红人粉丝数据": 20200,
       "追踪优先级": "P2 低频追踪",
       "追踪评分": "75",
       "追踪原因": "2026普通达人需继续追上线；普通/小体量达人更需要追踪",
@@ -19763,7 +19787,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T08:47:48.484Z"
   },
   {
     "id": "bW0kmYOxNN",
@@ -19780,7 +19804,7 @@
       "红人编码": "EU-Stefan-001",
       "地区": "EU",
       "负责人": "Stefan",
-      "红人粉丝数据": 391,
+      "红人粉丝数据": 393,
       "追踪优先级": "P3 暂缓",
       "追踪评分": "-50",
       "追踪原因": "头腰部已上线且未出单，低优先",
@@ -19788,7 +19812,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T08:43:36.501Z"
   },
   {
     "id": "bas8NyPzCG",
@@ -19858,7 +19882,7 @@
       "红人编码": "US-Lexy-080",
       "地区": "US",
       "负责人": "Lexy",
-      "红人粉丝数据": 17700,
+      "红人粉丝数据": 17900,
       "追踪优先级": "P0 立刻追踪",
       "追踪评分": "135",
       "追踪原因": "2026合作未上线/未登记上线；当前本地未登记视频；普通/小体量达人更需要追踪",
@@ -19866,12 +19890,12 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": "2026-06-07T07:17:53.622Z"
+    "updatedAt": "2026-06-14T08:45:28.305Z"
   },
   {
     "id": "bm5sCnnMDT",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.youtube.com/@Levi_farias/shorts",
         "text": "https://www.youtube.com/@Levi_farias/shorts"
@@ -19891,7 +19915,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T07:05:35.315Z"
   },
   {
     "id": "bs5hegqs0M",
@@ -20023,7 +20047,7 @@
       "红人编码": "US-Ryan-023",
       "地区": "US",
       "负责人": "Ryan",
-      "红人粉丝数据": 9980000,
+      "红人粉丝数据": 10000000,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-07",
       "追踪优先级": "P0 立刻追踪",
@@ -20033,12 +20057,12 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": "2026-06-07T07:14:32.488Z"
+    "updatedAt": "2026-06-14T08:52:31.051Z"
   },
   {
     "id": "c7lXwqnxro",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.youtube.com/@Leecampaign/shorts",
         "text": "https://www.youtube.com/@Leecampaign/shorts"
@@ -20058,7 +20082,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T07:05:35.315Z"
   },
   {
     "id": "c8YR0uFI9E",
@@ -20097,7 +20121,7 @@
       "红人编码": "UK-Zoe-004",
       "地区": "UK",
       "负责人": "Zoe",
-      "红人粉丝数据": 27600,
+      "红人粉丝数据": 27800,
       "追踪优先级": "P2 低频追踪",
       "追踪评分": "75",
       "追踪原因": "2026普通达人需继续追上线；普通/小体量达人更需要追踪",
@@ -20105,7 +20129,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T09:03:51.599Z"
   },
   {
     "id": "cA7Pd5NCdO",
@@ -20318,7 +20342,7 @@
       "红人编码": "US-Stefan-145",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 1390,
+      "红人粉丝数据": 1410,
       "追踪优先级": "P0 立刻追踪",
       "追踪评分": "175",
       "追踪原因": "正在出单；2026普通达人需继续追上线；普通/小体量达人更需要追踪",
@@ -20338,12 +20362,12 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": "2026-06-07T07:09:49.868Z"
+    "updatedAt": "2026-06-14T09:16:37.625Z"
   },
   {
     "id": "cScXW3859L",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.youtube.com/@kalanikai42/videos",
         "text": "https://www.youtube.com/@kalanikai42/videos"
@@ -20363,7 +20387,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T07:05:35.315Z"
   },
   {
     "id": "cWwPvcFcBf",
@@ -20470,7 +20494,7 @@
   {
     "id": "ccWyKvhnAJ",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.tiktok.com/@kellychameleons",
         "text": "https://www.tiktok.com/@kellychameleons"
@@ -20491,7 +20515,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T07:05:35.315Z"
   },
   {
     "id": "cchqqAdntU",
@@ -20655,7 +20679,7 @@
       "红人编码": "US-Nancy-005",
       "地区": "US",
       "负责人": "Nancy",
-      "红人粉丝数据": 35200,
+      "红人粉丝数据": 37200,
       "追踪优先级": "P0 立刻追踪",
       "追踪评分": "120",
       "追踪原因": "正在出单；普通/小体量达人更需要追踪",
@@ -20667,12 +20691,12 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": "2026-06-07T08:33:16.366Z"
+    "updatedAt": "2026-06-14T07:33:09.536Z"
   },
   {
     "id": "cxbrWxBzlg",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.youtube.com/@bikelifejelly6620/videos",
         "text": "https://www.youtube.com/@bikelifejelly6620/videos"
@@ -20694,12 +20718,12 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T06:58:21.022Z"
   },
   {
     "id": "czu76qGqxq",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.tiktok.com/@vilimere",
         "text": "https://www.tiktok.com/@vilimere"
@@ -20721,7 +20745,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": "2026-06-07T08:18:09.716Z"
+    "updatedAt": "2026-06-14T06:58:21.022Z"
   },
   {
     "id": "d4E8LknU9e",
@@ -20796,7 +20820,7 @@
   {
     "id": "dBnMl1sn7k",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.instagram.com/soflo.lucasinsta/",
         "text": "https://www.instagram.com/soflo.lucasinsta/"
@@ -20818,7 +20842,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T06:58:21.022Z"
   },
   {
     "id": "dBznIaeu8D",
@@ -20897,7 +20921,7 @@
   {
     "id": "dOM1BNo9Ec",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.instagram.com/bikelifejelly/",
         "text": "https://www.instagram.com/bikelifejelly/"
@@ -20919,7 +20943,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T06:58:21.022Z"
   },
   {
     "id": "dPi7OPlJ24",
@@ -20972,6 +20996,10 @@
       "url2": {
         "text": "https://www.instagram.com/p/DX9qod5tA3F/",
         "link": "https://www.instagram.com/p/DX9qod5tA3F/"
+      },
+      "url3": {
+        "text": "https://www.instagram.com/p/DZTwbc0t2gY/",
+        "link": "https://www.instagram.com/p/DZTwbc0t2gY/"
       }
     },
     "source": "dingtalk",
@@ -21194,7 +21222,7 @@
       "红人编码": "US-Ryan-017",
       "地区": "US",
       "负责人": "Ryan",
-      "红人粉丝数据": 251000,
+      "红人粉丝数据": 252000,
       "追踪优先级": "P1 本周追踪",
       "追踪评分": "115",
       "追踪原因": "2026合作未上线/未登记上线；当前本地未登记视频",
@@ -21202,7 +21230,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T10:08:26.944Z"
   },
   {
     "id": "e2fAX35vag",
@@ -21332,7 +21360,7 @@
       "红人编码": "US-Ryan-026",
       "地区": "US",
       "负责人": "Ryan",
-      "红人粉丝数据": 12800,
+      "红人粉丝数据": 12900,
       "追踪优先级": "P3 暂缓",
       "追踪评分": "-50",
       "追踪原因": "头腰部已上线且未出单，低优先",
@@ -21344,7 +21372,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T09:38:39.151Z"
   },
   {
     "id": "eYO0svinDy",
@@ -21433,7 +21461,7 @@
       "红人编码": "US-Stefan-044",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 16300,
+      "红人粉丝数据": 16600,
       "追踪优先级": "P3 暂缓",
       "追踪评分": "20",
       "追踪原因": "普通/小体量达人更需要追踪",
@@ -21453,7 +21481,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T08:51:04.282Z"
   },
   {
     "id": "eiYJ2as3RG",
@@ -21486,7 +21514,7 @@
         "text": "https://www.instagram.com/difokaloke/"
       },
       "平台": "instagramreels",
-      "是否出视频": "否",
+      "是否出视频": "是",
       "红人名称": "Difokaloke",
       "样品型号": "yozma, yozmasport，in10",
       "红人编码": "US-Lexy-079",
@@ -21498,7 +21526,11 @@
       "追踪优先级": "P0 立刻追踪",
       "追踪评分": "135",
       "追踪原因": "2026合作未上线/未登记上线；当前本地未登记视频；普通/小体量达人更需要追踪",
-      "追踪批次更新时间": "2026-06-07"
+      "追踪批次更新时间": "2026-06-07",
+      "url": {
+        "text": "https://www.instagram.com/p/DZi8K3GprhT/",
+        "link": "https://www.instagram.com/p/DZi8K3GprhT/"
+      }
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
@@ -21619,7 +21651,7 @@
       "红人编码": "EU-Ryan-001",
       "地区": "EU",
       "负责人": "Ryan",
-      "红人粉丝数据": 20400,
+      "红人粉丝数据": 20600,
       "追踪优先级": "P3 暂缓",
       "追踪评分": "-50",
       "追踪原因": "头腰部已上线且未出单，低优先",
@@ -21627,7 +21659,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T09:42:03.190Z"
   },
   {
     "id": "f45jNBSs05",
@@ -21644,7 +21676,7 @@
       "红人编码": "EU-Ryan-005",
       "地区": "EU",
       "负责人": "Ryan",
-      "红人粉丝数据": 56100,
+      "红人粉丝数据": 56200,
       "追踪优先级": "P2 低频追踪",
       "追踪评分": "75",
       "追踪原因": "2026普通达人需继续追上线；普通/小体量达人更需要追踪",
@@ -21660,7 +21692,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T09:42:40.135Z"
   },
   {
     "id": "f51KbQTakN",
@@ -21709,7 +21741,7 @@
   {
     "id": "f9WP7iruLq",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.instagram.com/gtaboyyy/",
         "text": "https://www.instagram.com/gtaboyyy/"
@@ -21731,7 +21763,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T07:05:35.315Z"
   },
   {
     "id": "f9nsdLzau2",
@@ -21852,7 +21884,7 @@
         "text": "https://www.instagram.com/jakerutk/"
       },
       "平台": "instagramreels",
-      "是否出视频": "否",
+      "是否出视频": "是",
       "红人名称": "jakerutk",
       "样品型号": "yozma, yozmasport，in10",
       "红人编码": "US-Lexy-064",
@@ -21864,7 +21896,11 @@
       "追踪优先级": "P0 立刻追踪",
       "追踪评分": "135",
       "追踪原因": "2026合作未上线/未登记上线；当前本地未登记视频；普通/小体量达人更需要追踪",
-      "追踪批次更新时间": "2026-06-07"
+      "追踪批次更新时间": "2026-06-07",
+      "url": {
+        "text": "https://www.instagram.com/p/DZdqcRsJUNv/",
+        "link": "https://www.instagram.com/p/DZdqcRsJUNv/"
+      }
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
@@ -21944,7 +21980,7 @@
   {
     "id": "fLdjpJcKll",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.youtube.com/@kalanikai42/shorts",
         "text": "https://www.youtube.com/@kalanikai42/shorts"
@@ -21964,7 +22000,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T07:05:35.315Z"
   },
   {
     "id": "fMz9A5QgwF",
@@ -22008,7 +22044,7 @@
       "红人编码": "US-Ryan-017",
       "地区": "US",
       "负责人": "Ryan",
-      "红人粉丝数据": 251000,
+      "红人粉丝数据": 252000,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-07",
       "追踪优先级": "P1 本周追踪",
@@ -22018,7 +22054,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": "2026-06-07T08:02:28.436Z"
+    "updatedAt": "2026-06-14T10:08:26.944Z"
   },
   {
     "id": "fXwdsopUmo",
@@ -22045,6 +22081,14 @@
       "url": {
         "text": "https://www.instagram.com/p/DYddn9oBew5/",
         "link": "https://www.instagram.com/p/DYddn9oBew5/"
+      },
+      "url2": {
+        "text": "https://www.instagram.com/p/DZa7leyT3Oi/",
+        "link": "https://www.instagram.com/p/DZa7leyT3Oi/"
+      },
+      "url3": {
+        "text": "https://www.instagram.com/p/DZa-MrkpZVL/",
+        "link": "https://www.instagram.com/p/DZa-MrkpZVL/"
       }
     },
     "source": "dingtalk",
@@ -22180,7 +22224,7 @@
       "红人编码": "US-Ryan-051",
       "地区": "US",
       "负责人": "Ryan",
-      "红人粉丝数据": 39500,
+      "红人粉丝数据": 41100,
       "追踪优先级": "P0 立刻追踪",
       "追踪评分": "135",
       "追踪原因": "2026合作未上线/未登记上线；当前本地未登记视频；普通/小体量达人更需要追踪",
@@ -22188,7 +22232,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": "2026-06-07T07:31:13.778Z"
+    "updatedAt": "2026-06-14T09:17:30.152Z"
   },
   {
     "id": "fkiLLcAAZv",
@@ -22287,7 +22331,7 @@
       "红人编码": "EU-Ryan-005",
       "地区": "EU",
       "负责人": "Ryan",
-      "红人粉丝数据": 56100,
+      "红人粉丝数据": 56200,
       "追踪优先级": "P2 低频追踪",
       "追踪评分": "75",
       "追踪原因": "2026普通达人需继续追上线；普通/小体量达人更需要追踪",
@@ -22299,7 +22343,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T09:42:40.135Z"
   },
   {
     "id": "ftnkz12WSy",
@@ -22463,7 +22507,7 @@
       "红人编码": "EU-Zoe-022",
       "地区": "EU",
       "负责人": "Zoe",
-      "红人粉丝数据": 66000,
+      "红人粉丝数据": 66100,
       "追踪优先级": "P2 低频追踪",
       "追踪评分": "75",
       "追踪原因": "2026普通达人需继续追上线；普通/小体量达人更需要追踪",
@@ -22471,7 +22515,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T09:15:47.021Z"
   },
   {
     "id": "gBwDya1BRV",
@@ -22613,7 +22657,7 @@
   {
     "id": "gP8Dp6xcCb",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.youtube.com/@Tamirrusso/shorts",
         "text": "https://www.youtube.com/@Tamirrusso/shorts"
@@ -22633,7 +22677,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T07:05:35.315Z"
   },
   {
     "id": "gQfWv84hWq",
@@ -22967,7 +23011,7 @@
       "红人编码": "US-Ryan-051",
       "地区": "US",
       "负责人": "Ryan",
-      "红人粉丝数据": 39500,
+      "红人粉丝数据": 41100,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-07",
       "追踪优先级": "P0 立刻追踪",
@@ -22977,7 +23021,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": "2026-06-07T07:31:13.778Z"
+    "updatedAt": "2026-06-14T09:17:30.152Z"
   },
   {
     "id": "gzAjXIZjmm",
@@ -22993,7 +23037,7 @@
       "红人编码": "US-Stefan-051",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 17700,
+      "红人粉丝数据": 18000,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-07",
       "追踪优先级": "P0 立刻追踪",
@@ -23003,7 +23047,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": "2026-06-11T10:34:51.780Z"
+    "updatedAt": "2026-06-14T07:43:17.120Z"
   },
   {
     "id": "gzVPLX0NUG",
@@ -23191,7 +23235,7 @@
       "红人编码": "US-Vivi-007",
       "地区": "US",
       "负责人": "Vivi",
-      "红人粉丝数据": 44000,
+      "红人粉丝数据": 44600,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-07",
       "追踪优先级": "P0 立刻追踪",
@@ -23201,7 +23245,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": "2026-06-11T10:32:39.865Z"
+    "updatedAt": "2026-06-14T07:35:42.956Z"
   },
   {
     "id": "hOI3eiPw5a",
@@ -23232,7 +23276,7 @@
   {
     "id": "hORUdaGo6G",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.youtube.com/@kalanikai42/shorts",
         "text": "https://www.youtube.com/@kalanikai42/shorts"
@@ -23253,7 +23297,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T07:05:35.315Z"
   },
   {
     "id": "hTsJBWxyMl",
@@ -23513,7 +23557,7 @@
   {
     "id": "ht6W4yadgt",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.tiktok.com/@jahjah_4x",
         "text": "https://www.tiktok.com/@jahjah_4x"
@@ -23534,7 +23578,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T06:58:21.022Z"
   },
   {
     "id": "htnFOkdNOs",
@@ -23551,7 +23595,7 @@
       "红人编码": "US-Ryan-035",
       "地区": "US",
       "负责人": "Ryan",
-      "红人粉丝数据": 25300,
+      "红人粉丝数据": 25400,
       "追踪优先级": "P2 低频追踪",
       "追踪评分": "75",
       "追踪原因": "2026普通达人需继续追上线；普通/小体量达人更需要追踪",
@@ -23567,7 +23611,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": "2026-06-07T10:39:35.907Z"
+    "updatedAt": "2026-06-14T07:28:20.320Z"
   },
   {
     "id": "huJKT01Nl7",
@@ -23842,7 +23886,7 @@
       "红人编码": "US-Stefan-030",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 99700,
+      "红人粉丝数据": 100600,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-07",
       "追踪优先级": "P3 暂缓",
@@ -23856,11 +23900,15 @@
       "url2": {
         "text": "https://www.tiktok.com/@68v_ebikes/video/7646576814604766477",
         "link": "https://www.tiktok.com/@68v_ebikes/video/7646576814604766477"
+      },
+      "url3": {
+        "text": "https://www.tiktok.com/@68v_ebikes/video/7651131733865237773",
+        "link": "https://www.tiktok.com/@68v_ebikes/video/7651131733865237773"
       }
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": "2026-06-11T09:54:04.792Z"
+    "updatedAt": "2026-06-14T07:27:35.613Z"
   },
   {
     "id": "iRM3Nt0HXc",
@@ -23964,7 +24012,7 @@
   {
     "id": "iYpzcBKs8B",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.tiktok.com/@malaysiainthecity",
         "text": "https://www.tiktok.com/@malaysiainthecity"
@@ -23985,7 +24033,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T07:05:35.315Z"
   },
   {
     "id": "ia0FvRqaKQ",
@@ -24024,7 +24072,7 @@
       "红人编码": "EU-Lexy-001",
       "地区": "EU",
       "负责人": "Lexy",
-      "红人粉丝数据": 4260,
+      "红人粉丝数据": 4280,
       "追踪优先级": "P1 本周追踪",
       "追踪评分": "115",
       "追踪原因": "2026合作未上线/未登记上线；当前本地未登记视频",
@@ -24032,7 +24080,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T09:24:03.946Z"
   },
   {
     "id": "ie9Llll8Ff",
@@ -24162,7 +24210,7 @@
       "红人编码": "US-Stefan-025",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 48200,
+      "红人粉丝数据": 48500,
       "追踪优先级": "P0 立刻追踪",
       "追踪评分": "120",
       "追踪原因": "正在出单；普通/小体量达人更需要追踪",
@@ -24170,7 +24218,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": "2026-06-07T07:50:37.210Z"
+    "updatedAt": "2026-06-14T08:57:17.300Z"
   },
   {
     "id": "ixhqdO3W6L",
@@ -24246,7 +24294,7 @@
   {
     "id": "j6gsI1YQfy",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.youtube.com/@Bbybippinnn/shorts",
         "text": "https://www.youtube.com/@Bbybippinnn/shorts"
@@ -24267,7 +24315,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T06:58:21.022Z"
   },
   {
     "id": "j798I9L0no",
@@ -24320,7 +24368,7 @@
   {
     "id": "jBwMspQ6LR",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.tiktok.com/@bigboylcas?lang=zh-Hans",
         "text": "https://www.tiktok.com/@bigboylcas?lang=zh-Hans"
@@ -24341,12 +24389,12 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T06:58:21.022Z"
   },
   {
     "id": "jDPjQblBGI",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.tiktok.com/search?q=Riding%20With%20Junior&t=1780458171122",
         "text": "https://www.tiktok.com/search?q=Riding%20With%20Junior&t=1780458171122"
@@ -24367,7 +24415,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T06:58:21.022Z"
   },
   {
     "id": "jFJnNAT8Tu",
@@ -24411,7 +24459,7 @@
       "红人编码": "UK-Zoe-007",
       "地区": "UK",
       "负责人": "Zoe",
-      "红人粉丝数据": 17800,
+      "红人粉丝数据": 19900,
       "追踪优先级": "P3 暂缓",
       "追踪评分": "-50",
       "追踪原因": "头腰部已上线且未出单，低优先",
@@ -24419,12 +24467,12 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T09:31:31.151Z"
   },
   {
     "id": "jPKdSIkFF8",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.instagram.com/squidsteff/",
         "text": "https://www.instagram.com/squidsteff/"
@@ -24446,7 +24494,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T06:58:21.022Z"
   },
   {
     "id": "jVks3cKbFs",
@@ -24463,7 +24511,7 @@
       "红人编码": "EU-Zoe-019",
       "地区": "EU",
       "负责人": "Zoe",
-      "红人粉丝数据": 18400,
+      "红人粉丝数据": 18500,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-07",
       "追踪优先级": "P2 低频追踪",
@@ -24485,7 +24533,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": "2026-06-11T10:05:17.184Z"
+    "updatedAt": "2026-06-14T07:28:56.333Z"
   },
   {
     "id": "jaLdOmJmOS",
@@ -24565,7 +24613,7 @@
         "text": "https://www.instagram.com/360.mediaedits/"
       },
       "平台": "instagramreels",
-      "是否出视频": "否",
+      "是否出视频": "是",
       "红人名称": "360.mediaedits",
       "样品型号": "yozma, yozmasport，in10",
       "红人编码": "US-Lexy-073",
@@ -24574,7 +24622,11 @@
       "追踪优先级": "P1 本周追踪",
       "追踪评分": "115",
       "追踪原因": "2026合作未上线/未登记上线；当前本地未登记视频",
-      "追踪批次更新时间": "2026-06-07"
+      "追踪批次更新时间": "2026-06-07",
+      "url": {
+        "text": "https://www.instagram.com/p/DZTQg9OipUH/",
+        "link": "https://www.instagram.com/p/DZTQg9OipUH/"
+      }
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
@@ -24986,7 +25038,7 @@
       "红人编码": "US-Stefan-067",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 91400,
+      "红人粉丝数据": 91800,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-07",
       "追踪优先级": "P3 暂缓",
@@ -24996,7 +25048,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": "2026-06-11T10:39:51.865Z"
+    "updatedAt": "2026-06-14T07:49:19.865Z"
   },
   {
     "id": "kTsmwJgvta",
@@ -25050,7 +25102,7 @@
   {
     "id": "kppOKb8V4g",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.youtube.com/@wafflekozik/shorts",
         "text": "https://www.youtube.com/@wafflekozik/shorts"
@@ -25070,7 +25122,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T07:05:35.315Z"
   },
   {
     "id": "ksePU2J7A9",
@@ -25102,7 +25154,7 @@
   {
     "id": "ksvUuw4ohf",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.youtube.com/@x3tyler/shorts",
         "text": "https://www.youtube.com/@x3tyler/shorts"
@@ -25124,7 +25176,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T07:05:35.315Z"
   },
   {
     "id": "kzsKkOArZL",
@@ -25297,6 +25349,14 @@
       "url": {
         "text": "https://www.instagram.com/p/DYIRV-qp1nC/",
         "link": "https://www.instagram.com/p/DYIRV-qp1nC/"
+      },
+      "url2": {
+        "text": "https://www.instagram.com/p/DZYekecOrtR/",
+        "link": "https://www.instagram.com/p/DZYekecOrtR/"
+      },
+      "url3": {
+        "text": "https://www.instagram.com/p/DZbM044tfZY/",
+        "link": "https://www.instagram.com/p/DZbM044tfZY/"
       }
     },
     "source": "dingtalk",
@@ -25406,21 +25466,25 @@
         "text": "https://www.youtube.com/@Reckless_Rides/videos"
       },
       "平台": "youtubevideo",
-      "是否出视频": "否",
+      "是否出视频": "是",
       "红人名称": "Reckless_Rides",
       "样品型号": "yozma, yozmasport，in10",
       "红人编码": "US-Ryan-048",
       "地区": "US",
       "负责人": "Ryan",
-      "红人粉丝数据": 112000,
+      "红人粉丝数据": 114000,
       "追踪优先级": "P2 低频追踪",
       "追踪评分": "75",
       "追踪原因": "2026普通达人需继续追上线；普通/小体量达人更需要追踪",
-      "追踪批次更新时间": "2026-06-07"
+      "追踪批次更新时间": "2026-06-07",
+      "url": {
+        "text": "https://www.youtube.com/watch?v=uQXl218SUzw",
+        "link": "https://www.youtube.com/watch?v=uQXl218SUzw"
+      }
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T09:28:16.069Z"
   },
   {
     "id": "lTmVZvBTvz",
@@ -25491,7 +25555,7 @@
       "红人编码": "UK-Zoe-004",
       "地区": "UK",
       "负责人": "Zoe",
-      "红人粉丝数据": 27600,
+      "红人粉丝数据": 27800,
       "追踪优先级": "P2 低频追踪",
       "追踪评分": "75",
       "追踪原因": "2026普通达人需继续追上线；普通/小体量达人更需要追踪",
@@ -25499,11 +25563,19 @@
       "url": {
         "text": "https://www.youtube.com/shorts/xXOqxF9iNKI",
         "link": "https://www.youtube.com/shorts/xXOqxF9iNKI"
+      },
+      "url2": {
+        "text": "https://www.youtube.com/shorts/qWV5ECPVGOQ",
+        "link": "https://www.youtube.com/shorts/qWV5ECPVGOQ"
+      },
+      "url3": {
+        "text": "https://www.youtube.com/shorts/dplChINTwYs",
+        "link": "https://www.youtube.com/shorts/dplChINTwYs"
       }
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T09:03:51.599Z"
   },
   {
     "id": "lV5NfVK4PT",
@@ -25519,7 +25591,7 @@
       "红人编码": "US-Stefan-067",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 91400,
+      "红人粉丝数据": 91800,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-07",
       "追踪优先级": "P3 暂缓",
@@ -25529,7 +25601,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": "2026-06-11T10:39:51.865Z"
+    "updatedAt": "2026-06-14T07:49:19.865Z"
   },
   {
     "id": "lVC6LNJCxC",
@@ -25655,7 +25727,7 @@
   {
     "id": "lvDV7rWvMR",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.tiktok.com/@mar.f1icks",
         "text": "https://www.tiktok.com/@mar.f1icks"
@@ -25677,7 +25749,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T07:05:35.315Z"
   },
   {
     "id": "m10r9uU1vq",
@@ -25752,7 +25824,7 @@
       "红人编码": "US-Stefan-045",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 11900,
+      "红人粉丝数据": 12100,
       "追踪优先级": "P3 暂缓",
       "追踪评分": "20",
       "追踪原因": "普通/小体量达人更需要追踪",
@@ -25764,7 +25836,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T09:48:42.024Z"
   },
   {
     "id": "mCtWhV0ote",
@@ -25827,7 +25899,7 @@
       "红人编码": "US-Lexy-080",
       "地区": "US",
       "负责人": "Lexy",
-      "红人粉丝数据": 17700,
+      "红人粉丝数据": 17900,
       "追踪优先级": "P0 立刻追踪",
       "追踪评分": "135",
       "追踪原因": "2026合作未上线/未登记上线；当前本地未登记视频；普通/小体量达人更需要追踪",
@@ -25835,7 +25907,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": "2026-06-07T07:17:53.622Z"
+    "updatedAt": "2026-06-14T08:45:28.306Z"
   },
   {
     "id": "meCghx73CQ",
@@ -26438,7 +26510,7 @@
       "红人编码": "US-Stefan-047",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 186000,
+      "红人粉丝数据": 188000,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-07",
       "追踪优先级": "P0 立刻追踪",
@@ -26448,7 +26520,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": "2026-06-11T10:49:36.177Z"
+    "updatedAt": "2026-06-14T07:45:38.130Z"
   },
   {
     "id": "nnO36pqmel",
@@ -26487,7 +26559,7 @@
       "红人编码": "US-Ryan-004",
       "地区": "US",
       "负责人": "Ryan",
-      "红人粉丝数据": 6310,
+      "红人粉丝数据": 6370,
       "追踪优先级": "P2 低频追踪",
       "追踪评分": "75",
       "追踪原因": "2026普通达人需继续追上线；普通/小体量达人更需要追踪",
@@ -26499,7 +26571,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": "2026-06-11T10:34:02.362Z"
+    "updatedAt": "2026-06-14T07:42:55.926Z"
   },
   {
     "id": "nqm0K83z6F",
@@ -26588,7 +26660,7 @@
       "红人编码": "US-Ryan-002",
       "地区": "US",
       "负责人": "Ryan",
-      "红人粉丝数据": 5880,
+      "红人粉丝数据": 5930,
       "追踪优先级": "P2 低频追踪",
       "追踪评分": "75",
       "追踪原因": "2026普通达人需继续追上线；普通/小体量达人更需要追踪",
@@ -26596,7 +26668,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T10:12:14.678Z"
   },
   {
     "id": "o05N2kVFvK",
@@ -26623,7 +26695,7 @@
   {
     "id": "o2ZBQ2lMYa",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.youtube.com/@Soflo.LucasYT",
         "text": "https://www.youtube.com/@Soflo.LucasYT"
@@ -26645,7 +26717,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T06:58:21.022Z"
   },
   {
     "id": "o3VcrdIKaj",
@@ -26739,7 +26811,7 @@
   {
     "id": "oENR3b9T8P",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.tiktok.com/@thehockingadventurebus",
         "text": "https://www.tiktok.com/@thehockingadventurebus"
@@ -26760,7 +26832,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T07:05:35.315Z"
   },
   {
     "id": "oGcy2cKI6d",
@@ -26857,7 +26929,7 @@
       "红人编码": "EU-Zoe-033",
       "地区": "EU",
       "负责人": "Zoe",
-      "红人粉丝数据": 63300,
+      "红人粉丝数据": 64300,
       "追踪优先级": "P2 低频追踪",
       "追踪评分": "75",
       "追踪原因": "2026普通达人需继续追上线；普通/小体量达人更需要追踪",
@@ -26877,7 +26949,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": "2026-06-11T09:59:47.161Z"
+    "updatedAt": "2026-06-14T07:28:08.819Z"
   },
   {
     "id": "oIytiFIYtE",
@@ -27004,7 +27076,7 @@
       "红人编码": "US-Stefan-047",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 186000,
+      "红人粉丝数据": 188000,
       "追踪优先级": "P0 立刻追踪",
       "追踪评分": "120",
       "追踪原因": "正在出单；普通/小体量达人更需要追踪",
@@ -27016,7 +27088,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": "2026-06-11T10:49:36.177Z"
+    "updatedAt": "2026-06-14T07:45:38.130Z"
   },
   {
     "id": "oUHXOK807q",
@@ -27113,7 +27185,7 @@
       "红人编码": "US-Ryan-005",
       "地区": "US",
       "负责人": "Ryan",
-      "红人粉丝数据": 71500,
+      "红人粉丝数据": 71600,
       "追踪优先级": "P2 低频追踪",
       "追踪评分": "75",
       "追踪原因": "2026普通达人需继续追上线；普通/小体量达人更需要追踪",
@@ -27125,7 +27197,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T09:36:38.826Z"
   },
   {
     "id": "ogIirGJTnO",
@@ -27307,7 +27379,7 @@
         "text": "https://www.instagram.com/mmurmaider/"
       },
       "平台": "instagramreels",
-      "是否出视频": "否",
+      "是否出视频": "是",
       "红人名称": "mmurmaider",
       "样品型号": "yozma, yozmasport，in10",
       "红人编码": "EU-Lexy-001",
@@ -27319,7 +27391,11 @@
       "追踪优先级": "P1 本周追踪",
       "追踪评分": "115",
       "追踪原因": "2026合作未上线/未登记上线；当前本地未登记视频",
-      "追踪批次更新时间": "2026-06-07"
+      "追踪批次更新时间": "2026-06-07",
+      "url": {
+        "text": "https://www.instagram.com/p/DZXpB-FA5Ko/",
+        "link": "https://www.instagram.com/p/DZXpB-FA5Ko/"
+      }
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
@@ -27380,7 +27456,7 @@
   {
     "id": "p2xvxvvyqv",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.instagram.com/runplayback/",
         "text": "https://www.instagram.com/runplayback/"
@@ -27401,7 +27477,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T06:58:21.022Z"
   },
   {
     "id": "p8NLCbdGpY",
@@ -27723,7 +27799,7 @@
       "红人编码": "CA-Ryan-005",
       "地区": "CA",
       "负责人": "Ryan",
-      "红人粉丝数据": 985,
+      "红人粉丝数据": 986,
       "追踪优先级": "P0 立刻追踪",
       "追踪评分": "135",
       "追踪原因": "2026合作未上线/未登记上线；当前本地未登记视频；普通/小体量达人更需要追踪",
@@ -27731,7 +27807,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": "2026-06-07T07:36:18.881Z"
+    "updatedAt": "2026-06-14T10:08:45.285Z"
   },
   {
     "id": "plmCEWpv7u",
@@ -27798,7 +27874,7 @@
       "红人编码": "US-Stefan-145",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 1390,
+      "红人粉丝数据": 1410,
       "追踪优先级": "P0 立刻追踪",
       "追踪评分": "175",
       "追踪原因": "正在出单；2026普通达人需继续追上线；普通/小体量达人更需要追踪",
@@ -27806,7 +27882,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": "2026-06-07T07:09:49.868Z"
+    "updatedAt": "2026-06-14T09:16:37.625Z"
   },
   {
     "id": "pvL1MJMlRa",
@@ -27967,7 +28043,7 @@
       "红人编码": "US-Ryan-014",
       "地区": "US",
       "负责人": "Ryan",
-      "红人粉丝数据": 711000,
+      "红人粉丝数据": 735000,
       "追踪优先级": "P1 本周追踪",
       "追踪评分": "115",
       "追踪原因": "2026合作未上线/未登记上线；当前本地未登记视频",
@@ -27975,7 +28051,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": "2026-06-07T08:01:27.343Z"
+    "updatedAt": "2026-06-14T09:19:07.305Z"
   },
   {
     "id": "q5EJWoUFMw",
@@ -28048,7 +28124,7 @@
       "红人编码": "US-Stefan-096",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 2500,
+      "红人粉丝数据": 17600,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-07",
       "追踪优先级": "P3 暂缓",
@@ -28058,7 +28134,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T09:20:37.838Z"
   },
   {
     "id": "qIAAeParVs",
@@ -28292,7 +28368,7 @@
       "红人编码": "EU-Zoe-014",
       "地区": "EU",
       "负责人": "Zoe",
-      "红人粉丝数据": 73900,
+      "红人粉丝数据": 79400,
       "追踪优先级": "P3 暂缓",
       "追踪评分": "-50",
       "追踪原因": "头腰部已上线且未出单，低优先",
@@ -28308,7 +28384,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": "2026-06-11T10:13:12.652Z"
+    "updatedAt": "2026-06-14T07:39:26.236Z"
   },
   {
     "id": "qiFRNuPQ9J",
@@ -28351,7 +28427,7 @@
       "红人编码": "US-Stefan-047",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 186000,
+      "红人粉丝数据": 188000,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-07",
       "追踪优先级": "P0 立刻追踪",
@@ -28361,7 +28437,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": "2026-06-11T10:49:36.177Z"
+    "updatedAt": "2026-06-14T07:45:38.130Z"
   },
   {
     "id": "qpkDuyNXrT",
@@ -28563,6 +28639,10 @@
       "url": {
         "text": "https://www.instagram.com/p/DYSSaAMuJAn/",
         "link": "https://www.instagram.com/p/DYSSaAMuJAn/"
+      },
+      "url2": {
+        "text": "https://www.instagram.com/p/DZVN1a3t_vL/",
+        "link": "https://www.instagram.com/p/DZVN1a3t_vL/"
       }
     },
     "source": "dingtalk",
@@ -28744,7 +28824,7 @@
       "红人编码": "UK-Zoe-007",
       "地区": "UK",
       "负责人": "Zoe",
-      "红人粉丝数据": 17900,
+      "红人粉丝数据": 19900,
       "追踪优先级": "P3 暂缓",
       "追踪评分": "-50",
       "追踪原因": "头腰部已上线且未出单，低优先",
@@ -28752,12 +28832,12 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T09:31:31.151Z"
   },
   {
     "id": "rQSxnj90J4",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.instagram.com/starlineworld.co/",
         "text": "https://www.instagram.com/starlineworld.co/"
@@ -28778,7 +28858,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T06:58:21.022Z"
   },
   {
     "id": "rR0yFxZVcZ",
@@ -28805,7 +28885,7 @@
   {
     "id": "rS4QevE9Qz",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.youtube.com/@kalanikai42/videos",
         "text": "https://www.youtube.com/@kalanikai42/videos"
@@ -28826,7 +28906,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T07:05:35.315Z"
   },
   {
     "id": "rSj4hKMAnQ",
@@ -28875,7 +28955,7 @@
   {
     "id": "rVrNcyhGfD",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.tiktok.com/@squidsteff",
         "text": "https://www.tiktok.com/@squidsteff"
@@ -28897,7 +28977,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": "2026-06-07T08:30:50.157Z"
+    "updatedAt": "2026-06-14T06:58:21.022Z"
   },
   {
     "id": "rY7Pp7JPev",
@@ -28937,7 +29017,7 @@
       "红人编码": "US-Ryan-026",
       "地区": "US",
       "负责人": "Ryan",
-      "红人粉丝数据": 12800,
+      "红人粉丝数据": 12900,
       "追踪优先级": "P3 暂缓",
       "追踪评分": "-50",
       "追踪原因": "头腰部已上线且未出单，低优先",
@@ -28949,7 +29029,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T09:38:39.151Z"
   },
   {
     "id": "raL09P5Kre",
@@ -29059,7 +29139,7 @@
         "link": "https://www.instagram.com/bbybippinnn/",
         "text": "https://www.instagram.com/bbybippinnn/"
       },
-      "平台": "instagram",
+      "平台": "instagramreels",
       "是否出视频": "否",
       "红人名称": "bbybippinnn",
       "样品型号": "yozma, yozmasport，in10",
@@ -29288,7 +29368,7 @@
       "红人编码": "US-Ryan-004",
       "地区": "US",
       "负责人": "Ryan",
-      "红人粉丝数据": 6310,
+      "红人粉丝数据": 6370,
       "追踪优先级": "P2 低频追踪",
       "追踪评分": "75",
       "追踪原因": "2026普通达人需继续追上线；普通/小体量达人更需要追踪",
@@ -29308,7 +29388,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": "2026-06-11T10:34:02.362Z"
+    "updatedAt": "2026-06-14T07:42:55.926Z"
   },
   {
     "id": "rzJlgBBxsr",
@@ -29352,7 +29432,7 @@
       "红人编码": "US-Stefan-045",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 11900,
+      "红人粉丝数据": 12100,
       "追踪优先级": "P3 暂缓",
       "追踪评分": "20",
       "追踪原因": "普通/小体量达人更需要追踪",
@@ -29368,7 +29448,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T09:48:42.024Z"
   },
   {
     "id": "s4kteusuPB",
@@ -29540,7 +29620,7 @@
   {
     "id": "sHj2l2yoJK",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.instagram.com/_mia.em/?g=5",
         "text": "https://www.instagram.com/_mia.em/?g=5"
@@ -29562,7 +29642,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T06:58:21.022Z"
   },
   {
     "id": "sJCLv73JwF",
@@ -29716,7 +29796,7 @@
       "红人编码": "US-Nancy-005",
       "地区": "US",
       "负责人": "Nancy",
-      "红人粉丝数据": 35200,
+      "红人粉丝数据": 37200,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-07",
       "追踪优先级": "P0 立刻追踪",
@@ -29726,7 +29806,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": "2026-06-07T08:33:16.366Z"
+    "updatedAt": "2026-06-14T07:33:09.536Z"
   },
   {
     "id": "sQYWrL39WL",
@@ -29743,7 +29823,7 @@
       "红人编码": "US-Nancy-005",
       "地区": "US",
       "负责人": "Nancy",
-      "红人粉丝数据": 9610,
+      "红人粉丝数据": 9730,
       "追踪优先级": "P0 立刻追踪",
       "追踪评分": "120",
       "追踪原因": "正在出单；普通/小体量达人更需要追踪",
@@ -29751,7 +29831,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": "2026-06-07T07:54:09.960Z"
+    "updatedAt": "2026-06-14T09:11:57.664Z"
   },
   {
     "id": "sXVzrXM6SD",
@@ -29854,7 +29934,7 @@
       "红人编码": "US-Stefan-079",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": "23800",
+      "红人粉丝数据": 25700,
       "追踪优先级": "P3 暂缓",
       "追踪评分": "20",
       "追踪原因": "普通/小体量达人更需要追踪",
@@ -29862,7 +29942,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T09:33:24.008Z"
   },
   {
     "id": "sidxJTQEjU",
@@ -30024,7 +30104,7 @@
   {
     "id": "tFad22PXkJ",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.youtube.com/@RunPlayBack/shorts",
         "text": "https://www.youtube.com/@RunPlayBack/shorts"
@@ -30044,7 +30124,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T06:58:21.022Z"
   },
   {
     "id": "tGkUvnPEvC",
@@ -30149,7 +30229,7 @@
   {
     "id": "tKwjnO1oGh",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.instagram.com/kalanikai/",
         "text": "https://www.instagram.com/kalanikai/"
@@ -30170,7 +30250,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T07:05:35.315Z"
   },
   {
     "id": "tLIviDTrqT",
@@ -30296,6 +30376,14 @@
       "url": {
         "text": "https://www.instagram.com/p/DYH6opzs1yi/",
         "link": "https://www.instagram.com/p/DYH6opzs1yi/"
+      },
+      "url2": {
+        "text": "https://www.instagram.com/p/DZc3fE2NFVo/",
+        "link": "https://www.instagram.com/p/DZc3fE2NFVo/"
+      },
+      "url3": {
+        "text": "https://www.instagram.com/p/DZVKbUVNd8J/",
+        "link": "https://www.instagram.com/p/DZVKbUVNd8J/"
       }
     },
     "source": "dingtalk",
@@ -30316,7 +30404,7 @@
       "红人编码": "US-Stefan-059",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 67900,
+      "红人粉丝数据": 91100,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-07",
       "追踪优先级": "P3 暂缓",
@@ -30326,7 +30414,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T08:49:24.338Z"
   },
   {
     "id": "tZYWl4wtBx",
@@ -30400,7 +30488,7 @@
   {
     "id": "txieWB75XH",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.youtube.com/@wafflekozik/videos",
         "text": "https://www.youtube.com/@wafflekozik/videos"
@@ -30420,7 +30508,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T07:05:35.315Z"
   },
   {
     "id": "tySXF70Tfr",
@@ -30539,7 +30627,7 @@
       "红人编码": "US-Ryan-049",
       "地区": "US",
       "负责人": "Ryan",
-      "红人粉丝数据": 16300,
+      "红人粉丝数据": 16700,
       "追踪优先级": "P2 低频追踪",
       "追踪评分": "75",
       "追踪原因": "2026普通达人需继续追上线；普通/小体量达人更需要追踪",
@@ -30551,7 +30639,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T09:49:52.985Z"
   },
   {
     "id": "uCnmWvyWnP",
@@ -30612,7 +30700,7 @@
       "红人编码": "UK-Ryan-002",
       "地区": "UK",
       "负责人": "Ryan",
-      "红人粉丝数据": 251000,
+      "红人粉丝数据": 252000,
       "追踪优先级": "P2 低频追踪",
       "追踪评分": "75",
       "追踪原因": "2026普通达人需继续追上线；普通/小体量达人更需要追踪",
@@ -30624,7 +30712,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T09:37:39.562Z"
   },
   {
     "id": "uJDCTzPwET",
@@ -30707,7 +30795,7 @@
   {
     "id": "uS9OY1PLzo",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.youtube.com/@Tamirrusso/videos",
         "text": "https://www.youtube.com/@Tamirrusso/videos"
@@ -30729,7 +30817,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": "2026-06-07T08:11:23.646Z"
+    "updatedAt": "2026-06-14T07:05:35.315Z"
   },
   {
     "id": "uTpKwyGGSB",
@@ -30746,7 +30834,7 @@
       "红人编码": "US-Lexy-068",
       "地区": "US",
       "负责人": "Lexy",
-      "红人粉丝数据": 1740,
+      "红人粉丝数据": 1770,
       "追踪优先级": "P0 立刻追踪",
       "追踪评分": "135",
       "追踪原因": "2026合作未上线/未登记上线；当前本地未登记视频；普通/小体量达人更需要追踪",
@@ -30754,7 +30842,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T09:22:10.364Z"
   },
   {
     "id": "uVQSNM4BXl",
@@ -30847,7 +30935,7 @@
       "红人编码": "EU-Zoe-025",
       "地区": "EU",
       "负责人": "Zoe",
-      "红人粉丝数据": 270000,
+      "红人粉丝数据": 271000,
       "追踪优先级": "P0 立刻追踪",
       "追踪评分": "135",
       "追踪原因": "2026合作未上线/未登记上线；当前本地未登记视频；普通/小体量达人更需要追踪",
@@ -30855,7 +30943,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T09:25:14.794Z"
   },
   {
     "id": "ubYtfENdVs",
@@ -30894,7 +30982,7 @@
       "红人编码": "US-Stefan-155",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 180000,
+      "红人粉丝数据": 184000,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-07",
       "追踪优先级": "P3 暂缓",
@@ -30904,7 +30992,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T09:18:44.402Z"
   },
   {
     "id": "uuGQngc2EF",
@@ -31187,7 +31275,7 @@
   {
     "id": "vKMsbz5GL3",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.youtube.com/@Soflo.LucasYT/shorts",
         "text": "https://www.youtube.com/@Soflo.LucasYT/shorts"
@@ -31209,7 +31297,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T06:58:21.022Z"
   },
   {
     "id": "vOa0PZ3hfu",
@@ -31226,7 +31314,7 @@
       "红人编码": "US-Stefan-141",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 274000,
+      "红人粉丝数据": 277000,
       "追踪优先级": "P0 立刻追踪",
       "追踪评分": "150",
       "追踪原因": "正在出单；2026已上线但仍出单",
@@ -31238,7 +31326,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": "2026-06-07T07:15:04.903Z"
+    "updatedAt": "2026-06-14T09:12:45.583Z"
   },
   {
     "id": "vQqht7YCaU",
@@ -31547,7 +31635,7 @@
   {
     "id": "w2nkqmOwKG",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.instagram.com/ultrabar_562/",
         "text": "https://www.instagram.com/ultrabar_562/"
@@ -31569,7 +31657,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T07:05:35.315Z"
   },
   {
     "id": "w32Bbo6oI3",
@@ -31648,7 +31736,7 @@
   {
     "id": "wEXHaWG4g7",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.youtube.com/@MidModifications/videos",
         "text": "https://www.youtube.com/@MidModifications/videos"
@@ -31670,7 +31758,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T06:58:21.022Z"
   },
   {
     "id": "wFhbPJ3f9I",
@@ -32094,7 +32182,7 @@
   {
     "id": "wvMQgTGgRI",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.youtube.com/@Mruncuttt/videos",
         "text": "https://www.youtube.com/@Mruncuttt/videos"
@@ -32114,7 +32202,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T07:05:35.315Z"
   },
   {
     "id": "wzjJyisS2N",
@@ -32131,7 +32219,7 @@
       "红人编码": "UK-Zoe-003",
       "地区": "UK",
       "负责人": "Zoe",
-      "红人粉丝数据": 85000,
+      "红人粉丝数据": 85400,
       "追踪优先级": "P2 低频追踪",
       "追踪评分": "75",
       "追踪原因": "2026普通达人需继续追上线；普通/小体量达人更需要追踪",
@@ -32139,7 +32227,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T08:56:50.442Z"
   },
   {
     "id": "x9me6Xd1oY",
@@ -32285,7 +32373,7 @@
       "红人编码": "EU-Zoe-038",
       "地区": "EU",
       "负责人": "Zoe",
-      "红人粉丝数据": 36400,
+      "红人粉丝数据": 36900,
       "追踪优先级": "P0 立刻追踪",
       "追踪评分": "135",
       "追踪原因": "2026合作未上线/未登记上线；当前本地未登记视频；普通/小体量达人更需要追踪",
@@ -32293,7 +32381,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T09:57:49.689Z"
   },
   {
     "id": "xRKEeclSmm",
@@ -32384,7 +32472,7 @@
       "红人编码": "US-Ryan-018",
       "地区": "US",
       "负责人": "Ryan",
-      "红人粉丝数据": 3960000,
+      "红人粉丝数据": 4000000,
       "追踪优先级": "P0 立刻追踪",
       "追踪评分": "150",
       "追踪原因": "正在出单；2026已上线但仍出单",
@@ -32396,12 +32484,12 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": "2026-06-07T07:13:44.015Z"
+    "updatedAt": "2026-06-14T10:11:59.464Z"
   },
   {
     "id": "xZr2PUUnOb",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.instagram.com/wafflekozik/",
         "text": "https://www.instagram.com/wafflekozik/"
@@ -32423,7 +32511,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T07:05:35.315Z"
   },
   {
     "id": "xa9HyzOtkD",
@@ -32511,7 +32599,7 @@
   {
     "id": "xqCVtJLW9a",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.youtube.com/@Mia.em1",
         "text": "https://www.youtube.com/@Mia.em1"
@@ -32533,7 +32621,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T06:58:21.022Z"
   },
   {
     "id": "xtwaEitMVM",
@@ -32621,7 +32709,7 @@
       "红人编码": "EU-Zoe-015",
       "地区": "EU",
       "负责人": "Zoe",
-      "红人粉丝数据": 125000,
+      "红人粉丝数据": 127000,
       "追踪优先级": "P1 本周追踪",
       "追踪评分": "115",
       "追踪原因": "2026合作未上线/未登记上线；当前本地未登记视频",
@@ -32629,7 +32717,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T08:46:39.851Z"
   },
   {
     "id": "yANs4iOryh",
@@ -32892,7 +32980,7 @@
         "text": "https://www.instagram.com/calisthenixpro/"
       },
       "平台": "instagramreels",
-      "是否出视频": "否",
+      "是否出视频": "是",
       "红人名称": "calisthenixpro",
       "样品型号": "yozma, yozmasport，in10",
       "红人编码": "US-Ryan-046",
@@ -32904,7 +32992,11 @@
       "追踪优先级": "P1 本周追踪",
       "追踪评分": "115",
       "追踪原因": "2026合作未上线/未登记上线；当前本地未登记视频",
-      "追踪批次更新时间": "2026-06-07"
+      "追踪批次更新时间": "2026-06-07",
+      "url": {
+        "text": "https://www.instagram.com/p/DZaxKNIhPQX/",
+        "link": "https://www.instagram.com/p/DZaxKNIhPQX/"
+      }
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
@@ -32961,7 +33053,7 @@
   {
     "id": "yjbDMaOIjP",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.youtube.com/@ozbikedad",
         "text": "https://www.youtube.com/@ozbikedad"
@@ -32983,7 +33075,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T06:58:21.022Z"
   },
   {
     "id": "yklxfvF8A3",
@@ -33023,7 +33115,7 @@
       "红人编码": "US-Ryan-030",
       "地区": "US",
       "负责人": "Ryan",
-      "红人粉丝数据": 273000,
+      "红人粉丝数据": 274000,
       "追踪优先级": "P3 暂缓",
       "追踪评分": "-50",
       "追踪原因": "头腰部已上线且未出单，低优先",
@@ -33035,7 +33127,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T09:45:31.558Z"
   },
   {
     "id": "z0UXV8Xifr",
@@ -33265,7 +33357,7 @@
   {
     "id": "zY5w8NPxf1",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.instagram.com/midmodifications/",
         "text": "https://www.instagram.com/midmodifications/"
@@ -33287,7 +33379,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T06:58:21.022Z"
   },
   {
     "id": "zbkOb69RIG",
@@ -33447,7 +33539,7 @@
   {
     "id": "zk2vdT84Ip",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.tiktok.com/@_mia.em",
         "text": "https://www.tiktok.com/@_mia.em"
@@ -33468,7 +33560,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T06:58:21.022Z"
   },
   {
     "id": "zkCnxTesoK",
@@ -33530,7 +33622,7 @@
       "红人编码": "UK-Ryan-002",
       "地区": "UK",
       "负责人": "Ryan",
-      "红人粉丝数据": 251000,
+      "红人粉丝数据": 252000,
       "追踪优先级": "P2 低频追踪",
       "追踪评分": "75",
       "追踪原因": "2026普通达人需继续追上线；普通/小体量达人更需要追踪",
@@ -33542,7 +33634,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T09:37:39.562Z"
   },
   {
     "id": "zuTYBdgsxU",
@@ -33558,7 +33650,7 @@
       "红人编码": "US-Stefan-030",
       "地区": "US",
       "负责人": "Stefan",
-      "红人粉丝数据": 99700,
+      "红人粉丝数据": 100600,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-07",
       "追踪优先级": "P3 暂缓",
@@ -33568,7 +33660,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": "2026-06-11T09:54:04.793Z"
+    "updatedAt": "2026-06-14T07:27:35.613Z"
   },
   {
     "id": "zy51qlIxwp",
@@ -33596,7 +33688,7 @@
   {
     "id": "active_1nlmz3g",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.youtube.com/@szamuca/videos",
         "text": "https://www.youtube.com/@szamuca/videos"
@@ -33616,7 +33708,7 @@
     },
     "source": "active-sales-monitoring",
     "importedAt": "2026-06-04T09:48:47.865Z",
-    "updatedAt": "2026-06-07T07:56:57.149Z"
+    "updatedAt": "2026-06-14T06:58:21.022Z"
   },
   {
     "id": "active_10zltwc",
@@ -33667,7 +33759,7 @@
   {
     "id": "active_bdqzn6",
     "fields": {
-      "是否监控": "是",
+      "是否监控": "否",
       "红人链接": {
         "link": "https://www.tiktok.com/@ultra.mason30",
         "text": "https://www.tiktok.com/@ultra.mason30"
@@ -33689,7 +33781,7 @@
     },
     "source": "active-sales-monitoring",
     "importedAt": "2026-06-04T09:48:47.865Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-14T07:05:35.315Z"
   },
   {
     "id": "active_1xlt2zy",
@@ -33751,7 +33843,7 @@
         "text": "https://www.instagram.com/sd.lukee/"
       },
       "平台": "instagramreels",
-      "是否出视频": "否",
+      "是否出视频": "是",
       "红人名称": "sd.lukee",
       "样品型号": "yozma, yozmasport，in10",
       "红人编码": "UK-Zoe-008",
@@ -33763,7 +33855,11 @@
       "追踪优先级": "P0 立刻追踪",
       "追踪评分": "135",
       "追踪原因": "2026合作未上线/未登记上线；当前本地未登记视频；普通/小体量达人更需要追踪",
-      "追踪批次更新时间": "2026-06-07"
+      "追踪批次更新时间": "2026-06-07",
+      "url": {
+        "text": "https://www.instagram.com/p/DZfWFPhNkls/",
+        "link": "https://www.instagram.com/p/DZfWFPhNkls/"
+      }
     },
     "source": "active-sales-monitoring",
     "importedAt": "2026-06-04T09:48:47.865Z",

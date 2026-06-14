@@ -112,11 +112,13 @@
 
               <div class="dashboard-analysis-stack">
                 <div id="dashboardOverview" class="dashboard-section dashboard-overview-block">
+                  <div id="periodInsightStrip" class="period-insight-strip"></div>
                   <div class="period-grid command-kpi-grid">
                     <article class="period-card highlight" data-period-card="week" data-jump-section="videos">
                       <span class="period-label">New Videos This Week</span>
                       <strong id="centerWeekVideos">-</strong>
                       <p>周报周期上线视频</p>
+                      <small id="centerWeekDelta" class="period-delta">等待数据</small>
                       <dl>
                         <div><dt>达人</dt><dd id="centerWeekCreators">-</dd></div>
                         <div><dt>7日声量</dt><dd id="centerWeekViews">-</dd></div>
@@ -126,6 +128,7 @@
                       <span class="period-label">This Month</span>
                       <strong id="centerMonthVideos">-</strong>
                       <p>本月上线视频</p>
+                      <small id="centerMonthDelta" class="period-delta">等待数据</small>
                       <dl>
                         <div><dt>达人</dt><dd id="centerMonthCreators">-</dd></div>
                         <div><dt>7日声量</dt><dd id="centerMonthViews">-</dd></div>
@@ -135,6 +138,7 @@
                       <span class="period-label">Total Videos</span>
                       <strong id="centerTotalVideos">-</strong>
                       <p>累计有效视频</p>
+                      <small id="centerTotalDelta" class="period-delta">全部已登记视频</small>
                       <dl>
                         <div><dt>达人</dt><dd id="centerTotalCreators">-</dd></div>
                         <div><dt>7日声量</dt><dd id="centerTotalViews">-</dd></div>
@@ -144,6 +148,7 @@
                       <span class="period-label">Custom Range</span>
                       <strong id="centerCustomVideos">-</strong>
                       <p id="centerCustomRangeLabel">选择日期后查看</p>
+                      <small id="centerCustomDelta" class="period-delta">自定义时间段</small>
                       <dl>
                         <div><dt>达人</dt><dd id="centerCustomCreators">-</dd></div>
                         <div><dt>7日声量</dt><dd id="centerCustomViews">-</dd></div>
@@ -379,12 +384,51 @@
 
           <section id="sectionVideos" class="panel center-section">
             <div class="panel-heading"><div><p class="eyebrow">VIDEOS</p><h2>视频上线明细</h2></div><a class="text-button" href="/api/local/export/videos?format=csv">导出 CSV</a></div>
-            <div class="table-toolbar">
-              <label><span>搜索</span><input id="videoTableSearch" type="search" placeholder="达人 / 平台 / 负责人 / 地区" /></label>
-              <span class="hint">表格会跟随顶部筛选和地图点击自动更新。</span>
+            <div class="table-toolbar video-filter-panel">
+              <div class="video-filter-copy">
+                <strong>视频明细筛选</strong>
+                <span>按上线时间、平台、负责人快速定位；表格仍会跟随顶部仪表盘筛选。</span>
+              </div>
+              <div class="video-filter-grid">
+                <label><span>搜索</span><input id="videoTableSearch" type="search" placeholder="达人 / 标题 / 地区" /></label>
+                <label><span>开始时间</span><input id="videoFilterStart" type="date" /></label>
+                <label><span>结束时间</span><input id="videoFilterEnd" type="date" /></label>
+                <label><span>平台</span><select id="videoFilterPlatform"><option value="all">全部平台</option></select></label>
+                <label><span>负责人</span><select id="videoFilterOwner"><option value="all">全部负责人</option></select></label>
+                <button id="btnResetVideoFilters" type="button" class="ghost-button">重置筛选</button>
+              </div>
             </div>
-            <div class="table-wrap"><table><thead><tr><th>红人</th><th>负责人</th><th>区域</th><th>平台</th><th>上线时间</th><th>播放</th><th>互动率</th><th>状态</th><th>链接</th></tr></thead><tbody id="localVideoRows"></tbody></table></div>
+            <div class="table-wrap"><table><thead><tr><th>红人</th><th>负责人</th><th>区域</th><th>平台</th><th>上线时间</th><th>7日声量</th><th>互动率</th><th>状态</th><th>链接</th><th>操作</th></tr></thead><tbody id="localVideoRows"></tbody></table></div>
           </section>
+
+          <div id="videoEditModal" class="edit-modal" hidden>
+            <button class="edit-modal-backdrop" type="button" data-close-video-editor aria-label="关闭编辑弹窗"></button>
+            <section class="edit-modal-panel" aria-labelledby="videoEditTitle">
+              <div class="edit-modal-header">
+                <div>
+                  <p class="eyebrow">MANUAL EDIT</p>
+                  <h3 id="videoEditTitle">修改视频记录</h3>
+                </div>
+                <button id="btnCloseVideoEditor" type="button" class="icon-button" aria-label="关闭">×</button>
+              </div>
+              <div class="edit-form-grid">
+                <label><span>红人</span><input id="videoEditCreator" type="text" /></label>
+                <label><span>负责人</span><input id="videoEditOwner" type="text" /></label>
+                <label><span>区域</span><input id="videoEditRegion" type="text" placeholder="US / CA / EU / UK" /></label>
+                <label><span>平台</span><select id="videoEditPlatform"><option value="instagramreels">Instagram Reels</option><option value="tiktok">TikTok</option><option value="youtubeshort">YouTube Shorts</option><option value="youtubevideo">YouTube Video</option></select></label>
+                <label><span>上线时间</span><input id="videoEditTimestamp" type="datetime-local" /></label>
+                <label><span>7日声量</span><input id="videoEditViews" type="number" min="0" step="1" /></label>
+                <label><span>点赞</span><input id="videoEditLikes" type="number" min="0" step="1" /></label>
+                <label><span>评论</span><input id="videoEditComments" type="number" min="0" step="1" /></label>
+                <label class="wide"><span>视频链接</span><input id="videoEditUrl" type="url" /></label>
+                <label class="wide"><span>标题 / 备注</span><textarea id="videoEditCaption" rows="3"></textarea></label>
+              </div>
+              <div class="edit-modal-footer">
+                <span id="videoEditHint" class="hint">保存后会写回本地视频上线表。</span>
+                <button id="btnSaveVideoEditor" type="button" class="primary-button">保存修改</button>
+              </div>
+            </section>
+          </div>
 
           <section id="sectionAffiliateSales" class="panel center-section">
             <div class="panel-heading"><div><p class="eyebrow">AFFILIATE</p><h2>出单分析表</h2></div><a class="text-button" href="/api/local/export/affiliateSales?format=csv">导出 CSV</a></div>
