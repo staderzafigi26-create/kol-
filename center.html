@@ -100,6 +100,7 @@
                   <button data-dashboard-jump="dashboardTargeting">投放机会</button>
                   <button data-dashboard-jump="dashboardDataHealth">数据健康</button>
                   <button data-dashboard-jump="dashboardAnniversary">周年庆</button>
+                  <button data-dashboard-jump="dashboardDeliverables">交付</button>
                   <button data-dashboard-jump="dashboardPlatform">平台</button>
                   <button data-dashboard-jump="dashboardGeo">全球地图</button>
                   <button data-dashboard-jump="dashboardRegions">地区</button>
@@ -176,6 +177,27 @@
                     </article>
                   </div>
                   <div id="dashboardFocusBrief" class="dashboard-focus-brief"></div>
+                </div>
+
+                <div id="dashboardDeliverables" class="dashboard-section deliverable-section">
+                  <div class="section-heading">
+                    <div>
+                      <h3>合作交付进度</h3>
+                      <p>把营销总表和合同签署表合并后，按负责人、区域、平台看预计交付、已上线、待补缺口和待确认合同。</p>
+                    </div>
+                    <a class="text-button" href="/static-data/exports/influencers.csv">导出红人交付字段</a>
+                  </div>
+                  <div id="deliverableKpis" class="deliverable-kpis"></div>
+                  <div class="deliverable-grid">
+                    <article class="trend-card">
+                      <div class="trend-title"><strong>负责人交付进度</strong><span>按当前筛选联动</span></div>
+                      <div id="deliverableOwnerGrid" class="deliverable-owner-grid"></div>
+                    </article>
+                    <article class="trend-card">
+                      <div class="trend-title"><strong>待补 / 待确认清单</strong><span>优先处理缺口</span></div>
+                      <ol id="deliverableGapList" class="rank-list deliverable-gap-list"></ol>
+                    </article>
+                  </div>
                 </div>
 
             <div id="dashboardDataHealth" class="dashboard-section data-health-section">
@@ -379,7 +401,7 @@
 
           <section id="sectionInfluencers" class="panel center-section">
             <div class="panel-heading"><div><p class="eyebrow">INFLUENCERS</p><h2>红人库</h2></div><a class="text-button" href="/api/local/export/influencers?format=csv">导出 CSV</a></div>
-            <div class="table-wrap"><table><thead><tr><th>红人</th><th>负责人</th><th>地区</th><th>平台</th><th>主页链接</th><th>是否监控</th><th>是否出视频</th></tr></thead><tbody id="localInfluencerRows"></tbody></table></div>
+            <div class="table-wrap"><table><thead><tr><th>红人</th><th>负责人</th><th>地区</th><th>平台</th><th>主页链接</th><th>是否监控</th><th>是否出视频</th><th>合作服务</th><th>预计交付</th><th>上线进度</th><th>解析状态</th></tr></thead><tbody id="localInfluencerRows"></tbody></table></div>
           </section>
 
           <section id="sectionVideos" class="panel center-section">
@@ -398,7 +420,7 @@
                 <button id="btnResetVideoFilters" type="button" class="ghost-button">重置筛选</button>
               </div>
             </div>
-            <div class="table-wrap"><table><thead><tr><th>红人</th><th>负责人</th><th>区域</th><th>平台</th><th>上线时间</th><th>7日声量</th><th>互动率</th><th>状态</th><th>链接</th><th>操作</th></tr></thead><tbody id="localVideoRows"></tbody></table></div>
+            <div class="table-wrap"><table><thead><tr><th>红人</th><th>负责人</th><th>区域</th><th>平台</th><th>上线时间</th><th>7日声量</th><th>30日声量</th><th>互动率</th><th>交付归因</th><th>状态</th><th>链接</th><th>操作</th></tr></thead><tbody id="localVideoRows"></tbody></table></div>
           </section>
 
           <div id="videoEditModal" class="edit-modal" hidden>
@@ -542,6 +564,8 @@
               <button id="btnImportDingTalk" class="secondary">从钉钉同步到本地</button>
               <a class="link-button secondary-link" href="/api/local/export/influencers?format=json">导出红人 JSON</a>
               <a class="link-button secondary-link" href="/api/local/export/videos?format=json">导出视频 JSON</a>
+              <a class="link-button secondary-link" href="/api/local/reports/cooperation-deliverables-2026-06-06_2026-06-12-合同交付明细.csv">下载合同交付明细</a>
+              <a class="link-button secondary-link" href="/api/local/reports/cooperation-deliverables-2026-06-06_2026-06-12-上线视频明细.csv">下载上周期上线视频</a>
             </div>
             <div id="centerStatus" class="status-message">中台准备中。</div>
           </section>
