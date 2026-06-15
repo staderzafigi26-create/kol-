@@ -2389,28 +2389,27 @@ label span,
 
 .deliverable-section {
   scroll-margin-top: 150px;
+  padding-bottom: 18px;
 }
 
 .deliverable-kpis {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 12px;
-  margin-bottom: 14px;
+  margin-bottom: 10px;
 }
 
-.deliverable-kpi,
-.deliverable-owner-card {
+.deliverable-kpi {
   border: 1px solid rgba(255, 255, 255, 0.09);
-  border-radius: 18px;
-  padding: 15px;
+  border-radius: 16px;
+  padding: 13px 14px;
   background:
     linear-gradient(135deg, rgba(215, 71, 76, 0.12), rgba(72, 209, 204, 0.05)),
     var(--card-2);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
 }
 
-.deliverable-kpi span,
-.deliverable-owner-card span {
+.deliverable-kpi span {
   display: block;
   color: var(--muted);
   font-size: 12px;
@@ -2418,49 +2417,26 @@ label span,
 
 .deliverable-kpi strong {
   display: block;
-  margin: 5px 0;
+  margin: 4px 0;
   color: #fff;
-  font-size: clamp(24px, 3vw, 36px);
+  font-size: clamp(22px, 2.4vw, 30px);
 }
 
-.deliverable-kpi small,
-.deliverable-owner-card small {
+.deliverable-kpi small {
   color: #c7d5df;
   font-size: 12px;
 }
 
-.deliverable-grid {
+.deliverable-compact-list {
   display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
-  gap: 14px;
-}
-
-.deliverable-owner-grid {
-  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 10px;
+  margin-top: 8px;
 }
 
-.deliverable-owner-card > div:first-child {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  margin-bottom: 9px;
-}
-
-.deliverable-progress {
-  height: 9px;
-  border-radius: 999px;
-  overflow: hidden;
-  background: rgba(148, 163, 184, 0.16);
-  margin-bottom: 8px;
-}
-
-.deliverable-progress i {
-  display: block;
-  height: 100%;
-  border-radius: inherit;
-  background: linear-gradient(90deg, #ef4444, #f97316, #22d3ee);
+.deliverable-compact-list li {
+  min-height: 64px;
+  margin: 0;
 }
 
 .deliverable-gap-list li b {

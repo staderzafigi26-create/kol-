@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Yozma 红人数据中台</title>
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="style.css?v=20260615-mature-refresh-2" />
+    <link rel="stylesheet" href="style.css?v=20260615-affiliate-online-1" />
   </head>
   <body>
     <main class="container data-center">
@@ -99,7 +99,6 @@
                   <button data-dashboard-jump="dashboardTrends">趋势</button>
                   <button data-dashboard-jump="dashboardTargeting">投放机会</button>
                   <button data-dashboard-jump="dashboardDataHealth">数据健康</button>
-                  <button data-dashboard-jump="dashboardAnniversary">周年庆</button>
                   <button data-dashboard-jump="dashboardDeliverables">交付</button>
                   <button data-dashboard-jump="dashboardPlatform">平台</button>
                   <button data-dashboard-jump="dashboardGeo">全球地图</button>
@@ -183,21 +182,12 @@
                   <div class="section-heading">
                     <div>
                       <h3>合作交付进度</h3>
-                      <p>把营销总表和合同签署表合并后，按负责人、区域、平台看预计交付、已上线、待补缺口和待确认合同。</p>
+                      <p>只保留合同交付的核心概览和最需要处理的缺口，详细明细可导出后查看。</p>
                     </div>
                     <a class="text-button" href="/static-data/exports/influencers.csv">导出红人交付字段</a>
                   </div>
                   <div id="deliverableKpis" class="deliverable-kpis"></div>
-                  <div class="deliverable-grid">
-                    <article class="trend-card">
-                      <div class="trend-title"><strong>负责人交付进度</strong><span>按当前筛选联动</span></div>
-                      <div id="deliverableOwnerGrid" class="deliverable-owner-grid"></div>
-                    </article>
-                    <article class="trend-card">
-                      <div class="trend-title"><strong>待补 / 待确认清单</strong><span>优先处理缺口</span></div>
-                      <ol id="deliverableGapList" class="rank-list deliverable-gap-list"></ol>
-                    </article>
-                  </div>
+                  <ol id="deliverableGapList" class="rank-list deliverable-gap-list deliverable-compact-list"></ol>
                 </div>
 
             <div id="dashboardDataHealth" class="dashboard-section data-health-section">
@@ -208,16 +198,6 @@
                 </div>
               </div>
               <div id="dataHealthGrid" class="data-health-grid"></div>
-            </div>
-
-            <div id="dashboardAnniversary" class="dashboard-section anniversary-section">
-              <div class="section-heading">
-                <div>
-                  <h3>周年庆战情快照</h3>
-                  <p>接入本机 6 月周年庆抓取和订单汇总，只展示公开安全的聚合数据，方便判断活动上线、曝光和转化。</p>
-                </div>
-              </div>
-              <div id="anniversarySnapshot" class="anniversary-snapshot"></div>
             </div>
 
             <div id="dashboardGeo" class="dashboard-section global-command-section">
@@ -573,6 +553,6 @@
       </section>
     </main>
     <script src="vendor/echarts.min.js"></script>
-  <script src="center.js?v=20260615-mature-refresh-2"></script>
+  <script src="center.js?v=20260615-affiliate-online-1"></script>
   </body>
 </html>

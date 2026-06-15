@@ -14,7 +14,8 @@ const COLLECTION_FILES = {
   influencers: 'influencers.json',
   videos: 'videos.json',
   snapshots: 'snapshots.json',
-  runs: 'runs.json'
+  runs: 'runs.json',
+  affiliateSales: 'affiliate_sales.json'
 };
 
 const FIELD_ALLOWLIST = {
@@ -117,7 +118,53 @@ const FIELD_ALLOWLIST = {
     'videoSkipped',
     'snapshotCreated'
   ],
-  affiliateSales: []
+  affiliateSales: [
+    'affiliateName',
+    'referralCode',
+    'couponCode',
+    'referralLink',
+    'market',
+    'state',
+    'country',
+    'instagram',
+    'youtube',
+    'tiktok',
+    'website',
+    'status',
+    'lastActive',
+    'dateCreated',
+    'dateApproved',
+    'hasOrderMetrics',
+    'orders',
+    'revenue',
+    'commission',
+    'matchStatus',
+    'matchCount',
+    'creatorName',
+    'creatorCode',
+    'owner',
+    'region',
+    'tier',
+    'followers',
+    'platformType',
+    'marketingAffiliateCode',
+    'cooperationDate',
+    'cooperationProgress',
+    'firstPostUrl',
+    'firstPostDate',
+    'settled',
+    'subtotal',
+    'revenueByCurrency',
+    'commissionByCurrency',
+    'statusBreakdown',
+    'firstOrderDate',
+    'lastOrderDate',
+    'latestDiscountCodes',
+    'conversionSources',
+    'affiliateSources',
+    'metricsNotice',
+    'importedAt'
+  ]
 };
 
 function pickFields(fields = {}, allowlist = []) {
@@ -192,16 +239,13 @@ async function main() {
     await fs.writeFile(path.join(EXPORT_DIR, `${collection}.json`), JSON.stringify(rows, null, 2), 'utf8');
     await fs.writeFile(path.join(EXPORT_DIR, `${collection}.csv`), rowsToCsv(rows), 'utf8');
   }
-  collections.affiliateSales = [];
-  counts.affiliateSales = 0;
-
   await fs.writeFile(
     path.join(STATIC_DIR, 'collections.json'),
     JSON.stringify(
       {
         ok: true,
         generatedAt: new Date().toISOString(),
-        privacy: 'Sanitized read-only team snapshot. Contact fields, payment fields, order identifiers and affiliate order rows are excluded.',
+        privacy: 'Sanitized read-only team snapshot. Contact fields, payment fields and order identifiers are excluded; affiliate sales are published as creator-level aggregates.',
         counts,
         collections
       },
