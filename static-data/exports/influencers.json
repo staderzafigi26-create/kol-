@@ -2251,7 +2251,7 @@
       "合作量级": "微型红人/KOC(1k-10k)",
       "合作服务": "已签同意书盖章",
       "已上线视频": 12,
-      "红人粉丝数据": 4400,
+      "红人粉丝数据": 17000,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-14",
       "追踪优先级": "P2 低频追踪",
@@ -2261,11 +2261,15 @@
       "url": {
         "text": "https://www.tiktok.com/@eastcoastemoto/video/7647592302403276062",
         "link": "https://www.tiktok.com/@eastcoastemoto/video/7647592302403276062"
+      },
+      "url2": {
+        "text": "https://www.tiktok.com/@eastcoastemoto/video/7649864959953816863",
+        "link": "https://www.tiktok.com/@eastcoastemoto/video/7649864959953816863"
       }
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": "2026-06-07T10:28:55.983Z"
+    "updatedAt": "2026-06-15T03:29:34.316Z"
   },
   {
     "id": "3Sob6QBZve",
@@ -23994,7 +23998,7 @@
       "视频交付完成率": "100%",
       "合同交付平台拆分": "Instagram Reels 1条 / YouTube Video 1条",
       "合同交付解析状态": "已解析",
-      "红人粉丝数据": 66600,
+      "红人粉丝数据": 415000,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-14",
       "追踪优先级": "P3 暂缓",
@@ -24008,7 +24012,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": "2026-06-11T10:12:21.750Z"
+    "updatedAt": "2026-06-15T03:29:52.908Z"
   },
   {
     "id": "WJLrnsjZZP",

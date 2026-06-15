@@ -19010,5 +19010,28 @@
     "source": "local-discovery",
     "importedAt": "",
     "updatedAt": "2026-06-15T03:29:11.151Z"
+  },
+  {
+    "id": "vid_1781494174317_yzwhphl",
+    "fields": {
+      "是否监控": "是",
+      "likesCount": 467,
+      "videoUrl": "https://www.tiktok.com/@eastcoastemoto/video/7649864959953816863",
+      "平台": "tiktok",
+      "commentsCount": 8,
+      "红人名称": "eastcoastemoto",
+      "id": "7649864959953816863",
+      "videoPlayCount": 13300,
+      "videoViewCount": 13300,
+      "url": {
+        "text": "https://www.tiktok.com/@eastcoastemoto/video/7649864959953816863",
+        "link": "https://www.tiktok.com/@eastcoastemoto/video/7649864959953816863"
+      },
+      "timestamp": "2026-06-10T20:23:24.000Z",
+      "displayUrl": "https://p16-common-sign.tiktokcdn-eu.com/tos-useast8-p-0068-tx2/oURBjAEpliZia7uBHAxAtwRpIvAEpAO5kvAni~tplv-tiktokx-dmt-logom:tos-useast8-i-0068-tx2/oUoEpgAAEiayBTiAHhBHAI7nxRuAlwv2AApti.image?dr=10393&x-expires=1781665200&x-signature=5mDyvlroipOfyBlYevyAeG7h5nc%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=no1a"
+    },
+    "source": "local-discovery",
+    "importedAt": "",
+    "updatedAt": "2026-06-15T03:29:34.317Z"
   }
 ]

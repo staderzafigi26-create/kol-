@@ -45382,5 +45382,35 @@
     "source": "local-discovery",
     "importedAt": "",
     "updatedAt": ""
+  },
+  {
+    "id": "snap_1781494174317_7aqsm8o",
+    "fields": {
+      "postUrl": "https://www.tiktok.com/@eastcoastemoto/video/7649864959953816863",
+      "snapshotType": "new",
+      "sharesCount": 8,
+      "viewDelta": 13300,
+      "isFirstSeen": "是",
+      "postId": "7649864959953816863",
+      "videoPlayCount": 13300,
+      "firstSeenAt": 1781494174317,
+      "platform": "tiktok",
+      "isProductPost": "是",
+      "是否监控": "是",
+      "playDelta": 13300,
+      "commentDelta": 8,
+      "postKey": "tiktok_7649864959953816863",
+      "likesCount": 467,
+      "shareDelta": 8,
+      "commentsCount": 8,
+      "capturedAt": 1781494174317,
+      "红人名称": "eastcoastemoto",
+      "runId": "local_discovery_1781494151186",
+      "likeDelta": 467,
+      "videoViewCount": 13300
+    },
+    "source": "local-discovery",
+    "importedAt": "",
+    "updatedAt": ""
   }
 ]
