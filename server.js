@@ -16,6 +16,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 const RAW_DIR = path.join(__dirname, 'data', 'raw');
 const OUTPUT_DIR = path.join(__dirname, 'data', 'output');
+const REPORT_DIR = path.join(__dirname, 'data', 'reports');
 const DASHBOARD_CACHE_PATH = path.join(__dirname, 'data', 'cache', 'dashboard.json');
 const LOCAL_DATA_DIR = path.join(__dirname, 'data', 'local');
 const LOCAL_DATA_FILES = {
@@ -2344,6 +2345,20 @@ app.get('/api/local/export/:collection', async (req, res) => {
     return res.send(`\uFEFF${rowsToCsv(rows)}`);
   } catch (error) {
     return res.status(500).json({ ok: false, error: error.message || '导出失败。' });
+  }
+});
+
+app.get('/api/local/reports/:filename', async (req, res) => {
+  try {
+    const filename = path.basename(String(req.params.filename || ''));
+    if (!/^[\w\u4e00-\u9fa5().\-\s]+\.(csv|xlsx|md|html)$/i.test(filename)) {
+      return res.status(400).json({ ok: false, error: '报告文件名不合法。' });
+    }
+    const filePath = path.join(REPORT_DIR, filename);
+    await fs.access(filePath);
+    return res.download(filePath, filename);
+  } catch (error) {
+    return res.status(404).json({ ok: false, error: '报告文件不存在，请先运行合作交付导入脚本。' });
   }
 });
 

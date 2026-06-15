@@ -448,6 +448,9 @@ for (const [platform, rows] of grouped) {
       fields.likesCount = String(toNumber(row.likesCount, fields.likesCount || 0));
       fields.videoViewCount = String(toNumber(row.videoViewCount, fields.videoViewCount || 0));
       fields.videoPlayCount = String(toNumber(row.videoPlayCount, fields.videoPlayCount || 0));
+      const milestoneViews = Math.max(toNumber(fields.videoPlayCount, 0), toNumber(fields.videoViewCount, 0));
+      if (item.milestone === 'milestone_7d') fields['7日成熟声量'] = milestoneViews;
+      if (item.milestone === 'milestone_30d') fields['30日成熟声量'] = milestoneViews;
       if (row.videoUrl) fields.videoUrl = String(row.videoUrl).slice(0, 1000);
       if (row.coverImage) fields.displayUrl = String(row.coverImage).slice(0, 1000);
       item.video.updatedAt = new Date().toISOString();

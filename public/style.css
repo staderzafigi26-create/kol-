@@ -2387,6 +2387,86 @@ label span,
   margin-top: 13px;
 }
 
+.deliverable-section {
+  scroll-margin-top: 150px;
+}
+
+.deliverable-kpis {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.deliverable-kpi,
+.deliverable-owner-card {
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 18px;
+  padding: 15px;
+  background:
+    linear-gradient(135deg, rgba(215, 71, 76, 0.12), rgba(72, 209, 204, 0.05)),
+    var(--card-2);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.deliverable-kpi span,
+.deliverable-owner-card span {
+  display: block;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.deliverable-kpi strong {
+  display: block;
+  margin: 5px 0;
+  color: #fff;
+  font-size: clamp(24px, 3vw, 36px);
+}
+
+.deliverable-kpi small,
+.deliverable-owner-card small {
+  color: #c7d5df;
+  font-size: 12px;
+}
+
+.deliverable-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: 14px;
+}
+
+.deliverable-owner-grid {
+  display: grid;
+  gap: 10px;
+}
+
+.deliverable-owner-card > div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 9px;
+}
+
+.deliverable-progress {
+  height: 9px;
+  border-radius: 999px;
+  overflow: hidden;
+  background: rgba(148, 163, 184, 0.16);
+  margin-bottom: 8px;
+}
+
+.deliverable-progress i {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #ef4444, #f97316, #22d3ee);
+}
+
+.deliverable-gap-list li b {
+  color: #fecaca;
+}
+
 .platform-row {
   border: 1px solid rgba(255, 255, 255, 0.09);
   border-radius: 18px;

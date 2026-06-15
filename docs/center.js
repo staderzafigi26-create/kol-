@@ -41,6 +41,9 @@ const centerEls = {
   opsSummaryChips: document.getElementById('opsSummaryChips'),
   opsActionList: document.getElementById('opsActionList'),
   focusBrief: document.getElementById('dashboardFocusBrief'),
+  deliverableKpis: document.getElementById('deliverableKpis'),
+  deliverableOwnerGrid: document.getElementById('deliverableOwnerGrid'),
+  deliverableGapList: document.getElementById('deliverableGapList'),
   tierGrid: document.getElementById('centerTierGrid'),
   tierPeriodLabel: document.getElementById('tierPeriodLabel'),
   tierBenchmarkGrid: document.getElementById('tierBenchmarkGrid'),
@@ -3766,9 +3769,99 @@ function renderAffiliateSalesDashboard() {
     : '<div class="empty-cell">暂无可匹配的联盟达人。</div>';
 }
 
+function influencerDeliverableKey(fields) {
+  return creatorLooseKey(readLocalText(fields['红人编码'])) || creatorLooseKey(readLocalText(fields['红人名称'])) || readLocalLink(fields['红人链接']);
+}
+
+function uniqueDeliverableInfluencers() {
+  const rows = new Map();
+  getScopedInfluencerRows().forEach((fields) => {
+    const expected = rawNumber(fields['预计视频交付']);
+    const status = readLocalText(fields['合同交付解析状态']);
+    const service = readLocalText(fields['合作服务']);
+    if (!expected && !status) return;
+    const key = influencerDeliverableKey(fields);
+    if (!key) return;
+    const current = rows.get(key);
+    const candidate = {
+      fields,
+      creator: readLocalText(fields['红人名称']) || '-',
+      owner: readLocalText(fields['负责人']) || '未标注负责人',
+      region: readRegionField(fields) || '未标注地区',
+      expected,
+      completed: rawNumber(fields['已上线视频']),
+      remaining: rawNumber(fields['待补视频交付']),
+      parseStatus: status || '待补充',
+      service: service || readLocalText(fields['合作模式']) || '待补充',
+      split: readLocalText(fields['合同交付平台拆分']),
+      progress: expected ? Math.min(100, Math.round((rawNumber(fields['已上线视频']) / expected) * 100)) : 0
+    };
+    if (!current || candidate.expected > current.expected || candidate.completed > current.completed) rows.set(key, candidate);
+  });
+  return [...rows.values()];
+}
+
+function renderDeliverableDashboard() {
+  if (!centerEls.deliverableKpis || !centerEls.deliverableOwnerGrid || !centerEls.deliverableGapList) return;
+  const rows = uniqueDeliverableInfluencers();
+  const expected = rows.reduce((sum, row) => sum + row.expected, 0);
+  const completed = rows.reduce((sum, row) => sum + row.completed, 0);
+  const remaining = Math.max(0, expected - completed);
+  const pending = rows.filter((row) => row.parseStatus === '待人工确认' || !row.expected).length;
+  const rate = expected ? Math.round((completed / expected) * 100) : 0;
+  centerEls.deliverableKpis.innerHTML = [
+    ['交付达人', `${centerNumber(rows.length)} 位`, '已匹配营销/合同字段'],
+    ['预计视频', `${centerNumber(expected)} 条`, `已上线 ${centerNumber(completed)} 条`],
+    ['完成率', `${rate}%`, `待补 ${centerNumber(remaining)} 条`],
+    ['待确认合同', `${centerNumber(pending)} 项`, '需要人工确认交付数量']
+  ]
+    .map(([label, value, note]) => `<article class="deliverable-kpi"><span>${escapeHtml(label)}</span><strong>${escapeHtml(value)}</strong><small>${escapeHtml(note)}</small></article>`)
+    .join('');
+
+  const byOwner = new Map();
+  rows.forEach((row) => {
+    if (!byOwner.has(row.owner)) byOwner.set(row.owner, { owner: row.owner, creators: 0, expected: 0, completed: 0, remaining: 0 });
+    const item = byOwner.get(row.owner);
+    item.creators += 1;
+    item.expected += row.expected;
+    item.completed += row.completed;
+    item.remaining += Math.max(0, row.expected - row.completed);
+  });
+  centerEls.deliverableOwnerGrid.innerHTML = [...byOwner.values()]
+    .sort((a, b) => b.remaining - a.remaining || b.expected - a.expected)
+    .slice(0, 8)
+    .map((row) => {
+      const percent = row.expected ? Math.min(100, Math.round((row.completed / row.expected) * 100)) : 0;
+      return `<article class="deliverable-owner-card">
+        <div><strong>${escapeHtml(row.owner)}</strong><span>${centerNumber(row.creators)} 位达人</span></div>
+        <div class="deliverable-progress"><i style="width:${Math.max(4, percent)}%"></i></div>
+        <small>已上线 ${centerNumber(row.completed)} / 预计 ${centerNumber(row.expected)} · 待补 ${centerNumber(row.remaining)}</small>
+      </article>`;
+    })
+    .join('') || '<div class="empty-cell">当前筛选下暂无合同交付数据。</div>';
+
+  const gapRows = rows
+    .filter((row) => row.parseStatus === '待人工确认' || row.remaining > 0 || !row.expected)
+    .sort((a, b) => b.remaining - a.remaining || b.expected - a.expected)
+    .slice(0, 10);
+  centerEls.deliverableGapList.innerHTML = gapRows.length
+    ? gapRows
+        .map((row, index) => `<li>
+          <span>${index + 1}</span>
+          <div>
+            <strong>${escapeHtml(row.creator)}</strong>
+            <small>${escapeHtml(row.owner)} · ${escapeHtml(row.region)} · ${escapeHtml(row.service)} · ${escapeHtml(row.split || row.parseStatus)}</small>
+          </div>
+          <b>${row.expected ? `${centerNumber(row.completed)}/${centerNumber(row.expected)}` : '待确认'}</b>
+        </li>`)
+        .join('')
+    : '<li class="empty-rank">当前筛选下没有待补交付。</li>';
+}
+
 function renderDashboardCharts() {
   renderCommandKpis();
   renderFocusBrief();
+  renderDeliverableDashboard();
   renderLineChart(centerEls.weeklyTrendChart, getWeeklyTrendRows(), 'videos', 'mature7dViews');
   renderBarChart(centerEls.monthlyBarChart, getMonthlyTrendRows());
   renderOpsCommandCenter();
@@ -3940,6 +4033,7 @@ function renderPeriodSensitiveViews() {
   updateDashboardControlState();
   renderCommandKpis();
   renderFocusBrief();
+  renderDeliverableDashboard();
   renderCustomSummaryCard();
   renderCurrentPeriod();
   renderDataHealth();
@@ -4144,6 +4238,13 @@ function renderTables() {
     const linkCell = addCell(tr, readLocalLink(fields['红人链接']), '主页链接');
     addCell(tr, readLocalText(fields['是否监控']), '是否监控');
     addCell(tr, readLocalText(fields['是否出视频'] || fields['是否发布视频']), '是否出视频');
+    addCell(tr, readLocalText(fields['合作服务']) || readLocalText(fields['合作模式']) || '-', '合作服务');
+    addCell(tr, readLocalText(fields['合同交付平台拆分']) || '-', '预计交付');
+    const expected = rawNumber(fields['预计视频交付']);
+    const completed = rawNumber(fields['已上线视频']);
+    const progress = expected ? `${centerNumber(completed)} / ${centerNumber(expected)} (${Math.min(100, Math.round((completed / expected) * 100))}%)` : '-';
+    addCell(tr, progress, '上线进度');
+    addCell(tr, readLocalText(fields['合同交付解析状态']) || '-', '解析状态');
     centerEls.influencerRows.appendChild(tr);
   });
 
@@ -4161,7 +4262,9 @@ function renderTables() {
       addCell(tr, row.platform, '平台');
       addCell(tr, centerDate(row.publishDate), '上线时间');
       addCell(tr, centerNumber(row.views), '7日声量');
+      addCell(tr, centerNumber(rawNumber(row.raw?.['30日成熟声量'] || row.raw?.mature30dViews)), '30日声量');
       addCell(tr, `${row.engagementRate}%`, '互动率');
+      addCell(tr, readLocalText(row.raw?.['是否计入合同交付']) === '是' ? readLocalText(row.raw?.['对应合同平台'] || row.raw?.['合同交付类型']) || '已归因' : '-', '交付归因');
       const status = videoStatus(row);
       const statusCell = document.createElement('td');
       labelCell(statusCell, '状态');

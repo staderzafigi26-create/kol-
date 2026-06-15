@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "dev": "node server.js",
+    "import:cooperation": "node scripts/import-cooperation-deliverables.mjs",
     "build:static": "node scripts/build-static-pages-data.mjs",
     "build:pages": "npm run build:static && node scripts/build-github-pages.mjs"
   },
