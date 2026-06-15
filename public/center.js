@@ -147,7 +147,7 @@ let dashboardIndexCache = {
 let scopedVideoRowsCache = new Map();
 let geoStatsCache = new Map();
 let pendingMapSync = null;
-const STATIC_ASSET_VERSION = '20260615-affiliate-online-1';
+const STATIC_ASSET_VERSION = '20260615-week-range-1';
 const localHostnames = new Set(['localhost', '127.0.0.1', '0.0.0.0', '::1']);
 const isStaticCenter = !localHostnames.has(location.hostname) || new URLSearchParams(location.search).has('static');
 const staticAssetFetchOptions = { cache: 'no-store' };
@@ -1572,6 +1572,14 @@ function rangeLabel(start, endExclusive) {
   return `${dateOnlyLabel(startDate)} - ${dateOnlyLabel(inclusiveEnd)}`;
 }
 
+function shortRangeLabel(start, endExclusive) {
+  const startDate = parseDateValue(start);
+  const endDate = parseDateValue(endExclusive);
+  if (!startDate || !endDate) return '-';
+  const inclusiveEnd = new Date(endDate.getTime() - 24 * 60 * 60 * 1000);
+  return `${shortDate(startDate)}-${shortDate(inclusiveEnd)}`;
+}
+
 function summarizeRowsBetween(rows, start, end) {
   const startDate = parseDateValue(start);
   const endDate = parseDateValue(end);
@@ -1880,13 +1888,29 @@ function renderLineChart(target, rows, keyA, keyB) {
   }
   weeklyTrendEchart = getChartInstance(target, weeklyTrendEchart);
   if (!weeklyTrendEchart) return;
+  const labels = data.map((row) => shortRangeLabel(row.weekStart, row.weekEnd));
   weeklyTrendEchart.setOption({
     backgroundColor: 'transparent',
     color: ['#33D6C5', '#4DA3FF'],
-    tooltip: { trigger: 'axis', backgroundColor: '#121C2B', borderColor: 'rgba(255,255,255,.1)', textStyle: { color: '#F7F8FA' } },
+    tooltip: {
+      trigger: 'axis',
+      backgroundColor: '#121C2B',
+      borderColor: 'rgba(255,255,255,.1)',
+      textStyle: { color: '#F7F8FA' },
+      formatter: (params = []) => {
+        const index = params[0]?.dataIndex ?? 0;
+        const row = data[index] || {};
+        const title = rangeLabel(row.weekStart, row.weekEnd) || labels[index] || '';
+        const lines = params.map((item) => {
+          const value = item.seriesName.includes('声量') ? centerNumber(item.value) : centerNumber(item.value);
+          return `${item.marker}${item.seriesName}：${value}`;
+        });
+        return [title, ...lines].join('<br/>');
+      }
+    },
     legend: { top: 0, right: 6, textStyle: { color: '#A8B3C7' } },
-    grid: { left: 42, right: 22, top: 44, bottom: 34 },
-    xAxis: { type: 'category', data: data.map((row) => shortDate(row.weekStart)), axisLine: { lineStyle: { color: 'rgba(255,255,255,.12)' } }, axisLabel: { color: '#A8B3C7' } },
+    grid: { left: 42, right: 22, top: 44, bottom: 42 },
+    xAxis: { type: 'category', data: labels, axisLine: { lineStyle: { color: 'rgba(255,255,255,.12)' } }, axisLabel: { color: '#A8B3C7', interval: 0, rotate: data.length > 6 ? 16 : 0 } },
     yAxis: [
       { type: 'value', name: '视频', axisLabel: { color: '#A8B3C7' }, splitLine: { lineStyle: { color: 'rgba(255,255,255,.07)' } } },
       { type: 'value', name: '7日声量', axisLabel: { color: '#A8B3C7', formatter: (value) => centerNumber(value) }, splitLine: { show: false } }

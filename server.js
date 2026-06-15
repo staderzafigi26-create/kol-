@@ -52,7 +52,7 @@ function positiveInt(value, fallback) {
 }
 
 function startOfCurrentReportWeek(date = new Date()) {
-  const dayOffset = (date.getDay() + 1) % 7;
+  const dayOffset = (date.getDay() + 6) % 7;
   return new Date(date.getFullYear(), date.getMonth(), date.getDate() - dayOffset, 0, 0, 0, 0);
 }
 
