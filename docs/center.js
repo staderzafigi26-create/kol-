@@ -147,12 +147,16 @@ let dashboardIndexCache = {
 let scopedVideoRowsCache = new Map();
 let geoStatsCache = new Map();
 let pendingMapSync = null;
+const STATIC_ASSET_VERSION = '20260615-mature-refresh-2';
 const localHostnames = new Set(['localhost', '127.0.0.1', '0.0.0.0', '::1']);
 const isStaticCenter = !localHostnames.has(location.hostname) || new URLSearchParams(location.search).has('static');
-const staticAssetFetchOptions = { cache: isStaticCenter ? 'force-cache' : 'no-store' };
+const staticAssetFetchOptions = { cache: 'no-store' };
 
 function assetUrl(path) {
-  return String(path || '').replace(/^\/+/, '');
+  const cleaned = String(path || '').replace(/^\/+/, '');
+  if (!isStaticCenter || !/^(static-data|data)\//.test(cleaned)) return cleaned;
+  const separator = cleaned.includes('?') ? '&' : '?';
+  return `${cleaned}${separator}v=${STATIC_ASSET_VERSION}`;
 }
 
 function apiUrl(path) {
