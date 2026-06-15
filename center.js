@@ -147,7 +147,7 @@ let dashboardIndexCache = {
 let scopedVideoRowsCache = new Map();
 let geoStatsCache = new Map();
 let pendingMapSync = null;
-const STATIC_ASSET_VERSION = '20260615-mature-refresh-2';
+const STATIC_ASSET_VERSION = '20260615-affiliate-online-1';
 const localHostnames = new Set(['localhost', '127.0.0.1', '0.0.0.0', '::1']);
 const isStaticCenter = !localHostnames.has(location.hostname) || new URLSearchParams(location.search).has('static');
 const staticAssetFetchOptions = { cache: 'no-store' };
@@ -178,8 +178,10 @@ function configureStaticMode() {
     ['/api/local/export/videos?format=csv', 'static-data/exports/videos.csv'],
     ['/api/local/export/snapshots?format=csv', 'static-data/exports/snapshots.csv'],
     ['/api/local/export/runs?format=csv', 'static-data/exports/runs.csv'],
+    ['/api/local/export/affiliateSales?format=csv', 'static-data/exports/affiliateSales.csv'],
     ['/api/local/export/influencers?format=json', 'static-data/exports/influencers.json'],
     ['/api/local/export/videos?format=json', 'static-data/exports/videos.json'],
+    ['/api/local/export/affiliateSales?format=json', 'static-data/exports/affiliateSales.json'],
     ['/api/local/templates/video-import.xlsx', 'data/templates/video-import-template.xlsx'],
     ['/api/local/templates/video-import.csv', 'data/templates/dingtalk-csv/视频表.csv']
   ];
@@ -188,18 +190,6 @@ function configureStaticMode() {
       link.href = assetUrl(to);
     });
   }
-  document.querySelectorAll('[data-section="importExport"]').forEach((el) => {
-    el.style.display = 'none';
-  });
-  document.querySelectorAll('[data-section="affiliateSales"], [data-dashboard-jump="dashboardAffiliateSales"]').forEach((el) => {
-    el.style.display = 'none';
-  });
-  const importSection = document.getElementById('sectionImportExport');
-  if (importSection) importSection.style.display = 'none';
-  const affiliateSection = document.getElementById('sectionAffiliateSales');
-  if (affiliateSection) affiliateSection.style.display = 'none';
-  const affiliateDashboard = document.getElementById('dashboardAffiliateSales');
-  if (affiliateDashboard) affiliateDashboard.style.display = 'none';
   [centerEls.btnImportDingTalk, centerEls.btnImportInfluencers, centerEls.btnImportVideos, centerEls.btnLocalDiscoverDryRun, centerEls.btnLocalDiscoverRun].forEach((button) => {
     if (!button) return;
     button.disabled = true;
@@ -3806,7 +3796,7 @@ function uniqueDeliverableInfluencers() {
 }
 
 function renderDeliverableDashboard() {
-  if (!centerEls.deliverableKpis || !centerEls.deliverableOwnerGrid || !centerEls.deliverableGapList) return;
+  if (!centerEls.deliverableKpis || !centerEls.deliverableGapList) return;
   const rows = uniqueDeliverableInfluencers();
   const expected = rows.reduce((sum, row) => sum + row.expected, 0);
   const completed = rows.reduce((sum, row) => sum + row.completed, 0);
@@ -3822,32 +3812,10 @@ function renderDeliverableDashboard() {
     .map(([label, value, note]) => `<article class="deliverable-kpi"><span>${escapeHtml(label)}</span><strong>${escapeHtml(value)}</strong><small>${escapeHtml(note)}</small></article>`)
     .join('');
 
-  const byOwner = new Map();
-  rows.forEach((row) => {
-    if (!byOwner.has(row.owner)) byOwner.set(row.owner, { owner: row.owner, creators: 0, expected: 0, completed: 0, remaining: 0 });
-    const item = byOwner.get(row.owner);
-    item.creators += 1;
-    item.expected += row.expected;
-    item.completed += row.completed;
-    item.remaining += Math.max(0, row.expected - row.completed);
-  });
-  centerEls.deliverableOwnerGrid.innerHTML = [...byOwner.values()]
-    .sort((a, b) => b.remaining - a.remaining || b.expected - a.expected)
-    .slice(0, 8)
-    .map((row) => {
-      const percent = row.expected ? Math.min(100, Math.round((row.completed / row.expected) * 100)) : 0;
-      return `<article class="deliverable-owner-card">
-        <div><strong>${escapeHtml(row.owner)}</strong><span>${centerNumber(row.creators)} 位达人</span></div>
-        <div class="deliverable-progress"><i style="width:${Math.max(4, percent)}%"></i></div>
-        <small>已上线 ${centerNumber(row.completed)} / 预计 ${centerNumber(row.expected)} · 待补 ${centerNumber(row.remaining)}</small>
-      </article>`;
-    })
-    .join('') || '<div class="empty-cell">当前筛选下暂无合同交付数据。</div>';
-
   const gapRows = rows
     .filter((row) => row.parseStatus === '待人工确认' || row.remaining > 0 || !row.expected)
     .sort((a, b) => b.remaining - a.remaining || b.expected - a.expected)
-    .slice(0, 10);
+    .slice(0, 3);
   centerEls.deliverableGapList.innerHTML = gapRows.length
     ? gapRows
         .map((row, index) => `<li>
@@ -4407,17 +4375,15 @@ function renderApifyEstimate(data) {
 
 async function loadCenter() {
   centerEls.status.textContent = isStaticCenter ? '正在加载团队只读快照...' : '正在加载本地中台数据...';
-  const [collections, dashboard, creatorLocations, anniversaryDashboard, targetingOpportunities] = await Promise.all([
+  const [collections, dashboard, creatorLocations, targetingOpportunities] = await Promise.all([
     centerRequest('/api/local/collections'),
     centerRequest('/api/local/dashboard?weeks=8'),
     loadCreatorLocations(),
-    loadAnniversaryDashboard(),
     loadTargetingOpportunities()
   ]);
   centerStore = collections.collections || {};
   centerStore.creatorLocations = creatorLocations || { locations: [] };
   centerDashboard = dashboard.dashboard || {};
-  centerAnniversary = anniversaryDashboard;
   centerTargeting = targetingOpportunities;
   invalidateDashboardCaches();
   const summary = centerDashboard.summary || {};
@@ -4445,7 +4411,6 @@ async function loadCenter() {
   populateDashboardFilters();
   populateVideoFilters();
   renderDashboardCharts();
-  renderAnniversaryDashboard();
   renderCurrentPeriod();
   renderCustomSummaryCard();
   updatePeriodCardState();
