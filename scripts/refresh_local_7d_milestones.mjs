@@ -7,6 +7,7 @@ const SNAPSHOTS_PATH = path.join(ROOT, 'data/local/snapshots.json');
 const RAW_DIR = path.join(ROOT, 'data/raw');
 const REPORT_DIR = path.join(ROOT, 'data/reports');
 const MILESTONE_MODES = new Set(String(process.env.MILESTONE_MODES || '7').split(',').map((item) => item.trim()).filter(Boolean));
+const DRY_RUN = process.argv.includes('--dry-run');
 const RUN_TAG = `local-${[...MILESTONE_MODES].join('-') || '7'}d-milestone-${new Date().toISOString().replace(/[:.]/g, '-')}`;
 const RUN_ID = `local_${[...MILESTONE_MODES].join('_') || '7'}d_${Date.now()}`;
 const REPORT_PATH = path.join(REPORT_DIR, `${RUN_TAG}.json`);
@@ -321,11 +322,6 @@ function latestSnapshotsByPostKey(snapshots) {
   return { latest, types, snapshotsByKey };
 }
 
-const apiToken = await getApifyToken();
-if (!apiToken) {
-  throw new Error('缺少 APIFY_API_TOKEN，无法刷新 7 日快照。');
-}
-
 await fs.mkdir(REPORT_DIR, { recursive: true });
 await fs.mkdir(RAW_DIR, { recursive: true });
 
@@ -373,6 +369,7 @@ const report = {
   ok: false,
   runId: RUN_ID,
   modes: [...MILESTONE_MODES],
+  dryRun: DRY_RUN,
   startedAt: new Date().toISOString(),
   finishedAt: '',
   dueCount: due.length,
@@ -387,6 +384,27 @@ const report = {
 };
 
 console.log(JSON.stringify({ event: 'local-milestone-start', modes: [...MILESTONE_MODES], dueCount: due.length, dueByPlatform: report.dueByPlatform, reportPath: REPORT_PATH }));
+
+if (DRY_RUN) {
+  report.ok = true;
+  report.finishedAt = new Date().toISOString();
+  report.due = due.map((item) => ({
+    platform: item.platform,
+    creator: text(item.fields['红人名称']),
+    url: item.url,
+    publishedAt: item.publishedAt.toISOString(),
+    ageDays: Number(item.ageDays.toFixed(1)),
+    milestone: item.milestone
+  }));
+  await fs.writeFile(REPORT_PATH, JSON.stringify(report, null, 2));
+  console.log(JSON.stringify({ event: 'local-milestone-dry-run', reportPath: REPORT_PATH, summary: report }));
+  process.exit(0);
+}
+
+const apiToken = await getApifyToken();
+if (!apiToken) {
+  throw new Error('缺少 APIFY_API_TOKEN，无法刷新成熟声量快照。');
+}
 
 if (due.length) {
   const videoBackup = path.join(ROOT, `data/local/videos.backup-before-milestone-refresh-${RUN_TAG}.json`);

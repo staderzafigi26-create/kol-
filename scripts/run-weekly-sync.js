@@ -19,8 +19,19 @@ function writeLog(payload) {
 }
 
 function startOfCurrentReportWeek(date = new Date()) {
-  const dayOffset = (date.getDay() + 1) % 7;
-  return new Date(date.getFullYear(), date.getMonth(), date.getDate() - dayOffset, 0, 0, 0, 0);
+  const chinaOffsetMs = 8 * 60 * 60 * 1000;
+  const chinaDate = new Date(date.getTime() + chinaOffsetMs);
+  const sundayOffset = chinaDate.getUTCDay();
+  const startUtc = Date.UTC(
+    chinaDate.getUTCFullYear(),
+    chinaDate.getUTCMonth(),
+    chinaDate.getUTCDate() - sundayOffset,
+    0,
+    0,
+    0,
+    0
+  ) - chinaOffsetMs;
+  return new Date(startUtc);
 }
 
 async function main() {
