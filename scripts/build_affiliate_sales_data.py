@@ -1,6 +1,8 @@
+import argparse
 import csv
 import json
 import re
+import shutil
 from datetime import datetime
 from pathlib import Path
 
@@ -10,16 +12,14 @@ import pandas as pd
 ROOT = Path(__file__).resolve().parents[1]
 DOWNLOADS = Path("/Users/ryan/Downloads")
 AFFILIATE_FILES = sorted(DOWNLOADS.glob("affiliates-01-Jun-2026-07-Jun-2026*.csv"))
-ORDER_FILES = sorted(
+DEFAULT_ORDER_FILES = sorted(
     {
         *DOWNLOADS.glob("orders-30-May-2026-05-Jun-2026*.csv"),
         *DOWNLOADS.glob("orders-31-May-2026-07-Jun-2026.csv"),
     }
 )
-MARKETING_FILE = DOWNLOADS / "Yozma-红人营销总表 (3).xlsx"
+DEFAULT_MARKETING_FILE = DOWNLOADS / "Yozma-红人营销总表 (3).xlsx"
 OUTPUT_FILE = ROOT / "data/local/affiliate_sales.json"
-REPORT_FILE = ROOT / "data/reports/affiliate-email-match-20260607.csv"
-ORDER_REPORT_FILE = ROOT / "data/reports/affiliate-order-summary-20260607.csv"
 
 
 EMAIL_RE = re.compile(r"[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}", re.I)
@@ -121,17 +121,23 @@ def read_affiliates():
     return rows
 
 
-def read_orders():
+def read_orders(order_files):
     orders = []
     seen = set()
-    for file_path in ORDER_FILES:
+    input_rows = 0
+    duplicate_rows = 0
+    missing_id_rows = 0
+    for file_path in order_files:
         with file_path.open("r", encoding="utf-8-sig", newline="") as handle:
             reader = csv.DictReader(handle)
             for row in reader:
+                input_rows += 1
                 order_id = clean(row.get("Order ID")) or clean(row.get("Order Number"))
                 if not order_id:
+                    missing_id_rows += 1
                     continue
                 if order_id in seen:
+                    duplicate_rows += 1
                     continue
                 seen.add(order_id)
                 status = clean(row.get("Order Status")).lower()
@@ -156,7 +162,12 @@ def read_orders():
                         "isAfterGoogleAdClick": clean(row.get("Is after Google ad click ?")),
                     }
                 )
-    return orders
+    return orders, {
+        "inputRows": input_rows,
+        "duplicateOrdersSkipped": duplicate_rows,
+        "missingOrderIdRows": missing_id_rows,
+        "dedupedOrders": len(orders),
+    }
 
 
 def aggregate_orders(orders):
@@ -213,10 +224,10 @@ def aggregate_orders(orders):
     return by_email, by_id
 
 
-def read_marketing_email_index():
-    if not MARKETING_FILE.exists():
+def read_marketing_email_index(marketing_file):
+    if not marketing_file.exists():
         return {}
-    df = pd.read_excel(MARKETING_FILE, sheet_name="合作名单")
+    df = pd.read_excel(marketing_file, sheet_name="合作名单")
     index = {}
     for _, row in df.iterrows():
         contact = clean(row.get("联系方式"))
@@ -245,18 +256,32 @@ def read_marketing_email_index():
     return index
 
 
+def parse_args():
+    parser = argparse.ArgumentParser(description="Build deduplicated affiliate order metrics for the local dashboard.")
+    parser.add_argument("--marketing", type=Path, default=DEFAULT_MARKETING_FILE)
+    parser.add_argument("--orders", type=Path, nargs="+", default=DEFAULT_ORDER_FILES)
+    parser.add_argument("--tag", default=datetime.now().strftime("%Y%m%d"))
+    return parser.parse_args()
+
+
 def main():
+    args = parse_args()
+    order_files = [path.expanduser().resolve() for path in args.orders]
+    marketing_file = args.marketing.expanduser().resolve()
+    missing_files = [str(path) for path in [*order_files, marketing_file] if not path.exists()]
+    if missing_files:
+        raise FileNotFoundError(f"Missing input files: {missing_files}")
+    report_file = ROOT / f"data/reports/affiliate-email-match-{args.tag}.csv"
+    order_report_file = ROOT / f"data/reports/affiliate-order-summary-{args.tag}.csv"
+
     affiliates = read_affiliates()
-    orders = read_orders()
+    orders, order_stats = read_orders(order_files)
     orders_by_email, orders_by_id = aggregate_orders(orders)
-    marketing_by_email = read_marketing_email_index()
+    marketing_by_email = read_marketing_email_index(marketing_file)
     output_rows = []
-    matched = 0
     consumed_order_metric_keys = set()
     for affiliate in affiliates:
         matches = marketing_by_email.get(affiliate["email"], []) if affiliate["email"] else []
-        if matches:
-            matched += 1
         primary = matches[0] if matches else {}
         metric_key = None
         order_metrics = {}
@@ -389,10 +414,15 @@ def main():
         )
 
     OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
+    if OUTPUT_FILE.exists():
+        backup = OUTPUT_FILE.with_name(f"affiliate_sales.backup-before-{args.tag}-{datetime.now().strftime('%H%M%S')}.json")
+        shutil.copy2(OUTPUT_FILE, backup)
+    else:
+        backup = None
     OUTPUT_FILE.write_text(json.dumps(output_rows, ensure_ascii=False, indent=2), encoding="utf-8")
 
-    REPORT_FILE.parent.mkdir(parents=True, exist_ok=True)
-    with REPORT_FILE.open("w", encoding="utf-8-sig", newline="") as handle:
+    report_file.parent.mkdir(parents=True, exist_ok=True)
+    with report_file.open("w", encoding="utf-8-sig", newline="") as handle:
         writer = csv.DictWriter(
             handle,
             fieldnames=[
@@ -421,23 +451,26 @@ def main():
         json.dumps(
             {
                 "affiliateFiles": len(AFFILIATE_FILES),
-                "orderFiles": len(ORDER_FILES),
+                "orderFiles": len(order_files),
+                "orderFileNames": [path.name for path in order_files],
+                "marketingFile": marketing_file.name,
                 "affiliateRows": len(output_rows),
-                "emailMatchedRows": matched,
+                "emailMatchedRows": len([row for row in output_rows if row.get("matchStatus") == "email_matched"]),
                 "unmatchedRows": len([row for row in output_rows if row.get("matchStatus") != "email_matched"]),
-                "dedupedOrders": len(orders),
+                **order_stats,
                 "rowsWithOrders": len([row for row in output_rows if row.get("hasOrderMetrics")]),
                 "approvedOrders": sum(int(row.get("orders") or 0) for row in output_rows),
                 "output": str(OUTPUT_FILE),
-                "report": str(REPORT_FILE),
-                "orderReport": str(ORDER_REPORT_FILE),
+                "backup": str(backup) if backup else "",
+                "report": str(report_file),
+                "orderReport": str(order_report_file),
             },
             ensure_ascii=False,
             indent=2,
         )
     )
 
-    with ORDER_REPORT_FILE.open("w", encoding="utf-8-sig", newline="") as handle:
+    with order_report_file.open("w", encoding="utf-8-sig", newline="") as handle:
         writer = csv.DictWriter(
             handle,
             fieldnames=[
