@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Yozma 红人数据中台</title>
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="style.css?v=20260615-affiliate-online-1" />
+    <link rel="stylesheet" href="style.css?v=20260622-live-voice-1" />
   </head>
   <body>
     <main class="container data-center">
@@ -62,6 +62,13 @@
                   <button data-period="month">月维度</button>
                   <button data-period="total">总维度</button>
                   <button data-period="custom">自定义</button>
+                </div>
+                <div class="voice-metric-control">
+                  <span>声量口径</span>
+                  <div class="segmented-control" id="voiceMetricControl">
+                    <button class="active" data-voice-mode="live">即时播放</button>
+                    <button data-voice-mode="mature">7日成熟</button>
+                  </div>
                 </div>
                 <div class="date-range-control">
                   <label><span>开始</span><input id="centerDateStart" type="date" /></label>
@@ -121,7 +128,7 @@
                       <small id="centerWeekDelta" class="period-delta">等待数据</small>
                       <dl>
                         <div><dt>达人</dt><dd id="centerWeekCreators">-</dd></div>
-                        <div><dt>7日声量</dt><dd id="centerWeekViews">-</dd></div>
+                        <div><dt data-voice-label>即时播放</dt><dd id="centerWeekViews">-</dd></div>
                       </dl>
                     </article>
                     <article class="period-card" data-period-card="month" data-jump-section="videos">
@@ -131,7 +138,7 @@
                       <small id="centerMonthDelta" class="period-delta">等待数据</small>
                       <dl>
                         <div><dt>达人</dt><dd id="centerMonthCreators">-</dd></div>
-                        <div><dt>7日声量</dt><dd id="centerMonthViews">-</dd></div>
+                        <div><dt data-voice-label>即时播放</dt><dd id="centerMonthViews">-</dd></div>
                       </dl>
                     </article>
                     <article class="period-card" data-period-card="total" data-jump-section="videos">
@@ -141,7 +148,7 @@
                       <small id="centerTotalDelta" class="period-delta">全部已登记视频</small>
                       <dl>
                         <div><dt>达人</dt><dd id="centerTotalCreators">-</dd></div>
-                        <div><dt>7日声量</dt><dd id="centerTotalViews">-</dd></div>
+                        <div><dt data-voice-label>即时播放</dt><dd id="centerTotalViews">-</dd></div>
                       </dl>
                     </article>
                     <article class="period-card custom-period-card" data-period-card="custom" data-jump-section="videos">
@@ -151,7 +158,7 @@
                       <small id="centerCustomDelta" class="period-delta">自定义时间段</small>
                       <dl>
                         <div><dt>达人</dt><dd id="centerCustomCreators">-</dd></div>
-                        <div><dt>7日声量</dt><dd id="centerCustomViews">-</dd></div>
+                        <div><dt data-voice-label>即时播放</dt><dd id="centerCustomViews">-</dd></div>
                       </dl>
                     </article>
                     <article class="period-card compact-kpi">
@@ -162,7 +169,7 @@
                     <article class="period-card compact-kpi">
                       <span class="period-label">Top Region</span>
                       <strong id="kpiTopRegion">-</strong>
-                      <p>7日成熟声量贡献最高区域</p>
+                      <p><span data-voice-label>即时播放</span>贡献最高区域</p>
                     </article>
                     <article class="period-card compact-kpi">
                       <span class="period-label">Top Platform</span>
@@ -256,12 +263,12 @@
               <div class="section-heading">
                 <div>
                   <h3>核心趋势与平台对比</h3>
-                  <p>第一眼先看上线趋势、7日声量走势和平台表现，详细拆分放在后面的明细模块。</p>
+                  <p>即时播放用于当下决策，7日成熟声量用于公平复盘；两条线同时保留，避免新视频因未成熟被误判为下跌。</p>
                 </div>
               </div>
               <div class="trend-grid">
                 <article class="trend-card">
-                  <div class="trend-title"><strong>视频上线 / 7日声量趋势</strong><span>上线按周，声量按满 7 天快照</span></div>
+                  <div class="trend-title"><strong>视频上线 / 双轨声量趋势</strong><span id="weeklyTrendCoverage">即时累计 + 7日成熟 · 等待数据</span></div>
                   <div id="weeklyTrendChart" class="line-chart"></div>
                 </article>
                 <article class="trend-card">
@@ -285,7 +292,7 @@
               <div class="section-heading">
                 <div>
                   <h3>平台明细</h3>
-                  <p>这里保留平台级拆分：视频量、7日声量、均播和当前最强达人。</p>
+                  <p>按当前声量口径拆分视频量、声量、均播和当前最强达人。</p>
                 </div>
               </div>
               <div id="platformMatrix" class="platform-matrix"></div>
@@ -294,8 +301,8 @@
             <div id="dashboardRegions" class="dashboard-section">
               <div class="section-heading">
                 <div>
-                  <h3>地区 7 日声量表现</h3>
-                  <p>按当前选择时间查看各地区 7 日声量、视频数、达人量，以及每个地区最爆的视频。</p>
+                  <h3>地区声量表现</h3>
+                  <p>按当前选择的声量口径查看各地区声量、视频数、达人量和爆款视频。</p>
                 </div>
               </div>
               <div id="regionMissingNotice" class="region-notice"></div>
@@ -311,7 +318,7 @@
               <div class="section-heading">
                 <div>
                   <h3>负责人上线产出</h3>
-                  <p>按当前选择时间统计每位负责人对应的上线达人、上线视频、7日声量和爆款视频。</p>
+                  <p>按当前选择的声量口径统计每位负责人对应的上线达人、上线视频和爆款视频。</p>
                 </div>
                 <button id="btnExportScopedVideos" class="secondary">导出当前上线数据</button>
               </div>
@@ -437,7 +444,7 @@
             <div class="table-toolbar">
               <span class="hint">订单按 Order ID 去重；同一个 Affiliate ID 跨区域出单只计入一次，GMV 和佣金按 USD / CAD / EUR / GBP 原币种展示。</span>
             </div>
-            <div class="table-wrap"><table><thead><tr><th>达人</th><th>Email</th><th>负责人</th><th>地区</th><th>联盟 Code</th><th>状态</th><th>当前周期视频</th><th>7日声量</th><th>订单</th><th>GMV</th><th>佣金</th></tr></thead><tbody id="affiliateSalesRows"></tbody></table></div>
+            <div class="table-wrap"><table><thead><tr><th>达人</th><th>Email</th><th>负责人</th><th>地区</th><th>联盟 Code</th><th>状态</th><th>当前周期视频</th><th>当前声量</th><th>订单</th><th>GMV</th><th>佣金</th></tr></thead><tbody id="affiliateSalesRows"></tbody></table></div>
           </section>
 
           <section id="sectionSnapshots" class="panel center-section">
@@ -553,6 +560,6 @@
       </section>
     </main>
     <script src="vendor/echarts.min.js"></script>
-  <script src="center.js?v=20260615-week-range-1"></script>
+  <script src="center.js?v=20260622-live-voice-1"></script>
   </body>
 </html>
