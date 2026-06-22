@@ -1,5 +1,53 @@
 [
   {
+    "id": "local_discovery_1782085184164",
+    "fields": {
+      "createdAt": "2026-06-21T23:39:44.164Z",
+      "finishedAt": "2026-06-22T00:01:10.834Z",
+      "task": "本地新视频发现",
+      "status": "success",
+      "message": "处理 88 位，新增视频 32 条，跳过重复 33 条，错误 0 个。",
+      "days": 7,
+      "maxItems": 30,
+      "limitInfluencers": 100,
+      "skipInfluencers": 0,
+      "platformFilter": "tiktok",
+      "usageUsd": 2.664,
+      "scraped": 2107,
+      "matched": 65,
+      "videoCreated": 32,
+      "videoSkipped": 33,
+      "snapshotCreated": 32
+    },
+    "source": "local-discovery",
+    "importedAt": "",
+    "updatedAt": ""
+  },
+  {
+    "id": "local_discovery_1782085138756",
+    "fields": {
+      "createdAt": "2026-06-21T23:38:58.756Z",
+      "finishedAt": "2026-06-21T23:39:05.646Z",
+      "task": "本地新视频发现",
+      "status": "success",
+      "message": "处理 1 位，新增视频 1 条，跳过重复 0 条，错误 0 个。",
+      "days": 7,
+      "maxItems": 30,
+      "limitInfluencers": 1,
+      "skipInfluencers": 0,
+      "platformFilter": "tiktok",
+      "usageUsd": 0,
+      "scraped": 30,
+      "matched": 1,
+      "videoCreated": 1,
+      "videoSkipped": 0,
+      "snapshotCreated": 1
+    },
+    "source": "local-discovery",
+    "importedAt": "",
+    "updatedAt": ""
+  },
+  {
     "id": "local_discovery_1782056507306",
     "fields": {
       "createdAt": "2026-06-21T15:41:47.306Z",
@@ -11946,54 +11994,6 @@
       "videoCreated": 1,
       "videoSkipped": 0,
       "snapshotCreated": 1
-    },
-    "source": "local-discovery",
-    "importedAt": "",
-    "updatedAt": ""
-  },
-  {
-    "id": "local_discovery_1781426030799",
-    "fields": {
-      "createdAt": "2026-06-14T08:33:50.799Z",
-      "finishedAt": "2026-06-14T08:34:00.895Z",
-      "task": "本地新视频发现",
-      "status": "success",
-      "message": "处理 1 位，新增视频 0 条，跳过重复 0 条，错误 0 个。",
-      "days": 7,
-      "maxItems": 25,
-      "limitInfluencers": 1,
-      "skipInfluencers": 0,
-      "platformFilter": "instagramreels",
-      "usageUsd": 0.001,
-      "scraped": 1,
-      "matched": 0,
-      "videoCreated": 0,
-      "videoSkipped": 0,
-      "snapshotCreated": 0
-    },
-    "source": "local-discovery",
-    "importedAt": "",
-    "updatedAt": ""
-  },
-  {
-    "id": "local_discovery_1781426022123",
-    "fields": {
-      "createdAt": "2026-06-14T08:33:42.123Z",
-      "finishedAt": "2026-06-14T08:33:50.769Z",
-      "task": "本地新视频发现",
-      "status": "success",
-      "message": "处理 1 位，新增视频 0 条，跳过重复 0 条，错误 0 个。",
-      "days": 7,
-      "maxItems": 25,
-      "limitInfluencers": 1,
-      "skipInfluencers": 0,
-      "platformFilter": "instagramreels",
-      "usageUsd": 0,
-      "scraped": 1,
-      "matched": 0,
-      "videoCreated": 0,
-      "videoSkipped": 0,
-      "snapshotCreated": 0
     },
     "source": "local-discovery",
     "importedAt": "",

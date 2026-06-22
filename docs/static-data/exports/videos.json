@@ -18291,24 +18291,25 @@
     "id": "vid_1781493920582_nq5cs0n",
     "fields": {
       "是否监控": "是",
-      "likesCount": 167,
+      "likesCount": "267",
       "videoUrl": "https://www.tiktok.com/@danridezz/video/7651285440422546720",
       "平台": "tiktok",
-      "commentsCount": 4,
+      "commentsCount": "11",
       "红人名称": "danridezz",
       "id": "7651285440422546720",
-      "videoPlayCount": 3547,
-      "videoViewCount": 3547,
+      "videoPlayCount": "6717",
+      "videoViewCount": "6717",
       "url": {
         "text": "https://www.tiktok.com/@danridezz/video/7651285440422546720",
         "link": "https://www.tiktok.com/@danridezz/video/7651285440422546720"
       },
       "timestamp": "2026-06-14T16:15:19.000Z",
-      "displayUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/oYuD40i5VgZ7yTBAiZxip0aamBUH0IRPuIEqn~tplv-tiktokx-origin.image?dr=9636&x-expires=1781665200&x-signature=Eam9VDNfh%2FfDhIST9QBa3JDyXT0%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast8"
+      "displayUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/oYuD40i5VgZ7yTBAiZxip0aamBUH0IRPuIEqn~tplv-tiktokx-origin.image?dr=9636&x-expires=1782259200&x-signature=ai53xrxrcSUcwcvKPYfdjPpKvY4%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
+      "7日成熟声量": 6717
     },
     "source": "local-discovery",
     "importedAt": "",
-    "updatedAt": "2026-06-15T03:25:20.582Z"
+    "updatedAt": "2026-06-22T00:05:28.372Z"
   },
   {
     "id": "vid_1781493920582_7dbj6ib",
@@ -19357,24 +19358,25 @@
     "id": "vid_1782047268133_104t502",
     "fields": {
       "是否监控": "是",
-      "likesCount": 63,
+      "likesCount": "64",
       "videoUrl": "https://www.youtube.com/watch?v=wwTk2152g20",
       "平台": "youtubevideo",
-      "commentsCount": 16,
+      "commentsCount": "16",
       "红人名称": "WMA",
       "id": "wwTk2152g20",
-      "videoPlayCount": 1133,
-      "videoViewCount": 1133,
+      "videoPlayCount": "1174",
+      "videoViewCount": "1174",
       "url": {
         "text": "https://www.youtube.com/watch?v=wwTk2152g20",
         "link": "https://www.youtube.com/watch?v=wwTk2152g20"
       },
       "timestamp": "2026-06-14T14:30:30.000Z",
-      "displayUrl": "https://i.ytimg.com/vi/wwTk2152g20/maxresdefault.jpg"
+      "displayUrl": "https://i.ytimg.com/vi/wwTk2152g20/maxresdefault.jpg",
+      "7日成熟声量": 1174
     },
     "source": "local-discovery",
     "importedAt": "",
-    "updatedAt": "2026-06-21T13:07:48.133Z"
+    "updatedAt": "2026-06-22T00:05:51.856Z"
   },
   {
     "id": "vid_1782048435937_pbmez25",
@@ -19679,24 +19681,25 @@
     "id": "vid_1782050293589_aazw3ll",
     "fields": {
       "是否监控": "是",
-      "likesCount": 27,
+      "likesCount": "27",
       "videoUrl": "https://www.youtube.com/shorts/uvOaWsMjzCU",
       "平台": "youtubeshort",
-      "commentsCount": 4,
+      "commentsCount": "4",
       "红人名称": "WMA",
       "id": "uvOaWsMjzCU",
-      "videoPlayCount": 1712,
-      "videoViewCount": 1712,
+      "videoPlayCount": "1743",
+      "videoViewCount": "1743",
       "url": {
         "text": "https://www.youtube.com/shorts/uvOaWsMjzCU",
         "link": "https://www.youtube.com/shorts/uvOaWsMjzCU"
       },
       "timestamp": "2026-06-14T16:00:14.000Z",
-      "displayUrl": "https://i.ytimg.com/vi/uvOaWsMjzCU/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAKAD4oCDAgAEAEYZSBZKEUwDw==&rs=AOn4CLDTLfhm6Q7h8Eh33DgSmsS6fiiWHA"
+      "displayUrl": "https://i.ytimg.com/vi/uvOaWsMjzCU/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAKAD4oCDAgAEAEYZSBZKEUwDw==&rs=AOn4CLDTLfhm6Q7h8Eh33DgSmsS6fiiWHA",
+      "7日成熟声量": 1743
     },
     "source": "local-discovery",
     "importedAt": "",
-    "updatedAt": "2026-06-21T13:58:13.589Z"
+    "updatedAt": "2026-06-22T00:04:21.501Z"
   },
   {
     "id": "vid_1782050558103_m3dhc8o",
@@ -20176,23 +20179,24 @@
     "id": "vid_1782053996724_8wq29vw",
     "fields": {
       "是否监控": "是",
-      "likesCount": 318,
-      "videoUrl": "https://scontent-lax7-1.cdninstagram.com/o1/v/t16/f2/m86/AQMewHtyvbs7lk1s8S2LsParnZ3X8o4rmdp_80MXi0YxZDQrMXMAGyNJhCifpn-PykC9uJof6p7YArTFy0BSfyKOi9CV3lVwPN4jJ3w.mp4?stp=dst-mp4&efg=eyJxZV9ncm91cHMiOiJbXCJpZ193ZWJfZGVsaXZlcnlfdnRzX290ZlwiXSIsInZlbmNvZGVfdGFnIjoidnRzX3ZvZF91cmxnZW4uY2xpcHMuYzIuNzIwLmJhc2VsaW5lIn0&_nc_cat=101&vs=1319336203123395_2552497611&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC82ODRGRUQzNkQ4RkQ5NTlCOUE1RjY0QzA1OTg4RkU4OV92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyLzBBNEE4Q0Y0MEVERDI0MzNFRUQ4ODAzQTg5NDVBRjhCX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwAVAAAmpJW154moswYVAigCQzMsF0BLyHKwIMScGBJkYXNoX2Jhc2VsaW5lXzFfdjERAHX%2BB2XmnQEA&_nc_rid=416df5b373&ccb=9-4&oh=00_Af-NJemPU2pnFeeme0cC5cd-KbbGC2k2ZVIKXsc3DYgi0Q&oe=6A39E3A4&_nc_sid=10d13b",
+      "likesCount": "319",
+      "videoUrl": "https://scontent-atl3-2.cdninstagram.com/o1/v/t16/f2/m86/AQMewHtyvbs7lk1s8S2LsParnZ3X8o4rmdp_80MXi0YxZDQrMXMAGyNJhCifpn-PykC9uJof6p7YArTFy0BSfyKOi9CV3lVwPN4jJ3w.mp4?stp=dst-mp4&efg=eyJxZV9ncm91cHMiOiJbXCJpZ193ZWJfZGVsaXZlcnlfdnRzX290ZlwiXSIsInZlbmNvZGVfdGFnIjoidnRzX3ZvZF91cmxnZW4uY2xpcHMuYzIuNzIwLmJhc2VsaW5lIn0&_nc_cat=101&vs=1319336203123395_2552497611&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC82ODRGRUQzNkQ4RkQ5NTlCOUE1RjY0QzA1OTg4RkU4OV92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyLzBBNEE4Q0Y0MEVERDI0MzNFRUQ4ODAzQTg5NDVBRjhCX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwAVAAAmpJW154moswYVAigCQzMsF0BLyHKwIMScGBJkYXNoX2Jhc2VsaW5lXzFfdjERAHX%2BB2XmnQEA&_nc_rid=90216a8b07&ccb=9-4&oh=00_Af-7py5jgSbk_QIp0_4rHq51n4hRl1NEKrtCiS6pkAZVfw&oe=6A3A5424&_nc_sid=10d13b",
       "平台": "instagramreels",
-      "commentsCount": 20,
+      "commentsCount": "20",
       "红人名称": "tahoe_carter",
       "id": "3919528970491837806",
-      "videoPlayCount": 6844,
-      "videoViewCount": 2045,
+      "videoPlayCount": "6882",
+      "videoViewCount": "2057",
       "url": {
         "text": "https://www.instagram.com/p/DZk9tUFBL1u/",
         "link": "https://www.instagram.com/p/DZk9tUFBL1u/"
       },
-      "timestamp": "2026-06-14T19:15:36.000Z"
+      "timestamp": "2026-06-14T19:15:36.000Z",
+      "7日成熟声量": 6882
     },
     "source": "local-discovery",
     "importedAt": "",
-    "updatedAt": "2026-06-21T14:59:56.724Z"
+    "updatedAt": "2026-06-22T00:05:59.888Z"
   },
   {
     "id": "vid_1782053996724_mmvcur6",
@@ -20572,23 +20576,24 @@
     "id": "vid_1782055017052_oaaeyrx",
     "fields": {
       "是否监控": "是",
-      "likesCount": 341,
-      "videoUrl": "https://scontent-iad3-1.cdninstagram.com/o1/v/t16/f2/m86/AQOALL65K5DYSJBUYBnedSNZnaSgIexZnkhbx9taJUNwlEd2PO1Er7ZDF1qlVAsBK3mHGN01R5M_YsfMAf4ZVhSgvdpFUE_NR0hDU1Q.mp4?stp=dst-mp4&efg=eyJxZV9ncm91cHMiOiJbXCJpZ193ZWJfZGVsaXZlcnlfdnRzX290ZlwiXSIsInZlbmNvZGVfdGFnIjoidnRzX3ZvZF91cmxnZW4uY2xpcHMuYzIuNzIwLmJhc2VsaW5lIn0&_nc_cat=101&vs=1645699359817721_682636004&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC8wQzRENEE4MTQ4ODg1Q0REMzg5NzE2OTY1NjRDRENBMF92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyL0YxNDFEOEIzRENCREFFQkRFODAzRkNFNzRGMTk2NzkwX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwAVAAAmnpakp5mOsQoVAigCQzMsF0Aq7peNT987GBJkYXNoX2Jhc2VsaW5lXzFfdjERAHX%2BB2XmnQEA&_nc_rid=5fe445ad26&ccb=9-4&oh=00_Af-vBJlkdXUo_E00Y9N5EoF4UlIHCSMjhpm4SZ_Od8KvRA&oe=6A39CED5&_nc_sid=10d13b",
+      "likesCount": "343",
+      "videoUrl": "https://scontent-ord5-1.cdninstagram.com/o1/v/t16/f2/m86/AQOALL65K5DYSJBUYBnedSNZnaSgIexZnkhbx9taJUNwlEd2PO1Er7ZDF1qlVAsBK3mHGN01R5M_YsfMAf4ZVhSgvdpFUE_NR0hDU1Q.mp4?stp=dst-mp4&efg=eyJxZV9ncm91cHMiOiJbXCJpZ193ZWJfZGVsaXZlcnlfdnRzX290ZlwiXSIsInZlbmNvZGVfdGFnIjoidnRzX3ZvZF91cmxnZW4uY2xpcHMuYzIuNzIwLmJhc2VsaW5lIn0&_nc_cat=101&vs=1645699359817721_682636004&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC8wQzRENEE4MTQ4ODg1Q0REMzg5NzE2OTY1NjRDRENBMF92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyL0YxNDFEOEIzRENCREFFQkRFODAzRkNFNzRGMTk2NzkwX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwAVAAAmnpakp5mOsQoVAigCQzMsF0Aq7peNT987GBJkYXNoX2Jhc2VsaW5lXzFfdjERAHX%2BB2XmnQEA&_nc_rid=7afd9681c1&ccb=9-4&oh=00_Af_S9eTIdGOljGDnsakcaVALGw6VDYDAKex2bpoeQXJH0Q&oe=6A3A3F55&_nc_sid=10d13b",
       "平台": "instagramreels",
-      "commentsCount": 12,
+      "commentsCount": "12",
       "红人名称": "_rizzoto_",
       "id": "3919501408473834896",
-      "videoPlayCount": 13335,
-      "videoViewCount": 3290,
+      "videoPlayCount": "13439",
+      "videoViewCount": "3311",
       "url": {
         "text": "https://www.instagram.com/p/DZk3cO8ueWQ/",
         "link": "https://www.instagram.com/p/DZk3cO8ueWQ/"
       },
-      "timestamp": "2026-06-14T18:18:25.000Z"
+      "timestamp": "2026-06-14T18:18:25.000Z",
+      "7日成熟声量": 13439
     },
     "source": "local-discovery",
     "importedAt": "",
-    "updatedAt": "2026-06-21T15:16:57.052Z"
+    "updatedAt": "2026-06-22T00:05:59.888Z"
   },
   {
     "id": "vid_1782055017052_envpq7y",
@@ -20682,23 +20687,24 @@
     "id": "vid_1782055490246_senld8d",
     "fields": {
       "是否监控": "是",
-      "likesCount": 4785,
-      "videoUrl": "https://instagram.fmem1-1.fna.fbcdn.net/o1/v/t16/f2/m86/AQMkqHhqxQlB1xOkhwJKoWwYx5_G3O63NOlyGwupCrXSwBO7cKE0CB3eq6c2K_YETd8upwOWYzSvuXzgZGCanNOlvKcmGE3XRflALdM.mp4?stp=dst-mp4&efg=eyJxZV9ncm91cHMiOiJbXCJpZ193ZWJfZGVsaXZlcnlfdnRzX290ZlwiXSIsInZlbmNvZGVfdGFnIjoidnRzX3ZvZF91cmxnZW4uY2xpcHMuYzIuNzIwLmJhc2VsaW5lIn0&_nc_cat=100&vs=955810990845909_2223277366&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC9BQjQzRjQzRDFGNDQwMzFCMkE5QzAyRjczRTJFNjNCN192aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyL0RFNDdCMUYyQTFFRDgxMkQ3NTVCQzcxQTU5RjU5MkFDX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwAVAAAm8rq%2BrtXcpwUVAigCQzMsF0BO8zMzMzMzGBJkYXNoX2Jhc2VsaW5lXzFfdjERAHX%2BB2XmnQEA&_nc_rid=02f5cad93f&ccb=9-4&oh=00_Af8negjJKTdjA3nObFMid67H2P-RQl1PfrssDUV082Esjw&oe=6A39FC2C&_nc_sid=10d13b",
+      "likesCount": "4828",
+      "videoUrl": "https://scontent-iad6-1.cdninstagram.com/o1/v/t16/f2/m86/AQMkqHhqxQlB1xOkhwJKoWwYx5_G3O63NOlyGwupCrXSwBO7cKE0CB3eq6c2K_YETd8upwOWYzSvuXzgZGCanNOlvKcmGE3XRflALdM.mp4?stp=dst-mp4&efg=eyJxZV9ncm91cHMiOiJbXCJpZ193ZWJfZGVsaXZlcnlfdnRzX290ZlwiXSIsInZlbmNvZGVfdGFnIjoidnRzX3ZvZF91cmxnZW4uY2xpcHMuYzIuNzIwLmJhc2VsaW5lIn0&_nc_cat=100&vs=955810990845909_2223277366&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC9BQjQzRjQzRDFGNDQwMzFCMkE5QzAyRjczRTJFNjNCN192aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyL0RFNDdCMUYyQTFFRDgxMkQ3NTVCQzcxQTU5RjU5MkFDX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwAVAAAm8rq%2BrtXcpwUVAigCQzMsF0BO8zMzMzMzGBJkYXNoX2Jhc2VsaW5lXzFfdjERAHX%2BB2XmnQEA&_nc_rid=e31a494ed4&ccb=9-4&oh=00_Af_mlhg_ubmXDRaNhfbjoMDr3ouht9PhVRVnWmaNxA-yVA&oe=6A3A6CAC&_nc_sid=10d13b",
       "平台": "instagramreels",
-      "commentsCount": 21,
+      "commentsCount": "21",
       "红人名称": "laaguepe",
       "id": "3919454442167381038",
-      "videoPlayCount": 117055,
-      "videoViewCount": 67493,
+      "videoPlayCount": "118082",
+      "videoViewCount": "68096",
       "url": {
         "text": "https://www.instagram.com/p/DZkswyKtqwu/",
         "link": "https://www.instagram.com/p/DZkswyKtqwu/"
       },
-      "timestamp": "2026-06-14T16:44:38.000Z"
+      "timestamp": "2026-06-14T16:44:38.000Z",
+      "7日成熟声量": 118082
     },
     "source": "local-discovery",
     "importedAt": "",
-    "updatedAt": "2026-06-21T15:24:50.246Z"
+    "updatedAt": "2026-06-22T00:05:59.888Z"
   },
   {
     "id": "vid_1782055510332_zpdy1al",
@@ -20836,23 +20842,24 @@
     "id": "vid_1782056367553_x1gon1h",
     "fields": {
       "是否监控": "是",
-      "likesCount": 1567,
-      "videoUrl": "https://scontent-lax3-2.cdninstagram.com/o1/v/t16/f2/m86/AQO4cUwrVasMHSlGEGlBurZ64amsurL2VI0D8klG87c_EjN2_5JlkqmpSRbowQxLziZRHCV4G3Q0PIswPgbXxCBqP_yiqp3Q6Mn7lBs.mp4?stp=dst-mp4&efg=eyJxZV9ncm91cHMiOiJbXCJpZ193ZWJfZGVsaXZlcnlfdnRzX290ZlwiXSIsInZlbmNvZGVfdGFnIjoidnRzX3ZvZF91cmxnZW4uY2xpcHMuYzIuNzIwLmJhc2VsaW5lIn0&_nc_cat=106&vs=1664651194753824_2779493298&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC80MzQyODcxNEU3N0M2OTMyRDcyOEEyNEIwMDc0QUFCNF92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyL0NFNEY2QkQzMkFDNTFCMjk1REZCMUZDRUVFRUExMDg2X2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwAVAAAmqO78r6zJiAUVAigCQzMsF0BFmZmZmZmaGBJkYXNoX2Jhc2VsaW5lXzFfdjERAHX%2BB2WWqQEA&_nc_rid=03c56a1edb&ccb=9-4&oh=00_Af9LIsvh_CdT9Mno8bUsKGg-0okz_qqvegTsG0Biwx9W9g&oe=6A39CEFA&_nc_sid=10d13b",
+      "likesCount": "1597",
+      "videoUrl": "https://scontent-bos5-1.cdninstagram.com/o1/v/t16/f2/m86/AQO4cUwrVasMHSlGEGlBurZ64amsurL2VI0D8klG87c_EjN2_5JlkqmpSRbowQxLziZRHCV4G3Q0PIswPgbXxCBqP_yiqp3Q6Mn7lBs.mp4?stp=dst-mp4&efg=eyJxZV9ncm91cHMiOiJbXCJpZ193ZWJfZGVsaXZlcnlfdnRzX290ZlwiXSIsInZlbmNvZGVfdGFnIjoidnRzX3ZvZF91cmxnZW4uY2xpcHMuYzIuNzIwLmJhc2VsaW5lIn0&_nc_cat=106&vs=1664651194753824_2779493298&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC80MzQyODcxNEU3N0M2OTMyRDcyOEEyNEIwMDc0QUFCNF92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyL0NFNEY2QkQzMkFDNTFCMjk1REZCMUZDRUVFRUExMDg2X2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwAVAAAmqO78r6zJiAUVAigCQzMsF0BFmZmZmZmaGBJkYXNoX2Jhc2VsaW5lXzFfdjERAHX%2BB2WWqQEA&_nc_rid=f3901f09a2&ccb=9-4&oh=00_Af8pg_79Xt4TjBO1iuOUMZxKzphvb9GHffUoRabltAT8_w&oe=6A3A3F7A&_nc_sid=10d13b",
       "平台": "instagramreels",
-      "commentsCount": 29,
+      "commentsCount": "29",
       "红人名称": "small.vroom",
       "id": "3919566243319312173",
-      "videoPlayCount": 46301,
-      "videoViewCount": 30649,
+      "videoPlayCount": "47192",
+      "videoViewCount": "31235",
       "url": {
         "text": "https://www.instagram.com/p/DZlGLtGqO8t/",
         "link": "https://www.instagram.com/p/DZlGLtGqO8t/"
       },
-      "timestamp": "2026-06-14T20:26:54.000Z"
+      "timestamp": "2026-06-14T20:26:54.000Z",
+      "7日成熟声量": 47192
     },
     "source": "local-discovery",
     "importedAt": "",
-    "updatedAt": "2026-06-21T15:39:27.553Z"
+    "updatedAt": "2026-06-22T00:05:59.888Z"
   },
   {
     "id": "vid_1782056434092_pu55adq",
@@ -21455,24 +21462,25 @@
     "id": "vid_1782057242390_cn8q0qz",
     "fields": {
       "是否监控": "是",
-      "likesCount": 63,
+      "likesCount": "64",
       "videoUrl": "https://www.tiktok.com/@freego.judah/video/7651344577965722911",
       "平台": "tiktok",
-      "commentsCount": 7,
+      "commentsCount": "7",
       "红人名称": "freego.judah",
       "id": "7651344577965722911",
-      "videoPlayCount": 2491,
-      "videoViewCount": 2491,
+      "videoPlayCount": "2517",
+      "videoViewCount": "2517",
       "url": {
         "text": "https://www.tiktok.com/@freego.judah/video/7651344577965722911",
         "link": "https://www.tiktok.com/@freego.judah/video/7651344577965722911"
       },
       "timestamp": "2026-06-14T20:05:01.000Z",
-      "displayUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast8-p-0068-tx2/oMEDPiEBcvW8iBwAaanI8JRjyBr4CHyiAtCiV~tplv-tiktokx-origin.image?dr=9636&x-expires=1782226800&x-signature=Yts4oSnzodCsBTknBCHa4nCN6wQ%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5"
+      "displayUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast8-p-0068-tx2/oMEDPiEBcvW8iBwAaanI8JRjyBr4CHyiAtCiV~tplv-tiktokx-origin.image?dr=9636&x-expires=1782259200&x-signature=drTvRKsPmVC1fuPChTKbPHPZZZY%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
+      "7日成熟声量": 2517
     },
     "source": "local-discovery",
     "importedAt": "",
-    "updatedAt": "2026-06-21T15:54:02.390Z"
+    "updatedAt": "2026-06-22T00:05:28.372Z"
   },
   {
     "id": "vid_1782057242390_tj7yxb5",
@@ -21662,24 +21670,25 @@
     "id": "vid_1782057358310_kvg1i8r",
     "fields": {
       "是否监控": "是",
-      "likesCount": 24,
+      "likesCount": "25",
       "videoUrl": "https://www.tiktok.com/@marz.ku/video/7651343482950257942",
       "平台": "tiktok",
-      "commentsCount": 1,
+      "commentsCount": "1",
       "红人名称": "marz.ku",
       "id": "7651343482950257942",
-      "videoPlayCount": 623,
-      "videoViewCount": 623,
+      "videoPlayCount": "632",
+      "videoViewCount": "632",
       "url": {
         "text": "https://www.tiktok.com/@marz.ku/video/7651343482950257942",
         "link": "https://www.tiktok.com/@marz.ku/video/7651343482950257942"
       },
       "timestamp": "2026-06-14T20:00:33.000Z",
-      "displayUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-no1a-i-photomode-no/ae9984dc5c0944a8bb2a19fcf7f0f11b~tplv-photomode-image.jpeg?dr=9616&x-expires=1782226800&x-signature=5%2FI0%2BdPk%2BcGz3GAADBU5iQ0MiA4%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=9b759fb9&idc=useast5&ftpl=1"
+      "displayUrl": "https://p16-common-sign.tiktokcdn-eu.com/tos-no1a-i-photomode-no/ae9984dc5c0944a8bb2a19fcf7f0f11b~tplv-photomode-image.jpeg?dr=10375&x-expires=1782259200&x-signature=K%2Fhsucx839RekdsfT7YFgmXTuq4%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=9b759fb9&idc=no1a&ftpl=1",
+      "7日成熟声量": 632
     },
     "source": "local-discovery",
     "importedAt": "",
-    "updatedAt": "2026-06-21T15:55:58.310Z"
+    "updatedAt": "2026-06-22T00:05:28.372Z"
   },
   {
     "id": "vid_1782057413828_zdjkkty",
@@ -21984,24 +21993,25 @@
     "id": "vid_1782057691547_lfl5xwu",
     "fields": {
       "是否监控": "是",
-      "likesCount": 39,
+      "likesCount": "39",
       "videoUrl": "https://www.tiktok.com/@andibaldi2/video/7651287022451035415",
       "平台": "tiktok",
-      "commentsCount": 0,
+      "commentsCount": "0",
       "红人名称": "andibaldi2",
       "id": "7651287022451035415",
-      "videoPlayCount": 2185,
-      "videoViewCount": 2185,
+      "videoPlayCount": "2653",
+      "videoViewCount": "2653",
       "url": {
         "text": "https://www.tiktok.com/@andibaldi2/video/7651287022451035415",
         "link": "https://www.tiktok.com/@andibaldi2/video/7651287022451035415"
       },
       "timestamp": "2026-06-14T16:21:29.000Z",
-      "displayUrl": "https://p16-common-sign.tiktokcdn-eu.com/tos-no1a-p-0037-no/oILnhSeUXAnDLljNIvfa5jqDIadeQkgsI3EAQG~tplv-tiktokx-origin.image?dr=10395&x-expires=1782230400&x-signature=YJMcAX3npt7Vsisx1ze7c9fYvb8%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=no1a"
+      "displayUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/oILnhSeUXAnDLljNIvfa5jqDIadeQkgsI3EAQG~tplv-tiktokx-origin.image?dr=9636&x-expires=1782259200&x-signature=ujS39z%2BIYrbs6Z3uNkh4%2Bm108m4%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast8",
+      "7日成熟声量": 2653
     },
     "source": "local-discovery",
     "importedAt": "",
-    "updatedAt": "2026-06-21T16:01:31.547Z"
+    "updatedAt": "2026-06-22T00:05:28.372Z"
   },
   {
     "id": "vid_1782057691547_54dv4xt",
@@ -22255,5 +22265,764 @@
     "source": "local-discovery",
     "importedAt": "",
     "updatedAt": "2026-06-21T16:11:35.498Z"
+  },
+  {
+    "id": "vid_1782085145645_vzl9lwd",
+    "fields": {
+      "是否监控": "是",
+      "likesCount": 303,
+      "videoUrl": "https://www.tiktok.com/@danielescooter/video/7652875865335909664",
+      "平台": "tiktok",
+      "commentsCount": 10,
+      "红人名称": "danielescooter",
+      "id": "7652875865335909664",
+      "videoPlayCount": 4741,
+      "videoViewCount": 4741,
+      "url": {
+        "text": "https://www.tiktok.com/@danielescooter/video/7652875865335909664",
+        "link": "https://www.tiktok.com/@danielescooter/video/7652875865335909664"
+      },
+      "timestamp": "2026-06-18T23:07:01.000Z",
+      "displayUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/osBPhGgtkIHvTtsUAgflgegoeQIBYDGM5GXjaL~tplv-tiktokx-origin.image?dr=9636&x-expires=1782255600&x-signature=6aTA%2BgT76MSb2nFwWt8OSDfndWw%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast8"
+    },
+    "source": "local-discovery",
+    "importedAt": "",
+    "updatedAt": "2026-06-21T23:39:05.645Z"
+  },
+  {
+    "id": "vid_1782085455631_vgp6xnu",
+    "fields": {
+      "是否监控": "是",
+      "likesCount": 93,
+      "videoUrl": "https://www.tiktok.com/@surron.ryan/video/7652487543283338527",
+      "平台": "tiktok",
+      "commentsCount": 3,
+      "红人名称": "surron.ryan",
+      "id": "7652487543283338527",
+      "videoPlayCount": 1308,
+      "videoViewCount": 1308,
+      "url": {
+        "text": "https://www.tiktok.com/@surron.ryan/video/7652487543283338527",
+        "link": "https://www.tiktok.com/@surron.ryan/video/7652487543283338527"
+      },
+      "timestamp": "2026-06-17T22:00:21.000Z",
+      "displayUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast8-p-0068-tx2/oIPjmAhasBGI95PBRUEYIzN3VIMkMjRiNIxAi~tplv-tiktokx-origin.image?dr=9636&x-expires=1782255600&x-signature=n87WlV258l1KMAvEfaKaK%2FmNIzM%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast8"
+    },
+    "source": "local-discovery",
+    "importedAt": "",
+    "updatedAt": "2026-06-21T23:44:15.631Z"
+  },
+  {
+    "id": "vid_1782085567796_kd4c8r8",
+    "fields": {
+      "是否监控": "是",
+      "likesCount": 216,
+      "videoUrl": "https://www.tiktok.com/@c.fialcovschi/video/7653377505809681686",
+      "平台": "tiktok",
+      "commentsCount": 16,
+      "红人名称": "c.fialcovschi",
+      "id": "7653377505809681686",
+      "videoPlayCount": 10700,
+      "videoViewCount": 10700,
+      "url": {
+        "text": "https://www.tiktok.com/@c.fialcovschi/video/7653377505809681686",
+        "link": "https://www.tiktok.com/@c.fialcovschi/video/7653377505809681686"
+      },
+      "timestamp": "2026-06-20T07:33:42.000Z",
+      "displayUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/oIr2OUlfIuzIAL78MIIIOALQXV1bDZGeIIlejZ~tplv-tiktokx-origin.image?dr=9636&x-expires=1782255600&x-signature=mPGf9c1TQsY%2FC3jYNcGSv52RCg0%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5"
+    },
+    "source": "local-discovery",
+    "importedAt": "",
+    "updatedAt": "2026-06-21T23:46:07.796Z"
+  },
+  {
+    "id": "vid_1782085567796_htnyiha",
+    "fields": {
+      "是否监控": "是",
+      "likesCount": 248,
+      "videoUrl": "https://www.tiktok.com/@c.fialcovschi/video/7653079760741862678",
+      "平台": "tiktok",
+      "commentsCount": 16,
+      "红人名称": "c.fialcovschi",
+      "id": "7653079760741862678",
+      "videoPlayCount": 11100,
+      "videoViewCount": 11100,
+      "url": {
+        "text": "https://www.tiktok.com/@c.fialcovschi/video/7653079760741862678",
+        "link": "https://www.tiktok.com/@c.fialcovschi/video/7653079760741862678"
+      },
+      "timestamp": "2026-06-19T12:18:16.000Z",
+      "displayUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/o8FN4OpqNAZFFW7HEklTERMBkx1fIBHzEfggID~tplv-tiktokx-origin.image?dr=9636&x-expires=1782255600&x-signature=L8WAAbkYmSKyVaqLQ%2Fz2VfKtlIA%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5"
+    },
+    "source": "local-discovery",
+    "importedAt": "",
+    "updatedAt": "2026-06-21T23:46:07.796Z"
+  },
+  {
+    "id": "vid_1782085567796_ievoglh",
+    "fields": {
+      "是否监控": "是",
+      "likesCount": 154,
+      "videoUrl": "https://www.tiktok.com/@c.fialcovschi/video/7652686501859380502",
+      "平台": "tiktok",
+      "commentsCount": 6,
+      "红人名称": "c.fialcovschi",
+      "id": "7652686501859380502",
+      "videoPlayCount": 8318,
+      "videoViewCount": 8318,
+      "url": {
+        "text": "https://www.tiktok.com/@c.fialcovschi/video/7652686501859380502",
+        "link": "https://www.tiktok.com/@c.fialcovschi/video/7652686501859380502"
+      },
+      "timestamp": "2026-06-18T10:52:11.000Z",
+      "displayUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/okkPf9ZIxYGWWgegxGLoANDGAYQfGWX3ezzRun~tplv-tiktokx-origin.image?dr=9636&x-expires=1782255600&x-signature=ZmyC21bvoGljVYuybQMpWFXFIN8%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5"
+    },
+    "source": "local-discovery",
+    "importedAt": "",
+    "updatedAt": "2026-06-21T23:46:07.796Z"
+  },
+  {
+    "id": "vid_1782085567796_a53v32a",
+    "fields": {
+      "是否监控": "是",
+      "likesCount": 260,
+      "videoUrl": "https://www.tiktok.com/@c.fialcovschi/video/7652361383656328470",
+      "平台": "tiktok",
+      "commentsCount": 16,
+      "红人名称": "c.fialcovschi",
+      "id": "7652361383656328470",
+      "videoPlayCount": 14600,
+      "videoViewCount": 14600,
+      "url": {
+        "text": "https://www.tiktok.com/@c.fialcovschi/video/7652361383656328470",
+        "link": "https://www.tiktok.com/@c.fialcovschi/video/7652361383656328470"
+      },
+      "timestamp": "2026-06-17T13:50:36.000Z",
+      "displayUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/oofEzLjYV1bRIwiApyyiwCNBAO6VGIIyL2yAFC~tplv-tiktokx-origin.image?dr=9636&x-expires=1782255600&x-signature=r%2BHxYRTOyaTavadmLVJ%2FHKvWh28%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5"
+    },
+    "source": "local-discovery",
+    "importedAt": "",
+    "updatedAt": "2026-06-21T23:46:07.796Z"
+  },
+  {
+    "id": "vid_1782085567796_o2i8wtc",
+    "fields": {
+      "是否监控": "是",
+      "likesCount": 245,
+      "videoUrl": "https://www.tiktok.com/@c.fialcovschi/video/7651995039727504662",
+      "平台": "tiktok",
+      "commentsCount": 12,
+      "红人名称": "c.fialcovschi",
+      "id": "7651995039727504662",
+      "videoPlayCount": 10800,
+      "videoViewCount": 10800,
+      "url": {
+        "text": "https://www.tiktok.com/@c.fialcovschi/video/7651995039727504662",
+        "link": "https://www.tiktok.com/@c.fialcovschi/video/7651995039727504662"
+      },
+      "timestamp": "2026-06-16T14:09:01.000Z",
+      "displayUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/oEkQMIMRBQnwEs2FEqVgejDzFsfKABgH5QniN0~tplv-tiktokx-origin.image?dr=9636&x-expires=1782255600&x-signature=0HZzcpfLCoMHju5JEoO7IqfkTKU%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5"
+    },
+    "source": "local-discovery",
+    "importedAt": "",
+    "updatedAt": "2026-06-21T23:46:07.796Z"
+  },
+  {
+    "id": "vid_1782085567796_eqxp6rp",
+    "fields": {
+      "是否监控": "是",
+      "likesCount": 493,
+      "videoUrl": "https://www.tiktok.com/@c.fialcovschi/video/7651611186361847062",
+      "平台": "tiktok",
+      "commentsCount": 35,
+      "红人名称": "c.fialcovschi",
+      "id": "7651611186361847062",
+      "videoPlayCount": 15800,
+      "videoViewCount": 15800,
+      "url": {
+        "text": "https://www.tiktok.com/@c.fialcovschi/video/7651611186361847062",
+        "link": "https://www.tiktok.com/@c.fialcovschi/video/7651611186361847062"
+      },
+      "timestamp": "2026-06-15T13:19:25.000Z",
+      "displayUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/oseR8effaAAGGY5gbOqIALGQ9WvLgsKVowbFVC~tplv-tiktokx-origin.image?dr=9636&x-expires=1782255600&x-signature=IypRxwNklsDqPDpfzMwz6MVdK0I%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5"
+    },
+    "source": "local-discovery",
+    "importedAt": "",
+    "updatedAt": "2026-06-21T23:46:07.796Z"
+  },
+  {
+    "id": "vid_1782085567796_zcykom9",
+    "fields": {
+      "是否监控": "是",
+      "likesCount": 1350,
+      "videoUrl": "https://www.tiktok.com/@c.fialcovschi/video/7651567201396247830",
+      "平台": "tiktok",
+      "commentsCount": 28,
+      "红人名称": "c.fialcovschi",
+      "id": "7651567201396247830",
+      "videoPlayCount": 40600,
+      "videoViewCount": 40600,
+      "url": {
+        "text": "https://www.tiktok.com/@c.fialcovschi/video/7651567201396247830",
+        "link": "https://www.tiktok.com/@c.fialcovschi/video/7651567201396247830"
+      },
+      "timestamp": "2026-06-15T10:28:43.000Z",
+      "displayUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/oUuvPqHrE0U9AF94VEkIagF0PKqLBADfEI9fRB~tplv-tiktokx-origin.image?dr=9636&x-expires=1782255600&x-signature=liT5dBFPwe2AyHI49%2FTD1jDyssM%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5"
+    },
+    "source": "local-discovery",
+    "importedAt": "",
+    "updatedAt": "2026-06-21T23:46:07.796Z"
+  },
+  {
+    "id": "vid_1782085567796_fbllc2m",
+    "fields": {
+      "是否监控": "是",
+      "likesCount": 224,
+      "videoUrl": "https://www.tiktok.com/@c.fialcovschi/video/7651215588509076739",
+      "平台": "tiktok",
+      "commentsCount": 29,
+      "红人名称": "c.fialcovschi",
+      "id": "7651215588509076739",
+      "videoPlayCount": 11800,
+      "videoViewCount": 11800,
+      "url": {
+        "text": "https://www.tiktok.com/@c.fialcovschi/video/7651215588509076739",
+        "link": "https://www.tiktok.com/@c.fialcovschi/video/7651215588509076739"
+      },
+      "timestamp": "2026-06-14T11:44:21.000Z",
+      "displayUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/owLAfADLnlIFBFRWq6fdLHkEgIYuBuZIZq9pEV~tplv-tiktokx-origin.image?dr=9636&x-expires=1782255600&x-signature=CA282NxTxndUyIgCvdSPcT%2BKwQk%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5"
+    },
+    "source": "local-discovery",
+    "importedAt": "",
+    "updatedAt": "2026-06-21T23:46:07.796Z"
+  },
+  {
+    "id": "vid_1782085567796_y75kwds",
+    "fields": {
+      "是否监控": "是",
+      "likesCount": 7209,
+      "videoUrl": "https://www.tiktok.com/@c.fialcovschi/video/7651158459710197014",
+      "平台": "tiktok",
+      "commentsCount": 138,
+      "红人名称": "c.fialcovschi",
+      "id": "7651158459710197014",
+      "videoPlayCount": 183000,
+      "videoViewCount": 183000,
+      "url": {
+        "text": "https://www.tiktok.com/@c.fialcovschi/video/7651158459710197014",
+        "link": "https://www.tiktok.com/@c.fialcovschi/video/7651158459710197014"
+      },
+      "timestamp": "2026-06-14T08:02:40.000Z",
+      "displayUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/ogDlnEkMAQYLVFkEXkNfgErC09fQBRgVuqQmAF~tplv-tiktokx-origin.image?dr=9636&x-expires=1782255600&x-signature=TfZl4lQkoMxQoxm%2B3BGqcSTj7Mc%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5"
+    },
+    "source": "local-discovery",
+    "importedAt": "",
+    "updatedAt": "2026-06-21T23:46:07.796Z"
+  },
+  {
+    "id": "vid_1782085977117_kqomsij",
+    "fields": {
+      "是否监控": "是",
+      "likesCount": 188,
+      "videoUrl": "https://www.tiktok.com/@alex_520s/video/7652361966962494723",
+      "平台": "tiktok",
+      "commentsCount": 2,
+      "红人名称": "alex_520s",
+      "id": "7652361966962494723",
+      "videoPlayCount": 3264,
+      "videoViewCount": 3264,
+      "url": {
+        "text": "https://www.tiktok.com/@alex_520s/video/7652361966962494723",
+        "link": "https://www.tiktok.com/@alex_520s/video/7652361966962494723"
+      },
+      "timestamp": "2026-06-17T13:52:51.000Z",
+      "displayUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/o0YrgB8OyjwQ3kValbIZ3AipKPBEIw82ViE3B~tplv-tiktokx-origin.image?dr=9636&x-expires=1782255600&x-signature=UIYiyu5VqVf60hhCrPYTbcGu34M%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5"
+    },
+    "source": "local-discovery",
+    "importedAt": "",
+    "updatedAt": "2026-06-21T23:52:57.117Z"
+  },
+  {
+    "id": "vid_1782085977117_ozylkp5",
+    "fields": {
+      "是否监控": "是",
+      "likesCount": 189,
+      "videoUrl": "https://www.tiktok.com/@alex_520s/video/7652360235679632662",
+      "平台": "tiktok",
+      "commentsCount": 2,
+      "红人名称": "alex_520s",
+      "id": "7652360235679632662",
+      "videoPlayCount": 3050,
+      "videoViewCount": 3050,
+      "url": {
+        "text": "https://www.tiktok.com/@alex_520s/video/7652360235679632662",
+        "link": "https://www.tiktok.com/@alex_520s/video/7652360235679632662"
+      },
+      "timestamp": "2026-06-17T13:46:09.000Z",
+      "displayUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/oUoyyKhiBBSZ9NaIAX0YKIqlPpiBE0FEB8jXY~tplv-tiktokx-origin.image?dr=9636&x-expires=1782255600&x-signature=qoQj%2Bh%2Fps5yofxpNxB%2FanVlVa%2BE%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5"
+    },
+    "source": "local-discovery",
+    "importedAt": "",
+    "updatedAt": "2026-06-21T23:52:57.117Z"
+  },
+  {
+    "id": "vid_1782086129564_gsym1dn",
+    "fields": {
+      "是否监控": "是",
+      "likesCount": 87,
+      "videoUrl": "https://www.tiktok.com/@carbon...master/video/7653401823889378582",
+      "平台": "tiktok",
+      "commentsCount": 4,
+      "红人名称": "carbon...master",
+      "id": "7653401823889378582",
+      "videoPlayCount": 778,
+      "videoViewCount": 778,
+      "url": {
+        "text": "https://www.tiktok.com/@carbon...master/video/7653401823889378582",
+        "link": "https://www.tiktok.com/@carbon...master/video/7653401823889378582"
+      },
+      "timestamp": "2026-06-20T09:08:03.000Z",
+      "displayUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/okvTVwP7IEBS3kbFlWqE2DHBNIdZkUAfgAeFoR~tplv-tiktokx-origin.image?dr=9636&x-expires=1782255600&x-signature=wCU96CF8VIQCOlcjYt5W4z3UdPQ%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5"
+    },
+    "source": "local-discovery",
+    "importedAt": "",
+    "updatedAt": "2026-06-21T23:55:29.564Z"
+  },
+  {
+    "id": "vid_1782086129564_029gkb3",
+    "fields": {
+      "是否监控": "是",
+      "likesCount": 67,
+      "videoUrl": "https://www.tiktok.com/@carbon...master/video/7652409245631122710",
+      "平台": "tiktok",
+      "commentsCount": 8,
+      "红人名称": "carbon...master",
+      "id": "7652409245631122710",
+      "videoPlayCount": 990,
+      "videoViewCount": 990,
+      "url": {
+        "text": "https://www.tiktok.com/@carbon...master/video/7652409245631122710",
+        "link": "https://www.tiktok.com/@carbon...master/video/7652409245631122710"
+      },
+      "timestamp": "2026-06-17T17:15:00.000Z",
+      "displayUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/o4fUSjrAEdBZUyzi9ziefEA7LoAoIAF7ZQAIBA~tplv-tiktokx-origin.image?dr=9636&x-expires=1782255600&x-signature=PP3Aob9l26qeV2tMpDrH1TEb9zU%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5"
+    },
+    "source": "local-discovery",
+    "importedAt": "",
+    "updatedAt": "2026-06-21T23:55:29.564Z"
+  },
+  {
+    "id": "vid_1782086129564_37zs2ux",
+    "fields": {
+      "是否监控": "是",
+      "likesCount": 145,
+      "videoUrl": "https://www.tiktok.com/@carbon...master/video/7651005776999320854",
+      "平台": "tiktok",
+      "commentsCount": 10,
+      "红人名称": "carbon...master",
+      "id": "7651005776999320854",
+      "videoPlayCount": 2204,
+      "videoViewCount": 2204,
+      "url": {
+        "text": "https://www.tiktok.com/@carbon...master/video/7651005776999320854",
+        "link": "https://www.tiktok.com/@carbon...master/video/7651005776999320854"
+      },
+      "timestamp": "2026-06-14T09:00:00.000Z",
+      "displayUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/ocwAqiuh1CA81CX9ABBFAhUFiAqESIfKSBjRtY~tplv-tiktokx-origin.image?dr=9636&x-expires=1782255600&x-signature=0%2FsaVSa9bGhctm%2FoyhkRRH7Rpis%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5"
+    },
+    "source": "local-discovery",
+    "importedAt": "",
+    "updatedAt": "2026-06-21T23:55:29.564Z"
+  },
+  {
+    "id": "vid_1782086169785_nqpc4uq",
+    "fields": {
+      "是否监控": "是",
+      "likesCount": 249,
+      "videoUrl": "https://www.tiktok.com/@hdukerides/video/7652848547485863189",
+      "平台": "tiktok",
+      "commentsCount": 41,
+      "红人名称": "hdukerides",
+      "id": "7652848547485863189",
+      "videoPlayCount": 3588,
+      "videoViewCount": 3588,
+      "url": {
+        "text": "https://www.tiktok.com/@hdukerides/video/7652848547485863189",
+        "link": "https://www.tiktok.com/@hdukerides/video/7652848547485863189"
+      },
+      "timestamp": "2026-06-18T21:21:02.000Z",
+      "displayUrl": "https://p16-common-sign.tiktokcdn-eu.com/tos-alisg-p-0037/oIhYREABPAYAlC1JAaWAPE6l5A0hiijxImBTR~tplv-tiktokx-dmt-logom:tos-alisg-i-0068/o8ABETDqFAI6NY0kARdkACqESmeEIUAfgqGZmE.image?dr=10393&x-expires=1782255600&x-signature=27VhQNniFH5clbfWXx5qTWJRieE%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=no1a"
+    },
+    "source": "local-discovery",
+    "importedAt": "",
+    "updatedAt": "2026-06-21T23:56:09.786Z"
+  },
+  {
+    "id": "vid_1782086169786_8srf5sb",
+    "fields": {
+      "是否监控": "是",
+      "likesCount": 134,
+      "videoUrl": "https://www.tiktok.com/@hdukerides/video/7651360419680029973",
+      "平台": "tiktok",
+      "commentsCount": 27,
+      "红人名称": "hdukerides",
+      "id": "7651360419680029973",
+      "videoPlayCount": 2270,
+      "videoViewCount": 2270,
+      "url": {
+        "text": "https://www.tiktok.com/@hdukerides/video/7651360419680029973",
+        "link": "https://www.tiktok.com/@hdukerides/video/7651360419680029973"
+      },
+      "timestamp": "2026-06-14T21:06:18.000Z",
+      "displayUrl": "https://p16-common-sign.tiktokcdn-eu.com/tos-alisg-p-0037/oo1vInfEAnjZAIiEUEFUAFADAMoqADa8fiXIf3~tplv-tiktokx-origin.image?dr=10395&x-expires=1782255600&x-signature=A4yQT%2Fh%2B31e1BqVD5UJP3IXvZdg%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=no1a"
+    },
+    "source": "local-discovery",
+    "importedAt": "",
+    "updatedAt": "2026-06-21T23:56:09.786Z"
+  },
+  {
+    "id": "vid_1782086195419_axivwzs",
+    "fields": {
+      "是否监控": "是",
+      "likesCount": 106,
+      "videoUrl": "https://www.tiktok.com/@small.vroom/video/7653141915684146463",
+      "平台": "tiktok",
+      "commentsCount": 2,
+      "红人名称": "small.vroom",
+      "id": "7653141915684146463",
+      "videoPlayCount": 6024,
+      "videoViewCount": 6024,
+      "url": {
+        "text": "https://www.tiktok.com/@small.vroom/video/7653141915684146463",
+        "link": "https://www.tiktok.com/@small.vroom/video/7653141915684146463"
+      },
+      "timestamp": "2026-06-19T16:19:38.000Z",
+      "displayUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast8-p-0068-tx2/o4DIwetqJAIjGZAQAMcIAzEq2IaLIfteUCg1AB~tplv-tiktokx-dmt-logom:tos-useast8-i-0068-tx2/oMAgNAqGUEbfXvdLIAAtiAEtIIf1eaiAIjIBAx.image?dr=9634&x-expires=1782255600&x-signature=EUu%2BinAUHEUagOjMkA%2Fhn4s7HF8%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5"
+    },
+    "source": "local-discovery",
+    "importedAt": "",
+    "updatedAt": "2026-06-21T23:56:35.419Z"
+  },
+  {
+    "id": "vid_1782086195419_mykuie8",
+    "fields": {
+      "是否监控": "是",
+      "likesCount": 38,
+      "videoUrl": "https://www.tiktok.com/@small.vroom/video/7651352061547760927",
+      "平台": "tiktok",
+      "commentsCount": 1,
+      "红人名称": "small.vroom",
+      "id": "7651352061547760927",
+      "videoPlayCount": 1295,
+      "videoViewCount": 1295,
+      "url": {
+        "text": "https://www.tiktok.com/@small.vroom/video/7651352061547760927",
+        "link": "https://www.tiktok.com/@small.vroom/video/7651352061547760927"
+      },
+      "timestamp": "2026-06-14T20:34:11.000Z",
+      "displayUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast8-p-0068-tx2/oQsEvAYpwVCnziIqkLifEBALNErjfrInRRBxE7~tplv-tiktokx-origin.image?dr=9636&x-expires=1782255600&x-signature=XI1hMp%2F9Fyv5ZH%2F2psQmhHPsFjA%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5"
+    },
+    "source": "local-discovery",
+    "importedAt": "",
+    "updatedAt": "2026-06-21T23:56:35.419Z"
+  },
+  {
+    "id": "vid_1782086245580_h8qgpba",
+    "fields": {
+      "是否监控": "是",
+      "likesCount": 3554,
+      "videoUrl": "https://www.tiktok.com/@motion.ridez/video/7652087923868716321",
+      "平台": "tiktok",
+      "commentsCount": 195,
+      "红人名称": "motion.ridez",
+      "id": "7652087923868716321",
+      "videoPlayCount": 64200,
+      "videoViewCount": 64200,
+      "url": {
+        "text": "https://www.tiktok.com/@motion.ridez/video/7652087923868716321",
+        "link": "https://www.tiktok.com/@motion.ridez/video/7652087923868716321"
+      },
+      "timestamp": "2026-06-16T20:09:20.000Z",
+      "displayUrl": "https://p16-common-sign.tiktokcdn-eu.com/tos-useast2a-p-0037-euttp/oMUsQxfIAMQX7geRqrtD8WX2oGMiHQ3fj1YJHQ~tplv-tiktokx-origin.image?dr=10395&x-expires=1782255600&x-signature=y5Mb50V5AV00TEknL7CrADjxFE4%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast2b"
+    },
+    "source": "local-discovery",
+    "importedAt": "",
+    "updatedAt": "2026-06-21T23:57:25.581Z"
+  },
+  {
+    "id": "vid_1782086259237_n1vir1n",
+    "fields": {
+      "是否监控": "是",
+      "likesCount": 324,
+      "videoUrl": "https://www.tiktok.com/@kaziqk1/video/7653192678925995297",
+      "平台": "tiktok",
+      "commentsCount": 11,
+      "红人名称": "kaziqk1",
+      "id": "7653192678925995297",
+      "videoPlayCount": 4591,
+      "videoViewCount": 4591,
+      "url": {
+        "text": "https://www.tiktok.com/@kaziqk1/video/7653192678925995297",
+        "link": "https://www.tiktok.com/@kaziqk1/video/7653192678925995297"
+      },
+      "timestamp": "2026-06-19T19:36:21.000Z",
+      "displayUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/o4IyGNQgMfALkIzNRwj1VaeIhRGtGDfgVMGUzr~tplv-tiktokx-origin.image?dr=9636&x-expires=1782255600&x-signature=OtERmj9uYCxNh%2BSVvsdoUGc7WR0%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5"
+    },
+    "source": "local-discovery",
+    "importedAt": "",
+    "updatedAt": "2026-06-21T23:57:39.237Z"
+  },
+  {
+    "id": "vid_1782086259237_s5jinsb",
+    "fields": {
+      "是否监控": "是",
+      "likesCount": 164,
+      "videoUrl": "https://www.tiktok.com/@kaziqk1/video/7652825900689493281",
+      "平台": "tiktok",
+      "commentsCount": 18,
+      "红人名称": "kaziqk1",
+      "id": "7652825900689493281",
+      "videoPlayCount": 2391,
+      "videoViewCount": 2391,
+      "url": {
+        "text": "https://www.tiktok.com/@kaziqk1/video/7652825900689493281",
+        "link": "https://www.tiktok.com/@kaziqk1/video/7652825900689493281"
+      },
+      "timestamp": "2026-06-18T19:53:04.000Z",
+      "displayUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/oYBSMCZgVCEitc0RqKPTjEABjIaKU5i8Lgc70~tplv-tiktokx-origin.image?dr=9636&x-expires=1782255600&x-signature=bMtN%2FeDFYjmG9WN%2BMITgOkACyPE%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5"
+    },
+    "source": "local-discovery",
+    "importedAt": "",
+    "updatedAt": "2026-06-21T23:57:39.237Z"
+  },
+  {
+    "id": "vid_1782086259237_2g1u78l",
+    "fields": {
+      "是否监控": "是",
+      "likesCount": 240,
+      "videoUrl": "https://www.tiktok.com/@kaziqk1/video/7652743676149435680",
+      "平台": "tiktok",
+      "commentsCount": 35,
+      "红人名称": "kaziqk1",
+      "id": "7652743676149435680",
+      "videoPlayCount": 4173,
+      "videoViewCount": 4173,
+      "url": {
+        "text": "https://www.tiktok.com/@kaziqk1/video/7652743676149435680",
+        "link": "https://www.tiktok.com/@kaziqk1/video/7652743676149435680"
+      },
+      "timestamp": "2026-06-18T14:34:00.000Z",
+      "displayUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/okf1U7I8CJBGs0timAiCdEXdBj5iIoA4guBzOA~tplv-tiktokx-origin.image?dr=9636&x-expires=1782255600&x-signature=2aM7%2FiFV1mC14VN9F%2FI7jXWtPZM%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5"
+    },
+    "source": "local-discovery",
+    "importedAt": "",
+    "updatedAt": "2026-06-21T23:57:39.237Z"
+  },
+  {
+    "id": "vid_1782086259237_p8d5yag",
+    "fields": {
+      "是否监控": "是",
+      "likesCount": 296,
+      "videoUrl": "https://www.tiktok.com/@kaziqk1/video/7652444893461138721",
+      "平台": "tiktok",
+      "commentsCount": 36,
+      "红人名称": "kaziqk1",
+      "id": "7652444893461138721",
+      "videoPlayCount": 6418,
+      "videoViewCount": 6418,
+      "url": {
+        "text": "https://www.tiktok.com/@kaziqk1/video/7652444893461138721",
+        "link": "https://www.tiktok.com/@kaziqk1/video/7652444893461138721"
+      },
+      "timestamp": "2026-06-17T19:14:36.000Z",
+      "displayUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/o4ijhlj1GAU9BtXCixUXgI8Az2yfIuVDCjZoEB~tplv-tiktokx-origin.image?dr=9636&x-expires=1782255600&x-signature=Cttcst0GqE5K1aGvDC%2FjPKMvyB4%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5"
+    },
+    "source": "local-discovery",
+    "importedAt": "",
+    "updatedAt": "2026-06-21T23:57:39.237Z"
+  },
+  {
+    "id": "vid_1782086259237_9izonw0",
+    "fields": {
+      "是否监控": "是",
+      "likesCount": 467,
+      "videoUrl": "https://www.tiktok.com/@kaziqk1/video/7651927540054920481",
+      "平台": "tiktok",
+      "commentsCount": 58,
+      "红人名称": "kaziqk1",
+      "id": "7651927540054920481",
+      "videoPlayCount": 22800,
+      "videoViewCount": 22800,
+      "url": {
+        "text": "https://www.tiktok.com/@kaziqk1/video/7651927540054920481",
+        "link": "https://www.tiktok.com/@kaziqk1/video/7651927540054920481"
+      },
+      "timestamp": "2026-06-16T09:47:04.000Z",
+      "displayUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/o851g42HyAM8BIsdoEigGGzBif9iC5IiBCA8xI~tplv-tiktokx-origin.image?dr=9636&x-expires=1782255600&x-signature=IqfmbKg352eyunj%2Bt7yFBeLPUjU%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5"
+    },
+    "source": "local-discovery",
+    "importedAt": "",
+    "updatedAt": "2026-06-21T23:57:39.237Z"
+  },
+  {
+    "id": "vid_1782086288765_t11hd06",
+    "fields": {
+      "是否监控": "是",
+      "likesCount": 61200,
+      "videoUrl": "https://www.tiktok.com/@deepintech19/video/7653167070733012246",
+      "平台": "tiktok",
+      "commentsCount": 7169,
+      "红人名称": "deepintech19",
+      "id": "7653167070733012246",
+      "videoPlayCount": 1500000,
+      "videoViewCount": 1500000,
+      "url": {
+        "text": "https://www.tiktok.com/@deepintech19/video/7653167070733012246",
+        "link": "https://www.tiktok.com/@deepintech19/video/7653167070733012246"
+      },
+      "timestamp": "2026-06-19T17:57:03.000Z",
+      "displayUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/oQEI1LUewDhtLfG9IebBOICAIPgPAaB9YkQAju~tplv-tiktokx-origin.image?dr=9636&x-expires=1782255600&x-signature=sgsRvqePj45zoa30NuaL3DowXJI%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5"
+    },
+    "source": "local-discovery",
+    "importedAt": "",
+    "updatedAt": "2026-06-21T23:58:08.765Z"
+  },
+  {
+    "id": "vid_1782086434830_husyniw",
+    "fields": {
+      "是否监控": "是",
+      "likesCount": 2524,
+      "videoUrl": "https://www.tiktok.com/@g2master_rider5/video/7653059995138805014",
+      "平台": "tiktok",
+      "commentsCount": 61,
+      "红人名称": "g2master_rider5",
+      "id": "7653059995138805014",
+      "videoPlayCount": 30100,
+      "videoViewCount": 30100,
+      "url": {
+        "text": "https://www.tiktok.com/@g2master_rider5/video/7653059995138805014",
+        "link": "https://www.tiktok.com/@g2master_rider5/video/7653059995138805014"
+      },
+      "timestamp": "2026-06-19T11:01:34.000Z",
+      "displayUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/oUBIIItf7GAZIKSJYkLJLjUGEIeAbDXaIMed1I~tplv-tiktokx-origin.image?dr=9636&x-expires=1782259200&x-signature=zVXBVZR2cY7Qlr6iVLsa6YWL9ug%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5"
+    },
+    "source": "local-discovery",
+    "importedAt": "",
+    "updatedAt": "2026-06-22T00:00:34.830Z"
+  },
+  {
+    "id": "vid_1782086434830_mfbsieb",
+    "fields": {
+      "是否监控": "是",
+      "likesCount": 705,
+      "videoUrl": "https://www.tiktok.com/@g2master_rider5/video/7652113080683334934",
+      "平台": "tiktok",
+      "commentsCount": 44,
+      "红人名称": "g2master_rider5",
+      "id": "7652113080683334934",
+      "videoPlayCount": 12300,
+      "videoViewCount": 12300,
+      "url": {
+        "text": "https://www.tiktok.com/@g2master_rider5/video/7652113080683334934",
+        "link": "https://www.tiktok.com/@g2master_rider5/video/7652113080683334934"
+      },
+      "timestamp": "2026-06-16T21:47:03.000Z",
+      "displayUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/o8f4xqoMfABqJzDnEFAxF8IgaFRvcMjaAkEIFT~tplv-tiktokx-origin.image?dr=9636&x-expires=1782259200&x-signature=Sq8oARr1DQl8U2Muz4acQcLs23M%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5"
+    },
+    "source": "local-discovery",
+    "importedAt": "",
+    "updatedAt": "2026-06-22T00:00:34.830Z"
+  },
+  {
+    "id": "vid_1782086434830_m0zvwqt",
+    "fields": {
+      "是否监控": "是",
+      "likesCount": 531,
+      "videoUrl": "https://www.tiktok.com/@g2master_rider5/video/7651942655072570626",
+      "平台": "tiktok",
+      "commentsCount": 20,
+      "红人名称": "g2master_rider5",
+      "id": "7651942655072570626",
+      "videoPlayCount": 11500,
+      "videoViewCount": 11500,
+      "url": {
+        "text": "https://www.tiktok.com/@g2master_rider5/video/7651942655072570626",
+        "link": "https://www.tiktok.com/@g2master_rider5/video/7651942655072570626"
+      },
+      "timestamp": "2026-06-16T10:45:43.000Z",
+      "displayUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/oMc0KaiExST4IsA1WBpYBkZSXCjEIVatiBz6v~tplv-tiktokx-origin.image?dr=9636&x-expires=1782259200&x-signature=EKu5DouDoO4PwXOO2ThsB1TZihs%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5"
+    },
+    "source": "local-discovery",
+    "importedAt": "",
+    "updatedAt": "2026-06-22T00:00:34.830Z"
+  },
+  {
+    "id": "vid_1782086434830_m00u7qj",
+    "fields": {
+      "是否监控": "是",
+      "likesCount": 36300,
+      "videoUrl": "https://www.tiktok.com/@g2master_rider5/video/7651679774829448470",
+      "平台": "tiktok",
+      "commentsCount": 468,
+      "红人名称": "g2master_rider5",
+      "id": "7651679774829448470",
+      "videoPlayCount": 494000,
+      "videoViewCount": 494000,
+      "url": {
+        "text": "https://www.tiktok.com/@g2master_rider5/video/7651679774829448470",
+        "link": "https://www.tiktok.com/@g2master_rider5/video/7651679774829448470"
+      },
+      "timestamp": "2026-06-15T17:45:32.000Z",
+      "displayUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/ocqwkbwEfB7IDAiR9FHI5kAB9MEPgqfcwmOBij~tplv-tiktokx-origin.image?dr=9636&x-expires=1782259200&x-signature=RgLpHtCW%2BNdlMUysZYgZ%2B6IIUt4%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5"
+    },
+    "source": "local-discovery",
+    "importedAt": "",
+    "updatedAt": "2026-06-22T00:00:34.830Z"
+  },
+  {
+    "id": "vid_1782086434830_gkb5wsg",
+    "fields": {
+      "是否监控": "是",
+      "likesCount": 551,
+      "videoUrl": "https://www.tiktok.com/@g2master_rider5/video/7651381370798886147",
+      "平台": "tiktok",
+      "commentsCount": 32,
+      "红人名称": "g2master_rider5",
+      "id": "7651381370798886147",
+      "videoPlayCount": 9714,
+      "videoViewCount": 9714,
+      "url": {
+        "text": "https://www.tiktok.com/@g2master_rider5/video/7651381370798886147",
+        "link": "https://www.tiktok.com/@g2master_rider5/video/7651381370798886147"
+      },
+      "timestamp": "2026-06-14T22:27:38.000Z",
+      "displayUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/oUMeGQNKWgVXVWeIrI38SiobmKKMDjAReUglAL~tplv-tiktokx-origin.image?dr=9636&x-expires=1782259200&x-signature=9EfqpNWeW9yix2ybfdHETDBeH0s%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5"
+    },
+    "source": "local-discovery",
+    "importedAt": "",
+    "updatedAt": "2026-06-22T00:00:34.830Z"
+  },
+  {
+    "id": "vid_1782086434830_czh6p1t",
+    "fields": {
+      "是否监控": "是",
+      "likesCount": 772,
+      "videoUrl": "https://www.tiktok.com/@g2master_rider5/video/7651185418716695830",
+      "平台": "tiktok",
+      "commentsCount": 11,
+      "红人名称": "g2master_rider5",
+      "id": "7651185418716695830",
+      "videoPlayCount": 14300,
+      "videoViewCount": 14300,
+      "url": {
+        "text": "https://www.tiktok.com/@g2master_rider5/video/7651185418716695830",
+        "link": "https://www.tiktok.com/@g2master_rider5/video/7651185418716695830"
+      },
+      "timestamp": "2026-06-14T09:47:16.000Z",
+      "displayUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-no1a-i-photomode-no/2e2cb9db3efd426e82c0e6adba1516a2~tplv-photomode-image.jpeg?dr=9616&x-expires=1782259200&x-signature=2zgT3cNOPXT4lWQccujwRfBxFBA%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=9b759fb9&idc=useast5&ftpl=1"
+    },
+    "source": "local-discovery",
+    "importedAt": "",
+    "updatedAt": "2026-06-22T00:00:34.830Z"
   }
 ]

@@ -1149,7 +1149,7 @@
       "合作量级": "赛事/活动",
       "合作服务": "不签合同",
       "已上线视频": 1,
-      "红人粉丝数据": 207900,
+      "红人粉丝数据": 208100,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-14",
       "追踪优先级": "P3 暂缓",
@@ -1159,7 +1159,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": "2026-06-21T15:43:30.105Z"
+    "updatedAt": "2026-06-21T23:40:00.454Z"
   },
   {
     "id": "21Lwe5C6wf",
@@ -1774,7 +1774,7 @@
       "视频交付完成率": "25%",
       "合同交付平台拆分": "TikTok 8条",
       "合同交付解析状态": "已解析",
-      "红人粉丝数据": 56000,
+      "红人粉丝数据": 56100,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-14",
       "追踪优先级": "P3 暂缓",
@@ -1796,7 +1796,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": "2026-06-21T15:44:05.560Z"
+    "updatedAt": "2026-06-21T23:40:09.057Z"
   },
   {
     "id": "2znRyOU6Jy",
@@ -5095,7 +5095,7 @@
       "合作量级": "赛事/活动",
       "合作服务": "不签合同",
       "已上线视频": 1,
-      "红人粉丝数据": 36600,
+      "红人粉丝数据": 208100,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-14",
       "追踪优先级": "P3 暂缓",
@@ -5105,7 +5105,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.865Z",
-    "updatedAt": "2026-06-14T06:58:21.022Z"
+    "updatedAt": "2026-06-21T23:40:42.519Z"
   },
   {
     "id": "6ybWhwyR7x",
@@ -15196,6 +15196,7 @@
         "text": "https://www.tiktok.com/search?q=keepingupwiththelewises&t=1780471121577"
       },
       "平台": "tiktok",
+      "是否出视频": "否",
       "红人名称": "keepingupwiththelewises",
       "样品型号": "yozma, yozmasport，in10",
       "红人编码": "US-Stefan-052",
@@ -21160,7 +21161,7 @@
       "视频交付完成率": "75%",
       "合同交付平台拆分": "TikTok 4条",
       "合同交付解析状态": "已解析",
-      "红人粉丝数据": 6326,
+      "红人粉丝数据": 6337,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-14",
       "追踪优先级": "P0 立刻追踪",
@@ -21178,7 +21179,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.866Z",
-    "updatedAt": "2026-06-21T16:01:03.625Z"
+    "updatedAt": "2026-06-21T23:42:30.802Z"
   },
   {
     "id": "SEJG9W98Vq",
@@ -33519,6 +33520,7 @@
         "text": "https://www.tiktok.com/search?q=Riding%20With%20Junior&t=1780458171122"
       },
       "平台": "tiktok",
+      "是否出视频": "否",
       "红人名称": "Riding with Junior",
       "样品型号": "yozma, yozmasport，in10",
       "红人编码": "US-Lexy-002",
@@ -33678,7 +33680,7 @@
       "视频交付完成率": "0%",
       "合同交付平台拆分": "TikTok 4条",
       "合同交付解析状态": "已解析",
-      "红人粉丝数据": 18600,
+      "红人粉丝数据": 18800,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-14",
       "追踪优先级": "P2 低频追踪",
@@ -33700,7 +33702,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": "2026-06-15T03:27:20.509Z"
+    "updatedAt": "2026-06-21T23:39:05.644Z"
   },
   {
     "id": "jaLdOmJmOS",
@@ -34270,7 +34272,7 @@
       "已上线视频": 2,
       "合同交付平台拆分": "待人工确认",
       "合同交付解析状态": "待人工确认",
-      "红人粉丝数据": 10300,
+      "红人粉丝数据": 10400,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-14",
       "追踪优先级": "P2 低频追踪",
@@ -34292,7 +34294,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": "2026-06-15T03:27:53.686Z"
+    "updatedAt": "2026-06-21T23:44:15.631Z"
   },
   {
     "id": "kMXZefSX8o",
@@ -35383,7 +35385,7 @@
       "视频交付完成率": "13%",
       "合同交付平台拆分": "TikTok 8条",
       "合同交付解析状态": "已解析",
-      "红人粉丝数据": 20100,
+      "红人粉丝数据": 20200,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-14",
       "追踪优先级": "P0 立刻追踪",
@@ -35397,7 +35399,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-21T23:45:00.738Z"
   },
   {
     "id": "m4sxAg9f5G",
@@ -36058,6 +36060,7 @@
         "text": "https://www.tiktok.com/@ridshawty"
       },
       "平台": "tiktok",
+      "是否出视频": "否",
       "红人名称": "ridshawty",
       "样品型号": "yozma, yozmasport，in10",
       "红人编码": "US-Stefan-071",
@@ -36186,6 +36189,7 @@
         "text": "https://www.tiktok.com/@bikingwtheo"
       },
       "平台": "tiktok",
+      "是否出视频": "是",
       "红人名称": "bikingwtheo",
       "样品型号": "yozma, yozmasport，in10",
       "红人编码": "US-Stefan-044",
@@ -36205,17 +36209,21 @@
       "视频交付完成率": "25%",
       "合同交付平台拆分": "TikTok 8条",
       "合同交付解析状态": "已解析",
-      "红人粉丝数据": 56000,
+      "红人粉丝数据": 56100,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-14",
       "追踪优先级": "P3 暂缓",
       "追踪评分": "20",
       "追踪原因": "普通/小体量达人更需要追踪",
-      "追踪批次更新时间": "2026-06-07"
+      "追踪批次更新时间": "2026-06-07",
+      "url": {
+        "text": "https://www.tiktok.com/@bikingwtheo/video/7651998530986364191",
+        "link": "https://www.tiktok.com/@bikingwtheo/video/7651998530986364191"
+      }
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": "2026-06-21T15:44:05.560Z"
+    "updatedAt": "2026-06-21T23:40:09.059Z"
   },
   {
     "id": "ncjU4m1oIM",
@@ -36243,7 +36251,7 @@
       "已上线视频": 0,
       "合同交付平台拆分": "待人工确认",
       "合同交付解析状态": "待人工确认",
-      "红人粉丝数据": 25200,
+      "红人粉丝数据": 41300,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-14",
       "追踪优先级": "P0 立刻追踪",
@@ -36253,7 +36261,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": "2026-06-07T08:28:36.875Z"
+    "updatedAt": "2026-06-21T23:46:00.004Z"
   },
   {
     "id": "ndzpF80ZIE",
@@ -36993,7 +37001,7 @@
       "已上线视频": 25,
       "合同交付平台拆分": "待人工确认",
       "合同交付解析状态": "待人工确认",
-      "红人粉丝数据": 54400,
+      "红人粉丝数据": 66300,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-14",
       "追踪优先级": "P2 低频追踪",
@@ -37015,7 +37023,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": "2026-06-14T07:28:08.819Z"
+    "updatedAt": "2026-06-21T23:46:07.796Z"
   },
   {
     "id": "oIytiFIYtE",
@@ -37797,6 +37805,7 @@
         "text": "https://www.tiktok.com/@baum.outdoors14?lang=zh-Hans"
       },
       "平台": "tiktok",
+      "是否出视频": "否",
       "红人名称": "Baum Outdoors",
       "样品型号": "yozma, yozmasport，in10",
       "红人编码": "US-Ryan-030",
@@ -37875,6 +37884,7 @@
         "text": "https://www.tiktok.com/@bensoutdoorboys"
       },
       "平台": "tiktok",
+      "是否出视频": "否",
       "红人名称": "Ben’s Outdoor Boys",
       "样品型号": "yozma, yozmasport，in10",
       "红人编码": "US-Stefan-059",
@@ -38901,6 +38911,7 @@
         "text": "https://www.tiktok.com/@starlineworld.co"
       },
       "平台": "tiktok",
+      "是否出视频": "否",
       "红人名称": "starlineworld.co",
       "样品型号": "yozma, yozmasport，in10",
       "红人编码": "US-Stefan-079",
@@ -38913,7 +38924,7 @@
       "合作量级": "赛事/活动",
       "合作服务": "不签合同",
       "已上线视频": 1,
-      "红人粉丝数据": 207900,
+      "红人粉丝数据": 208100,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-14",
       "追踪优先级": "P3 暂缓",
@@ -38923,7 +38934,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": "2026-06-21T15:43:30.106Z"
+    "updatedAt": "2026-06-21T23:40:00.456Z"
   },
   {
     "id": "qhKYuKGoy0",
@@ -39486,6 +39497,7 @@
         "text": "https://www.tiktok.com/@tmodzzz"
       },
       "平台": "tiktok",
+      "是否出视频": "是",
       "红人名称": "T-Modz",
       "样品型号": "yozma, yozmasport，in10",
       "红人编码": "US-Stefan-051",
@@ -39505,17 +39517,21 @@
       "视频交付完成率": "75%",
       "合同交付平台拆分": "TikTok 4条",
       "合同交付解析状态": "已解析",
-      "红人粉丝数据": 6326,
+      "红人粉丝数据": 6337,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-14",
       "追踪优先级": "P0 立刻追踪",
       "追踪评分": "120",
       "追踪原因": "正在出单；普通/小体量达人更需要追踪",
-      "追踪批次更新时间": "2026-06-07"
+      "追踪批次更新时间": "2026-06-07",
+      "url": {
+        "text": "https://www.tiktok.com/@tmodzzz/video/7651648806206983437",
+        "link": "https://www.tiktok.com/@tmodzzz/video/7651648806206983437"
+      }
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": "2026-06-21T16:01:03.625Z"
+    "updatedAt": "2026-06-21T23:42:30.802Z"
   },
   {
     "id": "rKzuM6KFHk",
@@ -40659,6 +40675,7 @@
         "text": "https://www.tiktok.com/@jamesbiggar.us?lang=zh-Hans"
       },
       "平台": "tiktok",
+      "是否出视频": "否",
       "红人名称": "James Biggar",
       "样品型号": "yozma, yozmasport，in10",
       "红人编码": "CA-Ryan-002",
@@ -40926,6 +40943,7 @@
         "text": "https://www.tiktok.com/@freego.judah"
       },
       "平台": "tiktok",
+      "是否出视频": "是",
       "红人名称": "freego.judah",
       "样品型号": "yozma, yozmasport，in10",
       "红人编码": "US-Nancy-005",
@@ -40951,7 +40969,19 @@
       "追踪优先级": "P0 立刻追踪",
       "追踪评分": "120",
       "追踪原因": "正在出单；普通/小体量达人更需要追踪",
-      "追踪批次更新时间": "2026-06-07"
+      "追踪批次更新时间": "2026-06-07",
+      "url": {
+        "text": "https://www.tiktok.com/@freego.judah/video/7653213797963910430",
+        "link": "https://www.tiktok.com/@freego.judah/video/7653213797963910430"
+      },
+      "url2": {
+        "text": "https://www.tiktok.com/@freego.judah/video/7652886483417812238",
+        "link": "https://www.tiktok.com/@freego.judah/video/7652886483417812238"
+      },
+      "url3": {
+        "text": "https://www.tiktok.com/@freego.judah/video/7652482545182870798",
+        "link": "https://www.tiktok.com/@freego.judah/video/7652482545182870798"
+      }
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
@@ -42317,6 +42347,7 @@
         "text": "https://www.tiktok.com/@zeeksteryt"
       },
       "平台": "tiktok",
+      "是否出视频": "否",
       "红人名称": "zeekster",
       "样品型号": "yozma, yozmasport，in10",
       "红人编码": "US-Stefan-047",
@@ -43693,6 +43724,7 @@
         "text": "https://www.tiktok.com/@pierrexjacques"
       },
       "平台": "tiktok",
+      "是否出视频": "否",
       "红人名称": "pierrexjacques",
       "样品型号": "yozma, yozmasport，in10",
       "红人编码": "US-Ryan-006",
@@ -44126,7 +44158,7 @@
         "text": "https://www.tiktok.com/@alex_520s?lang=en"
       },
       "平台": "tiktok",
-      "是否出视频": "否",
+      "是否出视频": "是",
       "红人名称": "alex_520s",
       "样品型号": "yozma, yozmasport，in10",
       "红人编码": "EU-Zoe-037",
@@ -44143,17 +44175,25 @@
       "已上线视频": 0,
       "合同交付平台拆分": "待人工确认",
       "合同交付解析状态": "待人工确认",
-      "红人粉丝数据": 126200,
+      "红人粉丝数据": 126700,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-14",
       "追踪优先级": "P1 本周追踪",
       "追踪评分": "115",
       "追踪原因": "2026合作未上线/未登记上线；当前本地未登记视频",
-      "追踪批次更新时间": "2026-06-07"
+      "追踪批次更新时间": "2026-06-07",
+      "url": {
+        "text": "https://www.tiktok.com/@alex_520s/video/7652361966962494723",
+        "link": "https://www.tiktok.com/@alex_520s/video/7652361966962494723"
+      },
+      "url2": {
+        "text": "https://www.tiktok.com/@alex_520s/video/7652360235679632662",
+        "link": "https://www.tiktok.com/@alex_520s/video/7652360235679632662"
+      }
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": "2026-06-07T08:38:27.027Z"
+    "updatedAt": "2026-06-21T23:52:57.117Z"
   },
   {
     "id": "woUct0wTJI",
@@ -44836,7 +44876,7 @@
       "已上线视频": 0,
       "合同交付平台拆分": "待人工确认",
       "合同交付解析状态": "待人工确认",
-      "红人粉丝数据": 415400,
+      "红人粉丝数据": 431800,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-14",
       "追踪优先级": "P1 本周追踪",
@@ -44846,7 +44886,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": "2026-06-07T08:39:33.214Z"
+    "updatedAt": "2026-06-21T23:53:23.891Z"
   },
   {
     "id": "xqCVtJLW9a",
@@ -45419,6 +45459,7 @@
         "text": "https://www.tiktok.com/@makethehoodsmile"
       },
       "平台": "tiktok",
+      "是否出视频": "否",
       "红人名称": "makethehoodsmile",
       "样品型号": "yozma, yozmasport，in10",
       "红人编码": "US-Stefan-041",
@@ -45830,6 +45871,7 @@
         "text": "https://www.tiktok.com/@starlineworld.co"
       },
       "平台": "tiktok",
+      "是否出视频": "否",
       "红人名称": "starlineworld.co",
       "样品型号": "yozma, yozmasport，in10",
       "红人编码": "US-Stefan-079",
@@ -45842,7 +45884,7 @@
       "合作量级": "赛事/活动",
       "合作服务": "不签合同",
       "已上线视频": 1,
-      "红人粉丝数据": 207900,
+      "红人粉丝数据": 208100,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-14",
       "追踪优先级": "P3 暂缓",
@@ -45852,7 +45894,7 @@
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
-    "updatedAt": "2026-06-21T15:43:30.106Z"
+    "updatedAt": "2026-06-21T23:40:00.456Z"
   },
   {
     "id": "zUpxd8Gyjw",
@@ -45942,6 +45984,7 @@
         "text": "https://www.tiktok.com/@xtomcicostech"
       },
       "平台": "tiktok",
+      "是否出视频": "否",
       "红人名称": "XTOM CICOS - Tech",
       "样品型号": "yozma, yozmasport，in10",
       "红人编码": "EU-Zoe-010",
@@ -46298,6 +46341,7 @@
         "text": "https://www.tiktok.com/@68v_ebikes"
       },
       "平台": "tiktok",
+      "是否出视频": "是",
       "红人名称": "68v_ebikes",
       "样品型号": "yozma, yozmasport，in10",
       "红人编码": "US-Stefan-030",
@@ -46316,7 +46360,15 @@
       "追踪优先级": "P3 暂缓",
       "追踪评分": "20",
       "追踪原因": "普通/小体量达人更需要追踪",
-      "追踪批次更新时间": "2026-06-07"
+      "追踪批次更新时间": "2026-06-07",
+      "url": {
+        "text": "https://www.tiktok.com/@68v_ebikes/video/7651821759510990094",
+        "link": "https://www.tiktok.com/@68v_ebikes/video/7651821759510990094"
+      },
+      "url2": {
+        "text": "https://www.tiktok.com/@68v_ebikes/video/7651131733865237773",
+        "link": "https://www.tiktok.com/@68v_ebikes/video/7651131733865237773"
+      }
     },
     "source": "dingtalk",
     "importedAt": "2026-06-03T15:31:49.867Z",
@@ -46520,7 +46572,7 @@
         "text": "https://www.tiktok.com/@carbon...master?lang=zh-Hans"
       },
       "平台": "tiktok",
-      "是否出视频": "否",
+      "是否出视频": "是",
       "红人名称": "carbon...master",
       "样品型号": "yozma, yozmasport，in10",
       "红人编码": "UK-Lexy-002",
@@ -46539,17 +46591,29 @@
       "视频交付完成率": "0%",
       "合同交付平台拆分": "TikTok 15条",
       "合同交付解析状态": "已解析",
-      "红人粉丝数据": 4100,
+      "红人粉丝数据": 4198,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-14",
       "追踪优先级": "P0 立刻追踪",
       "追踪评分": "135",
       "追踪原因": "2026合作未上线/未登记上线；当前本地未登记视频；普通/小体量达人更需要追踪",
-      "追踪批次更新时间": "2026-06-07"
+      "追踪批次更新时间": "2026-06-07",
+      "url": {
+        "text": "https://www.tiktok.com/@carbon...master/video/7653401823889378582",
+        "link": "https://www.tiktok.com/@carbon...master/video/7653401823889378582"
+      },
+      "url2": {
+        "text": "https://www.tiktok.com/@carbon...master/video/7652409245631122710",
+        "link": "https://www.tiktok.com/@carbon...master/video/7652409245631122710"
+      },
+      "url3": {
+        "text": "https://www.tiktok.com/@carbon...master/video/7651005776999320854",
+        "link": "https://www.tiktok.com/@carbon...master/video/7651005776999320854"
+      }
     },
     "source": "active-sales-monitoring",
     "importedAt": "2026-06-04T09:48:47.865Z",
-    "updatedAt": "2026-06-07T08:23:09.637Z"
+    "updatedAt": "2026-06-21T23:55:29.564Z"
   },
   {
     "id": "active_53g1vn",
@@ -46697,7 +46761,7 @@
         "link": "https://www.tiktok.com/@talkingwithtripleb"
       },
       "平台": "tiktok",
-      "是否出视频": "是",
+      "是否出视频": "否",
       "红人名称": "talkingwithtripleb",
       "红人编码": "US-Stefan-016",
       "地区": "US",
@@ -46755,7 +46819,7 @@
         "link": "https://www.tiktok.com/@giarides"
       },
       "平台": "tiktok",
-      "是否出视频": "是",
+      "是否出视频": "否",
       "红人名称": "giarides",
       "红人编码": "US-Stefan-018",
       "地区": "US",
@@ -46767,13 +46831,13 @@
       "合作量级": "腰部红人(100k-1M)",
       "合作服务": "已签合同盖章",
       "已上线视频": 0,
-      "红人粉丝数据": 136100,
+      "红人粉丝数据": 227700,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-14"
     },
     "source": "cooperation-import",
     "importedAt": "2026-06-14T13:20:54.356Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-21T23:55:47.314Z"
   },
   {
     "id": "coop_1ivroh2",
@@ -47104,13 +47168,13 @@
       "视频交付完成率": "0%",
       "合同交付平台拆分": "YouTube Video 1条 / Instagram Reels 3条",
       "合同交付解析状态": "已解析",
-      "红人粉丝数据": 16000,
+      "红人粉丝数据": 42600,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-14"
     },
     "source": "cooperation-import",
     "importedAt": "2026-06-14T13:20:54.428Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-21T23:55:54.493Z"
   },
   {
     "id": "coop_kbdx1i",
@@ -47139,13 +47203,13 @@
       "视频交付完成率": "0%",
       "合同交付平台拆分": "YouTube Video 1条 / Instagram Reels 3条",
       "合同交付解析状态": "已解析",
-      "红人粉丝数据": 16000,
+      "红人粉丝数据": 42600,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-14"
     },
     "source": "cooperation-import",
     "importedAt": "2026-06-14T13:20:54.428Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-21T23:55:54.493Z"
   },
   {
     "id": "coop_1njg4q0",
@@ -47175,13 +47239,13 @@
       "视频交付完成率": "0%",
       "合同交付平台拆分": "YouTube Video 1条 / Instagram Reels 3条",
       "合同交付解析状态": "已解析",
-      "红人粉丝数据": 16000,
+      "红人粉丝数据": 42600,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-14"
     },
     "source": "cooperation-import",
     "importedAt": "2026-06-14T13:20:54.428Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-21T23:55:54.493Z"
   },
   {
     "id": "coop_1eb2ui",
@@ -47406,7 +47470,7 @@
         "link": "https://www.tiktok.com/@hdukerides"
       },
       "平台": "tiktok",
-      "是否出视频": "否",
+      "是否出视频": "是",
       "红人名称": "HDuke Rides",
       "红人编码": "US-Ryan-064",
       "地区": "US",
@@ -47428,7 +47492,15 @@
       "合同交付解析状态": "已解析",
       "红人粉丝数据": 9000,
       "粉丝数据来源": "营销总表",
-      "粉丝数据更新时间": "2026-06-14"
+      "粉丝数据更新时间": "2026-06-14",
+      "url": {
+        "text": "https://www.tiktok.com/@hdukerides/video/7652848547485863189",
+        "link": "https://www.tiktok.com/@hdukerides/video/7652848547485863189"
+      },
+      "url2": {
+        "text": "https://www.tiktok.com/@hdukerides/video/7651360419680029973",
+        "link": "https://www.tiktok.com/@hdukerides/video/7651360419680029973"
+      }
     },
     "source": "cooperation-import",
     "importedAt": "2026-06-14T13:20:54.429Z",
@@ -47636,7 +47708,7 @@
         "link": "https://www.tiktok.com/@small.vroom"
       },
       "平台": "tiktok",
-      "是否出视频": "否",
+      "是否出视频": "是",
       "红人名称": "small.vroom",
       "红人编码": "US-Ryan-069",
       "地区": "US",
@@ -47658,7 +47730,15 @@
       "合同交付解析状态": "已解析",
       "红人粉丝数据": 144000,
       "粉丝数据来源": "营销总表",
-      "粉丝数据更新时间": "2026-06-14"
+      "粉丝数据更新时间": "2026-06-14",
+      "url": {
+        "text": "https://www.tiktok.com/@small.vroom/video/7653141915684146463",
+        "link": "https://www.tiktok.com/@small.vroom/video/7653141915684146463"
+      },
+      "url2": {
+        "text": "https://www.tiktok.com/@small.vroom/video/7651352061547760927",
+        "link": "https://www.tiktok.com/@small.vroom/video/7651352061547760927"
+      }
     },
     "source": "cooperation-import",
     "importedAt": "2026-06-14T13:20:54.430Z",
@@ -48076,13 +48156,13 @@
       "已上线视频": 0,
       "合同交付平台拆分": "待人工确认",
       "合同交付解析状态": "待人工确认",
-      "红人粉丝数据": 29700,
+      "红人粉丝数据": 30700,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-14"
     },
     "source": "cooperation-import",
     "importedAt": "2026-06-14T13:20:54.434Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-21T23:56:46.628Z"
   },
   {
     "id": "coop_f91k7x",
@@ -48093,7 +48173,7 @@
         "link": "https://www.tiktok.com/@motion.ridez"
       },
       "平台": "tiktok",
-      "是否出视频": "否",
+      "是否出视频": "是",
       "红人名称": "motion.ridez",
       "红人编码": "EU-Zoe-058",
       "地区": "EU",
@@ -48109,13 +48189,17 @@
       "已上线视频": 0,
       "合同交付平台拆分": "待人工确认",
       "合同交付解析状态": "待人工确认",
-      "红人粉丝数据": 5900,
+      "红人粉丝数据": 6753,
       "粉丝数据来源": "营销总表",
-      "粉丝数据更新时间": "2026-06-14"
+      "粉丝数据更新时间": "2026-06-14",
+      "url": {
+        "text": "https://www.tiktok.com/@motion.ridez/video/7652087923868716321",
+        "link": "https://www.tiktok.com/@motion.ridez/video/7652087923868716321"
+      }
     },
     "source": "cooperation-import",
     "importedAt": "2026-06-14T13:20:54.435Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-21T23:57:25.580Z"
   },
   {
     "id": "coop_1c4vhuq",
@@ -48142,13 +48226,13 @@
       "已上线视频": 0,
       "合同交付平台拆分": "待人工确认",
       "合同交付解析状态": "待人工确认",
-      "红人粉丝数据": 5900,
+      "红人粉丝数据": 6517,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-14"
     },
     "source": "cooperation-import",
     "importedAt": "2026-06-14T13:20:54.435Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-21T23:57:32.854Z"
   },
   {
     "id": "coop_1gfzok8",
@@ -48159,7 +48243,7 @@
         "link": "https://www.tiktok.com/@kaziqk1"
       },
       "平台": "tiktok",
-      "是否出视频": "否",
+      "是否出视频": "是",
       "红人名称": "kaziqk1",
       "红人编码": "EU-Zoe-060",
       "地区": "EU",
@@ -48178,13 +48262,25 @@
       "视频交付完成率": "0%",
       "合同交付平台拆分": "TikTok 450条",
       "合同交付解析状态": "已解析",
-      "红人粉丝数据": 5000,
+      "红人粉丝数据": 5839,
       "粉丝数据来源": "营销总表",
-      "粉丝数据更新时间": "2026-06-14"
+      "粉丝数据更新时间": "2026-06-14",
+      "url": {
+        "text": "https://www.tiktok.com/@kaziqk1/video/7653192678925995297",
+        "link": "https://www.tiktok.com/@kaziqk1/video/7653192678925995297"
+      },
+      "url2": {
+        "text": "https://www.tiktok.com/@kaziqk1/video/7652825900689493281",
+        "link": "https://www.tiktok.com/@kaziqk1/video/7652825900689493281"
+      },
+      "url3": {
+        "text": "https://www.tiktok.com/@kaziqk1/video/7652743676149435680",
+        "link": "https://www.tiktok.com/@kaziqk1/video/7652743676149435680"
+      }
     },
     "source": "cooperation-import",
     "importedAt": "2026-06-14T13:20:54.435Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-21T23:57:39.237Z"
   },
   {
     "id": "coop_1e6nvu5",
@@ -48211,13 +48307,13 @@
       "已上线视频": 0,
       "合同交付平台拆分": "待人工确认",
       "合同交付解析状态": "待人工确认",
-      "红人粉丝数据": 6200,
+      "红人粉丝数据": 6488,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-14"
     },
     "source": "cooperation-import",
     "importedAt": "2026-06-14T13:20:54.435Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-21T23:57:51.674Z"
   },
   {
     "id": "coop_g6mwlg",
@@ -48261,7 +48357,7 @@
         "link": "https://www.tiktok.com/@deepintech19"
       },
       "平台": "tiktok",
-      "是否出视频": "否",
+      "是否出视频": "是",
       "红人名称": "Deepintech19",
       "红人编码": "EU-Zoe-063",
       "地区": "EU",
@@ -48277,13 +48373,17 @@
       "已上线视频": 0,
       "合同交付平台拆分": "待人工确认",
       "合同交付解析状态": "待人工确认",
-      "红人粉丝数据": 8300,
+      "红人粉丝数据": 40200,
       "粉丝数据来源": "营销总表",
-      "粉丝数据更新时间": "2026-06-14"
+      "粉丝数据更新时间": "2026-06-14",
+      "url": {
+        "text": "https://www.tiktok.com/@deepintech19/video/7653167070733012246",
+        "link": "https://www.tiktok.com/@deepintech19/video/7653167070733012246"
+      }
     },
     "source": "cooperation-import",
     "importedAt": "2026-06-14T13:20:54.435Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-21T23:58:08.765Z"
   },
   {
     "id": "coop_2zt3gc",
@@ -48310,13 +48410,13 @@
       "已上线视频": 0,
       "合同交付平台拆分": "待人工确认",
       "合同交付解析状态": "待人工确认",
-      "红人粉丝数据": 8300,
+      "红人粉丝数据": 8951,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-14"
     },
     "source": "cooperation-import",
     "importedAt": "2026-06-14T13:20:54.435Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-21T23:58:22.784Z"
   },
   {
     "id": "coop_1x0i6xy",
@@ -48339,13 +48439,13 @@
       "合作量级": "尾部红人(10k-100k)",
       "合作服务": "已签合同",
       "已上线视频": 0,
-      "红人粉丝数据": 36300,
+      "红人粉丝数据": 37400,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-14"
     },
     "source": "cooperation-import",
     "importedAt": "2026-06-14T13:20:54.436Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-21T23:58:38.447Z"
   },
   {
     "id": "coop_133tx0v",
@@ -48447,13 +48547,13 @@
       "视频交付完成率": "0%",
       "合同交付平台拆分": "TikTok 4条",
       "合同交付解析状态": "已解析",
-      "红人粉丝数据": 112900,
+      "红人粉丝数据": 113900,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-14"
     },
     "source": "cooperation-import",
     "importedAt": "2026-06-14T13:20:54.436Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-21T23:58:45.016Z"
   },
   {
     "id": "coop_37mhiu",
@@ -48483,13 +48583,13 @@
       "视频交付完成率": "0%",
       "合同交付平台拆分": "TikTok 4条",
       "合同交付解析状态": "已解析",
-      "红人粉丝数据": 52000,
+      "红人粉丝数据": 53600,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-14"
     },
     "source": "cooperation-import",
     "importedAt": "2026-06-14T13:20:54.437Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-21T23:58:56.313Z"
   },
   {
     "id": "coop_9xshh3",
@@ -48519,13 +48619,13 @@
       "视频交付完成率": "0%",
       "合同交付平台拆分": "TikTok 3条",
       "合同交付解析状态": "已解析",
-      "红人粉丝数据": 60800,
+      "红人粉丝数据": 61200,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-14"
     },
     "source": "cooperation-import",
     "importedAt": "2026-06-14T13:20:54.437Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-21T23:59:37.006Z"
   },
   {
     "id": "coop_82pwzc",
@@ -48642,13 +48742,13 @@
       "合作量级": "尾部红人(10k-100k)",
       "合作服务": "已签合同",
       "已上线视频": 0,
-      "红人粉丝数据": 21900,
+      "红人粉丝数据": 24600,
       "粉丝数据来源": "营销总表",
       "粉丝数据更新时间": "2026-06-14"
     },
     "source": "cooperation-import",
     "importedAt": "2026-06-14T14:00:20.766Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-21T23:59:55.547Z"
   },
   {
     "id": "coop_kgwnhv",
@@ -48659,7 +48759,7 @@
         "link": "https://www.tiktok.com/@g2master_rider5"
       },
       "平台": "tiktok",
-      "是否出视频": "否",
+      "是否出视频": "是",
       "红人名称": "g2master_rider5",
       "红人编码": "EU-Zoe-054",
       "地区": "EU",
@@ -48671,13 +48771,25 @@
       "合作量级": "尾部红人(10k-100k)",
       "合作服务": "已签合同",
       "已上线视频": 0,
-      "红人粉丝数据": 43700,
+      "红人粉丝数据": 45500,
       "粉丝数据来源": "营销总表",
-      "粉丝数据更新时间": "2026-06-14"
+      "粉丝数据更新时间": "2026-06-14",
+      "url": {
+        "text": "https://www.tiktok.com/@g2master_rider5/video/7653059995138805014",
+        "link": "https://www.tiktok.com/@g2master_rider5/video/7653059995138805014"
+      },
+      "url2": {
+        "text": "https://www.tiktok.com/@g2master_rider5/video/7652113080683334934",
+        "link": "https://www.tiktok.com/@g2master_rider5/video/7652113080683334934"
+      },
+      "url3": {
+        "text": "https://www.tiktok.com/@g2master_rider5/video/7651942655072570626",
+        "link": "https://www.tiktok.com/@g2master_rider5/video/7651942655072570626"
+      }
     },
     "source": "cooperation-import",
     "importedAt": "2026-06-14T14:00:20.766Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-22T00:00:34.830Z"
   },
   {
     "id": "coop_1j16gu0",
@@ -48724,11 +48836,11 @@
       "是否出视频": "是",
       "红人名称": "junkcarguy",
       "样品型号": "yozma,yozmasport,in10",
-      "红人粉丝数据": 11400,
+      "红人粉丝数据": 11500,
       "追踪优先级": "TikTok复查补录"
     },
     "source": "tiktok-recheck-import",
     "importedAt": "2026-06-15T03:24:44.317Z",
-    "updatedAt": "2026-06-15T03:28:36.083Z"
+    "updatedAt": "2026-06-22T00:01:10.833Z"
   }
 ]
