@@ -29,6 +29,8 @@ const centerEls = {
   regionFilter: document.getElementById('centerRegionFilter'),
   ownerFilter: document.getElementById('centerOwnerFilter'),
   filterSummary: document.getElementById('dashboardFilterSummary'),
+  voiceMetricControl: document.getElementById('voiceMetricControl'),
+  weeklyTrendCoverage: document.getElementById('weeklyTrendCoverage'),
   periodInsightStrip: document.getElementById('periodInsightStrip'),
   btnResetDashboardFilters: document.getElementById('btnResetDashboardFilters'),
   btnResetMapFilter: document.getElementById('btnResetMapFilter'),
@@ -123,6 +125,7 @@ let centerDashboard = {};
 let centerAnniversary = null;
 let centerTargeting = null;
 let centerPeriod = 'week';
+let dashboardVoiceMode = localStorage.getItem('yozma-dashboard-voice-mode') === 'mature' ? 'mature' : 'live';
 let customRange = { start: null, end: null };
 let selectedMapPlaceKey = '';
 let mapDrillMode = 'world';
@@ -147,7 +150,7 @@ let dashboardIndexCache = {
 let scopedVideoRowsCache = new Map();
 let geoStatsCache = new Map();
 let pendingMapSync = null;
-const STATIC_ASSET_VERSION = '20260622-tiktok-retry-1';
+const STATIC_ASSET_VERSION = '20260622-live-voice-1';
 const localHostnames = new Set(['localhost', '127.0.0.1', '0.0.0.0', '::1']);
 const isStaticCenter = !localHostnames.has(location.hostname) || new URLSearchParams(location.search).has('static');
 const staticAssetFetchOptions = { cache: 'no-store' };
@@ -258,7 +261,8 @@ function currentFilterKey() {
     dashboardFilters.platform,
     dashboardFilters.region,
     dashboardFilters.owner,
-    dashboardFilters.country
+    dashboardFilters.country,
+    dashboardVoiceMode
   ].join('|');
 }
 
@@ -566,6 +570,16 @@ function videoViews(fields) {
   return Math.max(rawNumber(fields.videoPlayCount), rawNumber(fields.videoViewCount), rawNumber(fields.views));
 }
 
+function latestKnownVideoViews(fields) {
+  const directViews = videoViews(fields);
+  const snapshots = getSnapshotsByPostKey().get(videoPostKey(fields)) || [];
+  const snapshotViews = snapshots.reduce(
+    (max, snapshot) => Math.max(max, rawNumber(snapshot.videoPlayCount), rawNumber(snapshot.videoViewCount)),
+    0
+  );
+  return Math.max(directViews, snapshotViews);
+}
+
 function videoUrl(fields) {
   return safeExternalUrl(readLocalLink(fields.url) || readLocalLink(fields['视频链接']) || fields.videoUrl || fields.url || '');
 }
@@ -668,6 +682,27 @@ function sevenDayVideoViews(fields) {
   const snapshot = getMilestone7dByPostKey().get(videoPostKey(fields))?.fields;
   if (!snapshot) return 0;
   return Math.max(rawNumber(snapshot.videoPlayCount), rawNumber(snapshot.videoViewCount));
+}
+
+function dashboardVoiceViews(fields) {
+  return dashboardVoiceMode === 'mature' ? sevenDayVideoViews(fields) : latestKnownVideoViews(fields);
+}
+
+function dashboardVoiceLabel() {
+  return dashboardVoiceMode === 'mature' ? '7日成熟声量' : '即时播放';
+}
+
+function dashboardAverageLabel() {
+  return dashboardVoiceMode === 'mature' ? '7日均播' : '即时均播';
+}
+
+function syncVoiceMetricLabels() {
+  document.querySelectorAll('[data-voice-label]').forEach((node) => {
+    node.textContent = dashboardVoiceLabel();
+  });
+  document.querySelectorAll('#voiceMetricControl button').forEach((button) => {
+    button.classList.toggle('active', button.dataset.voiceMode === dashboardVoiceMode);
+  });
 }
 
 function getInfluencerTier(followers) {
@@ -1388,7 +1423,7 @@ function normalizeVideoRow(fields, helpers = {}) {
   const followerByCreator = helpers.followerByCreator || getFollowerByCreator();
   const creatorName = readLocalText(fields['红人名称']) || '-';
   const location = getVideoLocation(fields, locationByCreator, regionByCreator);
-  const views = sevenDayVideoViews(fields);
+  const views = dashboardVoiceViews(fields);
   const likes = rawNumber(fields.likesCount);
   const comments = rawNumber(fields.commentsCount);
   const publishedAt = videoPublishedAt(fields);
@@ -1410,6 +1445,8 @@ function normalizeVideoRow(fields, helpers = {}) {
     region: normalizeCountryRegion(location.country || region || region),
     owner,
     views,
+    currentViews: latestKnownVideoViews(fields),
+    mature7dViews: sevenDayVideoViews(fields),
     likes,
     comments,
     engagementRate: views ? Number((((likes + comments) / views) * 100).toFixed(2)) : 0,
@@ -1513,7 +1550,10 @@ function getScopedVideoSummary(period = centerPeriod) {
   return {
     videos: rows.length,
     creators: new Set(rows.map((fields) => creatorKey(readLocalText(fields['红人名称']))).filter(Boolean)).size,
-    views: rows.reduce((sum, fields) => sum + sevenDayVideoViews(fields), 0)
+    views: rows.reduce((sum, fields) => sum + dashboardVoiceViews(fields), 0),
+    currentViews: rows.reduce((sum, fields) => sum + latestKnownVideoViews(fields), 0),
+    mature7dViews: rows.reduce((sum, fields) => sum + sevenDayVideoViews(fields), 0),
+    mature7dVideos: rows.filter((fields) => sevenDayVideoViews(fields) > 0).length
   };
 }
 
@@ -1529,7 +1569,8 @@ function summarizeVideoRowsForRange(rows, startKey, endKey, template = {}) {
     ...template,
     videos: scoped.length,
     creators: new Set(scoped.map((fields) => creatorKey(readLocalText(fields['红人名称']))).filter(Boolean)).size,
-    views: scoped.reduce((sum, fields) => sum + videoViews(fields), 0),
+    views: scoped.reduce((sum, fields) => sum + dashboardVoiceViews(fields), 0),
+    currentViews: scoped.reduce((sum, fields) => sum + latestKnownVideoViews(fields), 0),
     mature7dViews: scoped.reduce((sum, fields) => sum + sevenDayVideoViews(fields), 0),
     mature7dVideos: scoped.filter((fields) => sevenDayVideoViews(fields) > 0).length
   };
@@ -1537,14 +1578,26 @@ function summarizeVideoRowsForRange(rows, startKey, endKey, template = {}) {
 
 function getWeeklyTrendRows() {
   const rows = centerDashboard.weekly || [];
-  if (!hasDashboardFilterScope()) return rows;
+  if (!hasDashboardFilterScope()) {
+    return rows.map((row) => ({
+      ...row,
+      currentViews: rawNumber(row.views),
+      views: dashboardVoiceMode === 'mature' ? rawNumber(row.mature7dViews) : rawNumber(row.views)
+    }));
+  }
   const scopedVideos = getScopedVideoRows('total');
   return rows.map((row) => summarizeVideoRowsForRange(scopedVideos, 'weekStart', 'weekEnd', row));
 }
 
 function getMonthlyTrendRows() {
   const rows = centerDashboard.monthly || [];
-  if (!hasDashboardFilterScope()) return rows;
+  if (!hasDashboardFilterScope()) {
+    return rows.map((row) => ({
+      ...row,
+      currentViews: rawNumber(row.views),
+      views: dashboardVoiceMode === 'mature' ? rawNumber(row.mature7dViews) : rawNumber(row.views)
+    }));
+  }
   const scopedVideos = getScopedVideoRows('total');
   return rows.map((row) => summarizeVideoRowsForRange(scopedVideos, 'monthStart', 'monthEnd', row));
 }
@@ -1590,7 +1643,10 @@ function summarizeRowsBetween(rows, start, end) {
   return {
     videos: scoped.length,
     creators: new Set(scoped.map((fields) => creatorKey(readLocalText(fields['红人名称']))).filter(Boolean)).size,
-    views: scoped.reduce((sum, fields) => sum + sevenDayVideoViews(fields), 0)
+    views: scoped.reduce((sum, fields) => sum + dashboardVoiceViews(fields), 0),
+    currentViews: scoped.reduce((sum, fields) => sum + latestKnownVideoViews(fields), 0),
+    mature7dViews: scoped.reduce((sum, fields) => sum + sevenDayVideoViews(fields), 0),
+    mature7dVideos: scoped.filter((fields) => sevenDayVideoViews(fields) > 0).length
   };
 }
 
@@ -1617,14 +1673,18 @@ function periodCompareData(period) {
       current: {
         videos: rawNumber(current.videos),
         creators: rawNumber(current.creators),
-        views: rawNumber(current.mature7dViews ?? current.views)
+        views: dashboardVoiceMode === 'mature' ? rawNumber(current.mature7dViews) : rawNumber(current.currentViews ?? current.views),
+        mature7dVideos: rawNumber(current.mature7dVideos)
       },
       previous: {
         videos: rawNumber(previous.videos),
         creators: rawNumber(previous.creators),
-        views: rawNumber(previous.mature7dViews ?? previous.views)
+        views: dashboardVoiceMode === 'mature' ? rawNumber(previous.mature7dViews) : rawNumber(previous.currentViews ?? previous.views),
+        mature7dVideos: rawNumber(previous.mature7dVideos)
       },
-      description: '按周报周期统计上线视频，声量优先使用 7 天成熟表现。'
+      description: dashboardVoiceMode === 'mature'
+        ? '7日成熟用于公平复盘；本周未满7天的视频不会提前计入。'
+        : '即时播放使用最近一次抓取累计值，适合判断当前增长与爆款。'
     };
   }
   if (period === 'month') {
@@ -1637,14 +1697,18 @@ function periodCompareData(period) {
       current: {
         videos: rawNumber(current.videos),
         creators: rawNumber(current.creators),
-        views: rawNumber(current.mature7dViews ?? current.views)
+        views: dashboardVoiceMode === 'mature' ? rawNumber(current.mature7dViews) : rawNumber(current.currentViews ?? current.views),
+        mature7dVideos: rawNumber(current.mature7dVideos)
       },
       previous: {
         videos: rawNumber(previous.videos),
         creators: rawNumber(previous.creators),
-        views: rawNumber(previous.mature7dViews ?? previous.views)
+        views: dashboardVoiceMode === 'mature' ? rawNumber(previous.mature7dViews) : rawNumber(previous.currentViews ?? previous.views),
+        mature7dVideos: rawNumber(previous.mature7dVideos)
       },
-      description: '按自然月统计上线视频，用于看月度节奏和平台结构。'
+      description: dashboardVoiceMode === 'mature'
+        ? '按自然月查看已成熟视频表现，避免发布时间不同造成偏差。'
+        : '按自然月查看最近抓取累计播放，及时发现正在增长的内容。'
     };
   }
   if (period === 'custom' && customRange.start && customRange.end) {
@@ -1684,7 +1748,7 @@ function renderPeriodInsight() {
   const data = periodCompareData(centerPeriod);
   const videoDelta = numberDelta(data.current.videos, data.previous.videos, ' 条视频');
   const creatorDelta = numberDelta(data.current.creators, data.previous.creators, ' 位达人');
-  const viewsDelta = numberDelta(data.current.views, data.previous.views, ' 7日声量');
+  const viewsDelta = numberDelta(data.current.views, data.previous.views, ` ${dashboardVoiceLabel()}`);
   if (centerEls.periodInsightStrip) {
     centerEls.periodInsightStrip.innerHTML = `
       <div>
@@ -1696,9 +1760,10 @@ function renderPeriodInsight() {
         <div><dt>对比周期</dt><dd>${escapeHtml(data.compareLabel || '-')}</dd></div>
         <div><dt>上线视频</dt><dd class="${videoDelta.className}">${escapeHtml(videoDelta.text)}</dd></div>
         <div><dt>上线达人</dt><dd class="${creatorDelta.className}">${escapeHtml(creatorDelta.text)}</dd></div>
-        <div><dt>7日声量</dt><dd class="${viewsDelta.className}">${escapeHtml(viewsDelta.text)}</dd></div>
+        <div><dt>${escapeHtml(dashboardVoiceLabel())}</dt><dd class="${viewsDelta.className}">${escapeHtml(viewsDelta.text)}</dd></div>
       </dl>`;
   }
+  syncVoiceMetricLabels();
   setDeltaText(centerEls.weekDelta, numberDelta(getScopedVideoSummary('week').videos, (getWeeklyTrendRows().at(-2) || {}).videos, ' 条'), '较上周 ');
   setDeltaText(centerEls.monthDelta, numberDelta(getScopedVideoSummary('month').videos, (getMonthlyTrendRows().at(-2) || {}).videos, ' 条'), '较上月 ');
   if (centerEls.totalDelta) centerEls.totalDelta.textContent = `本月贡献 ${centerNumber(getScopedVideoSummary('month').videos)} 条`;
@@ -1748,7 +1813,7 @@ function getCreatorVideoStats(period = centerPeriod) {
       });
     }
     const item = stats.get(key);
-    const views = sevenDayVideoViews(fields);
+    const views = dashboardVoiceViews(fields);
     const publishedAt = videoPublishedAt(fields);
     item.videos += 1;
     item.views += views;
@@ -1767,7 +1832,7 @@ function getCreatorVideoStats(period = centerPeriod) {
 function getScopedVideoLeaderboard(period = centerPeriod) {
   return getScopedVideoRows(period)
     .map((fields) => {
-      const views = sevenDayVideoViews(fields);
+      const views = dashboardVoiceViews(fields);
       const likes = rawNumber(fields.likesCount);
       const comments = rawNumber(fields.commentsCount);
       return {
@@ -1880,7 +1945,7 @@ function resizeChartAfterLayout(chart) {
   window.setTimeout(() => chart.resize(), 80);
 }
 
-function renderLineChart(target, rows, keyA, keyB) {
+function renderLineChart(target, rows) {
   const data = Array.isArray(rows) && rows.length ? rows : [];
   if (!target || !data.length) {
     if (target) target.innerHTML = '<div class="empty-cell">暂无趋势数据</div>';
@@ -1891,7 +1956,7 @@ function renderLineChart(target, rows, keyA, keyB) {
   const labels = data.map((row) => shortRangeLabel(row.weekStart, row.weekEnd));
   weeklyTrendEchart.setOption({
     backgroundColor: 'transparent',
-    color: ['#33D6C5', '#4DA3FF'],
+    color: ['#33D6C5', '#4DA3FF', '#FFB454'],
     tooltip: {
       trigger: 'axis',
       backgroundColor: '#121C2B',
@@ -1913,13 +1978,21 @@ function renderLineChart(target, rows, keyA, keyB) {
     xAxis: { type: 'category', data: labels, axisLine: { lineStyle: { color: 'rgba(255,255,255,.12)' } }, axisLabel: { color: '#A8B3C7', interval: 0, rotate: data.length > 6 ? 16 : 0 } },
     yAxis: [
       { type: 'value', name: '视频', axisLabel: { color: '#A8B3C7' }, splitLine: { lineStyle: { color: 'rgba(255,255,255,.07)' } } },
-      { type: 'value', name: '7日声量', axisLabel: { color: '#A8B3C7', formatter: (value) => centerNumber(value) }, splitLine: { show: false } }
+      { type: 'value', name: '播放', axisLabel: { color: '#A8B3C7', formatter: (value) => centerNumber(value) }, splitLine: { show: false } }
     ],
     series: [
-      { name: '上线视频', type: 'line', smooth: true, areaStyle: { opacity: 0.12 }, data: data.map((row) => Number(row[keyA]) || 0) },
-      { name: '7日成熟声量', type: 'line', yAxisIndex: 1, smooth: true, areaStyle: { opacity: 0.1 }, data: data.map((row) => Number(row[keyB]) || 0) }
+      { name: '上线视频', type: 'line', smooth: true, areaStyle: { opacity: 0.1 }, data: data.map((row) => Number(row.videos) || 0) },
+      { name: '即时累计播放', type: 'line', yAxisIndex: 1, smooth: true, areaStyle: { opacity: 0.08 }, data: data.map((row) => Number(row.currentViews ?? row.views) || 0) },
+      { name: '7日成熟声量', type: 'line', yAxisIndex: 1, smooth: true, lineStyle: { type: 'dashed', width: 2 }, data: data.map((row) => Number(row.mature7dViews) || 0) }
     ]
   }, true);
+  const current = data.at(-1) || {};
+  const matureCount = rawNumber(current.mature7dVideos);
+  const videoCount = rawNumber(current.videos);
+  const coverage = videoCount ? Math.round((matureCount / videoCount) * 100) : 0;
+  if (centerEls.weeklyTrendCoverage) {
+    centerEls.weeklyTrendCoverage.textContent = `即时累计 + 7日成熟 · 成熟覆盖 ${matureCount}/${videoCount}（${coverage}%）`;
+  }
   resizeChartAfterLayout(weeklyTrendEchart);
 }
 
@@ -1933,16 +2006,19 @@ function renderBarChart(target, rows) {
   if (!platformCompareChart) return;
   platformCompareChart.setOption({
     backgroundColor: 'transparent',
-    color: ['#4DA3FF', '#33D6C5', '#FFB454'],
+    color: ['#4DA3FF', '#FFB454', '#33D6C5'],
     tooltip: { trigger: 'axis', axisPointer: { type: 'shadow' }, backgroundColor: '#121C2B', borderColor: 'rgba(255,255,255,.1)', textStyle: { color: '#F7F8FA' } },
     legend: { top: 0, right: 6, textStyle: { color: '#A8B3C7' } },
     grid: { left: 42, right: 22, top: 44, bottom: 42 },
     xAxis: { type: 'category', data: data.map((row) => row.platform), axisLabel: { color: '#A8B3C7', interval: 0, rotate: data.length > 3 ? 18 : 0 }, axisLine: { lineStyle: { color: 'rgba(255,255,255,.12)' } } },
-    yAxis: { type: 'value', axisLabel: { color: '#A8B3C7', formatter: (value) => centerNumber(value) }, splitLine: { lineStyle: { color: 'rgba(255,255,255,.07)' } } },
+    yAxis: [
+      { type: 'value', name: '播放', axisLabel: { color: '#A8B3C7', formatter: (value) => centerNumber(value) }, splitLine: { lineStyle: { color: 'rgba(255,255,255,.07)' } } },
+      { type: 'value', name: '视频', axisLabel: { color: '#A8B3C7' }, splitLine: { show: false } }
+    ],
     series: [
-      { name: '7日声量', type: 'bar', barMaxWidth: 28, data: data.map((row) => row.views) },
-      { name: '视频数', type: 'bar', barMaxWidth: 28, data: data.map((row) => row.videos) },
-      { name: '7日均播', type: 'line', smooth: true, data: data.map((row) => row.avgViews) }
+      { name: '即时累计播放', type: 'bar', barMaxWidth: 28, data: data.map((row) => row.currentViews) },
+      { name: '7日成熟声量', type: 'bar', barMaxWidth: 28, data: data.map((row) => row.mature7dViews) },
+      { name: '视频数', type: 'line', yAxisIndex: 1, smooth: true, data: data.map((row) => row.videos) }
     ]
   }, true);
   resizeChartAfterLayout(platformCompareChart);
@@ -1953,7 +2029,9 @@ function getPlatformStats(period = centerPeriod) {
   for (const fields of getScopedVideoRows(period)) {
     const platform = readLocalText(fields['平台']) || 'unknown';
     const key = platformLabel(platform);
-    const views = sevenDayVideoViews(fields);
+    const views = dashboardVoiceViews(fields);
+    const currentViews = latestKnownVideoViews(fields);
+    const mature7dViews = sevenDayVideoViews(fields);
     const creator = readLocalText(fields['红人名称']) || '-';
     const url = videoUrl(fields);
     if (!map.has(key)) {
@@ -1962,6 +2040,9 @@ function getPlatformStats(period = centerPeriod) {
         rawPlatform: platform,
         videos: 0,
         views: 0,
+        currentViews: 0,
+        mature7dViews: 0,
+        mature7dVideos: 0,
         topCreator: '-',
         topViews: 0,
         topUrl: ''
@@ -1970,6 +2051,9 @@ function getPlatformStats(period = centerPeriod) {
     const stat = map.get(key);
     stat.videos += 1;
     stat.views += views;
+    stat.currentViews += currentViews;
+    stat.mature7dViews += mature7dViews;
+    if (mature7dViews > 0) stat.mature7dVideos += 1;
     if (views >= stat.topViews) {
       stat.topCreator = creator;
       stat.topViews = views;
@@ -2029,7 +2113,7 @@ function renderFocusBrief() {
       label: '周期动量',
       value: summary.videos ? `${centerNumber(summary.videos)} 条` : '暂无上线',
       title: delta.text,
-      note: `${selectedPeriodLabel()} ${centerNumber(summary.creators)} 位达人 · ${centerNumber(summary.views)} 7日声量`,
+      note: `${selectedPeriodLabel()} ${centerNumber(summary.creators)} 位达人 · ${centerNumber(summary.views)} ${dashboardVoiceLabel()}`,
       meta: ['看趋势', `${centerNumber(current.videos)} / ${centerNumber(previous.videos)} 周对比`],
       jump: 'dashboardTrends',
       width: momentumWidth
@@ -2039,7 +2123,7 @@ function renderFocusBrief() {
       label: '主攻平台',
       value: platform?.platform || '-',
       title: platform?.topCreator ? `${platform.topCreator} 带动当前爆点` : '当前范围暂无平台爆点',
-      note: platform ? `${centerNumber(platform.views)} 7日声量 · ${centerNumber(platform.videos)} 条视频 · 均播 ${centerNumber(platform.avgViews)}` : '切换时间或平台后这里会自动更新',
+      note: platform ? `${centerNumber(platform.views)} ${dashboardVoiceLabel()} · ${centerNumber(platform.videos)} 条视频 · 均播 ${centerNumber(platform.avgViews)}` : '切换时间或平台后这里会自动更新',
       meta: ['看平台', `${platformShare}% 声量占比`],
       jump: 'dashboardPlatform',
       width: platformShare || 8
@@ -2049,7 +2133,7 @@ function renderFocusBrief() {
       label: '地区集中度',
       value: region?.region || '-',
       title: region?.share >= 70 ? '声量集中，注意区域依赖' : region ? '地区贡献相对可控' : '暂无地区判断',
-      note: region ? `${region.share}% 7日声量来自 ${region.region} · ${centerNumber(region.videos)} 条视频` : '补齐地区字段后会自动形成判断',
+      note: region ? `${region.share}% ${dashboardVoiceLabel()}来自 ${region.region} · ${centerNumber(region.videos)} 条视频` : '补齐地区字段后会自动形成判断',
       meta: ['看地区', region ? `${centerNumber(region.creatorsCount)} 位达人` : '待补字段'],
       jump: 'dashboardRegions',
       width: region?.share || 8
@@ -2062,7 +2146,7 @@ function renderFocusBrief() {
       note: needFollowup
         ? `7天节点 ${centerNumber(lifecycle.sevenDayDue)} 条 · 30天复核 ${centerNumber(lifecycle.thirtyDayDue)} 条 · 缺粉 ${centerNumber(quality.missingFollowers)} 位`
         : video
-        ? `优先复盘 ${video.creator} · ${centerNumber(video.views)} 7日声量`
+        ? `优先复盘 ${video.creator} · ${centerNumber(video.views)} ${dashboardVoiceLabel()}`
         : '可以继续看榜单寻找复投候选',
       meta: [needFollowup ? '看待办' : '看榜单', video ? `${video.platform} · ${shortDate(video.publishedAt)}` : selectedPeriodLabel()],
       jump: needFollowup ? 'dashboardOpsMonitor' : 'dashboardLeaderboards',
@@ -2100,8 +2184,8 @@ function renderOpsCommandCenter() {
   if (centerEls.opsHealthScore) centerEls.opsHealthScore.textContent = healthScore;
   if (centerEls.opsTicker) {
     const tickerItems = [
-      `周报周期 ${centerNumber(current.videos)} 条视频 / ${centerNumber(current.mature7dViews ?? current.views)} 7日声量`,
-      topPlatform.platform ? `${topPlatform.platform} 当前最强，${centerNumber(topPlatform.views)} 7日声量` : '暂无平台表现数据',
+      `周报周期 ${centerNumber(current.videos)} 条视频 / ${centerNumber(dashboardVoiceMode === 'mature' ? current.mature7dViews : current.currentViews ?? current.views)} ${dashboardVoiceLabel()}`,
+      topPlatform.platform ? `${topPlatform.platform} 当前最强，${centerNumber(topPlatform.views)} ${dashboardVoiceLabel()}` : '暂无平台表现数据',
       lifecycle.sevenDayDue ? `${centerNumber(lifecycle.sevenDayDue)} 条视频接近 7 天更新节点` : '7 天节点暂无积压',
       quality.missingFollowers ? `${centerNumber(quality.missingFollowers)} 位达人缺粉丝数` : '粉丝数资料相对完整'
     ];
@@ -2567,9 +2651,10 @@ function renderPlatformMatrix() {
         </div>
         <div class="platform-bar"><i style="width:${width}%"></i></div>
         <dl>
-          <div><dt>7日声量</dt><dd>${centerNumber(row.views)}</dd></div>
-          <div><dt>7日均播</dt><dd>${centerNumber(row.avgViews)}</dd></div>
+          <div><dt>${escapeHtml(dashboardVoiceLabel())}</dt><dd>${centerNumber(row.views)}</dd></div>
+          <div><dt>${escapeHtml(dashboardAverageLabel())}</dt><dd>${centerNumber(row.avgViews)}</dd></div>
           <div><dt>最强达人</dt><dd>${topCreator}</dd></div>
+          <div><dt>成熟覆盖</dt><dd>${centerNumber(row.mature7dVideos)}/${centerNumber(row.videos)}</dd></div>
         </dl>
       </article>`;
     })
@@ -3108,7 +3193,7 @@ function renderGlobalMap() {
           const estimatedLine = !isDrillMode && row.estimatedVideos
             ? `<br/>EU 未细分兜底：${centerNumber(row.estimatedVideos)} 条`
             : '';
-          return `<strong>${row.placeLabel}</strong><br/>上线视频：${centerNumber(row.videos)} 条${estimatedLine}<br/>7日声量：${centerNumber(row.views)}<br/>参与达人：${centerNumber(row.creatorsCount)} 位<br/>7日均播：${centerNumber(row.avgViews)}<br/>爆款达人：${escapeHtml(row.topCreator || '-')}<br/>爆款视频：${escapeHtml(top.videoTitle || top.creatorName || '-')}`;
+          return `<strong>${row.placeLabel}</strong><br/>上线视频：${centerNumber(row.videos)} 条${estimatedLine}<br/>${escapeHtml(dashboardVoiceLabel())}：${centerNumber(row.views)}<br/>参与达人：${centerNumber(row.creatorsCount)} 位<br/>${escapeHtml(dashboardAverageLabel())}：${centerNumber(row.avgViews)}<br/>爆款达人：${escapeHtml(row.topCreator || '-')}<br/>爆款视频：${escapeHtml(top.videoTitle || top.creatorName || '-')}`;
         }
       },
       visualMap: {
@@ -3207,13 +3292,13 @@ function renderGlobalMap() {
   <dl class="map-detail-metrics">
     <div><dt>上线视频</dt><dd>${centerNumber(active.videos)} 条</dd></div>
     <div><dt>参与达人</dt><dd>${centerNumber(active.creatorsCount)} 位</dd></div>
-    <div><dt>7日声量</dt><dd>${centerNumber(active.views)}</dd></div>
-    <div><dt>7日均播</dt><dd>${centerNumber(active.avgViews)}</dd></div>
+    <div><dt>${escapeHtml(dashboardVoiceLabel())}</dt><dd>${centerNumber(active.views)}</dd></div>
+    <div><dt>${escapeHtml(dashboardAverageLabel())}</dt><dd>${centerNumber(active.avgViews)}</dd></div>
   </dl>
   <div class="map-detail-top">
     <span>区域爆款</span>
     <strong>${externalLink(top.videoUrl, top.creatorName || active.topCreator || '-')}</strong>
-    <small>${escapeHtml(top.platform || '-')} · ${shortDate(top.publishDate)} · ${centerNumber(top.views || 0)} 7日声量</small>
+    <small>${escapeHtml(top.platform || '-')} · ${shortDate(top.publishDate)} · ${centerNumber(top.views || 0)} ${escapeHtml(dashboardVoiceLabel())}</small>
     <p>${escapeHtml(actionNote)}</p>
   </div>`;
 
@@ -3245,7 +3330,7 @@ function getRegionStats(period = centerPeriod) {
     const region = getVideoRegion(fields, regionByCreator);
     const creator = readLocalText(fields['红人名称']) || '-';
     const creatorId = creatorKey(creator);
-    const views = sevenDayVideoViews(fields);
+    const views = dashboardVoiceViews(fields);
     const row = {
       creator,
       platform: platformLabel(readLocalText(fields['平台'])),
@@ -3292,7 +3377,7 @@ function getGeoStats(period = centerPeriod) {
     const placeKey = location.placeKey || location.country || 'UNKNOWN';
     const creator = readLocalText(fields['红人名称']) || '-';
     const creatorId = creatorKey(creator);
-    const views = sevenDayVideoViews(fields);
+    const views = dashboardVoiceViews(fields);
     const row = {
       creator,
       platform: platformLabel(readLocalText(fields['平台'])),
@@ -3342,7 +3427,7 @@ function getOwnerStats(period = centerPeriod) {
     const region = getVideoRegion(fields, regionByCreator);
     const creator = readLocalText(fields['红人名称']) || '-';
     const creatorId = creatorKey(creator);
-    const views = sevenDayVideoViews(fields);
+    const views = dashboardVoiceViews(fields);
     const likes = rawNumber(fields.likesCount);
     const comments = rawNumber(fields.commentsCount);
     const row = {
@@ -3412,10 +3497,10 @@ function renderRegionPerformance() {
       const top = row.topVideo;
       const topLabel = externalLink(top?.postUrl, top?.creator || '-');
       return `<article class="region-card" style="--delay:${index * 70}ms">
-        <div class="region-card-head"><strong>${escapeHtml(row.region)}</strong><span>${row.share}% 7日声量占比</span></div>
+        <div class="region-card-head"><strong>${escapeHtml(row.region)}</strong><span>${row.share}% ${escapeHtml(dashboardVoiceLabel())}占比</span></div>
         <div class="region-meter"><i style="width:${width}%"></i></div>
         <dl>
-          <div><dt>7日声量</dt><dd>${centerNumber(row.views)}</dd></div>
+          <div><dt>${escapeHtml(dashboardVoiceLabel())}</dt><dd>${centerNumber(row.views)}</dd></div>
           <div><dt>视频</dt><dd>${centerNumber(row.videos)} 条</dd></div>
           <div><dt>达人</dt><dd>${centerNumber(row.creatorsCount)} 位</dd></div>
           <div><dt>均播</dt><dd>${centerNumber(row.avgViews)}</dd></div>
@@ -3442,7 +3527,7 @@ function renderRegionPerformance() {
         : '<li class="empty-rank">暂无视频</li>';
       return `<article class="region-board-card">
         <div class="tier-board-title">
-          <div><strong>${escapeHtml(region.region)}</strong><span>${centerNumber(region.views)} 7日声量 · ${centerNumber(region.videos)} 条视频</span></div>
+          <div><strong>${escapeHtml(region.region)}</strong><span>${centerNumber(region.views)} ${escapeHtml(dashboardVoiceLabel())} · ${centerNumber(region.videos)} 条视频</span></div>
           <em>Top ${Math.min(3, list.length)}</em>
         </div>
         <ol class="rank-list">${items}</ol>
@@ -3482,7 +3567,7 @@ function renderOwnerPerformance() {
         <dl>
           <div><dt>上线达人</dt><dd>${centerNumber(row.creatorsCount)} 位</dd></div>
           <div><dt>上线视频</dt><dd>${centerNumber(row.videos)} 条</dd></div>
-          <div><dt>7日声量</dt><dd>${centerNumber(row.views)}</dd></div>
+          <div><dt>${escapeHtml(dashboardVoiceLabel())}</dt><dd>${centerNumber(row.views)}</dd></div>
           <div><dt>均播</dt><dd>${centerNumber(row.avgViews)}</dd></div>
         </dl>
         <p>爆款：${topLabel} · ${centerNumber(top?.views || 0)}</p>
@@ -3507,7 +3592,7 @@ function renderOwnerPerformance() {
         : '<li class="empty-rank">暂无上线视频</li>';
       return `<article class="owner-board-card">
         <div class="tier-board-title">
-          <div><strong>${escapeHtml(owner.owner)}</strong><span>${centerNumber(owner.creatorsCount)} 位达人 · ${centerNumber(owner.videos)} 条视频 · ${centerNumber(owner.views)} 7日声量</span></div>
+          <div><strong>${escapeHtml(owner.owner)}</strong><span>${centerNumber(owner.creatorsCount)} 位达人 · ${centerNumber(owner.videos)} 条视频 · ${centerNumber(owner.views)} ${escapeHtml(dashboardVoiceLabel())}</span></div>
           <em>Top ${Math.min(3, list.length)}</em>
         </div>
         <ol class="rank-list">${items}</ol>
@@ -3523,7 +3608,7 @@ function renderLeaderboards() {
         .slice(0, 8)
         .map(
           (row, index) =>
-            `<li><span>${index + 1}</span><div><strong>${escapeHtml(row.creator || '-')}</strong><small>${centerNumber(row.views)} 7日声量 · ${centerNumber(row.videos)} 条视频</small></div><b>${centerNumber(row.avgViews)}</b></li>`
+            `<li><span>${index + 1}</span><div><strong>${escapeHtml(row.creator || '-')}</strong><small>${centerNumber(row.views)} ${escapeHtml(dashboardVoiceLabel())} · ${centerNumber(row.videos)} 条视频</small></div><b>${centerNumber(row.avgViews)}</b></li>`
         )
         .join('')
     : '<li class="empty-rank">暂无达人榜单</li>';
@@ -3745,13 +3830,13 @@ function renderAffiliateSalesDashboard() {
   if (centerEls.affiliateSalesNotice) {
     centerEls.affiliateSalesNotice.innerHTML = withOrders
       ? `已识别 <strong>${centerNumber(withOrders)}</strong> 条带订单指标的记录，可以按当前周期对比视频声量与出单。`
-      : `当前导入的 affiliate CSV 是联盟账号资料，暂未包含订单数、销售额、佣金字段；已完成 email 匹配，先用于查看“哪些联盟达人有视频 7 日声量”。`;
+      : `当前导入的 affiliate CSV 是联盟账号资料，暂未包含订单数、销售额、佣金字段；已完成 email 匹配，先用于查看哪些联盟达人有视频声量。`;
   }
 
   centerEls.affiliateSalesKpis.innerHTML = [
     ['联盟账号', `${centerNumber(rows.length)} 条`, '四个 CSV 合并去重'],
     ['Email 匹配', `${centerNumber(matched)} 条`, `${centerNumber(rows.length - matched)} 条未匹配`],
-    ['有声量达人', `${centerNumber(activeRows.length)} 条`, `${centerNumber(totalViews)} 7日声量`],
+    ['有声量达人', `${centerNumber(activeRows.length)} 条`, `${centerNumber(totalViews)} ${dashboardVoiceLabel()}`],
     ['Approved 订单', withOrders ? `${centerNumber(totalOrders)} 单` : '未导入', withOrders ? `GMV ${moneyBreakdownText(revenueByCurrency)}` : '需订单/佣金报表'],
     ['佣金', hasMoneyBreakdown(commissionByCurrency) ? moneyBreakdownText(commissionByCurrency) : '未导入', '按原币种分开统计，不做汇率混算']
   ]
@@ -3858,7 +3943,7 @@ function renderDashboardCharts() {
   renderCommandKpis();
   renderFocusBrief();
   renderDeliverableDashboard();
-  renderLineChart(centerEls.weeklyTrendChart, getWeeklyTrendRows(), 'videos', 'mature7dViews');
+  renderLineChart(centerEls.weeklyTrendChart, getWeeklyTrendRows());
   renderBarChart(centerEls.monthlyBarChart, getMonthlyTrendRows());
   renderOpsCommandCenter();
   renderDataHealth();
@@ -3881,8 +3966,8 @@ function renderTierCards(tiers) {
       <dl>
         <dt>达人数量</dt><dd>${tier.creators || 0} 位</dd>
         <dt>上线视频</dt><dd>${tier.videos || 0} 条</dd>
-        <dt>7日声量</dt><dd>${centerNumber(tier.views)}</dd>
-        <dt>7日均播</dt><dd>${centerNumber(tier.avgViews)}</dd>
+        <dt>${escapeHtml(dashboardVoiceLabel())}</dt><dd>${centerNumber(tier.views)}</dd>
+        <dt>${escapeHtml(dashboardAverageLabel())}</dt><dd>${centerNumber(tier.avgViews)}</dd>
         <dt>最佳达人</dt><dd>${tier.topCreator || '-'}</dd>
       </dl>`;
     centerEls.tierGrid.appendChild(card);
@@ -3911,7 +3996,7 @@ function getTierLeaderboards(period) {
       });
     }
     const stats = bucket.creators.get(key);
-    const views = sevenDayVideoViews(fields);
+    const views = dashboardVoiceViews(fields);
     stats.videos += 1;
     stats.views += views;
     if (views >= stats.topViews) {
@@ -4033,7 +4118,7 @@ function renderPeriodSensitiveViews() {
   renderCustomSummaryCard();
   renderCurrentPeriod();
   renderDataHealth();
-  renderLineChart(centerEls.weeklyTrendChart, getWeeklyTrendRows(), 'videos', 'mature7dViews');
+  renderLineChart(centerEls.weeklyTrendChart, getWeeklyTrendRows());
   renderBarChart(centerEls.monthlyBarChart, getMonthlyTrendRows());
   renderPlatformMatrix();
   renderGlobalMap();
@@ -4065,7 +4150,9 @@ function exportScopedVideosCsv() {
   const regionByCreator = getRegionByCreator();
   const rows = getScopedVideoRows(centerPeriod)
     .map((fields) => {
-      const views = sevenDayVideoViews(fields);
+      const activeViews = dashboardVoiceViews(fields);
+      const currentViews = latestKnownVideoViews(fields);
+      const mature7dViews = sevenDayVideoViews(fields);
       const likes = rawNumber(fields.likesCount);
       const comments = rawNumber(fields.commentsCount);
       return {
@@ -4074,15 +4161,18 @@ function exportScopedVideosCsv() {
         红人名称: readLocalText(fields['红人名称']) || '',
         平台: platformLabel(readLocalText(fields['平台'])),
         上线时间: fields.timestamp || '',
-        '7日声量': views,
+        当前声量口径: dashboardVoiceLabel(),
+        当前展示声量: activeViews,
+        即时播放: currentViews,
+        '7日成熟声量': mature7dViews,
         点赞数: likes,
         评论数: comments,
-        互动率: views ? `${Number((((likes + comments) / views) * 100).toFixed(2))}%` : '0%',
+        互动率: activeViews ? `${Number((((likes + comments) / activeViews) * 100).toFixed(2))}%` : '0%',
         视频链接: videoUrl(fields),
         文案: readLocalText(fields.caption)
       };
     })
-    .sort((a, b) => Number(b['7日声量']) - Number(a['7日声量']));
+    .sort((a, b) => Number(b['当前展示声量']) - Number(a['当前展示声量']));
   if (!rows.length) {
     centerEls.status.textContent = '当前时间范围没有可导出的视频数据。';
     return;
@@ -4257,7 +4347,7 @@ function renderTables() {
       addCell(tr, row.region, '区域');
       addCell(tr, row.platform, '平台');
       addCell(tr, centerDate(row.publishDate), '上线时间');
-      addCell(tr, centerNumber(row.views), '7日声量');
+      addCell(tr, centerNumber(row.mature7dViews), '7日声量');
       addCell(tr, centerNumber(rawNumber(row.raw?.['30日成熟声量'] || row.raw?.mature30dViews)), '30日声量');
       addCell(tr, `${row.engagementRate}%`, '互动率');
       addCell(tr, readLocalText(row.raw?.['是否计入合同交付']) === '是' ? readLocalText(row.raw?.['对应合同平台'] || row.raw?.['合同交付类型']) || '已归因' : '-', '交付归因');
@@ -4322,7 +4412,7 @@ function renderTables() {
       tr.appendChild(codeCell);
       addCell(tr, row.matchStatus === 'email_matched' ? `已匹配 / ${row.status}` : `未匹配 / ${row.status}`, '状态');
       addCell(tr, `${centerNumber(row.videos)} 条`, '当前周期视频');
-      addCell(tr, centerNumber(row.views), '7日声量');
+      addCell(tr, centerNumber(row.views), dashboardVoiceLabel());
       addCell(tr, row.hasOrderMetrics ? centerNumber(row.orders) : '0', '订单');
       addCell(tr, row.hasOrderMetrics ? moneyBreakdownText(row.revenueByCurrency) : '0', 'GMV');
       addCell(tr, row.hasOrderMetrics ? moneyBreakdownText(row.commissionByCurrency) : '0', '佣金');
@@ -4471,6 +4561,25 @@ document.querySelectorAll('.center-nav').forEach((button) => {
 document.querySelectorAll('#centerPeriodControl button').forEach((button) => {
   button.addEventListener('click', () => {
     activatePeriod(button.dataset.period || 'week');
+  });
+});
+
+document.querySelectorAll('#voiceMetricControl button').forEach((button) => {
+  button.addEventListener('click', () => {
+    const nextMode = button.dataset.voiceMode === 'mature' ? 'mature' : 'live';
+    if (nextMode === dashboardVoiceMode) return;
+    dashboardVoiceMode = nextMode;
+    localStorage.setItem('yozma-dashboard-voice-mode', dashboardVoiceMode);
+    scopedVideoRowsCache = new Map();
+    geoStatsCache = new Map();
+    syncVoiceMetricLabels();
+    renderPeriodSensitiveViews();
+    renderOpsCommandCenter();
+    renderOpsMonitor();
+    renderTables();
+    centerEls.status.textContent = dashboardVoiceMode === 'mature'
+      ? '已切换到7日成熟声量：适合公平复盘。'
+      : '已切换到即时播放：适合查看当前增长和爆款。';
   });
 });
 
