@@ -1,20 +1,20 @@
 {
   "ok": true,
   "dashboard": {
-    "generatedAt": "2026-07-12T17:19:00.352Z",
+    "generatedAt": "2026-07-13T02:03:19.418Z",
     "summary": {
       "totalCreators": 240,
       "totalVideos": 1156,
-      "totalViews": 57953418,
-      "totalMature7dViews": 38389885,
+      "totalViews": 58092846,
+      "totalMature7dViews": 39302175,
       "thisWeekVideos": 55,
       "thisWeekCreators": 20,
-      "thisWeekViews": 691894,
-      "thisWeekMature7dViews": 0,
+      "thisWeekViews": 695846,
+      "thisWeekMature7dViews": 169369,
       "thisMonthVideos": 74,
       "thisMonthCreators": 30,
-      "thisMonthViews": 861488,
-      "thisMonthMature7dViews": 0,
+      "thisMonthViews": 902584,
+      "thisMonthMature7dViews": 345746,
       "missingFollowerCreators": 78
     },
     "currentWeek": {
@@ -85,18 +85,18 @@
         "weekEnd": "2026-07-04T16:00:00.000Z",
         "videos": 52,
         "creators": 36,
-        "views": 1014353,
-        "mature7dViews": 406908,
-        "mature7dVideos": 15
+        "views": 1149829,
+        "mature7dViews": 1149829,
+        "mature7dVideos": 51
       },
       {
         "weekStart": "2026-07-04T16:00:00.000Z",
         "weekEnd": "2026-07-11T16:00:00.000Z",
         "videos": 55,
         "creators": 20,
-        "views": 691894,
-        "mature7dViews": 0,
-        "mature7dVideos": 0
+        "views": 695846,
+        "mature7dViews": 169369,
+        "mature7dVideos": 6
       }
     ],
     "monthly": [
@@ -141,18 +141,18 @@
         "monthEnd": "2026-06-30T16:00:00.000Z",
         "videos": 674,
         "creators": 162,
-        "views": 27986719,
-        "mature7dViews": 22624984,
-        "mature7dVideos": 564
+        "views": 28085051,
+        "mature7dViews": 23191528,
+        "mature7dVideos": 584
       },
       {
         "monthStart": "2026-06-30T16:00:00.000Z",
         "monthEnd": "2026-07-31T16:00:00.000Z",
         "videos": 74,
         "creators": 30,
-        "views": 861488,
-        "mature7dViews": 0,
-        "mature7dVideos": 0
+        "views": 902584,
+        "mature7dViews": 345746,
+        "mature7dVideos": 22
       }
     ],
     "tierBreakdowns": {
@@ -175,10 +175,10 @@
           "range": "10 万 - 49.9 万粉丝",
           "creators": 3,
           "videos": 12,
-          "views": 198215,
-          "likes": 3753,
+          "views": 201774,
+          "likes": 3791,
           "comments": 113,
-          "avgViews": 16518,
+          "avgViews": 16815,
           "topCreator": "68v_ebikes"
         },
         {
@@ -187,10 +187,10 @@
           "range": "1 万 - 9.9 万粉丝",
           "creators": 13,
           "videos": 37,
-          "views": 330562,
-          "likes": 18370,
-          "comments": 381,
-          "avgViews": 8934,
+          "views": 330955,
+          "likes": 18382,
+          "comments": 382,
+          "avgViews": 8945,
           "topCreator": "17.robby_"
         },
         {
@@ -225,10 +225,10 @@
           "range": "10 万 - 49.9 万粉丝",
           "creators": 6,
           "videos": 16,
-          "views": 251351,
-          "likes": 5091,
-          "comments": 269,
-          "avgViews": 15709,
+          "views": 258505,
+          "likes": 5160,
+          "comments": 268,
+          "avgViews": 16157,
           "topCreator": "68v_ebikes"
         },
         {
@@ -237,10 +237,10 @@
           "range": "1 万 - 9.9 万粉丝",
           "creators": 15,
           "videos": 44,
-          "views": 359098,
-          "likes": 19406,
-          "comments": 474,
-          "avgViews": 8161,
+          "views": 370900,
+          "likes": 19674,
+          "comments": 495,
+          "avgViews": 8430,
           "topCreator": "17.robby_"
         },
         {
@@ -275,10 +275,10 @@
           "range": "10 万 - 49.9 万粉丝",
           "creators": 40,
           "videos": 154,
-          "views": 9594715,
-          "likes": 253970,
-          "comments": 8954,
-          "avgViews": 62303,
+          "views": 9664732,
+          "likes": 255134,
+          "comments": 9003,
+          "avgViews": 62758,
           "topCreator": "68v_ebikes"
         },
         {
@@ -287,10 +287,10 @@
           "range": "1 万 - 9.9 万粉丝",
           "creators": 86,
           "videos": 509,
-          "views": 17577292,
-          "likes": 575742,
-          "comments": 27846,
-          "avgViews": 34533,
+          "views": 17597382,
+          "likes": 576149,
+          "comments": 27870,
+          "avgViews": 34572,
           "topCreator": "ridstarlaw"
         },
         {
@@ -326,10 +326,10 @@
         "range": "10 万 - 49.9 万粉丝",
         "creators": 40,
         "videos": 154,
-        "views": 9594715,
-        "likes": 253970,
-        "comments": 8954,
-        "avgViews": 62303,
+        "views": 9664732,
+        "likes": 255134,
+        "comments": 9003,
+        "avgViews": 62758,
         "topCreator": "68v_ebikes"
       },
       {
@@ -338,10 +338,10 @@
         "range": "1 万 - 9.9 万粉丝",
         "creators": 86,
         "videos": 509,
-        "views": 17577292,
-        "likes": 575742,
-        "comments": 27846,
-        "avgViews": 34533,
+        "views": 17597382,
+        "likes": 576149,
+        "comments": 27870,
+        "avgViews": 34572,
         "topCreator": "ridstarlaw"
       },
       {
@@ -377,11 +377,11 @@
         "tier": "unknown",
         "tierLabel": "待补充",
         "videos": 18,
-        "views": 2559876,
-        "likes": 43987,
-        "comments": 2694,
+        "views": 2595335,
+        "likes": 44587,
+        "comments": 2725,
         "shares": 0,
-        "avgViews": 142215,
+        "avgViews": 144185,
         "engagementRate": 1.82
       },
       {
@@ -429,12 +429,12 @@
         "tier": "waist",
         "tierLabel": "腰部红人",
         "videos": 54,
-        "views": 1734656,
-        "likes": 28931,
-        "comments": 690,
-        "shares": 135,
-        "avgViews": 32123,
-        "engagementRate": 1.72
+        "views": 1774897,
+        "likes": 29219,
+        "comments": 691,
+        "shares": 140,
+        "avgViews": 32868,
+        "engagementRate": 1.69
       },
       {
         "creator": "sur ronster",

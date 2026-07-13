@@ -27072,24 +27072,25 @@
     "id": "vid_1783258874413_p7kg24b",
     "fields": {
       "是否监控": "是",
-      "likesCount": 61,
+      "likesCount": "89",
       "videoUrl": "https://www.youtube.com/watch?v=chySb3ilC28",
       "平台": "youtubevideo",
-      "commentsCount": 41,
+      "commentsCount": "52",
       "红人名称": "Ben’s Outdoor Boys",
       "id": "chySb3ilC28",
-      "videoPlayCount": 733,
-      "videoViewCount": 733,
+      "videoPlayCount": "1919",
+      "videoViewCount": "1919",
       "url": {
         "text": "https://www.youtube.com/watch?v=chySb3ilC28",
         "link": "https://www.youtube.com/watch?v=chySb3ilC28"
       },
       "timestamp": "2026-07-04T15:00:35.000Z",
-      "displayUrl": "https://i.ytimg.com/vi/chySb3ilC28/maxresdefault.jpg"
+      "displayUrl": "https://i.ytimg.com/vi/chySb3ilC28/maxresdefault.jpg",
+      "7日成熟声量": 1919
     },
     "source": "local-discovery",
     "importedAt": "",
-    "updatedAt": "2026-07-05T13:41:14.413Z"
+    "updatedAt": "2026-07-13T01:59:59.883Z"
   },
   {
     "id": "vid_1783258874413_jpgcige",
@@ -27119,814 +27120,850 @@
     "id": "vid_1783259977018_ldtyzqz",
     "fields": {
       "是否监控": "是",
-      "likesCount": 104,
+      "likesCount": "166",
       "videoUrl": "https://www.youtube.com/watch?v=DQuYb4BoA5g",
       "平台": "youtubevideo",
-      "commentsCount": 28,
+      "commentsCount": "30",
       "红人名称": "Voltster",
       "id": "DQuYb4BoA5g",
-      "videoPlayCount": 5671,
-      "videoViewCount": 5671,
+      "videoPlayCount": "10138",
+      "videoViewCount": "10138",
       "url": {
         "text": "https://www.youtube.com/watch?v=DQuYb4BoA5g",
         "link": "https://www.youtube.com/watch?v=DQuYb4BoA5g"
       },
       "timestamp": "2026-06-29T17:11:49.000Z",
-      "displayUrl": "https://i.ytimg.com/vi/DQuYb4BoA5g/maxresdefault.jpg"
+      "displayUrl": "https://i.ytimg.com/vi/DQuYb4BoA5g/maxresdefault.jpg",
+      "7日成熟声量": 10138
     },
     "source": "local-discovery",
     "importedAt": "",
-    "updatedAt": "2026-07-05T13:59:37.018Z"
+    "updatedAt": "2026-07-13T01:59:59.884Z"
   },
   {
     "id": "vid_1783260456375_jx6jkj7",
     "fields": {
       "是否监控": "是",
-      "likesCount": 671,
+      "likesCount": "702",
       "videoUrl": "https://www.youtube.com/shorts/E-WeCzwA0So",
       "平台": "youtubeshort",
-      "commentsCount": 35,
+      "commentsCount": "35",
       "红人名称": "T-Modz",
       "id": "E-WeCzwA0So",
-      "videoPlayCount": 21447,
-      "videoViewCount": 21447,
+      "videoPlayCount": "23291",
+      "videoViewCount": "23291",
       "url": {
         "text": "https://www.youtube.com/shorts/E-WeCzwA0So",
         "link": "https://www.youtube.com/shorts/E-WeCzwA0So"
       },
       "timestamp": "2026-06-29T22:40:48.000Z",
-      "displayUrl": "https://i.ytimg.com/vi/E-WeCzwA0So/maxres2.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAKAD4oCDAgAEAEYciBLKEEwDw==&rs=AOn4CLDwu7j6WGQiesEDZ_1gQVcGb3cyJA"
+      "displayUrl": "https://i.ytimg.com/vi/E-WeCzwA0So/maxres2.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAKAD4oCDAgAEAEYciBLKEEwDw==&rs=AOn4CLDwu7j6WGQiesEDZ_1gQVcGb3cyJA",
+      "7日成熟声量": 23291
     },
     "source": "local-discovery",
     "importedAt": "",
-    "updatedAt": "2026-07-05T14:07:36.375Z"
+    "updatedAt": "2026-07-13T02:00:29.807Z"
   },
   {
     "id": "vid_1783260521635_002uzs4",
     "fields": {
       "是否监控": "是",
-      "likesCount": 582,
+      "likesCount": "601",
       "videoUrl": "https://www.youtube.com/shorts/y-cqHu_NnnY",
       "平台": "youtubeshort",
-      "commentsCount": 15,
+      "commentsCount": "15",
       "红人名称": "68v_ebikes",
       "id": "y-cqHu_NnnY",
-      "videoPlayCount": 29406,
-      "videoViewCount": 29406,
+      "videoPlayCount": "31351",
+      "videoViewCount": "31351",
       "url": {
         "text": "https://www.youtube.com/shorts/y-cqHu_NnnY",
         "link": "https://www.youtube.com/shorts/y-cqHu_NnnY"
       },
       "timestamp": "2026-06-29T16:31:23.000Z",
-      "displayUrl": "https://i.ytimg.com/vi/y-cqHu_NnnY/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAKAD4oCDAgAEAEYTSBYKGUwDw==&rs=AOn4CLAhT3z8Gy2cBKzM2iZEJyuPybmqJQ"
+      "displayUrl": "https://i.ytimg.com/vi/y-cqHu_NnnY/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAKAD4oCDAgAEAEYTSBYKGUwDw==&rs=AOn4CLAhT3z8Gy2cBKzM2iZEJyuPybmqJQ",
+      "7日成熟声量": 31351
     },
     "source": "local-discovery",
     "importedAt": "",
-    "updatedAt": "2026-07-05T14:08:41.635Z"
+    "updatedAt": "2026-07-13T02:00:29.807Z"
   },
   {
     "id": "vid_1783260521635_qkrrep5",
     "fields": {
       "是否监控": "是",
-      "likesCount": 317,
+      "likesCount": "331",
       "videoUrl": "https://www.youtube.com/shorts/BNAnzIwTgPM",
       "平台": "youtubeshort",
-      "commentsCount": 8,
+      "commentsCount": "8",
       "红人名称": "68v_ebikes",
       "id": "BNAnzIwTgPM",
-      "videoPlayCount": 33322,
-      "videoViewCount": 33322,
+      "videoPlayCount": "35446",
+      "videoViewCount": "35446",
       "url": {
         "text": "https://www.youtube.com/shorts/BNAnzIwTgPM",
         "link": "https://www.youtube.com/shorts/BNAnzIwTgPM"
       },
       "timestamp": "2026-06-28T19:40:31.000Z",
-      "displayUrl": "https://i.ytimg.com/vi/BNAnzIwTgPM/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAKAD4oCDAgAEAEYZSBiKDMwDw==&rs=AOn4CLD0n6zxwjmjrdVFObYmZ_9V4ncaUQ"
+      "displayUrl": "https://i.ytimg.com/vi/BNAnzIwTgPM/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAKAD4oCDAgAEAEYZSBiKDMwDw==&rs=AOn4CLD0n6zxwjmjrdVFObYmZ_9V4ncaUQ",
+      "7日成熟声量": 35446
     },
     "source": "local-discovery",
     "importedAt": "",
-    "updatedAt": "2026-07-05T14:08:41.635Z"
+    "updatedAt": "2026-07-13T02:00:29.807Z"
   },
   {
     "id": "vid_1783260521635_cpdbsgt",
     "fields": {
       "是否监控": "是",
-      "likesCount": 433,
+      "likesCount": "443",
       "videoUrl": "https://www.youtube.com/shorts/c9qp7Zv6gbs",
       "平台": "youtubeshort",
-      "commentsCount": 10,
+      "commentsCount": "10",
       "红人名称": "68v_ebikes",
       "id": "c9qp7Zv6gbs",
-      "videoPlayCount": 25440,
-      "videoViewCount": 25440,
+      "videoPlayCount": "27003",
+      "videoViewCount": "27003",
       "url": {
         "text": "https://www.youtube.com/shorts/c9qp7Zv6gbs",
         "link": "https://www.youtube.com/shorts/c9qp7Zv6gbs"
       },
       "timestamp": "2026-06-30T15:02:02.000Z",
-      "displayUrl": "https://i.ytimg.com/vi/c9qp7Zv6gbs/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAKAD4oCDAgAEAEYVyBgKGUwDw==&rs=AOn4CLAfBQX8paPoABLW21pQkvKhGFqnLA"
+      "displayUrl": "https://i.ytimg.com/vi/c9qp7Zv6gbs/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAKAD4oCDAgAEAEYVyBgKGUwDw==&rs=AOn4CLAfBQX8paPoABLW21pQkvKhGFqnLA",
+      "7日成熟声量": 27003
     },
     "source": "local-discovery",
     "importedAt": "",
-    "updatedAt": "2026-07-05T14:08:41.635Z"
+    "updatedAt": "2026-07-13T02:00:29.807Z"
   },
   {
     "id": "vid_1783260690447_b3eurwf",
     "fields": {
       "是否监控": "是",
-      "likesCount": 13,
+      "likesCount": "25",
       "videoUrl": "https://www.youtube.com/shorts/vMF0OO2nSOA",
       "平台": "youtubeshort",
-      "commentsCount": 5,
+      "commentsCount": "6",
       "红人名称": "ONEWAYGOOEY",
       "id": "vMF0OO2nSOA",
-      "videoPlayCount": 1468,
-      "videoViewCount": 1468,
+      "videoPlayCount": "1772",
+      "videoViewCount": "1772",
       "url": {
         "text": "https://www.youtube.com/shorts/vMF0OO2nSOA",
         "link": "https://www.youtube.com/shorts/vMF0OO2nSOA"
       },
       "timestamp": "2026-07-04T05:06:03.000Z",
-      "displayUrl": "https://i.ytimg.com/vi/vMF0OO2nSOA/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAKAD4oCDAgAEAEYZSBlKGUwDw==&rs=AOn4CLCHpYowFT0LJgDtN6BUnIYYe1JJpg"
+      "displayUrl": "https://i.ytimg.com/vi/vMF0OO2nSOA/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAKAD4oCDAgAEAEYZSBlKGUwDw==&rs=AOn4CLCHpYowFT0LJgDtN6BUnIYYe1JJpg",
+      "7日成熟声量": 1772
     },
     "source": "local-discovery",
     "importedAt": "",
-    "updatedAt": "2026-07-05T14:11:30.447Z"
+    "updatedAt": "2026-07-13T02:00:29.807Z"
   },
   {
     "id": "vid_1783260760382_e64ni56",
     "fields": {
       "是否监控": "是",
-      "likesCount": 14,
+      "likesCount": "14",
       "videoUrl": "https://www.youtube.com/shorts/c3AdWNNiDDo",
       "平台": "youtubeshort",
-      "commentsCount": 0,
+      "commentsCount": "0",
       "红人名称": "Trent In The Sip",
       "id": "c3AdWNNiDDo",
-      "videoPlayCount": 2087,
-      "videoViewCount": 2087,
+      "videoPlayCount": "2122",
+      "videoViewCount": "2122",
       "url": {
         "text": "https://www.youtube.com/shorts/c3AdWNNiDDo",
         "link": "https://www.youtube.com/shorts/c3AdWNNiDDo"
       },
       "timestamp": "2026-07-02T23:44:00.000Z",
-      "displayUrl": "https://i.ytimg.com/vi/c3AdWNNiDDo/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAKAD4oCDAgAEAEYViBcKGUwDw==&rs=AOn4CLBye1GbjJ8xBbmohkhqrNsf6UfXog"
+      "displayUrl": "https://i.ytimg.com/vi/c3AdWNNiDDo/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAKAD4oCDAgAEAEYViBcKGUwDw==&rs=AOn4CLBye1GbjJ8xBbmohkhqrNsf6UfXog",
+      "7日成熟声量": 2122
     },
     "source": "local-discovery",
     "importedAt": "",
-    "updatedAt": "2026-07-05T14:12:40.382Z"
+    "updatedAt": "2026-07-13T02:00:29.808Z"
   },
   {
     "id": "vid_1783260760382_yw3tvd0",
     "fields": {
       "是否监控": "是",
-      "likesCount": 12,
+      "likesCount": "14",
       "videoUrl": "https://www.youtube.com/shorts/WvUMJnh1pR8",
       "平台": "youtubeshort",
-      "commentsCount": 1,
+      "commentsCount": "1",
       "红人名称": "Trent In The Sip",
       "id": "WvUMJnh1pR8",
-      "videoPlayCount": 1423,
-      "videoViewCount": 1423,
+      "videoPlayCount": "2028",
+      "videoViewCount": "2028",
       "url": {
         "text": "https://www.youtube.com/shorts/WvUMJnh1pR8",
         "link": "https://www.youtube.com/shorts/WvUMJnh1pR8"
       },
       "timestamp": "2026-07-02T23:44:54.000Z",
-      "displayUrl": "https://i.ytimg.com/vi/WvUMJnh1pR8/maxres2.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAKAD4oCDAgAEAEYZSBaKFYwDw==&rs=AOn4CLDc6XL3Q3efHSaN6yeMqJ_4Y_CjHg"
+      "displayUrl": "https://i.ytimg.com/vi/WvUMJnh1pR8/maxres2.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAKAD4oCDAgAEAEYZSBaKFYwDw==&rs=AOn4CLDc6XL3Q3efHSaN6yeMqJ_4Y_CjHg",
+      "7日成熟声量": 2028
     },
     "source": "local-discovery",
     "importedAt": "",
-    "updatedAt": "2026-07-05T14:12:40.382Z"
+    "updatedAt": "2026-07-13T02:00:29.808Z"
   },
   {
     "id": "vid_1783261779001_ftexmw2",
     "fields": {
       "是否监控": "是",
-      "likesCount": 1800,
+      "likesCount": "2100",
       "videoUrl": "https://www.youtube.com/shorts/JvGyrMixOgI",
       "平台": "youtubeshort",
-      "commentsCount": 107,
+      "commentsCount": "127",
       "红人名称": "MKR",
       "id": "JvGyrMixOgI",
-      "videoPlayCount": 71814,
-      "videoViewCount": 71814,
+      "videoPlayCount": "89454",
+      "videoViewCount": "89454",
       "url": {
         "text": "https://www.youtube.com/shorts/JvGyrMixOgI",
         "link": "https://www.youtube.com/shorts/JvGyrMixOgI"
       },
       "timestamp": "2026-06-29T20:16:51.000Z",
-      "displayUrl": "https://i.ytimg.com/vi/JvGyrMixOgI/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAKAD4oCDAgAEAEYfyBBKBMwDw==&rs=AOn4CLDpjIKIJJyLAmnMfDV_6l5T0VoAmQ"
+      "displayUrl": "https://i.ytimg.com/vi/JvGyrMixOgI/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAKAD4oCDAgAEAEYfyBBKBMwDw==&rs=AOn4CLDpjIKIJJyLAmnMfDV_6l5T0VoAmQ",
+      "7日成熟声量": 89454
     },
     "source": "local-discovery",
     "importedAt": "",
-    "updatedAt": "2026-07-05T14:29:39.001Z"
+    "updatedAt": "2026-07-13T02:00:29.808Z"
   },
   {
     "id": "vid_1783261779001_vcp2m03",
     "fields": {
       "是否监控": "是",
-      "likesCount": 1500,
+      "likesCount": "1800",
       "videoUrl": "https://www.youtube.com/shorts/7JIZG2UX3yw",
       "平台": "youtubeshort",
-      "commentsCount": 112,
+      "commentsCount": "123",
       "红人名称": "MKR",
       "id": "7JIZG2UX3yw",
-      "videoPlayCount": 48157,
-      "videoViewCount": 48157,
+      "videoPlayCount": "65976",
+      "videoViewCount": "65976",
       "url": {
         "text": "https://www.youtube.com/shorts/7JIZG2UX3yw",
         "link": "https://www.youtube.com/shorts/7JIZG2UX3yw"
       },
       "timestamp": "2026-06-30T19:13:31.000Z",
-      "displayUrl": "https://i.ytimg.com/vi/7JIZG2UX3yw/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAKAD4oCDAgAEAEYVSBlKB8wDw==&rs=AOn4CLDqNn_FWtVQHoNKks3IMvZgjZ6usg"
+      "displayUrl": "https://i.ytimg.com/vi/7JIZG2UX3yw/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAKAD4oCDAgAEAEYVSBlKB8wDw==&rs=AOn4CLDqNn_FWtVQHoNKks3IMvZgjZ6usg",
+      "7日成熟声量": 65976
     },
     "source": "local-discovery",
     "importedAt": "",
-    "updatedAt": "2026-07-05T14:29:39.001Z"
+    "updatedAt": "2026-07-13T02:00:29.808Z"
   },
   {
     "id": "vid_1783262827953_q9uufy7",
     "fields": {
       "是否监控": "是",
-      "likesCount": 103,
-      "videoUrl": "https://scontent-bos5-1.cdninstagram.com/o1/v/t2/f2/m86/AQMj-3-l2kFyDB5lEpUauzYpT-gxXyc5NvLK7q-pQTa-Bg5mXK0D14OIi5O08r_oyQIeR5e3hqveMg_kDpwRJ4laaE6Bk3A4Kcu2cp0.mp4?_nc_cat=110&_nc_sid=5e9851&_nc_ht=scontent-bos5-1.cdninstagram.com&_nc_ohc=H0TjSF2-qjIQ7kNvwFpFmWT&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5JTlNUQUdSQU0uQ0xJUFMuQzMuNzIwLmRhc2hfYmFzZWxpbmVfMV92MSIsInhwdl9hc3NldF9pZCI6MTU3OTY5MTYyMzY3OTg3MSwiYXNzZXRfYWdlX2RheXMiOjQsInZpX3VzZWNhc2VfaWQiOjEwMDk5LCJkdXJhdGlvbl9zIjoyMCwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=17-1&vs=a3219b0f04509833&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC8zQTQwOTI1QTIxNTg3MzFFOEYzMTM4MDlENUFBODFBN192aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyL0MwNDRBOTdCMjE0QjNEMjkxMDM4NEQzQkVDOTAyQkEzX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACb-nazhk67OBRUCKAJDMywXQDTu2RaHKwIYEmRhc2hfYmFzZWxpbmVfMV92MREAdf4HZeadAQA&_nc_gid=FFFInjOreIErh_3jHa7toQ&_nc_ss=72a8c&_nc_zt=28&oh=00_AQDvKjmp",
+      "likesCount": "119",
+      "videoUrl": "https://scontent-den2-1.cdninstagram.com/o1/v/t2/f2/m86/AQMj-3-l2kFyDB5lEpUauzYpT-gxXyc5NvLK7q-pQTa-Bg5mXK0D14OIi5O08r_oyQIeR5e3hqveMg_kDpwRJ4laaE6Bk3A4Kcu2cp0.mp4?_nc_cat=110&_nc_sid=5e9851&_nc_ht=scontent-den2-1.cdninstagram.com&_nc_ohc=v8nMgEuHXXwQ7kNvwGB2O2e&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5JTlNUQUdSQU0uQ0xJUFMuQzMuNzIwLmRhc2hfYmFzZWxpbmVfMV92MSIsInhwdl9hc3NldF9pZCI6MTU3OTY5MTYyMzY3OTg3MSwiYXNzZXRfYWdlX2RheXMiOjEyLCJ2aV91c2VjYXNlX2lkIjoxMDA5OSwiZHVyYXRpb25fcyI6MjAsInVybGdlbl9zb3VyY2UiOiJ3d3cifQ%3D%3D&ccb=17-1&vs=a3219b0f04509833&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC8zQTQwOTI1QTIxNTg3MzFFOEYzMTM4MDlENUFBODFBN192aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyL0MwNDRBOTdCMjE0QjNEMjkxMDM4NEQzQkVDOTAyQkEzX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACb-nazhk67OBRUCKAJDMywXQDTu2RaHKwIYEmRhc2hfYmFzZWxpbmVfMV92MREAdf4HZeadAQA&_nc_gid=24JJahFJ4UqBPXbmnUpSIg&_nc_ss=7ca8c&_nc_zt=28&oh=00_",
       "平台": "instagramreels",
-      "commentsCount": 6,
+      "commentsCount": "6",
       "红人名称": "68v_ebikes",
       "id": "3930993344278259437",
-      "videoPlayCount": 7835,
-      "videoViewCount": 3304,
+      "videoPlayCount": "8967",
+      "videoViewCount": "3539",
       "url": {
         "text": "https://www.instagram.com/p/DaNsZ6MIWbt/",
         "link": "https://www.instagram.com/p/DaNsZ6MIWbt/"
       },
-      "timestamp": "2026-06-30T14:50:35.000Z"
+      "timestamp": "2026-06-30T14:50:35.000Z",
+      "7日成熟声量": 8967
     },
     "source": "local-discovery",
     "importedAt": "",
-    "updatedAt": "2026-07-05T14:47:07.953Z"
+    "updatedAt": "2026-07-13T02:00:50.642Z"
   },
   {
     "id": "vid_1783262827953_d2tw5ep",
     "fields": {
       "是否监控": "是",
-      "likesCount": 157,
-      "videoUrl": "https://scontent-mia5-1.cdninstagram.com/o1/v/t2/f2/m86/AQO44-3l7Th-tq2-_qAtKHsnPPiy_-e2W8j9Tuas6rX9HMsZPaQaAoWKszA-jvmAOMasglSva-rVV1kb1ggoCEaCVFQKb0NrM7Pr2CA.mp4?_nc_cat=101&_nc_sid=5e9851&_nc_ht=scontent-mia5-1.cdninstagram.com&_nc_ohc=yQN1YJHciuQQ7kNvwGpkJij&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5JTlNUQUdSQU0uQ0xJUFMuQzMuNzIwLmRhc2hfYmFzZWxpbmVfMV92MSIsInhwdl9hc3NldF9pZCI6MTAwODA2MDQ3MjE5NjUzMywiYXNzZXRfYWdlX2RheXMiOjUsInZpX3VzZWNhc2VfaWQiOjEwMDk5LCJkdXJhdGlvbl9zIjoyMSwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=17-1&vs=bb49749e6e60fc89&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC82RjQyQjM5RkZCQkEwREFDMTgxQTcwQUJBNUMzMjU5Ql92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyLzJCNEU3ODAyNTE1QzkyOTI4RDVCQTJFMDMyMEUwOTg2X2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACbq9tvl67TKAxUCKAJDMywXQDXmZmZmZmYYEmRhc2hfYmFzZWxpbmVfMV92MREAdf4HZeadAQA&_nc_gid=YW3rAp7uJUD7Wd1fVXLqew&_nc_ss=72a8c&_nc_zt=28&oh=00_AQBaW5_G",
+      "likesCount": "167",
+      "videoUrl": "https://scontent-iad3-1.cdninstagram.com/o1/v/t2/f2/m86/AQO44-3l7Th-tq2-_qAtKHsnPPiy_-e2W8j9Tuas6rX9HMsZPaQaAoWKszA-jvmAOMasglSva-rVV1kb1ggoCEaCVFQKb0NrM7Pr2CA.mp4?_nc_cat=101&_nc_sid=5e9851&_nc_ht=scontent-iad3-1.cdninstagram.com&_nc_ohc=ruZp-ZqlYjcQ7kNvwFxFmv6&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5JTlNUQUdSQU0uQ0xJUFMuQzMuNzIwLmRhc2hfYmFzZWxpbmVfMV92MSIsInhwdl9hc3NldF9pZCI6MTAwODA2MDQ3MjE5NjUzMywiYXNzZXRfYWdlX2RheXMiOjEzLCJ2aV91c2VjYXNlX2lkIjoxMDA5OSwiZHVyYXRpb25fcyI6MjEsInVybGdlbl9zb3VyY2UiOiJ3d3cifQ%3D%3D&ccb=17-1&vs=bb49749e6e60fc89&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC82RjQyQjM5RkZCQkEwREFDMTgxQTcwQUJBNUMzMjU5Ql92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyLzJCNEU3ODAyNTE1QzkyOTI4RDVCQTJFMDMyMEUwOTg2X2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACbq9tvl67TKAxUCKAJDMywXQDXmZmZmZmYYEmRhc2hfYmFzZWxpbmVfMV92MREAdf4HZeadAQA&_nc_gid=aiz6-1YffrGe8h4xtxuyiQ&_nc_ss=72689&_nc_zt=28&oh=00_",
       "平台": "instagramreels",
-      "commentsCount": 11,
+      "commentsCount": "11",
       "红人名称": "68v_ebikes",
       "id": "3930315350298500301",
-      "videoPlayCount": 8231,
-      "videoViewCount": 3352,
+      "videoPlayCount": "8758",
+      "videoViewCount": "3454",
       "url": {
         "text": "https://www.instagram.com/p/DaLSPzFzpzN/",
         "link": "https://www.instagram.com/p/DaLSPzFzpzN/"
       },
-      "timestamp": "2026-06-29T16:23:53.000Z"
+      "timestamp": "2026-06-29T16:23:53.000Z",
+      "7日成熟声量": 8758
     },
     "source": "local-discovery",
     "importedAt": "",
-    "updatedAt": "2026-07-05T14:47:07.953Z"
+    "updatedAt": "2026-07-13T02:00:50.642Z"
   },
   {
     "id": "vid_1783262827953_bngiwkg",
     "fields": {
       "是否监控": "是",
-      "likesCount": 125,
-      "videoUrl": "https://scontent-hou1-1.cdninstagram.com/o1/v/t2/f2/m86/AQO3QZix-uOz_tcpSj4uHPSQX1E6sKVluVJmUNZwI8vj95c6Xz-5GUv0SLhny44VmoVG3Uk5wvAsaGhe6fHRwqLacKjm-qPDPNCnZgs.mp4?_nc_cat=106&_nc_sid=5e9851&_nc_ht=scontent-hou1-1.cdninstagram.com&_nc_ohc=dfDOMDytPGUQ7kNvwFbzwZw&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5JTlNUQUdSQU0uQ0xJUFMuQzMuNzIwLmRhc2hfYmFzZWxpbmVfMV92MSIsInhwdl9hc3NldF9pZCI6MTk0ODQxNjYwOTE0NTM3MCwiYXNzZXRfYWdlX2RheXMiOjYsInZpX3VzZWNhc2VfaWQiOjEwMDk5LCJkdXJhdGlvbl9zIjoxMywidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=17-1&vs=44e6ddf718092130&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC8wNjRGNDQ2REZCNDE0NzU3NjQzODAwNTI3NEM4OTU5OF92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyLzM4NDQyNDUzQ0JFMUE2NDUzRkE1QUZBOERENTIyNzkxX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACa0yOb94oT2BhUCKAJDMywXQCszMzMzMzMYEmRhc2hfYmFzZWxpbmVfMV92MREAdf4HZeadAQA&_nc_gid=28XiMSdujK6uPC9pAT41cw&_nc_ss=72a8c&_nc_zt=28&oh=00_AQA-JMCL",
+      "likesCount": "132",
+      "videoUrl": "https://scontent-lga3-3.cdninstagram.com/o1/v/t2/f2/m86/AQO3QZix-uOz_tcpSj4uHPSQX1E6sKVluVJmUNZwI8vj95c6Xz-5GUv0SLhny44VmoVG3Uk5wvAsaGhe6fHRwqLacKjm-qPDPNCnZgs.mp4?_nc_cat=106&_nc_sid=5e9851&_nc_ht=scontent-lga3-3.cdninstagram.com&_nc_ohc=0ILcZwVYMKoQ7kNvwHiDsjK&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5JTlNUQUdSQU0uQ0xJUFMuQzIuNzIwLmRhc2hfYmFzZWxpbmVfMV92MSIsInhwdl9hc3NldF9pZCI6MTk0ODQxNjYwOTE0NTM3MCwiYXNzZXRfYWdlX2RheXMiOjE0LCJ2aV91c2VjYXNlX2lkIjoxMDA5OSwiZHVyYXRpb25fcyI6MTMsInVybGdlbl9zb3VyY2UiOiJ3d3cifQ%3D%3D&ccb=17-1&vs=44e6ddf718092130&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC8wNjRGNDQ2REZCNDE0NzU3NjQzODAwNTI3NEM4OTU5OF92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyLzM4NDQyNDUzQ0JFMUE2NDUzRkE1QUZBOERENTIyNzkxX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACa0yOb94oT2BhUCKAJDMiwXQCszMzMzMzMYEmRhc2hfYmFzZWxpbmVfMV92MREAdf4HZeadAQA&_nc_gid=pJ_pISZg2mSShbG7ljxvVw&_nc_ss=7c689&_nc_zt=28&oh=00_",
       "平台": "instagramreels",
-      "commentsCount": 13,
+      "commentsCount": "13",
       "红人名称": "68v_ebikes",
       "id": "3929690627927641118",
-      "videoPlayCount": 8005,
-      "videoViewCount": 2698,
+      "videoPlayCount": "8722",
+      "videoViewCount": "2806",
       "url": {
         "text": "https://www.instagram.com/p/DaJEM5Czwwe/",
         "link": "https://www.instagram.com/p/DaJEM5Czwwe/"
       },
-      "timestamp": "2026-06-28T19:41:40.000Z"
+      "timestamp": "2026-06-28T19:41:40.000Z",
+      "7日成熟声量": 8722
     },
     "source": "local-discovery",
     "importedAt": "",
-    "updatedAt": "2026-07-05T14:47:07.953Z"
+    "updatedAt": "2026-07-13T02:00:50.642Z"
   },
   {
     "id": "vid_1783263163744_onub94y",
     "fields": {
       "是否监控": "是",
-      "likesCount": 44,
-      "videoUrl": "https://scontent-hou1-1.cdninstagram.com/o1/v/t2/f2/m86/AQMYbMBXMMcB37Yfxe_lC7_K36XhckqkKZuq_7uH1gAbUOIINLsu3r1ETIUTpt6UdxSCLfn8g6KK3yk-CrnGIIqNXTX1O53anakDRxQ.mp4?_nc_cat=103&_nc_sid=5e9851&_nc_ht=scontent-hou1-1.cdninstagram.com&_nc_ohc=SdCqis_ys78Q7kNvwFgG_Eg&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5JTlNUQUdSQU0uQ0xJUFMuQzMuNzIwLmRhc2hfYmFzZWxpbmVfMV92MSIsInhwdl9hc3NldF9pZCI6MTU1NzgyMzY5MjUxNDk0NiwiYXNzZXRfYWdlX2RheXMiOjMsInZpX3VzZWNhc2VfaWQiOjEwMDk5LCJkdXJhdGlvbl9zIjo4NywidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=17-1&vs=950a466fd7a3cd8e&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC9DMDRDODMxRjA4MDMwQUFEMjhGNDhGQjhDOUY1RkI5MV92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyL0RDNDhFRjNEQUIyMDY4MzNDNDgwQUZGRjFBNTEwMkI4X2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACaEmoX9orXEBRUCKAJDMywXQFXVT987ZFoYEmRhc2hfYmFzZWxpbmVfMV92MREAdf4HZeadAQA&_nc_gid=09tGt4BfVt2r48cyRm1TGg&_nc_ss=7c689&_nc_zt=28&oh=00_AQAuCDn_",
+      "likesCount": "48",
+      "videoUrl": "https://scontent-lga3-1.cdninstagram.com/o1/v/t2/f2/m86/AQMYbMBXMMcB37Yfxe_lC7_K36XhckqkKZuq_7uH1gAbUOIINLsu3r1ETIUTpt6UdxSCLfn8g6KK3yk-CrnGIIqNXTX1O53anakDRxQ.mp4?_nc_cat=103&_nc_sid=5e9851&_nc_ht=scontent-lga3-1.cdninstagram.com&_nc_ohc=7AOf2VSS7XYQ7kNvwHYcgBC&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5JTlNUQUdSQU0uQ0xJUFMuQzMuNzIwLmRhc2hfYmFzZWxpbmVfMV92MSIsInhwdl9hc3NldF9pZCI6MTU1NzgyMzY5MjUxNDk0NiwiYXNzZXRfYWdlX2RheXMiOjExLCJ2aV91c2VjYXNlX2lkIjoxMDA5OSwiZHVyYXRpb25fcyI6ODcsInVybGdlbl9zb3VyY2UiOiJ3d3cifQ%3D%3D&ccb=17-1&vs=950a466fd7a3cd8e&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC9DMDRDODMxRjA4MDMwQUFEMjhGNDhGQjhDOUY1RkI5MV92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyL0RDNDhFRjNEQUIyMDY4MzNDNDgwQUZGRjFBNTEwMkI4X2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACaEmoX9orXEBRUCKAJDMywXQFXVT987ZFoYEmRhc2hfYmFzZWxpbmVfMV92MREAdf4HZeadAQA&_nc_gid=AFhaxozNM6nqGSquyO_HjQ&_nc_ss=72a8c&_nc_zt=28&oh=00_",
       "平台": "instagramreels",
-      "commentsCount": 8,
+      "commentsCount": "8",
       "红人名称": "tmodzz",
       "id": "3931725831448752728",
-      "videoPlayCount": 2161,
-      "videoViewCount": 1209,
+      "videoPlayCount": "2404",
+      "videoViewCount": "1282",
       "url": {
         "text": "https://www.instagram.com/p/DaQS9ABuvJY/",
         "link": "https://www.instagram.com/p/DaQS9ABuvJY/"
       },
-      "timestamp": "2026-07-01T15:05:16.000Z"
+      "timestamp": "2026-07-01T15:05:16.000Z",
+      "7日成熟声量": 2404
     },
     "source": "local-discovery",
     "importedAt": "",
-    "updatedAt": "2026-07-05T14:52:43.744Z"
+    "updatedAt": "2026-07-13T02:00:50.643Z"
   },
   {
     "id": "vid_1783263163744_r2v7d88",
     "fields": {
       "是否监控": "是",
-      "likesCount": 154,
-      "videoUrl": "https://scontent-dfw6-1.cdninstagram.com/o1/v/t2/f2/m367/AQOSLMn7aWLA52U0utJ1D5JVA7YkcDNTB-vwt-b_SdXwDh4zTa-8-PAN702Q43Rikke_GDY7QPns0vF8OxaAOfBCz-FDsE0qE4pxvaQ.mp4?_nc_cat=103&_nc_sid=9ca052&_nc_ht=scontent-dfw6-1.cdninstagram.com&_nc_ohc=nnQLPq9eqUUQ7kNvwEdlZrS&efg=eyJ2ZW5jb2RlX3RhZyI6ImlnLXhwdmRzLmNsaXBzLmlnd3d3LUMzLmRhc2hfdnA5LWJhc2ljLWdlbjItaGZyXzEwODBwIiwidmlkZW9faWQiOm51bGwsIm9pbF91cmxnZW5fYXBwX2lkIjo5MzY2MTk3NDMzOTI0NTksImNsaWVudF9uYW1lIjoiaWciLCJ4cHZfYXNzZXRfaWQiOjE3MjQ1NjUyMDIwMTk4NjMsImFzc2V0X2FnZV9kYXlzIjo1LCJ2aV91c2VjYXNlX2lkIjoxMDA5OSwiZHVyYXRpb25fcyI6MjksImJpdHJhdGUiOjM1MjIyMjIsInVybGdlbl9zb3VyY2UiOiJ3d3cifQ%3D%3D&ccb=17-1&_nc_gid=Li9g1WRV6ufK-pU3m3QIag&_nc_ss=72a8c&_nc_zt=28&oh=00_AQAsV9ymw3dkkDXqTLI9lYwJ1CGpggHqyPfsXcM60gPxeA&oe=6A5047EC",
+      "likesCount": "161",
+      "videoUrl": "https://scontent-phl2-1.cdninstagram.com/o1/v/t2/f2/m367/AQOSLMn7aWLA52U0utJ1D5JVA7YkcDNTB-vwt-b_SdXwDh4zTa-8-PAN702Q43Rikke_GDY7QPns0vF8OxaAOfBCz-FDsE0qE4pxvaQ.mp4?_nc_cat=103&_nc_sid=9ca052&_nc_ht=scontent-phl2-1.cdninstagram.com&_nc_ohc=RiKhTqh_3lgQ7kNvwG0ay5u&efg=eyJ2ZW5jb2RlX3RhZyI6ImlnLXhwdmRzLmNsaXBzLmlnd3d3LUMzLmRhc2hfdnA5LWJhc2ljLWdlbjItaGZyXzEwODBwIiwidmlkZW9faWQiOm51bGwsIm9pbF91cmxnZW5fYXBwX2lkIjo5MzY2MTk3NDMzOTI0NTksImNsaWVudF9uYW1lIjoiaWciLCJ4cHZfYXNzZXRfaWQiOjE3MjQ1NjUyMDIwMTk4NjMsImFzc2V0X2FnZV9kYXlzIjoxMywidmlfdXNlY2FzZV9pZCI6MTAwOTksImR1cmF0aW9uX3MiOjI5LCJiaXRyYXRlIjozNTIyMjIyLCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&_nc_gid=oAorw7edBREZ-O9PYawgqA&_nc_ss=72689&_nc_zt=28&oh=00_AQDyVeOuOXV5EOLaHHuxW7hlx0uT9t363CI50qqeBPpjhA&oe=6A5A2B2C",
       "平台": "instagramreels",
-      "commentsCount": 12,
+      "commentsCount": "12",
       "红人名称": "tmodzz",
       "id": "3930505979442886652",
-      "videoPlayCount": 6059,
-      "videoViewCount": 3140,
+      "videoPlayCount": "6251",
+      "videoViewCount": "3188",
       "url": {
         "text": "https://www.instagram.com/p/DaL9l0UPff8/",
         "link": "https://www.instagram.com/p/DaL9l0UPff8/"
       },
-      "timestamp": "2026-06-29T22:41:39.000Z"
+      "timestamp": "2026-06-29T22:41:39.000Z",
+      "7日成熟声量": 6251
     },
     "source": "local-discovery",
     "importedAt": "",
-    "updatedAt": "2026-07-05T14:52:43.744Z"
+    "updatedAt": "2026-07-13T02:00:50.643Z"
   },
   {
     "id": "vid_1783263727471_vlyjg5k",
     "fields": {
       "是否监控": "是",
-      "likesCount": 194,
-      "videoUrl": "https://scontent-ord5-3.cdninstagram.com/o1/v/t2/f2/m367/AQMPnb8OZnurTsOOULnuRJowzDjRi8GkTEMnNSaKIzvo6t6kl6C9FpSU7aaNQfmJ0B9dd5iDuxjpVc4TjmweVnxWoHNMgc4i6Ee_nHdf0ytekA.mp4?_nc_cat=110&_nc_sid=9ca052&_nc_ht=scontent-ord5-3.cdninstagram.com&_nc_ohc=yulPi5zWG0wQ7kNvwGDVZuk&efg=eyJ2ZW5jb2RlX3RhZyI6ImlnLXhwdmRzLmNsaXBzLmlnd3d3LUMzLmRhc2hfdnA5LWJhc2ljLWdlbjJfMTA4MHAiLCJ2aWRlb19pZCI6bnVsbCwib2lsX3VybGdlbl9hcHBfaWQiOjkzNjYxOTc0MzM5MjQ1OSwiY2xpZW50X25hbWUiOiJpZyIsInhwdl9hc3NldF9pZCI6Nzk2ODM2OTQwMDg3MDg3LCJhc3NldF9hZ2VfZGF5cyI6NSwidmlfdXNlY2FzZV9pZCI6MTA4MjcsImR1cmF0aW9uX3MiOjQzLCJiaXRyYXRlIjo4NjE3MTM2LCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&_nc_gid=E-vLiZF3GCevq4e0SGwf3w&_nc_ss=72689&_nc_zt=28&oh=00_AQCMNQHtAEPIKCZqfqszc2Y_HMBipMKsbLUO8T7XKLubUA&oe=6A504492",
+      "likesCount": "211",
+      "videoUrl": "https://scontent-mia3-3.cdninstagram.com/o1/v/t2/f2/m367/AQMPnb8OZnurTsOOULnuRJowzDjRi8GkTEMnNSaKIzvo6t6kl6C9FpSU7aaNQfmJ0B9dd5iDuxjpVc4TjmweVnxWoHNMgc4i6Ee_nHdf0ytekA.mp4?_nc_cat=110&_nc_sid=9ca052&_nc_ht=scontent-mia3-3.cdninstagram.com&_nc_ohc=jg7WWWoI19oQ7kNvwGXjKTI&efg=eyJ2ZW5jb2RlX3RhZyI6ImlnLXhwdmRzLmNsaXBzLmlnd3d3LUMzLmRhc2hfdnA5LWJhc2ljLWdlbjJfMTA4MHAiLCJ2aWRlb19pZCI6bnVsbCwib2lsX3VybGdlbl9hcHBfaWQiOjkzNjYxOTc0MzM5MjQ1OSwiY2xpZW50X25hbWUiOiJpZyIsInhwdl9hc3NldF9pZCI6Nzk2ODM2OTQwMDg3MDg3LCJhc3NldF9hZ2VfZGF5cyI6MTMsInZpX3VzZWNhc2VfaWQiOjEwODI3LCJkdXJhdGlvbl9zIjo0MywiYml0cmF0ZSI6ODYxNzEzNiwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=17-1&_nc_gid=mgzHhv6Dpd1H9-pDrMZ0bw&_nc_ss=72689&_nc_zt=28&oh=00_AQAQRjGqieoHqKvfi4_mSeX9NLWK_Rb6P2T4qMhz3a16KQ&oe=6A5A27D2",
       "平台": "instagramreels",
-      "commentsCount": 0,
+      "commentsCount": "0",
       "红人名称": "breastyle.mx",
       "id": "3930448709417273071",
-      "videoPlayCount": 3460,
-      "videoViewCount": 1478,
+      "videoPlayCount": "3896",
+      "videoViewCount": "1584",
       "url": {
         "text": "https://www.instagram.com/p/DaLwkbctYbv/",
         "link": "https://www.instagram.com/p/DaLwkbctYbv/"
       },
-      "timestamp": "2026-06-29T20:47:11.000Z"
+      "timestamp": "2026-06-29T20:47:11.000Z",
+      "7日成熟声量": 3896
     },
     "source": "local-discovery",
     "importedAt": "",
-    "updatedAt": "2026-07-05T15:02:07.471Z"
+    "updatedAt": "2026-07-13T02:00:50.643Z"
   },
   {
     "id": "vid_1783263969519_jfm1jw7",
     "fields": {
       "是否监控": "是",
-      "likesCount": 27,
-      "videoUrl": "https://instagram.fagc1-1.fna.fbcdn.net/o1/v/t2/f2/m86/AQNJBrT1U643CsA78uL7YlIdfV7dhVf2mgYlsqAGB7Sn7R5VKfbZwm8dhHNY4NJ0XNH2_l5TiJyrX_4-rWNwj0Aeg-UIN9ofbD2ND30.mp4?_nc_cat=103&_nc_oc=Adr1KNMkm4acDOh7VPQN2NYhfu83kD8rQW4pqQV08KmO9msmq7QIwODPeQ-SUlFkkQ4&_nc_sid=5e9851&_nc_ht=instagram.fagc1-1.fna.fbcdn.net&_nc_ohc=Q9j5e7pz0kYQ7kNvwGOh8zR&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5JTlNUQUdSQU0uQ0xJUFMuQzMuNzIwLmRhc2hfYmFzZWxpbmVfMV92MSIsInhwdl9hc3NldF9pZCI6MTA0NzM5NzcwNzk3NjIwOCwiYXNzZXRfYWdlX2RheXMiOjEsInZpX3VzZWNhc2VfaWQiOjEwMDk5LCJkdXJhdGlvbl9zIjoxNSwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=17-1&vs=14690a70c028d5cb&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC9ENjQ1ODYyQkMxNTJBQjA0NEJGREUxQkMyRjRCREVCQl92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyLzhENDI0ODk1ODlDNEE3OUE5OERCRjdERkQ1RkM4QkE5X2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACaguJSFyabcAxUCKAJDMywXQC9EGJN0vGoYEmRhc2hfYmFzZWxpbmVfMV92MREAdf4HZea",
+      "likesCount": "35",
+      "videoUrl": "https://scontent-sjc3-1.cdninstagram.com/o1/v/t2/f2/m86/AQNJBrT1U643CsA78uL7YlIdfV7dhVf2mgYlsqAGB7Sn7R5VKfbZwm8dhHNY4NJ0XNH2_l5TiJyrX_4-rWNwj0Aeg-UIN9ofbD2ND30.mp4?_nc_cat=103&_nc_sid=5e9851&_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_ohc=BSTdHvaI-EIQ7kNvwGEOybL&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5JTlNUQUdSQU0uQ0xJUFMuQzMuNzIwLmRhc2hfYmFzZWxpbmVfMV92MSIsInhwdl9hc3NldF9pZCI6MTA0NzM5NzcwNzk3NjIwOCwiYXNzZXRfYWdlX2RheXMiOjgsInZpX3VzZWNhc2VfaWQiOjEwMDk5LCJkdXJhdGlvbl9zIjoxNSwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=17-1&vs=14690a70c028d5cb&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC9ENjQ1ODYyQkMxNTJBQjA0NEJGREUxQkMyRjRCREVCQl92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyLzhENDI0ODk1ODlDNEE3OUE5OERCRjdERkQ1RkM4QkE5X2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACaguJSFyabcAxUCKAJDMywXQC9EGJN0vGoYEmRhc2hfYmFzZWxpbmVfMV92MREAdf4HZeadAQA&_nc_gid=KARs-vBMNfhsKXWEXvYDFg&_nc_ss=72a8c&_nc_zt=28&oh=00_AQB47b3i",
       "平台": "instagramreels",
-      "commentsCount": 0,
+      "commentsCount": "0",
       "红人名称": "officialchickenjoe",
       "id": "3933549125128103836",
-      "videoPlayCount": 2154,
-      "videoViewCount": 633,
+      "videoPlayCount": "2658",
+      "videoViewCount": "725",
       "url": {
         "text": "https://www.instagram.com/p/DaWxhalzyec/",
         "link": "https://www.instagram.com/p/DaWxhalzyec/"
       },
-      "timestamp": "2026-07-04T03:27:52.000Z"
+      "timestamp": "2026-07-04T03:27:52.000Z",
+      "7日成熟声量": 2658
     },
     "source": "local-discovery",
     "importedAt": "",
-    "updatedAt": "2026-07-05T15:06:09.519Z"
+    "updatedAt": "2026-07-13T02:00:50.644Z"
   },
   {
     "id": "vid_1783264049585_wkavfdb",
     "fields": {
       "是否监控": "是",
-      "likesCount": 315,
-      "videoUrl": "https://scontent-iad6-1.cdninstagram.com/o1/v/t2/f2/m86/AQOciLsTSq21Xg5rblkL8ERatCuq7tgMeO2ly2_OuIp33lXwOl6MnBETsBCKrOF06UfZzM0BiJDy3NNkGaw5gKGbbu29dZCqkpmhDsU.mp4?_nc_cat=102&_nc_sid=5e9851&_nc_ht=scontent-iad6-1.cdninstagram.com&_nc_ohc=C5iv5wb_dAUQ7kNvwH6qFsu&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5JTlNUQUdSQU0uQ0xJUFMuQzMuNzIwLmRhc2hfYmFzZWxpbmVfMV92MSIsInhwdl9hc3NldF9pZCI6MjQ1MDExMTM5MjEyNDIyNCwiYXNzZXRfYWdlX2RheXMiOjMsInZpX3VzZWNhc2VfaWQiOjEwMDk5LCJkdXJhdGlvbl9zIjoxMCwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=17-1&vs=426686657caef066&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC82MTREMjVBNDFGQThCMEFEMzU5NzlFNDMzNkZDNTNBM192aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyL0Y4NDAzMUU3MThGRDI1MzZCQTJCMjQwQkNEN0M2RDkyX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACaAtYCzoJfaCBUCKAJDMywXQCTul41P3zsYEmRhc2hfYmFzZWxpbmVfMV92MREAdf4HZeadAQA&_nc_gid=Yuhtq3K-BJDweXN196hkrg&_nc_ss=72a8c&_nc_zt=28&oh=00_AQAGyH2m",
+      "likesCount": "346",
+      "videoUrl": "https://scontent-hou1-1.cdninstagram.com/o1/v/t2/f2/m86/AQOciLsTSq21Xg5rblkL8ERatCuq7tgMeO2ly2_OuIp33lXwOl6MnBETsBCKrOF06UfZzM0BiJDy3NNkGaw5gKGbbu29dZCqkpmhDsU.mp4?_nc_cat=102&_nc_sid=5e9851&_nc_ht=scontent-hou1-1.cdninstagram.com&_nc_ohc=QnPPS3FlQisQ7kNvwHQzOCs&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5JTlNUQUdSQU0uQ0xJUFMuQzMuNzIwLmRhc2hfYmFzZWxpbmVfMV92MSIsInhwdl9hc3NldF9pZCI6MjQ1MDExMTM5MjEyNDIyNCwiYXNzZXRfYWdlX2RheXMiOjExLCJ2aV91c2VjYXNlX2lkIjoxMDA5OSwiZHVyYXRpb25fcyI6MTAsInVybGdlbl9zb3VyY2UiOiJ3d3cifQ%3D%3D&ccb=17-1&vs=426686657caef066&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC82MTREMjVBNDFGQThCMEFEMzU5NzlFNDMzNkZDNTNBM192aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyL0Y4NDAzMUU3MThGRDI1MzZCQTJCMjQwQkNEN0M2RDkyX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACaAtYCzoJfaCBUCKAJDMywXQCTul41P3zsYEmRhc2hfYmFzZWxpbmVfMV92MREAdf4HZeadAQA&_nc_gid=WrNGYujuhkCHnA6ppo8UcQ&_nc_ss=72a8c&_nc_zt=28&oh=00_",
       "平台": "instagramreels",
-      "commentsCount": 15,
+      "commentsCount": "15",
       "红人名称": "_rizzoto_",
       "id": "3931772196425998747",
-      "videoPlayCount": 12455,
-      "videoViewCount": 2969,
+      "videoPlayCount": "13812",
+      "videoViewCount": "3146",
       "url": {
         "text": "https://www.instagram.com/p/DaQdfsxuqGb/",
         "link": "https://www.instagram.com/p/DaQdfsxuqGb/"
       },
-      "timestamp": "2026-07-01T16:37:45.000Z"
+      "timestamp": "2026-07-01T16:37:45.000Z",
+      "7日成熟声量": 13812
     },
     "source": "local-discovery",
     "importedAt": "",
-    "updatedAt": "2026-07-05T15:07:29.585Z"
+    "updatedAt": "2026-07-13T02:00:50.644Z"
   },
   {
     "id": "vid_1783264075906_jpl3dsq",
     "fields": {
       "是否监控": "是",
-      "likesCount": 253,
-      "videoUrl": "https://scontent-iad6-1.cdninstagram.com/o1/v/t2/f2/m86/AQNibLq3BpkcRB9Xt04YxmL-nxy4y3fB-Dg47Xl2XfQza9mNg-h4tA3WuamuPKpxM0xEDI3B4iKWNtEjYVokSqvHKCArELwXC6MDlwI.mp4?_nc_cat=102&_nc_sid=5e9851&_nc_ht=scontent-iad6-1.cdninstagram.com&_nc_ohc=JfKVnD85Vt4Q7kNvwFW_LlA&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5JTlNUQUdSQU0uQ0xJUFMuQzMuNzIwLmRhc2hfYmFzZWxpbmVfMV92MSIsInhwdl9hc3NldF9pZCI6MTc4MzU3MDk4NjMzODY3OCwiYXNzZXRfYWdlX2RheXMiOjYsInZpX3VzZWNhc2VfaWQiOjEwMDk5LCJkdXJhdGlvbl9zIjoxMywidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=17-1&vs=df06e8bd20333d11&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC83NTRGNTFFQjcwRDM4NjQ2MjBCMzIxMzEyMTcxOTM5QV92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyLzFFNDdGNjdEN0RCOUEwRjZCRDRCNUYzREEzNjE5NTg3X2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACbspZSxv4mrBhUCKAJDMywXQCqIMSbpeNUYEmRhc2hfYmFzZWxpbmVfMV92MREAdf4HZeadAQA&_nc_gid=6bS6tj-AhkrsRw1mjc0pKA&_nc_ss=72a8c&_nc_zt=28&oh=00_AQAPel8k",
+      "likesCount": "271",
+      "videoUrl": "https://scontent-ord5-2.cdninstagram.com/o1/v/t2/f2/m86/AQNibLq3BpkcRB9Xt04YxmL-nxy4y3fB-Dg47Xl2XfQza9mNg-h4tA3WuamuPKpxM0xEDI3B4iKWNtEjYVokSqvHKCArELwXC6MDlwI.mp4?_nc_cat=102&_nc_sid=5e9851&_nc_ht=scontent-ord5-2.cdninstagram.com&_nc_ohc=TZM-cslMRTwQ7kNvwGbM0P0&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5JTlNUQUdSQU0uQ0xJUFMuQzMuNzIwLmRhc2hfYmFzZWxpbmVfMV92MSIsInhwdl9hc3NldF9pZCI6MTc4MzU3MDk4NjMzODY3OCwiYXNzZXRfYWdlX2RheXMiOjE0LCJ2aV91c2VjYXNlX2lkIjoxMDA5OSwiZHVyYXRpb25fcyI6MTMsInVybGdlbl9zb3VyY2UiOiJ3d3cifQ%3D%3D&ccb=17-1&vs=df06e8bd20333d11&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC83NTRGNTFFQjcwRDM4NjQ2MjBCMzIxMzEyMTcxOTM5QV92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyLzFFNDdGNjdEN0RCOUEwRjZCRDRCNUYzREEzNjE5NTg3X2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACbspZSxv4mrBhUCKAJDMywXQCqIMSbpeNUYEmRhc2hfYmFzZWxpbmVfMV92MREAdf4HZeadAQA&_nc_gid=T6uAp0X0vNoS7Bjjs_JWag&_nc_ss=72a8c&_nc_zt=28&oh=00_",
       "平台": "instagramreels",
-      "commentsCount": 17,
+      "commentsCount": "17",
       "红人名称": "lifewjozy",
       "id": "3929821440295411959",
-      "videoPlayCount": 9918,
-      "videoViewCount": 1432,
+      "videoPlayCount": "10999",
+      "videoViewCount": "1515",
       "url": {
         "text": "https://www.instagram.com/p/DaJh8djhaD3/",
         "link": "https://www.instagram.com/p/DaJh8djhaD3/"
       },
-      "timestamp": "2026-06-29T00:00:09.000Z"
+      "timestamp": "2026-06-29T00:00:09.000Z",
+      "7日成熟声量": 10999
     },
     "source": "local-discovery",
     "importedAt": "",
-    "updatedAt": "2026-07-05T15:07:55.906Z"
+    "updatedAt": "2026-07-13T02:00:50.644Z"
   },
   {
     "id": "vid_1783264509755_gbn8v3l",
     "fields": {
       "是否监控": "是",
-      "likesCount": 137,
-      "videoUrl": "https://scontent-iad3-1.cdninstagram.com/o1/v/t2/f2/m86/AQOV9-4b1K0PksRJEk47XTpJYjQwegJ0_VaEeKin2erWc0zo4icevl19QomRdbAXYcGlpF7k-QYvJFPLeGiIDy8ElQX5Pr5DMAxIBOU.mp4?_nc_cat=101&_nc_sid=5e9851&_nc_ht=scontent-iad3-1.cdninstagram.com&_nc_ohc=DrgOTMUwPloQ7kNvwGwz8f1&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5JTlNUQUdSQU0uQ0xJUFMuQzMuNzIwLmRhc2hfYmFzZWxpbmVfMV92MSIsInhwdl9hc3NldF9pZCI6OTg0ODYyMjk0MzcyMDcxLCJhc3NldF9hZ2VfZGF5cyI6MiwidmlfdXNlY2FzZV9pZCI6MTAwOTksImR1cmF0aW9uX3MiOjc4LCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&vs=c21b7de2de9d7660&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC9CNzQzNTUzNTI5OEM3OTY4RUYxRjkyN0E2NjgwQzhBNV92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyL0QzNEU2NjkyNkQ5RjhCQjA0NzIyRjVCMDdFQThBMEFFX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACbOu6vzw-6_AxUCKAJDMywXQFOIgxJul40YEmRhc2hfYmFzZWxpbmVfMV92MREAdf4HZeadAQA&_nc_gid=_G9HNpc2VwQ_fLHU5VOKGg&_nc_zt=28&_nc_ss=72689&oh=00_AQB2MN",
+      "likesCount": "209",
+      "videoUrl": "https://scontent-dfw6-1.cdninstagram.com/o1/v/t2/f2/m86/AQOV9-4b1K0PksRJEk47XTpJYjQwegJ0_VaEeKin2erWc0zo4icevl19QomRdbAXYcGlpF7k-QYvJFPLeGiIDy8ElQX5Pr5DMAxIBOU.mp4?_nc_cat=101&_nc_sid=5e9851&_nc_ht=scontent-dfw6-1.cdninstagram.com&_nc_ohc=3bWxN1TgAQAQ7kNvwFuz5bi&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5JTlNUQUdSQU0uQ0xJUFMuQzMuNzIwLmRhc2hfYmFzZWxpbmVfMV92MSIsInhwdl9hc3NldF9pZCI6OTg0ODYyMjk0MzcyMDcxLCJhc3NldF9hZ2VfZGF5cyI6OSwidmlfdXNlY2FzZV9pZCI6MTAwOTksImR1cmF0aW9uX3MiOjc4LCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&vs=c21b7de2de9d7660&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC9CNzQzNTUzNTI5OEM3OTY4RUYxRjkyN0E2NjgwQzhBNV92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyL0QzNEU2NjkyNkQ5RjhCQjA0NzIyRjVCMDdFQThBMEFFX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACbOu6vzw-6_AxUCKAJDMywXQFOIgxJul40YEmRhc2hfYmFzZWxpbmVfMV92MREAdf4HZeadAQA&_nc_gid=JDvJBB6esWGlFo4JjwztZA&_nc_ss=72a8c&_nc_zt=28&oh=00_AQDu67",
       "平台": "instagramreels",
-      "commentsCount": 13,
+      "commentsCount": "15",
       "红人名称": "jvairx",
       "id": "3933167399788332273",
-      "videoPlayCount": 6913,
-      "videoViewCount": 1240,
+      "videoPlayCount": "10602",
+      "videoViewCount": "1897",
       "url": {
         "text": "https://www.instagram.com/p/DaVaulKh8Tx/",
         "link": "https://www.instagram.com/p/DaVaulKh8Tx/"
       },
-      "timestamp": "2026-07-03T14:51:59.000Z"
+      "timestamp": "2026-07-03T14:51:59.000Z",
+      "7日成熟声量": 10602
     },
     "source": "local-discovery",
     "importedAt": "",
-    "updatedAt": "2026-07-05T15:15:09.755Z"
+    "updatedAt": "2026-07-13T02:00:50.644Z"
   },
   {
     "id": "vid_1783264522937_gwsu8rw",
     "fields": {
       "是否监控": "是",
-      "likesCount": 3,
-      "videoUrl": "https://scontent-dfw6-2.cdninstagram.com/o1/v/t2/f2/m86/AQO8ZMa9qunmmkf3oUUTQp83cwXJAjrSj4VDvB3rMj3gJw4zW17WVIpKEHL6eOLTDZg_QehUhyVg4xPzW-cZO1CDXFqZQSKatalbj1c.mp4?_nc_cat=110&_nc_sid=5e9851&_nc_ht=scontent-dfw6-2.cdninstagram.com&_nc_ohc=hyJOXoh-xB0Q7kNvwEppUpN&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5JTlNUQUdSQU0uQ0xJUFMuQzMuNzIwLmRhc2hfYmFzZWxpbmVfMV92MSIsInhwdl9hc3NldF9pZCI6MTQwODM2ODQzMTEyNzk3NSwiYXNzZXRfYWdlX2RheXMiOjIsInZpX3VzZWNhc2VfaWQiOjEwMDk5LCJkdXJhdGlvbl9zIjo5LCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&vs=7404e44f3f59c007&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC80RTQzRUMyRUJDN0MzQkFCNThDQzg4QjI3NEM5RjlBNV92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyLzI5NDA2MzFGOUM1MTQwMjZCRUVDNTYyNzhCNUU3OEE1X2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACbO9ubA6rmABRUCKAJDMywXQCOIMSbpeNUYEmRhc2hfYmFzZWxpbmVfMV92MREAdf4HZeadAQA&_nc_gid=wicMCgMOhBj4D2n8F1Sb6A&_nc_ss=72689&_nc_zt=28&oh=00_AQDrai",
+      "likesCount": "3",
+      "videoUrl": "https://scontent-atl3-3.cdninstagram.com/o1/v/t2/f2/m86/AQO8ZMa9qunmmkf3oUUTQp83cwXJAjrSj4VDvB3rMj3gJw4zW17WVIpKEHL6eOLTDZg_QehUhyVg4xPzW-cZO1CDXFqZQSKatalbj1c.mp4?_nc_cat=110&_nc_sid=5e9851&_nc_ht=scontent-atl3-3.cdninstagram.com&_nc_ohc=fYx_b_v43mAQ7kNvwF_4y__&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5JTlNUQUdSQU0uQ0xJUFMuQzMuNzIwLmRhc2hfYmFzZWxpbmVfMV92MSIsInhwdl9hc3NldF9pZCI6MTQwODM2ODQzMTEyNzk3NSwiYXNzZXRfYWdlX2RheXMiOjEwLCJ2aV91c2VjYXNlX2lkIjoxMDA5OSwiZHVyYXRpb25fcyI6OSwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=17-1&vs=7404e44f3f59c007&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC80RTQzRUMyRUJDN0MzQkFCNThDQzg4QjI3NEM5RjlBNV92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyLzI5NDA2MzFGOUM1MTQwMjZCRUVDNTYyNzhCNUU3OEE1X2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACbO9ubA6rmABRUCKAJDMywXQCOIMSbpeNUYEmRhc2hfYmFzZWxpbmVfMV92MREAdf4HZeadAQA&_nc_gid=5pqcegrMB3GWEDR44UzTCQ&_nc_ss=7ca8c&_nc_zt=28&oh=00_AQDMvPcx",
       "平台": "instagramreels",
-      "commentsCount": 4,
+      "commentsCount": "3",
       "红人名称": "jusonninja",
       "id": "3932468703981177293",
-      "videoPlayCount": 10589,
-      "videoViewCount": 4340,
+      "videoPlayCount": "12827",
+      "videoViewCount": "4807",
       "url": {
         "text": "https://www.instagram.com/p/DaS73N_I4nN/",
         "link": "https://www.instagram.com/p/DaS73N_I4nN/"
       },
-      "timestamp": "2026-07-02T15:41:30.000Z"
+      "timestamp": "2026-07-02T15:41:30.000Z",
+      "7日成熟声量": 12827
     },
     "source": "local-discovery",
     "importedAt": "",
-    "updatedAt": "2026-07-05T15:15:22.937Z"
+    "updatedAt": "2026-07-13T02:00:50.644Z"
   },
   {
     "id": "vid_1783264558775_oca3krt",
     "fields": {
       "是否监控": "是",
-      "likesCount": 20,
-      "videoUrl": "https://scontent-ord5-2.cdninstagram.com/o1/v/t2/f2/m86/AQOF5ZcfU52EEg6NyOPTAv0bXa7qw9lLdlpqGxcqF_PjSSToaMKmIvSqXOBD-tLxq6JC8YyITgSwOPUmPq-I0b-Q9fmGFXXFsVNIR_M.mp4?_nc_cat=105&_nc_sid=5e9851&_nc_ht=scontent-ord5-2.cdninstagram.com&_nc_ohc=4stPMPn4DLsQ7kNvwFTRL_g&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5JTlNUQUdSQU0uQ0xJUFMuQzMuNzIwLmRhc2hfYmFzZWxpbmVfMV92MSIsInhwdl9hc3NldF9pZCI6MTczNjc5MTMzNDAyNTM4NSwiYXNzZXRfYWdlX2RheXMiOjQsInZpX3VzZWNhc2VfaWQiOjEwMDk5LCJkdXJhdGlvbl9zIjoxNCwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=17-1&vs=db59a25a8c225086&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC9DNDRDMDkzNDRCRjgwRDNERTM1QzIyMzg1MTZBRjA4Q192aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyLzBENEU3RTk5MzQzMkZGRUFEMTdENDc0QkE3QkE4Mzk5X2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACbS4pvox-aVBhUCKAJDMywXQC3MzMzMzM0YEmRhc2hfYmFzZWxpbmVfMV92MREAdf4HZeadAQA&_nc_gid=X8qkiJNCxIJ37UQpEYkYUA&_nc_ss=72a8c&_nc_zt=28&oh=00_AQCcw8lt",
+      "likesCount": "20",
+      "videoUrl": "https://scontent-atl3-2.cdninstagram.com/o1/v/t2/f2/m86/AQOF5ZcfU52EEg6NyOPTAv0bXa7qw9lLdlpqGxcqF_PjSSToaMKmIvSqXOBD-tLxq6JC8YyITgSwOPUmPq-I0b-Q9fmGFXXFsVNIR_M.mp4?_nc_cat=105&_nc_sid=5e9851&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_ohc=1WZ1qo2jFr4Q7kNvwEVvoRV&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5JTlNUQUdSQU0uQ0xJUFMuQzMuNzIwLmRhc2hfYmFzZWxpbmVfMV92MSIsInhwdl9hc3NldF9pZCI6MTczNjc5MTMzNDAyNTM4NSwiYXNzZXRfYWdlX2RheXMiOjExLCJ2aV91c2VjYXNlX2lkIjoxMDA5OSwiZHVyYXRpb25fcyI6MTQsInVybGdlbl9zb3VyY2UiOiJ3d3cifQ%3D%3D&ccb=17-1&vs=db59a25a8c225086&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC9DNDRDMDkzNDRCRjgwRDNERTM1QzIyMzg1MTZBRjA4Q192aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyLzBENEU3RTk5MzQzMkZGRUFEMTdENDc0QkE3QkE4Mzk5X2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACbS4pvox-aVBhUCKAJDMywXQC3MzMzMzM0YEmRhc2hfYmFzZWxpbmVfMV92MREAdf4HZeadAQA&_nc_gid=Jpq2fc4hk6psIX9nW5HwzA&_nc_ss=72a8c&_nc_zt=28&oh=00_",
       "平台": "instagramreels",
-      "commentsCount": 0,
+      "commentsCount": "0",
       "红人名称": "whatthekelsieheck",
       "id": "3931379727977435624",
-      "videoPlayCount": 1161,
-      "videoViewCount": 524,
+      "videoPlayCount": "1161",
+      "videoViewCount": "524",
       "url": {
         "text": "https://www.instagram.com/p/DaPEQiDRFHo/",
         "link": "https://www.instagram.com/p/DaPEQiDRFHo/"
       },
-      "timestamp": "2026-07-01T03:38:04.000Z"
+      "timestamp": "2026-07-01T03:38:04.000Z",
+      "7日成熟声量": 1161
     },
     "source": "local-discovery",
     "importedAt": "",
-    "updatedAt": "2026-07-05T15:15:58.775Z"
+    "updatedAt": "2026-07-13T02:00:50.644Z"
   },
   {
     "id": "vid_1783264593533_fsp78zy",
     "fields": {
       "是否监控": "是",
-      "likesCount": 32,
-      "videoUrl": "https://instagram.fhyw1-1.fna.fbcdn.net/o1/v/t2/f2/m86/AQNemLS-2o9cGVpoGxEQX-W-sASfaJIyqaOWiJWzxkrpJGKVzX0kXU4sgWLzdBXPw0jBaiJylM4TcJJ8eSOyC9_SBl6hIl5UEE_-eu8.mp4?_nc_cat=111&_nc_oc=AdqXj2iPSVbLiLpfomSLFDo8R5Mug34a1NMmBweUkYvUBg_DOltOyQObQbpmk6-mmTI&_nc_sid=5e9851&_nc_ht=instagram.fhyw1-1.fna.fbcdn.net&_nc_ohc=iwGndkZhSB4Q7kNvwEyIyhN&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5JTlNUQUdSQU0uQ0xJUFMuQzMuNzIwLmRhc2hfYmFzZWxpbmVfMV92MSIsInhwdl9hc3NldF9pZCI6MjI4NTEyMTUyODk2MTQ5MiwiYXNzZXRfYWdlX2RheXMiOjEsInZpX3VzZWNhc2VfaWQiOjEwMDk5LCJkdXJhdGlvbl9zIjo2MiwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=17-1&vs=43eb0171de1c9d48&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC9ERDQ0NTdBMzdGOEYwNUFEMEJBMDEyRjgwRkY5NzQ5OV92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyLzhGNDFBQ0FGNDE2MjY3OUE1OENCQTVFNTA1NzY2NTk4X2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACao54SQypOPCBUCKAJDMywXQE9u2RaHKwIYEmRhc2hfYmFzZWxpbmVfMV92MREAdf4HZea",
+      "likesCount": "42",
+      "videoUrl": "https://scontent-den2-1.cdninstagram.com/o1/v/t2/f2/m86/AQNemLS-2o9cGVpoGxEQX-W-sASfaJIyqaOWiJWzxkrpJGKVzX0kXU4sgWLzdBXPw0jBaiJylM4TcJJ8eSOyC9_SBl6hIl5UEE_-eu8.mp4?_nc_cat=111&_nc_sid=5e9851&_nc_ht=scontent-den2-1.cdninstagram.com&_nc_ohc=R7IoRYIR5jAQ7kNvwEqtDJs&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5JTlNUQUdSQU0uQ0xJUFMuQzMuNzIwLmRhc2hfYmFzZWxpbmVfMV92MSIsInhwdl9hc3NldF9pZCI6MjI4NTEyMTUyODk2MTQ5MiwiYXNzZXRfYWdlX2RheXMiOjksInZpX3VzZWNhc2VfaWQiOjEwMDk5LCJkdXJhdGlvbl9zIjo2MiwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=17-1&vs=43eb0171de1c9d48&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC9ERDQ0NTdBMzdGOEYwNUFEMEJBMDEyRjgwRkY5NzQ5OV92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyLzhGNDFBQ0FGNDE2MjY3OUE1OENCQTVFNTA1NzY2NTk4X2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACao54SQypOPCBUCKAJDMywXQE9u2RaHKwIYEmRhc2hfYmFzZWxpbmVfMV92MREAdf4HZeadAQA&_nc_gid=D5dDXxVczfotPXuI_dWeWA&_nc_ss=7c689&_nc_zt=28&oh=00_AQAZ6F_s",
       "平台": "instagramreels",
-      "commentsCount": 7,
+      "commentsCount": "8",
       "红人名称": "diggity_films",
       "id": "3933419321715721320",
-      "videoPlayCount": 1099,
-      "videoViewCount": 173,
+      "videoPlayCount": "1546",
+      "videoViewCount": "207",
       "url": {
         "text": "https://www.instagram.com/p/DaWUAhvhgRo/",
         "link": "https://www.instagram.com/p/DaWUAhvhgRo/"
       },
-      "timestamp": "2026-07-03T23:12:58.000Z"
+      "timestamp": "2026-07-03T23:12:58.000Z",
+      "7日成熟声量": 1546
     },
     "source": "local-discovery",
     "importedAt": "",
-    "updatedAt": "2026-07-05T15:16:33.533Z"
+    "updatedAt": "2026-07-13T02:00:50.644Z"
   },
   {
     "id": "vid_1783264659784_eg4o4bl",
     "fields": {
       "是否监控": "是",
-      "likesCount": 190,
-      "videoUrl": "https://scontent-atl3-1.cdninstagram.com/o1/v/t2/f2/m86/AQP4lMDtBj86VTiKtd2_Z86uybaTe-bd4CBn7-lb8eH3lYn6ycd4Wkj5Dt9ZQNoewKTbDXGGtmed3r8zUiaqrwBo3I1Cly9Uk6se0qA.mp4?_nc_cat=103&_nc_sid=5e9851&_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_ohc=ZIDooymx4G0Q7kNvwGEfuHF&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5JTlNUQUdSQU0uQ0xJUFMuQzMuNzIwLmRhc2hfYmFzZWxpbmVfMV92MSIsInhwdl9hc3NldF9pZCI6MjczNDc2MDM2NjkxNzM2MywiYXNzZXRfYWdlX2RheXMiOjMsInZpX3VzZWNhc2VfaWQiOjEwODI3LCJkdXJhdGlvbl9zIjo0NCwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=17-1&vs=10586cdadce49370&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC8xMDQyOThCMDU0QjI3MDYwOUZENDNGMkU2QTk1ODZBN192aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyLzIyNDI5OEUwNUI4Njc1RDg1NTdDRTZDMzlEQjI1MDlEX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACbmm7rDgNDbCRUCKAJDMywXQEZmZmZmZmYYEmRhc2hfYmFzZWxpbmVfMV92MREAdf4HZZapAQA&_nc_gid=LeFls0oxpGfPP3WFF5fOxg&_nc_ss=72689&_nc_zt=28&oh=00_AQCC5laM",
+      "likesCount": "223",
+      "videoUrl": "https://scontent-lax3-2.cdninstagram.com/o1/v/t2/f2/m86/AQP4lMDtBj86VTiKtd2_Z86uybaTe-bd4CBn7-lb8eH3lYn6ycd4Wkj5Dt9ZQNoewKTbDXGGtmed3r8zUiaqrwBo3I1Cly9Uk6se0qA.mp4?_nc_cat=103&_nc_sid=5e9851&_nc_ht=scontent-lax3-2.cdninstagram.com&_nc_ohc=W7NS5kOMxBoQ7kNvwF3XcRO&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5JTlNUQUdSQU0uQ0xJUFMuQzMuNzIwLmRhc2hfYmFzZWxpbmVfMV92MSIsInhwdl9hc3NldF9pZCI6MjczNDc2MDM2NjkxNzM2MywiYXNzZXRfYWdlX2RheXMiOjEwLCJ2aV91c2VjYXNlX2lkIjoxMDgyNywiZHVyYXRpb25fcyI6NDQsInVybGdlbl9zb3VyY2UiOiJ3d3cifQ%3D%3D&ccb=17-1&vs=10586cdadce49370&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC8xMDQyOThCMDU0QjI3MDYwOUZENDNGMkU2QTk1ODZBN192aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyLzIyNDI5OEUwNUI4Njc1RDg1NTdDRTZDMzlEQjI1MDlEX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACbmm7rDgNDbCRUCKAJDMywXQEZmZmZmZmYYEmRhc2hfYmFzZWxpbmVfMV92MREAdf4HZZapAQA&_nc_gid=zswK9pImyYpS0JLGOsyBXw&_nc_ss=72a8c&_nc_zt=28&oh=00_",
       "平台": "instagramreels",
-      "commentsCount": 1,
+      "commentsCount": "1",
       "红人名称": "tylerbrown316",
       "id": "3932439414143018488",
-      "videoPlayCount": 5887,
-      "videoViewCount": 2207,
+      "videoPlayCount": "6670",
+      "videoViewCount": "2328",
       "url": {
         "text": "https://www.instagram.com/p/DaS1M_svWX4/",
         "link": "https://www.instagram.com/p/DaS1M_svWX4/"
       },
-      "timestamp": "2026-07-02T14:51:58.000Z"
+      "timestamp": "2026-07-02T14:51:58.000Z",
+      "7日成熟声量": 6670
     },
     "source": "local-discovery",
     "importedAt": "",
-    "updatedAt": "2026-07-05T15:17:39.784Z"
+    "updatedAt": "2026-07-13T02:00:50.644Z"
   },
   {
     "id": "vid_1783264932860_lctbhxu",
     "fields": {
       "是否监控": "是",
-      "likesCount": 122,
-      "videoUrl": "https://scontent-ord5-1.cdninstagram.com/o1/v/t2/f2/m86/AQMTh6Iw8RatRzAKL7rh2vaRROjjqQZqyu7p_NnQ1mC5qakyo3nNdYTrkVOEzXrhMY1aSNBbTVWDzkQyjcxgiD_563aAxLkIVEW70I8.mp4?_nc_cat=111&_nc_sid=5e9851&_nc_ht=scontent-ord5-1.cdninstagram.com&_nc_ohc=BZtrswyxBmkQ7kNvwEtXZn2&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5JTlNUQUdSQU0uQ0xJUFMuQzMuNzIwLmRhc2hfYmFzZWxpbmVfMV92MSIsInhwdl9hc3NldF9pZCI6MTY1NjMzOTA1ODc1Mjc5NCwiYXNzZXRfYWdlX2RheXMiOjUsInZpX3VzZWNhc2VfaWQiOjEwODI3LCJkdXJhdGlvbl9zIjozMywidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=17-1&vs=7ec435da94ab6725&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC8yQTRBNDg4NzdBQjYyRkU0NEZGNjc3OEIyNjFEQkU5N192aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyLzVENDcwNThDNEEyRjEwRUFDODk4RkFGM0VDRDA0NDk3X2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACa09MvTz5vxBRUCKAJDMywXQECu2RaHKwIYEmRhc2hfYmFzZWxpbmVfMV92MREAdf4HZZapAQA&_nc_gid=NtE2KvIPpqg7GJ-oZpQOTQ&_nc_ss=7c689&_nc_zt=28&oh=00_AQB9trM0",
+      "likesCount": "126",
+      "videoUrl": "https://scontent-iad3-2.cdninstagram.com/o1/v/t2/f2/m86/AQMTh6Iw8RatRzAKL7rh2vaRROjjqQZqyu7p_NnQ1mC5qakyo3nNdYTrkVOEzXrhMY1aSNBbTVWDzkQyjcxgiD_563aAxLkIVEW70I8.mp4?_nc_cat=111&_nc_sid=5e9851&_nc_ht=scontent-iad3-2.cdninstagram.com&_nc_ohc=H2oistHOp0gQ7kNvwHNeQSn&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5JTlNUQUdSQU0uQ0xJUFMuQzMuNzIwLmRhc2hfYmFzZWxpbmVfMV92MSIsInhwdl9hc3NldF9pZCI6MTY1NjMzOTA1ODc1Mjc5NCwiYXNzZXRfYWdlX2RheXMiOjEyLCJ2aV91c2VjYXNlX2lkIjoxMDgyNywiZHVyYXRpb25fcyI6MzMsInVybGdlbl9zb3VyY2UiOiJ3d3cifQ%3D%3D&ccb=17-1&vs=7ec435da94ab6725&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC8yQTRBNDg4NzdBQjYyRkU0NEZGNjc3OEIyNjFEQkU5N192aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyLzVENDcwNThDNEEyRjEwRUFDODk4RkFGM0VDRDA0NDk3X2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACa09MvTz5vxBRUCKAJDMywXQECu2RaHKwIYEmRhc2hfYmFzZWxpbmVfMV92MREAdf4HZZapAQA&_nc_gid=VDz9BpnPMILzva0Gzokusw&_nc_ss=72a8c&_nc_zt=28&oh=00_",
       "平台": "instagramreels",
-      "commentsCount": 6,
+      "commentsCount": "7",
       "红人名称": "blackhat.studios",
       "id": "3930642907848862268",
-      "videoPlayCount": 3050,
-      "videoViewCount": 887,
+      "videoPlayCount": "3251",
+      "videoViewCount": "926",
       "url": {
         "text": "https://www.instagram.com/p/DaMcuY1PWo8/",
         "link": "https://www.instagram.com/p/DaMcuY1PWo8/"
       },
-      "timestamp": "2026-06-30T03:18:02.000Z"
+      "timestamp": "2026-06-30T03:18:02.000Z",
+      "7日成熟声量": 3251
     },
     "source": "local-discovery",
     "importedAt": "",
-    "updatedAt": "2026-07-05T15:22:12.860Z"
+    "updatedAt": "2026-07-13T02:00:50.645Z"
   },
   {
     "id": "vid_1783265352495_usf8w7o",
     "fields": {
       "是否监控": "是",
-      "likesCount": 525,
+      "likesCount": "630",
       "videoUrl": "https://www.tiktok.com/@bikingwtheo/video/7658074264574151966",
       "平台": "tiktok",
-      "commentsCount": 20,
+      "commentsCount": "26",
       "红人名称": "bikingwtheo",
       "id": "7658074264574151966",
-      "videoPlayCount": 10700,
-      "videoViewCount": 10700,
+      "videoPlayCount": "15500",
+      "videoViewCount": "15500",
       "url": {
         "text": "https://www.tiktok.com/@bikingwtheo/video/7658074264574151966",
         "link": "https://www.tiktok.com/@bikingwtheo/video/7658074264574151966"
       },
       "timestamp": "2026-07-02T23:19:27.000Z",
-      "displayUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast8-p-0068-tx2/oEFRDfuKEEMVQg8y2GqAFBOGQnRvAfxWtEPvPE~tplv-tiktokx-origin.image?dr=9636&x-expires=1783436400&x-signature=cgR8rpOTrAqsvFrgqPuKGn%2FrpV4%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5"
+      "displayUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast8-p-0068-tx2/oEFRDfuKEEMVQg8y2GqAFBOGQnRvAfxWtEPvPE~tplv-tiktokx-origin.image?dr=9636&x-expires=1784080800&x-signature=6p7kTfT%2Bw%2FM74pffjndAWACArg0%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast8",
+      "7日成熟声量": 15500
     },
     "source": "local-discovery",
     "importedAt": "",
-    "updatedAt": "2026-07-05T15:29:12.495Z"
+    "updatedAt": "2026-07-13T02:01:32.334Z"
   },
   {
     "id": "vid_1783266712614_30hivyx",
     "fields": {
       "是否监控": "是",
-      "likesCount": 11,
+      "likesCount": "11",
       "videoUrl": "https://www.tiktok.com/@breastyle.mx/video/7656922638522141982",
       "平台": "tiktok",
-      "commentsCount": 1,
+      "commentsCount": "1",
       "红人名称": "breastyle.mx",
       "id": "7656922638522141982",
-      "videoPlayCount": 352,
-      "videoViewCount": 352,
+      "videoPlayCount": "386",
+      "videoViewCount": "386",
       "url": {
         "text": "https://www.tiktok.com/@breastyle.mx/video/7656922638522141982",
         "link": "https://www.tiktok.com/@breastyle.mx/video/7656922638522141982"
       },
       "timestamp": "2026-06-29T20:50:50.000Z",
-      "displayUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast8-p-0068-tx2/oYLABlqdEiRCiBhGkgaiqAqIEAa2AAKBPXak6~tplv-tiktokx-origin.image?dr=9636&x-expires=1783436400&x-signature=w2LZWHcx4o9iV%2F1SObtQnzK4KrU%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast8"
+      "displayUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast8-p-0068-tx2/oYLABlqdEiRCiBhGkgaiqAqIEAa2AAKBPXak6~tplv-tiktokx-origin.image?dr=9636&x-expires=1784080800&x-signature=%2ByX%2FmpK481WIIGIFpH%2FJIcBNGQc%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
+      "7日成熟声量": 386
     },
     "source": "local-discovery",
     "importedAt": "",
-    "updatedAt": "2026-07-05T15:51:52.614Z"
+    "updatedAt": "2026-07-13T02:01:32.334Z"
   },
   {
     "id": "vid_1783266869704_0x3rj0p",
     "fields": {
       "是否监控": "是",
-      "likesCount": 68,
+      "likesCount": "75",
       "videoUrl": "https://www.tiktok.com/@tmodzzz/video/7656950428663352590",
       "平台": "tiktok",
-      "commentsCount": 10,
+      "commentsCount": "10",
       "红人名称": "tmodzzz",
       "id": "7656950428663352590",
-      "videoPlayCount": 1436,
-      "videoViewCount": 1436,
+      "videoPlayCount": "1785",
+      "videoViewCount": "1785",
       "url": {
         "text": "https://www.tiktok.com/@tmodzzz/video/7656950428663352590",
         "link": "https://www.tiktok.com/@tmodzzz/video/7656950428663352590"
       },
       "timestamp": "2026-06-29T22:38:42.000Z",
-      "displayUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/osISKRBqGQF5LFlGxwKDfgCES4DfAIzF5QRGEv~tplv-tiktokx-origin.image?dr=9636&x-expires=1783436400&x-signature=u87TxHX79vuF7vOl%2FxaYk%2BUytjY%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5"
+      "displayUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/osISKRBqGQF5LFlGxwKDfgCES4DfAIzF5QRGEv~tplv-tiktokx-origin.image?dr=9636&x-expires=1784080800&x-signature=XtE8sTUx8tcB%2B7lVqNmOrCZchgQ%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
+      "7日成熟声量": 1785
     },
     "source": "local-discovery",
     "importedAt": "",
-    "updatedAt": "2026-07-05T15:54:29.704Z"
+    "updatedAt": "2026-07-13T02:01:32.334Z"
   },
   {
     "id": "vid_1783267047220_9hvsx03",
     "fields": {
       "是否监控": "是",
-      "likesCount": 1184,
+      "likesCount": "1288",
       "videoUrl": "https://www.tiktok.com/@mk.ridezz/video/7657267610257509640",
       "平台": "tiktok",
-      "commentsCount": 66,
+      "commentsCount": "68",
       "红人名称": "mk.ridezz",
       "id": "7657267610257509640",
-      "videoPlayCount": 30600,
-      "videoViewCount": 30600,
+      "videoPlayCount": "33200",
+      "videoViewCount": "33200",
       "url": {
         "text": "https://www.tiktok.com/@mk.ridezz/video/7657267610257509640",
         "link": "https://www.tiktok.com/@mk.ridezz/video/7657267610257509640"
       },
       "timestamp": "2026-06-30T19:09:11.000Z",
-      "displayUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/ogBYQosC5GALK8AJ8CL7DjUVaIeAACfiQjeqII~tplv-tiktokx-origin.image?dr=9636&x-expires=1783436400&x-signature=bJ2KNm9YBK9aHgD8eZTdMuUOxjM%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5"
+      "displayUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/ogBYQosC5GALK8AJ8CL7DjUVaIeAACfiQjeqII~tplv-tiktokx-origin.image?dr=9636&x-expires=1784080800&x-signature=Oz%2FBnScK7icGFOML%2F5xNsp37Zyg%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast8",
+      "7日成熟声量": 33200
     },
     "source": "local-discovery",
     "importedAt": "",
-    "updatedAt": "2026-07-05T15:57:27.220Z"
+    "updatedAt": "2026-07-13T02:01:32.335Z"
   },
   {
     "id": "vid_1783267047220_aivg6ne",
     "fields": {
       "是否监控": "是",
-      "likesCount": 1547,
+      "likesCount": "1845",
       "videoUrl": "https://www.tiktok.com/@mk.ridezz/video/7656912883581865223",
       "平台": "tiktok",
-      "commentsCount": 78,
+      "commentsCount": "85",
       "红人名称": "mk.ridezz",
       "id": "7656912883581865223",
-      "videoPlayCount": 45900,
-      "videoViewCount": 45900,
+      "videoPlayCount": "54900",
+      "videoViewCount": "54900",
       "url": {
         "text": "https://www.tiktok.com/@mk.ridezz/video/7656912883581865223",
         "link": "https://www.tiktok.com/@mk.ridezz/video/7656912883581865223"
       },
       "timestamp": "2026-06-29T20:12:48.000Z",
-      "displayUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/o8BEA0CQaFJiQEtHIqEDgcffIKGugGYQBUCvTR~tplv-tiktokx-origin.image?dr=9636&x-expires=1783436400&x-signature=YO8o4vxupxaXjD%2B8%2BDFVaIHUthE%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5"
+      "displayUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/o8BEA0CQaFJiQEtHIqEDgcffIKGugGYQBUCvTR~tplv-tiktokx-origin.image?dr=9636&x-expires=1784080800&x-signature=VdDYdyRiA9OlxK2gxRF17rOIPZU%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
+      "7日成熟声量": 54900
     },
     "source": "local-discovery",
     "importedAt": "",
-    "updatedAt": "2026-07-05T15:57:27.220Z"
+    "updatedAt": "2026-07-13T02:01:32.335Z"
   },
   {
     "id": "vid_1783267175016_sqnhtan",
     "fields": {
       "是否监控": "是",
-      "likesCount": 73,
+      "likesCount": "0",
       "videoUrl": "https://www.tiktok.com/@68v_ebikes/video/7657201989939498253",
       "平台": "tiktok",
-      "commentsCount": 3,
+      "commentsCount": "0",
       "红人名称": "68v_ebikes",
       "id": "7657201989939498253",
-      "videoPlayCount": 12600,
-      "videoViewCount": 12600,
+      "videoPlayCount": "0",
+      "videoViewCount": "0",
       "url": {
         "text": "https://www.tiktok.com/@68v_ebikes/video/7657201989939498253",
         "link": "https://www.tiktok.com/@68v_ebikes/video/7657201989939498253"
       },
       "timestamp": "2026-06-30T14:54:43.000Z",
-      "displayUrl": "https://p16-common-sign.tiktokcdn-eu.com/tos-useast5-p-0068-tx/oAA42eFiBIBLoD2xAiiASURYmCfHqADEiRgVEQ~tplv-tiktokx-origin.image?dr=10395&x-expires=1783436400&x-signature=6K7tZPPkBZO3INnNJiHS9nRz59M%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=no1a"
+      "displayUrl": "https://p16-common-sign.tiktokcdn-eu.com/tos-useast5-p-0068-tx/oAA42eFiBIBLoD2xAiiASURYmCfHqADEiRgVEQ~tplv-tiktokx-origin.image?dr=10395&x-expires=1783436400&x-signature=6K7tZPPkBZO3INnNJiHS9nRz59M%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=no1a",
+      "7日成熟声量": 0
     },
     "source": "local-discovery",
     "importedAt": "",
-    "updatedAt": "2026-07-05T15:59:35.016Z"
+    "updatedAt": "2026-07-13T02:01:32.335Z"
   },
   {
     "id": "vid_1783267175016_h88pikg",
     "fields": {
       "是否监控": "是",
-      "likesCount": 675,
+      "likesCount": "924",
       "videoUrl": "https://www.tiktok.com/@68v_ebikes/video/7656886919397231885",
       "平台": "tiktok",
-      "commentsCount": 22,
+      "commentsCount": "26",
       "红人名称": "68v_ebikes",
       "id": "7656886919397231885",
-      "videoPlayCount": 120500,
-      "videoViewCount": 120500,
+      "videoPlayCount": "163100",
+      "videoViewCount": "163100",
       "url": {
         "text": "https://www.tiktok.com/@68v_ebikes/video/7656886919397231885",
         "link": "https://www.tiktok.com/@68v_ebikes/video/7656886919397231885"
       },
       "timestamp": "2026-06-29T18:32:27.000Z",
-      "displayUrl": "https://p16-common-sign.tiktokcdn-eu.com/tos-useast5-p-0068-tx/oYDrAqrCTRoEENFR4wQAeIASRdgfO5zFACQIHD~tplv-tiktokx-origin.image?dr=10395&x-expires=1783436400&x-signature=GaswmvUafK8zgqZnWLGQY3LD6Ec%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=no1a"
+      "displayUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/oYDrAqrCTRoEENFR4wQAeIASRdgfO5zFACQIHD~tplv-tiktokx-origin.image?dr=9636&x-expires=1784080800&x-signature=wzekkK2bW4SNBIOndGFWtgaZajw%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
+      "7日成熟声量": 163100
     },
     "source": "local-discovery",
     "importedAt": "",
-    "updatedAt": "2026-07-05T15:59:35.016Z"
+    "updatedAt": "2026-07-13T02:01:32.335Z"
   },
   {
     "id": "vid_1783267175016_0mi1x15",
     "fields": {
       "是否监控": "是",
-      "likesCount": 33,
+      "likesCount": "42",
       "videoUrl": "https://www.tiktok.com/@68v_ebikes/video/7656534198450244878",
       "平台": "tiktok",
-      "commentsCount": 1,
+      "commentsCount": "1",
       "红人名称": "68v_ebikes",
       "id": "7656534198450244878",
-      "videoPlayCount": 2241,
-      "videoViewCount": 2241,
+      "videoPlayCount": "2596",
+      "videoViewCount": "2596",
       "url": {
         "text": "https://www.tiktok.com/@68v_ebikes/video/7656534198450244878",
         "link": "https://www.tiktok.com/@68v_ebikes/video/7656534198450244878"
       },
       "timestamp": "2026-06-28T19:43:36.000Z",
-      "displayUrl": "https://p19-common-sign.tiktokcdn-eu.com/tos-useast5-p-0068-tx/oAHmAUvEs0LQITWjDHQAAZAkeeA8cNfCACgIWM~tplv-tiktokx-origin.image?dr=10395&x-expires=1783436400&x-signature=9FFMuobv9LvHYHUSAmeBklptDto%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=no1a"
+      "displayUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/oAHmAUvEs0LQITWjDHQAAZAkeeA8cNfCACgIWM~tplv-tiktokx-origin.image?dr=9636&x-expires=1784080800&x-signature=e%2FcBROQeR%2FruFHzdo9vDi4FGUsw%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
+      "7日成熟声量": 2596
     },
     "source": "local-discovery",
     "importedAt": "",
-    "updatedAt": "2026-07-05T15:59:35.016Z"
+    "updatedAt": "2026-07-13T02:01:32.335Z"
   },
   {
     "id": "vid_1783267377874_hn488lf",
     "fields": {
       "是否监控": "是",
-      "likesCount": 77,
+      "likesCount": "84",
       "videoUrl": "https://www.tiktok.com/@lifewjozy/video/7656590121545862430",
       "平台": "tiktok",
-      "commentsCount": 1,
+      "commentsCount": "1",
       "红人名称": "lifewjozy",
       "id": "7656590121545862430",
-      "videoPlayCount": 1925,
-      "videoViewCount": 1925,
+      "videoPlayCount": "2150",
+      "videoViewCount": "2150",
       "url": {
         "text": "https://www.tiktok.com/@lifewjozy/video/7656590121545862430",
         "link": "https://www.tiktok.com/@lifewjozy/video/7656590121545862430"
       },
       "timestamp": "2026-06-28T23:20:24.000Z",
-      "displayUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast8-p-0068-tx2/oAewrU7teACKCJG7IDJBXeIAXLjk1gA70qIEIT~tplv-tiktokx-origin.image?dr=9636&x-expires=1783440000&x-signature=Fv6YWEJShVNGapj5JY6CjAF5Nyw%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5"
+      "displayUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast8-p-0068-tx2/oAewrU7teACKCJG7IDJBXeIAXLjk1gA70qIEIT~tplv-tiktokx-origin.image?dr=9636&x-expires=1784080800&x-signature=5E%2FSSvLwP3I%2FqpGps7uXM2yCmF8%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast8",
+      "7日成熟声量": 2150
     },
     "source": "local-discovery",
     "importedAt": "",
-    "updatedAt": "2026-07-05T16:02:57.874Z"
+    "updatedAt": "2026-07-13T02:01:32.335Z"
   },
   {
     "id": "vid_1783267442817_h8rxg7u",
     "fields": {
       "是否监控": "是",
-      "likesCount": 2390,
+      "likesCount": "3224",
       "videoUrl": "https://www.tiktok.com/@giarides/video/7656943387114835214",
       "平台": "tiktok",
-      "commentsCount": 217,
+      "commentsCount": "266",
       "红人名称": "giarides",
       "id": "7656943387114835214",
-      "videoPlayCount": 49600,
-      "videoViewCount": 49600,
+      "videoPlayCount": "74100",
+      "videoViewCount": "74100",
       "url": {
         "text": "https://www.tiktok.com/@giarides/video/7656943387114835214",
         "link": "https://www.tiktok.com/@giarides/video/7656943387114835214"
       },
       "timestamp": "2026-06-29T22:11:29.000Z",
-      "displayUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/osJUIG8I2Ek7C7wBi1XwtbBwiHfAABYABIpCAx~tplv-tiktokx-origin.image?dr=9636&x-expires=1783440000&x-signature=KWO2Lj1xVtgKGF00clugbU1Sed8%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5"
+      "displayUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/osJUIG8I2Ek7C7wBi1XwtbBwiHfAABYABIpCAx~tplv-tiktokx-origin.image?dr=9636&x-expires=1784080800&x-signature=8Tp7RuXrzCZTyT8dnICyiQyo%2Fqo%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
+      "7日成熟声量": 74100
     },
     "source": "local-discovery",
     "importedAt": "",
-    "updatedAt": "2026-07-05T16:04:02.817Z"
+    "updatedAt": "2026-07-13T02:01:32.335Z"
   },
   {
     "id": "vid_1783267498793_vxhlfmr",
     "fields": {
       "是否监控": "是",
-      "likesCount": 119,
+      "likesCount": "126",
       "videoUrl": "https://www.tiktok.com/@hdukerides/video/7657663448788028692",
       "平台": "tiktok",
-      "commentsCount": 17,
+      "commentsCount": "19",
       "红人名称": "hdukerides",
       "id": "7657663448788028692",
-      "videoPlayCount": 1646,
-      "videoViewCount": 1646,
+      "videoPlayCount": "2180",
+      "videoViewCount": "2180",
       "url": {
         "text": "https://www.tiktok.com/@hdukerides/video/7657663448788028692",
         "link": "https://www.tiktok.com/@hdukerides/video/7657663448788028692"
       },
       "timestamp": "2026-07-01T20:45:18.000Z",
-      "displayUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/o0IAg4eevLDQNTIj5eiU9ALiMACGqEADAUXhVE~tplv-tiktokx-origin.image?dr=9636&x-expires=1783440000&x-signature=oEUGOdkyNs0kQ9aBxkT8dXoQ3QE%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5"
+      "displayUrl": "https://p16-common-sign.tiktokcdn-eu.com/tos-alisg-p-0037/o0IAg4eevLDQNTIj5eiU9ALiMACGqEADAUXhVE~tplv-tiktokx-origin.image?dr=10395&x-expires=1784080800&x-signature=Vei1s%2BNhmFo28cpEuT7l%2FqlyCBk%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=no1a",
+      "7日成熟声量": 2180
     },
     "source": "local-discovery",
     "importedAt": "",
-    "updatedAt": "2026-07-05T16:04:58.793Z"
+    "updatedAt": "2026-07-13T02:01:32.335Z"
   },
   {
     "id": "vid_1783869274430_gm1mdry",
@@ -28001,24 +28038,25 @@
     "id": "vid_1783869869535_epfs6lz",
     "fields": {
       "是否监控": "是",
-      "likesCount": 155,
+      "likesCount": "155",
       "videoUrl": "https://www.youtube.com/watch?v=p8ST-egYY7A",
       "平台": "youtubevideo",
-      "commentsCount": 45,
+      "commentsCount": "45",
       "红人名称": "Pat Outdoors",
       "id": "p8ST-egYY7A",
-      "videoPlayCount": 4446,
-      "videoViewCount": 4446,
+      "videoPlayCount": "4536",
+      "videoViewCount": "4536",
       "url": {
         "text": "https://www.youtube.com/watch?v=p8ST-egYY7A",
         "link": "https://www.youtube.com/watch?v=p8ST-egYY7A"
       },
       "timestamp": "2026-07-05T15:43:08.000Z",
-      "displayUrl": "https://i.ytimg.com/vi/p8ST-egYY7A/maxresdefault.jpg"
+      "displayUrl": "https://i.ytimg.com/vi/p8ST-egYY7A/maxresdefault.jpg",
+      "7日成熟声量": 4536
     },
     "source": "local-discovery",
     "importedAt": "",
-    "updatedAt": "2026-07-12T15:24:29.535Z"
+    "updatedAt": "2026-07-13T01:59:59.884Z"
   },
   {
     "id": "vid_1783870781952_6bb5p15",
@@ -28070,24 +28108,25 @@
     "id": "vid_1783870781952_18xevjl",
     "fields": {
       "是否监控": "是",
-      "likesCount": 895,
+      "likesCount": "908",
       "videoUrl": "https://www.youtube.com/shorts/mCgahglFFFQ",
       "平台": "youtubeshort",
-      "commentsCount": 12,
+      "commentsCount": "12",
       "红人名称": "68v_ebikes",
       "id": "mCgahglFFFQ",
-      "videoPlayCount": 63317,
-      "videoViewCount": 63317,
+      "videoPlayCount": "64382",
+      "videoViewCount": "64382",
       "url": {
         "text": "https://www.youtube.com/shorts/mCgahglFFFQ",
         "link": "https://www.youtube.com/shorts/mCgahglFFFQ"
       },
       "timestamp": "2026-07-05T19:23:47.000Z",
-      "displayUrl": "https://i.ytimg.com/vi/mCgahglFFFQ/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAKAD4oCDAgAEAEYVSBdKGUwDw==&rs=AOn4CLBBPxOqN59drAojpgY5ObAB8_sJwQ"
+      "displayUrl": "https://i.ytimg.com/vi/mCgahglFFFQ/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAKAD4oCDAgAEAEYVSBdKGUwDw==&rs=AOn4CLBBPxOqN59drAojpgY5ObAB8_sJwQ",
+      "7日成熟声量": 64382
     },
     "source": "local-discovery",
     "importedAt": "",
-    "updatedAt": "2026-07-12T15:39:41.952Z"
+    "updatedAt": "2026-07-13T02:00:29.808Z"
   },
   {
     "id": "vid_1783871822031_tftvnl5",
@@ -28162,23 +28201,24 @@
     "id": "vid_1783872813927_ah3c5o5",
     "fields": {
       "是否监控": "是",
-      "likesCount": 645,
-      "videoUrl": "https://scontent-lga3-3.cdninstagram.com/o1/v/t2/f2/m86/AQOAlrpo83vAnjL7xbO4ti2HwiARHOxkGkJRUOzFNUE21Sio6bHcL1YmYo2vwfi9kLFC3fhbKo2Dfiz4wBQ8a2fVuk4gaB2fgUB4uWM.mp4?_nc_cat=108&_nc_sid=5e9851&_nc_ht=scontent-lga3-3.cdninstagram.com&_nc_ohc=VoT4ZHi-rqAQ7kNvwG0USYU&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5JTlNUQUdSQU0uQ0xJUFMuQzMuNzIwLmRhc2hfYmFzZWxpbmVfMV92MSIsInhwdl9hc3NldF9pZCI6MTYzNTYxNjIwMDg2MDAwNCwiYXNzZXRfYWdlX2RheXMiOjYsInZpX3VzZWNhc2VfaWQiOjEwMDk5LCJkdXJhdGlvbl9zIjoxMiwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=17-1&vs=e99f2897bc29281&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC9GMzQ2NkMwMUVCMDlENUIxRjRBMzhDQzMzODg0RjlCMF92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyLzVDNDMwNUEyMDc5NTFCODIzOTBDRDUwNTdFOUQ4OTg1X2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACbIhaGqsuXnBRUCKAJDMywXQCnMzMzMzM0YEmRhc2hfYmFzZWxpbmVfMV92MREAdf4HZeadAQA&_nc_gid=u7KZJOoug6b5v7ApwHT9dw&_nc_ss=72689&_nc_zt=28&oh=00_AQB4xVC8H",
+      "likesCount": "658",
+      "videoUrl": "https://scontent-phl2-1.cdninstagram.com/o1/v/t2/f2/m86/AQOAlrpo83vAnjL7xbO4ti2HwiARHOxkGkJRUOzFNUE21Sio6bHcL1YmYo2vwfi9kLFC3fhbKo2Dfiz4wBQ8a2fVuk4gaB2fgUB4uWM.mp4?_nc_cat=108&_nc_sid=5e9851&_nc_ht=scontent-phl2-1.cdninstagram.com&_nc_ohc=VoT4ZHi-rqAQ7kNvwE9eCYf&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5JTlNUQUdSQU0uQ0xJUFMuQzMuNzIwLmRhc2hfYmFzZWxpbmVfMV92MSIsInhwdl9hc3NldF9pZCI6MTYzNTYxNjIwMDg2MDAwNCwiYXNzZXRfYWdlX2RheXMiOjcsInZpX3VzZWNhc2VfaWQiOjEwMDk5LCJkdXJhdGlvbl9zIjoxMiwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=17-1&vs=e99f2897bc29281&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC9GMzQ2NkMwMUVCMDlENUIxRjRBMzhDQzMzODg0RjlCMF92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyLzVDNDMwNUEyMDc5NTFCODIzOTBDRDUwNTdFOUQ4OTg1X2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACbIhaGqsuXnBRUCKAJDMywXQCnMzMzMzM0YEmRhc2hfYmFzZWxpbmVfMV92MREAdf4HZeadAQA&_nc_gid=mzKuqgJ6HFVp5KpuJlT4UQ&_nc_ss=72a8c&_nc_zt=28&oh=00_AQBeZfHln",
       "平台": "instagramreels",
-      "commentsCount": 14,
+      "commentsCount": "14",
       "红人名称": "68v_ebikes",
       "id": "3934751778070605660",
-      "videoPlayCount": 41878,
-      "videoViewCount": 12981,
+      "videoPlayCount": "42519",
+      "videoViewCount": "12981",
       "url": {
         "text": "https://www.instagram.com/p/DabC-UbPC9c/",
         "link": "https://www.instagram.com/p/DabC-UbPC9c/"
       },
-      "timestamp": "2026-07-05T19:17:22.000Z"
+      "timestamp": "2026-07-05T19:17:22.000Z",
+      "7日成熟声量": 42519
     },
     "source": "local-discovery",
     "importedAt": "",
-    "updatedAt": "2026-07-12T16:13:33.927Z"
+    "updatedAt": "2026-07-13T02:00:50.645Z"
   },
   {
     "id": "vid_1783872813927_x643lop",
@@ -28580,23 +28620,24 @@
     "id": "vid_1783873965254_pjhlv93",
     "fields": {
       "是否监控": "是",
-      "likesCount": 1166,
-      "videoUrl": "https://scontent-den2-1.cdninstagram.com/o1/v/t2/f2/m86/AQOfsFCqiFs3S581bLUIyGZ4Fs7VSmtT_bIQR9BQMsGbHZSbyhLrLBe6WVL8TZIcRxU6cceuBdjn-8uLH1F-rcquuWnzAdlxyORgJmM.mp4?_nc_cat=101&_nc_sid=5e9851&_nc_ht=scontent-den2-1.cdninstagram.com&_nc_ohc=M74kQzG4oZAQ7kNvwFmRpC4&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5JTlNUQUdSQU0uQ0xJUFMuQzMuNzIwLmRhc2hfYmFzZWxpbmVfMV92MSIsInhwdl9hc3NldF9pZCI6MTI3Mzc1NjIzMTI5ODc5NiwiYXNzZXRfYWdlX2RheXMiOjYsInZpX3VzZWNhc2VfaWQiOjEwMDk5LCJkdXJhdGlvbl9zIjoxNCwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=17-1&vs=894e3489352679ac&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC9FNzRGOTlCQzRBNTc0NjVDM0ZFQjg5OUREODhFOEJCQ192aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyL0U2NEYwQTZERTZEQzcxQUI0RThGNkI3NjQ4QTQyQzhGX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACbYu5O7r57DBBUCKAJDMywXQCyIMSbpeNUYEmRhc2hfYmFzZWxpbmVfMV92MREAdf4HZeadAQA&_nc_gid=YIT_9wf8hO6CZd_O8D-drg&_nc_ss=7ca8c&_nc_zt=28&oh=00_AQCgj9RP",
+      "likesCount": "1177",
+      "videoUrl": "https://scontent-lga3-2.cdninstagram.com/o1/v/t2/f2/m86/AQOfsFCqiFs3S581bLUIyGZ4Fs7VSmtT_bIQR9BQMsGbHZSbyhLrLBe6WVL8TZIcRxU6cceuBdjn-8uLH1F-rcquuWnzAdlxyORgJmM.mp4?_nc_cat=101&_nc_sid=5e9851&_nc_ht=scontent-lga3-2.cdninstagram.com&_nc_ohc=M74kQzG4oZAQ7kNvwF-HMa8&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5JTlNUQUdSQU0uQ0xJUFMuQzIuNzIwLmRhc2hfYmFzZWxpbmVfMV92MSIsInhwdl9hc3NldF9pZCI6MTI3Mzc1NjIzMTI5ODc5NiwiYXNzZXRfYWdlX2RheXMiOjcsInZpX3VzZWNhc2VfaWQiOjEwMDk5LCJkdXJhdGlvbl9zIjoxNCwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=17-1&vs=894e3489352679ac&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC9FNzRGOTlCQzRBNTc0NjVDM0ZFQjg5OUREODhFOEJCQ192aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyL0U2NEYwQTZERTZEQzcxQUI0RThGNkI3NjQ4QTQyQzhGX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACbYu5O7r57DBBUCKAJDMiwXQCyIMSbpeNUYEmRhc2hfYmFzZWxpbmVfMV92MREAdf4HZeadAQA&_nc_gid=qd3IZlFeaC3xJsIphBDURw&_nc_ss=72a8c&_nc_zt=28&oh=00_AQDVh0_R",
       "平台": "instagramreels",
-      "commentsCount": 32,
+      "commentsCount": "32",
       "红人名称": "_rizzoto_",
       "id": "3934682957167049010",
-      "videoPlayCount": 41318,
-      "videoViewCount": 13358,
+      "videoPlayCount": "42999",
+      "videoViewCount": "13358",
       "url": {
         "text": "https://www.instagram.com/p/DaazU19ubky/",
         "link": "https://www.instagram.com/p/DaazU19ubky/"
       },
-      "timestamp": "2026-07-05T17:00:24.000Z"
+      "timestamp": "2026-07-05T17:00:24.000Z",
+      "7日成熟声量": 42999
     },
     "source": "local-discovery",
     "importedAt": "",
-    "updatedAt": "2026-07-12T16:32:45.254Z"
+    "updatedAt": "2026-07-13T02:00:50.645Z"
   },
   {
     "id": "vid_1783874396362_7qmkbq2",
@@ -28778,24 +28819,25 @@
     "id": "vid_1783875156195_tcd3832",
     "fields": {
       "是否监控": "是",
-      "likesCount": 449,
+      "likesCount": "461",
       "videoUrl": "https://www.tiktok.com/@bikingwtheo/video/7659148636667792670",
       "平台": "tiktok",
-      "commentsCount": 45,
+      "commentsCount": "46",
       "红人名称": "bikingwtheo",
       "id": "7659148636667792670",
-      "videoPlayCount": 8448,
-      "videoViewCount": 8448,
+      "videoPlayCount": "8751",
+      "videoViewCount": "8751",
       "url": {
         "text": "https://www.tiktok.com/@bikingwtheo/video/7659148636667792670",
         "link": "https://www.tiktok.com/@bikingwtheo/video/7659148636667792670"
       },
       "timestamp": "2026-07-05T20:48:45.000Z",
-      "displayUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast8-p-0068-tx2/osgjTlISNBexqVqlIxNBheAIGeA3LIIC6CEUYQ~tplv-tiktokx-origin.image?dr=9636&x-expires=1784044800&x-signature=fF9Jlo8vZVJt7iB3A3d2mLEQ3iI%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast8"
+      "displayUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast8-p-0068-tx2/osgjTlISNBexqVqlIxNBheAIGeA3LIIC6CEUYQ~tplv-tiktokx-origin.image?dr=9636&x-expires=1784080800&x-signature=vWofe%2FwcAEqFIC7Ih%2Bl615nY%2BKA%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
+      "7日成熟声量": 8751
     },
     "source": "local-discovery",
     "importedAt": "",
-    "updatedAt": "2026-07-12T16:52:36.195Z"
+    "updatedAt": "2026-07-13T02:01:32.335Z"
   },
   {
     "id": "vid_1783875247503_jzisqx4",
@@ -29054,24 +29096,25 @@
     "id": "vid_1783876128343_j8qvqra",
     "fields": {
       "是否监控": "是",
-      "likesCount": 84,
+      "likesCount": "85",
       "videoUrl": "https://www.tiktok.com/@68v_ebikes/video/7659126555011992845",
       "平台": "tiktok",
-      "commentsCount": 3,
+      "commentsCount": "3",
       "红人名称": "68v_ebikes",
       "id": "7659126555011992845",
-      "videoPlayCount": 6010,
-      "videoViewCount": 6010,
+      "videoPlayCount": "6182",
+      "videoViewCount": "6182",
       "url": {
         "text": "https://www.tiktok.com/@68v_ebikes/video/7659126555011992845",
         "link": "https://www.tiktok.com/@68v_ebikes/video/7659126555011992845"
       },
       "timestamp": "2026-07-05T19:23:17.000Z",
-      "displayUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/ocAAKiiReSzyBrHARf2CqNE1gSipDBAIjqYPEB~tplv-tiktokx-origin.image?dr=9636&x-expires=1784048400&x-signature=D7XnKWwiBIMQUFPv0zSHc3bCaCk%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5"
+      "displayUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/ocAAKiiReSzyBrHARf2CqNE1gSipDBAIjqYPEB~tplv-tiktokx-origin.image?dr=9636&x-expires=1784080800&x-signature=MC2e%2BVjzKfwZgxdgda%2BMmFVnEVI%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
+      "7日成熟声量": 6182
     },
     "source": "local-discovery",
     "importedAt": "",
-    "updatedAt": "2026-07-12T17:08:48.343Z"
+    "updatedAt": "2026-07-13T02:01:32.336Z"
   },
   {
     "id": "vid_1783876609977_7pf0o5l",
