@@ -2564,12 +2564,21 @@ app.post('/api/local/discover', async (req, res) => {
       .filter((row) => row.fields['红人名称'] || readLinkCell(row.fields['红人链接']))
       .filter((row) => supportedPlatforms.has(row.platform))
       .filter((row) => (normalizedPlatformFilter === 'all' ? true : row.platform === normalizedPlatformFilter));
-    const targetedRows = onlyInputSet.size
+    const targetedRowsWithDuplicates = onlyInputSet.size
       ? selectedRows.filter((row) => {
           const input = readLinkCell(row.fields['红人链接']) || String(row.fields['红人名称'] || '').trim();
           return onlyInputSet.has(input) || onlyInputSet.has(normalizePostUrl(input));
         })
       : selectedRows;
+    const targetedRows = [];
+    const targetedKeys = new Set();
+    for (const row of targetedRowsWithDuplicates) {
+      const input = readLinkCell(row.fields['红人链接']) || String(row.fields['红人名称'] || '').trim();
+      const targetKey = `${row.platform}__${normalizePostUrl(input) || normalizeCreatorName(input)}`;
+      if (!targetKey || targetedKeys.has(targetKey)) continue;
+      targetedKeys.add(targetKey);
+      targetedRows.push(row);
+    }
     const offset = Math.max(0, Number(skipInfluencers) || 0);
     const limit = Math.max(1, Number(limitInfluencers) || 1);
     const candidates = targetedRows.slice(offset, offset + limit);
