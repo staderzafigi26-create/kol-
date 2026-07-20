@@ -35,16 +35,28 @@ async function main() {
   const dryRun = process.argv.includes('--dry-run');
   await requestJsonWithRetry('http://127.0.0.1:3000/api/health');
 
-  const json = await requestJsonWithRetry('http://127.0.0.1:3000/api/workflow/refresh-dingtalk-milestones', {
+  const endpoint = 'http://127.0.0.1:3000/api/workflow/refresh-dingtalk-milestones';
+  const preflight = await requestJsonWithRetry(endpoint, {
     method: 'POST',
     headers: { 'content-type': 'application/json' },
-    body: JSON.stringify({ dryRun })
+    body: JSON.stringify({ dryRun: true })
   });
+  const json = dryRun || !(preflight.due || []).length
+    ? preflight
+    : await (async () => {
+        const response = await fetch(endpoint, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ dryRun: false }) });
+        const body = await response.json().catch(() => ({}));
+        if (!response.ok || !body.ok) throw new Error(body.error || `请求失败: HTTP ${response.status}`);
+        return body;
+      })();
 
   const summary = {
     ok: true,
     dryRun,
     message: json.message,
+    preflight: { due: preflight.due || [], usageEstimate: preflight.usageEstimate, usageBudget: preflight.usageBudget },
+    blockedReason: json.blockedReason || '',
+    usageBudget: json.usageBudget || preflight.usageBudget,
     due: json.due || [],
     refreshed: json.refreshed || 0,
     report: json.report || []

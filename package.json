@@ -8,7 +8,10 @@
     "dev": "node server.js",
     "import:cooperation": "node scripts/import-cooperation-deliverables.mjs",
     "build:static": "node scripts/build-static-pages-data.mjs",
-    "build:pages": "npm run build:static && node scripts/build-github-pages.mjs"
+    "build:pages": "npm run build:static && node scripts/build-github-pages.mjs",
+    "test": "node --test tests/*.test.js",
+    "deploy:runtime": "node scripts/deploy-runtime-code.js",
+    "deploy:check": "node scripts/deploy-runtime-code.js --check"
   },
   "keywords": [
     "apify",

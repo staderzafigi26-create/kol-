@@ -331,7 +331,7 @@ const { latest, types, snapshotsByKey } = latestSnapshotsByPostKey(snapshots);
 const now = new Date();
 
 const due = [];
-let skippedAlreadyCapturedAfter7d = 0;
+const backfillable7d = [];
 for (const video of videos) {
   const fields = video.fields || video;
   const platform = normalizePlatform(fields['平台'] || fields.platform);
@@ -341,21 +341,28 @@ for (const video of videos) {
   const key = postKeyOf(platform, fields);
   const ageDays = (now.getTime() - publishedAt.getTime()) / 86400000;
   const snapshotTypes = types.get(key) || new Set();
-  const alreadyCapturedAfter7d = (snapshotsByKey.get(key) || []).some((snapshot) => (
-    snapshot.views > 0
-    && snapshot.capturedAt >= publishedAt.getTime() + 7 * 86400000
-    && snapshot.capturedAt < publishedAt.getTime() + 30 * 86400000
-  ));
+  const existingAfter7d = (snapshotsByKey.get(key) || [])
+    .filter((snapshot) => (
+      snapshot.views > 0
+      && snapshot.capturedAt >= publishedAt.getTime() + 7 * 86400000
+      && snapshot.capturedAt < publishedAt.getTime() + 30 * 86400000
+    ))
+    .sort((a, b) => (
+      Math.abs(a.capturedAt - (publishedAt.getTime() + 7 * 86400000))
+      - Math.abs(b.capturedAt - (publishedAt.getTime() + 7 * 86400000))
+    ))[0];
   let milestone = '';
   if (MILESTONE_MODES.has('30') && ageDays >= 30 && !snapshotTypes.has('milestone_30d')) {
     milestone = 'milestone_30d';
-  } else if (MILESTONE_MODES.has('7') && ageDays >= 7 && ageDays < 30 && !snapshotTypes.has('milestone_7d') && !alreadyCapturedAfter7d) {
-    milestone = 'milestone_7d';
+  } else if (MILESTONE_MODES.has('7') && ageDays >= 7 && ageDays < 30 && !snapshotTypes.has('milestone_7d')) {
+    if (existingAfter7d) {
+      backfillable7d.push({ video, fields, platform, url, key, publishedAt, ageDays, snapshot: existingAfter7d });
+    } else {
+      milestone = 'milestone_7d';
+    }
   }
   if (milestone) {
     due.push({ video, fields, platform, url, key, publishedAt, ageDays, milestone });
-  } else if (ageDays >= 7 && ageDays < 30 && !snapshotTypes.has('milestone_7d') && alreadyCapturedAfter7d) {
-    skippedAlreadyCapturedAfter7d += 1;
   }
 }
 
@@ -373,7 +380,8 @@ const report = {
   startedAt: new Date().toISOString(),
   finishedAt: '',
   dueCount: due.length,
-  skippedAlreadyCapturedAfter7d,
+  backfillable7dCount: backfillable7d.length,
+  backfilledExistingSnapshot: 0,
   dueByPlatform: Object.fromEntries([...grouped].map(([platform, rows]) => [platform, rows.length])),
   usageUsd: 0,
   updated: 0,
@@ -383,7 +391,7 @@ const report = {
   outputFiles: { report: REPORT_PATH }
 };
 
-console.log(JSON.stringify({ event: 'local-milestone-start', modes: [...MILESTONE_MODES], dueCount: due.length, dueByPlatform: report.dueByPlatform, reportPath: REPORT_PATH }));
+console.log(JSON.stringify({ event: 'local-milestone-start', modes: [...MILESTONE_MODES], dueCount: due.length, backfillable7dCount: backfillable7d.length, dueByPlatform: report.dueByPlatform, reportPath: REPORT_PATH }));
 
 if (DRY_RUN) {
   report.ok = true;
@@ -396,6 +404,15 @@ if (DRY_RUN) {
     ageDays: Number(item.ageDays.toFixed(1)),
     milestone: item.milestone
   }));
+  report.backfillable7d = backfillable7d.map((item) => ({
+    platform: item.platform,
+    creator: text(item.fields['红人名称']),
+    url: item.url,
+    publishedAt: item.publishedAt.toISOString(),
+    capturedAt: new Date(item.snapshot.capturedAt).toISOString(),
+    capturedAgeDays: Number(((item.snapshot.capturedAt - item.publishedAt.getTime()) / 86400000).toFixed(2)),
+    views: item.snapshot.views
+  }));
   await fs.writeFile(REPORT_PATH, JSON.stringify(report, null, 2));
   console.log(JSON.stringify({ event: 'local-milestone-dry-run', reportPath: REPORT_PATH, summary: report }));
   process.exit(0);
@@ -406,13 +423,38 @@ if (!apiToken) {
   throw new Error('缺少 APIFY_API_TOKEN，无法刷新成熟声量快照。');
 }
 
-if (due.length) {
+if (due.length || backfillable7d.length) {
   const videoBackup = path.join(ROOT, `data/local/videos.backup-before-milestone-refresh-${RUN_TAG}.json`);
   const snapshotBackup = path.join(ROOT, `data/local/snapshots.backup-before-milestone-refresh-${RUN_TAG}.json`);
   await fs.copyFile(VIDEOS_PATH, videoBackup);
   await fs.copyFile(SNAPSHOTS_PATH, snapshotBackup);
   report.outputFiles.videoBackup = videoBackup;
   report.outputFiles.snapshotBackup = snapshotBackup;
+}
+
+for (const item of backfillable7d) {
+  const sourceFields = item.snapshot.fields || {};
+  const capturedAt = item.snapshot.capturedAt;
+  const milestoneViews = Math.max(toNumber(sourceFields.videoPlayCount, 0), toNumber(sourceFields.videoViewCount, 0));
+  item.fields['7日成熟声量'] = milestoneViews;
+  item.video.updatedAt = new Date().toISOString();
+  const snapshotFields = {
+    ...sourceFields,
+    runId: RUN_ID,
+    snapshotType: 'milestone_7d',
+    milestoneSource: 'existing_snapshot_backfill',
+    milestoneAgeDays: String(Number(((capturedAt - item.publishedAt.getTime()) / 86400000).toFixed(2)))
+  };
+  snapshots.push({
+    id: `${RUN_ID}_backfill_${snapshots.length + 1}`,
+    fields: snapshotFields,
+    source: 'local',
+    importedAt: new Date().toISOString()
+  });
+  latest.set(item.key, { capturedAt, fields: snapshotFields });
+  if (!types.has(item.key)) types.set(item.key, new Set());
+  types.get(item.key).add('milestone_7d');
+  report.backfilledExistingSnapshot += 1;
 }
 
 for (const [platform, rows] of grouped) {
@@ -528,7 +570,7 @@ for (const [platform, rows] of grouped) {
   await fs.writeFile(REPORT_PATH, JSON.stringify({ ...report, finishedAt: new Date().toISOString() }, null, 2));
 }
 
-if (report.updated > 0) {
+if (report.updated > 0 || report.backfilledExistingSnapshot > 0) {
   await fs.writeFile(VIDEOS_PATH, JSON.stringify(videos, null, 2));
   await fs.writeFile(SNAPSHOTS_PATH, JSON.stringify(snapshots, null, 2));
 }

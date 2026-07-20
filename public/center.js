@@ -138,6 +138,7 @@ let usaGeoReady = null;
 let canadaGeoReady = null;
 let europeGeoReady = null;
 let activeVideoEditId = '';
+let lastDiscoverApprovalId = '';
 let dashboardIndexCache = {
   followerByCreator: null,
   locationByCreator: null,
@@ -1279,6 +1280,7 @@ function getRegionByCreator() {
   const map = new Map();
   for (const row of centerStore.influencers || []) {
     const fields = row.fields || row;
+    const platform = normalizePlatformKey(readLocalText(fields['平台']) || fields.platform);
     const creator = creatorKey(readLocalText(fields['红人名称']));
     const looseCreator = creatorLooseKey(readLocalText(fields['红人名称']));
     const handle = handleFromProfileUrl(fields['红人链接']);
@@ -1287,8 +1289,11 @@ function getRegionByCreator() {
     if (!region) continue;
     const keys = [
       creator,
+      creator && platform ? `${creator}__${platform}` : '',
       looseCreator ? `loose:${looseCreator}` : '',
+      looseCreator && platform ? `loose:${looseCreator}__${platform}` : '',
       handle ? creatorKey(handle) : '',
+      handle && platform ? `${creatorKey(handle)}__${platform}` : '',
       handle ? `loose:${creatorLooseKey(handle)}` : ''
     ].filter(Boolean);
     for (const key of keys) {
@@ -1306,13 +1311,17 @@ function getOwnerByCreator() {
     const fields = row.fields || row;
     const owner = readLocalText(fields['负责人']) || readLocalText(fields['负责人名称']) || readLocalText(fields.owner);
     if (!owner) continue;
+    const platform = normalizePlatformKey(readLocalText(fields['平台']) || fields.platform);
     const creator = creatorKey(readLocalText(fields['红人名称']));
     const looseCreator = creatorLooseKey(readLocalText(fields['红人名称']));
     const handle = handleFromProfileUrl(fields['红人链接']);
     const keys = [
       creator,
+      creator && platform ? `${creator}__${platform}` : '',
       looseCreator ? `loose:${looseCreator}` : '',
+      looseCreator && platform ? `loose:${looseCreator}__${platform}` : '',
       handle ? creatorKey(handle) : '',
+      handle && platform ? `${creatorKey(handle)}__${platform}` : '',
       handle ? `loose:${creatorLooseKey(handle)}` : ''
     ].filter(Boolean);
     for (const key of keys) {
@@ -1328,6 +1337,7 @@ function getVideoRegion(fields, regionByCreator = getRegionByCreator()) {
   if (direct) return direct;
   const creator = creatorKey(readLocalText(fields['红人名称']));
   const loose = creatorLooseKey(readLocalText(fields['红人名称']));
+  const platform = normalizePlatformKey(readLocalText(fields['平台']) || fields.platform);
   const manualRegionAliases = {
     anthonymoreno: 'US',
     excdesignsus: 'US',
@@ -1335,6 +1345,8 @@ function getVideoRegion(fields, regionByCreator = getRegionByCreator()) {
     tensei: 'UK'
   };
   if (loose && manualRegionAliases[loose]) return manualRegionAliases[loose];
+  if (creator && platform && regionByCreator.get(`${creator}__${platform}`)) return regionByCreator.get(`${creator}__${platform}`);
+  if (loose && platform && regionByCreator.get(`loose:${loose}__${platform}`)) return regionByCreator.get(`loose:${loose}__${platform}`);
   if (creator && regionByCreator.get(creator)) return regionByCreator.get(creator);
   if (loose && regionByCreator.get(`loose:${loose}`)) return regionByCreator.get(`loose:${loose}`);
   if (loose && loose.length >= 8) {
@@ -1365,6 +1377,7 @@ function getVideoOwner(fields, ownerByCreator = getOwnerByCreator()) {
   if (direct) return direct;
   const creator = creatorKey(readLocalText(fields['红人名称']));
   const loose = creatorLooseKey(readLocalText(fields['红人名称']));
+  const platform = normalizePlatformKey(readLocalText(fields['平台']) || fields.platform);
   const manualOwnerAliases = {
     anthonymoreno: 'Ryan',
     excdesignsus: '未标注负责人',
@@ -1372,6 +1385,8 @@ function getVideoOwner(fields, ownerByCreator = getOwnerByCreator()) {
     tensei: 'Zoe'
   };
   if (loose && manualOwnerAliases[loose]) return manualOwnerAliases[loose];
+  if (creator && platform && ownerByCreator.get(`${creator}__${platform}`)) return ownerByCreator.get(`${creator}__${platform}`);
+  if (loose && platform && ownerByCreator.get(`loose:${loose}__${platform}`)) return ownerByCreator.get(`loose:${loose}__${platform}`);
   if (creator && ownerByCreator.get(creator)) return ownerByCreator.get(creator);
   if (loose && ownerByCreator.get(`loose:${loose}`)) return ownerByCreator.get(`loose:${loose}`);
   if (loose && loose.length >= 8) {
@@ -4146,21 +4161,21 @@ function downloadTextFile(filename, text, mime = 'text/csv;charset=utf-8') {
 }
 
 function exportScopedVideosCsv() {
-  const ownerByCreator = getOwnerByCreator();
-  const regionByCreator = getRegionByCreator();
-  const rows = getScopedVideoRows(centerPeriod)
-    .map((fields) => {
-      const activeViews = dashboardVoiceViews(fields);
-      const currentViews = latestKnownVideoViews(fields);
-      const mature7dViews = sevenDayVideoViews(fields);
-      const likes = rawNumber(fields.likesCount);
-      const comments = rawNumber(fields.commentsCount);
+  const videoFilters = getVideoTableFilters();
+  const rows = normalizeData(getScopedVideoRows(centerPeriod))
+    .filter((row) => videoRowPassesTableFilters(row, videoFilters))
+    .map((row) => {
+      const activeViews = row.views;
+      const currentViews = row.currentViews;
+      const mature7dViews = row.mature7dViews;
+      const likes = rawNumber(row.likes);
+      const comments = rawNumber(row.comments);
       return {
-        负责人: getVideoOwner(fields, ownerByCreator),
-        地区: getVideoRegion(fields, regionByCreator),
-        红人名称: readLocalText(fields['红人名称']) || '',
-        平台: platformLabel(readLocalText(fields['平台'])),
-        上线时间: fields.timestamp || '',
+        负责人: row.owner,
+        地区: row.region,
+        红人名称: row.creatorName || '',
+        平台: row.platform,
+        上线时间: row.raw?.timestamp || '',
         当前声量口径: dashboardVoiceLabel(),
         当前展示声量: activeViews,
         即时播放: currentViews,
@@ -4168,8 +4183,8 @@ function exportScopedVideosCsv() {
         点赞数: likes,
         评论数: comments,
         互动率: activeViews ? `${Number((((likes + comments) / activeViews) * 100).toFixed(2))}%` : '0%',
-        视频链接: videoUrl(fields),
-        文案: readLocalText(fields.caption)
+        视频链接: row.videoUrl,
+        文案: row.videoTitle
       };
     })
     .sort((a, b) => Number(b['当前展示声量']) - Number(a['当前展示声量']));
@@ -4339,7 +4354,7 @@ function renderTables() {
   normalizeData(getScopedVideoRows(centerPeriod))
     .filter((row) => videoRowPassesTableFilters(row, videoFilters))
     .sort((a, b) => b.views - a.views || (b.publishDate?.getTime?.() || 0) - (a.publishDate?.getTime?.() || 0))
-    .slice(0, 300)
+    .slice(0, 1000)
     .forEach((row) => {
       const tr = document.createElement('tr');
       addCell(tr, row.creatorName, '红人');
@@ -4455,7 +4470,8 @@ function getLocalDiscoverPayload(dryRun) {
     limitInfluencers: Number(centerEls.localDiscoverLimit.value) || 1,
     skipInfluencers: Number(centerEls.localDiscoverSkip.value) || 0,
     platformFilter: centerEls.localDiscoverPlatform.value || 'all',
-    globalKeywords: centerEls.localDiscoverKeywords.value || 'yozma,yozmasport'
+    globalKeywords: centerEls.localDiscoverKeywords.value || 'yozma,yozmasport',
+    tiktokApprovalId: dryRun ? '' : lastDiscoverApprovalId
   };
 }
 
@@ -4468,7 +4484,7 @@ function summarizeDiscoverResult(data) {
   if (data.dryRun) {
     const audit = data.candidateAudit || {};
     const estimate = data.usageEstimate || {};
-    return `候选检查完成：本地红人 ${audit.totalRows || 0} 条，可抓取 ${audit.eligibleRows || 0} 条，本次队列 ${audit.queuedRows || 0} 条，Apify 预估约 $${Number(estimate.estimatedUsageUsd || 0).toFixed(2)}。`;
+    return `候选检查完成：本地红人 ${audit.totalRows || 0} 条，活跃合作/钉选自动范围 ${audit.targetedRows || audit.selectedRows || 0} 条，本次队列 ${audit.queuedRows || 0} 条，Apify 预估约 $${Number(estimate.estimatedUsageUsd || 0).toFixed(2)}。`;
   }
   const summary = data.summary || {};
   return `本地抓取完成：处理 ${data.processedInfluencers || 0} 位，新增视频 ${summary.videoCreated || 0} 条，跳过重复 ${summary.videoSkipped || 0} 条，快照 ${summary.snapshotCreated || 0} 条，Apify 约 $${Number(summary.usageUsd || 0).toFixed(3)}。`;
@@ -4478,13 +4494,16 @@ function renderApifyEstimate(data) {
   if (!centerEls.apifyEstimateBox) return;
   const audit = data.candidateAudit || {};
   const estimate = data.usageEstimate || {};
+  const budget = data.usageBudget || {};
   const platformRows = Object.entries(estimate.byPlatform || {})
     .map(([platform, row]) => `<span>${escapeHtml(platform)}：${row.count} 位，约 $${Number(row.estimatedUsd || 0).toFixed(2)}</span>`)
     .join('');
   centerEls.apifyEstimateBox.innerHTML = `
-    <strong>本次候选：${audit.queuedRows || 0} 位，Apify 预估约 $${Number(estimate.estimatedUsageUsd || 0).toFixed(2)}</strong>
+    <strong>自动范围：${audit.targetedRows || audit.selectedRows || 0} 位 · 本次候选：${audit.queuedRows || 0} 位 · Apify 预估约 $${Number(estimate.estimatedUsageUsd || 0).toFixed(2)}</strong>
     <p>${escapeHtml(estimate.estimateBasis || '真实费用以 Apify 返回为准。')}</p>
-    <div>${platformRows || '<span>暂无候选</span>'}</div>`;
+    <div>${platformRows || '<span>暂无候选</span>'}</div>
+    <p>已人工停止新视频监控：${Number(audit.manuallyStoppedRows || 0)} 位；合同完成和已有上线视频不会自动停搜。</p>
+    <p>预算硬上限：单 Actor $${Number(budget.policy?.perActorUsd || 1).toFixed(2)} · 单批剩余 $${Number(budget.batchRemainingUsd || 0).toFixed(2)} · 本月剩余 $${Number(budget.monthRemainingUsd || 0).toFixed(2)}</p>`;
 }
 
 async function loadCenter() {
@@ -4887,6 +4906,8 @@ centerEls.btnLocalDiscoverDryRun.addEventListener('click', async () => {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(getLocalDiscoverPayload(true))
     });
+    lastDiscoverApprovalId = data.approvalId || '';
+    centerEls.confirmApifyRun.checked = false;
     centerEls.status.textContent = summarizeDiscoverResult(data);
     renderApifyEstimate(data);
   } catch (error) {

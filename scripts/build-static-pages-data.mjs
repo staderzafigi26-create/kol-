@@ -57,6 +57,11 @@ const FIELD_ALLOWLIST = {
   ],
   videos: [
     '是否监控',
+    '负责人',
+    '负责人名称',
+    '地区',
+    '国家/地区',
+    '红人编码',
     'likesCount',
     'videoUrl',
     '平台',

@@ -3,6 +3,15 @@ const path = require('path');
 const fs = require('fs/promises');
 const dotenv = require('dotenv');
 const dns = require('dns');
+const {
+  APIFY_BUDGET_POLICY,
+  budgetStatus,
+  canStartActor,
+  createTikTokApproval,
+  normalizeLedger,
+  redactSecrets,
+  verifyTikTokApproval
+} = require('./lib/apify-budget');
 
 dotenv.config();
 dns.setDefaultResultOrder('ipv4first');
@@ -12,6 +21,29 @@ const PORT = process.env.PORT || 3000;
 const HOST = process.env.HOST || '127.0.0.1';
 
 app.use(express.json({ limit: '5mb' }));
+app.use((req, res, next) => {
+  const body = req.body && typeof req.body === 'object' ? req.body : {};
+  if (Object.prototype.hasOwnProperty.call(body, 'apiToken')) {
+    return res.status(400).json({
+      ok: false,
+      error: 'Apify Token 仅允许从服务端环境读取，请勿在浏览器请求中携带。'
+    });
+  }
+
+  const legacyPaidPaths = new Set([
+    '/api/workflow/fetch-post-details',
+    '/api/workflow/run-once',
+    '/api/workflow/sync-feishu'
+  ]);
+  const isUnbudgetedScrape = req.path === '/api/scrape-influencer' && body.useMockData !== true;
+  if (req.method === 'POST' && (legacyPaidPaths.has(req.path) || isUnbudgetedScrape)) {
+    return res.status(410).json({
+      ok: false,
+      error: '旧付费入口已停用，请使用带预算闸门的本地发现、里程碑或钉钉同步接口。'
+    });
+  }
+  return next();
+});
 app.use(express.static(path.join(__dirname, 'public')));
 
 const RAW_DIR = path.join(__dirname, 'data', 'raw');
@@ -26,6 +58,8 @@ const LOCAL_DATA_FILES = {
   runs: path.join(LOCAL_DATA_DIR, 'runs.json'),
   affiliateSales: path.join(LOCAL_DATA_DIR, 'affiliate_sales.json')
 };
+const APIFY_BUDGET_PATH = path.join(LOCAL_DATA_DIR, 'apify-budget-ledger.json');
+const CRM_MONITOR_TARGETS_PATH = process.env.YOZMA_CRM_VIDEO_TARGETS || '/Users/ryan/Library/Application Support/Yozma KOL CRM/state/video-monitor-targets.json';
 const SYNC_SETTINGS_PATH = path.join(__dirname, '抓取设置.env');
 let dingTalkMilestoneRefreshRunning = false;
 let dingTalkSyncRunning = false;
@@ -153,6 +187,101 @@ async function readLocalDataStore() {
   return { influencers, videos, snapshots, runs, affiliateSales };
 }
 
+async function readJsonObject(filePath, fallback = {}) {
+  try {
+    const value = JSON.parse(await fs.readFile(filePath, 'utf8'));
+    return value && typeof value === 'object' && !Array.isArray(value) ? value : fallback;
+  } catch (_error) {
+    return fallback;
+  }
+}
+
+async function writeJsonObject(filePath, value) {
+  await fs.mkdir(path.dirname(filePath), { recursive: true });
+  const tempPath = `${filePath}.${process.pid}.tmp`;
+  await fs.writeFile(tempPath, JSON.stringify(value, null, 2), 'utf8');
+  await fs.rename(tempPath, filePath);
+}
+
+async function loadBudgetLedger() {
+  const ledger = normalizeLedger(await readJsonObject(APIFY_BUDGET_PATH, {}));
+  if (!ledger.legacyRunsImportedAt) {
+    const legacyRuns = await readJsonArray(LOCAL_DATA_FILES.runs);
+    const known = new Set(ledger.entries.map((row) => row.reservationId));
+    for (const row of legacyRuns) {
+      const fields = row.fields || row;
+      const actualUsd = Number(fields.usageUsd || 0);
+      const createdAt = String(fields.createdAt || '');
+      const reservationId = `legacy:${row.id || fields.runId || createdAt}`;
+      if (!actualUsd || !/^\d{4}-\d{2}/.test(createdAt) || known.has(reservationId)) continue;
+      ledger.entries.push({ reservationId, month: createdAt.slice(0, 7), actualUsd, settledAt: createdAt, meta: { source: 'legacy-runs-import' } });
+      known.add(reservationId);
+    }
+    ledger.legacyRunsImportedAt = new Date().toISOString();
+  }
+  const cutoff = Date.now() - 2 * 60 * 60 * 1000;
+  ledger.reservations = ledger.reservations.filter((row) => Date.parse(row.createdAt || 0) >= cutoff);
+  return ledger;
+}
+
+async function reserveActorBudget({ reservationId, batchActualUsd = 0, meta = {} }) {
+  const ledger = await loadBudgetLedger();
+  const decision = canStartActor({ ledger, batchActualUsd, reserveUsd: APIFY_BUDGET_POLICY.perActorUsd });
+  if (!decision.ok) return decision;
+  ledger.reservations.push({ reservationId, month: new Date().toISOString().slice(0, 7), reservedUsd: APIFY_BUDGET_POLICY.perActorUsd, createdAt: new Date().toISOString(), meta });
+  await writeJsonObject(APIFY_BUDGET_PATH, ledger);
+  return { ...decision, status: budgetStatus({ ledger, batchActualUsd }) };
+}
+
+async function settleActorBudget({ reservationId, actualUsd = 0, meta = {} }) {
+  const ledger = await loadBudgetLedger();
+  ledger.reservations = ledger.reservations.filter((row) => row.reservationId !== reservationId);
+  ledger.entries.unshift({ reservationId, month: new Date().toISOString().slice(0, 7), actualUsd: Number(actualUsd || 0), settledAt: new Date().toISOString(), meta });
+  ledger.entries = ledger.entries.slice(0, 2000);
+  await writeJsonObject(APIFY_BUDGET_PATH, ledger);
+  return budgetStatus({ ledger });
+}
+
+async function releaseActorBudget(reservationId) {
+  const ledger = await loadBudgetLedger();
+  ledger.reservations = ledger.reservations.filter((row) => row.reservationId !== reservationId);
+  await writeJsonObject(APIFY_BUDGET_PATH, ledger);
+}
+
+function isPinned(fields = {}) {
+  return ['手工钉选', 'Ryan钉选', '是否钉选'].some((key) => {
+    const value = fields[key];
+    if (value === undefined || value === null || readSelectText(value) === '') return false;
+    return parseMonitorEnabled(value);
+  });
+}
+
+async function loadCrmMonitorTargets() {
+  const state = await readJsonObject(CRM_MONITOR_TARGETS_PATH, { rows: [] });
+  const urls = new Set();
+  const names = new Set();
+  for (const row of state.rows || []) {
+    if (row.name) names.add(normalizeCreatorName(row.name));
+    for (const url of row.profileUrls || []) urls.add(normalizePostUrl(url));
+  }
+  return {
+    available: Array.isArray(state.rows),
+    generatedAt: state.generatedAt || '',
+    summary: state.summary || {},
+    stoppedRows: Array.isArray(state.stoppedRows) ? state.stoppedRows.length : 0,
+    urls,
+    names
+  };
+}
+
+function isCrmMonitorTarget(row, targetState) {
+  const fields = row.fields || row;
+  if (isPinned(fields)) return true;
+  const homeUrl = readLinkCell(fields['红人链接']);
+  if (homeUrl) return targetState.urls.has(normalizePostUrl(homeUrl));
+  return targetState.names.has(normalizeCreatorName(fields['红人名称']));
+}
+
 function localRowsToRecords(rows) {
   return (rows || []).map((row, index) => ({
     id: row.id || row.recordId || `local_${index + 1}`,
@@ -194,7 +323,7 @@ function rowsToCsv(rows) {
 }
 
 function sanitizeErrorMessage(error) {
-  return String(error && error.message ? error.message : error || '')
+  return redactSecrets(String(error && error.message ? error.message : error || ''))
     .replace(/token=[^&\s;]+/gi, 'token=***')
     .replace(/apify_api_[A-Za-z0-9_-]+/g, 'apify_api_***');
 }
@@ -544,14 +673,15 @@ function buildTikTokActorInput({ influencerInput, maxItems, days }) {
   };
 }
 
-async function runApifyActor({ apiToken, actorId, actorInput }) {
-  const runUrl = `https://api.apify.com/v2/acts/${encodeURIComponent(actorId)}/runs?token=${encodeURIComponent(apiToken)}&waitForFinish=180`;
+async function runApifyActor({ apiToken, actorId, actorInput, maxItems = 30, maxTotalChargeUsd = APIFY_BUDGET_POLICY.perActorUsd }) {
+  const runUrl = `https://api.apify.com/v2/acts/${encodeURIComponent(actorId)}/runs?waitForFinish=180&maxItems=${Math.max(1, Number(maxItems) || 1)}&maxTotalChargeUsd=${Number(maxTotalChargeUsd)}`;
+  const authHeaders = { Authorization: `Bearer ${apiToken}` };
 
   let runRes;
   try {
     runRes = await fetch(runUrl, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 'Content-Type': 'application/json', ...authHeaders },
       body: JSON.stringify(actorInput)
     });
   } catch (e) {
@@ -585,10 +715,10 @@ async function runApifyActor({ apiToken, actorId, actorInput }) {
   for (let i = 0; i < 6; i += 1) {
     if (terminalStatuses.has((latestRunData.status || '').toUpperCase())) break;
     await new Promise((resolve) => setTimeout(resolve, 2000));
-    const runStatusUrl = `https://api.apify.com/v2/actor-runs/${encodeURIComponent(runId)}?token=${encodeURIComponent(apiToken)}`;
+    const runStatusUrl = `https://api.apify.com/v2/actor-runs/${encodeURIComponent(runId)}`;
     let runStatusRes;
     try {
-      runStatusRes = await fetch(runStatusUrl);
+      runStatusRes = await fetch(runStatusUrl, { headers: authHeaders });
     } catch (e) {
       throw new Error(`Apify run status request network failed: ${runStatusUrl} ; ${e.message || e}`);
     }
@@ -597,10 +727,10 @@ async function runApifyActor({ apiToken, actorId, actorInput }) {
     latestRunData = runStatusJson.data || latestRunData;
   }
 
-  const itemsUrl = `https://api.apify.com/v2/datasets/${encodeURIComponent(datasetId)}/items?token=${encodeURIComponent(apiToken)}&clean=true`;
+  const itemsUrl = `https://api.apify.com/v2/datasets/${encodeURIComponent(datasetId)}/items?clean=true`;
   let itemsRes;
   try {
-    itemsRes = await fetch(itemsUrl);
+    itemsRes = await fetch(itemsUrl, { headers: authHeaders });
   } catch (e) {
     throw new Error(`Apify dataset request network failed: ${itemsUrl} ; ${e.message || e}`);
   }
@@ -2379,7 +2509,6 @@ app.post('/api/local/discover', async (req, res) => {
   let acquiredLock = false;
   try {
     const {
-      apiToken,
       days = 7,
       maxItems = 30,
       globalKeywords = 'yozma,yozmasport',
@@ -2390,9 +2519,10 @@ app.post('/api/local/discover', async (req, res) => {
       publishedBefore = '',
       actorLookbackDays = null,
       includeUnmonitoredTargets = false,
+      tiktokApprovalId = '',
       dryRun = false
     } = req.body || {};
-    const finalApifyToken = apiToken || process.env.APIFY_API_TOKEN;
+    const finalApifyToken = process.env.APIFY_API_TOKEN;
     const supportedPlatforms = new Set(['instagramreels', 'youtubevideo', 'youtubeshort', 'tiktok']);
     const normalizedPlatformFilter = normalizePlatform(platformFilter) || 'all';
     if (normalizedPlatformFilter !== 'all' && !supportedPlatforms.has(normalizedPlatformFilter)) {
@@ -2410,6 +2540,7 @@ app.post('/api/local/discover', async (req, res) => {
     }
 
     const store = await readLocalDataStore();
+    const crmTargets = await loadCrmMonitorTargets();
     const influencers = store.influencers.map((row, index) => {
       const fields = row.fields || row;
       const homeUrl = readLinkCell(fields['红人链接']);
@@ -2425,7 +2556,7 @@ app.post('/api/local/discover', async (req, res) => {
     );
     const selectedRows = influencers
       .filter((row) => {
-        if (parseMonitorEnabled((row.fields || {})['是否监控'])) return true;
+        if (isCrmMonitorTarget(row, crmTargets)) return true;
         if (!includeUnmonitoredTargets || !onlyInputSet.size) return false;
         const input = readLinkCell(row.fields['红人链接']) || String(row.fields['红人名称'] || '').trim();
         return onlyInputSet.has(input) || onlyInputSet.has(normalizePostUrl(input));
@@ -2442,9 +2573,14 @@ app.post('/api/local/discover', async (req, res) => {
     const offset = Math.max(0, Number(skipInfluencers) || 0);
     const limit = Math.max(1, Number(limitInfluencers) || 1);
     const candidates = targetedRows.slice(offset, offset + limit);
+    const approvalCandidates = candidates.filter((row) => row.platform === 'tiktok').map((row) => ({
+      platform: row.platform,
+      input: readLinkCell(row.fields['红人链接']) || String(row.fields['红人名称'] || '').trim()
+    }));
 
     if (dryRun) {
       const usageEstimate = estimateApifyUsageForCandidates(candidates);
+      const ledger = await loadBudgetLedger();
       return res.json({
         ok: true,
         dryRun: true,
@@ -2453,15 +2589,25 @@ app.post('/api/local/discover', async (req, res) => {
           ...candidateAudit,
           selectedRows: selectedRows.length,
           targetedRows: targetedRows.length,
-          queuedRows: candidates.length
+          queuedRows: candidates.length,
+          contractCompletedStoppedRows: 0,
+          manuallyStoppedRows: Number(crmTargets.summary.manuallyStopped || crmTargets.stoppedRows || 0)
         },
         usageEstimate,
+        usageBudget: budgetStatus({ ledger }),
+        blockedReason: '',
+        approvalId: approvalCandidates.length ? createTikTokApproval(approvalCandidates, finalApifyToken || 'missing-token') : '',
+        targetSource: { path: CRM_MONITOR_TARGETS_PATH, generatedAt: crmTargets.generatedAt, available: crmTargets.available, summary: crmTargets.summary },
         queuedPreview: candidates.slice(0, 20).map((row) => ({
           influencer: normalizeText(row.fields['红人名称'], 120),
           platform: row.platform,
           homeUrl: readLinkCell(row.fields['红人链接'])
         }))
       });
+    }
+
+    if (approvalCandidates.length && !verifyTikTokApproval(tiktokApprovalId, approvalCandidates, finalApifyToken)) {
+      return res.status(403).json({ ok: false, blockedReason: 'TIKTOK_APPROVAL_REQUIRED', error: 'TikTok 付费抓取必须先免费审计，并使用30分钟内、绑定当前候选清单的 Ryan 批准记录。' });
     }
 
     const videos = store.videos.map((row) => ({ ...row, fields: row.fields || row }));
@@ -2503,6 +2649,7 @@ app.post('/api/local/discover', async (req, res) => {
     let totalVideoSkipped = 0;
     let totalSnapshotCreated = 0;
     let totalErrors = 0;
+    let blockedReason = '';
 
     for (let idx = 0; idx < candidates.length; idx += 1) {
       const inf = candidates[idx];
@@ -2515,10 +2662,18 @@ app.post('/api/local/discover', async (req, res) => {
       const keywordList = normalizeKeywords(productKeywords);
       const monitorText = parseMonitorEnabled(fields['是否监控']) ? '是' : '否';
       const { actorId, actorInput } = getDiscoveryActorRequest({ platform, influencerInput, maxItems: safeMaxItems, days: actorDays });
+      const reservationId = `${runId}_${idx + 1}`;
+      const reservation = await reserveActorBudget({ reservationId, batchActualUsd: totalUsageUsd, meta: { runId, platform, influencerInput } });
+      if (!reservation.ok) {
+        blockedReason = reservation.blockedReason;
+        report.push({ platform, influencerInput, scraped: 0, matched: 0, videoCreated: 0, snapshotCreated: 0, usageUsd: 0, blockedReason });
+        break;
+      }
 
       try {
-        const run = await runApifyActor({ apiToken: finalApifyToken, actorId, actorInput });
+        const run = await runApifyActor({ apiToken: finalApifyToken, actorId, actorInput, maxItems: safeMaxItems });
         const usageUsd = Number(run.runData?.usageTotalUsd || 0);
+        await settleActorBudget({ reservationId, actualUsd: usageUsd, meta: { runId, platform, influencerInput, actorRunId: run.runData?.id || '' } });
         totalUsageUsd += usageUsd;
         totalScraped += run.items.length;
         await writeWorkflowJson(path.join(RAW_DIR, `${workflowTag}_${idx + 1}_${platform}_${safeInfluencerName}_raw.json`), {
@@ -2673,6 +2828,8 @@ app.post('/api/local/discover', async (req, res) => {
         report.push(rowReport);
         await writeWorkflowJson(path.join(OUTPUT_DIR, `${workflowTag}_${idx + 1}_${platform}_${safeInfluencerName}_summary.json`), rowReport);
       } catch (error) {
+        const uncertainStart = /network failed|status request network failed/i.test(String(error?.message || error));
+        if (!uncertainStart) await releaseActorBudget(reservationId);
         totalErrors += 1;
         const errorReport = {
           platform,
@@ -2687,6 +2844,7 @@ app.post('/api/local/discover', async (req, res) => {
           videoSkipped: 0,
           snapshotCreated: 0,
           usageUsd: 0,
+          budgetReservationState: uncertainStart ? 'uncertain_kept' : 'released',
           error: sanitizeErrorMessage(error)
         };
         report.push(errorReport);
@@ -2715,6 +2873,7 @@ app.post('/api/local/discover', async (req, res) => {
       snapshotCreated: totalSnapshotCreated,
       errors: totalErrors
     };
+    runFields.blockedReason = blockedReason;
     runs.unshift({ id: runId, fields: runFields, source: 'local-discovery' });
     await Promise.all([
       writeJsonArray(LOCAL_DATA_FILES.influencers, localInfluencers),
@@ -2723,6 +2882,7 @@ app.post('/api/local/discover', async (req, res) => {
       writeJsonArray(LOCAL_DATA_FILES.runs, runs.slice(0, 500))
     ]);
 
+    const finalLedger = await loadBudgetLedger();
     return res.json({
       ok: true,
       message: '本地抓取完成，数据已写入本地中台，未调用钉钉 API。',
@@ -2732,6 +2892,8 @@ app.post('/api/local/discover', async (req, res) => {
       processedInfluencers: report.length,
       skippedInfluencers: offset,
       summary: runFields,
+      usageBudget: budgetStatus({ ledger: finalLedger, batchActualUsd: totalUsageUsd }),
+      blockedReason,
       report
     });
   } catch (error) {
@@ -2764,14 +2926,13 @@ app.post('/api/workflow/refresh-dingtalk-milestones', async (req, res) => {
       videoTableId = process.env.DINGTALK_VIDEO_TABLE_ID,
       snapshotTableId = process.env.DINGTALK_SNAPSHOT_TABLE_ID,
       operatorId = process.env.DINGTALK_OPERATOR_ID,
-      apiToken,
       dryRun = false
     } = req.body || {};
 
     if (!appKey || !appSecret || !baseId || !videoTableId || !snapshotTableId || !operatorId) {
       return res.status(400).json({ ok: false, error: '钉钉里程碑配置不完整。' });
     }
-    if (!dryRun && !apiToken && !process.env.APIFY_API_TOKEN) {
+    if (!dryRun && !process.env.APIFY_API_TOKEN) {
       return res.status(400).json({ ok: false, error: 'Apify Token 不能为空。' });
     }
     if (!dryRun) {
@@ -2829,6 +2990,7 @@ app.post('/api/workflow/refresh-dingtalk-milestones', async (req, res) => {
     }
 
     if (dryRun || due.length === 0) {
+      const ledger = await loadBudgetLedger();
       return res.json({
         ok: true,
         dryRun: Boolean(dryRun),
@@ -2839,22 +3001,49 @@ app.post('/api/workflow/refresh-dingtalk-milestones', async (req, res) => {
           publishedAt: item.publishedAt.toISOString(),
           ageDays: Number(item.ageDays.toFixed(1)),
           milestone: item.milestone
-        }))
+        })),
+        usageEstimate: estimateApifyUsageForCandidates(due),
+        usageBudget: budgetStatus({ ledger }),
+        blockedReason: ''
       });
     }
 
-    const finalApifyToken = apiToken || process.env.APIFY_API_TOKEN;
+    const finalApifyToken = process.env.APIFY_API_TOKEN;
     const runId = `milestone_${Date.now()}`;
     const report = [];
     const grouped = new Map();
-    for (const item of due) {
+    const payableDue = due.filter((item) => item.platform !== 'tiktok');
+    const tiktokBlocked = due.length - payableDue.length;
+    for (const item of payableDue) {
       if (!grouped.has(item.platform)) grouped.set(item.platform, []);
       grouped.get(item.platform).push(item);
     }
 
+    let batchActualUsd = 0;
+    let blockedReason = tiktokBlocked ? 'TIKTOK_APPROVAL_REQUIRED' : '';
+    let groupIndex = 0;
     for (const [platform, platformDue] of grouped) {
+      groupIndex += 1;
       const { actorId, actorInput } = buildMilestoneActorRequest(platform, platformDue.map((item) => item.postUrl));
-      const run = await runApifyActor({ apiToken: finalApifyToken, actorId, actorInput });
+      const reservationId = `${runId}_${groupIndex}`;
+      const reservation = await reserveActorBudget({ reservationId, batchActualUsd, meta: { runId, platform, source: 'milestone' } });
+      if (!reservation.ok) {
+        blockedReason = reservation.blockedReason;
+        report.push(...platformDue.map((item) => ({ platform, postUrl: item.postUrl, milestone: item.milestone, status: 'blocked', blockedReason })));
+        break;
+      }
+      let run;
+      try {
+        run = await runApifyActor({ apiToken: finalApifyToken, actorId, actorInput, maxItems: platformDue.length });
+        const usageUsd = Number(run.runData?.usageTotalUsd || 0);
+        batchActualUsd += usageUsd;
+        await settleActorBudget({ reservationId, actualUsd: usageUsd, meta: { runId, platform, actorRunId: run.runData?.id || '', source: 'milestone' } });
+      } catch (error) {
+        const uncertainStart = /network failed|status request network failed/i.test(String(error?.message || error));
+        if (!uncertainStart) await releaseActorBudget(reservationId);
+        report.push(...platformDue.map((item) => ({ platform, postUrl: item.postUrl, milestone: item.milestone, status: 'error', error: sanitizeErrorMessage(error), budgetReservationState: uncertainStart ? 'uncertain_kept' : 'released' })));
+        continue;
+      }
       await fs.writeFile(
         path.join(RAW_DIR, `${runId}_${platform}_direct_refresh_raw.json`),
         JSON.stringify({ meta: { actorId, actorInput, runData: run.runData, datasetId: run.datasetId }, items: run.items }, null, 2),
@@ -2934,9 +3123,10 @@ app.post('/api/workflow/refresh-dingtalk-milestones', async (req, res) => {
       }
     }
 
-    return res.json({ ok: true, message: '已登记视频里程碑刷新完成。', refreshed: report.filter((item) => item.status === 'updated').length, report });
+    const finalLedger = await loadBudgetLedger();
+    return res.json({ ok: true, message: '已登记视频里程碑刷新完成。', refreshed: report.filter((item) => item.status === 'updated').length, report, usageBudget: budgetStatus({ ledger: finalLedger, batchActualUsd }), blockedReason, tiktokBlocked });
   } catch (error) {
-    return res.status(500).json({ ok: false, error: error.message || '服务内部错误。' });
+    return res.status(500).json({ ok: false, error: sanitizeErrorMessage(error) || '服务内部错误。' });
   } finally {
     if (acquiredRefreshLock) dingTalkMilestoneRefreshRunning = false;
   }
@@ -2953,7 +3143,6 @@ app.post('/api/workflow/sync-dingtalk', async (req, res) => {
       videoTableId = process.env.DINGTALK_VIDEO_TABLE_ID,
       snapshotTableId = process.env.DINGTALK_SNAPSHOT_TABLE_ID,
       operatorId = process.env.DINGTALK_OPERATOR_ID,
-      apiToken,
       detailActorId = 'xMc5Ga1oCONPmWJIa',
       days = 14,
       maxItems = 50,
@@ -2969,7 +3158,7 @@ app.post('/api/workflow/sync-dingtalk', async (req, res) => {
     if (!appKey || !appSecret || !baseId || !influencerTableId || !videoTableId || !operatorId) {
       return res.status(400).json({ ok: false, error: '钉钉配置不完整。' });
     }
-    if (!dryRun && !apiToken && !process.env.APIFY_API_TOKEN) {
+    if (!dryRun && !process.env.APIFY_API_TOKEN) {
       return res.status(400).json({ ok: false, error: 'Apify Token 不能为空。' });
     }
     if (!dryRun) {
@@ -2981,7 +3170,7 @@ app.post('/api/workflow/sync-dingtalk', async (req, res) => {
     }
 
     const runId = `run_${Date.now()}`;
-    const finalApifyToken = apiToken || process.env.APIFY_API_TOKEN;
+    const finalApifyToken = process.env.APIFY_API_TOKEN;
     const dingtalkAuth = { appKey: String(appKey).trim(), appSecret: String(appSecret).trim() };
     let accessToken = await dingTalkGetAccessToken(dingtalkAuth);
     const refreshDingTalkTokenIfNeeded = async () => {
@@ -3012,6 +3201,7 @@ app.post('/api/workflow/sync-dingtalk', async (req, res) => {
     const videoFieldTypeMap = new Map(videoFields.map((f) => [f.name, f.type]));
     const snapshotFieldTypeMap = new Map(snapshotFields.map((f) => [f.name, f.type]));
     const supportedInfluencerPlatforms = ['instagramreels', 'youtubevideo', 'youtubeshort', 'tiktok'];
+    const crmTargets = await loadCrmMonitorTargets();
     const normalizedPlatformFilter = normalizePlatform(platformFilter) || 'all';
     const influencerRows = influencerRecords.map((r) => {
       const fields = r.fields || {};
@@ -3032,36 +3222,23 @@ app.post('/api/workflow/sync-dingtalk', async (req, res) => {
       (r) => r.fields['红人名称'] || readLinkCell(r.fields['红人链接'])
     );
     const eligibleInfluencerRows = identifiedInfluencerRows.filter((r) => supportedInfluencerPlatforms.includes(r.platform));
-    const selectedInfluencerRows = eligibleInfluencerRows.filter((r) =>
+    const activeInfluencerRows = eligibleInfluencerRows.filter((r) => isCrmMonitorTarget(r, crmTargets));
+    const selectedInfluencerRows = activeInfluencerRows.filter((r) =>
       normalizedPlatformFilter === 'all' ? true : r.platform === normalizedPlatformFilter
     );
     const candidateAudit = {
       totalRows: influencerRows.length,
       monitoredRows: monitoredInfluencerRows.length,
-      eligibleRows: eligibleInfluencerRows.length,
+      eligibleRows: activeInfluencerRows.length,
       selectedRows: selectedInfluencerRows.length,
       disabledRows: influencerRows.length - monitoredInfluencerRows.length,
       missingIdentityRows: monitoredInfluencerRows.length - identifiedInfluencerRows.length,
       unsupportedRows: identifiedInfluencerRows.length - eligibleInfluencerRows.length,
-      byPlatform: countByPlatform(eligibleInfluencerRows),
+      byPlatform: countByPlatform(activeInfluencerRows),
       unsupportedByPlatform: countByPlatform(
         identifiedInfluencerRows.filter((r) => !supportedInfluencerPlatforms.includes(r.platform))
       )
     };
-
-    if (dryRun) {
-      return res.json({
-        ok: true,
-        message: '钉钉权限检查通过，未调用 Apify，未写入数据。',
-        dryRun: true,
-        candidateAudit,
-        tables: {
-          influencer: { id: String(influencerTableId).trim(), fields: influencerFields.length, records: influencerRecords.length },
-          video: { id: String(videoTableId).trim(), fields: videoFields.length, records: videoRecords.length },
-          snapshot: { id: String(snapshotTableId || '').trim(), fields: snapshotFields.length, records: snapshotRecords.length }
-        }
-      });
-    }
 
     const videoByKey = new Map();
     const registeredVideoCreatorPlatforms = new Set();
@@ -3101,8 +3278,32 @@ app.post('/api/workflow/sync-dingtalk', async (req, res) => {
           return onlyInputSet.has(String(input || '').trim()) || onlyInputSet.has(normalizePostUrl(input));
         })
       : selectedInfluencerRows;
-    const candidates = targetedInfluencerRows
+    const requestedCandidates = targetedInfluencerRows
       .slice(candidateOffset, candidateOffset + Math.max(1, Number(limitInfluencers) || 1));
+    const candidates = dryRun ? requestedCandidates : requestedCandidates.filter((row) => row.platform !== 'tiktok');
+
+    if (dryRun) {
+      const ledger = await loadBudgetLedger();
+      return res.json({
+        ok: true,
+        message: '钉钉权限检查通过，未调用 Apify，未写入数据。',
+        dryRun: true,
+        candidateAudit: { ...candidateAudit, targetedRows: targetedInfluencerRows.length, queuedRows: requestedCandidates.length, contractCompletedStoppedRows: 0, manuallyStoppedRows: Number(crmTargets.summary.manuallyStopped || crmTargets.stoppedRows || 0), tiktokApprovalRequired: requestedCandidates.filter((row) => row.platform === 'tiktok').length },
+        usageEstimate: estimateApifyUsageForCandidates(requestedCandidates),
+        usageBudget: budgetStatus({ ledger }),
+        blockedReason: '',
+        queuedPreview: requestedCandidates.slice(0, 20).map((row) => ({ influencer: normalizeText(row.fields['红人名称'], 120), platform: row.platform, homeUrl: readLinkCell(row.fields['红人链接']) })),
+        targetSource: { path: CRM_MONITOR_TARGETS_PATH, generatedAt: crmTargets.generatedAt, available: crmTargets.available, summary: crmTargets.summary },
+        tables: {
+          influencer: { id: String(influencerTableId).trim(), fields: influencerFields.length, records: influencerRecords.length },
+          video: { id: String(videoTableId).trim(), fields: videoFields.length, records: videoRecords.length },
+          snapshot: { id: String(snapshotTableId || '').trim(), fields: snapshotFields.length, records: snapshotRecords.length }
+        }
+      });
+    }
+    if (normalizedPlatformFilter === 'tiktok') {
+      return res.status(403).json({ ok: false, blockedReason: 'TIKTOK_APPROVAL_REQUIRED', error: '定时/钉钉同步不得自动运行 TikTok；请在本地中台先免费审计并由 Ryan 批准。' });
+    }
 
     const report = [];
     const filterDays = Math.max(1, Number(days) || 14);
@@ -3110,6 +3311,8 @@ app.post('/api/workflow/sync-dingtalk', async (req, res) => {
     const actorDays = filterDays + (publishedBefore ? 1 : 0);
 
     const workflowTag = `sync_dingtalk_${Date.now()}`;
+    let batchActualUsd = 0;
+    let blockedReason = requestedCandidates.some((row) => row.platform === 'tiktok') ? 'TIKTOK_SKIPPED_FOR_APPROVAL' : '';
     for (let idx = 0; idx < candidates.length; idx += 1) {
       const inf = candidates[idx];
       const platform = String(inf.platform || '').trim();
@@ -3137,9 +3340,19 @@ app.post('/api/workflow/sync-dingtalk', async (req, res) => {
             : platform === 'tiktok'
               ? buildTikTokActorInput({ influencerInput, maxItems: Number(maxItems) || 30, days: actorDays })
               : buildActorInput({ platform: 'instagram', influencerInput, maxItems: Number(maxItems) || 27, days: actorDays, actorId: fixedActorId });
+      const reservationId = `${runId}_${idx + 1}`;
+      const reservation = await reserveActorBudget({ reservationId, batchActualUsd, meta: { runId, platform, influencerInput, source: 'sync-dingtalk' } });
+      if (!reservation.ok) {
+        blockedReason = reservation.blockedReason;
+        report.push({ platform, influencerInput, blockedReason, scraped: 0, matched: 0, videoCreated: 0, snapshotCreated: 0, usageUsd: 0 });
+        break;
+      }
 
       try {
-      const run = await runApifyActor({ apiToken: finalApifyToken, actorId: fixedActorId, actorInput });
+      const run = await runApifyActor({ apiToken: finalApifyToken, actorId: fixedActorId, actorInput, maxItems: Number(maxItems) || 30 });
+      const usageUsd = Number(run.runData?.usageTotalUsd || 0);
+      batchActualUsd += usageUsd;
+      await settleActorBudget({ reservationId, actualUsd: usageUsd, meta: { runId, platform, influencerInput, actorRunId: run.runData?.id || '', source: 'sync-dingtalk' } });
       await fs.writeFile(
         path.join(RAW_DIR, `${workflowTag}_${idx + 1}_${platform}_${safeInfluencerName}_raw.json`),
         JSON.stringify(
@@ -3379,6 +3592,7 @@ app.post('/api/workflow/sync-dingtalk', async (req, res) => {
         videoUpdated,
         videoSkipped,
         snapshotCreated
+        ,usageUsd: Number(usageUsd.toFixed(6))
       });
       await fs.writeFile(
         path.join(OUTPUT_DIR, `${workflowTag}_${idx + 1}_${platform}_${safeInfluencerName}_summary.json`),
@@ -3386,6 +3600,8 @@ app.post('/api/workflow/sync-dingtalk', async (req, res) => {
         'utf-8'
       );
       } catch (error) {
+        const uncertainStart = /network failed|status request network failed/i.test(String(error?.message || error));
+        if (!uncertainStart) await releaseActorBudget(reservationId);
         const errorReport = {
           platform,
           actorId: fixedActorId,
@@ -3401,7 +3617,8 @@ app.post('/api/workflow/sync-dingtalk', async (req, res) => {
           videoUpdated: 0,
           videoSkipped: 0,
           snapshotCreated: 0,
-          error: error.message || String(error)
+          budgetReservationState: uncertainStart ? 'uncertain_kept' : 'released',
+          error: sanitizeErrorMessage(error)
         };
         report.push(errorReport);
         await fs.writeFile(
@@ -3412,6 +3629,7 @@ app.post('/api/workflow/sync-dingtalk', async (req, res) => {
       }
     }
 
+    const finalLedger = await loadBudgetLedger();
     return res.json({
       ok: true,
       message: '钉钉同步完成。',
@@ -3421,10 +3639,12 @@ app.post('/api/workflow/sync-dingtalk', async (req, res) => {
       },
       processedInfluencers: report.length,
       skippedInfluencers: candidateOffset,
+      usageBudget: budgetStatus({ ledger: finalLedger, batchActualUsd }),
+      blockedReason,
       report
     });
   } catch (error) {
-    return res.status(500).json({ ok: false, error: error.message || '服务内部错误。' });
+    return res.status(500).json({ ok: false, error: sanitizeErrorMessage(error) || '服务内部错误。' });
   } finally {
     if (acquiredSyncLock) dingTalkSyncRunning = false;
   }
