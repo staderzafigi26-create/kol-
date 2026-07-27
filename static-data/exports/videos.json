@@ -30592,5 +30592,210 @@
     "source": "video-link-import",
     "importedAt": "2026-07-20T04:46:48.140Z",
     "updatedAt": ""
+  },
+  {
+    "id": "vid_1784887039633_1b65bya",
+    "fields": {
+      "是否监控": "是",
+      "likesCount": 0,
+      "平台": "youtubevideo",
+      "commentsCount": 0,
+      "红人名称": "antonio1chavez",
+      "id": "th9PkJOTSz4",
+      "videoPlayCount": 0,
+      "videoViewCount": 0,
+      "url": {
+        "text": "https://www.youtube.com/watch?v=th9PkJOTSz4",
+        "link": "https://www.youtube.com/watch?v=th9PkJOTSz4"
+      },
+      "timestamp": "2026-07-24T00:00:00.000Z"
+    },
+    "source": "video-link-import",
+    "importedAt": "2026-07-24T09:57:19.633Z",
+    "updatedAt": ""
+  },
+  {
+    "id": "vid_1785126826636_yvrogwm",
+    "fields": {
+      "是否监控": "是",
+      "likesCount": 62,
+      "videoUrl": "https://www.youtube.com/watch?v=2Ox7RgQn6jI",
+      "平台": "youtubevideo",
+      "commentsCount": 31,
+      "红人名称": "Maxxx",
+      "id": "2Ox7RgQn6jI",
+      "videoPlayCount": 960,
+      "videoViewCount": 960,
+      "url": {
+        "text": "https://www.youtube.com/watch?v=2Ox7RgQn6jI",
+        "link": "https://www.youtube.com/watch?v=2Ox7RgQn6jI"
+      },
+      "timestamp": "2026-07-22T19:30:27.000Z",
+      "displayUrl": "https://i.ytimg.com/vi/2Ox7RgQn6jI/maxresdefault.jpg"
+    },
+    "source": "local-discovery",
+    "importedAt": "",
+    "updatedAt": "2026-07-27T04:33:46.636Z"
+  },
+  {
+    "id": "vid_1785127349982_uh4kgz7",
+    "fields": {
+      "是否监控": "是",
+      "likesCount": 1700,
+      "videoUrl": "https://www.youtube.com/shorts/5BIcP7AieZ4",
+      "平台": "youtubeshort",
+      "commentsCount": 88,
+      "红人名称": "Kwibs",
+      "id": "5BIcP7AieZ4",
+      "videoPlayCount": 104812,
+      "videoViewCount": 104812,
+      "url": {
+        "text": "https://www.youtube.com/shorts/5BIcP7AieZ4",
+        "link": "https://www.youtube.com/shorts/5BIcP7AieZ4"
+      },
+      "timestamp": "2026-07-24T04:48:12.000Z",
+      "displayUrl": "https://i.ytimg.com/vi/5BIcP7AieZ4/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAKAD4oCDAgAEAEYciBUKDUwDw==&rs=AOn4CLDlgZBp8i9kCD1Sy1QhHI0UjWhiSA"
+    },
+    "source": "local-discovery",
+    "importedAt": "",
+    "updatedAt": "2026-07-27T04:42:29.982Z"
+  },
+  {
+    "id": "vid_1785127760759_ixr1cm3",
+    "fields": {
+      "是否监控": "是",
+      "likesCount": 16,
+      "videoUrl": "https://www.youtube.com/shorts/0SavIaPXHps",
+      "平台": "youtubeshort",
+      "commentsCount": 3,
+      "红人名称": "Reelridez",
+      "id": "0SavIaPXHps",
+      "videoPlayCount": 1201,
+      "videoViewCount": 1201,
+      "url": {
+        "text": "https://www.youtube.com/shorts/0SavIaPXHps",
+        "link": "https://www.youtube.com/shorts/0SavIaPXHps"
+      },
+      "timestamp": "2026-07-20T00:24:33.000Z",
+      "displayUrl": "https://i.ytimg.com/vi/0SavIaPXHps/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAKAD4oCDAgAEAEYWSBlKDwwDw==&rs=AOn4CLAzMfDu7eruXElT8TKrAl3BkngQjw"
+    },
+    "source": "local-discovery",
+    "importedAt": "",
+    "updatedAt": "2026-07-27T04:49:20.759Z"
+  },
+  {
+    "id": "vid_1785127760759_3djm9gd",
+    "fields": {
+      "是否监控": "是",
+      "likesCount": 35,
+      "videoUrl": "https://www.youtube.com/shorts/DOkb9w4wn9M",
+      "平台": "youtubeshort",
+      "commentsCount": 1,
+      "红人名称": "Reelridez",
+      "id": "DOkb9w4wn9M",
+      "videoPlayCount": 1313,
+      "videoViewCount": 1313,
+      "url": {
+        "text": "https://www.youtube.com/shorts/DOkb9w4wn9M",
+        "link": "https://www.youtube.com/shorts/DOkb9w4wn9M"
+      },
+      "timestamp": "2026-07-26T00:21:12.000Z",
+      "displayUrl": "https://i.ytimg.com/vi/DOkb9w4wn9M/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAKAD4oCDAgAEAEYWyBlKDkwDw==&rs=AOn4CLCq3xLq76m5gOiztlgMh7sJAIw6rw"
+    },
+    "source": "local-discovery",
+    "importedAt": "",
+    "updatedAt": "2026-07-27T04:49:20.759Z"
+  },
+  {
+    "id": "vid_1785127760759_ytbe2ry",
+    "fields": {
+      "是否监控": "是",
+      "likesCount": 23,
+      "videoUrl": "https://www.youtube.com/shorts/E1x_MHP-Hnc",
+      "平台": "youtubeshort",
+      "commentsCount": 0,
+      "红人名称": "Reelridez",
+      "id": "E1x_MHP-Hnc",
+      "videoPlayCount": 2293,
+      "videoViewCount": 2293,
+      "url": {
+        "text": "https://www.youtube.com/shorts/E1x_MHP-Hnc",
+        "link": "https://www.youtube.com/shorts/E1x_MHP-Hnc"
+      },
+      "timestamp": "2026-07-23T21:40:20.000Z",
+      "displayUrl": "https://i.ytimg.com/vi/E1x_MHP-Hnc/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAKAD4oCDAgAEAEYZSBlKGUwDw==&rs=AOn4CLAio_X_X6c6JWSNXXXt4V03uv2Tjg"
+    },
+    "source": "local-discovery",
+    "importedAt": "",
+    "updatedAt": "2026-07-27T04:49:20.759Z"
+  },
+  {
+    "id": "vid_1785127760759_e7lqzvu",
+    "fields": {
+      "是否监控": "是",
+      "likesCount": 49,
+      "videoUrl": "https://www.youtube.com/shorts/P76AI-beJR0",
+      "平台": "youtubeshort",
+      "commentsCount": 3,
+      "红人名称": "Reelridez",
+      "id": "P76AI-beJR0",
+      "videoPlayCount": 2644,
+      "videoViewCount": 2644,
+      "url": {
+        "text": "https://www.youtube.com/shorts/P76AI-beJR0",
+        "link": "https://www.youtube.com/shorts/P76AI-beJR0"
+      },
+      "timestamp": "2026-07-21T22:07:21.000Z",
+      "displayUrl": "https://i.ytimg.com/vi/P76AI-beJR0/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAKAD4oCDAgAEAEYUyBdKGUwDw==&rs=AOn4CLClY-auQfuFEC5VEDz4r63Q_1W5Cw"
+    },
+    "source": "local-discovery",
+    "importedAt": "",
+    "updatedAt": "2026-07-27T04:49:20.759Z"
+  },
+  {
+    "id": "vid_1785127818640_c1is374",
+    "fields": {
+      "是否监控": "是",
+      "likesCount": 78,
+      "videoUrl": "https://www.youtube.com/shorts/pnUA8q1R4Yg",
+      "平台": "youtubeshort",
+      "commentsCount": 8,
+      "红人名称": "Maxxx",
+      "id": "pnUA8q1R4Yg",
+      "videoPlayCount": 1411,
+      "videoViewCount": 1411,
+      "url": {
+        "text": "https://www.youtube.com/shorts/pnUA8q1R4Yg",
+        "link": "https://www.youtube.com/shorts/pnUA8q1R4Yg"
+      },
+      "timestamp": "2026-07-26T20:24:00.000Z",
+      "displayUrl": "https://i.ytimg.com/vi/pnUA8q1R4Yg/maxres2.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAKAD4oCDAgAEAEYYCBlKD0wDw==&rs=AOn4CLBnwIXr8j_mgYGm-XMN-MG7IYnGXA"
+    },
+    "source": "local-discovery",
+    "importedAt": "",
+    "updatedAt": "2026-07-27T04:50:18.641Z"
+  },
+  {
+    "id": "vid_1785128151677_18yiah9",
+    "fields": {
+      "是否监控": "是",
+      "likesCount": 165,
+      "videoUrl": "https://www.youtube.com/shorts/YfiNZQHMViM",
+      "平台": "youtubeshort",
+      "commentsCount": 7,
+      "红人名称": "HKTROTT",
+      "id": "YfiNZQHMViM",
+      "videoPlayCount": 2728,
+      "videoViewCount": 2728,
+      "url": {
+        "text": "https://www.youtube.com/shorts/YfiNZQHMViM",
+        "link": "https://www.youtube.com/shorts/YfiNZQHMViM"
+      },
+      "timestamp": "2026-07-21T16:29:31.000Z",
+      "displayUrl": "https://i.ytimg.com/vi/YfiNZQHMViM/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AG2CIACgA-KAgwIABABGGUgZShlMA8=&rs=AOn4CLDfSe_Mm8JBzZR4VRrmXOl5NGaGyA"
+    },
+    "source": "local-discovery",
+    "importedAt": "",
+    "updatedAt": "2026-07-27T04:55:51.677Z"
   }
 ]
