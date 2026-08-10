@@ -1,21 +1,21 @@
 {
   "ok": true,
   "dashboard": {
-    "generatedAt": "2026-08-10T03:22:15.905Z",
+    "generatedAt": "2026-08-10T04:26:26.430Z",
     "summary": {
-      "totalCreators": 277,
-      "totalVideos": 1308,
-      "totalViews": 59875988,
+      "totalCreators": 295,
+      "totalVideos": 1339,
+      "totalViews": 60186183,
       "totalMature7dViews": 42317144,
-      "thisWeekVideos": 43,
-      "thisWeekCreators": 25,
-      "thisWeekViews": 438785,
+      "thisWeekVideos": 66,
+      "thisWeekCreators": 41,
+      "thisWeekViews": 691402,
       "thisWeekMature7dViews": 0,
-      "thisMonthVideos": 49,
-      "thisMonthCreators": 28,
-      "thisMonthViews": 545101,
+      "thisMonthVideos": 80,
+      "thisMonthCreators": 46,
+      "thisMonthViews": 855296,
       "thisMonthMature7dViews": 0,
-      "missingFollowerCreators": 90
+      "missingFollowerCreators": 107
     },
     "currentWeek": {
       "weekStart": "2026-08-01T16:00:00.000Z",
@@ -92,9 +92,9 @@
       {
         "weekStart": "2026-08-01T16:00:00.000Z",
         "weekEnd": "2026-08-08T16:00:00.000Z",
-        "videos": 43,
-        "creators": 25,
-        "views": 438785,
+        "videos": 66,
+        "creators": 41,
+        "views": 691402,
         "mature7dViews": 0,
         "mature7dVideos": 0
       }
@@ -148,9 +148,9 @@
       {
         "monthStart": "2026-07-31T16:00:00.000Z",
         "monthEnd": "2026-08-31T16:00:00.000Z",
-        "videos": 49,
-        "creators": 28,
-        "views": 545101,
+        "videos": 80,
+        "creators": 46,
+        "views": 855296,
         "mature7dViews": 0,
         "mature7dVideos": 0
       }
@@ -197,12 +197,12 @@
           "key": "micro",
           "label": "微型红人",
           "range": "< 1 万粉丝",
-          "creators": 1,
-          "videos": 1,
-          "views": 4048,
-          "likes": 87,
-          "comments": 6,
-          "avgViews": 4048,
+          "creators": 2,
+          "videos": 2,
+          "views": 7032,
+          "likes": 176,
+          "comments": 8,
+          "avgViews": 3516,
           "topCreator": "408.pbk"
         }
       ],
@@ -247,12 +247,12 @@
           "key": "micro",
           "label": "微型红人",
           "range": "< 1 万粉丝",
-          "creators": 1,
-          "videos": 1,
-          "views": 4048,
-          "likes": 87,
-          "comments": 6,
-          "avgViews": 4048,
+          "creators": 2,
+          "videos": 2,
+          "views": 7032,
+          "likes": 176,
+          "comments": 8,
+          "avgViews": 3516,
           "topCreator": "408.pbk"
         }
       ],
@@ -297,12 +297,12 @@
           "key": "micro",
           "label": "微型红人",
           "range": "< 1 万粉丝",
-          "creators": 28,
-          "videos": 200,
-          "views": 3743272,
-          "likes": 150589,
-          "comments": 6908,
-          "avgViews": 18716,
+          "creators": 29,
+          "videos": 201,
+          "views": 3746256,
+          "likes": 150678,
+          "comments": 6910,
+          "avgViews": 18638,
           "topCreator": "volturban"
         }
       ]
@@ -348,12 +348,12 @@
         "key": "micro",
         "label": "微型红人",
         "range": "< 1 万粉丝",
-        "creators": 28,
-        "videos": 200,
-        "views": 3743272,
-        "likes": 150589,
-        "comments": 6908,
-        "avgViews": 18716,
+        "creators": 29,
+        "videos": 201,
+        "views": 3746256,
+        "likes": 150678,
+        "comments": 6910,
+        "avgViews": 18638,
         "topCreator": "volturban"
       }
     ],
