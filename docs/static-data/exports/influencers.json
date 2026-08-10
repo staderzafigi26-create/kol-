@@ -57942,11 +57942,12 @@
       "负责人": "Mily",
       "合作日期": "2026-07-16",
       "合作进度": "待发货",
-      "合作模式": "已签合同"
+      "合作模式": "已签合同",
+      "红人粉丝数据": 593
     },
     "source": "marketing-import-16",
     "importedAt": "2026-07-19T14:25:20.599Z",
-    "updatedAt": ""
+    "updatedAt": "2026-08-10T03:55:38.191Z"
   },
   {
     "id": "marketing_tcmw9l",
@@ -60834,7 +60835,7 @@
         "link": "https://youtube.com/@kizyle",
         "text": "https://youtube.com/@kizyle"
       },
-      "平台": "youtubeshorts",
+      "平台": "youtubeshort",
       "是否出视频": "否",
       "红人编码": "US-Ryan-101",
       "地区": "US",
@@ -60916,7 +60917,7 @@
         "text": "https://instagram.com/ej_was_here"
       },
       "平台": "instagramreels",
-      "是否出视频": "否",
+      "是否出视频": "是",
       "红人编码": "US-Ryan-103",
       "地区": "US",
       "负责人": "Ryan",
@@ -60928,7 +60929,11 @@
       "红人粉丝数据": "207000",
       "粉丝数据来源": "营销总表(22)",
       "粉丝数据更新时间": "2026-08-10",
-      "追踪原因": "合作进度为 未出视频，需要确认是否上线"
+      "追踪原因": "合作进度为 未出视频，需要确认是否上线",
+      "url": {
+        "text": "https://www.instagram.com/p/DbvmoMVR81V/",
+        "link": "https://www.instagram.com/p/DbvmoMVR81V/"
+      }
     },
     "source": "marketing-total-22",
     "importedAt": "2026-08-10T11:20:23",
@@ -61105,7 +61110,7 @@
         "text": "https://youtube.com/@rikkarides"
       },
       "平台": "youtubevideo",
-      "是否出视频": "否",
+      "是否出视频": "是",
       "红人编码": "US-Ryan-104",
       "地区": "US",
       "负责人": "Ryan",
@@ -61117,7 +61122,11 @@
       "红人粉丝数据": "100341",
       "粉丝数据来源": "营销总表(22)",
       "粉丝数据更新时间": "2026-08-10",
-      "追踪原因": "合作进度为 未出视频，需要确认是否上线"
+      "追踪原因": "合作进度为 未出视频，需要确认是否上线",
+      "url": {
+        "text": "https://www.youtube.com/watch?v=cJN-st40lac",
+        "link": "https://www.youtube.com/watch?v=cJN-st40lac"
+      }
     },
     "source": "marketing-total-22",
     "importedAt": "2026-08-10T11:20:23",
@@ -61510,7 +61519,7 @@
         "text": "https://instagram.com/essiexsocial"
       },
       "平台": "instagramreels",
-      "是否出视频": "否",
+      "是否出视频": "是",
       "红人编码": "US-Lexy-126",
       "地区": "US",
       "负责人": "Lexy",
@@ -61522,7 +61531,11 @@
       "红人粉丝数据": "2.1k",
       "粉丝数据来源": "营销总表(22)",
       "粉丝数据更新时间": "2026-08-10",
-      "追踪原因": "合作进度为 未出视频，需要确认是否上线"
+      "追踪原因": "合作进度为 未出视频，需要确认是否上线",
+      "url": {
+        "text": "https://www.instagram.com/p/Dbj_tDYKOMF/",
+        "link": "https://www.instagram.com/p/Dbj_tDYKOMF/"
+      }
     },
     "source": "marketing-total-22",
     "importedAt": "2026-08-10T11:20:23",
@@ -61564,7 +61577,7 @@
         "text": "https://youtube.com/@Lifeofjake314/videos"
       },
       "平台": "youtubevideo",
-      "是否出视频": "否",
+      "是否出视频": "是",
       "红人编码": "US-Mily-008",
       "地区": "US",
       "负责人": "Mily",
@@ -61576,7 +61589,11 @@
       "红人粉丝数据": "6740",
       "粉丝数据来源": "营销总表(22)",
       "粉丝数据更新时间": "2026-08-10",
-      "追踪原因": "合作进度为 待发货，需要确认是否上线"
+      "追踪原因": "合作进度为 待发货，需要确认是否上线",
+      "url": {
+        "text": "https://www.youtube.com/watch?v=0UGzmncfQLI",
+        "link": "https://www.youtube.com/watch?v=0UGzmncfQLI"
+      }
     },
     "source": "marketing-total-22",
     "importedAt": "2026-08-10T11:20:23",
@@ -61591,7 +61608,7 @@
         "text": "https://instagram.com/the_terrykids/reels"
       },
       "平台": "instagramreels",
-      "是否出视频": "否",
+      "是否出视频": "是",
       "红人编码": "US-Mily-009",
       "地区": "US",
       "负责人": "Mily",
@@ -61603,7 +61620,11 @@
       "红人粉丝数据": "9.3万",
       "粉丝数据来源": "营销总表(22)",
       "粉丝数据更新时间": "2026-08-10",
-      "追踪原因": "合作进度为 待发货，需要确认是否上线"
+      "追踪原因": "合作进度为 待发货，需要确认是否上线",
+      "url": {
+        "text": "https://www.instagram.com/p/DblM44bhHpI/",
+        "link": "https://www.instagram.com/p/DblM44bhHpI/"
+      }
     },
     "source": "marketing-total-22",
     "importedAt": "2026-08-10T11:20:23",
@@ -61644,7 +61665,7 @@
         "link": "https://youtube.com/@the_terrykids/shorts",
         "text": "https://youtube.com/@the_terrykids/shorts"
       },
-      "平台": "youtubeshorts",
+      "平台": "youtubeshort",
       "是否出视频": "否",
       "红人编码": "US-Mily-009",
       "地区": "US",
@@ -61752,7 +61773,7 @@
         "link": "https://youtube.com/@tobibikes/shorts",
         "text": "https://youtube.com/@tobibikes/shorts"
       },
-      "平台": "youtubeshorts",
+      "平台": "youtubeshort",
       "是否出视频": "否",
       "红人编码": "EU-Mandie-028",
       "地区": "EU",
@@ -62239,7 +62260,7 @@
         "text": "https://tiktok.com/@ausoml1rider5"
       },
       "平台": "tiktok",
-      "是否出视频": "否",
+      "是否出视频": "是",
       "红人编码": "EU-Melody-019",
       "地区": "EU",
       "负责人": "Melody",
@@ -62251,7 +62272,19 @@
       "红人粉丝数据": "9027",
       "粉丝数据来源": "营销总表(22)",
       "粉丝数据更新时间": "2026-08-10",
-      "追踪原因": "合作进度为 待发货，需要确认是否上线"
+      "追踪原因": "合作进度为 待发货，需要确认是否上线",
+      "url": {
+        "text": "https://www.tiktok.com/@ausoml1rider5/video/7671419451870399766",
+        "link": "https://www.tiktok.com/@ausoml1rider5/video/7671419451870399766"
+      },
+      "url2": {
+        "text": "https://www.tiktok.com/@ausoml1rider5/video/7670322044902411542",
+        "link": "https://www.tiktok.com/@ausoml1rider5/video/7670322044902411542"
+      },
+      "url3": {
+        "text": "https://www.tiktok.com/@ausoml1rider5/video/7669810128299904278",
+        "link": "https://www.tiktok.com/@ausoml1rider5/video/7669810128299904278"
+      }
     },
     "source": "marketing-total-22",
     "importedAt": "2026-08-10T11:20:23",
@@ -62346,8 +62379,8 @@
         "link": "https://youtube.com/@timtamdv/shorts",
         "text": "https://youtube.com/@timtamdv/shorts"
       },
-      "平台": "youtubeshorts",
-      "是否出视频": "否",
+      "平台": "youtubeshort",
+      "是否出视频": "是",
       "红人编码": "CA-Melody-015",
       "地区": "CA",
       "负责人": "Melody",
@@ -62359,7 +62392,15 @@
       "红人粉丝数据": "14k",
       "粉丝数据来源": "营销总表(22)",
       "粉丝数据更新时间": "2026-08-10",
-      "追踪原因": "合作进度为 待发货，需要确认是否上线"
+      "追踪原因": "合作进度为 待发货，需要确认是否上线",
+      "url": {
+        "text": "https://www.youtube.com/shorts/BK-62uqJ6Sc",
+        "link": "https://www.youtube.com/shorts/BK-62uqJ6Sc"
+      },
+      "url2": {
+        "text": "https://www.youtube.com/shorts/aC3C7HTGDDM",
+        "link": "https://www.youtube.com/shorts/aC3C7HTGDDM"
+      }
     },
     "source": "marketing-total-22",
     "importedAt": "2026-08-10T11:20:23",
@@ -62427,7 +62468,7 @@
         "link": "https://youtube.com/@GabrielRancourtCycling/shorts",
         "text": "https://youtube.com/@GabrielRancourtCycling/shorts"
       },
-      "平台": "youtubeshorts",
+      "平台": "youtubeshort",
       "是否出视频": "否",
       "红人编码": "CA-Melody-016",
       "地区": "CA",
@@ -62589,7 +62630,7 @@
         "text": "https://instagram.com/stevebreake"
       },
       "平台": "instagramreels",
-      "是否出视频": "否",
+      "是否出视频": "是",
       "红人编码": "EU-Arya-002",
       "地区": "EU",
       "负责人": "Arya",
@@ -62600,7 +62641,11 @@
       "红人粉丝数据": "5K",
       "粉丝数据来源": "营销总表(22)",
       "粉丝数据更新时间": "2026-08-10",
-      "追踪原因": "合作进度为 已签合同，需要确认是否上线"
+      "追踪原因": "合作进度为 已签合同，需要确认是否上线",
+      "url": {
+        "text": "https://www.instagram.com/p/Db059_Itb18/",
+        "link": "https://www.instagram.com/p/Db059_Itb18/"
+      }
     },
     "source": "marketing-total-22",
     "importedAt": "2026-08-10T11:20:23",
@@ -62695,7 +62740,7 @@
         "link": "https://youtube.com/@bikesbrady/shorts",
         "text": "https://youtube.com/@bikesbrady/shorts"
       },
-      "平台": "youtubeshorts",
+      "平台": "youtubeshort",
       "是否出视频": "否",
       "红人编码": "US-Mily-011",
       "地区": "US",
@@ -62723,7 +62768,7 @@
         "text": "https://instagram.com/enduroknightryder/reels"
       },
       "平台": "instagramreels",
-      "是否出视频": "否",
+      "是否出视频": "是",
       "红人编码": "US-Mily-012",
       "地区": "US",
       "负责人": "Mily",
@@ -62735,7 +62780,11 @@
       "红人粉丝数据": "76K",
       "粉丝数据来源": "营销总表(22)",
       "粉丝数据更新时间": "2026-08-10",
-      "追踪原因": "合作进度为 待发货，需要确认是否上线"
+      "追踪原因": "合作进度为 待发货，需要确认是否上线",
+      "url": {
+        "text": "https://www.instagram.com/p/Dbo8ULetLwD/",
+        "link": "https://www.instagram.com/p/Dbo8ULetLwD/"
+      }
     },
     "source": "marketing-total-22",
     "importedAt": "2026-08-10T11:20:23",
@@ -62750,7 +62799,7 @@
         "text": "https://instagram.com/oneway_banyan/reels"
       },
       "平台": "instagramreels",
-      "是否出视频": "否",
+      "是否出视频": "是",
       "红人编码": "US-Mily-013",
       "地区": "US",
       "负责人": "Mily",
@@ -62762,7 +62811,11 @@
       "红人粉丝数据": "4500",
       "粉丝数据来源": "营销总表(22)",
       "粉丝数据更新时间": "2026-08-10",
-      "追踪原因": "合作进度为 待发货，需要确认是否上线"
+      "追踪原因": "合作进度为 待发货，需要确认是否上线",
+      "url": {
+        "text": "https://www.instagram.com/p/DbmW-dGMWBh/",
+        "link": "https://www.instagram.com/p/DbmW-dGMWBh/"
+      }
     },
     "source": "marketing-total-22",
     "importedAt": "2026-08-10T11:20:23",
@@ -62777,7 +62830,7 @@
         "text": "https://tiktok.com/@oz.rides"
       },
       "平台": "tiktok",
-      "是否出视频": "否",
+      "是否出视频": "是",
       "红人编码": "US-Mily-014",
       "地区": "US",
       "负责人": "Mily",
@@ -62789,7 +62842,15 @@
       "红人粉丝数据": "6200",
       "粉丝数据来源": "营销总表(22)",
       "粉丝数据更新时间": "2026-08-10",
-      "追踪原因": "合作进度为 待发货，需要确认是否上线"
+      "追踪原因": "合作进度为 待发货，需要确认是否上线",
+      "url": {
+        "text": "https://www.tiktok.com/@oz.rides/video/7669895238936317197",
+        "link": "https://www.tiktok.com/@oz.rides/video/7669895238936317197"
+      },
+      "url2": {
+        "text": "https://www.tiktok.com/@oz.rides/video/7669712172712267038",
+        "link": "https://www.tiktok.com/@oz.rides/video/7669712172712267038"
+      }
     },
     "source": "marketing-total-22",
     "importedAt": "2026-08-10T11:20:23",
@@ -62804,7 +62865,7 @@
         "text": "https://instagram.com/bs.john"
       },
       "平台": "instagramreels",
-      "是否出视频": "否",
+      "是否出视频": "是",
       "红人编码": "US-Mily-015",
       "地区": "US",
       "负责人": "Mily",
@@ -62816,7 +62877,11 @@
       "红人粉丝数据": "12K",
       "粉丝数据来源": "营销总表(22)",
       "粉丝数据更新时间": "2026-08-10",
-      "追踪原因": "合作进度为 待发货，需要确认是否上线"
+      "追踪原因": "合作进度为 待发货，需要确认是否上线",
+      "url": {
+        "text": "https://www.instagram.com/p/DbqUiEAp9tc/",
+        "link": "https://www.instagram.com/p/DbqUiEAp9tc/"
+      }
     },
     "source": "marketing-total-22",
     "importedAt": "2026-08-10T11:20:23",
@@ -62831,7 +62896,7 @@
         "text": "https://instagram.com/bs.john/reels"
       },
       "平台": "instagramreels",
-      "是否出视频": "否",
+      "是否出视频": "是",
       "红人编码": "US-Mily-015",
       "地区": "US",
       "负责人": "Mily",
@@ -62843,7 +62908,11 @@
       "红人粉丝数据": "12K",
       "粉丝数据来源": "营销总表(22)",
       "粉丝数据更新时间": "2026-08-10",
-      "追踪原因": "合作进度为 待发货，需要确认是否上线"
+      "追踪原因": "合作进度为 待发货，需要确认是否上线",
+      "url": {
+        "text": "https://www.instagram.com/p/DbqUiEAp9tc/",
+        "link": "https://www.instagram.com/p/DbqUiEAp9tc/"
+      }
     },
     "source": "marketing-total-22",
     "importedAt": "2026-08-10T11:20:23",
@@ -62858,7 +62927,7 @@
         "text": "https://instagram.com/minimetalfab/reels"
       },
       "平台": "instagramreels",
-      "是否出视频": "否",
+      "是否出视频": "是",
       "红人编码": "US-Mily-016",
       "地区": "US",
       "负责人": "Mily",
@@ -62870,7 +62939,11 @@
       "红人粉丝数据": "16K",
       "粉丝数据来源": "营销总表(22)",
       "粉丝数据更新时间": "2026-08-10",
-      "追踪原因": "合作进度为 待发货，需要确认是否上线"
+      "追踪原因": "合作进度为 待发货，需要确认是否上线",
+      "url": {
+        "text": "https://www.instagram.com/p/DbqVx1LgJbR/",
+        "link": "https://www.instagram.com/p/DbqVx1LgJbR/"
+      }
     },
     "source": "marketing-total-22",
     "importedAt": "2026-08-10T11:20:23",
@@ -62911,7 +62984,7 @@
         "link": "https://youtube.com/@MiniMetalFab/shorts",
         "text": "https://youtube.com/@MiniMetalFab/shorts"
       },
-      "平台": "youtubeshorts",
+      "平台": "youtubeshort",
       "是否出视频": "否",
       "红人编码": "US-Mily-016",
       "地区": "US",
@@ -62966,7 +63039,7 @@
         "text": "https://instagram.com/whistler.official"
       },
       "平台": "instagramreels",
-      "是否出视频": "否",
+      "是否出视频": "是",
       "红人编码": "EU-Mandie-034",
       "地区": "EU",
       "负责人": "Mandie",
@@ -62978,7 +63051,15 @@
       "红人粉丝数据": "4880",
       "粉丝数据来源": "营销总表(22)",
       "粉丝数据更新时间": "2026-08-10",
-      "追踪原因": "合作进度为 待发货，需要确认是否上线"
+      "追踪原因": "合作进度为 待发货，需要确认是否上线",
+      "url": {
+        "text": "https://www.instagram.com/p/Db0KjNOxvtG/",
+        "link": "https://www.instagram.com/p/Db0KjNOxvtG/"
+      },
+      "url2": {
+        "text": "https://www.instagram.com/p/Dbp2VapP13H/",
+        "link": "https://www.instagram.com/p/Dbp2VapP13H/"
+      }
     },
     "source": "marketing-total-22",
     "importedAt": "2026-08-10T11:20:23",
@@ -62993,7 +63074,7 @@
         "text": "https://instagram.com/ovixiba/reels"
       },
       "平台": "instagramreels",
-      "是否出视频": "否",
+      "是否出视频": "是",
       "红人编码": "EU-Mandie-035",
       "地区": "EU",
       "负责人": "Mandie",
@@ -63005,7 +63086,11 @@
       "红人粉丝数据": "10k",
       "粉丝数据来源": "营销总表(22)",
       "粉丝数据更新时间": "2026-08-10",
-      "追踪原因": "合作进度为 待发货，需要确认是否上线"
+      "追踪原因": "合作进度为 待发货，需要确认是否上线",
+      "url": {
+        "text": "https://www.instagram.com/p/Dbnh_HpMVSe/",
+        "link": "https://www.instagram.com/p/Dbnh_HpMVSe/"
+      }
     },
     "source": "marketing-total-22",
     "importedAt": "2026-08-10T11:20:23",
@@ -63074,7 +63159,7 @@
         "text": "https://tiktok.com/@gninja_400"
       },
       "平台": "tiktok",
-      "是否出视频": "否",
+      "是否出视频": "是",
       "红人编码": "US-Mily-017",
       "地区": "US",
       "负责人": "Mily",
@@ -63086,7 +63171,11 @@
       "红人粉丝数据": "147.7K",
       "粉丝数据来源": "营销总表(22)",
       "粉丝数据更新时间": "2026-08-10",
-      "追踪原因": "合作进度为 待发货，需要确认是否上线"
+      "追踪原因": "合作进度为 待发货，需要确认是否上线",
+      "url": {
+        "text": "https://www.tiktok.com/@gninja_400/video/7671456141800443167",
+        "link": "https://www.tiktok.com/@gninja_400/video/7671456141800443167"
+      }
     },
     "source": "marketing-total-22",
     "importedAt": "2026-08-10T11:20:23",
@@ -63101,7 +63190,7 @@
         "text": "https://instagram.com/pat.tejeda/reels"
       },
       "平台": "instagramreels",
-      "是否出视频": "否",
+      "是否出视频": "是",
       "红人编码": "US-Mily-018",
       "地区": "US",
       "负责人": "Mily",
@@ -63113,7 +63202,19 @@
       "红人粉丝数据": "11K",
       "粉丝数据来源": "营销总表(22)",
       "粉丝数据更新时间": "2026-08-10",
-      "追踪原因": "合作进度为 待发货，需要确认是否上线"
+      "追踪原因": "合作进度为 待发货，需要确认是否上线",
+      "url": {
+        "text": "https://www.instagram.com/p/Dbyhlr4Jcdz/",
+        "link": "https://www.instagram.com/p/Dbyhlr4Jcdz/"
+      },
+      "url2": {
+        "text": "https://www.instagram.com/p/Dbvpj3_JrMd/",
+        "link": "https://www.instagram.com/p/Dbvpj3_JrMd/"
+      },
+      "url3": {
+        "text": "https://www.instagram.com/p/DbyhKakpT1a/",
+        "link": "https://www.instagram.com/p/DbyhKakpT1a/"
+      }
     },
     "source": "marketing-total-22",
     "importedAt": "2026-08-10T11:20:23",
@@ -63154,7 +63255,7 @@
         "link": "https://youtube.com/@RevRides09/shorts",
         "text": "https://youtube.com/@RevRides09/shorts"
       },
-      "平台": "youtubeshorts",
+      "平台": "youtubeshort",
       "是否出视频": "否",
       "红人编码": "US-Mily-019",
       "地区": "US",
@@ -63235,7 +63336,7 @@
         "link": "https://youtube.com/@RippingRodsTV/shorts",
         "text": "https://youtube.com/@RippingRodsTV/shorts"
       },
-      "平台": "youtubeshorts",
+      "平台": "youtubeshort",
       "是否出视频": "否",
       "红人编码": "US-Mily-020",
       "地区": "US",
@@ -63263,7 +63364,7 @@
         "text": "https://instagram.com/x3_biny/reels"
       },
       "平台": "instagramreels",
-      "是否出视频": "否",
+      "是否出视频": "是",
       "红人编码": "US-Mily-021",
       "地区": "US",
       "负责人": "Mily",
@@ -63275,7 +63376,15 @@
       "红人粉丝数据": "5600",
       "粉丝数据来源": "营销总表(22)",
       "粉丝数据更新时间": "2026-08-10",
-      "追踪原因": "合作进度为 待发货，需要确认是否上线"
+      "追踪原因": "合作进度为 待发货，需要确认是否上线",
+      "url": {
+        "text": "https://www.instagram.com/p/DbwkTBNCicr/",
+        "link": "https://www.instagram.com/p/DbwkTBNCicr/"
+      },
+      "url2": {
+        "text": "https://www.instagram.com/p/DbzCI7RC-TD/",
+        "link": "https://www.instagram.com/p/DbzCI7RC-TD/"
+      }
     },
     "source": "marketing-total-22",
     "importedAt": "2026-08-10T11:20:23",
@@ -63290,7 +63399,7 @@
         "text": "https://tiktok.com/@x3_biny"
       },
       "平台": "tiktok",
-      "是否出视频": "否",
+      "是否出视频": "是",
       "红人编码": "US-Mily-021",
       "地区": "US",
       "负责人": "Mily",
@@ -63302,7 +63411,19 @@
       "红人粉丝数据": "5600",
       "粉丝数据来源": "营销总表(22)",
       "粉丝数据更新时间": "2026-08-10",
-      "追踪原因": "合作进度为 待发货，需要确认是否上线"
+      "追踪原因": "合作进度为 待发货，需要确认是否上线",
+      "url": {
+        "text": "https://www.tiktok.com/@x3_biny/video/7672182453720698125",
+        "link": "https://www.tiktok.com/@x3_biny/video/7672182453720698125"
+      },
+      "url2": {
+        "text": "https://www.tiktok.com/@x3_biny/video/7671445893287136525",
+        "link": "https://www.tiktok.com/@x3_biny/video/7671445893287136525"
+      },
+      "url3": {
+        "text": "https://www.tiktok.com/@x3_biny/video/7670955231366221070",
+        "link": "https://www.tiktok.com/@x3_biny/video/7670955231366221070"
+      }
     },
     "source": "marketing-total-22",
     "importedAt": "2026-08-10T11:20:23",
