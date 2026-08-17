@@ -1,11 +1,11 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-17T03:27:47.582Z",
+  "generatedAt": "2026-08-17T04:04:47.932Z",
   "privacy": "Sanitized read-only team snapshot. Contact fields, payment fields and order identifiers are excluded; affiliate sales are published as creator-level aggregates.",
   "counts": {
     "influencers": 1850,
     "videos": 1378,
-    "snapshots": 2914,
+    "snapshots": 2927,
     "runs": 500,
     "affiliateSales": 1333
   },
@@ -94914,11 +94914,12 @@
             "link": "https://www.youtube.com/shorts/0SavIaPXHps"
           },
           "timestamp": "2026-07-20T00:24:33.000Z",
-          "displayUrl": "https://i.ytimg.com/vi/0SavIaPXHps/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAKAD4oCDAgAEAEYWSBlKDwwDw==&rs=AOn4CLAzMfDu7eruXElT8TKrAl3BkngQjw"
+          "displayUrl": "https://i.ytimg.com/vi/0SavIaPXHps/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAKAD4oCDAgAEAEYWSBlKDwwDw==&rs=AOn4CLAzMfDu7eruXElT8TKrAl3BkngQjw",
+          "7日成熟声量": 1201
         },
         "source": "local-discovery",
         "importedAt": "",
-        "updatedAt": "2026-07-27T04:49:20.759Z"
+        "updatedAt": "2026-08-17T04:04:35.673Z"
       },
       {
         "id": "vid_1785127760759_3djm9gd",
@@ -95227,11 +95228,12 @@
             "text": "https://www.instagram.com/p/Da_ookvxMxJ/",
             "link": "https://www.instagram.com/p/Da_ookvxMxJ/"
           },
-          "timestamp": "2026-07-20T00:19:33.000Z"
+          "timestamp": "2026-07-20T00:19:33.000Z",
+          "7日成熟声量": 2298
         },
         "source": "local-discovery",
         "importedAt": "",
-        "updatedAt": "2026-07-27T06:27:23.508Z"
+        "updatedAt": "2026-08-17T04:04:35.673Z"
       },
       {
         "id": "vid_1785133643508_asj889g",
@@ -95660,11 +95662,12 @@
             "link": "https://www.tiktok.com/@reelridez/video/7664395527093570830"
           },
           "timestamp": "2026-07-20T00:09:28.000Z",
-          "displayUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/osdpgfpfoA00fGe2ABsBdnIYz48F7OZgORFF1A~tplv-tiktokx-origin.image?dr=9636&x-expires=1785304800&x-signature=apM%2FoLa0Yzs%2Fzkf%2B%2BwBrD%2FTKa%2Fs%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5"
+          "displayUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/osdpgfpfoA00fGe2ABsBdnIYz48F7OZgORFF1A~tplv-tiktokx-origin.image?dr=9636&x-expires=1785304800&x-signature=apM%2FoLa0Yzs%2Fzkf%2B%2BwBrD%2FTKa%2Fs%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
+          "7日成熟声量": 485
         },
         "source": "local-discovery",
         "importedAt": "",
-        "updatedAt": "2026-07-27T06:54:25.208Z"
+        "updatedAt": "2026-08-17T04:04:35.673Z"
       },
       {
         "id": "vid_1785135691636_76dmu9c",
@@ -95821,11 +95824,12 @@
             "link": "https://www.tiktok.com/@alex_520s/video/7664477377027738902"
           },
           "timestamp": "2026-07-20T05:27:07.000Z",
-          "displayUrl": "https://p16-common-sign.tiktokcdn.com/tos-no1a-p-0037-no/oUslYLeIfAu2U30IigDKjNAmehgNL0IWGAS2Y7~tplv-tiktokx-origin.image?dr=14575&x-expires=1785308400&x-signature=ZU6yYFdvKF9cEQ7B9DckJZOHxkU%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=sg1"
+          "displayUrl": "https://p16-common-sign.tiktokcdn.com/tos-no1a-p-0037-no/oUslYLeIfAu2U30IigDKjNAmehgNL0IWGAS2Y7~tplv-tiktokx-origin.image?dr=14575&x-expires=1785308400&x-signature=ZU6yYFdvKF9cEQ7B9DckJZOHxkU%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=sg1",
+          "7日成熟声量": 2003
         },
         "source": "local-discovery",
         "importedAt": "",
-        "updatedAt": "2026-07-27T07:01:31.637Z"
+        "updatedAt": "2026-08-17T04:04:35.673Z"
       },
       {
         "id": "vid_1785135691637_9wwm1h6",
@@ -95844,11 +95848,12 @@
             "link": "https://www.tiktok.com/@alex_520s/video/7664477208076881174"
           },
           "timestamp": "2026-07-20T05:26:27.000Z",
-          "displayUrl": "https://p16-common-sign.tiktokcdn.com/tos-no1a-p-0037-no/oYqLkSdMJBAIbAFReF2IjYkLDXEgg2fBYFsDE7~tplv-tiktokx-origin.image?dr=14575&x-expires=1785308400&x-signature=p0EQZZs%2B5%2FQnitIBfR0uAq8ANBA%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=sg1"
+          "displayUrl": "https://p16-common-sign.tiktokcdn.com/tos-no1a-p-0037-no/oYqLkSdMJBAIbAFReF2IjYkLDXEgg2fBYFsDE7~tplv-tiktokx-origin.image?dr=14575&x-expires=1785308400&x-signature=p0EQZZs%2B5%2FQnitIBfR0uAq8ANBA%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=sg1",
+          "7日成熟声量": 2828
         },
         "source": "local-discovery",
         "importedAt": "",
-        "updatedAt": "2026-07-27T07:01:31.637Z"
+        "updatedAt": "2026-08-17T04:04:35.673Z"
       },
       {
         "id": "vid_1785135892207_p8jzndr",
@@ -96073,11 +96078,12 @@
             "text": "https://www.instagram.com/p/Dbjja6toi9i/",
             "link": "https://www.instagram.com/p/Dbjja6toi9i/"
           },
-          "timestamp": "2026-08-02T23:34:09.000Z"
+          "timestamp": "2026-08-02T23:34:09.000Z",
+          "7日成熟声量": 574
         },
         "source": "local-discovery",
         "importedAt": "",
-        "updatedAt": "2026-08-10T02:31:19.232Z"
+        "updatedAt": "2026-08-17T04:04:35.673Z"
       },
       {
         "id": "vid_1786329112946_wp6aiy4",
@@ -96337,11 +96343,12 @@
             "text": "https://www.instagram.com/p/DbjKDzODTZY/",
             "link": "https://www.instagram.com/p/DbjKDzODTZY/"
           },
-          "timestamp": "2026-08-02T19:25:25.000Z"
+          "timestamp": "2026-08-02T19:25:25.000Z",
+          "7日成熟声量": 6196
         },
         "source": "local-discovery",
         "importedAt": "",
-        "updatedAt": "2026-08-10T02:59:05.778Z"
+        "updatedAt": "2026-08-17T04:04:35.673Z"
       },
       {
         "id": "vid_1786330745778_ob8214i",
@@ -96425,11 +96432,12 @@
             "text": "https://www.instagram.com/p/DbjZ0PdADFG/",
             "link": "https://www.instagram.com/p/DbjZ0PdADFG/"
           },
-          "timestamp": "2026-08-02T21:42:18.000Z"
+          "timestamp": "2026-08-02T21:42:18.000Z",
+          "7日成熟声量": 6285
         },
         "source": "local-discovery",
         "importedAt": "",
-        "updatedAt": "2026-08-10T02:59:05.778Z"
+        "updatedAt": "2026-08-17T04:04:35.673Z"
       },
       {
         "id": "vid_1786330745778_mlrkxrx",
@@ -96491,11 +96499,12 @@
             "text": "https://www.instagram.com/p/DbjXdQ2kpTk/",
             "link": "https://www.instagram.com/p/DbjXdQ2kpTk/"
           },
-          "timestamp": "2026-08-02T21:21:40.000Z"
+          "timestamp": "2026-08-02T21:21:40.000Z",
+          "7日成熟声量": 9222
         },
         "source": "local-discovery",
         "importedAt": "",
-        "updatedAt": "2026-08-10T02:59:05.779Z"
+        "updatedAt": "2026-08-17T04:04:35.673Z"
       },
       {
         "id": "vid_1786330745780_b4bvw5v",
@@ -96513,11 +96522,12 @@
             "text": "https://www.instagram.com/p/Dbi8AUXiaez/",
             "link": "https://www.instagram.com/p/Dbi8AUXiaez/"
           },
-          "timestamp": "2026-08-02T17:21:16.000Z"
+          "timestamp": "2026-08-02T17:21:16.000Z",
+          "7日成熟声量": 7423
         },
         "source": "local-discovery",
         "importedAt": "",
-        "updatedAt": "2026-08-10T02:59:05.780Z"
+        "updatedAt": "2026-08-17T04:04:35.673Z"
       },
       {
         "id": "vid_1786330745780_rv1bg90",
@@ -96535,11 +96545,12 @@
             "text": "https://www.instagram.com/p/DbjZ3x-gjyj/",
             "link": "https://www.instagram.com/p/DbjZ3x-gjyj/"
           },
-          "timestamp": "2026-08-02T21:42:41.000Z"
+          "timestamp": "2026-08-02T21:42:41.000Z",
+          "7日成熟声量": 24861
         },
         "source": "local-discovery",
         "importedAt": "",
-        "updatedAt": "2026-08-10T02:59:05.780Z"
+        "updatedAt": "2026-08-17T04:04:35.673Z"
       },
       {
         "id": "vid_1786330782769_b5kkmrf",
@@ -97056,11 +97067,12 @@
             "link": "https://www.youtube.com/shorts/BK-62uqJ6Sc"
           },
           "timestamp": "2026-08-02T18:41:13.000Z",
-          "displayUrl": "https://i.ytimg.com/vi/BK-62uqJ6Sc/maxres2.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAKAD4oCDAgAEAEYRyBlKCwwDw==&rs=AOn4CLCzaoyJxZeTXztGytMv8lQMZsxXAg"
+          "displayUrl": "https://i.ytimg.com/vi/BK-62uqJ6Sc/maxres2.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAKAD4oCDAgAEAEYRyBlKCwwDw==&rs=AOn4CLCzaoyJxZeTXztGytMv8lQMZsxXAg",
+          "7日成熟声量": 2787
         },
         "source": "local-discovery",
         "importedAt": "",
-        "updatedAt": "2026-08-10T03:57:40.828Z"
+        "updatedAt": "2026-08-17T04:04:35.673Z"
       },
       {
         "id": "vid_1786334260828_vngrypd",
@@ -97123,11 +97135,12 @@
             "text": "https://www.instagram.com/p/Dbj_tDYKOMF/",
             "link": "https://www.instagram.com/p/Dbj_tDYKOMF/"
           },
-          "timestamp": "2026-08-03T03:16:21.000Z"
+          "timestamp": "2026-08-03T03:16:21.000Z",
+          "7日成熟声量": 18471
         },
         "source": "local-discovery",
         "importedAt": "",
-        "updatedAt": "2026-08-10T04:09:21.769Z"
+        "updatedAt": "2026-08-17T04:04:35.673Z"
       },
       {
         "id": "vid_1786335006925_mguzru4",
@@ -190774,6 +190787,396 @@
         },
         "source": "local-discovery",
         "importedAt": "",
+        "updatedAt": ""
+      },
+      {
+        "id": "local_7d_1786939475648_backfill_2915",
+        "fields": {
+          "postUrl": "https://www.youtube.com/shorts/0SavIaPXHps",
+          "snapshotType": "milestone_7d",
+          "sharesCount": 0,
+          "viewDelta": 1201,
+          "isFirstSeen": "是",
+          "postId": "0SavIaPXHps",
+          "videoPlayCount": 1201,
+          "firstSeenAt": 1785127760759,
+          "platform": "youtubeshort",
+          "isProductPost": "是",
+          "是否监控": "是",
+          "playDelta": 1201,
+          "commentDelta": 3,
+          "postKey": "youtubeshort_0SavIaPXHps",
+          "likesCount": 16,
+          "shareDelta": 0,
+          "commentsCount": 3,
+          "capturedAt": 1785127760759,
+          "红人名称": "Reelridez",
+          "runId": "local_7d_1786939475648",
+          "likeDelta": 16,
+          "videoViewCount": 1201
+        },
+        "source": "local",
+        "importedAt": "2026-08-17T04:04:35.673Z",
+        "updatedAt": ""
+      },
+      {
+        "id": "local_7d_1786939475648_backfill_2916",
+        "fields": {
+          "postUrl": "https://www.instagram.com/p/Da_ookvxMxJ/",
+          "snapshotType": "milestone_7d",
+          "sharesCount": 0,
+          "viewDelta": 2298,
+          "isFirstSeen": "是",
+          "postId": "3945050508695489609",
+          "videoPlayCount": 2298,
+          "firstSeenAt": 1785133643508,
+          "platform": "instagramreels",
+          "isProductPost": "是",
+          "是否监控": "是",
+          "playDelta": 2298,
+          "commentDelta": 5,
+          "postKey": "instagramreels_3945050508695489609",
+          "likesCount": 72,
+          "shareDelta": 0,
+          "commentsCount": 5,
+          "capturedAt": 1785133643508,
+          "红人名称": "reelridez",
+          "runId": "local_7d_1786939475648",
+          "likeDelta": 72,
+          "videoViewCount": 2298
+        },
+        "source": "local",
+        "importedAt": "2026-08-17T04:04:35.673Z",
+        "updatedAt": ""
+      },
+      {
+        "id": "local_7d_1786939475648_backfill_2917",
+        "fields": {
+          "postUrl": "https://www.tiktok.com/@reelridez/video/7664395527093570830",
+          "snapshotType": "milestone_7d",
+          "sharesCount": 0,
+          "viewDelta": 485,
+          "isFirstSeen": "是",
+          "postId": "7664395527093570830",
+          "videoPlayCount": 485,
+          "firstSeenAt": 1785135265208,
+          "platform": "tiktok",
+          "isProductPost": "是",
+          "是否监控": "是",
+          "playDelta": 485,
+          "commentDelta": 3,
+          "postKey": "tiktok_7664395527093570830",
+          "likesCount": 28,
+          "shareDelta": 0,
+          "commentsCount": 3,
+          "capturedAt": 1785135265208,
+          "红人名称": "reelridez",
+          "runId": "local_7d_1786939475648",
+          "likeDelta": 28,
+          "videoViewCount": 485
+        },
+        "source": "local",
+        "importedAt": "2026-08-17T04:04:35.673Z",
+        "updatedAt": ""
+      },
+      {
+        "id": "local_7d_1786939475648_backfill_2918",
+        "fields": {
+          "postUrl": "https://www.tiktok.com/@alex_520s/video/7664477377027738902",
+          "snapshotType": "milestone_7d",
+          "sharesCount": 1,
+          "viewDelta": 2003,
+          "isFirstSeen": "是",
+          "postId": "7664477377027738902",
+          "videoPlayCount": 2003,
+          "firstSeenAt": 1785135691637,
+          "platform": "tiktok",
+          "isProductPost": "是",
+          "是否监控": "是",
+          "playDelta": 2003,
+          "commentDelta": 0,
+          "postKey": "tiktok_7664477377027738902",
+          "likesCount": 214,
+          "shareDelta": 1,
+          "commentsCount": 0,
+          "capturedAt": 1785135691637,
+          "红人名称": "alex_520s",
+          "runId": "local_7d_1786939475648",
+          "likeDelta": 214,
+          "videoViewCount": 2003
+        },
+        "source": "local",
+        "importedAt": "2026-08-17T04:04:35.673Z",
+        "updatedAt": ""
+      },
+      {
+        "id": "local_7d_1786939475648_backfill_2919",
+        "fields": {
+          "postUrl": "https://www.tiktok.com/@alex_520s/video/7664477208076881174",
+          "snapshotType": "milestone_7d",
+          "sharesCount": 1,
+          "viewDelta": 2828,
+          "isFirstSeen": "是",
+          "postId": "7664477208076881174",
+          "videoPlayCount": 2828,
+          "firstSeenAt": 1785135691637,
+          "platform": "tiktok",
+          "isProductPost": "是",
+          "是否监控": "是",
+          "playDelta": 2828,
+          "commentDelta": 9,
+          "postKey": "tiktok_7664477208076881174",
+          "likesCount": 295,
+          "shareDelta": 1,
+          "commentsCount": 9,
+          "capturedAt": 1785135691637,
+          "红人名称": "alex_520s",
+          "runId": "local_7d_1786939475648",
+          "likeDelta": 295,
+          "videoViewCount": 2828
+        },
+        "source": "local",
+        "importedAt": "2026-08-17T04:04:35.673Z",
+        "updatedAt": ""
+      },
+      {
+        "id": "local_7d_1786939475648_backfill_2920",
+        "fields": {
+          "postUrl": "https://www.instagram.com/p/Dbjja6toi9i/",
+          "snapshotType": "milestone_7d",
+          "sharesCount": 0,
+          "viewDelta": 176,
+          "isFirstSeen": "是",
+          "postId": "3955160679138340706",
+          "videoPlayCount": 574,
+          "firstSeenAt": 1786329079232,
+          "platform": "instagramreels",
+          "isProductPost": "是",
+          "是否监控": "是",
+          "playDelta": 574,
+          "commentDelta": 1,
+          "postKey": "instagramreels_3955160679138340706",
+          "likesCount": 9,
+          "shareDelta": 0,
+          "commentsCount": 1,
+          "capturedAt": 1786329079232,
+          "红人名称": "angel_rm999",
+          "runId": "local_7d_1786939475648",
+          "likeDelta": 9,
+          "videoViewCount": 176
+        },
+        "source": "local",
+        "importedAt": "2026-08-17T04:04:35.673Z",
+        "updatedAt": ""
+      },
+      {
+        "id": "local_7d_1786939475648_backfill_2921",
+        "fields": {
+          "postUrl": "https://www.instagram.com/p/DbjKDzODTZY/",
+          "snapshotType": "milestone_7d",
+          "sharesCount": 0,
+          "viewDelta": 2608,
+          "isFirstSeen": "是",
+          "postId": "3955049139381548632",
+          "videoPlayCount": 6196,
+          "firstSeenAt": 1786330745778,
+          "platform": "instagramreels",
+          "isProductPost": "是",
+          "是否监控": "是",
+          "playDelta": 6196,
+          "commentDelta": 23,
+          "postKey": "instagramreels_3955049139381548632",
+          "likesCount": 266,
+          "shareDelta": 0,
+          "commentsCount": 23,
+          "capturedAt": 1786330745778,
+          "红人名称": "etronnix",
+          "runId": "local_7d_1786939475648",
+          "likeDelta": 266,
+          "videoViewCount": 2608
+        },
+        "source": "local",
+        "importedAt": "2026-08-17T04:04:35.673Z",
+        "updatedAt": ""
+      },
+      {
+        "id": "local_7d_1786939475648_backfill_2922",
+        "fields": {
+          "postUrl": "https://www.instagram.com/p/DbjZ0PdADFG/",
+          "snapshotType": "milestone_7d",
+          "sharesCount": 0,
+          "viewDelta": 3062,
+          "isFirstSeen": "是",
+          "postId": "3955118438929674566",
+          "videoPlayCount": 6285,
+          "firstSeenAt": 1786330745778,
+          "platform": "instagramreels",
+          "isProductPost": "是",
+          "是否监控": "是",
+          "playDelta": 6285,
+          "commentDelta": 19,
+          "postKey": "instagramreels_3955118438929674566",
+          "likesCount": 249,
+          "shareDelta": 0,
+          "commentsCount": 19,
+          "capturedAt": 1786330745778,
+          "红人名称": "etronnix",
+          "runId": "local_7d_1786939475648",
+          "likeDelta": 249,
+          "videoViewCount": 3062
+        },
+        "source": "local",
+        "importedAt": "2026-08-17T04:04:35.673Z",
+        "updatedAt": ""
+      },
+      {
+        "id": "local_7d_1786939475648_backfill_2923",
+        "fields": {
+          "postUrl": "https://www.instagram.com/p/DbjXdQ2kpTk/",
+          "snapshotType": "milestone_7d",
+          "sharesCount": 0,
+          "viewDelta": 2882,
+          "isFirstSeen": "是",
+          "postId": "3955108063791453412",
+          "videoPlayCount": 9222,
+          "firstSeenAt": 1786330745779,
+          "platform": "instagramreels",
+          "isProductPost": "是",
+          "是否监控": "是",
+          "playDelta": 9222,
+          "commentDelta": 52,
+          "postKey": "instagramreels_3955108063791453412",
+          "likesCount": 464,
+          "shareDelta": 0,
+          "commentsCount": 52,
+          "capturedAt": 1786330745779,
+          "红人名称": "etronnix",
+          "runId": "local_7d_1786939475648",
+          "likeDelta": 464,
+          "videoViewCount": 2882
+        },
+        "source": "local",
+        "importedAt": "2026-08-17T04:04:35.673Z",
+        "updatedAt": ""
+      },
+      {
+        "id": "local_7d_1786939475648_backfill_2924",
+        "fields": {
+          "postUrl": "https://www.instagram.com/p/Dbi8AUXiaez/",
+          "snapshotType": "milestone_7d",
+          "sharesCount": 0,
+          "viewDelta": 3006,
+          "isFirstSeen": "是",
+          "postId": "3954987327445116851",
+          "videoPlayCount": 7423,
+          "firstSeenAt": 1786330745780,
+          "platform": "instagramreels",
+          "isProductPost": "是",
+          "是否监控": "是",
+          "playDelta": 7423,
+          "commentDelta": 13,
+          "postKey": "instagramreels_3954987327445116851",
+          "likesCount": 602,
+          "shareDelta": 0,
+          "commentsCount": 13,
+          "capturedAt": 1786330745780,
+          "红人名称": "etronnix",
+          "runId": "local_7d_1786939475648",
+          "likeDelta": 602,
+          "videoViewCount": 3006
+        },
+        "source": "local",
+        "importedAt": "2026-08-17T04:04:35.673Z",
+        "updatedAt": ""
+      },
+      {
+        "id": "local_7d_1786939475648_backfill_2925",
+        "fields": {
+          "postUrl": "https://www.instagram.com/p/DbjZ3x-gjyj/",
+          "snapshotType": "milestone_7d",
+          "sharesCount": 0,
+          "viewDelta": 11292,
+          "isFirstSeen": "是",
+          "postId": "3955118682157497507",
+          "videoPlayCount": 24861,
+          "firstSeenAt": 1786330745780,
+          "platform": "instagramreels",
+          "isProductPost": "是",
+          "是否监控": "是",
+          "playDelta": 24861,
+          "commentDelta": 22,
+          "postKey": "instagramreels_3955118682157497507",
+          "likesCount": 966,
+          "shareDelta": 0,
+          "commentsCount": 22,
+          "capturedAt": 1786330745780,
+          "红人名称": "etronnix",
+          "runId": "local_7d_1786939475648",
+          "likeDelta": 966,
+          "videoViewCount": 11292
+        },
+        "source": "local",
+        "importedAt": "2026-08-17T04:04:35.673Z",
+        "updatedAt": ""
+      },
+      {
+        "id": "local_7d_1786939475648_backfill_2926",
+        "fields": {
+          "postUrl": "https://www.youtube.com/shorts/BK-62uqJ6Sc",
+          "snapshotType": "milestone_7d",
+          "sharesCount": 0,
+          "viewDelta": 2787,
+          "isFirstSeen": "是",
+          "postId": "BK-62uqJ6Sc",
+          "videoPlayCount": 2787,
+          "firstSeenAt": 1786334260828,
+          "platform": "youtubeshort",
+          "isProductPost": "是",
+          "是否监控": "是",
+          "playDelta": 2787,
+          "commentDelta": 2,
+          "postKey": "youtubeshort_BK-62uqJ6Sc",
+          "likesCount": 55,
+          "shareDelta": 0,
+          "commentsCount": 2,
+          "capturedAt": 1786334260828,
+          "红人名称": "timtamdv",
+          "runId": "local_7d_1786939475648",
+          "likeDelta": 55,
+          "videoViewCount": 2787
+        },
+        "source": "local",
+        "importedAt": "2026-08-17T04:04:35.673Z",
+        "updatedAt": ""
+      },
+      {
+        "id": "local_7d_1786939475648_backfill_2927",
+        "fields": {
+          "postUrl": "https://www.instagram.com/p/Dbj_tDYKOMF/",
+          "snapshotType": "milestone_7d",
+          "sharesCount": 0,
+          "viewDelta": 7993,
+          "isFirstSeen": "是",
+          "postId": "3955285070694638341",
+          "videoPlayCount": 18471,
+          "firstSeenAt": 1786334961769,
+          "platform": "instagramreels",
+          "isProductPost": "是",
+          "是否监控": "是",
+          "playDelta": 18471,
+          "commentDelta": 6,
+          "postKey": "instagramreels_3955285070694638341",
+          "likesCount": -1,
+          "shareDelta": 0,
+          "commentsCount": 6,
+          "capturedAt": 1786334961769,
+          "红人名称": "essiexsocial",
+          "runId": "local_7d_1786939475648",
+          "likeDelta": -1,
+          "videoViewCount": 7993
+        },
+        "source": "local",
+        "importedAt": "2026-08-17T04:04:35.673Z",
         "updatedAt": ""
       }
     ],
