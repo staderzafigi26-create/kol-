@@ -1,40 +1,31 @@
 {
   "ok": true,
   "dashboard": {
-    "generatedAt": "2026-08-10T04:26:26.430Z",
+    "generatedAt": "2026-08-17T03:27:47.691Z",
     "summary": {
-      "totalCreators": 295,
-      "totalVideos": 1339,
-      "totalViews": 60186183,
+      "totalCreators": 303,
+      "totalVideos": 1378,
+      "totalViews": 60318250,
       "totalMature7dViews": 42317144,
-      "thisWeekVideos": 66,
-      "thisWeekCreators": 41,
-      "thisWeekViews": 691402,
+      "thisWeekVideos": 44,
+      "thisWeekCreators": 25,
+      "thisWeekViews": 278849,
       "thisWeekMature7dViews": 0,
-      "thisMonthVideos": 80,
-      "thisMonthCreators": 46,
-      "thisMonthViews": 855296,
+      "thisMonthVideos": 119,
+      "thisMonthCreators": 60,
+      "thisMonthViews": 987363,
       "thisMonthMature7dViews": 0,
-      "missingFollowerCreators": 107
+      "missingFollowerCreators": 111
     },
     "currentWeek": {
-      "weekStart": "2026-08-01T16:00:00.000Z",
-      "weekEnd": "2026-08-08T16:00:00.000Z"
+      "weekStart": "2026-08-08T16:00:00.000Z",
+      "weekEnd": "2026-08-15T16:00:00.000Z"
     },
     "currentMonth": {
       "monthStart": "2026-07-31T16:00:00.000Z",
       "monthEnd": "2026-08-31T16:00:00.000Z"
     },
     "weekly": [
-      {
-        "weekStart": "2026-06-13T16:00:00.000Z",
-        "weekEnd": "2026-06-20T16:00:00.000Z",
-        "videos": 180,
-        "creators": 76,
-        "views": 5110324,
-        "mature7dViews": 4812377,
-        "mature7dVideos": 159
-      },
       {
         "weekStart": "2026-06-20T16:00:00.000Z",
         "weekEnd": "2026-06-27T16:00:00.000Z",
@@ -97,6 +88,15 @@
         "views": 691402,
         "mature7dViews": 0,
         "mature7dVideos": 0
+      },
+      {
+        "weekStart": "2026-08-08T16:00:00.000Z",
+        "weekEnd": "2026-08-15T16:00:00.000Z",
+        "videos": 44,
+        "creators": 25,
+        "views": 278849,
+        "mature7dViews": 0,
+        "mature7dVideos": 0
       }
     ],
     "monthly": [
@@ -148,9 +148,9 @@
       {
         "monthStart": "2026-07-31T16:00:00.000Z",
         "monthEnd": "2026-08-31T16:00:00.000Z",
-        "videos": 80,
-        "creators": 46,
-        "views": 855296,
+        "videos": 119,
+        "creators": 60,
+        "views": 987363,
         "mature7dViews": 0,
         "mature7dVideos": 0
       }
@@ -175,23 +175,23 @@
           "range": "10 万 - 49.9 万粉丝",
           "creators": 2,
           "videos": 2,
-          "views": 48624,
-          "likes": 1516,
-          "comments": 18,
-          "avgViews": 24312,
-          "topCreator": "_claudiamesina_"
+          "views": 113281,
+          "likes": 4195,
+          "comments": 499,
+          "avgViews": 56641,
+          "topCreator": "zeekster"
         },
         {
           "key": "tail",
           "label": "尾部红人",
           "range": "1 万 - 9.9 万粉丝",
-          "creators": 12,
-          "videos": 30,
-          "views": 147274,
-          "likes": 5570,
-          "comments": 305,
-          "avgViews": 4909,
-          "topCreator": "etronnix"
+          "creators": 9,
+          "videos": 13,
+          "views": 52609,
+          "likes": 1313,
+          "comments": 76,
+          "avgViews": 4047,
+          "topCreator": "onewaygooey_"
         },
         {
           "key": "micro",
@@ -199,11 +199,11 @@
           "range": "< 1 万粉丝",
           "creators": 2,
           "videos": 2,
-          "views": 7032,
-          "likes": 176,
-          "comments": 8,
-          "avgViews": 3516,
-          "topCreator": "408.pbk"
+          "views": 17470,
+          "likes": 348,
+          "comments": 19,
+          "avgViews": 8735,
+          "topCreator": "anajuliag"
         }
       ],
       "month": [
@@ -223,37 +223,37 @@
           "key": "waist",
           "label": "腰部红人",
           "range": "10 万 - 49.9 万粉丝",
-          "creators": 3,
-          "videos": 3,
-          "views": 141223,
-          "likes": 4416,
-          "comments": 509,
-          "avgViews": 47074,
+          "creators": 4,
+          "videos": 4,
+          "views": 161905,
+          "likes": 5711,
+          "comments": 517,
+          "avgViews": 40476,
           "topCreator": "zeekster"
         },
         {
           "key": "tail",
           "label": "尾部红人",
           "range": "1 万 - 9.9 万粉丝",
-          "creators": 13,
-          "videos": 34,
-          "views": 159191,
-          "likes": 5832,
-          "comments": 320,
-          "avgViews": 4682,
+          "creators": 18,
+          "videos": 47,
+          "views": 210820,
+          "likes": 7348,
+          "comments": 400,
+          "avgViews": 4486,
           "topCreator": "etronnix"
         },
         {
           "key": "micro",
           "label": "微型红人",
           "range": "< 1 万粉丝",
-          "creators": 2,
-          "videos": 2,
-          "views": 7032,
-          "likes": 176,
-          "comments": 8,
-          "avgViews": 3516,
-          "topCreator": "408.pbk"
+          "creators": 4,
+          "videos": 5,
+          "views": 25064,
+          "likes": 558,
+          "comments": 33,
+          "avgViews": 5013,
+          "topCreator": "anajuliag"
         }
       ],
       "total": [
@@ -273,36 +273,36 @@
           "key": "waist",
           "label": "腰部红人",
           "range": "10 万 - 49.9 万粉丝",
-          "creators": 43,
-          "videos": 171,
-          "views": 10332612,
-          "likes": 266343,
-          "comments": 9693,
-          "avgViews": 60425,
+          "creators": 44,
+          "videos": 173,
+          "views": 10353294,
+          "likes": 267638,
+          "comments": 9701,
+          "avgViews": 59846,
           "topCreator": "68v_ebikes"
         },
         {
           "key": "tail",
           "label": "尾部红人",
           "range": "1 万 - 9.9 万粉丝",
-          "creators": 107,
-          "videos": 621,
-          "views": 18525026,
-          "likes": 608455,
-          "comments": 29346,
-          "avgViews": 29831,
+          "creators": 109,
+          "videos": 638,
+          "views": 18599288,
+          "likes": 611127,
+          "comments": 29568,
+          "avgViews": 29152,
           "topCreator": "ridstarlaw"
         },
         {
           "key": "micro",
           "label": "微型红人",
           "range": "< 1 万粉丝",
-          "creators": 29,
-          "videos": 201,
-          "views": 3746256,
-          "likes": 150678,
-          "comments": 6910,
-          "avgViews": 18638,
+          "creators": 30,
+          "videos": 199,
+          "views": 3741655,
+          "likes": 149904,
+          "comments": 6793,
+          "avgViews": 18802,
           "topCreator": "volturban"
         }
       ]
@@ -324,36 +324,36 @@
         "key": "waist",
         "label": "腰部红人",
         "range": "10 万 - 49.9 万粉丝",
-        "creators": 43,
-        "videos": 171,
-        "views": 10332612,
-        "likes": 266343,
-        "comments": 9693,
-        "avgViews": 60425,
+        "creators": 44,
+        "videos": 173,
+        "views": 10353294,
+        "likes": 267638,
+        "comments": 9701,
+        "avgViews": 59846,
         "topCreator": "68v_ebikes"
       },
       {
         "key": "tail",
         "label": "尾部红人",
         "range": "1 万 - 9.9 万粉丝",
-        "creators": 107,
-        "videos": 621,
-        "views": 18525026,
-        "likes": 608455,
-        "comments": 29346,
-        "avgViews": 29831,
+        "creators": 109,
+        "videos": 638,
+        "views": 18599288,
+        "likes": 611127,
+        "comments": 29568,
+        "avgViews": 29152,
         "topCreator": "ridstarlaw"
       },
       {
         "key": "micro",
         "label": "微型红人",
         "range": "< 1 万粉丝",
-        "creators": 29,
-        "videos": 201,
-        "views": 3746256,
-        "likes": 150678,
-        "comments": 6910,
-        "avgViews": 18638,
+        "creators": 30,
+        "videos": 199,
+        "views": 3741655,
+        "likes": 149904,
+        "comments": 6793,
+        "avgViews": 18802,
         "topCreator": "volturban"
       }
     ],

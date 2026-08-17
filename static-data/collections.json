@@ -1,11 +1,11 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-10T04:26:26.248Z",
+  "generatedAt": "2026-08-17T03:27:47.582Z",
   "privacy": "Sanitized read-only team snapshot. Contact fields, payment fields and order identifiers are excluded; affiliate sales are published as creator-level aggregates.",
   "counts": {
     "influencers": 1850,
-    "videos": 1339,
-    "snapshots": 2865,
+    "videos": 1378,
+    "snapshots": 2914,
     "runs": 500,
     "affiliateSales": 1333
   },
@@ -5543,7 +5543,7 @@
           "合作量级": "尾部红人(10k-100k)",
           "合作服务": "已签合同盖章",
           "已上线视频": 4,
-          "红人粉丝数据": 29000,
+          "红人粉丝数据": 29500,
           "粉丝数据来源": "营销总表",
           "粉丝数据更新时间": "2026-07-05",
           "url": {
@@ -5561,7 +5561,7 @@
         },
         "source": "dingtalk",
         "importedAt": "2026-06-03T15:31:49.865Z",
-        "updatedAt": "2026-06-11T10:37:23.284Z"
+        "updatedAt": "2026-08-17T02:38:31.251Z"
       },
       {
         "id": "7KqHTdTJ9c",
@@ -5941,7 +5941,7 @@
           "合作量级": "尾部红人(10k-100k)",
           "合作服务": "已签合同盖章",
           "已上线视频": 4,
-          "红人粉丝数据": 29000,
+          "红人粉丝数据": 29500,
           "粉丝数据来源": "营销总表",
           "粉丝数据更新时间": "2026-07-05",
           "url": {
@@ -5959,7 +5959,7 @@
         },
         "source": "dingtalk",
         "importedAt": "2026-06-03T15:31:49.865Z",
-        "updatedAt": "2026-06-11T10:37:23.284Z"
+        "updatedAt": "2026-08-17T02:38:31.251Z"
       },
       {
         "id": "7f10yBpo1m",
@@ -6159,13 +6159,13 @@
           "视频交付完成率": "0%",
           "合同交付平台拆分": "YouTube Shorts 3条 / Instagram Reels 1条 / TikTok 3条",
           "合同交付解析状态": "已解析",
-          "红人粉丝数据": 623000,
+          "红人粉丝数据": 670000,
           "粉丝数据来源": "营销总表",
           "粉丝数据更新时间": "2026-07-05"
         },
         "source": "dingtalk",
         "importedAt": "2026-06-03T15:31:49.865Z",
-        "updatedAt": "2026-06-11T10:02:46.423Z"
+        "updatedAt": "2026-08-17T02:39:24.211Z"
       },
       {
         "id": "7rRPLCEeGX",
@@ -6579,7 +6579,7 @@
           "已上线视频": 0,
           "合同交付平台拆分": "待人工确认",
           "合同交付解析状态": "待人工确认",
-          "红人粉丝数据": 74900,
+          "红人粉丝数据": 75900,
           "粉丝数据来源": "营销总表",
           "粉丝数据更新时间": "2026-07-05",
           "追踪优先级": "P0 立刻追踪",
@@ -6601,7 +6601,7 @@
         },
         "source": "dingtalk",
         "importedAt": "2026-06-03T15:31:49.865Z",
-        "updatedAt": "2026-08-10T11:20:23"
+        "updatedAt": "2026-08-17T02:25:45.699Z"
       },
       {
         "id": "8OaMSBMgcX",
@@ -7780,7 +7780,7 @@
           "合作量级": "尾部红人(10k-100k)",
           "合作服务": "已签合同盖章",
           "已上线视频": 0,
-          "红人粉丝数据": 12700,
+          "红人粉丝数据": 13000,
           "粉丝数据来源": "营销总表",
           "粉丝数据更新时间": "2026-07-05",
           "追踪优先级": "P2 低频追踪",
@@ -7794,7 +7794,7 @@
         },
         "source": "dingtalk",
         "importedAt": "2026-06-03T15:31:49.865Z",
-        "updatedAt": "2026-07-12T15:17:44.613Z"
+        "updatedAt": "2026-08-17T02:24:52.313Z"
       },
       {
         "id": "A2Cm5BpPZY",
@@ -10509,14 +10509,14 @@
           "视频交付完成率": "0%",
           "合同交付平台拆分": "YouTube Shorts 3条 / Instagram Reels 1条 / TikTok 3条",
           "合同交付解析状态": "已解析",
-          "红人粉丝数据": 623000,
+          "红人粉丝数据": 670000,
           "粉丝数据来源": "营销总表",
           "粉丝数据更新时间": "2026-07-05",
           "追踪原因": "本地中台此前没有该主页记录，建议抽查抓取"
         },
         "source": "dingtalk",
         "importedAt": "2026-06-03T15:31:49.865Z",
-        "updatedAt": "2026-08-10T11:20:23"
+        "updatedAt": "2026-08-17T02:39:24.211Z"
       },
       {
         "id": "DvbHW7aKsH",
@@ -11651,7 +11651,7 @@
           "合作量级": "尾部红人(10k-100k)",
           "合作服务": "待补充",
           "已上线视频": 15,
-          "红人粉丝数据": 64500,
+          "红人粉丝数据": 71300,
           "粉丝数据来源": "营销总表",
           "粉丝数据更新时间": "2026-07-05",
           "追踪优先级": "P2 低频追踪",
@@ -11661,7 +11661,7 @@
         },
         "source": "dingtalk",
         "importedAt": "2026-06-03T15:31:49.865Z",
-        "updatedAt": "2026-07-12T15:57:02.029Z"
+        "updatedAt": "2026-08-17T02:41:34.174Z"
       },
       {
         "id": "FIDm0irKYy",
@@ -16863,7 +16863,7 @@
           "已上线视频": 6,
           "合同交付平台拆分": "待人工确认",
           "合同交付解析状态": "待人工确认",
-          "红人粉丝数据": 8210,
+          "红人粉丝数据": 9310,
           "粉丝数据来源": "营销总表",
           "粉丝数据更新时间": "2026-07-05",
           "追踪原因": "本地中台此前没有该主页记录，建议抽查抓取",
@@ -16882,7 +16882,7 @@
         },
         "source": "dingtalk",
         "importedAt": "2026-06-03T15:31:49.865Z",
-        "updatedAt": "2026-08-10T11:20:23"
+        "updatedAt": "2026-08-17T02:40:36.276Z"
       },
       {
         "id": "ML5yBBRaMw",
@@ -17342,7 +17342,7 @@
           "已上线视频": 3,
           "合同交付平台拆分": "待人工确认",
           "合同交付解析状态": "待人工确认",
-          "红人粉丝数据": 13900,
+          "红人粉丝数据": 21800,
           "粉丝数据来源": "营销总表",
           "粉丝数据更新时间": "2026-07-05",
           "追踪优先级": "P2 低频追踪",
@@ -17356,7 +17356,7 @@
         },
         "source": "dingtalk",
         "importedAt": "2026-06-03T15:31:49.865Z",
-        "updatedAt": "2026-07-05T15:53:09.893Z"
+        "updatedAt": "2026-08-17T02:15:11.599Z"
       },
       {
         "id": "N2e3htUAu7",
@@ -19090,7 +19090,7 @@
           "已上线视频": 0,
           "合同交付平台拆分": "待人工确认",
           "合同交付解析状态": "待人工确认",
-          "红人粉丝数据": 74900,
+          "红人粉丝数据": 75900,
           "粉丝数据来源": "营销总表",
           "粉丝数据更新时间": "2026-07-05",
           "追踪优先级": "P0 立刻追踪",
@@ -19104,11 +19104,15 @@
           "url2": {
             "text": "https://www.youtube.com/watch?v=HsrHd_QoK0M",
             "link": "https://www.youtube.com/watch?v=HsrHd_QoK0M"
+          },
+          "url3": {
+            "text": "https://www.youtube.com/watch?v=UvChJQkg8X8",
+            "link": "https://www.youtube.com/watch?v=UvChJQkg8X8"
           }
         },
         "source": "dingtalk",
         "importedAt": "2026-06-03T15:31:49.866Z",
-        "updatedAt": "2026-08-10T11:20:23"
+        "updatedAt": "2026-08-17T02:25:45.700Z"
       },
       {
         "id": "PQzZQI3vl9",
@@ -20125,7 +20129,7 @@
             "link": "https://www.youtube.com/@vlogepicness"
           },
           "平台": "youtubevideo",
-          "是否出视频": "否",
+          "是否出视频": "是",
           "红人名称": "VlogEpicness",
           "样品型号": "yozma, yozmasport，in10",
           "红人编码": "US-Ryan-042",
@@ -20149,7 +20153,11 @@
           "追踪优先级": "P1 本周追踪",
           "追踪评分": "115",
           "追踪原因": "2026合作未上线/未登记上线；当前本地未登记视频",
-          "追踪批次更新时间": "2026-06-07"
+          "追踪批次更新时间": "2026-06-07",
+          "url": {
+            "text": "https://www.youtube.com/watch?v=_IKQ5vO7oFI",
+            "link": "https://www.youtube.com/watch?v=_IKQ5vO7oFI"
+          }
         },
         "source": "dingtalk",
         "importedAt": "2026-06-03T15:31:49.866Z",
@@ -20328,7 +20336,7 @@
           "已上线视频": 0,
           "合同交付平台拆分": "待人工确认",
           "合同交付解析状态": "待人工确认",
-          "红人粉丝数据": 5520,
+          "红人粉丝数据": 5693,
           "追踪优先级": "P0 立刻追踪",
           "追踪评分": "135",
           "追踪原因": "2026合作未上线/未登记上线；当前本地未登记视频；普通/小体量达人更需要追踪",
@@ -20336,7 +20344,7 @@
         },
         "source": "dingtalk",
         "importedAt": "2026-06-03T15:31:49.866Z",
-        "updatedAt": "2026-07-05T15:53:55.689Z"
+        "updatedAt": "2026-08-17T02:15:23.542Z"
       },
       {
         "id": "R3JkUK5WUS",
@@ -20633,7 +20641,7 @@
           "合作量级": "尾部红人(10k-100k)",
           "合作服务": "已签合同盖章",
           "已上线视频": 0,
-          "红人粉丝数据": 12700,
+          "红人粉丝数据": 13000,
           "粉丝数据来源": "营销总表",
           "粉丝数据更新时间": "2026-07-05",
           "追踪优先级": "P2 低频追踪",
@@ -20643,7 +20651,7 @@
         },
         "source": "dingtalk",
         "importedAt": "2026-06-03T15:31:49.866Z",
-        "updatedAt": "2026-07-12T15:17:44.614Z"
+        "updatedAt": "2026-08-17T02:24:52.314Z"
       },
       {
         "id": "RVALRYZPyb",
@@ -23121,7 +23129,7 @@
           "合作量级": "尾部红人(10k-100k)",
           "合作服务": "待补充",
           "已上线视频": 15,
-          "红人粉丝数据": 64500,
+          "红人粉丝数据": 71300,
           "粉丝数据来源": "营销总表",
           "粉丝数据更新时间": "2026-07-05",
           "追踪优先级": "P2 低频追踪",
@@ -23143,7 +23151,7 @@
         },
         "source": "dingtalk",
         "importedAt": "2026-06-03T15:31:49.866Z",
-        "updatedAt": "2026-07-12T15:57:02.030Z"
+        "updatedAt": "2026-08-17T02:41:34.175Z"
       },
       {
         "id": "UzGw0NKa22",
@@ -23554,6 +23562,10 @@
           "url2": {
             "text": "https://www.tiktok.com/@onewaygooey_/video/7654907381784005919",
             "link": "https://www.tiktok.com/@onewaygooey_/video/7654907381784005919"
+          },
+          "url3": {
+            "text": "https://www.tiktok.com/@onewaygooey_/video/7673383466041412894",
+            "link": "https://www.tiktok.com/@onewaygooey_/video/7673383466041412894"
           }
         },
         "source": "dingtalk",
@@ -27344,7 +27356,7 @@
           "合作量级": "尾部红人(10k-100k)",
           "合作服务": "待补充",
           "已上线视频": 15,
-          "红人粉丝数据": 48200,
+          "红人粉丝数据": 53500,
           "粉丝数据来源": "营销总表",
           "粉丝数据更新时间": "2026-07-05",
           "追踪优先级": "P2 低频追踪",
@@ -27366,7 +27378,7 @@
         },
         "source": "dingtalk",
         "importedAt": "2026-06-03T15:31:49.866Z",
-        "updatedAt": "2026-07-12T17:06:57.199Z"
+        "updatedAt": "2026-08-17T02:17:04.143Z"
       },
       {
         "id": "b6xYbbMJ00",
@@ -28489,7 +28501,7 @@
           "已上线视频": 0,
           "合同交付平台拆分": "待人工确认",
           "合同交付解析状态": "待人工确认",
-          "红人粉丝数据": 383000,
+          "红人粉丝数据": 384000,
           "粉丝数据来源": "营销总表",
           "粉丝数据更新时间": "2026-07-05",
           "追踪优先级": "P1 本周追踪",
@@ -28499,7 +28511,7 @@
         },
         "source": "dingtalk",
         "importedAt": "2026-06-03T15:31:49.866Z",
-        "updatedAt": "2026-07-05T13:54:05.214Z"
+        "updatedAt": "2026-08-17T02:27:39.222Z"
       },
       {
         "id": "cejFHhKaxL",
@@ -28950,7 +28962,7 @@
           "视频交付完成率": "100%",
           "合同交付平台拆分": "YouTube Video 1条",
           "合同交付解析状态": "已解析",
-          "红人粉丝数据": 386000,
+          "红人粉丝数据": 387000,
           "粉丝数据来源": "营销总表",
           "粉丝数据更新时间": "2026-07-05",
           "追踪优先级": "P3 暂缓",
@@ -28960,7 +28972,7 @@
         },
         "source": "dingtalk",
         "importedAt": "2026-06-03T15:31:49.866Z",
-        "updatedAt": "2026-07-05T13:53:09.783Z"
+        "updatedAt": "2026-08-17T02:27:16.798Z"
       },
       {
         "id": "dKWXAxPY7g",
@@ -29469,7 +29481,7 @@
           "合作量级": "腰部红人(100k-1M)",
           "合作服务": "已签合同盖章",
           "已上线视频": 0,
-          "红人粉丝数据": 262000,
+          "红人粉丝数据": 273000,
           "粉丝数据来源": "营销总表",
           "粉丝数据更新时间": "2026-07-05",
           "追踪优先级": "P1 本周追踪",
@@ -29479,7 +29491,7 @@
         },
         "source": "dingtalk",
         "importedAt": "2026-06-03T15:31:49.866Z",
-        "updatedAt": "2026-07-12T15:25:23.990Z"
+        "updatedAt": "2026-08-17T02:26:19.639Z"
       },
       {
         "id": "e2fAX35vag",
@@ -30623,7 +30635,7 @@
           "合作量级": "腰部红人(100k-1M)",
           "合作服务": "已签合同盖章",
           "已上线视频": 0,
-          "红人粉丝数据": 262000,
+          "红人粉丝数据": 273000,
           "粉丝数据来源": "营销总表",
           "粉丝数据更新时间": "2026-07-05",
           "追踪优先级": "P1 本周追踪",
@@ -30633,7 +30645,7 @@
         },
         "source": "dingtalk",
         "importedAt": "2026-06-03T15:31:49.867Z",
-        "updatedAt": "2026-07-12T15:25:23.990Z"
+        "updatedAt": "2026-08-17T02:26:19.639Z"
       },
       {
         "id": "fXwdsopUmo",
@@ -32552,7 +32564,7 @@
           "视频交付完成率": "100%",
           "合同交付平台拆分": "YouTube Video 1条",
           "合同交付解析状态": "已解析",
-          "红人粉丝数据": 386000,
+          "红人粉丝数据": 387000,
           "粉丝数据来源": "营销总表",
           "粉丝数据更新时间": "2026-07-05",
           "追踪优先级": "P3 暂缓",
@@ -32566,7 +32578,7 @@
         },
         "source": "dingtalk",
         "importedAt": "2026-06-03T15:31:49.867Z",
-        "updatedAt": "2026-07-05T13:53:09.783Z"
+        "updatedAt": "2026-08-17T02:27:16.798Z"
       },
       {
         "id": "hiR6bbdujo",
@@ -34431,7 +34443,7 @@
           "已上线视频": 0,
           "合同交付平台拆分": "待人工确认",
           "合同交付解析状态": "待人工确认",
-          "红人粉丝数据": 383000,
+          "红人粉丝数据": 384000,
           "粉丝数据来源": "营销总表",
           "粉丝数据更新时间": "2026-07-05",
           "追踪优先级": "P1 本周追踪",
@@ -34441,7 +34453,7 @@
         },
         "source": "dingtalk",
         "importedAt": "2026-06-03T15:31:49.867Z",
-        "updatedAt": "2026-07-05T13:54:05.214Z"
+        "updatedAt": "2026-08-17T02:27:39.223Z"
       },
       {
         "id": "kDijPDHZ1U",
@@ -36003,7 +36015,7 @@
           "合作量级": "尾部红人(10k-100k)",
           "合作服务": "已签合同盖章",
           "已上线视频": 2,
-          "红人粉丝数据": 13200,
+          "红人粉丝数据": 13300,
           "粉丝数据来源": "营销总表",
           "粉丝数据更新时间": "2026-07-05",
           "追踪优先级": "P2 低频追踪",
@@ -36017,7 +36029,7 @@
         },
         "source": "dingtalk",
         "importedAt": "2026-06-03T15:31:49.867Z",
-        "updatedAt": "2026-07-12T15:31:28.537Z"
+        "updatedAt": "2026-08-17T02:28:33.389Z"
       },
       {
         "id": "mtXjiLBBQG",
@@ -37126,13 +37138,13 @@
           "合作量级": "尾部红人(10k-100k)",
           "合作服务": "已签合同盖章",
           "已上线视频": 4,
-          "红人粉丝数据": 29000,
+          "红人粉丝数据": 29500,
           "粉丝数据来源": "营销总表",
           "粉丝数据更新时间": "2026-07-05"
         },
         "source": "dingtalk",
         "importedAt": "2026-06-03T15:31:49.867Z",
-        "updatedAt": "2026-06-11T10:37:23.285Z"
+        "updatedAt": "2026-08-17T02:38:31.254Z"
       },
       {
         "id": "oCZralrtNQ",
@@ -37848,7 +37860,7 @@
             "link": "https://www.instagram.com/anajuliag"
           },
           "平台": "instagramreels",
-          "是否出视频": "否",
+          "是否出视频": "是",
           "红人名称": "anajuliag",
           "样品型号": "yozma, yozmasport，in10",
           "红人编码": "US-Ryan-043",
@@ -37871,7 +37883,11 @@
           "追踪优先级": "P0 立刻追踪",
           "追踪评分": "135",
           "追踪原因": "2026合作未上线/未登记上线；当前本地未登记视频；普通/小体量达人更需要追踪",
-          "追踪批次更新时间": "2026-06-07"
+          "追踪批次更新时间": "2026-06-07",
+          "url": {
+            "text": "https://www.instagram.com/p/Db8ndVBhT-I/",
+            "link": "https://www.instagram.com/p/Db8ndVBhT-I/"
+          }
         },
         "source": "dingtalk",
         "importedAt": "2026-06-03T15:31:49.867Z",
@@ -38869,13 +38885,13 @@
           "合作量级": "尾部红人(10k-100k)",
           "合作服务": "已签合同盖章",
           "已上线视频": 4,
-          "红人粉丝数据": 29000,
+          "红人粉丝数据": 29500,
           "粉丝数据来源": "营销总表",
           "粉丝数据更新时间": "2026-07-05"
         },
         "source": "dingtalk",
         "importedAt": "2026-06-03T15:31:49.867Z",
-        "updatedAt": "2026-06-11T10:37:23.285Z"
+        "updatedAt": "2026-08-17T02:38:31.254Z"
       },
       {
         "id": "q3tB30KVch",
@@ -43137,7 +43153,7 @@
           "合作量级": "尾部红人(10k-100k)",
           "合作服务": "已签合同盖章",
           "已上线视频": 2,
-          "红人粉丝数据": 13200,
+          "红人粉丝数据": 13300,
           "粉丝数据来源": "营销总表",
           "粉丝数据更新时间": "2026-07-05",
           "追踪优先级": "P2 低频追踪",
@@ -43147,11 +43163,15 @@
           "url": {
             "text": "https://www.youtube.com/watch?v=FqB87E6DjqQ",
             "link": "https://www.youtube.com/watch?v=FqB87E6DjqQ"
+          },
+          "url2": {
+            "text": "https://www.youtube.com/watch?v=-TbPSQ6GK2w",
+            "link": "https://www.youtube.com/watch?v=-TbPSQ6GK2w"
           }
         },
         "source": "dingtalk",
         "importedAt": "2026-06-03T15:31:49.867Z",
-        "updatedAt": "2026-07-12T15:31:28.537Z"
+        "updatedAt": "2026-08-17T02:28:33.389Z"
       },
       {
         "id": "vAOwQ07Ufg",
@@ -47493,6 +47513,10 @@
           "url": {
             "text": "https://www.instagram.com/p/DaPEQiDRFHo/",
             "link": "https://www.instagram.com/p/DaPEQiDRFHo/"
+          },
+          "url2": {
+            "text": "https://www.instagram.com/p/DcAAw55R8JT/",
+            "link": "https://www.instagram.com/p/DcAAw55R8JT/"
           }
         },
         "source": "cooperation-import",
@@ -47805,6 +47829,10 @@
           "url": {
             "text": "https://www.instagram.com/p/Dbjja6toi9i/",
             "link": "https://www.instagram.com/p/Dbjja6toi9i/"
+          },
+          "url2": {
+            "text": "https://www.instagram.com/p/DcHo5ewIf6v/",
+            "link": "https://www.instagram.com/p/DcHo5ewIf6v/"
           }
         },
         "source": "cooperation-import",
@@ -47953,7 +47981,7 @@
           "视频交付完成率": "100%",
           "合同交付平台拆分": "YouTube Video 1条 / TikTok 3条",
           "合同交付解析状态": "已解析",
-          "红人粉丝数据": 9700,
+          "红人粉丝数据": 13100,
           "粉丝数据来源": "营销总表",
           "粉丝数据更新时间": "2026-07-05",
           "url": {
@@ -47967,7 +47995,7 @@
         },
         "source": "cooperation-import",
         "importedAt": "2026-06-14T13:20:54.429Z",
-        "updatedAt": "2026-07-12T15:34:08.385Z"
+        "updatedAt": "2026-08-17T02:29:20.830Z"
       },
       {
         "id": "coop_mq21pu",
@@ -48047,7 +48075,7 @@
           "视频交付完成率": "0%",
           "合同交付平台拆分": "YouTube Video 1条 / YouTube Shorts 8条 / TikTok 8条",
           "合同交付解析状态": "已解析",
-          "红人粉丝数据": 18000,
+          "红人粉丝数据": 21200,
           "粉丝数据来源": "营销总表",
           "粉丝数据更新时间": "2026-07-05",
           "url": {
@@ -48057,7 +48085,7 @@
         },
         "source": "cooperation-import",
         "importedAt": "2026-06-14T13:20:54.430Z",
-        "updatedAt": "2026-07-12T15:34:22.838Z"
+        "updatedAt": "2026-08-17T02:29:50.079Z"
       },
       {
         "id": "coop_1a53lf2",
@@ -49888,13 +49916,13 @@
           "视频交付完成率": "0%",
           "合同交付平台拆分": "YouTube Shorts 2条 / Instagram Reels 2条 / TikTok 2条",
           "合同交付解析状态": "已解析",
-          "红人粉丝数据": 126000,
+          "红人粉丝数据": 127000,
           "粉丝数据来源": "营销总表",
           "粉丝数据更新时间": "2026-07-05"
         },
         "source": "cooperation-import",
         "importedAt": "2026-06-22T02:17:23.329Z",
-        "updatedAt": ""
+        "updatedAt": "2026-08-17T02:43:24.989Z"
       },
       {
         "id": "coop_lqyjxv",
@@ -49983,7 +50011,7 @@
             "link": "https://www.instagram.com/alex_pirone_311"
           },
           "平台": "instagramreels",
-          "是否出视频": "否",
+          "是否出视频": "是",
           "红人名称": "alex_pirone_311",
           "红人编码": "EU-Ryan-008",
           "地区": "EU",
@@ -50005,7 +50033,15 @@
           "合同交付解析状态": "已解析",
           "红人粉丝数据": 11000,
           "粉丝数据来源": "营销总表",
-          "粉丝数据更新时间": "2026-07-05"
+          "粉丝数据更新时间": "2026-07-05",
+          "url": {
+            "text": "https://www.instagram.com/p/Db-fUgexE9H/",
+            "link": "https://www.instagram.com/p/Db-fUgexE9H/"
+          },
+          "url2": {
+            "text": "https://www.instagram.com/p/DcF645pss7a/",
+            "link": "https://www.instagram.com/p/DcF645pss7a/"
+          }
         },
         "source": "cooperation-import",
         "importedAt": "2026-06-22T02:17:23.331Z",
@@ -50040,13 +50076,13 @@
           "视频交付完成率": "0%",
           "合同交付平台拆分": "YouTube Video 1条 / YouTube Shorts 2条 / Instagram Reels 2条",
           "合同交付解析状态": "已解析",
-          "红人粉丝数据": 11500,
+          "红人粉丝数据": 11600,
           "粉丝数据来源": "营销总表",
           "粉丝数据更新时间": "2026-07-05"
         },
         "source": "cooperation-import",
         "importedAt": "2026-06-22T02:17:23.331Z",
-        "updatedAt": "2026-07-05T14:01:49.520Z"
+        "updatedAt": "2026-08-17T02:44:02.310Z"
       },
       {
         "id": "coop_szl5nb",
@@ -50151,7 +50187,7 @@
           "视频交付完成率": "4%",
           "合同交付平台拆分": "YouTube Video 2条 / YouTube Shorts 12条 / TikTok 12条",
           "合同交付解析状态": "已解析",
-          "红人粉丝数据": 16200,
+          "红人粉丝数据": 22100,
           "粉丝数据来源": "营销总表",
           "粉丝数据更新时间": "2026-07-05",
           "url": {
@@ -50161,7 +50197,7 @@
         },
         "source": "cooperation-import",
         "importedAt": "2026-06-22T02:17:23.332Z",
-        "updatedAt": "2026-07-12T15:35:57.744Z"
+        "updatedAt": "2026-08-17T02:30:47.743Z"
       },
       {
         "id": "coop_1j43lt6",
@@ -50746,13 +50782,13 @@
           "视频交付完成率": "0%",
           "合同交付平台拆分": "YouTube Video 1条 / YouTube Shorts 5条",
           "合同交付解析状态": "已解析",
-          "红人粉丝数据": 31900,
+          "红人粉丝数据": 32200,
           "粉丝数据来源": "营销总表",
           "粉丝数据更新时间": "2026-07-05"
         },
         "source": "cooperation-import",
         "importedAt": "2026-07-05T13:23:59.113Z",
-        "updatedAt": "2026-08-10T01:42:32.755Z"
+        "updatedAt": "2026-08-17T02:44:54.796Z"
       },
       {
         "id": "coop_w2fpo3",
@@ -51128,13 +51164,13 @@
           "视频交付完成率": "0%",
           "合同交付平台拆分": "Instagram Reels 5条",
           "合同交付解析状态": "已解析",
-          "红人粉丝数据": 446000,
+          "红人粉丝数据": 471000,
           "粉丝数据来源": "营销总表",
           "粉丝数据更新时间": "2026-07-05"
         },
         "source": "cooperation-import",
         "importedAt": "2026-07-05T13:23:59.115Z",
-        "updatedAt": "2026-08-10T01:59:50.054Z"
+        "updatedAt": "2026-08-17T02:46:15.835Z"
       },
       {
         "id": "coop_114vspv",
@@ -51432,14 +51468,14 @@
           "视频交付完成率": "0%",
           "合同交付平台拆分": "YouTube Video 1条",
           "合同交付解析状态": "已解析",
-          "红人粉丝数据": 27600,
+          "红人粉丝数据": 27900,
           "粉丝数据来源": "营销总表",
           "粉丝数据更新时间": "2026-07-05",
           "追踪原因": "合作进度为 已收货，需要确认是否上线"
         },
         "source": "cooperation-import",
         "importedAt": "2026-07-05T13:23:59.117Z",
-        "updatedAt": "2026-08-10T11:20:23"
+        "updatedAt": "2026-08-17T02:33:35.905Z"
       },
       {
         "id": "coop_11nay5",
@@ -51660,14 +51696,14 @@
           "视频交付完成率": "0%",
           "合同交付平台拆分": "YouTube Video 1条 / Instagram Reels 1条",
           "合同交付解析状态": "已解析",
-          "红人粉丝数据": 825000,
+          "红人粉丝数据": 826000,
           "粉丝数据来源": "营销总表",
           "粉丝数据更新时间": "2026-07-05",
           "追踪原因": "合作进度为 未出视频，需要确认是否上线"
         },
         "source": "cooperation-import",
         "importedAt": "2026-07-05T13:23:59.119Z",
-        "updatedAt": "2026-08-10T11:20:23"
+        "updatedAt": "2026-08-17T02:33:53.944Z"
       },
       {
         "id": "coop_kux9dz",
@@ -52070,14 +52106,14 @@
           "视频交付完成率": "0%",
           "合同交付平台拆分": "YouTube Video 1条 / YouTube Shorts 4条",
           "合同交付解析状态": "已解析",
-          "红人粉丝数据": 57800,
+          "红人粉丝数据": 58000,
           "粉丝数据来源": "营销总表",
           "粉丝数据更新时间": "2026-07-05",
           "追踪原因": "合作进度为 未出视频，需要确认是否上线"
         },
         "source": "cooperation-import",
         "importedAt": "2026-07-05T13:23:59.121Z",
-        "updatedAt": "2026-08-10T11:20:23"
+        "updatedAt": "2026-08-17T02:34:50.727Z"
       },
       {
         "id": "coop_1sezpdk",
@@ -52278,13 +52314,13 @@
           "视频交付完成率": "0%",
           "合同交付平台拆分": "TikTok 12条",
           "合同交付解析状态": "已解析",
-          "红人粉丝数据": 3443,
+          "红人粉丝数据": 3572,
           "粉丝数据来源": "营销总表",
           "粉丝数据更新时间": "2026-07-05"
         },
         "source": "cooperation-import",
         "importedAt": "2026-07-05T13:23:59.122Z",
-        "updatedAt": "2026-08-10T03:09:39.615Z"
+        "updatedAt": "2026-08-17T02:22:10.432Z"
       },
       {
         "id": "coop_9p77qm",
@@ -52330,7 +52366,7 @@
             "link": "https://www.youtube.com/@antonio1chavez"
           },
           "平台": "youtubevideo",
-          "是否出视频": "否",
+          "是否出视频": "是",
           "红人名称": "antonio1chavez",
           "红人编码": "US-Ryan-091",
           "地区": "US",
@@ -52383,13 +52419,13 @@
           "视频交付完成率": "0%",
           "合同交付平台拆分": "YouTube Video 1条",
           "合同交付解析状态": "已解析",
-          "红人粉丝数据": 41000,
+          "红人粉丝数据": 345000,
           "粉丝数据来源": "营销总表",
           "粉丝数据更新时间": "2026-07-05"
         },
         "source": "cooperation-import",
         "importedAt": "2026-07-05T13:23:59.122Z",
-        "updatedAt": ""
+        "updatedAt": "2026-08-17T02:22:18.061Z"
       },
       {
         "id": "coop_1gqk3u7",
@@ -54293,13 +54329,13 @@
           "合作车型": "IN10 Pro",
           "合作周期": "3个月",
           "合作量级": "微型红人/KOC(1k-10k)",
-          "红人粉丝数据": 18000,
+          "红人粉丝数据": 21200,
           "粉丝数据来源": "营销总表(16)",
           "粉丝数据更新时间": "2026-07-19"
         },
         "source": "marketing-import-16",
         "importedAt": "2026-07-19T14:25:20.593Z",
-        "updatedAt": ""
+        "updatedAt": "2026-08-17T02:29:50.079Z"
       },
       {
         "id": "marketing_rx1cxf",
@@ -54414,13 +54450,13 @@
           "合作车型": "IN 10+IN 10 Pro",
           "合作周期": "3个月",
           "合作量级": "尾部红人(10k-100k)",
-          "红人粉丝数据": 126000,
+          "红人粉丝数据": 127000,
           "粉丝数据来源": "营销总表(16)",
           "粉丝数据更新时间": "2026-07-19"
         },
         "source": "marketing-import-16",
         "importedAt": "2026-07-19T14:25:20.593Z",
-        "updatedAt": ""
+        "updatedAt": "2026-08-17T02:43:24.990Z"
       },
       {
         "id": "marketing_1t2wuec",
@@ -54487,7 +54523,7 @@
             "link": "https://www.youtube.com/@alexpirone311"
           },
           "平台": "youtubeshort",
-          "是否出视频": "否",
+          "是否出视频": "是",
           "红人名称": "alex_pirone_311",
           "红人编码": "EU-Ryan-008",
           "地区": "EU",
@@ -54498,13 +54534,17 @@
           "合作车型": "IN 10",
           "合作周期": "3个月",
           "合作量级": "尾部红人(10k-100k)",
-          "红人粉丝数据": 11500,
+          "红人粉丝数据": 11600,
           "粉丝数据来源": "营销总表(16)",
-          "粉丝数据更新时间": "2026-07-19"
+          "粉丝数据更新时间": "2026-07-19",
+          "url": {
+            "text": "https://www.youtube.com/shorts/ZnrSQieF2VE",
+            "link": "https://www.youtube.com/shorts/ZnrSQieF2VE"
+          }
         },
         "source": "marketing-import-16",
         "importedAt": "2026-07-19T14:25:20.593Z",
-        "updatedAt": ""
+        "updatedAt": "2026-08-17T02:44:02.311Z"
       },
       {
         "id": "marketing_umqd1s",
@@ -54526,13 +54566,13 @@
           "合作车型": "IN10 Pro",
           "合作周期": "3个月",
           "合作量级": "尾部红人(10k-100k)",
-          "红人粉丝数据": 16200,
+          "红人粉丝数据": 22100,
           "粉丝数据来源": "营销总表(16)",
           "粉丝数据更新时间": "2026-07-19"
         },
         "source": "marketing-import-16",
         "importedAt": "2026-07-19T14:25:20.593Z",
-        "updatedAt": ""
+        "updatedAt": "2026-08-17T02:30:47.744Z"
       },
       {
         "id": "marketing_7btkwd",
@@ -54554,7 +54594,7 @@
           "合作车型": "IN 10",
           "合作周期": "3个月",
           "合作量级": "尾部红人(10k-100k)",
-          "红人粉丝数据": 31900,
+          "红人粉丝数据": 32200,
           "粉丝数据来源": "营销总表(16)",
           "粉丝数据更新时间": "2026-07-19",
           "追踪原因": "合作进度为 部分上线，需要确认是否上线",
@@ -54565,7 +54605,7 @@
         },
         "source": "marketing-import-16",
         "importedAt": "2026-07-19T14:25:20.593Z",
-        "updatedAt": "2026-08-10T11:20:23"
+        "updatedAt": "2026-08-17T02:44:54.796Z"
       },
       {
         "id": "marketing_1jhiffm",
@@ -54645,14 +54685,14 @@
           "合作车型": "IN 10 Pro",
           "合作周期": "3个月",
           "合作量级": "腰部红人(100k-1M)",
-          "红人粉丝数据": 446000,
+          "红人粉丝数据": 471000,
           "粉丝数据来源": "营销总表(16)",
           "粉丝数据更新时间": "2026-07-19",
           "追踪原因": "合作进度为 未出视频，需要确认是否上线"
         },
         "source": "marketing-import-16",
         "importedAt": "2026-07-19T14:25:20.594Z",
-        "updatedAt": "2026-08-10T11:20:23"
+        "updatedAt": "2026-08-17T02:46:15.835Z"
       },
       {
         "id": "marketing_v66k19",
@@ -54692,7 +54732,7 @@
             "link": "https://www.youtube.com/@elfafito"
           },
           "平台": "youtubeshort",
-          "是否出视频": "否",
+          "是否出视频": "是",
           "红人名称": "elfafito_",
           "红人编码": "CA-Ryan-010",
           "地区": "CA",
@@ -54706,7 +54746,11 @@
           "红人粉丝数据": 41000,
           "粉丝数据来源": "营销总表(16)",
           "粉丝数据更新时间": "2026-07-19",
-          "追踪原因": "合作进度为 部分上线，需要确认是否上线"
+          "追踪原因": "合作进度为 部分上线，需要确认是否上线",
+          "url": {
+            "text": "https://www.youtube.com/shorts/wA8eqFm0YmE",
+            "link": "https://www.youtube.com/shorts/wA8eqFm0YmE"
+          }
         },
         "source": "marketing-import-16",
         "importedAt": "2026-07-19T14:25:20.594Z",
@@ -54765,14 +54809,14 @@
           "合作车型": "IN 10 Pro",
           "合作周期": "3个月",
           "合作量级": "腰部红人(100k-1M)",
-          "红人粉丝数据": 825000,
+          "红人粉丝数据": 826000,
           "粉丝数据来源": "营销总表(16)",
           "粉丝数据更新时间": "2026-07-19",
           "追踪原因": "合作进度为 未出视频，需要确认是否上线"
         },
         "source": "marketing-import-16",
         "importedAt": "2026-07-19T14:25:20.594Z",
-        "updatedAt": "2026-08-10T11:20:23"
+        "updatedAt": "2026-08-17T02:33:53.944Z"
       },
       {
         "id": "marketing_sojyzg",
@@ -54881,14 +54925,14 @@
           "合作车型": "IN10 Pro",
           "合作周期": "3个月",
           "合作量级": "尾部红人(10k-100k)",
-          "红人粉丝数据": 57800,
+          "红人粉丝数据": 58000,
           "粉丝数据来源": "营销总表(16)",
           "粉丝数据更新时间": "2026-07-19",
           "追踪原因": "合作进度为 未出视频，需要确认是否上线"
         },
         "source": "marketing-import-16",
         "importedAt": "2026-07-19T14:25:20.594Z",
-        "updatedAt": "2026-08-10T11:20:23"
+        "updatedAt": "2026-08-17T02:34:50.727Z"
       },
       {
         "id": "marketing_2r2uaj",
@@ -55331,7 +55375,7 @@
             "link": "https://www.instagram.com/destincantrell"
           },
           "平台": "instagramreels",
-          "是否出视频": "否",
+          "是否出视频": "是",
           "红人名称": "destincantrell",
           "红人编码": "US-Ryan-098",
           "地区": "US",
@@ -55344,7 +55388,11 @@
           "合作量级": "尾部红人(10k-100k)",
           "红人粉丝数据": 93000,
           "粉丝数据来源": "营销总表(16)",
-          "粉丝数据更新时间": "2026-07-19"
+          "粉丝数据更新时间": "2026-07-19",
+          "url": {
+            "text": "https://www.instagram.com/p/Db5zRoehCW5/",
+            "link": "https://www.instagram.com/p/Db5zRoehCW5/"
+          }
         },
         "source": "marketing-import-16",
         "importedAt": "2026-07-19T14:25:20.594Z",
@@ -55398,13 +55446,13 @@
           "合作车型": "IN10 Pro",
           "合作周期": "3个月",
           "合作量级": "尾部红人(10k-100k)",
-          "红人粉丝数据": 44200,
+          "红人粉丝数据": 44300,
           "粉丝数据来源": "营销总表(16)",
           "粉丝数据更新时间": "2026-07-19"
         },
         "source": "marketing-import-16",
         "importedAt": "2026-07-19T14:25:20.594Z",
-        "updatedAt": "2026-08-10T01:49:17.794Z"
+        "updatedAt": "2026-08-17T02:37:00.731Z"
       },
       {
         "id": "marketing_889g6",
@@ -55415,7 +55463,7 @@
             "link": "https://www.youtube.com/@omni_moto"
           },
           "平台": "youtubeshort",
-          "是否出视频": "否",
+          "是否出视频": "是",
           "红人名称": "Omni_Moto",
           "红人编码": "US-Ryan-099",
           "地区": "US",
@@ -55426,13 +55474,17 @@
           "合作车型": "IN10 Pro",
           "合作周期": "3个月",
           "合作量级": "尾部红人(10k-100k)",
-          "红人粉丝数据": 44200,
+          "红人粉丝数据": 44300,
           "粉丝数据来源": "营销总表(16)",
-          "粉丝数据更新时间": "2026-07-19"
+          "粉丝数据更新时间": "2026-07-19",
+          "url": {
+            "text": "https://www.youtube.com/shorts/5_6bSmdOu3c",
+            "link": "https://www.youtube.com/shorts/5_6bSmdOu3c"
+          }
         },
         "source": "marketing-import-16",
         "importedAt": "2026-07-19T14:25:20.594Z",
-        "updatedAt": "2026-08-10T01:49:17.794Z"
+        "updatedAt": "2026-08-17T02:37:00.731Z"
       },
       {
         "id": "marketing_tgoyho",
@@ -55454,7 +55506,7 @@
           "合作车型": "IN10 Pro",
           "合作周期": "3个月",
           "合作量级": "微型红人/KOC(1k-10k)",
-          "红人粉丝数据": 9330,
+          "红人粉丝数据": 9610,
           "粉丝数据来源": "营销总表(16)",
           "粉丝数据更新时间": "2026-07-19",
           "url": {
@@ -55472,7 +55524,7 @@
         },
         "source": "marketing-import-16",
         "importedAt": "2026-07-19T14:25:20.595Z",
-        "updatedAt": "2026-08-10T01:49:40.113Z"
+        "updatedAt": "2026-08-17T02:37:38.444Z"
       },
       {
         "id": "marketing_kqv017",
@@ -55483,7 +55535,7 @@
             "link": "https://www.tiktok.com/@realsurronmax"
           },
           "平台": "tiktok",
-          "是否出视频": "否",
+          "是否出视频": "是",
           "红人名称": "realsurronmax",
           "红人编码": "US-Ryan-100",
           "地区": "US",
@@ -55496,7 +55548,15 @@
           "合作量级": "微型红人/KOC(1k-10k)",
           "红人粉丝数据": 6000,
           "粉丝数据来源": "营销总表(16)",
-          "粉丝数据更新时间": "2026-07-19"
+          "粉丝数据更新时间": "2026-07-19",
+          "url": {
+            "text": "https://www.tiktok.com/@realsurronmax/video/7674666360072375583",
+            "link": "https://www.tiktok.com/@realsurronmax/video/7674666360072375583"
+          },
+          "url2": {
+            "text": "https://www.tiktok.com/@realsurronmax/video/7672572327321767182",
+            "link": "https://www.tiktok.com/@realsurronmax/video/7672572327321767182"
+          }
         },
         "source": "marketing-import-16",
         "importedAt": "2026-07-19T14:25:20.595Z",
@@ -55522,18 +55582,22 @@
           "合作车型": "IN10 Pro",
           "合作周期": "3个月",
           "合作量级": "微型红人/KOC(1k-10k)",
-          "红人粉丝数据": 9330,
+          "红人粉丝数据": 9610,
           "粉丝数据来源": "营销总表(16)",
           "粉丝数据更新时间": "2026-07-19",
           "追踪原因": "合作进度为 部分上线，需要确认是否上线",
           "url": {
             "text": "https://www.youtube.com/shorts/pnUA8q1R4Yg",
             "link": "https://www.youtube.com/shorts/pnUA8q1R4Yg"
+          },
+          "url2": {
+            "text": "https://www.youtube.com/shorts/ezn_PgQxLl4",
+            "link": "https://www.youtube.com/shorts/ezn_PgQxLl4"
           }
         },
         "source": "marketing-import-16",
         "importedAt": "2026-07-19T14:25:20.595Z",
-        "updatedAt": "2026-08-10T11:20:23"
+        "updatedAt": "2026-08-17T02:37:38.444Z"
       },
       {
         "id": "marketing_2st9jn",
@@ -97623,6 +97687,887 @@
         "source": "local-discovery",
         "importedAt": "",
         "updatedAt": "2026-08-10T04:24:46.029Z"
+      },
+      {
+        "id": "vid_1786932981784_l5j46a3",
+        "fields": {
+          "是否监控": "是",
+          "likesCount": 63,
+          "videoUrl": "https://www.tiktok.com/@onewaygooey_/video/7673383466041412894",
+          "平台": "tiktok",
+          "commentsCount": 5,
+          "红人名称": "onewaygooey_",
+          "id": "7673383466041412894",
+          "videoPlayCount": 1195,
+          "videoViewCount": 1195,
+          "url": {
+            "text": "https://www.tiktok.com/@onewaygooey_/video/7673383466041412894",
+            "link": "https://www.tiktok.com/@onewaygooey_/video/7673383466041412894"
+          },
+          "timestamp": "2026-08-13T05:27:03.000Z",
+          "displayUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast8-p-0068-tx2/osTa9AYxqqDtZiI1dPifiAA2AVXKpYIOIQBzCX~tplv-tiktokx-origin.image?dr=9636&x-expires=1787104800&x-signature=El9u8rhC6Jlzkb%2F9ExesfNuEjq8%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast8"
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": "2026-08-17T02:16:21.784Z"
+      },
+      {
+        "id": "vid_1786933209798_3ueja44",
+        "fields": {
+          "是否监控": "是",
+          "likesCount": 76,
+          "videoUrl": "https://www.tiktok.com/@hdukerides/video/7674387778205125908",
+          "平台": "tiktok",
+          "commentsCount": 14,
+          "红人名称": "hdukerides",
+          "id": "7674387778205125908",
+          "videoPlayCount": 1184,
+          "videoViewCount": 1184,
+          "url": {
+            "text": "https://www.tiktok.com/@hdukerides/video/7674387778205125908",
+            "link": "https://www.tiktok.com/@hdukerides/video/7674387778205125908"
+          },
+          "timestamp": "2026-08-15T22:24:17.000Z",
+          "displayUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/ooEBchDfFATPgzBpARn6AC7Ep7bIQUAfgqOIKE~tplv-tiktokx-origin.image?dr=9636&x-expires=1787104800&x-signature=jvBssjcOgd8NE9drrnuQhQoQKzw%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast8"
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": "2026-08-17T02:20:09.798Z"
+      },
+      {
+        "id": "vid_1786933209798_etu6sex",
+        "fields": {
+          "是否监控": "是",
+          "likesCount": 90,
+          "videoUrl": "https://www.tiktok.com/@hdukerides/video/7672547016823639316",
+          "平台": "tiktok",
+          "commentsCount": 10,
+          "红人名称": "hdukerides",
+          "id": "7672547016823639316",
+          "videoPlayCount": 1709,
+          "videoViewCount": 1709,
+          "url": {
+            "text": "https://www.tiktok.com/@hdukerides/video/7672547016823639316",
+            "link": "https://www.tiktok.com/@hdukerides/video/7672547016823639316"
+          },
+          "timestamp": "2026-08-10T23:21:14.000Z",
+          "displayUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oEDhAULEmFnII1Lj4bQAfHAosuAeeRD0AD9IdG~tplv-tiktokx-origin.image?dr=9636&x-expires=1787104800&x-signature=k%2Bl8eE4iNehRtnHsNk8FJHucaa4%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast8"
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": "2026-08-17T02:20:09.798Z"
+      },
+      {
+        "id": "vid_1786933317159_2grd947",
+        "fields": {
+          "是否监控": "是",
+          "likesCount": 40,
+          "videoUrl": "https://www.tiktok.com/@reelridez/video/7674429159665405197",
+          "平台": "tiktok",
+          "commentsCount": 4,
+          "红人名称": "reelridez",
+          "id": "7674429159665405197",
+          "videoPlayCount": 702,
+          "videoViewCount": 702,
+          "url": {
+            "text": "https://www.tiktok.com/@reelridez/video/7674429159665405197",
+            "link": "https://www.tiktok.com/@reelridez/video/7674429159665405197"
+          },
+          "timestamp": "2026-08-16T01:05:07.000Z",
+          "displayUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/ooaBvAwJMI4ovBULcaiDMi2FIEDOBtagEg79C~tplv-tiktokx-origin.image?dr=9636&x-expires=1787104800&x-signature=F%2BS8VbmVcf9PxltquNYY5%2FT2%2BR8%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5"
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": "2026-08-17T02:21:57.159Z"
+      },
+      {
+        "id": "vid_1786933317159_g5m57iw",
+        "fields": {
+          "是否监控": "是",
+          "likesCount": 67,
+          "videoUrl": "https://www.tiktok.com/@reelridez/video/7673671639967599886",
+          "平台": "tiktok",
+          "commentsCount": 3,
+          "红人名称": "reelridez",
+          "id": "7673671639967599886",
+          "videoPlayCount": 3237,
+          "videoViewCount": 3237,
+          "url": {
+            "text": "https://www.tiktok.com/@reelridez/video/7673671639967599886",
+            "link": "https://www.tiktok.com/@reelridez/video/7673671639967599886"
+          },
+          "timestamp": "2026-08-14T00:05:29.000Z",
+          "displayUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/o4zQkQtmAAuLHThujFfolUDCSkfe6EIK51ViH8~tplv-tiktokx-origin.image?dr=9636&x-expires=1787104800&x-signature=t%2BBapIqLaFbLmt8PfJmP5v62NE0%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5"
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": "2026-08-17T02:21:57.159Z"
+      },
+      {
+        "id": "vid_1786933317159_5qgkdy7",
+        "fields": {
+          "是否监控": "是",
+          "likesCount": 33,
+          "videoUrl": "https://www.tiktok.com/@reelridez/video/7673327104049630477",
+          "平台": "tiktok",
+          "commentsCount": 9,
+          "红人名称": "reelridez",
+          "id": "7673327104049630477",
+          "videoPlayCount": 569,
+          "videoViewCount": 569,
+          "url": {
+            "text": "https://www.tiktok.com/@reelridez/video/7673327104049630477",
+            "link": "https://www.tiktok.com/@reelridez/video/7673327104049630477"
+          },
+          "timestamp": "2026-08-13T01:48:34.000Z",
+          "displayUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/oQ8JISc4DIBnF9eJAQFFkujgbCfkUhHIEcANIf~tplv-tiktokx-origin.image?dr=9636&x-expires=1787104800&x-signature=x2uR1knpKA0D19jchBHjKcQX%2F1Y%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5"
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": "2026-08-17T02:21:57.159Z"
+      },
+      {
+        "id": "vid_1786933317159_5lv64qb",
+        "fields": {
+          "是否监控": "是",
+          "likesCount": 27,
+          "videoUrl": "https://www.tiktok.com/@reelridez/video/7672849406609149197",
+          "平台": "tiktok",
+          "commentsCount": 8,
+          "红人名称": "reelridez",
+          "id": "7672849406609149197",
+          "videoPlayCount": 1202,
+          "videoViewCount": 1202,
+          "url": {
+            "text": "https://www.tiktok.com/@reelridez/video/7672849406609149197",
+            "link": "https://www.tiktok.com/@reelridez/video/7672849406609149197"
+          },
+          "timestamp": "2026-08-11T18:54:57.000Z",
+          "displayUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/oQK8f7DeIEjjTZdHtcUI7DAC9IQhkwqfAAyFxj~tplv-tiktokx-origin.image?dr=9636&x-expires=1787104800&x-signature=cX3CpbkTHz132f1Ulyf0ZW8Ip0U%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5"
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": "2026-08-17T02:21:57.159Z"
+      },
+      {
+        "id": "vid_1786933401816_ojmbg14",
+        "fields": {
+          "是否监控": "是",
+          "likesCount": 34,
+          "videoUrl": "https://www.tiktok.com/@realsurronmax/video/7674666360072375583",
+          "平台": "tiktok",
+          "commentsCount": 6,
+          "红人名称": "realsurronmax",
+          "id": "7674666360072375583",
+          "videoPlayCount": 562,
+          "videoViewCount": 562,
+          "url": {
+            "text": "https://www.tiktok.com/@realsurronmax/video/7674666360072375583",
+            "link": "https://www.tiktok.com/@realsurronmax/video/7674666360072375583"
+          },
+          "timestamp": "2026-08-16T16:25:27.000Z",
+          "displayUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast8-p-0068-tx2/osijIqMfPHyI3gCIJ5Q13DiDDx6BGiAiAW8qBA~tplv-tiktokx-origin.image?dr=9636&x-expires=1787104800&x-signature=xghbPbSDJyDfsUUTeZT0EHzl%2FbI%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5"
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": "2026-08-17T02:23:21.817Z"
+      },
+      {
+        "id": "vid_1786933401817_vutpqf5",
+        "fields": {
+          "是否监控": "是",
+          "likesCount": 26,
+          "videoUrl": "https://www.tiktok.com/@realsurronmax/video/7672572327321767182",
+          "平台": "tiktok",
+          "commentsCount": 5,
+          "红人名称": "realsurronmax",
+          "id": "7672572327321767182",
+          "videoPlayCount": 487,
+          "videoViewCount": 487,
+          "url": {
+            "text": "https://www.tiktok.com/@realsurronmax/video/7672572327321767182",
+            "link": "https://www.tiktok.com/@realsurronmax/video/7672572327321767182"
+          },
+          "timestamp": "2026-08-11T00:59:31.000Z",
+          "displayUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/owQGU9MDlvZOICe9EiWHlDdAILkf0bwQcAeLj5~tplv-tiktokx-origin.image?dr=9636&x-expires=1787104800&x-signature=mF%2BTVkLweHltnATqENaR%2FOFyEyU%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5"
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": "2026-08-17T02:23:21.817Z"
+      },
+      {
+        "id": "vid_1786933545701_71gtqqa",
+        "fields": {
+          "是否监控": "是",
+          "likesCount": 0,
+          "videoUrl": "https://www.youtube.com/watch?v=UvChJQkg8X8",
+          "平台": "youtubevideo",
+          "commentsCount": 2,
+          "红人名称": "Trent In The Sip",
+          "id": "UvChJQkg8X8",
+          "videoPlayCount": 2624,
+          "videoViewCount": 2624,
+          "url": {
+            "text": "https://www.youtube.com/watch?v=UvChJQkg8X8",
+            "link": "https://www.youtube.com/watch?v=UvChJQkg8X8"
+          },
+          "timestamp": "2026-08-14T23:00:05.000Z",
+          "displayUrl": "https://i.ytimg.com/vi/UvChJQkg8X8/hqdefault.jpg"
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": "2026-08-17T02:25:45.701Z"
+      },
+      {
+        "id": "vid_1786933553720_3h0cl3n",
+        "fields": {
+          "是否监控": "是",
+          "likesCount": 65,
+          "videoUrl": "https://www.youtube.com/watch?v=_IKQ5vO7oFI",
+          "平台": "youtubevideo",
+          "commentsCount": 8,
+          "红人名称": "Vlog Epicness",
+          "id": "_IKQ5vO7oFI",
+          "videoPlayCount": 1551,
+          "videoViewCount": 1551,
+          "url": {
+            "text": "https://www.youtube.com/watch?v=_IKQ5vO7oFI",
+            "link": "https://www.youtube.com/watch?v=_IKQ5vO7oFI"
+          },
+          "timestamp": "2026-08-15T02:16:52.000Z",
+          "displayUrl": "https://i.ytimg.com/vi/_IKQ5vO7oFI/maxresdefault.jpg"
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": "2026-08-17T02:25:53.720Z"
+      },
+      {
+        "id": "vid_1786934258444_h9m8ipk",
+        "fields": {
+          "是否监控": "是",
+          "likesCount": 65,
+          "videoUrl": "https://www.youtube.com/watch?v=flRK_3czyhc",
+          "平台": "youtubevideo",
+          "commentsCount": 52,
+          "红人名称": "Maxxx",
+          "id": "flRK_3czyhc",
+          "videoPlayCount": 1432,
+          "videoViewCount": 1432,
+          "url": {
+            "text": "https://www.youtube.com/watch?v=flRK_3czyhc",
+            "link": "https://www.youtube.com/watch?v=flRK_3czyhc"
+          },
+          "timestamp": "2026-08-12T19:30:40.000Z",
+          "displayUrl": "https://i.ytimg.com/vi/flRK_3czyhc/maxresdefault.jpg"
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": "2026-08-17T02:37:38.444Z"
+      },
+      {
+        "id": "vid_1786934398159_nrmnih5",
+        "fields": {
+          "是否监控": "是",
+          "likesCount": 7,
+          "videoUrl": "https://www.youtube.com/shorts/10PVKGmusEc",
+          "平台": "youtubeshort",
+          "commentsCount": 2,
+          "红人名称": "Trent In The Sip",
+          "id": "10PVKGmusEc",
+          "videoPlayCount": 683,
+          "videoViewCount": 683,
+          "url": {
+            "text": "https://www.youtube.com/shorts/10PVKGmusEc",
+            "link": "https://www.youtube.com/shorts/10PVKGmusEc"
+          },
+          "timestamp": "2026-08-14T23:35:33.000Z",
+          "displayUrl": "https://i.ytimg.com/vi/10PVKGmusEc/maxres2.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAKAD4oCDAgAEAEYZSBcKFQwDw==&rs=AOn4CLBdqaLDOzeAV6FOJ5kWYIuCDBrt4Q"
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": "2026-08-17T02:39:58.159Z"
+      },
+      {
+        "id": "vid_1786934398159_d5mhwmk",
+        "fields": {
+          "是否监控": "是",
+          "likesCount": 8,
+          "videoUrl": "https://www.youtube.com/shorts/9QyN6HyONGk",
+          "平台": "youtubeshort",
+          "commentsCount": 1,
+          "红人名称": "Trent In The Sip",
+          "id": "9QyN6HyONGk",
+          "videoPlayCount": 581,
+          "videoViewCount": 581,
+          "url": {
+            "text": "https://www.youtube.com/shorts/9QyN6HyONGk",
+            "link": "https://www.youtube.com/shorts/9QyN6HyONGk"
+          },
+          "timestamp": "2026-08-14T23:36:19.000Z",
+          "displayUrl": "https://i.ytimg.com/vi/9QyN6HyONGk/maxres2.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAKAD4oCDAgAEAEYQyBaKHIwDw==&rs=AOn4CLD3ylp9be9fBtV4EYp3-yoB7qkzYw"
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": "2026-08-17T02:39:58.159Z"
+      },
+      {
+        "id": "vid_1786934642311_uicnvui",
+        "fields": {
+          "是否监控": "是",
+          "likesCount": 69,
+          "videoUrl": "https://www.youtube.com/shorts/ZnrSQieF2VE",
+          "平台": "youtubeshort",
+          "commentsCount": 3,
+          "红人名称": "Alex Pirone",
+          "id": "ZnrSQieF2VE",
+          "videoPlayCount": 1228,
+          "videoViewCount": 1228,
+          "url": {
+            "text": "https://www.youtube.com/shorts/ZnrSQieF2VE",
+            "link": "https://www.youtube.com/shorts/ZnrSQieF2VE"
+          },
+          "timestamp": "2026-08-14T17:00:29.000Z",
+          "displayUrl": "https://i.ytimg.com/vi/ZnrSQieF2VE/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AG2CIACgA-KAgwIABABGGUgSShAMA8=&rs=AOn4CLAps_3oEGsQIoL4ZwfohZdWXqXdAA"
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": "2026-08-17T02:44:02.311Z"
+      },
+      {
+        "id": "vid_1786934802743_glbkv24",
+        "fields": {
+          "是否监控": "是",
+          "likesCount": 0,
+          "videoUrl": "https://www.youtube.com/shorts/wA8eqFm0YmE",
+          "平台": "youtubeshort",
+          "commentsCount": 0,
+          "红人名称": "Fayçal Hajji | RIDE BEYOND",
+          "id": "wA8eqFm0YmE",
+          "videoPlayCount": 141,
+          "videoViewCount": 141,
+          "url": {
+            "text": "https://www.youtube.com/shorts/wA8eqFm0YmE",
+            "link": "https://www.youtube.com/shorts/wA8eqFm0YmE"
+          },
+          "timestamp": "2026-08-15T21:55:04.000Z",
+          "displayUrl": "https://i.ytimg.com/vi/wA8eqFm0YmE/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4Ac4FgAKACooCDAgAEAEYZSBNKDswDw==&rs=AOn4CLDbcecO8m7V1OlMeq4gT6n6Sx4xfA"
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": "2026-08-17T02:46:42.743Z"
+      },
+      {
+        "id": "vid_1786934928660_gbtcx47",
+        "fields": {
+          "是否监控": "是",
+          "likesCount": 27,
+          "videoUrl": "https://www.youtube.com/shorts/KMiOLo9bZHg",
+          "平台": "youtubeshort",
+          "commentsCount": 1,
+          "红人名称": "Reelridez",
+          "id": "KMiOLo9bZHg",
+          "videoPlayCount": 3897,
+          "videoViewCount": 3897,
+          "url": {
+            "text": "https://www.youtube.com/shorts/KMiOLo9bZHg",
+            "link": "https://www.youtube.com/shorts/KMiOLo9bZHg"
+          },
+          "timestamp": "2026-08-14T00:06:55.000Z",
+          "displayUrl": "https://i.ytimg.com/vi/KMiOLo9bZHg/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAKAD4oCDAgAEAEYQyBTKGUwDw==&rs=AOn4CLBBv5Pw2dNn-hkrgLOAunEJOQA5-g"
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": "2026-08-17T02:48:48.660Z"
+      },
+      {
+        "id": "vid_1786934928660_q6e70hd",
+        "fields": {
+          "是否监控": "是",
+          "likesCount": 19,
+          "videoUrl": "https://www.youtube.com/shorts/U4z6BHyktes",
+          "平台": "youtubeshort",
+          "commentsCount": 5,
+          "红人名称": "Reelridez",
+          "id": "U4z6BHyktes",
+          "videoPlayCount": 2768,
+          "videoViewCount": 2768,
+          "url": {
+            "text": "https://www.youtube.com/shorts/U4z6BHyktes",
+            "link": "https://www.youtube.com/shorts/U4z6BHyktes"
+          },
+          "timestamp": "2026-08-11T18:45:36.000Z",
+          "displayUrl": "https://i.ytimg.com/vi/U4z6BHyktes/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAKAD4oCDAgAEAEYUyBcKGUwDw==&rs=AOn4CLAFbSTmJGHnHlmC_dm_yy4Z9TClsw"
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": "2026-08-17T02:48:48.660Z"
+      },
+      {
+        "id": "vid_1786934928660_iyrpngp",
+        "fields": {
+          "是否监控": "是",
+          "likesCount": 23,
+          "videoUrl": "https://www.youtube.com/shorts/cN5I4mT3PQw",
+          "平台": "youtubeshort",
+          "commentsCount": 2,
+          "红人名称": "Reelridez",
+          "id": "cN5I4mT3PQw",
+          "videoPlayCount": 3012,
+          "videoViewCount": 3012,
+          "url": {
+            "text": "https://www.youtube.com/shorts/cN5I4mT3PQw",
+            "link": "https://www.youtube.com/shorts/cN5I4mT3PQw"
+          },
+          "timestamp": "2026-08-16T01:06:38.000Z",
+          "displayUrl": "https://i.ytimg.com/vi/cN5I4mT3PQw/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAKAD4oCDAgAEAEYWSBlKC0wDw==&rs=AOn4CLB2JhfPm0rRc6b948Ftv7MpVRkJ-A"
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": "2026-08-17T02:48:48.660Z"
+      },
+      {
+        "id": "vid_1786934928660_ns035r2",
+        "fields": {
+          "是否监控": "是",
+          "likesCount": 48,
+          "videoUrl": "https://www.youtube.com/shorts/SZvQ1qRdr8k",
+          "平台": "youtubeshort",
+          "commentsCount": 3,
+          "红人名称": "Reelridez",
+          "id": "SZvQ1qRdr8k",
+          "videoPlayCount": 7157,
+          "videoViewCount": 7157,
+          "url": {
+            "text": "https://www.youtube.com/shorts/SZvQ1qRdr8k",
+            "link": "https://www.youtube.com/shorts/SZvQ1qRdr8k"
+          },
+          "timestamp": "2026-08-15T00:39:34.000Z",
+          "displayUrl": "https://i.ytimg.com/vi/SZvQ1qRdr8k/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAKAD4oCDAgAEAEYNyBVKH8wDw==&rs=AOn4CLBrJpcAZsq-1fxSiQdZsdu5cv6IbA"
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": "2026-08-17T02:48:48.660Z"
+      },
+      {
+        "id": "vid_1786934928660_arntzwf",
+        "fields": {
+          "是否监控": "是",
+          "likesCount": 17,
+          "videoUrl": "https://www.youtube.com/shorts/WOfFLk9sr3I",
+          "平台": "youtubeshort",
+          "commentsCount": 1,
+          "红人名称": "Reelridez",
+          "id": "WOfFLk9sr3I",
+          "videoPlayCount": 1430,
+          "videoViewCount": 1430,
+          "url": {
+            "text": "https://www.youtube.com/shorts/WOfFLk9sr3I",
+            "link": "https://www.youtube.com/shorts/WOfFLk9sr3I"
+          },
+          "timestamp": "2026-08-13T00:29:10.000Z",
+          "displayUrl": "https://i.ytimg.com/vi/WOfFLk9sr3I/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAKAD4oCDAgAEAEYZSBgKFowDw==&rs=AOn4CLDC3RJ_7MRj_u_a8xDm0dcfVeZEHw"
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": "2026-08-17T02:48:48.660Z"
+      },
+      {
+        "id": "vid_1786935024865_riek0ck",
+        "fields": {
+          "是否监控": "是",
+          "likesCount": 26,
+          "videoUrl": "https://www.youtube.com/shorts/5_6bSmdOu3c",
+          "平台": "youtubeshort",
+          "commentsCount": 2,
+          "红人名称": "Omni Moto",
+          "id": "5_6bSmdOu3c",
+          "videoPlayCount": 1337,
+          "videoViewCount": 1337,
+          "url": {
+            "text": "https://www.youtube.com/shorts/5_6bSmdOu3c",
+            "link": "https://www.youtube.com/shorts/5_6bSmdOu3c"
+          },
+          "timestamp": "2026-08-15T03:04:47.000Z",
+          "displayUrl": "https://i.ytimg.com/vi/5_6bSmdOu3c/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AG2CIACgA-KAgwIABABGEwgWChlMA8=&rs=AOn4CLBRBDTjpNVIRVAjXiJ6cazZ2elcAA"
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": "2026-08-17T02:50:24.865Z"
+      },
+      {
+        "id": "vid_1786935059362_ysj81z4",
+        "fields": {
+          "是否监控": "是",
+          "likesCount": 104,
+          "videoUrl": "https://www.youtube.com/shorts/ezn_PgQxLl4",
+          "平台": "youtubeshort",
+          "commentsCount": 9,
+          "红人名称": "Maxxx",
+          "id": "ezn_PgQxLl4",
+          "videoPlayCount": 1856,
+          "videoViewCount": 1856,
+          "url": {
+            "text": "https://www.youtube.com/shorts/ezn_PgQxLl4",
+            "link": "https://www.youtube.com/shorts/ezn_PgQxLl4"
+          },
+          "timestamp": "2026-08-14T01:23:36.000Z",
+          "displayUrl": "https://i.ytimg.com/vi/ezn_PgQxLl4/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4Ac4FgAKACooCDAgAEAEYciBqKC8wDw==&rs=AOn4CLAtcp3_HEIYBcvtV8DmnQOsi5ccoA"
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": "2026-08-17T02:50:59.362Z"
+      },
+      {
+        "id": "vid_1786935342323_0mzswt7",
+        "fields": {
+          "是否监控": "是",
+          "likesCount": 199,
+          "videoUrl": "https://instagram.fqnv8-1.fna.fbcdn.net/o1/v/t2/f2/m86/AQPn-4yyk7w-0C973Jkk9qOs8YYtBNayn-kkDRUbORsgrpKWBlzgQlqVYgzf-WSBJftrrbwq6GfGDDWb7i5TIV-UfiahSB-d4Pd0Duw.mp4?_nc_cat=111&_nc_oc=AdpPdlS2sVbmFyQJR2zv1h6HksK6Md1EenOQWSROHu_8pv5jwAvqCutapIpFA-mylVc&_nc_sid=5e9851&_nc_ht=instagram.fqnv8-1.fna.fbcdn.net&_nc_ohc=Tz4IuEie35sQ7kNvwEHejoU&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5JTlNUQUdSQU0uQ0xJUFMuQzMuNzIwLmRhc2hfYmFzZWxpbmVfMV92MSIsInhwdl9hc3NldF9pZCI6MjQ5NTcxMTA3NDI2ODUyNiwiYXNzZXRfYWdlX2RheXMiOjIsInZpX3VzZWNhc2VfaWQiOjEwMDk5LCJkdXJhdGlvbl9zIjo5LCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&vs=15ff45f16c887a96&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC9GNTQzN0E2NjE1NTRBQkM1MUZDMTUwNzA1OEFGMjg5NV92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyL0E1NDZGRTAyNDc1RTAzRjhCMEU4RUVDQkQ5REExNEEwX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACbc1dnAwPXuCBUCKAJDMywXQCMhysCDEm8YEmRhc2hfYmFzZWxpbmVfMV92MREAdf4HZ",
+          "平台": "instagramreels",
+          "commentsCount": 9,
+          "红人名称": "onewaygooey_",
+          "id": "3963627294110625319",
+          "videoPlayCount": 6253,
+          "videoViewCount": 1893,
+          "url": {
+            "text": "https://www.instagram.com/p/DcBogYXga4n/",
+            "link": "https://www.instagram.com/p/DcBogYXga4n/"
+          },
+          "timestamp": "2026-08-14T15:28:51.000Z"
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": "2026-08-17T02:55:42.323Z"
+      },
+      {
+        "id": "vid_1786935342323_e5wtnh8",
+        "fields": {
+          "是否监控": "是",
+          "likesCount": 179,
+          "videoUrl": "https://instagram.fman4-1.fna.fbcdn.net/o1/v/t2/f2/m86/AQPy-luTX2vByaoSCh5XXNM_Ftvhi5IOlIcPY8LceMeSVdEOxG8Jd-H3vyGJwfgMU1crWaHO_JIoEJ04oDCuAhj_WW4R6KnTI8DDQko.mp4?_nc_cat=107&_nc_oc=AdrJJ53Cp509DxBIoLL5N4ekbtUimzW-40qsFx17-HO7VMGUbPR0AJ37MMZ36VrW-zmg_sa9dhamu23kOu72pq-u&_nc_sid=5e9851&_nc_ht=instagram.fman4-1.fna.fbcdn.net&_nc_ohc=ToWJHUQpeSUQ7kNvwEHLLG9&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5JTlNUQUdSQU0uQ0xJUFMuQzMuNzIwLmRhc2hfYmFzZWxpbmVfMV92MSIsInhwdl9hc3NldF9pZCI6MTczODczNTc4Mzk5NTcxMCwiYXNzZXRfYWdlX2RheXMiOjMsInZpX3VzZWNhc2VfaWQiOjEwMDk5LCJkdXJhdGlvbl9zIjo2NCwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=17-1&vs=601bd8aa74c8dded&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC8zODREQjk1M0VDNkY3NDM2NDU0QUNEQTUwNEIxODBBQV92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyLzM0NDQ3OEYzRDk0QzI1OTkxRUE0MjE5MzQ1QTA3Qzg3X2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACb8pJuM39eWBhUCKAJDMywXQFAKn752yLQYEmRhc2hfYmFzZW",
+          "平台": "instagramreels",
+          "commentsCount": 14,
+          "红人名称": "onewaygooey_",
+          "id": "3962917092528765417",
+          "videoPlayCount": 4536,
+          "videoViewCount": 1204,
+          "url": {
+            "text": "https://www.instagram.com/p/Db_HBlmgDnp/",
+            "link": "https://www.instagram.com/p/Db_HBlmgDnp/"
+          },
+          "timestamp": "2026-08-13T15:57:37.000Z"
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": "2026-08-17T02:55:42.323Z"
+      },
+      {
+        "id": "vid_1786935342323_vzj9rag",
+        "fields": {
+          "是否监控": "是",
+          "likesCount": 185,
+          "videoUrl": "https://scontent-ord5-2.cdninstagram.com/o1/v/t2/f2/m86/AQO1dmXVQbsYIrjSq60HuiRIIMa5kx4Q1blDUQxnsTdB6G5ZXLnbDnKgsv5JNoBgFbXYCNaBTtNSrAl3JQ1dREBA8DNaVlyPKqh8onA.mp4?_nc_cat=107&_nc_sid=5e9851&_nc_ht=scontent-ord5-2.cdninstagram.com&_nc_ohc=SStJocgdU0MQ7kNvwFryCsV&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5JTlNUQUdSQU0uQ0xJUFMuQzMuNzIwLmRhc2hfYmFzZWxpbmVfMV92MSIsInhwdl9hc3NldF9pZCI6MTAyOTUxNzQzOTk4Mzk5MSwiYXNzZXRfYWdlX2RheXMiOjAsInZpX3VzZWNhc2VfaWQiOjEwMDk5LCJkdXJhdGlvbl9zIjozMiwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=17-1&vs=67fc22c5c4e8626c&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC8xRTQxNEY3NzY1NjExREY1MUEwQ0JFRUQxQUNBRUM4MV92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyL0JDNEM0NzVFRDdFNTA4QTRBNzYxMzU0MUUyRUYzMTlFX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACbuhefU5pXUAxUCKAJDMywXQEAmRaHKwIMYEmRhc2hfYmFzZWxpbmVfMV92MREAdf4HZeadAQA&_nc_gid=gGBwdTavdXWvwS7h26uHFA&_nc_zt=28&_nc_ss=7a22e&oh=00_AQF4gt4n",
+          "平台": "instagramreels",
+          "commentsCount": 3,
+          "红人名称": "onewaygooey_",
+          "id": "3965170563814696976",
+          "videoPlayCount": 4389,
+          "videoViewCount": 1364,
+          "url": {
+            "text": "https://www.instagram.com/p/DcHHZ6SAqgQ/",
+            "link": "https://www.instagram.com/p/DcHHZ6SAqgQ/"
+          },
+          "timestamp": "2026-08-16T18:35:04.000Z"
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": "2026-08-17T02:55:42.323Z"
+      },
+      {
+        "id": "vid_1786936003510_7g0kpbt",
+        "fields": {
+          "是否监控": "是",
+          "likesCount": 322,
+          "videoUrl": "https://instagram.fvsa2-1.fna.fbcdn.net/o1/v/t2/f2/m86/AQPjwEfpSlxrDpoafwJ4sME77Mi83JWflIDuWCrh0h7cm9gB_2j3wLtUuQr8nttJoI82phfjlD9bWjChPvu36hx3Y6t3LT1RVkD506g.mp4?_nc_cat=106&_nc_oc=AdqS-kFJYMz1rmBmEvrf9KCwtGwjRm1TQaNFyY82rg-2x3PjWz3S9NyMJ97RtnphK5h39-5KocPhzMEHGq8CnMgx&_nc_sid=5e9851&_nc_ht=instagram.fvsa2-1.fna.fbcdn.net&_nc_ohc=RlMLSLZFhQoQ7kNvwH4vMpR&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5JTlNUQUdSQU0uQ0xJUFMuQzMuNzIwLmRhc2hfYmFzZWxpbmVfMV92MSIsInhwdl9hc3NldF9pZCI6MTYxMTQyMDg0MDMyNzcyNCwiYXNzZXRfYWdlX2RheXMiOjQsInZpX3VzZWNhc2VfaWQiOjEyMzc0LCJkdXJhdGlvbl9zIjoxMywidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=17-1&vs=5a29d3727704eb65&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC9EODRFRkQ1QjBDRjI5MTk1QTdDMkQyMDg2MTNGQzU4MF92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyLzQxNEIwQjZEN0EyQ0UwQUEyNDI0NjZENTgzNTM5MEEwX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACbY6KvshOXcBRUCKAJDMywXQCu7ZFocrAgYEmRhc2hfYmFzZW",
+          "平台": "instagramreels",
+          "commentsCount": 14,
+          "红人名称": "anajuliag",
+          "id": "3962215311432040328",
+          "videoPlayCount": 16983,
+          "videoViewCount": 4854,
+          "url": {
+            "text": "https://www.instagram.com/p/Db8ndVBhT-I/",
+            "link": "https://www.instagram.com/p/Db8ndVBhT-I/"
+          },
+          "timestamp": "2026-08-12T16:42:09.000Z"
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": "2026-08-17T03:06:43.510Z"
+      },
+      {
+        "id": "vid_1786936265526_pbdq3w6",
+        "fields": {
+          "是否监控": "是",
+          "likesCount": 1295,
+          "videoUrl": "https://instagram.fdou1-1.fna.fbcdn.net/o1/v/t2/f2/m86/AQMyUR8JcIPMN1rNjQdNN_ixmr7mlOalpuCACFpRuWVekGJUlpUrqAvojJEHYhu61oxZJNPaP1mhmNSInStqr4B_Ud4m6p-i6RSmRTY.mp4?_nc_cat=107&_nc_oc=AdobVi4jiLMA9XLZbRQxjBdtMgjHgr6JdiuJMA8s1XIww723IwGRtKO5912ORPkIeRQ&_nc_sid=5e9851&_nc_ht=instagram.fdou1-1.fna.fbcdn.net&_nc_ohc=1eyWtpsmGz0Q7kNvwEBJLgb&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5JTlNUQUdSQU0uQ0xJUFMuQzMuNzIwLmRhc2hfYmFzZWxpbmVfMV92MSIsInhwdl9hc3NldF9pZCI6MTgwOTk5ODA3NzEwNDY0NSwiYXNzZXRfYWdlX2RheXMiOjMsInZpX3VzZWNhc2VfaWQiOjEwMDk5LCJkdXJhdGlvbl9zIjoxOSwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=17-1&vs=5228b9d214eb4dc3&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC9DNjQ3MTM2OTQyRTQyMDdCMDY5OUZGREQ2QjNEQ0M4Ml92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyLzMyNDZBMURFMzJDMkJGNEM2MjlCNkVGQzRBMEY3QUEwX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACaKyPDG4Iu3BhUCKAJDMywXQDMZmZmZmZoYEmRhc2hfYmFzZWxpbmVfMV92MREAdf4HZea",
+          "平台": "instagramreels",
+          "commentsCount": 8,
+          "红人名称": "whatthekelsieheck",
+          "id": "3963171032785207891",
+          "videoPlayCount": 20682,
+          "videoViewCount": 8501,
+          "url": {
+            "text": "https://www.instagram.com/p/DcAAw55R8JT/",
+            "link": "https://www.instagram.com/p/DcAAw55R8JT/"
+          },
+          "timestamp": "2026-08-14T00:20:57.000Z"
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": "2026-08-17T03:11:05.526Z"
+      },
+      {
+        "id": "vid_1786936324329_55sg3ao",
+        "fields": {
+          "是否监控": "是",
+          "likesCount": 23,
+          "videoUrl": "https://instagram.fssz3-1.fna.fbcdn.net/o1/v/t2/f2/m86/AQODw1twO40KQkAGDUJmSEpSanyvIgK4n962C3wVqf0Dm8_Xwv6ix9DQOE8e6-BT5ZoE-vaPOCp5uoj_ikBAOwKkCJqc1IiEjElQQL4.mp4?_nc_cat=109&_nc_oc=Adq39hz3Nmw1_jN6mm8GeXfNeKsdhFuVeopGGcSjiOnTa7TV1yZwb865m5i7XH-6FTA&_nc_sid=5e9851&_nc_ht=instagram.fssz3-1.fna.fbcdn.net&_nc_ohc=b_m3nMa-NjIQ7kNvwFpahnR&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5JTlNUQUdSQU0uQ0xJUFMuQzIuNzIwLmRhc2hfYmFzZWxpbmVfMV92MSIsInhwdl9hc3NldF9pZCI6MjIzODkzNTkxNjg5MTkzNiwiYXNzZXRfYWdlX2RheXMiOjAsInZpX3VzZWNhc2VfaWQiOjEwMDk5LCJkdXJhdGlvbl9zIjo5LCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&vs=6959bec43f505542&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC8zMDQ2OTdGQzdENEVGQzkwMUExMzIwMEE1OTA1MUVBOF92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyLzRBNDYzMEY4RjJENDhDMUNBMjQwODY1MEE3QkI3MEJDX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACbAvILAnJP6BxUCKAJDMiwXQCK7ZFocrAgYEmRhc2hfYmFzZWxpbmVfMV92MREAdf4HZ",
+          "平台": "instagramreels",
+          "commentsCount": 0,
+          "红人名称": "angel_rm999",
+          "id": "3965317868813418159",
+          "videoPlayCount": 1690,
+          "videoViewCount": 766,
+          "url": {
+            "text": "https://www.instagram.com/p/DcHo5ewIf6v/",
+            "link": "https://www.instagram.com/p/DcHo5ewIf6v/"
+          },
+          "timestamp": "2026-08-16T23:28:27.000Z"
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": "2026-08-17T03:12:04.329Z"
+      },
+      {
+        "id": "vid_1786936411953_tevhzme",
+        "fields": {
+          "是否监控": "是",
+          "likesCount": 78,
+          "videoUrl": "https://scontent-icn2-1.cdninstagram.com/o1/v/t16/f2/m84/AQP1j-sBb0lf6NQdpa2pIxwrQvCxNKxGpZpxml1UR4NYsILpQYPPysV2Dh9IjeNcRe3iMVkTEeHRVG88omt4m9n6eH8U49pZKvnQa-8.mp4?_nc_cat=101&_nc_sid=5e9851&_nc_ht=scontent-icn2-1.cdninstagram.com&_nc_ohc=c4MUGzUvupUQ7kNvwHujdyZ&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5JTlNUQUdSQU0uQ0xJUFMuQzMuNzIwLmRhc2hfYmFzZWxpbmVfMV92MSIsInhwdl9hc3NldF9pZCI6MTc0MTY0MTk3MDUwNjkyNSwiYXNzZXRfYWdlX2RheXMiOjMsInZpX3VzZWNhc2VfaWQiOjEwODI3LCJkdXJhdGlvbl9zIjoxMywidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=17-1&vs=64e567bf4785bfdd&_nc_vs=HBksFQIYTGlnX2JhY2tmaWxsX3RpbWVsaW5lX3ZvZC8zMTQ3RkQ3REJGRDNDMDg0N0RGNTYxMkJGOEQ5QTlBQl92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyL0JBNEVBM0ZEQ0JENzU0M0YxNzA2RTFCNkZDNDQxOTg2X2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACba8tLv84CYBhUCKAJDMywXQCt3S8an754YEmRhc2hfYmFzZWxpbmVfMV92MREAdf4HZZapAQA&_nc_gid=bOmG6sxUNpyoBroi5Gg42Q&_nc_zt=28&_nc_ss=7a22e&oh=00_AQGcKFyCsOS042W",
+          "平台": "instagramreels",
+          "commentsCount": 5,
+          "红人名称": "yafavlightskin37",
+          "id": "3962936830944936151",
+          "videoPlayCount": 4150,
+          "videoViewCount": 1148,
+          "url": {
+            "text": "https://www.instagram.com/p/Db_Lg0byQDX/",
+            "link": "https://www.instagram.com/p/Db_Lg0byQDX/"
+          },
+          "timestamp": "2026-08-13T16:49:08.000Z"
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": "2026-08-17T03:13:31.953Z"
+      },
+      {
+        "id": "vid_1786936477198_4xn657i",
+        "fields": {
+          "是否监控": "是",
+          "likesCount": 294,
+          "videoUrl": "https://scontent-ord5-1.cdninstagram.com/o1/v/t2/f2/m86/AQORSEqNH4uLaicZUwmjZRbdxViIloUhbIHj0G9LOMqkorcRZgdSBrXRmxXOWa350TkQkr4vodbZu1KI-GkiTyp6l8gaOVUDaOE1oE4.mp4?_nc_cat=111&_nc_sid=5e9851&_nc_ht=scontent-ord5-1.cdninstagram.com&_nc_ohc=algTxF13FDEQ7kNvwELfJGR&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5JTlNUQUdSQU0uQ0xJUFMuQzMuNzIwLmRhc2hfYmFzZWxpbmVfMV92MSIsInhwdl9hc3NldF9pZCI6MTU5OTgzNDAzNTA0Njg2NiwiYXNzZXRfYWdlX2RheXMiOjMsInZpX3VzZWNhc2VfaWQiOjEwMDk5LCJkdXJhdGlvbl9zIjo5NSwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=17-1&vs=69fd799be66cd2b1&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC8yNDQ1NTg2NDc2MTQxNjI2QzI0QUI3MEQ4M0M3NTY4OV92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyLzQ1NEZCODlDRDRGQjU4MTkxNTcxNkRCMzkwM0Y0RjlCX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACakp961zMLXBRUCKAJDMywXQFfFHrhR64UYEmRhc2hfYmFzZWxpbmVfMV92MREAdf4HZeadAQA&_nc_gid=24jTezCyCTBUKut6ey359Q&_nc_zt=28&_nc_ss=7a22e&oh=00_AQFX98Pd",
+          "平台": "instagramreels",
+          "commentsCount": 5,
+          "红人名称": "alex_pirone_311",
+          "id": "3962742470839914311",
+          "videoPlayCount": 5922,
+          "videoViewCount": 2056,
+          "url": {
+            "text": "https://www.instagram.com/p/Db-fUgexE9H/",
+            "link": "https://www.instagram.com/p/Db-fUgexE9H/"
+          },
+          "timestamp": "2026-08-13T10:11:08.000Z"
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": "2026-08-17T03:14:37.198Z"
+      },
+      {
+        "id": "vid_1786936477198_oz8rggt",
+        "fields": {
+          "是否监控": "是",
+          "likesCount": 181,
+          "videoUrl": "https://scontent-ams2-1.cdninstagram.com/o1/v/t2/f2/m86/AQNfFWvulKOWZS6fe5ht9Otmy8XYTbwzBkUTGGmF9F1xRHPeAxkKQ4fTNHqdQ-geh51G4RyuqpbXWU4uR91yuzwbQLwFdQ5Z-3QlC0k.mp4?_nc_cat=106&_nc_sid=5e9851&_nc_ht=scontent-ams2-1.cdninstagram.com&_nc_ohc=LUFvB4dU0NIQ7kNvwFTgzWg&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5JTlNUQUdSQU0uQ0xJUFMuQzMuNzIwLmRhc2hfYmFzZWxpbmVfMV92MSIsInhwdl9hc3NldF9pZCI6OTkyOTAxODAzODMyNjQxLCJhc3NldF9hZ2VfZGF5cyI6MCwidmlfdXNlY2FzZV9pZCI6MTAwOTksImR1cmF0aW9uX3MiOjIxLCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&vs=a0f4b6b7b2b2882&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC81NDQ0QTg5RkVGMzQ3QUM3REQ3MjA5RjFDNjVCMTQ4N192aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyLzU3NDhBNkMzQThCRkNCREM5Mzg0MjE0NjVDRjBGNEFBX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACaC1YP1vsLDAxUCKAJDMywXQDWqfvnbItEYEmRhc2hfYmFzZWxpbmVfMV92MREAdf4HZeadAQA&_nc_gid=pZvkDG7Y64pePYjky8vyOg&_nc_ss=7a22e&_nc_zt=28&oh=00_AQG3vcI",
+          "平台": "instagramreels",
+          "commentsCount": 2,
+          "红人名称": "alex_pirone_311",
+          "id": "3964834043860799194",
+          "videoPlayCount": 3674,
+          "videoViewCount": 1597,
+          "url": {
+            "text": "https://www.instagram.com/p/DcF645pss7a/",
+            "link": "https://www.instagram.com/p/DcF645pss7a/"
+          },
+          "timestamp": "2026-08-16T07:27:54.000Z"
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": "2026-08-17T03:14:37.198Z"
+      },
+      {
+        "id": "vid_1786936933124_ssmifv1",
+        "fields": {
+          "是否监控": "是",
+          "likesCount": 25,
+          "videoUrl": "https://instagram.fmex41-1.fna.fbcdn.net/o1/v/t2/f2/m86/AQM5ESReENkt70IuCG_Ik7Be1ioxFC3FZyomVIElqRVjO3bgE_NUkxmPNNOxaF6dtZKbirDv2Ue7NskFpqBC86UA2mvhngsH9v3C-HU.mp4?_nc_cat=101&_nc_oc=AdrfMv0bBVJC-1BYcJdYVWJAzOachADwrTken7nbiQPsFcQw5lvGZ0r-ZOgicVxv8X4&_nc_sid=5e9851&_nc_ht=instagram.fmex41-1.fna.fbcdn.net&_nc_ohc=I2UxrBStj5EQ7kNvwFp1C-E&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5JTlNUQUdSQU0uQ0xJUFMuQzMuNzIwLmRhc2hfYmFzZWxpbmVfMV92MSIsInhwdl9hc3NldF9pZCI6MjExOTYwMjU2NTMwMjk4MCwiYXNzZXRfYWdlX2RheXMiOjQsInZpX3VzZWNhc2VfaWQiOjEwMDk5LCJkdXJhdGlvbl9zIjo0NSwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=17-1&vs=600e423deb2bd917&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC84RjRCMEE1N0QyNkFGQUI4QzlBNDlFN0VGNjc4MEU5OF92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyL0RGNDk5REU1RkUxNjMzOEU1MDY2QzcwRjZEMUNGNkIzX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACaIq8LfjfHDBxUCKAJDMywXQEad0vGp--cYEmRhc2hfYmFzZWxpbmVfMV92MREAdf4HZ",
+          "平台": "instagramreels",
+          "commentsCount": 2,
+          "红人名称": "reelridez",
+          "id": "3962449243851241371",
+          "videoPlayCount": 823,
+          "videoViewCount": 416,
+          "url": {
+            "text": "https://www.instagram.com/p/Db9cpfkRLeb/",
+            "link": "https://www.instagram.com/p/Db9cpfkRLeb/"
+          },
+          "timestamp": "2026-08-13T00:27:19.000Z"
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": "2026-08-17T03:22:13.124Z"
+      },
+      {
+        "id": "vid_1786936933124_e1phxx9",
+        "fields": {
+          "是否监控": "是",
+          "likesCount": 53,
+          "videoUrl": "https://instagram.fvlc7-1.fna.fbcdn.net/o1/v/t2/f2/m86/AQNfliHBF-x09-rJhh8UhAZgYez5d9g7tGKAX7feY2cj-MKotHprTiRyqZC0X9OTP2wf2QVg5lspl73skNU2FsBkJRKGfCP-fKOYwco.mp4?_nc_cat=100&_nc_oc=AdqF93ahDsRVUHNEnEH6cDNM72HRfGJWh4G363YLEcsP8_FQV_tMCOh-fulaEFNvXnU&_nc_sid=5e9851&_nc_ht=instagram.fvlc7-1.fna.fbcdn.net&_nc_ohc=pZ8D3v5CIuwQ7kNvwGBSHV9&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5JTlNUQUdSQU0uQ0xJUFMuQzMuNzIwLmRhc2hfYmFzZWxpbmVfMV92MSIsInhwdl9hc3NldF9pZCI6MjU0MDgxODI3MzAzMDg4NSwiYXNzZXRfYWdlX2RheXMiOjEsInZpX3VzZWNhc2VfaWQiOjEwMDk5LCJkdXJhdGlvbl9zIjozNCwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=17-1&vs=36eb1860229fc895&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC9GODRFMTI2MTgxMjQ2RUQ0MEUxMjM1RDk5OEVBODZCRl92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyLzBDNDg4MTk3RTc3NzRBRkQ4MzJDRDc3RTVDMDQ3QThBX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACbKy9Kpi7eDCRUCKAJDMywXQEEd0vGp--cYEmRhc2hfYmFzZWxpbmVfMV92MREAdf4HZea",
+          "平台": "instagramreels",
+          "commentsCount": 2,
+          "红人名称": "reelridez",
+          "id": "3964642137500593130",
+          "videoPlayCount": 1758,
+          "videoViewCount": 764,
+          "url": {
+            "text": "https://www.instagram.com/p/DcFPQS7RKvq/",
+            "link": "https://www.instagram.com/p/DcFPQS7RKvq/"
+          },
+          "timestamp": "2026-08-16T01:03:57.000Z"
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": "2026-08-17T03:22:13.124Z"
+      },
+      {
+        "id": "vid_1786936933124_qv1o0u4",
+        "fields": {
+          "是否监控": "是",
+          "likesCount": 30,
+          "videoUrl": "https://instagram.fsyd3-1.fna.fbcdn.net/o1/v/t2/f2/m367/AQNxR6UQx13ecyNUbyU-toF3OcipkjNLhAjtfeG5Ur_tJ0mLc433mCerNXlD20cPpda549vxpolGy7NaoLiRc3e5zgbawcW-10d_RtR1Kj-8Hg.mp4?_nc_cat=108&_nc_oc=AdrVZwBZi5lFi8WAK-5SOZB5U9snm9nzzEeCeP6PfVLtfGxuhNXIP1dZ6Y4Ip7HwlZL0p7WChsoSnZgxgYrk5pUN&_nc_sid=9ca052&_nc_ht=instagram.fsyd3-1.fna.fbcdn.net&_nc_ohc=wkV17mMGWOkQ7kNvwHB4Jh6&efg=eyJ2ZW5jb2RlX3RhZyI6ImlnLXhwdmRzLmNsaXBzLmMyLUMzLmRhc2hfdnA5LWJhc2ljLWdlbjJfMTA4MHAiLCJ2aWRlb19pZCI6bnVsbCwib2lsX3VybGdlbl9hcHBfaWQiOjkzNjYxOTc0MzM5MjQ1OSwiY2xpZW50X25hbWUiOiJpZyIsInhwdl9hc3NldF9pZCI6MjE1NjM2ODExNTI5MjU3MCwiYXNzZXRfYWdlX2RheXMiOjMsInZpX3VzZWNhc2VfaWQiOjEwMDk5LCJkdXJhdGlvbl9zIjoyNiwiYml0cmF0ZSI6NDA4OTAzOCwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=17-1&_nc_gid=KeZtcLSJFPsnRVSIfmmUug&_nc_ss=7a22e&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQH3LTzLwoSxEDExKY3Qnyk148OlwvyY4m4eXyp5pnJKWA&oe=6A885504",
+          "平台": "instagramreels",
+          "commentsCount": 4,
+          "红人名称": "reelridez",
+          "id": "3963162843213569992",
+          "videoPlayCount": 1739,
+          "videoViewCount": 819,
+          "url": {
+            "text": "https://www.instagram.com/p/Db_-5uwxZ_I/",
+            "link": "https://www.instagram.com/p/Db_-5uwxZ_I/"
+          },
+          "timestamp": "2026-08-14T00:04:44.000Z"
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": "2026-08-17T03:22:13.124Z"
+      },
+      {
+        "id": "vid_1786936933124_wyggwbt",
+        "fields": {
+          "是否监控": "是",
+          "likesCount": 22,
+          "videoUrl": "https://scontent-fco2-1.cdninstagram.com/o1/v/t2/f2/m86/AQMfFj0ZtDJRED2J8_lm5AAKnWInALFvaSlUKTquZcLB5TW_yK0x7ehQCy5GxUjj17PkfoxUVanKUg5PKlM1MR70LPzHTyvnxO6NQvA.mp4?_nc_cat=100&_nc_sid=5e9851&_nc_ht=scontent-fco2-1.cdninstagram.com&_nc_ohc=6-eoPcPUJ0YQ7kNvwFY4OUH&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5JTlNUQUdSQU0uQ0xJUFMuQzMuNzIwLmRhc2hfYmFzZWxpbmVfMV92MSIsInhwdl9hc3NldF9pZCI6OTMyMzc4MTcyNDk2MDc2LCJhc3NldF9hZ2VfZGF5cyI6NSwidmlfdXNlY2FzZV9pZCI6MTAwOTksImR1cmF0aW9uX3MiOjE0LCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&vs=a0c3e61777a47c6d&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC8yNjQ3OEQwMjZDQjkzNzk1QjNFRjU4MDVGNzQ5Qjk4OV92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyLzI2NDAyNjE0M0YwNTc2MjUyRTQyNzcxMkFDNUQyOTk2X2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACaY46Tcxv-nAxUCKAJDMywXQCwQ5WBBiTcYEmRhc2hfYmFzZWxpbmVfMV92MREAdf4HZeadAQA&_nc_gid=819vdAs0Ul0f3zz0Bc7dcA&_nc_ss=7a22e&_nc_zt=28&oh=00_AQEwZW",
+          "平台": "instagramreels",
+          "commentsCount": 0,
+          "红人名称": "reelridez",
+          "id": "3961551420247000852",
+          "videoPlayCount": 1997,
+          "videoViewCount": 935,
+          "url": {
+            "text": "https://www.instagram.com/p/Db6QgcLREcU/",
+            "link": "https://www.instagram.com/p/Db6QgcLREcU/"
+          },
+          "timestamp": "2026-08-11T18:43:15.000Z"
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": "2026-08-17T03:22:13.124Z"
+      },
+      {
+        "id": "vid_1786937070062_7ythtay",
+        "fields": {
+          "是否监控": "是",
+          "likesCount": 93,
+          "videoUrl": "https://scontent-fra5-2.cdninstagram.com/o1/v/t2/f2/m86/AQN5mGk3e6_JAMvRJfxji229yB6tQwMF0SR602GQcX7k542dmlSdODDwFkebaT63G2kpoWrCokl8CRwVZ1LyQKJoET0a5GvOdfvEyfY.mp4?_nc_cat=106&_nc_sid=5e9851&_nc_ht=scontent-fra5-2.cdninstagram.com&_nc_ohc=N3fvusenta0Q7kNvwHs0H5Q&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5JTlNUQUdSQU0uQ0xJUFMuQzMuNzE2LmRhc2hfYmFzZWxpbmVfMV92MSIsInhwdl9hc3NldF9pZCI6MTAwNDU1NTE4OTI3ODg4NCwiYXNzZXRfYWdlX2RheXMiOjYsInZpX3VzZWNhc2VfaWQiOjEwMDk5LCJkdXJhdGlvbl9zIjoyNCwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=17-1&vs=4a3a3a5df12d54e4&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC9GNDQ3MzJFQjZGMjlGRTVBNURCRDI2OTZENTVCRDE5NF92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyL0Y4NDM5MjAxRUQzQTE4RUZDM0I2QTMzQjA1OEM2REEwX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACbI4raz5-jIAxUCKAJDMywXQDjMzMzMzM0YEmRhc2hfYmFzZWxpbmVfMV92MREAdf4HZeadAQA&_nc_gid=QsDm_LREna4Si4OkdSrwqw&_nc_ss=7a22e&_nc_zt=28&oh=00_AQG91_s9",
+          "平台": "instagramreels",
+          "commentsCount": 5,
+          "红人名称": "hammerchamp13",
+          "id": "3960902427645764543",
+          "videoPlayCount": 7030,
+          "videoViewCount": 933,
+          "url": {
+            "text": "https://www.instagram.com/p/Db388WtzuO_/",
+            "link": "https://www.instagram.com/p/Db388WtzuO_/"
+          },
+          "timestamp": "2026-08-10T21:15:12.000Z"
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": "2026-08-17T03:24:30.062Z"
+      },
+      {
+        "id": "vid_1786937070062_90p64kt",
+        "fields": {
+          "是否监控": "是",
+          "likesCount": 56,
+          "videoUrl": "https://scontent-ams2-1.cdninstagram.com/o1/v/t2/f2/m86/AQN0Bw1MZLh0xjG36902nsr_6Yg7oO4Wy-ZcHuguWrkwsJQXQDU9EbPYmXvwHdRZqCsXYiBVoX1ld2YD85QXCSKjWeYDh15BBkdyv84.mp4?_nc_cat=111&_nc_sid=5e9851&_nc_ht=scontent-ams2-1.cdninstagram.com&_nc_ohc=280D5YF9QJcQ7kNvwGv1gn-&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5JTlNUQUdSQU0uQ0xJUFMuQzMuNzIwLmRhc2hfYmFzZWxpbmVfMV92MSIsInhwdl9hc3NldF9pZCI6MTc0OTIxMDc1OTcyNDM4OSwiYXNzZXRfYWdlX2RheXMiOjIsInZpX3VzZWNhc2VfaWQiOjEwMDk5LCJkdXJhdGlvbl9zIjoxMywidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=17-1&vs=80081d90b07d628&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC9FRDQ1ODY4QjNBNDhEOEYzNzQ1QjMxRTdENjY5MkRBMl92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyLzBBNDY0NEVBNzk2RkQ5RERDRjcxREQ1MTZEMURBODk5X2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACbK9cPfu7mbBhUCKAJDMywXQCuZmZmZmZoYEmRhc2hfYmFzZWxpbmVfMV92MREAdf4HZeadAQA&_nc_gid=oLVi4UC-6s0wiBYEihea9A&_nc_ss=7a22e&_nc_zt=28&oh=00_AQHMRT6Y9",
+          "平台": "instagramreels",
+          "commentsCount": 4,
+          "红人名称": "hammerchamp13",
+          "id": "3963581767688281694",
+          "videoPlayCount": 2780,
+          "videoViewCount": 1139,
+          "url": {
+            "text": "https://www.instagram.com/p/DcBeJ4lRl5e/",
+            "link": "https://www.instagram.com/p/DcBeJ4lRl5e/"
+          },
+          "timestamp": "2026-08-14T13:59:34.000Z"
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": "2026-08-17T03:24:30.062Z"
+      },
+      {
+        "id": "vid_1786937133032_k3d7jcc",
+        "fields": {
+          "是否监控": "是",
+          "likesCount": -1,
+          "videoUrl": "https://scontent-yyz1-1.cdninstagram.com/o1/v/t2/f2/m367/AQOXwfJiMVo1pS1pzWtbtcwzlvlOB2chEcR894OEAJFbCz4gZoOb5m6t7S-OXfS86KuJiuQNcv2_Ua9tVOKTs0yeJtDxX718GP57dAY.mp4?_nc_cat=111&_nc_sid=5e9851&_nc_ht=scontent-yyz1-1.cdninstagram.com&_nc_ohc=fXH2sP4Ol4cQ7kNvwGz_TKF&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5JTlNUQUdSQU0uQ0xJUFMuQzMuNzIwLmRhc2hfYmFzZWxpbmVfMV92MSIsInhwdl9hc3NldF9pZCI6MTU3MjY3NTQ0NDI2MjY4NCwiYXNzZXRfYWdlX2RheXMiOjUsInZpX3VzZWNhc2VfaWQiOjEyMzc0LCJkdXJhdGlvbl9zIjozMCwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=17-1&vs=762734d9e7fff447&_nc_vs=HBksFQIYQGlnX2VwaGVtZXJhbC8yRjQxOTI0QzQyQTNDRjkzMzRCREU4RjRGMzE2MUVBN192aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyLzlDNEIxRDMxN0UwMTYyRDI4QTg4NTlGMjI0Nzk1NUIxX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACa4nJ6T4ZXLBRUCKAJDMywXQD6Q5WBBiTcYEmRhc2hfYmFzZWxpbmVfMV92MREAdf4HZazBAQA&_nc_gid=XglYBmszJsSZHaCxGp3SYg&_nc_zt=28&_nc_ss=7a22e&oh=00_AQEj22KtjO18CH0bXMKE3WV4YXwy3WJ",
+          "平台": "instagramreels",
+          "commentsCount": 4,
+          "红人名称": "destincantrell",
+          "id": "3961422859313882553",
+          "videoPlayCount": 7117,
+          "videoViewCount": 1102,
+          "url": {
+            "text": "https://www.instagram.com/p/Db5zRoehCW5/",
+            "link": "https://www.instagram.com/p/Db5zRoehCW5/"
+          },
+          "timestamp": "2026-08-11T14:35:07.000Z"
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": "2026-08-17T03:25:33.032Z"
       }
     ],
     "snapshots": [
@@ -188360,9 +189305,1575 @@
         "source": "local-discovery",
         "importedAt": "",
         "updatedAt": ""
+      },
+      {
+        "id": "snap_1786932981784_90zhdoj",
+        "fields": {
+          "postUrl": "https://www.tiktok.com/@onewaygooey_/video/7673383466041412894",
+          "snapshotType": "new",
+          "sharesCount": 2,
+          "viewDelta": 1195,
+          "isFirstSeen": "是",
+          "postId": "7673383466041412894",
+          "videoPlayCount": 1195,
+          "firstSeenAt": 1786932981784,
+          "platform": "tiktok",
+          "isProductPost": "是",
+          "是否监控": "是",
+          "playDelta": 1195,
+          "commentDelta": 5,
+          "postKey": "tiktok_7673383466041412894",
+          "likesCount": 63,
+          "shareDelta": 2,
+          "commentsCount": 5,
+          "capturedAt": 1786932981784,
+          "红人名称": "onewaygooey_",
+          "runId": "local_discovery_1786932750560",
+          "likeDelta": 63,
+          "videoViewCount": 1195
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": ""
+      },
+      {
+        "id": "snap_1786933024144_vrxbbs9",
+        "fields": {
+          "postUrl": "https://www.tiktok.com/@mk.ridezz/video/7674368684822908181",
+          "snapshotType": "new",
+          "sharesCount": 4,
+          "viewDelta": 6138,
+          "isFirstSeen": "是",
+          "postId": "7674368684822908181",
+          "videoPlayCount": 6138,
+          "firstSeenAt": 1786933024144,
+          "platform": "tiktok",
+          "isProductPost": "是",
+          "是否监控": "是",
+          "playDelta": 6138,
+          "commentDelta": 17,
+          "postKey": "tiktok_7674368684822908181",
+          "likesCount": 222,
+          "shareDelta": 4,
+          "commentsCount": 17,
+          "capturedAt": 1786933024144,
+          "红人名称": "mk.ridezz",
+          "runId": "local_discovery_1786932750560",
+          "likeDelta": 222,
+          "videoViewCount": 6138
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": ""
+      },
+      {
+        "id": "snap_1786933024144_n5bitia",
+        "fields": {
+          "postUrl": "https://www.tiktok.com/@mk.ridezz/video/7673903546949061908",
+          "snapshotType": "new",
+          "sharesCount": 54,
+          "viewDelta": 29800,
+          "isFirstSeen": "是",
+          "postId": "7673903546949061908",
+          "videoPlayCount": 29800,
+          "firstSeenAt": 1786933024144,
+          "platform": "tiktok",
+          "isProductPost": "是",
+          "是否监控": "是",
+          "playDelta": 29800,
+          "commentDelta": 73,
+          "postKey": "tiktok_7673903546949061908",
+          "likesCount": 1056,
+          "shareDelta": 54,
+          "commentsCount": 73,
+          "capturedAt": 1786933024144,
+          "红人名称": "mk.ridezz",
+          "runId": "local_discovery_1786932750560",
+          "likeDelta": 1056,
+          "videoViewCount": 29800
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": ""
+      },
+      {
+        "id": "snap_1786933024144_mhg4vd9",
+        "fields": {
+          "postUrl": "https://www.tiktok.com/@mk.ridezz/video/7673604494231538964",
+          "snapshotType": "new",
+          "sharesCount": 17,
+          "viewDelta": 10600,
+          "isFirstSeen": "是",
+          "postId": "7673604494231538964",
+          "videoPlayCount": 10600,
+          "firstSeenAt": 1786933024144,
+          "platform": "tiktok",
+          "isProductPost": "是",
+          "是否监控": "是",
+          "playDelta": 10600,
+          "commentDelta": 32,
+          "postKey": "tiktok_7673604494231538964",
+          "likesCount": 337,
+          "shareDelta": 17,
+          "commentsCount": 32,
+          "capturedAt": 1786933024144,
+          "红人名称": "mk.ridezz",
+          "runId": "local_discovery_1786932750560",
+          "likeDelta": 337,
+          "videoViewCount": 10600
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": ""
+      },
+      {
+        "id": "snap_1786933209798_8ntkqr1",
+        "fields": {
+          "postUrl": "https://www.tiktok.com/@hdukerides/video/7674387778205125908",
+          "snapshotType": "new",
+          "sharesCount": 0,
+          "viewDelta": 1184,
+          "isFirstSeen": "是",
+          "postId": "7674387778205125908",
+          "videoPlayCount": 1184,
+          "firstSeenAt": 1786933209798,
+          "platform": "tiktok",
+          "isProductPost": "是",
+          "是否监控": "是",
+          "playDelta": 1184,
+          "commentDelta": 14,
+          "postKey": "tiktok_7674387778205125908",
+          "likesCount": 76,
+          "shareDelta": 0,
+          "commentsCount": 14,
+          "capturedAt": 1786933209798,
+          "红人名称": "hdukerides",
+          "runId": "local_discovery_1786932750560",
+          "likeDelta": 76,
+          "videoViewCount": 1184
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": ""
+      },
+      {
+        "id": "snap_1786933209798_ycuc1xf",
+        "fields": {
+          "postUrl": "https://www.tiktok.com/@hdukerides/video/7672547016823639316",
+          "snapshotType": "new",
+          "sharesCount": 3,
+          "viewDelta": 1709,
+          "isFirstSeen": "是",
+          "postId": "7672547016823639316",
+          "videoPlayCount": 1709,
+          "firstSeenAt": 1786933209798,
+          "platform": "tiktok",
+          "isProductPost": "是",
+          "是否监控": "是",
+          "playDelta": 1709,
+          "commentDelta": 10,
+          "postKey": "tiktok_7672547016823639316",
+          "likesCount": 90,
+          "shareDelta": 3,
+          "commentsCount": 10,
+          "capturedAt": 1786933209798,
+          "红人名称": "hdukerides",
+          "runId": "local_discovery_1786932750560",
+          "likeDelta": 90,
+          "videoViewCount": 1709
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": ""
+      },
+      {
+        "id": "snap_1786933317159_cj54zuc",
+        "fields": {
+          "postUrl": "https://www.tiktok.com/@reelridez/video/7674429159665405197",
+          "snapshotType": "new",
+          "sharesCount": 5,
+          "viewDelta": 702,
+          "isFirstSeen": "是",
+          "postId": "7674429159665405197",
+          "videoPlayCount": 702,
+          "firstSeenAt": 1786933317159,
+          "platform": "tiktok",
+          "isProductPost": "是",
+          "是否监控": "是",
+          "playDelta": 702,
+          "commentDelta": 4,
+          "postKey": "tiktok_7674429159665405197",
+          "likesCount": 40,
+          "shareDelta": 5,
+          "commentsCount": 4,
+          "capturedAt": 1786933317159,
+          "红人名称": "reelridez",
+          "runId": "local_discovery_1786932750560",
+          "likeDelta": 40,
+          "videoViewCount": 702
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": ""
+      },
+      {
+        "id": "snap_1786933317159_n3wn4tl",
+        "fields": {
+          "postUrl": "https://www.tiktok.com/@reelridez/video/7673671639967599886",
+          "snapshotType": "new",
+          "sharesCount": 0,
+          "viewDelta": 3237,
+          "isFirstSeen": "是",
+          "postId": "7673671639967599886",
+          "videoPlayCount": 3237,
+          "firstSeenAt": 1786933317159,
+          "platform": "tiktok",
+          "isProductPost": "是",
+          "是否监控": "是",
+          "playDelta": 3237,
+          "commentDelta": 3,
+          "postKey": "tiktok_7673671639967599886",
+          "likesCount": 67,
+          "shareDelta": 0,
+          "commentsCount": 3,
+          "capturedAt": 1786933317159,
+          "红人名称": "reelridez",
+          "runId": "local_discovery_1786932750560",
+          "likeDelta": 67,
+          "videoViewCount": 3237
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": ""
+      },
+      {
+        "id": "snap_1786933317159_9soha2a",
+        "fields": {
+          "postUrl": "https://www.tiktok.com/@reelridez/video/7673327104049630477",
+          "snapshotType": "new",
+          "sharesCount": 0,
+          "viewDelta": 569,
+          "isFirstSeen": "是",
+          "postId": "7673327104049630477",
+          "videoPlayCount": 569,
+          "firstSeenAt": 1786933317159,
+          "platform": "tiktok",
+          "isProductPost": "是",
+          "是否监控": "是",
+          "playDelta": 569,
+          "commentDelta": 9,
+          "postKey": "tiktok_7673327104049630477",
+          "likesCount": 33,
+          "shareDelta": 0,
+          "commentsCount": 9,
+          "capturedAt": 1786933317159,
+          "红人名称": "reelridez",
+          "runId": "local_discovery_1786932750560",
+          "likeDelta": 33,
+          "videoViewCount": 569
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": ""
+      },
+      {
+        "id": "snap_1786933317159_mzllodt",
+        "fields": {
+          "postUrl": "https://www.tiktok.com/@reelridez/video/7672849406609149197",
+          "snapshotType": "new",
+          "sharesCount": 1,
+          "viewDelta": 1202,
+          "isFirstSeen": "是",
+          "postId": "7672849406609149197",
+          "videoPlayCount": 1202,
+          "firstSeenAt": 1786933317159,
+          "platform": "tiktok",
+          "isProductPost": "是",
+          "是否监控": "是",
+          "playDelta": 1202,
+          "commentDelta": 8,
+          "postKey": "tiktok_7672849406609149197",
+          "likesCount": 27,
+          "shareDelta": 1,
+          "commentsCount": 8,
+          "capturedAt": 1786933317159,
+          "红人名称": "reelridez",
+          "runId": "local_discovery_1786932750560",
+          "likeDelta": 27,
+          "videoViewCount": 1202
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": ""
+      },
+      {
+        "id": "snap_1786933401817_mwqmok8",
+        "fields": {
+          "postUrl": "https://www.tiktok.com/@realsurronmax/video/7674666360072375583",
+          "snapshotType": "new",
+          "sharesCount": 1,
+          "viewDelta": 562,
+          "isFirstSeen": "是",
+          "postId": "7674666360072375583",
+          "videoPlayCount": 562,
+          "firstSeenAt": 1786933401817,
+          "platform": "tiktok",
+          "isProductPost": "是",
+          "是否监控": "是",
+          "playDelta": 562,
+          "commentDelta": 6,
+          "postKey": "tiktok_7674666360072375583",
+          "likesCount": 34,
+          "shareDelta": 1,
+          "commentsCount": 6,
+          "capturedAt": 1786933401817,
+          "红人名称": "realsurronmax",
+          "runId": "local_discovery_1786932750560",
+          "likeDelta": 34,
+          "videoViewCount": 562
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": ""
+      },
+      {
+        "id": "snap_1786933401817_w8yhqfx",
+        "fields": {
+          "postUrl": "https://www.tiktok.com/@realsurronmax/video/7672572327321767182",
+          "snapshotType": "new",
+          "sharesCount": 2,
+          "viewDelta": 487,
+          "isFirstSeen": "是",
+          "postId": "7672572327321767182",
+          "videoPlayCount": 487,
+          "firstSeenAt": 1786933401817,
+          "platform": "tiktok",
+          "isProductPost": "是",
+          "是否监控": "是",
+          "playDelta": 487,
+          "commentDelta": 5,
+          "postKey": "tiktok_7672572327321767182",
+          "likesCount": 26,
+          "shareDelta": 2,
+          "commentsCount": 5,
+          "capturedAt": 1786933401817,
+          "红人名称": "realsurronmax",
+          "runId": "local_discovery_1786932750560",
+          "likeDelta": 26,
+          "videoViewCount": 487
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": ""
+      },
+      {
+        "id": "snap_1786933545702_fcsyzuy",
+        "fields": {
+          "postUrl": "https://www.youtube.com/watch?v=UvChJQkg8X8",
+          "snapshotType": "new",
+          "sharesCount": 0,
+          "viewDelta": 2624,
+          "isFirstSeen": "是",
+          "postId": "UvChJQkg8X8",
+          "videoPlayCount": 2624,
+          "firstSeenAt": 1786933545702,
+          "platform": "youtubevideo",
+          "isProductPost": "是",
+          "是否监控": "是",
+          "playDelta": 2624,
+          "commentDelta": 2,
+          "postKey": "youtubevideo_UvChJQkg8X8",
+          "likesCount": 0,
+          "shareDelta": 0,
+          "commentsCount": 2,
+          "capturedAt": 1786933545702,
+          "红人名称": "Trent In The Sip",
+          "runId": "local_discovery_1786933454385",
+          "likeDelta": 0,
+          "videoViewCount": 2624
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": ""
+      },
+      {
+        "id": "snap_1786933553721_83jrfaj",
+        "fields": {
+          "postUrl": "https://www.youtube.com/watch?v=_IKQ5vO7oFI",
+          "snapshotType": "new",
+          "sharesCount": 0,
+          "viewDelta": 1551,
+          "isFirstSeen": "是",
+          "postId": "_IKQ5vO7oFI",
+          "videoPlayCount": 1551,
+          "firstSeenAt": 1786933553721,
+          "platform": "youtubevideo",
+          "isProductPost": "是",
+          "是否监控": "是",
+          "playDelta": 1551,
+          "commentDelta": 8,
+          "postKey": "youtubevideo__IKQ5vO7oFI",
+          "likesCount": 65,
+          "shareDelta": 0,
+          "commentsCount": 8,
+          "capturedAt": 1786933553721,
+          "红人名称": "Vlog Epicness",
+          "runId": "local_discovery_1786933454385",
+          "likeDelta": 65,
+          "videoViewCount": 1551
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": ""
+      },
+      {
+        "id": "snap_1786933713391_nroh7cq",
+        "fields": {
+          "postUrl": "https://www.youtube.com/watch?v=-TbPSQ6GK2w",
+          "snapshotType": "new",
+          "sharesCount": 0,
+          "viewDelta": 4127,
+          "isFirstSeen": "是",
+          "postId": "-TbPSQ6GK2w",
+          "videoPlayCount": 4127,
+          "firstSeenAt": 1786933713391,
+          "platform": "youtubevideo",
+          "isProductPost": "是",
+          "是否监控": "是",
+          "playDelta": 4127,
+          "commentDelta": 62,
+          "postKey": "youtubevideo_-TbPSQ6GK2w",
+          "likesCount": 114,
+          "shareDelta": 0,
+          "commentsCount": 62,
+          "capturedAt": 1786933713391,
+          "红人名称": "MattFrancisOfficial",
+          "runId": "local_discovery_1786933454385",
+          "likeDelta": 114,
+          "videoViewCount": 4127
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": ""
+      },
+      {
+        "id": "snap_1786934258444_s3a0fgr",
+        "fields": {
+          "postUrl": "https://www.youtube.com/watch?v=flRK_3czyhc",
+          "snapshotType": "new",
+          "sharesCount": 0,
+          "viewDelta": 1432,
+          "isFirstSeen": "是",
+          "postId": "flRK_3czyhc",
+          "videoPlayCount": 1432,
+          "firstSeenAt": 1786934258444,
+          "platform": "youtubevideo",
+          "isProductPost": "是",
+          "是否监控": "是",
+          "playDelta": 1432,
+          "commentDelta": 52,
+          "postKey": "youtubevideo_flRK_3czyhc",
+          "likesCount": 65,
+          "shareDelta": 0,
+          "commentsCount": 52,
+          "capturedAt": 1786934258444,
+          "红人名称": "Maxxx",
+          "runId": "local_discovery_1786933454385",
+          "likeDelta": 65,
+          "videoViewCount": 1432
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": ""
+      },
+      {
+        "id": "snap_1786934398159_1w58hkg",
+        "fields": {
+          "postUrl": "https://www.youtube.com/shorts/10PVKGmusEc",
+          "snapshotType": "new",
+          "sharesCount": 0,
+          "viewDelta": 683,
+          "isFirstSeen": "是",
+          "postId": "10PVKGmusEc",
+          "videoPlayCount": 683,
+          "firstSeenAt": 1786934398159,
+          "platform": "youtubeshort",
+          "isProductPost": "是",
+          "是否监控": "是",
+          "playDelta": 683,
+          "commentDelta": 2,
+          "postKey": "youtubeshort_10PVKGmusEc",
+          "likesCount": 7,
+          "shareDelta": 0,
+          "commentsCount": 2,
+          "capturedAt": 1786934398159,
+          "红人名称": "Trent In The Sip",
+          "runId": "local_discovery_1786934279714",
+          "likeDelta": 7,
+          "videoViewCount": 683
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": ""
+      },
+      {
+        "id": "snap_1786934398159_2zvpy3s",
+        "fields": {
+          "postUrl": "https://www.youtube.com/shorts/9QyN6HyONGk",
+          "snapshotType": "new",
+          "sharesCount": 0,
+          "viewDelta": 581,
+          "isFirstSeen": "是",
+          "postId": "9QyN6HyONGk",
+          "videoPlayCount": 581,
+          "firstSeenAt": 1786934398159,
+          "platform": "youtubeshort",
+          "isProductPost": "是",
+          "是否监控": "是",
+          "playDelta": 581,
+          "commentDelta": 1,
+          "postKey": "youtubeshort_9QyN6HyONGk",
+          "likesCount": 8,
+          "shareDelta": 0,
+          "commentsCount": 1,
+          "capturedAt": 1786934398159,
+          "红人名称": "Trent In The Sip",
+          "runId": "local_discovery_1786934279714",
+          "likeDelta": 8,
+          "videoViewCount": 581
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": ""
+      },
+      {
+        "id": "snap_1786934494177_bw808ns",
+        "fields": {
+          "postUrl": "https://www.youtube.com/shorts/ZFHkBIwhpck",
+          "snapshotType": "new",
+          "sharesCount": 0,
+          "viewDelta": 39346,
+          "isFirstSeen": "是",
+          "postId": "ZFHkBIwhpck",
+          "videoPlayCount": 39346,
+          "firstSeenAt": 1786934494177,
+          "platform": "youtubeshort",
+          "isProductPost": "是",
+          "是否监控": "是",
+          "playDelta": 39346,
+          "commentDelta": 88,
+          "postKey": "youtubeshort_ZFHkBIwhpck",
+          "likesCount": 1400,
+          "shareDelta": 0,
+          "commentsCount": 88,
+          "capturedAt": 1786934494177,
+          "红人名称": "MKR",
+          "runId": "local_discovery_1786934279714",
+          "likeDelta": 1400,
+          "videoViewCount": 39346
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": ""
+      },
+      {
+        "id": "snap_1786934494177_uqrf2wr",
+        "fields": {
+          "postUrl": "https://www.youtube.com/shorts/2aMvAVdVUBg",
+          "snapshotType": "new",
+          "sharesCount": 0,
+          "viewDelta": 103728,
+          "isFirstSeen": "是",
+          "postId": "2aMvAVdVUBg",
+          "videoPlayCount": 103728,
+          "firstSeenAt": 1786934494177,
+          "platform": "youtubeshort",
+          "isProductPost": "是",
+          "是否监控": "是",
+          "playDelta": 103728,
+          "commentDelta": 114,
+          "postKey": "youtubeshort_2aMvAVdVUBg",
+          "likesCount": 1600,
+          "shareDelta": 0,
+          "commentsCount": 114,
+          "capturedAt": 1786934494177,
+          "红人名称": "MKR",
+          "runId": "local_discovery_1786934279714",
+          "likeDelta": 1600,
+          "videoViewCount": 103728
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": ""
+      },
+      {
+        "id": "snap_1786934642311_3jfqas7",
+        "fields": {
+          "postUrl": "https://www.youtube.com/shorts/ZnrSQieF2VE",
+          "snapshotType": "new",
+          "sharesCount": 0,
+          "viewDelta": 1228,
+          "isFirstSeen": "是",
+          "postId": "ZnrSQieF2VE",
+          "videoPlayCount": 1228,
+          "firstSeenAt": 1786934642311,
+          "platform": "youtubeshort",
+          "isProductPost": "是",
+          "是否监控": "是",
+          "playDelta": 1228,
+          "commentDelta": 3,
+          "postKey": "youtubeshort_ZnrSQieF2VE",
+          "likesCount": 69,
+          "shareDelta": 0,
+          "commentsCount": 3,
+          "capturedAt": 1786934642311,
+          "红人名称": "Alex Pirone",
+          "runId": "local_discovery_1786934279714",
+          "likeDelta": 69,
+          "videoViewCount": 1228
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": ""
+      },
+      {
+        "id": "snap_1786934802743_go0eo9p",
+        "fields": {
+          "postUrl": "https://www.youtube.com/shorts/wA8eqFm0YmE",
+          "snapshotType": "new",
+          "sharesCount": 0,
+          "viewDelta": 141,
+          "isFirstSeen": "是",
+          "postId": "wA8eqFm0YmE",
+          "videoPlayCount": 141,
+          "firstSeenAt": 1786934802743,
+          "platform": "youtubeshort",
+          "isProductPost": "是",
+          "是否监控": "是",
+          "playDelta": 141,
+          "commentDelta": 0,
+          "postKey": "youtubeshort_wA8eqFm0YmE",
+          "likesCount": 0,
+          "shareDelta": 0,
+          "commentsCount": 0,
+          "capturedAt": 1786934802743,
+          "红人名称": "Fayçal Hajji | RIDE BEYOND",
+          "runId": "local_discovery_1786934279714",
+          "likeDelta": 0,
+          "videoViewCount": 141
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": ""
+      },
+      {
+        "id": "snap_1786934928660_qzt0gpq",
+        "fields": {
+          "postUrl": "https://www.youtube.com/shorts/KMiOLo9bZHg",
+          "snapshotType": "new",
+          "sharesCount": 0,
+          "viewDelta": 3897,
+          "isFirstSeen": "是",
+          "postId": "KMiOLo9bZHg",
+          "videoPlayCount": 3897,
+          "firstSeenAt": 1786934928660,
+          "platform": "youtubeshort",
+          "isProductPost": "是",
+          "是否监控": "是",
+          "playDelta": 3897,
+          "commentDelta": 1,
+          "postKey": "youtubeshort_KMiOLo9bZHg",
+          "likesCount": 27,
+          "shareDelta": 0,
+          "commentsCount": 1,
+          "capturedAt": 1786934928660,
+          "红人名称": "Reelridez",
+          "runId": "local_discovery_1786934279714",
+          "likeDelta": 27,
+          "videoViewCount": 3897
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": ""
+      },
+      {
+        "id": "snap_1786934928660_4f0q9ju",
+        "fields": {
+          "postUrl": "https://www.youtube.com/shorts/U4z6BHyktes",
+          "snapshotType": "new",
+          "sharesCount": 0,
+          "viewDelta": 2768,
+          "isFirstSeen": "是",
+          "postId": "U4z6BHyktes",
+          "videoPlayCount": 2768,
+          "firstSeenAt": 1786934928660,
+          "platform": "youtubeshort",
+          "isProductPost": "是",
+          "是否监控": "是",
+          "playDelta": 2768,
+          "commentDelta": 5,
+          "postKey": "youtubeshort_U4z6BHyktes",
+          "likesCount": 19,
+          "shareDelta": 0,
+          "commentsCount": 5,
+          "capturedAt": 1786934928660,
+          "红人名称": "Reelridez",
+          "runId": "local_discovery_1786934279714",
+          "likeDelta": 19,
+          "videoViewCount": 2768
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": ""
+      },
+      {
+        "id": "snap_1786934928660_q908yy9",
+        "fields": {
+          "postUrl": "https://www.youtube.com/shorts/cN5I4mT3PQw",
+          "snapshotType": "new",
+          "sharesCount": 0,
+          "viewDelta": 3012,
+          "isFirstSeen": "是",
+          "postId": "cN5I4mT3PQw",
+          "videoPlayCount": 3012,
+          "firstSeenAt": 1786934928660,
+          "platform": "youtubeshort",
+          "isProductPost": "是",
+          "是否监控": "是",
+          "playDelta": 3012,
+          "commentDelta": 2,
+          "postKey": "youtubeshort_cN5I4mT3PQw",
+          "likesCount": 23,
+          "shareDelta": 0,
+          "commentsCount": 2,
+          "capturedAt": 1786934928660,
+          "红人名称": "Reelridez",
+          "runId": "local_discovery_1786934279714",
+          "likeDelta": 23,
+          "videoViewCount": 3012
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": ""
+      },
+      {
+        "id": "snap_1786934928660_bgna11n",
+        "fields": {
+          "postUrl": "https://www.youtube.com/shorts/SZvQ1qRdr8k",
+          "snapshotType": "new",
+          "sharesCount": 0,
+          "viewDelta": 7157,
+          "isFirstSeen": "是",
+          "postId": "SZvQ1qRdr8k",
+          "videoPlayCount": 7157,
+          "firstSeenAt": 1786934928660,
+          "platform": "youtubeshort",
+          "isProductPost": "是",
+          "是否监控": "是",
+          "playDelta": 7157,
+          "commentDelta": 3,
+          "postKey": "youtubeshort_SZvQ1qRdr8k",
+          "likesCount": 48,
+          "shareDelta": 0,
+          "commentsCount": 3,
+          "capturedAt": 1786934928660,
+          "红人名称": "Reelridez",
+          "runId": "local_discovery_1786934279714",
+          "likeDelta": 48,
+          "videoViewCount": 7157
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": ""
+      },
+      {
+        "id": "snap_1786934928660_0xh0qzk",
+        "fields": {
+          "postUrl": "https://www.youtube.com/shorts/WOfFLk9sr3I",
+          "snapshotType": "new",
+          "sharesCount": 0,
+          "viewDelta": 1430,
+          "isFirstSeen": "是",
+          "postId": "WOfFLk9sr3I",
+          "videoPlayCount": 1430,
+          "firstSeenAt": 1786934928660,
+          "platform": "youtubeshort",
+          "isProductPost": "是",
+          "是否监控": "是",
+          "playDelta": 1430,
+          "commentDelta": 1,
+          "postKey": "youtubeshort_WOfFLk9sr3I",
+          "likesCount": 17,
+          "shareDelta": 0,
+          "commentsCount": 1,
+          "capturedAt": 1786934928660,
+          "红人名称": "Reelridez",
+          "runId": "local_discovery_1786934279714",
+          "likeDelta": 17,
+          "videoViewCount": 1430
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": ""
+      },
+      {
+        "id": "snap_1786935024865_s1ukiyz",
+        "fields": {
+          "postUrl": "https://www.youtube.com/shorts/5_6bSmdOu3c",
+          "snapshotType": "new",
+          "sharesCount": 0,
+          "viewDelta": 1337,
+          "isFirstSeen": "是",
+          "postId": "5_6bSmdOu3c",
+          "videoPlayCount": 1337,
+          "firstSeenAt": 1786935024865,
+          "platform": "youtubeshort",
+          "isProductPost": "是",
+          "是否监控": "是",
+          "playDelta": 1337,
+          "commentDelta": 2,
+          "postKey": "youtubeshort_5_6bSmdOu3c",
+          "likesCount": 26,
+          "shareDelta": 0,
+          "commentsCount": 2,
+          "capturedAt": 1786935024865,
+          "红人名称": "Omni Moto",
+          "runId": "local_discovery_1786934279714",
+          "likeDelta": 26,
+          "videoViewCount": 1337
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": ""
+      },
+      {
+        "id": "snap_1786935059362_jr0f948",
+        "fields": {
+          "postUrl": "https://www.youtube.com/shorts/ezn_PgQxLl4",
+          "snapshotType": "new",
+          "sharesCount": 0,
+          "viewDelta": 1856,
+          "isFirstSeen": "是",
+          "postId": "ezn_PgQxLl4",
+          "videoPlayCount": 1856,
+          "firstSeenAt": 1786935059362,
+          "platform": "youtubeshort",
+          "isProductPost": "是",
+          "是否监控": "是",
+          "playDelta": 1856,
+          "commentDelta": 9,
+          "postKey": "youtubeshort_ezn_PgQxLl4",
+          "likesCount": 104,
+          "shareDelta": 0,
+          "commentsCount": 9,
+          "capturedAt": 1786935059362,
+          "红人名称": "Maxxx",
+          "runId": "local_discovery_1786934279714",
+          "likeDelta": 104,
+          "videoViewCount": 1856
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": ""
+      },
+      {
+        "id": "snap_1786935342323_4g81x6n",
+        "fields": {
+          "postUrl": "https://www.instagram.com/p/DcBogYXga4n/",
+          "snapshotType": "new",
+          "sharesCount": 0,
+          "viewDelta": 1893,
+          "isFirstSeen": "是",
+          "postId": "3963627294110625319",
+          "videoPlayCount": 6253,
+          "firstSeenAt": 1786935342323,
+          "platform": "instagramreels",
+          "isProductPost": "是",
+          "是否监控": "是",
+          "playDelta": 6253,
+          "commentDelta": 9,
+          "postKey": "instagramreels_3963627294110625319",
+          "likesCount": 199,
+          "shareDelta": 0,
+          "commentsCount": 9,
+          "capturedAt": 1786935342323,
+          "红人名称": "onewaygooey_",
+          "runId": "local_discovery_1786935080943",
+          "likeDelta": 199,
+          "videoViewCount": 1893
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": ""
+      },
+      {
+        "id": "snap_1786935342323_5doml42",
+        "fields": {
+          "postUrl": "https://www.instagram.com/p/Db_HBlmgDnp/",
+          "snapshotType": "new",
+          "sharesCount": 0,
+          "viewDelta": 1204,
+          "isFirstSeen": "是",
+          "postId": "3962917092528765417",
+          "videoPlayCount": 4536,
+          "firstSeenAt": 1786935342323,
+          "platform": "instagramreels",
+          "isProductPost": "是",
+          "是否监控": "是",
+          "playDelta": 4536,
+          "commentDelta": 14,
+          "postKey": "instagramreels_3962917092528765417",
+          "likesCount": 179,
+          "shareDelta": 0,
+          "commentsCount": 14,
+          "capturedAt": 1786935342323,
+          "红人名称": "onewaygooey_",
+          "runId": "local_discovery_1786935080943",
+          "likeDelta": 179,
+          "videoViewCount": 1204
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": ""
+      },
+      {
+        "id": "snap_1786935342323_unxsvsr",
+        "fields": {
+          "postUrl": "https://www.instagram.com/p/DcHHZ6SAqgQ/",
+          "snapshotType": "new",
+          "sharesCount": 0,
+          "viewDelta": 1364,
+          "isFirstSeen": "是",
+          "postId": "3965170563814696976",
+          "videoPlayCount": 4389,
+          "firstSeenAt": 1786935342323,
+          "platform": "instagramreels",
+          "isProductPost": "是",
+          "是否监控": "是",
+          "playDelta": 4389,
+          "commentDelta": 3,
+          "postKey": "instagramreels_3965170563814696976",
+          "likesCount": 185,
+          "shareDelta": 0,
+          "commentsCount": 3,
+          "capturedAt": 1786935342323,
+          "红人名称": "onewaygooey_",
+          "runId": "local_discovery_1786935080943",
+          "likeDelta": 185,
+          "videoViewCount": 1364
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": ""
+      },
+      {
+        "id": "snap_1786936003510_2u4fxed",
+        "fields": {
+          "postUrl": "https://www.instagram.com/p/Db8ndVBhT-I/",
+          "snapshotType": "new",
+          "sharesCount": 0,
+          "viewDelta": 4854,
+          "isFirstSeen": "是",
+          "postId": "3962215311432040328",
+          "videoPlayCount": 16983,
+          "firstSeenAt": 1786936003510,
+          "platform": "instagramreels",
+          "isProductPost": "是",
+          "是否监控": "是",
+          "playDelta": 16983,
+          "commentDelta": 14,
+          "postKey": "instagramreels_3962215311432040328",
+          "likesCount": 322,
+          "shareDelta": 0,
+          "commentsCount": 14,
+          "capturedAt": 1786936003510,
+          "红人名称": "anajuliag",
+          "runId": "local_discovery_1786935080943",
+          "likeDelta": 322,
+          "videoViewCount": 4854
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": ""
+      },
+      {
+        "id": "snap_1786936265526_0td5nji",
+        "fields": {
+          "postUrl": "https://www.instagram.com/p/DcAAw55R8JT/",
+          "snapshotType": "new",
+          "sharesCount": 0,
+          "viewDelta": 8501,
+          "isFirstSeen": "是",
+          "postId": "3963171032785207891",
+          "videoPlayCount": 20682,
+          "firstSeenAt": 1786936265526,
+          "platform": "instagramreels",
+          "isProductPost": "是",
+          "是否监控": "是",
+          "playDelta": 20682,
+          "commentDelta": 8,
+          "postKey": "instagramreels_3963171032785207891",
+          "likesCount": 1295,
+          "shareDelta": 0,
+          "commentsCount": 8,
+          "capturedAt": 1786936265526,
+          "红人名称": "whatthekelsieheck",
+          "runId": "local_discovery_1786935080943",
+          "likeDelta": 1295,
+          "videoViewCount": 8501
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": ""
+      },
+      {
+        "id": "snap_1786936324329_d85chz7",
+        "fields": {
+          "postUrl": "https://www.instagram.com/p/DcHo5ewIf6v/",
+          "snapshotType": "new",
+          "sharesCount": 0,
+          "viewDelta": 766,
+          "isFirstSeen": "是",
+          "postId": "3965317868813418159",
+          "videoPlayCount": 1690,
+          "firstSeenAt": 1786936324329,
+          "platform": "instagramreels",
+          "isProductPost": "是",
+          "是否监控": "是",
+          "playDelta": 1690,
+          "commentDelta": 0,
+          "postKey": "instagramreels_3965317868813418159",
+          "likesCount": 23,
+          "shareDelta": 0,
+          "commentsCount": 0,
+          "capturedAt": 1786936324329,
+          "红人名称": "angel_rm999",
+          "runId": "local_discovery_1786935080943",
+          "likeDelta": 23,
+          "videoViewCount": 766
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": ""
+      },
+      {
+        "id": "snap_1786936411953_yqbdj6f",
+        "fields": {
+          "postUrl": "https://www.instagram.com/p/DcEiW0PyU57/",
+          "snapshotType": "new",
+          "sharesCount": 0,
+          "viewDelta": 831,
+          "isFirstSeen": "是",
+          "postId": "3964444673502170747",
+          "videoPlayCount": 3304,
+          "firstSeenAt": 1786936411953,
+          "platform": "instagramreels",
+          "isProductPost": "是",
+          "是否监控": "是",
+          "playDelta": 3304,
+          "commentDelta": 2,
+          "postKey": "instagramreels_3964444673502170747",
+          "likesCount": 128,
+          "shareDelta": 0,
+          "commentsCount": 2,
+          "capturedAt": 1786936411953,
+          "红人名称": "yafavlightskin37",
+          "runId": "local_discovery_1786935080943",
+          "likeDelta": 128,
+          "videoViewCount": 831
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": ""
+      },
+      {
+        "id": "snap_1786936411953_6xduclp",
+        "fields": {
+          "postUrl": "https://www.instagram.com/p/Db_Lg0byQDX/",
+          "snapshotType": "new",
+          "sharesCount": 0,
+          "viewDelta": 1148,
+          "isFirstSeen": "是",
+          "postId": "3962936830944936151",
+          "videoPlayCount": 4150,
+          "firstSeenAt": 1786936411953,
+          "platform": "instagramreels",
+          "isProductPost": "是",
+          "是否监控": "是",
+          "playDelta": 4150,
+          "commentDelta": 5,
+          "postKey": "instagramreels_3962936830944936151",
+          "likesCount": 78,
+          "shareDelta": 0,
+          "commentsCount": 5,
+          "capturedAt": 1786936411953,
+          "红人名称": "yafavlightskin37",
+          "runId": "local_discovery_1786935080943",
+          "likeDelta": 78,
+          "videoViewCount": 1148
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": ""
+      },
+      {
+        "id": "snap_1786936411953_xfice3q",
+        "fields": {
+          "postUrl": "https://www.instagram.com/p/Db6k5aZyiC3/",
+          "snapshotType": "new",
+          "sharesCount": 0,
+          "viewDelta": 291,
+          "isFirstSeen": "是",
+          "postId": "3961641097260310711",
+          "videoPlayCount": 1811,
+          "firstSeenAt": 1786936411953,
+          "platform": "instagramreels",
+          "isProductPost": "是",
+          "是否监控": "是",
+          "playDelta": 1811,
+          "commentDelta": 5,
+          "postKey": "instagramreels_3961641097260310711",
+          "likesCount": 42,
+          "shareDelta": 0,
+          "commentsCount": 5,
+          "capturedAt": 1786936411953,
+          "红人名称": "yafavlightskin37",
+          "runId": "local_discovery_1786935080943",
+          "likeDelta": 42,
+          "videoViewCount": 291
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": ""
+      },
+      {
+        "id": "snap_1786936411953_wyt7lsr",
+        "fields": {
+          "postUrl": "https://www.instagram.com/p/Db9FdKpS0Xb/",
+          "snapshotType": "new",
+          "sharesCount": 0,
+          "viewDelta": 485,
+          "isFirstSeen": "是",
+          "postId": "3962347241683502555",
+          "videoPlayCount": 1647,
+          "firstSeenAt": 1786936411953,
+          "platform": "instagramreels",
+          "isProductPost": "是",
+          "是否监控": "是",
+          "playDelta": 1647,
+          "commentDelta": 3,
+          "postKey": "instagramreels_3962347241683502555",
+          "likesCount": 93,
+          "shareDelta": 0,
+          "commentsCount": 3,
+          "capturedAt": 1786936411953,
+          "红人名称": "yafavlightskin37",
+          "runId": "local_discovery_1786935080943",
+          "likeDelta": 93,
+          "videoViewCount": 485
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": ""
+      },
+      {
+        "id": "snap_1786936411953_9lw3xlq",
+        "fields": {
+          "postUrl": "https://www.instagram.com/p/Db8bgGXSz4n/",
+          "snapshotType": "new",
+          "sharesCount": 0,
+          "viewDelta": 1396,
+          "isFirstSeen": "是",
+          "postId": "3962162725291507239",
+          "videoPlayCount": 5184,
+          "firstSeenAt": 1786936411953,
+          "platform": "instagramreels",
+          "isProductPost": "是",
+          "是否监控": "是",
+          "playDelta": 5184,
+          "commentDelta": 6,
+          "postKey": "instagramreels_3962162725291507239",
+          "likesCount": 241,
+          "shareDelta": 0,
+          "commentsCount": 6,
+          "capturedAt": 1786936411953,
+          "红人名称": "yafavlightskin37",
+          "runId": "local_discovery_1786935080943",
+          "likeDelta": 241,
+          "videoViewCount": 1396
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": ""
+      },
+      {
+        "id": "snap_1786936477198_lu6xzwl",
+        "fields": {
+          "postUrl": "https://www.instagram.com/p/Db-fUgexE9H/",
+          "snapshotType": "new",
+          "sharesCount": 0,
+          "viewDelta": 2056,
+          "isFirstSeen": "是",
+          "postId": "3962742470839914311",
+          "videoPlayCount": 5922,
+          "firstSeenAt": 1786936477198,
+          "platform": "instagramreels",
+          "isProductPost": "是",
+          "是否监控": "是",
+          "playDelta": 5922,
+          "commentDelta": 5,
+          "postKey": "instagramreels_3962742470839914311",
+          "likesCount": 294,
+          "shareDelta": 0,
+          "commentsCount": 5,
+          "capturedAt": 1786936477198,
+          "红人名称": "alex_pirone_311",
+          "runId": "local_discovery_1786935080943",
+          "likeDelta": 294,
+          "videoViewCount": 2056
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": ""
+      },
+      {
+        "id": "snap_1786936477198_lzdm4f1",
+        "fields": {
+          "postUrl": "https://www.instagram.com/p/DcF645pss7a/",
+          "snapshotType": "new",
+          "sharesCount": 0,
+          "viewDelta": 1597,
+          "isFirstSeen": "是",
+          "postId": "3964834043860799194",
+          "videoPlayCount": 3674,
+          "firstSeenAt": 1786936477198,
+          "platform": "instagramreels",
+          "isProductPost": "是",
+          "是否监控": "是",
+          "playDelta": 3674,
+          "commentDelta": 2,
+          "postKey": "instagramreels_3964834043860799194",
+          "likesCount": 181,
+          "shareDelta": 0,
+          "commentsCount": 2,
+          "capturedAt": 1786936477198,
+          "红人名称": "alex_pirone_311",
+          "runId": "local_discovery_1786935080943",
+          "likeDelta": 181,
+          "videoViewCount": 1597
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": ""
+      },
+      {
+        "id": "snap_1786936933124_0neuhks",
+        "fields": {
+          "postUrl": "https://www.instagram.com/p/Db9cpfkRLeb/",
+          "snapshotType": "new",
+          "sharesCount": 0,
+          "viewDelta": 416,
+          "isFirstSeen": "是",
+          "postId": "3962449243851241371",
+          "videoPlayCount": 823,
+          "firstSeenAt": 1786936933124,
+          "platform": "instagramreels",
+          "isProductPost": "是",
+          "是否监控": "是",
+          "playDelta": 823,
+          "commentDelta": 2,
+          "postKey": "instagramreels_3962449243851241371",
+          "likesCount": 25,
+          "shareDelta": 0,
+          "commentsCount": 2,
+          "capturedAt": 1786936933124,
+          "红人名称": "reelridez",
+          "runId": "local_discovery_1786935080943",
+          "likeDelta": 25,
+          "videoViewCount": 416
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": ""
+      },
+      {
+        "id": "snap_1786936933124_k2sh3ua",
+        "fields": {
+          "postUrl": "https://www.instagram.com/p/DcFPQS7RKvq/",
+          "snapshotType": "new",
+          "sharesCount": 0,
+          "viewDelta": 764,
+          "isFirstSeen": "是",
+          "postId": "3964642137500593130",
+          "videoPlayCount": 1758,
+          "firstSeenAt": 1786936933124,
+          "platform": "instagramreels",
+          "isProductPost": "是",
+          "是否监控": "是",
+          "playDelta": 1758,
+          "commentDelta": 2,
+          "postKey": "instagramreels_3964642137500593130",
+          "likesCount": 53,
+          "shareDelta": 0,
+          "commentsCount": 2,
+          "capturedAt": 1786936933124,
+          "红人名称": "reelridez",
+          "runId": "local_discovery_1786935080943",
+          "likeDelta": 53,
+          "videoViewCount": 764
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": ""
+      },
+      {
+        "id": "snap_1786936933124_awd7mpu",
+        "fields": {
+          "postUrl": "https://www.instagram.com/p/Db_-5uwxZ_I/",
+          "snapshotType": "new",
+          "sharesCount": 0,
+          "viewDelta": 819,
+          "isFirstSeen": "是",
+          "postId": "3963162843213569992",
+          "videoPlayCount": 1739,
+          "firstSeenAt": 1786936933124,
+          "platform": "instagramreels",
+          "isProductPost": "是",
+          "是否监控": "是",
+          "playDelta": 1739,
+          "commentDelta": 4,
+          "postKey": "instagramreels_3963162843213569992",
+          "likesCount": 30,
+          "shareDelta": 0,
+          "commentsCount": 4,
+          "capturedAt": 1786936933124,
+          "红人名称": "reelridez",
+          "runId": "local_discovery_1786935080943",
+          "likeDelta": 30,
+          "videoViewCount": 819
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": ""
+      },
+      {
+        "id": "snap_1786936933124_45e040r",
+        "fields": {
+          "postUrl": "https://www.instagram.com/p/Db6QgcLREcU/",
+          "snapshotType": "new",
+          "sharesCount": 0,
+          "viewDelta": 935,
+          "isFirstSeen": "是",
+          "postId": "3961551420247000852",
+          "videoPlayCount": 1997,
+          "firstSeenAt": 1786936933124,
+          "platform": "instagramreels",
+          "isProductPost": "是",
+          "是否监控": "是",
+          "playDelta": 1997,
+          "commentDelta": 0,
+          "postKey": "instagramreels_3961551420247000852",
+          "likesCount": 22,
+          "shareDelta": 0,
+          "commentsCount": 0,
+          "capturedAt": 1786936933124,
+          "红人名称": "reelridez",
+          "runId": "local_discovery_1786935080943",
+          "likeDelta": 22,
+          "videoViewCount": 935
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": ""
+      },
+      {
+        "id": "snap_1786937070062_zqmcv0m",
+        "fields": {
+          "postUrl": "https://www.instagram.com/p/Db388WtzuO_/",
+          "snapshotType": "new",
+          "sharesCount": 0,
+          "viewDelta": 933,
+          "isFirstSeen": "是",
+          "postId": "3960902427645764543",
+          "videoPlayCount": 7030,
+          "firstSeenAt": 1786937070062,
+          "platform": "instagramreels",
+          "isProductPost": "是",
+          "是否监控": "是",
+          "playDelta": 7030,
+          "commentDelta": 5,
+          "postKey": "instagramreels_3960902427645764543",
+          "likesCount": 93,
+          "shareDelta": 0,
+          "commentsCount": 5,
+          "capturedAt": 1786937070062,
+          "红人名称": "hammerchamp13",
+          "runId": "local_discovery_1786935080943",
+          "likeDelta": 93,
+          "videoViewCount": 933
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": ""
+      },
+      {
+        "id": "snap_1786937070062_314s98o",
+        "fields": {
+          "postUrl": "https://www.instagram.com/p/DcBeJ4lRl5e/",
+          "snapshotType": "new",
+          "sharesCount": 0,
+          "viewDelta": 1139,
+          "isFirstSeen": "是",
+          "postId": "3963581767688281694",
+          "videoPlayCount": 2780,
+          "firstSeenAt": 1786937070062,
+          "platform": "instagramreels",
+          "isProductPost": "是",
+          "是否监控": "是",
+          "playDelta": 2780,
+          "commentDelta": 4,
+          "postKey": "instagramreels_3963581767688281694",
+          "likesCount": 56,
+          "shareDelta": 0,
+          "commentsCount": 4,
+          "capturedAt": 1786937070062,
+          "红人名称": "hammerchamp13",
+          "runId": "local_discovery_1786935080943",
+          "likeDelta": 56,
+          "videoViewCount": 1139
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": ""
+      },
+      {
+        "id": "snap_1786937133032_0i7lqm7",
+        "fields": {
+          "postUrl": "https://www.instagram.com/p/Db5zRoehCW5/",
+          "snapshotType": "new",
+          "sharesCount": 0,
+          "viewDelta": 1102,
+          "isFirstSeen": "是",
+          "postId": "3961422859313882553",
+          "videoPlayCount": 7117,
+          "firstSeenAt": 1786937133032,
+          "platform": "instagramreels",
+          "isProductPost": "是",
+          "是否监控": "是",
+          "playDelta": 7117,
+          "commentDelta": 4,
+          "postKey": "instagramreels_3961422859313882553",
+          "likesCount": -1,
+          "shareDelta": 0,
+          "commentsCount": 4,
+          "capturedAt": 1786937133032,
+          "红人名称": "destincantrell",
+          "runId": "local_discovery_1786935080943",
+          "likeDelta": -1,
+          "videoViewCount": 1102
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": ""
       }
     ],
     "runs": [
+      {
+        "id": "local_discovery_1786935080943",
+        "fields": {
+          "createdAt": "2026-08-17T02:51:20.943Z",
+          "finishedAt": "2026-08-17T03:25:33.033Z",
+          "task": "本地新视频发现",
+          "status": "success",
+          "message": "处理 92 位，新增视频 20 条，跳过重复 0 条，错误 0 个。",
+          "days": 8,
+          "maxItems": 20,
+          "limitInfluencers": 5000,
+          "skipInfluencers": 0,
+          "platformFilter": "instagramreels",
+          "usageUsd": 0.3778,
+          "scraped": 321,
+          "matched": 20,
+          "videoCreated": 20,
+          "videoSkipped": 0,
+          "snapshotCreated": 20
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": ""
+      },
+      {
+        "id": "local_discovery_1786934279714",
+        "fields": {
+          "createdAt": "2026-08-17T02:37:59.714Z",
+          "finishedAt": "2026-08-17T02:50:59.362Z",
+          "task": "本地新视频发现",
+          "status": "success",
+          "message": "处理 32 位，新增视频 13 条，跳过重复 0 条，错误 0 个。",
+          "days": 8,
+          "maxItems": 20,
+          "limitInfluencers": 5000,
+          "skipInfluencers": 0,
+          "platformFilter": "youtubeshort",
+          "usageUsd": 0.144,
+          "scraped": 79,
+          "matched": 13,
+          "videoCreated": 13,
+          "videoSkipped": 0,
+          "snapshotCreated": 13
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": ""
+      },
+      {
+        "id": "local_discovery_1786933454385",
+        "fields": {
+          "createdAt": "2026-08-17T02:24:14.385Z",
+          "finishedAt": "2026-08-17T02:37:38.445Z",
+          "task": "本地新视频发现",
+          "status": "success",
+          "message": "处理 58 位，新增视频 4 条，跳过重复 0 条，错误 0 个。",
+          "days": 8,
+          "maxItems": 20,
+          "limitInfluencers": 5000,
+          "skipInfluencers": 0,
+          "platformFilter": "youtubevideo",
+          "usageUsd": 0.028,
+          "scraped": 71,
+          "matched": 4,
+          "videoCreated": 4,
+          "videoSkipped": 0,
+          "snapshotCreated": 4
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": ""
+      },
+      {
+        "id": "local_discovery_1786932750560",
+        "fields": {
+          "createdAt": "2026-08-17T02:12:30.560Z",
+          "finishedAt": "2026-08-17T02:23:21.819Z",
+          "task": "本地新视频发现",
+          "status": "success",
+          "message": "处理 49 位，新增视频 12 条，跳过重复 0 条，错误 0 个。",
+          "days": 8,
+          "maxItems": 20,
+          "limitInfluencers": 5000,
+          "skipInfluencers": 0,
+          "platformFilter": "tiktok",
+          "usageUsd": 0.742,
+          "scraped": 910,
+          "matched": 12,
+          "videoCreated": 12,
+          "videoSkipped": 0,
+          "snapshotCreated": 12
+        },
+        "source": "local-discovery",
+        "importedAt": "",
+        "updatedAt": ""
+      },
       {
         "id": "local_discovery_1786335958542",
         "fields": {
@@ -200262,102 +202773,6 @@
           "videoCreated": 60,
           "videoSkipped": 20,
           "snapshotCreated": 60
-        },
-        "source": "local-discovery",
-        "importedAt": "",
-        "updatedAt": ""
-      },
-      {
-        "id": "local_discovery_1782052764358",
-        "fields": {
-          "createdAt": "2026-06-21T14:39:24.358Z",
-          "finishedAt": "2026-06-21T15:41:19.490Z",
-          "task": "本地新视频发现",
-          "status": "partial",
-          "message": "处理 182 位，新增视频 41 条，跳过重复 12 条，错误 1 个。",
-          "days": 7,
-          "maxItems": 30,
-          "limitInfluencers": 5000,
-          "skipInfluencers": 0,
-          "platformFilter": "instagramreels",
-          "usageUsd": 0.6205,
-          "scraped": 648,
-          "matched": 53,
-          "videoCreated": 41,
-          "videoSkipped": 12,
-          "snapshotCreated": 41
-        },
-        "source": "local-discovery",
-        "importedAt": "",
-        "updatedAt": ""
-      },
-      {
-        "id": "local_discovery_1782048951495",
-        "fields": {
-          "createdAt": "2026-06-21T13:35:51.495Z",
-          "finishedAt": "2026-06-21T14:34:38.111Z",
-          "task": "本地新视频发现",
-          "status": "success",
-          "message": "处理 151 位，新增视频 23 条，跳过重复 11 条，错误 0 个。",
-          "days": 7,
-          "maxItems": 30,
-          "limitInfluencers": 5000,
-          "skipInfluencers": 0,
-          "platformFilter": "youtubeshort",
-          "usageUsd": 1.001,
-          "scraped": 421,
-          "matched": 34,
-          "videoCreated": 23,
-          "videoSkipped": 11,
-          "snapshotCreated": 23
-        },
-        "source": "local-discovery",
-        "importedAt": "",
-        "updatedAt": ""
-      },
-      {
-        "id": "local_discovery_1782046531986",
-        "fields": {
-          "createdAt": "2026-06-21T12:55:31.986Z",
-          "finishedAt": "2026-06-21T13:35:11.376Z",
-          "task": "本地新视频发现",
-          "status": "partial",
-          "message": "处理 178 位，新增视频 8 条，跳过重复 6 条，错误 1 个。",
-          "days": 7,
-          "maxItems": 30,
-          "limitInfluencers": 5000,
-          "skipInfluencers": 0,
-          "platformFilter": "youtubevideo",
-          "usageUsd": 0.119,
-          "scraped": 218,
-          "matched": 14,
-          "videoCreated": 8,
-          "videoSkipped": 6,
-          "snapshotCreated": 8
-        },
-        "source": "local-discovery",
-        "importedAt": "",
-        "updatedAt": ""
-      },
-      {
-        "id": "local_discovery_1781494192946",
-        "fields": {
-          "createdAt": "2026-06-15T03:29:52.946Z",
-          "finishedAt": "2026-06-15T03:30:29.634Z",
-          "task": "本地新视频发现",
-          "status": "success",
-          "message": "处理 1 位，新增视频 0 条，跳过重复 0 条，错误 0 个。",
-          "days": 9,
-          "maxItems": 50,
-          "limitInfluencers": 1,
-          "skipInfluencers": 0,
-          "platformFilter": "tiktok",
-          "usageUsd": 0.142,
-          "scraped": 47,
-          "matched": 0,
-          "videoCreated": 0,
-          "videoSkipped": 0,
-          "snapshotCreated": 0
         },
         "source": "local-discovery",
         "importedAt": "",
