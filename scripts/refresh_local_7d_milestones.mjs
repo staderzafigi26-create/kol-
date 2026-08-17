@@ -8,6 +8,7 @@ const RAW_DIR = path.join(ROOT, 'data/raw');
 const REPORT_DIR = path.join(ROOT, 'data/reports');
 const MILESTONE_MODES = new Set(String(process.env.MILESTONE_MODES || '7').split(',').map((item) => item.trim()).filter(Boolean));
 const DRY_RUN = process.argv.includes('--dry-run');
+const BACKFILL_ONLY = process.env.BACKFILL_ONLY === '1';
 const RUN_TAG = `local-${[...MILESTONE_MODES].join('-') || '7'}d-milestone-${new Date().toISOString().replace(/[:.]/g, '-')}`;
 const RUN_ID = `local_${[...MILESTONE_MODES].join('_') || '7'}d_${Date.now()}`;
 const REPORT_PATH = path.join(REPORT_DIR, `${RUN_TAG}.json`);
@@ -366,6 +367,8 @@ for (const video of videos) {
   }
 }
 
+if (BACKFILL_ONLY) due.splice(0, due.length);
+
 const grouped = new Map();
 for (const item of due) {
   if (!grouped.has(item.platform)) grouped.set(item.platform, []);
@@ -377,6 +380,7 @@ const report = {
   runId: RUN_ID,
   modes: [...MILESTONE_MODES],
   dryRun: DRY_RUN,
+  backfillOnly: BACKFILL_ONLY,
   startedAt: new Date().toISOString(),
   finishedAt: '',
   dueCount: due.length,
